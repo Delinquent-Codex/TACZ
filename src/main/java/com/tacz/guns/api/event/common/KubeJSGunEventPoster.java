@@ -1,29 +1,19 @@
 package com.tacz.guns.api.event.common;
 
-import com.tacz.guns.compat.kubejs.events.TimelessClientEvents;
-import com.tacz.guns.compat.kubejs.events.TimelessCommonEvents;
-import com.tacz.guns.compat.kubejs.events.TimelessServerEvents;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.fml.ModList;
+import com.tacz.guns.api.event.GunEvent;
 
-public interface KubeJSGunEventPoster<E extends Event> {
+public interface KubeJSGunEventPoster<E extends GunEvent> {
     default void postEventToKubeJS(E event) {
-        if (ModList.get().isLoaded("kubejs")) {
-            TimelessCommonEvents.INSTANCE.postKubeJSEvent(event);
-        }
+        GunEvent.postScriptEvent(event, GunEvent.ScriptScope.COMMON);
     }
 
     //客户端事件应调用此方法
     default void postClientEventToKubeJS(E event) {
-        if (ModList.get().isLoaded("kubejs")) {
-            TimelessClientEvents.INSTANCE.postKubeJSEvent(event);
-        }
+        GunEvent.postScriptEvent(event, GunEvent.ScriptScope.CLIENT);
     }
 
     //服务端事件应调用此方法
     default void postServerEventToKubeJS(E event) {
-        if (ModList.get().isLoaded("kubejs")) {
-            TimelessServerEvents.INSTANCE.postKubeJSEvent(event);
-        }
+        GunEvent.postScriptEvent(event, GunEvent.ScriptScope.SERVER);
     }
 }

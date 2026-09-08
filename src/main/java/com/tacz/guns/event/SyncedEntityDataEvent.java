@@ -4,7 +4,7 @@ import com.tacz.guns.GunMod;
 import com.tacz.guns.entity.sync.core.*;
 import com.tacz.guns.network.NetworkHandler;
 import com.tacz.guns.network.message.ServerMessageUpdateEntityData;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +12,7 @@ import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.PacketDistributor;
@@ -25,10 +25,10 @@ import java.util.stream.Collectors;
 @Mod.EventBusSubscriber
 public final class SyncedEntityDataEvent {
     @SubscribeEvent
-    public static void attachCapabilities(AttachCapabilitiesEvent<Entity> event) {
+    public static void attachCapabilities(AttachCapabilitiesEvent.Entities event) {
         if (SyncedEntityData.instance().hasSyncedDataKey(event.getObject())) {
             DataHolderCapabilityProvider provider = new DataHolderCapabilityProvider();
-            event.addCapability(new ResourceLocation(GunMod.MOD_ID, "synced_entity_data"), provider);
+            event.addCapability(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "synced_entity_data"), provider);
             // Don't add invalidate to server player since it's persistent
             if (!(event.getObject() instanceof ServerPlayer)) {
                 event.addListener(provider::invalidate);
@@ -45,7 +45,7 @@ public final class SyncedEntityDataEvent {
                 List<DataEntry<?, ?>> entries = holder.gatherAll();
                 entries.removeIf(entry -> !entry.getKey().syncMode().isTracking());
                 if (!entries.isEmpty()) {
-                    NetworkHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new ServerMessageUpdateEntityData(entity.getId(), entries));
+                    NetworkHandler.CHANNEL.send(new ServerMessageUpdateEntityData(entity.getId(), entries), PacketDistributor.PLAYER.with((ServerPlayer) event.getEntity()));
                 }
             }
         }
@@ -59,7 +59,7 @@ public final class SyncedEntityDataEvent {
             if (holder != null) {
                 List<DataEntry<?, ?>> entries = holder.gatherAll();
                 if (!entries.isEmpty()) {
-                    NetworkHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) player), new ServerMessageUpdateEntityData(player.getId(), entries));
+                    NetworkHandler.CHANNEL.send(new ServerMessageUpdateEntityData(player.getId(), entries), PacketDistributor.PLAYER.with((ServerPlayer) player));
                 }
             }
         }
@@ -87,14 +87,8 @@ public final class SyncedEntityDataEvent {
     }
 
     @SubscribeEvent
-    public static void onServerTick(TickEvent.ServerTickEvent event) {
+    public static void onServerTick(TickEvent.ServerTickEvent.Post event) {
         SyncedEntityData instance = SyncedEntityData.instance();
-        if (event.side != LogicalSide.SERVER) {
-            return;
-        }
-        if (event.phase != TickEvent.Phase.END) {
-            return;
-        }
         if (!instance.isDirty()) {
             return;
         }
@@ -114,11 +108,11 @@ public final class SyncedEntityDataEvent {
             }
             List<DataEntry<?, ?>> selfEntries = entries.stream().filter(entry -> entry.getKey().syncMode().isSelf()).collect(Collectors.toList());
             if (!selfEntries.isEmpty() && entity instanceof ServerPlayer) {
-                NetworkHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) entity), new ServerMessageUpdateEntityData(entity.getId(), selfEntries));
+                NetworkHandler.CHANNEL.send(new ServerMessageUpdateEntityData(entity.getId(), selfEntries), PacketDistributor.PLAYER.with((ServerPlayer) entity));
             }
             List<DataEntry<?, ?>> trackingEntries = entries.stream().filter(entry -> entry.getKey().syncMode().isTracking()).collect(Collectors.toList());
             if (!trackingEntries.isEmpty()) {
-                NetworkHandler.CHANNEL.send(PacketDistributor.TRACKING_ENTITY.with(() -> entity), new ServerMessageUpdateEntityData(entity.getId(), trackingEntries));
+                NetworkHandler.CHANNEL.send(new ServerMessageUpdateEntityData(entity.getId(), trackingEntries), PacketDistributor.TRACKING_ENTITY.with(entity));
             }
             holder.clean();
         }

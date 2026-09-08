@@ -3,16 +3,15 @@ package com.tacz.guns.network.message;
 import com.tacz.guns.entity.sync.core.DataEntry;
 import com.tacz.guns.entity.sync.core.SyncedEntityData;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Supplier;
 
 public class ServerMessageUpdateEntityData {
     private final int entityId;
@@ -23,15 +22,18 @@ public class ServerMessageUpdateEntityData {
         this.entries = entries;
     }
 
-    public static void encode(ServerMessageUpdateEntityData message, FriendlyByteBuf buffer) {
+    public static void encode(ServerMessageUpdateEntityData message, RegistryFriendlyByteBuf buffer) {
         buffer.writeVarInt(message.entityId);
         buffer.writeVarInt(message.entries.size());
         message.entries.forEach(entry -> entry.write(buffer));
     }
 
-    public static ServerMessageUpdateEntityData decode(FriendlyByteBuf buffer) {
+    public static ServerMessageUpdateEntityData decode(RegistryFriendlyByteBuf buffer) {
         int entityId = buffer.readVarInt();
         int size = buffer.readVarInt();
+        if (size < 0 || size > com.tacz.guns.network.SyncedDataMapping.MAX_KEYS) {
+            throw new io.netty.handler.codec.DecoderException("Invalid entity-data entry count: " + size);
+        }
         List<DataEntry<?, ?>> entries = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             entries.add(DataEntry.read(buffer));
@@ -39,9 +41,8 @@ public class ServerMessageUpdateEntityData {
         return new ServerMessageUpdateEntityData(entityId, entries);
     }
 
-    public static void handle(ServerMessageUpdateEntityData message, Supplier<NetworkEvent.Context> contextSupplier) {
-        NetworkEvent.Context context = contextSupplier.get();
-        if (context.getDirection().getReceptionSide().isClient()) {
+    public static void handle(ServerMessageUpdateEntityData message, CustomPayloadEvent.Context context) {
+        if (context.isClientSide()) {
             context.enqueueWork(() -> onHandle(message));
         }
         context.setPacketHandled(true);

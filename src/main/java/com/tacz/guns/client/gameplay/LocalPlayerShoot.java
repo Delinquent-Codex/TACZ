@@ -26,9 +26,8 @@ import com.tacz.guns.sound.SoundManager;
 import it.unimi.dsi.fastutil.Pair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.LogicalSide;
 import org.jetbrains.annotations.Nullable;
 
@@ -57,7 +56,7 @@ public class LocalPlayerShoot {
             data.chargeProgress = 0f;
             return false;
         }
-        ResourceLocation gunId = iGun.getGunId(mainHandItem);
+        Identifier gunId = iGun.getGunId(mainHandItem);
         Optional<ClientGunIndex> gunIndexOptional = TimelessAPI.getClientGunIndex(gunId);
         GunDisplayInstance display = TimelessAPI.getGunDisplay(mainHandItem).orElse(null);
         if (gunIndexOptional.isEmpty() || display == null) {
@@ -118,7 +117,7 @@ public class LocalPlayerShoot {
         if (!(mainHandItem.getItem() instanceof IGun iGun)) {
             return ShootResult.NOT_GUN;
         }
-        ResourceLocation gunId = iGun.getGunId(mainHandItem);
+        Identifier gunId = iGun.getGunId(mainHandItem);
         Optional<ClientGunIndex> gunIndexOptional = TimelessAPI.getClientGunIndex(gunId);
         GunDisplayInstance display = TimelessAPI.getGunDisplay(mainHandItem).orElse(null);
         if (gunIndexOptional.isEmpty() || display == null) {
@@ -155,7 +154,7 @@ public class LocalPlayerShoot {
             return ShootResult.IS_SPRINTING;
         }
         // 触发开火事件
-        if (MinecraftForge.EVENT_BUS.post(new GunShootEvent(player, mainHandItem, LogicalSide.CLIENT))) {
+        if (GunShootEvent.BUS.post(new GunShootEvent(player, mainHandItem, LogicalSide.CLIENT))) {
             return ShootResult.FORGE_EVENT_CANCEL;
         }
         // 切换状态锁，不允许换弹、检视等行为进行。
@@ -282,14 +281,14 @@ public class LocalPlayerShoot {
                 data.clientLastShootTimestamp = data.clientShootTimestamp;
                 data.clientShootTimestamp = System.currentTimeMillis();
                 // 发送开火的数据包，通知服务器
-                NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerShoot(data.clientShootTimestamp - data.clientBaseTimestamp, chargeProgress));
+                NetworkHandler.sendToServer(new ClientMessagePlayerShoot(data.clientShootTimestamp - data.clientBaseTimestamp, chargeProgress));
             }
 
             // todo 需要检查
             // 播放声音和状态机触发需要从异步线程上传到主线程执行，否则会引起cme
             Minecraft.getInstance().submitAsync(() -> {
                 // 触发击发事件
-                boolean fire = !MinecraftForge.EVENT_BUS.post(new GunFireEvent(player, mainHandItem, LogicalSide.CLIENT));
+                boolean fire = !GunFireEvent.BUS.post(new GunFireEvent(player, mainHandItem, LogicalSide.CLIENT));
                 if (fire) {
                     // 动画和声音循环播放
                     AnimationStateMachine<?> animationStateMachine = display.getAnimationStateMachine();
@@ -338,7 +337,7 @@ public class LocalPlayerShoot {
         if (iGun == null) {
             return -1;
         }
-        ResourceLocation gunId = iGun.getGunId(mainHandItem);
+        Identifier gunId = iGun.getGunId(mainHandItem);
         Optional<CommonGunIndex> gunIndexOptional = TimelessAPI.getCommonGunIndex(gunId);
         return gunIndexOptional.map(commonGunIndex -> getCoolDown(iGun, mainHandItem, commonGunIndex.getGunData())).orElse(-1L);
     }

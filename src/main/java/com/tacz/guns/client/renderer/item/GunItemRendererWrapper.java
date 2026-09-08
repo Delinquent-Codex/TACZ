@@ -25,10 +25,10 @@ import com.tacz.guns.util.math.MathUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -116,7 +116,7 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
     }
 
     @Override
-    public ResourceLocation getTextureLocation(ItemStack stack) {
+    public Identifier getTextureLocation(ItemStack stack) {
         return TimelessAPI.getGunDisplay(stack).map(GunDisplayInstance::getModelTexture).orElse(null);
     }
 
@@ -275,8 +275,8 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
             }
             // 剩下的渲染
             BedrockGunModel gunModel;
-            ResourceLocation gunTexture;
-            Pair<BedrockGunModel, ResourceLocation> lodModel = gunIndex.getLodModel();
+            Identifier gunTexture;
+            Pair<BedrockGunModel, Identifier> lodModel = gunIndex.getLodModel();
             if (lodModel == null || RenderDistance.inRenderHighPolyModelDistance(poseStack)) {
                 gunModel = gunIndex.getGunModel();
                 gunTexture = gunIndex.getModelTexture();
@@ -306,7 +306,7 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
         poseStack.popPose();
     }
 
-    private static void renderSlotTexture(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay, ResourceLocation texture) {
+    private static void renderSlotTexture(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay, Identifier texture) {
         poseStack.translate(0.5, 1.5, 0.5);
         poseStack.mulPose(Axis.ZN.rotationDegrees(180));
         VertexConsumer buffer = bufferSource.getBuffer(RenderType.entityTranslucent(texture));

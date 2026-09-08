@@ -104,7 +104,7 @@ public final class VersionChecker {
 
     private static boolean modVersionMatch(String modId, String version) throws InvalidVersionSpecificationException {
         VersionRange versionRange = VersionRange.createFromVersionSpec(version);
-        return ModList.get().getModContainerById(modId).map(mod -> {
+        return ModList.getModContainerById(modId).map(mod -> {
             ArtifactVersion modVersion = mod.getModInfo().getVersion();
             return versionRange.containsVersion(modVersion);
         }).orElse(false);

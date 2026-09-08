@@ -7,7 +7,7 @@ import com.tacz.guns.client.resource.pojo.model.*;
 import com.tacz.guns.compat.oculus.OculusCompat;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;

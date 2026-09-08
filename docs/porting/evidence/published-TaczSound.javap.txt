@@ -1,0 +1,49 @@
+Compiled from "GunSoundInstance.java"
+class com.tacz.guns.client.sound.GunSoundInstance$TaczSound extends net.minecraft.client.resources.sounds.Sound {
+  private final net.minecraft.resources.ResourceLocation location;
+    descriptor: Lnet/minecraft/resources/ResourceLocation;
+
+  private final net.minecraft.resources.ResourceLocation path;
+    descriptor: Lnet/minecraft/resources/ResourceLocation;
+
+  private com.tacz.guns.client.sound.GunSoundInstance$TaczSound(net.minecraft.resources.ResourceLocation, net.minecraft.resources.ResourceLocation, net.minecraft.client.resources.sounds.Sound);
+    descriptor: (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/resources/sounds/Sound;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #22                 // Method net/minecraft/resources/ResourceLocation.toString:()Ljava/lang/String;
+       5: aload_3
+       6: invokevirtual #26                 // Method net/minecraft/client/resources/sounds/Sound.m_235146_:()Lnet/minecraft/util/valueproviders/SampledFloat;
+       9: aload_3
+      10: invokevirtual #29                 // Method net/minecraft/client/resources/sounds/Sound.m_235147_:()Lnet/minecraft/util/valueproviders/SampledFloat;
+      13: aload_3
+      14: invokevirtual #33                 // Method net/minecraft/client/resources/sounds/Sound.m_7789_:()I
+      17: getstatic     #37                 // Field net/minecraft/client/resources/sounds/Sound$Type.FILE:Lnet/minecraft/client/resources/sounds/Sound$Type;
+      20: aload_3
+      21: invokevirtual #41                 // Method net/minecraft/client/resources/sounds/Sound.m_119796_:()Z
+      24: iconst_0
+      25: aload_3
+      26: invokevirtual #44                 // Method net/minecraft/client/resources/sounds/Sound.m_119798_:()I
+      29: invokespecial #47                 // Method net/minecraft/client/resources/sounds/Sound."<init>":(Ljava/lang/String;Lnet/minecraft/util/valueproviders/SampledFloat;Lnet/minecraft/util/valueproviders/SampledFloat;ILnet/minecraft/client/resources/sounds/Sound$Type;ZZI)V
+      32: aload_0
+      33: aload_1
+      34: putfield      #49                 // Field location:Lnet/minecraft/resources/ResourceLocation;
+      37: aload_0
+      38: aload_2
+      39: putfield      #51                 // Field path:Lnet/minecraft/resources/ResourceLocation;
+      42: return
+
+  public net.minecraft.resources.ResourceLocation m_119787_();
+    descriptor: ()Lnet/minecraft/resources/ResourceLocation;
+    Code:
+       0: aload_0
+       1: getfield      #49                 // Field location:Lnet/minecraft/resources/ResourceLocation;
+       4: areturn
+
+  public net.minecraft.resources.ResourceLocation m_119790_();
+    descriptor: ()Lnet/minecraft/resources/ResourceLocation;
+    Code:
+       0: aload_0
+       1: getfield      #51                 // Field path:Lnet/minecraft/resources/ResourceLocation;
+       4: areturn
+}

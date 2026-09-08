@@ -15,12 +15,11 @@ import com.tacz.guns.resource.index.CommonGunIndex;
 import com.tacz.guns.resource.pojo.data.gun.Bolt;
 import com.tacz.guns.resource.pojo.data.gun.ChargeData;
 import com.tacz.guns.resource.pojo.data.gun.ChargeType;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.network.PacketDistributor;
@@ -56,7 +55,7 @@ public class LivingEntityShoot {
         if (!(currentGunItem.getItem() instanceof IGun iGun)) {
             return ShootResult.NOT_GUN;
         }
-        ResourceLocation gunId = iGun.getGunId(currentGunItem);
+        Identifier gunId = iGun.getGunId(currentGunItem);
         Optional<CommonGunIndex> gunIndexOptional = TimelessAPI.getCommonGunIndex(gunId);
         if (gunIndexOptional.isEmpty()) {
             return ShootResult.ID_NOT_EXIST;
@@ -80,7 +79,7 @@ public class LivingEntityShoot {
             long alpha = System.currentTimeMillis() - data.baseTimestamp - timestamp;
             if (alpha < -300 || alpha > 300 + tickTime * 2) { // 允许 +- 300ms 的网络波动、窗口下限再扩大 2 个 tick time 时间(最坏情况射击会延迟2个 tick)
                 if (shooter instanceof ServerPlayer player) {
-                    NetworkHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new ServerMessageSyncBaseTimestamp());
+                    NetworkHandler.CHANNEL.send(new ServerMessageSyncBaseTimestamp(), PacketDistributor.PLAYER.with(player));
                 }
                 return ShootResult.NETWORK_FAIL;
             }
@@ -142,7 +141,7 @@ public class LivingEntityShoot {
             iGun.setBulletInBarrel(currentGunItem, true);
         }
         // 触发射击事件
-        if (MinecraftForge.EVENT_BUS.post(new GunShootEvent(shooter, currentGunItem, LogicalSide.SERVER))) {
+        if (GunShootEvent.BUS.post(new GunShootEvent(shooter, currentGunItem, LogicalSide.SERVER))) {
             return ShootResult.FORGE_EVENT_CANCEL;
         }
 
@@ -242,7 +241,7 @@ public class LivingEntityShoot {
         if (!(currentGunItem.getItem() instanceof IGun iGun)) {
             return 0;
         }
-        ResourceLocation gunId = iGun.getGunId(currentGunItem);
+        Identifier gunId = iGun.getGunId(currentGunItem);
         Optional<CommonGunIndex> gunIndex = TimelessAPI.getCommonGunIndex(gunId);
         FireMode fireMode = iGun.getFireMode(currentGunItem);
         long interval = timestamp - data.shootTimestamp;

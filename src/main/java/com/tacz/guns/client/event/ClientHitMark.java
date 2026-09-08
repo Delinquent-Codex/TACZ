@@ -10,11 +10,11 @@ import com.tacz.guns.entity.TargetMinecart;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,8 +32,8 @@ public class ClientHitMark {
         LocalPlayer player = Minecraft.getInstance().player;
         Entity hurtEntity = event.getHurtEntity();
         if (player != null && player.equals(attacker) && hurtEntity!=null) {
-            ResourceLocation gunId = event.getGunId();
-            ResourceLocation gunDisplayId = event.getGunDisplayId();
+            Identifier gunId = event.getGunId();
+            Identifier gunDisplayId = event.getGunDisplayId();
             RenderCrosshairEvent.markHitTimestamp();
             if (event.isHeadShot()) {
                 RenderCrosshairEvent.markHeadShotTimestamp();

@@ -1,0 +1,81 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.5.1/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+MixinGradle did not locate the diffplug APT plugin, skipping eclipse task configuration
+
+> Task :downloadMcpConfig
+> Task :extractSrg
+> Task :createMcpToSrg
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7)
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
+Note: Loading searge mappings from C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\createMcpToSrg\output.tsrg
+Note: Writing refmap to C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\tmp\compileJava\compileJava-mappings.tsrg
+Note: Writing refmap to C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\build\tmp\compileJava\compileJava-mappings.tsrg
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\client\input\ConfigKey.java:41: warning: [removal] getActiveModifier() in KeyModifier has been deprecated and marked for removal
+                && OPEN_CONFIG_KEY.getKeyModifier().equals(KeyModifier.getActiveModifier())) {
+                                                                      ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\config\PreLoadConfig.java:28: warning: [removal] getActiveContainer() in ModLoadingContext has been deprecated and marked for removal
+        var c = new PreLoadModConfig(ModConfig.Type.COMMON, spec, ctx.getActiveContainer(), "tacz-pre.toml");
+                                                                     ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\GunMod.java:33: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.init());
+                         ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\GunMod.java:34: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ServerConfig.init());
+                         ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\GunMod.java:35: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ClientConfig.init());
+                         ^
+C:\Users\voltp\Downloads\TACZ-port-reference\baseline-1.20.1\src\main\java\com\tacz\guns\GunMod.java:40: warning: [removal] get() in FMLJavaModLoadingContext has been deprecated and marked for removal
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+                                                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+9 warnings
+
+> Task :addMixinsToJar
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :configureReobfTaskForReobfJar
+> Task :reobfJar
+> Task :configureReobfTaskForReobfJarJar
+> Task :addMixinsToJarJar
+> Task :jarJar
+> Task :reobfJarJar
+> Task :addMixinsToSourcesJar
+> Task :sourcesJar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.5.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 1m 19s
+15 actionable tasks: 15 executed

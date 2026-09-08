@@ -14,7 +14,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.FastColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.gui.overlay.ForgeGui;
@@ -23,7 +23,7 @@ import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 import java.text.DecimalFormat;
 
 public class HeatBarOverlay implements IGuiOverlay {
-    private static final ResourceLocation HEATBASE = new ResourceLocation(GunMod.MOD_ID, "textures/hud/heat_base.png");
+    private static final Identifier HEATBASE = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "textures/hud/heat_base.png");
     private static final DecimalFormat HEAT_FORMAT_PERCENT = new DecimalFormat("0.0%");
     private static float heatScale = 0.25f;
 
@@ -41,7 +41,7 @@ public class HeatBarOverlay implements IGuiOverlay {
         if (!(stack.getItem() instanceof IGun iGun)) {
             return;
         }
-        ResourceLocation gunId = iGun.getGunId(stack);
+        Identifier gunId = iGun.getGunId(stack);
         GunData gunData = TimelessAPI.getClientGunIndex(gunId).map(ClientGunIndex::getGunData).orElse(null);
         GunDisplayInstance display = TimelessAPI.getGunDisplay(stack).orElse(null);
         if (gunData == null || display == null) {

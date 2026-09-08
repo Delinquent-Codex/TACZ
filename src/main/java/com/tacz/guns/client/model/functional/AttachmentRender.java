@@ -12,9 +12,9 @@ import com.tacz.guns.client.renderer.item.AttachmentItemRenderer;
 import com.tacz.guns.util.RenderDistance;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.apache.commons.lang3.tuple.Pair;
@@ -35,14 +35,14 @@ public class AttachmentRender implements IFunctionalRenderer {
     public static void renderAttachment(ItemStack attachmentItem, ItemStack gunItem, PoseStack poseStack, ItemDisplayContext transformType, int light, int overlay) {
         poseStack.translate(0, -1.5, 0);
         if (attachmentItem.getItem() instanceof IAttachment iAttachment) {
-            ResourceLocation attachmentId = iAttachment.getAttachmentId(attachmentItem);
+            Identifier attachmentId = iAttachment.getAttachmentId(attachmentItem);
             TimelessAPI.getClientAttachmentIndex(attachmentId).ifPresentOrElse(attachmentIndex -> {
                 BedrockAttachmentModel model = attachmentIndex.getAttachmentModel();
-                ResourceLocation texture = attachmentIndex.getModelTexture();
+                Identifier texture = attachmentIndex.getModelTexture();
                 // 这里是枪械里的配件渲染，没有模型材质就不渲染
                 if (model != null && texture != null) {
                     // 调用低模
-                    Pair<BedrockAttachmentModel, ResourceLocation> lodModel = attachmentIndex.getLodModel();
+                    Pair<BedrockAttachmentModel, Identifier> lodModel = attachmentIndex.getLodModel();
                     // 有低模、在高模渲染范围外、不是第一人称
                     if (lodModel != null && !RenderDistance.inRenderHighPolyModelDistance(poseStack) && !transformType.firstPerson()) {
                         model = lodModel.getLeft();

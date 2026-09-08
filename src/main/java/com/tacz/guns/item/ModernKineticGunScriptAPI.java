@@ -27,12 +27,11 @@ import com.tacz.guns.sound.SoundManager;
 import com.tacz.guns.util.AttachmentDataUtils;
 import com.tacz.guns.util.CycleTaskHelper;
 import it.unimi.dsi.fastutil.Pair;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fml.LogicalSide;
 import org.luaj.vm2.LuaError;
@@ -59,9 +58,9 @@ public class ModernKineticGunScriptAPI {
 
     private CommonGunIndex gunIndex;
 
-    private ResourceLocation gunId;
+    private Identifier gunId;
 
-    private ResourceLocation gunDisplayId;
+    private Identifier gunDisplayId;
 
     private Supplier<Float> pitchSupplier;
 
@@ -158,7 +157,7 @@ public class ModernKineticGunScriptAPI {
                 return false;
             }
             // 触发击发事件
-            boolean fire = !MinecraftForge.EVENT_BUS.post(new GunFireEvent(shooter, itemStack, LogicalSide.SERVER));
+            boolean fire = !GunFireEvent.BUS.post(new GunFireEvent(shooter, itemStack, LogicalSide.SERVER));
             if (fire) {
                 NetworkHandler.sendToTrackingEntity(new ServerMessageGunFire(shooter.getId(), itemStack), shooter);
                 // 削减弹药
@@ -181,7 +180,7 @@ public class ModernKineticGunScriptAPI {
                 float yaw = yawSupplier != null ? yawSupplier.get() : shooter.getYRot();
                 // 生成子弹
                 Level world = shooter.level();
-                ResourceLocation ammoId = gunData.getAmmoId();
+                Identifier ammoId = gunData.getAmmoId();
                 for (int i = 0; i < bulletAmount; i++) {
                     boolean isTracer = bulletData.hasTracerAmmo() && gunOperator.nextBulletIsTracer(bulletData.getTracerCountInterval());
                     EntityKineticBullet bullet = new EntityKineticBullet(world, shooter, itemStack, ammoId, gunId,

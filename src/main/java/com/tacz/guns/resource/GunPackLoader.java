@@ -9,7 +9,7 @@ import com.tacz.guns.util.GetJarResources;
 import cpw.mods.jarhandling.SecureJar;
 import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
@@ -106,7 +106,7 @@ public enum GunPackLoader implements RepositorySource {
                     }
                 }
 
-                public IoSupplier<InputStream> getResource(PackType type, ResourceLocation location) {
+                public IoSupplier<InputStream> getResource(PackType type, Identifier location) {
                     return super.getResource(type, location);
                 }
 
@@ -135,7 +135,7 @@ public enum GunPackLoader implements RepositorySource {
     }
 
     public static @Nullable Path getModIcon(String modId) {
-        Optional<? extends ModContainer> m = ModList.get().getModContainerById(modId);
+        Optional<? extends ModContainer> m = ModList.getModContainerById(modId);
         if (m.isPresent()) {
             IModInfo mod = m.get().getModInfo();
             IModFile file = mod.getOwningFile().getFile();
@@ -262,7 +262,7 @@ public enum GunPackLoader implements RepositorySource {
 
     private static boolean modVersionMatch(String modId, String version) throws InvalidVersionSpecificationException {
         VersionRange versionRange = VersionRange.createFromVersionSpec(version);
-        return ModList.get().getModContainerById(modId).map(mod -> {
+        return ModList.getModContainerById(modId).map(mod -> {
             ArtifactVersion modVersion = mod.getModInfo().getVersion();
             return versionRange.containsVersion(modVersion);
         }).orElse(false);

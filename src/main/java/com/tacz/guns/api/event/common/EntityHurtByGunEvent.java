@@ -1,11 +1,13 @@
 package com.tacz.guns.api.event.common;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraftforge.eventbus.api.Cancelable;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
+import net.minecraftforge.eventbus.api.bus.EventBus;
+import net.minecraftforge.eventbus.api.bus.CancellableEventBus;
+import net.minecraftforge.eventbus.api.event.characteristic.Cancellable;
 import net.minecraftforge.fml.LogicalSide;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.ApiStatus;
@@ -17,12 +19,14 @@ import java.util.Optional;
 /**
  * 生物被枪械子弹伤害时触发的事件
  */
-public class EntityHurtByGunEvent extends Event implements KubeJSGunEventPoster<EntityHurtByGunEvent> {
+public class EntityHurtByGunEvent extends GunEvent implements KubeJSGunEventPoster<EntityHurtByGunEvent> {
+    public static final EventBus<EntityHurtByGunEvent> BUS = EventBus.create(EntityHurtByGunEvent.class);
+
     protected final Entity bullet;
     protected @Nullable Entity hurtEntity;
     protected @Nullable LivingEntity attacker;
-    protected ResourceLocation gunId;
-    protected ResourceLocation gunDisplayId;
+    protected Identifier gunId;
+    protected Identifier gunDisplayId;
     protected float baseAmount;
     protected DamageSource nonApPartDamageSource;
     protected DamageSource apPartDamageSource;
@@ -32,7 +36,7 @@ public class EntityHurtByGunEvent extends Event implements KubeJSGunEventPoster<
 
     @ApiStatus.Internal
     protected EntityHurtByGunEvent(Entity bullet, @Nullable Entity hurtEntity, @Nullable LivingEntity attacker,
-                                   ResourceLocation gunId, ResourceLocation gunDisplayId,
+                                   Identifier gunId, Identifier gunDisplayId,
                                    float baseAmount, @Nullable Pair<DamageSource, DamageSource> sources, boolean isHeadShot,
                                    float headshotMultiplier, LogicalSide logicalSide) {
         this.bullet = bullet;
@@ -50,11 +54,12 @@ public class EntityHurtByGunEvent extends Event implements KubeJSGunEventPoster<
     /**
      * 实体受到枪击，伤害判定前触发的事件，可以设置枪击的伤害属性
      */
-    @Cancelable
-    public static class Pre extends EntityHurtByGunEvent {
+    public static class Pre extends EntityHurtByGunEvent implements Cancellable {
+        public static final CancellableEventBus<Pre> BUS = cancellableBus(Pre.class);
+
         @ApiStatus.Internal
         public Pre(Entity bullet, @Nullable Entity hurtEntity, @Nullable LivingEntity attacker,
-                   ResourceLocation gunId, ResourceLocation gunDisplayId,
+                   Identifier gunId, Identifier gunDisplayId,
                    float amount, @Nullable Pair<DamageSource, DamageSource> sources,
                    boolean isHeadShot, float headshotMultiplier, LogicalSide logicalSide) {
             super(bullet, hurtEntity, attacker, gunId, gunDisplayId, amount, sources, isHeadShot, headshotMultiplier, logicalSide);
@@ -70,7 +75,7 @@ public class EntityHurtByGunEvent extends Event implements KubeJSGunEventPoster<
             this.attacker = attacker;
         }
 
-        public final void setGunId(ResourceLocation gunId) {
+        public final void setGunId(Identifier gunId) {
             this.gunId = gunId;
         }
 
@@ -103,9 +108,11 @@ public class EntityHurtByGunEvent extends Event implements KubeJSGunEventPoster<
      * @see EntityKillByGunEvent 实体因枪击致死时触发的事件
      */
     public static class Post extends EntityHurtByGunEvent {
+        public static final EventBus<Post> BUS = EventBus.create(Post.class);
+
         @ApiStatus.Internal
         public Post(Entity bullet, @Nullable Entity hurtEntity, @Nullable LivingEntity attacker,
-                    ResourceLocation gunId, ResourceLocation gunDisplayId,
+                    Identifier gunId, Identifier gunDisplayId,
                     float amount, @Nullable Pair<DamageSource, DamageSource> sources,
                     boolean isHeadShot, float headshotMultiplier, LogicalSide logicalSide) {
             super(bullet, hurtEntity, attacker, gunId, gunDisplayId, amount, sources, isHeadShot, headshotMultiplier, logicalSide);
@@ -127,11 +134,11 @@ public class EntityHurtByGunEvent extends Event implements KubeJSGunEventPoster<
         return attacker;
     }
 
-    public ResourceLocation getGunId() {
+    public Identifier getGunId() {
         return gunId;
     }
 
-    public ResourceLocation getGunDisplayId() {
+    public Identifier getGunDisplayId() {
         return gunDisplayId;
     }
 

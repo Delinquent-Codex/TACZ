@@ -27,13 +27,13 @@ import com.tacz.guns.util.math.SecondOrderDynamics;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
@@ -76,15 +76,13 @@ public class FirstPersonRenderGunEvent {
      * 当主手拿着枪械物品的时候，取消应用在它上面的 viewBobbing，以便应用自定义的跑步/走路动画。
      */
     @SubscribeEvent
-    public static void cancelItemInHandViewBobbing(RenderItemInHandBobEvent.BobView event) {
+    public static boolean cancelItemInHandViewBobbing(RenderItemInHandBobEvent.BobView event) {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player == null) {
-            return;
+            return false;
         }
         ItemStack itemStack = KeepingItemRenderer.getRenderer().getCurrentItem();
-        if (IGun.getIGunOrNull(itemStack) != null) {
-            event.setCanceled(true);
-        }
+        return IGun.getIGunOrNull(itemStack) != null;
     }
 
     @SubscribeEvent
@@ -147,7 +145,7 @@ public class FirstPersonRenderGunEvent {
         // 应用瞄准定位
         List<BedrockPart> idleNodePath = model.getIdleSightPath();
         List<BedrockPart> aimingNodePath = null;
-        ResourceLocation scopeId = iGun.getAttachmentId(stack, AttachmentType.SCOPE);
+        Identifier scopeId = iGun.getAttachmentId(stack, AttachmentType.SCOPE);
         if (scopeId.equals(DefaultAssets.EMPTY_ATTACHMENT_ID)) {
             scopeId = iGun.getBuiltInAttachmentId(stack, AttachmentType.SCOPE);
         }

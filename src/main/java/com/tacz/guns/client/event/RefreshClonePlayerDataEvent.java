@@ -7,7 +7,7 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.function.BooleanSupplier;
@@ -29,14 +29,12 @@ public class RefreshClonePlayerDataEvent {
      * 延迟执行是通过这个方法执行的
      */
     @SubscribeEvent
-    public static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase == TickEvent.Phase.START) {
-            try {
-                DelayedTask.SUPPLIERS.removeIf(BooleanSupplier::getAsBoolean);
-            } catch (Exception e) {
-                DelayedTask.SUPPLIERS.clear();
-                GunMod.LOGGER.catching(e);
-            }
+    public static void onClientTick(TickEvent.ClientTickEvent.Pre event) {
+        try {
+            DelayedTask.SUPPLIERS.removeIf(BooleanSupplier::getAsBoolean);
+        } catch (Exception e) {
+            DelayedTask.SUPPLIERS.clear();
+            GunMod.LOGGER.catching(e);
         }
     }
 }

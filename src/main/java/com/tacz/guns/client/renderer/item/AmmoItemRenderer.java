@@ -12,10 +12,10 @@ import com.tacz.guns.client.resource.pojo.TransformScale;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.joml.Vector3f;
@@ -61,12 +61,12 @@ public class AmmoItemRenderer extends BlockEntityWithoutLevelRenderer {
         if (!(stack.getItem() instanceof IAmmo iAmmo)) {
             return;
         }
-        ResourceLocation ammoId = iAmmo.getAmmoId(stack);
+        Identifier ammoId = iAmmo.getAmmoId(stack);
         poseStack.pushPose();
         TimelessAPI.getClientAmmoIndex(ammoId).ifPresentOrElse(ammoIndex -> {
             // 先获取 3D 模型，如果为空，统一使用 GUI 渲染
             BedrockAmmoModel ammoModel = ammoIndex.getAmmoModel();
-            ResourceLocation modelTexture = ammoIndex.getModelTextureLocation();
+            Identifier modelTexture = ammoIndex.getModelTextureLocation();
             // GUI 特殊渲染
             if (transformType == GUI || ammoModel == null || modelTexture == null) {
                 poseStack.translate(0.5, 1.5, 0.5);

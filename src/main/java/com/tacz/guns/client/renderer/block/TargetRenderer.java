@@ -11,14 +11,14 @@ import com.tacz.guns.client.resource.InternalAssetLoader;
 import com.tacz.guns.config.client.RenderConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.DefaultPlayerSkin;
 import net.minecraft.core.Direction;
 import net.minecraft.core.UUIDUtil;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.state.BlockState;
@@ -59,7 +59,7 @@ public class TargetRenderer implements BlockEntityRenderer<TargetBlockEntity> {
                 poseStack.mulPose(Axis.XP.rotationDegrees(deg));
                 Minecraft minecraft = Minecraft.getInstance();
                 var map = minecraft.getSkinManager().getInsecureSkinInformation(blockEntity.getOwner());
-                ResourceLocation skin;
+                Identifier skin;
                 if (map.containsKey(MinecraftProfileTexture.Type.SKIN)) {
                     skin = minecraft.getSkinManager().registerTexture(map.get(MinecraftProfileTexture.Type.SKIN), MinecraftProfileTexture.Type.SKIN);
                 } else {

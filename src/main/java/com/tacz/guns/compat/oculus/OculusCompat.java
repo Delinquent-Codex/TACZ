@@ -17,7 +17,7 @@ public final class OculusCompat {
     private static Supplier<Boolean> IS_RENDER_SHADOW_SUPPER;
 
     public static void initCompat() {
-        ModList.get().getModContainerById(CompatRegistry.OCULUS).ifPresent(mod -> {
+        ModList.getModContainerById(CompatRegistry.OCULUS).ifPresent(mod -> {
             if (mod.getModInfo().getVersion().compareTo(VERSION) >= 0) {
                 END_BATCH_FUNCTION = OculusCompatNewly::endBatch;
                 IS_RENDER_SHADOW_SUPPER = OculusCompatNewly::isRenderShadow;
@@ -29,21 +29,21 @@ public final class OculusCompat {
     }
 
     public static boolean isRenderShadow() {
-        if (ModList.get().isLoaded(CompatRegistry.OCULUS)) {
+        if (ModList.isLoaded(CompatRegistry.OCULUS)) {
             return IS_RENDER_SHADOW_SUPPER.get();
         }
         return false;
     }
 
     public static boolean isUsingRenderPack() {
-        if (ModList.get().isLoaded(CompatRegistry.OCULUS)) {
+        if (ModList.isLoaded(CompatRegistry.OCULUS)) {
             return IrisApi.getInstance().isShaderPackInUse();
         }
         return false;
     }
 
     public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
-        if (ModList.get().isLoaded(CompatRegistry.OCULUS)) {
+        if (ModList.isLoaded(CompatRegistry.OCULUS)) {
             return END_BATCH_FUNCTION.apply(bufferSource);
         }
         return false;

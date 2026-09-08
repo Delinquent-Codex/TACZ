@@ -7,7 +7,7 @@ import com.tacz.guns.api.item.gun.AbstractGunItem;
 import com.tacz.guns.api.item.gun.FireMode;
 import com.tacz.guns.entity.shooter.ShooterDataHolder;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -127,24 +127,24 @@ public interface IGun {
      * 获取枪械 ID
      */
     @NotNull
-    ResourceLocation getGunId(ItemStack gun);
+    Identifier getGunId(ItemStack gun);
 
     /**
      * 设置枪械 ID
      */
-    void setGunId(ItemStack gun, @Nullable ResourceLocation gunId);
+    void setGunId(ItemStack gun, @Nullable Identifier gunId);
 
     /**
      * 获取枪械客户端效果 ID, 如果是默认皮肤将返回 {@link DefaultAssets#DEFAULT_GUN_DISPLAY_ID}<br/>
      * 你应该使用 {@link com.tacz.guns.api.TimelessAPI#getGunDisplay(ItemStack)} 获取正确的客户端效果
      */
     @NotNull
-    ResourceLocation getGunDisplayId(ItemStack gun);
+    Identifier getGunDisplayId(ItemStack gun);
 
     /**
      * 设置枪械客户端效果 ID
      */
-    void setGunDisplayId(ItemStack gun, @Nullable ResourceLocation displayId);
+    void setGunDisplayId(ItemStack gun, @Nullable Identifier displayId);
 
     /**
      * 获取输入的经验值对应的等级。
@@ -312,8 +312,16 @@ public interface IGun {
     @Nullable
     CompoundTag getAttachmentTag(ItemStack gun, AttachmentType type);
 
+    /** Commit edits explicitly: attachment tags are detached component snapshots on 26.2. */
+    default void updateAttachmentTag(ItemStack gun, AttachmentType type, java.util.function.Consumer<CompoundTag> edit) {
+        ItemStack attachment = getAttachment(gun, type);
+        if (attachment.isEmpty()) return;
+        com.tacz.guns.api.item.nbt.ItemDataAccessor.update(attachment, edit);
+        installAttachment(gun, attachment);
+    }
+
     @Nonnull
-    ResourceLocation getBuiltInAttachmentId(ItemStack gun, AttachmentType type);
+    Identifier getBuiltInAttachmentId(ItemStack gun, AttachmentType type);
 
     /**
      * 获取枪械的配件 ID
@@ -321,7 +329,7 @@ public interface IGun {
      * 如果不存在，返回 {@link DefaultAssets#EMPTY_ATTACHMENT_ID};
      */
     @Nonnull
-    ResourceLocation getAttachmentId(ItemStack gun, AttachmentType type);
+    Identifier getAttachmentId(ItemStack gun, AttachmentType type);
 
     /**
      * 安装配件

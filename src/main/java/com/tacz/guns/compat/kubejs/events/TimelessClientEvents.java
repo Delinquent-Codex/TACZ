@@ -7,7 +7,7 @@ import com.tacz.guns.api.client.event.SwapItemWithOffHand;
 import dev.latvian.mods.kubejs.event.EventHandler;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import dev.latvian.mods.kubejs.script.ScriptTypePredicate;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.function.Consumer;
 
 public class TimelessClientEvents implements TimelessKubeJSEventRegister{
     public static final TimelessClientEvents INSTANCE = new TimelessClientEvents();
-    public static final Map<Class<? extends Event>, Consumer<Event>> EVENT_HANDLERS = new HashMap<>();
+    public static final Map<Class<? extends GunEvent>, Consumer<GunEvent>> EVENT_HANDLERS = new HashMap<>();
     public static final EventHandler BEFORE_RENDER_HAND = INSTANCE.registerTimelessEvent(
             "beforeRenderHand",
             GunKubeJSEvents.BeforeRenderHandEventJS.class,
@@ -61,12 +61,12 @@ public class TimelessClientEvents implements TimelessKubeJSEventRegister{
     }
 
     @Override
-    public Map<Class<? extends Event>, Consumer<Event>> getEventHandlers() {
+    public Map<Class<? extends GunEvent>, Consumer<GunEvent>> getEventHandlers() {
         return EVENT_HANDLERS;
     }
 
     @Override
-    public <E extends Event> void registerEventHandler(Class<E> eventClass, Consumer<Event> eventPoster) {
+    public <E extends GunEvent> void registerEventHandler(Class<E> eventClass, Consumer<GunEvent> eventPoster) {
         EVENT_HANDLERS.put(eventClass, eventPoster);
     }
 

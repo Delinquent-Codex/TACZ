@@ -11,13 +11,13 @@ import com.tacz.guns.entity.TargetMinecart;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MinecartRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.DefaultPlayerSkin;
 import net.minecraft.core.UUIDUtil;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
@@ -40,7 +40,7 @@ public class TargetMinecartRenderer extends MinecartRenderer<TargetMinecart> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(TargetMinecart minecart) {
+    public Identifier getTextureLocation(TargetMinecart minecart) {
         return InternalAssetLoader.ENTITY_EMPTY_TEXTURE;
     }
 
@@ -64,7 +64,7 @@ public class TargetMinecartRenderer extends MinecartRenderer<TargetMinecart> {
                 Minecraft minecraft = Minecraft.getInstance();
                 GameProfile gameProfile = targetMinecart.getGameProfile();
                 var map = minecraft.getSkinManager().getInsecureSkinInformation(gameProfile);
-                ResourceLocation skin;
+                Identifier skin;
                 if (map.containsKey(MinecraftProfileTexture.Type.SKIN)) {
                     skin = minecraft.getSkinManager().registerTexture(map.get(MinecraftProfileTexture.Type.SKIN), MinecraftProfileTexture.Type.SKIN);
                 } else {

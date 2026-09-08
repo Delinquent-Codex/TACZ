@@ -8,7 +8,6 @@ import com.tacz.guns.network.message.event.ServerMessageGunFireSelect;
 import com.tacz.guns.resource.modifier.AttachmentPropertyManager;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.LogicalSide;
 
 public class LivingEntityFireSelect {
@@ -28,7 +27,7 @@ public class LivingEntityFireSelect {
         if (!(currentGunItem.getItem() instanceof IGun iGun)) {
             return;
         }
-        if (MinecraftForge.EVENT_BUS.post(new GunFireSelectEvent(shooter, currentGunItem, LogicalSide.SERVER))) {
+        if (GunFireSelectEvent.BUS.post(new GunFireSelectEvent(shooter, currentGunItem, LogicalSide.SERVER))) {
             return;
         }
         NetworkHandler.sendToTrackingEntity(new ServerMessageGunFireSelect(shooter.getId(), currentGunItem), shooter);

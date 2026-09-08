@@ -10,7 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -59,7 +59,7 @@ public class GunSmithTableItem extends BlockItem implements BlockItemDataAccesso
     @Nonnull
     @OnlyIn(Dist.CLIENT)
     public Component getName(@Nonnull ItemStack stack) {
-        ResourceLocation blockId = this.getBlockId(stack);
+        Identifier blockId = this.getBlockId(stack);
         Optional<ClientBlockIndex> blockIndex = TimelessAPI.getClientBlockIndex(blockId);
         if (blockIndex.isPresent()) {
             return Component.translatable(blockIndex.get().getName());
@@ -70,7 +70,7 @@ public class GunSmithTableItem extends BlockItem implements BlockItemDataAccesso
 //    @Override
 //    @OnlyIn(Dist.CLIENT)
 //    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag isAdvanced) {
-//        ResourceLocation blockId = this.getBlockId(stack);
+//        Identifier blockId = this.getBlockId(stack);
 //        TimelessAPI.getClientBlockIndex(blockId).ifPresent(index -> {
 //            String tooltipKey = index.getTooltipKey();
 //            if (tooltipKey != null) {

@@ -3,3 +3,6 @@
 # are changed when only line endings change.
 src/generated/**/.cache/cache text eol=lf
 src/generated/**/*.json text eol=lf
+gradlew text eol=lf
+# Keep captured compiler output verbatim, including diagnostic indentation.
+docs/porting/evidence/*.log -text -whitespace

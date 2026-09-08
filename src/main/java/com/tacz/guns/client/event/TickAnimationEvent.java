@@ -10,12 +10,22 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = GunMod.MOD_ID)
 public class TickAnimationEvent {
+    // The baseline handles both phases; retain its scheduling frequency.
     @SubscribeEvent
+    public static void tickAnimation(TickEvent.ClientTickEvent.Pre event) {
+        tickAnimation((TickEvent.ClientTickEvent) event);
+    }
+
+    @SubscribeEvent
+    public static void tickAnimation(TickEvent.ClientTickEvent.Post event) {
+        tickAnimation((TickEvent.ClientTickEvent) event);
+    }
+
     public static void tickAnimation(TickEvent.ClientTickEvent event) {
         LocalPlayer player = Minecraft.getInstance().player;
         if (player == null) {
@@ -44,10 +54,7 @@ public class TickAnimationEvent {
     }
 
     @SubscribeEvent
-    public static void tickAnimation(TickEvent.RenderTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            return;
-        }
+    public static void tickAnimation(TickEvent.RenderTickEvent.Pre event) {
         if (Minecraft.getInstance().options.getCameraType().isFirstPerson()) {
             return;
         }
@@ -60,7 +67,7 @@ public class TickAnimationEvent {
         if (IClientItemExtensions.of(mainHandItem.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             // 如果物品不一样了，先尝试初始化状态机
             if (renderer.needReInit(mainHandItem)) {
-                renderer.tryInit(mainHandItem, player, event.renderTickTime);
+                renderer.tryInit(mainHandItem, player, event.timer().getGameTimeDeltaPartialTick(false));
             }
             renderer.visualUpdate(mainHandItem);
         }

@@ -1,0 +1,371 @@
+[
+  {
+    "class": "ClientMessageCraft",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessageCraft.java",
+    "buffer_operations": [
+      "buf.writeResourceLocation(message.recipeId)",
+      "buf.writeVarInt(message.menuId)",
+      "buf.readResourceLocation(), buf.readVarInt())"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessageLaserColor",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessageLaserColor.java",
+    "buffer_operations": [
+      "buf.writeMap(message.colorMap, FriendlyByteBuf::writeEnum, FriendlyByteBuf::writeInt)",
+      "buf.writeBoolean(message.applyGunColor)",
+      "buf.writeInt(message.gunColor)",
+      "buf.writeInt(message.gunSlotIndex)",
+      "buf.readMap(buf1 -> buf.readEnum(AttachmentType.class), FriendlyByteBuf::readInt))",
+      "buf.readBoolean()",
+      "buf.readInt()",
+      "buf.readInt()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerAim",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerAim.java",
+    "buffer_operations": [
+      "buf.writeBoolean(message.isAim)",
+      "buf.readBoolean())"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerBoltGun",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerBoltGun.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerCancelReload",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerCancelReload.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerCrawl",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerCrawl.java",
+    "buffer_operations": [
+      "buf.writeBoolean(message.isCrawl)",
+      "buf.readBoolean())"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerDrawGun",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerDrawGun.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerFireSelect",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerFireSelect.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerMelee",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerMelee.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerReloadGun",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerReloadGun.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerShoot",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerShoot.java",
+    "buffer_operations": [
+      "buf.writeLong(message.timestamp)",
+      "buf.writeFloat(message.chargeProgress)",
+      "buf.readLong(), buf.readFloat())"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessagePlayerZoom",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerZoom.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessageRefitGun",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java",
+    "buffer_operations": [
+      "buf.writeInt(message.attachmentSlotIndex)",
+      "buf.writeInt(message.gunSlotIndex)",
+      "buf.writeEnum(message.attachmentType)",
+      "buf.readInt(), buf.readInt(), buf.readEnum(AttachmentType.class))"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessageSyncBaseTimestamp",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessageSyncBaseTimestamp.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ClientMessageUnloadAttachment",
+    "source": "src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java",
+    "buffer_operations": [
+      "buf.writeInt(message.gunSlotIndex)",
+      "buf.writeEnum(message.attachmentType)",
+      "buf.readInt(), buf.readEnum(AttachmentType.class))"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageCraft",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.menuId)",
+      "buf.readVarInt())"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageLevelUp",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageLevelUp.java",
+    "buffer_operations": [
+      "buf.writeItemStack(message.gun, true)",
+      "buf.writeInt(message.level)",
+      "buf.readItem()",
+      "buf.readInt()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageRefreshRefitScreen",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageSound",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageSound.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.entityId)",
+      "buf.writeResourceLocation(message.gunId)",
+      "buf.writeResourceLocation(message.gunDisplayId)",
+      "buf.writeUtf(message.soundName)",
+      "buf.writeFloat(message.volume)",
+      "buf.writeFloat(message.pitch)",
+      "buf.writeInt(message.distance)",
+      "buf.readVarInt()",
+      "buf.readResourceLocation()",
+      "buf.readResourceLocation()",
+      "buf.readUtf()",
+      "buf.readFloat()",
+      "buf.readFloat()",
+      "buf.readInt()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageSwapItem",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageSwapItem.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageSyncBaseTimestamp",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageSyncBaseTimestamp.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageSyncGunPack",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageSyncGunPack.java",
+    "buffer_operations": [
+      "buf.writeMap(message.getCache(), FriendlyByteBuf::writeEnum, (buf1, map) -> {\r\n            buf1.writeMap(map, FriendlyByteBuf::writeResourceLocation, FriendlyByteBuf::writeUtf)",
+      "buf.readMap(buf1 -> buf1.readEnum(DataType.class), buf2 -> {\r\n            return buf2.readMap(FriendlyByteBuf::readResourceLocation, FriendlyByteBuf::readUtf)"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageUpdateEntityData",
+    "source": "src/main/java/com/tacz/guns/network/message/ServerMessageUpdateEntityData.java",
+    "buffer_operations": [
+      "buffer.writeVarInt(message.entityId)",
+      "buffer.writeVarInt(message.entries.size())",
+      "buffer.readVarInt()",
+      "buffer.readVarInt()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunDraw",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunDraw.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.entityId)",
+      "buf.writeItem(message.previousGunItem)",
+      "buf.writeItem(message.currentGunItem)",
+      "buf.readVarInt()",
+      "buf.readItem()",
+      "buf.readItem()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunFire",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunFire.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.shooterId)",
+      "buf.writeItem(message.gunItemStack)",
+      "buf.readVarInt()",
+      "buf.readItem()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunFireSelect",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunFireSelect.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.shooterId)",
+      "buf.writeItem(message.gunItemStack)",
+      "buf.readVarInt()",
+      "buf.readItem()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunHurt",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunHurt.java",
+    "buffer_operations": [
+      "buf.writeInt(message.bulletId)",
+      "buf.writeInt(message.hurtEntityId)",
+      "buf.writeInt(message.attackerId)",
+      "buf.writeResourceLocation(message.gunId)",
+      "buf.writeResourceLocation(message.gunDisplayId)",
+      "buf.writeFloat(message.amount)",
+      "buf.writeBoolean(message.isHeadShot)",
+      "buf.writeFloat(message.headshotMultiplier)",
+      "buf.readInt()",
+      "buf.readInt()",
+      "buf.readInt()",
+      "buf.readResourceLocation()",
+      "buf.readResourceLocation()",
+      "buf.readFloat()",
+      "buf.readBoolean()",
+      "buf.readFloat()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunKill",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunKill.java",
+    "buffer_operations": [
+      "buf.writeInt(message.bulletId)",
+      "buf.writeInt(message.killEntityId)",
+      "buf.writeInt(message.attackerId)",
+      "buf.writeResourceLocation(message.gunId)",
+      "buf.writeResourceLocation(message.gunDisplayId)",
+      "buf.writeFloat(message.baseDamage)",
+      "buf.writeBoolean(message.isHeadShot)",
+      "buf.writeFloat(message.headshotMultiplier)",
+      "buf.readInt()",
+      "buf.readInt()",
+      "buf.readInt()",
+      "buf.readResourceLocation()",
+      "buf.readResourceLocation()",
+      "buf.readFloat()",
+      "buf.readBoolean()",
+      "buf.readFloat()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunMelee",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunMelee.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.shooterId)",
+      "buf.writeItem(message.gunItemStack)",
+      "buf.readVarInt()",
+      "buf.readItem()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunReload",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunReload.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.shooterId)",
+      "buf.writeItem(message.gunItemStack)",
+      "buf.readVarInt()",
+      "buf.readItem()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageGunShoot",
+    "source": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunShoot.java",
+    "buffer_operations": [
+      "buf.writeVarInt(message.shooterId)",
+      "buf.writeItem(message.gunItemStack)",
+      "buf.readVarInt()",
+      "buf.readItem()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "Acknowledge",
+    "source": "src/main/java/com/tacz/guns/network/message/handshake/Acknowledge.java",
+    "buffer_operations": [],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  },
+  {
+    "class": "ServerMessageSyncedEntityDataMapping",
+    "source": "src/main/java/com/tacz/guns/network/message/handshake/ServerMessageSyncedEntityDataMapping.java",
+    "buffer_operations": [
+      "buffer.writeInt(keys.size())",
+      "buffer.writeResourceLocation(key.classKey().id())",
+      "buffer.writeResourceLocation(key.id())",
+      "buffer.writeVarInt(id)",
+      "buffer.readInt()",
+      "buffer.readResourceLocation()",
+      "buffer.readResourceLocation()",
+      "buffer.readVarInt()"
+    ],
+    "direction": "see NetworkHandler registration",
+    "status": "not started"
+  }
+]

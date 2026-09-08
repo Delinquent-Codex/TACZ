@@ -12,7 +12,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.LogicalSide;
 
 public class LocalPlayerDraw {
@@ -45,8 +44,8 @@ public class LocalPlayerDraw {
         if (Minecraft.getInstance().gameMode != null) {
             Minecraft.getInstance().gameMode.ensureHasSentCarriedItem();
         }
-        NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerDrawGun());
-        MinecraftForge.EVENT_BUS.post(new GunDrawEvent(player, lastItem, currentItem, LogicalSide.CLIENT));
+        NetworkHandler.sendToServer(new ClientMessagePlayerDrawGun());
+        GunDrawEvent.BUS.post(new GunDrawEvent(player, lastItem, currentItem, LogicalSide.CLIENT));
 
 //        // 不处于收枪状态时才能收枪
 //        if (drawTime >= 0) {

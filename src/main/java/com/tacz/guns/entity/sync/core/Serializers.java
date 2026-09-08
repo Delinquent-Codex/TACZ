@@ -2,8 +2,9 @@ package com.tacz.guns.entity.sync.core;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.*;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.UUID;
@@ -19,259 +20,259 @@ import java.util.UUID;
 public class Serializers {
     public static final IDataSerializer<Boolean> BOOLEAN = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Boolean value) {
+        public void write(RegistryFriendlyByteBuf buf, Boolean value) {
             buf.writeBoolean(value);
         }
 
         @Override
-        public Boolean read(FriendlyByteBuf buf) {
+        public Boolean read(RegistryFriendlyByteBuf buf) {
             return buf.readBoolean();
         }
 
         @Override
-        public Tag write(Boolean value) {
+        public Tag write(HolderLookup.Provider registries, Boolean value) {
             return ByteTag.valueOf(value);
         }
 
         @Override
-        public Boolean read(Tag tag) {
-            return ((ByteTag) tag).getAsByte() != 0;
+        public Boolean read(HolderLookup.Provider registries, Tag tag) {
+            return ((ByteTag) tag).byteValue() != 0;
         }
     };
 
     public static final IDataSerializer<Byte> BYTE = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Byte value) {
+        public void write(RegistryFriendlyByteBuf buf, Byte value) {
             buf.writeByte(value);
         }
 
         @Override
-        public Byte read(FriendlyByteBuf buf) {
+        public Byte read(RegistryFriendlyByteBuf buf) {
             return buf.readByte();
         }
 
         @Override
-        public Tag write(Byte value) {
+        public Tag write(HolderLookup.Provider registries, Byte value) {
             return ByteTag.valueOf(value);
         }
 
         @Override
-        public Byte read(Tag tag) {
-            return ((ByteTag) tag).getAsByte();
+        public Byte read(HolderLookup.Provider registries, Tag tag) {
+            return ((ByteTag) tag).byteValue();
         }
     };
 
     public static final IDataSerializer<Short> SHORT = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Short value) {
+        public void write(RegistryFriendlyByteBuf buf, Short value) {
             buf.writeShort(value);
         }
 
         @Override
-        public Short read(FriendlyByteBuf buf) {
+        public Short read(RegistryFriendlyByteBuf buf) {
             return buf.readShort();
         }
 
         @Override
-        public Tag write(Short value) {
+        public Tag write(HolderLookup.Provider registries, Short value) {
             return ShortTag.valueOf(value);
         }
 
         @Override
-        public Short read(Tag tag) {
-            return ((ShortTag) tag).getAsShort();
+        public Short read(HolderLookup.Provider registries, Tag tag) {
+            return ((ShortTag) tag).shortValue();
         }
     };
 
     public static final IDataSerializer<Integer> INTEGER = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Integer value) {
+        public void write(RegistryFriendlyByteBuf buf, Integer value) {
             buf.writeVarInt(value);
         }
 
         @Override
-        public Integer read(FriendlyByteBuf buf) {
+        public Integer read(RegistryFriendlyByteBuf buf) {
             return buf.readVarInt();
         }
 
         @Override
-        public Tag write(Integer value) {
+        public Tag write(HolderLookup.Provider registries, Integer value) {
             return IntTag.valueOf(value);
         }
 
         @Override
-        public Integer read(Tag tag) {
-            return ((IntTag) tag).getAsInt();
+        public Integer read(HolderLookup.Provider registries, Tag tag) {
+            return ((IntTag) tag).intValue();
         }
     };
 
     public static final IDataSerializer<Long> LONG = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Long value) {
+        public void write(RegistryFriendlyByteBuf buf, Long value) {
             buf.writeLong(value);
         }
 
         @Override
-        public Long read(FriendlyByteBuf buf) {
+        public Long read(RegistryFriendlyByteBuf buf) {
             return buf.readLong();
         }
 
         @Override
-        public Tag write(Long value) {
+        public Tag write(HolderLookup.Provider registries, Long value) {
             return LongTag.valueOf(value);
         }
 
         @Override
-        public Long read(Tag tag) {
-            return ((LongTag) tag).getAsLong();
+        public Long read(HolderLookup.Provider registries, Tag tag) {
+            return ((LongTag) tag).longValue();
         }
     };
 
     public static final IDataSerializer<Float> FLOAT = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Float value) {
+        public void write(RegistryFriendlyByteBuf buf, Float value) {
             buf.writeFloat(value);
         }
 
         @Override
-        public Float read(FriendlyByteBuf buf) {
+        public Float read(RegistryFriendlyByteBuf buf) {
             return buf.readFloat();
         }
 
         @Override
-        public Tag write(Float value) {
+        public Tag write(HolderLookup.Provider registries, Float value) {
             return FloatTag.valueOf(value);
         }
 
         @Override
-        public Float read(Tag tag) {
-            return ((FloatTag) tag).getAsFloat();
+        public Float read(HolderLookup.Provider registries, Tag tag) {
+            return ((FloatTag) tag).floatValue();
         }
     };
 
     public static final IDataSerializer<Double> DOUBLE = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Double value) {
+        public void write(RegistryFriendlyByteBuf buf, Double value) {
             buf.writeDouble(value);
         }
 
         @Override
-        public Double read(FriendlyByteBuf buf) {
+        public Double read(RegistryFriendlyByteBuf buf) {
             return buf.readDouble();
         }
 
         @Override
-        public Tag write(Double value) {
+        public Tag write(HolderLookup.Provider registries, Double value) {
             return DoubleTag.valueOf(value);
         }
 
         @Override
-        public Double read(Tag tag) {
-            return ((DoubleTag) tag).getAsDouble();
+        public Double read(HolderLookup.Provider registries, Tag tag) {
+            return ((DoubleTag) tag).doubleValue();
         }
     };
 
     public static final IDataSerializer<Character> CHARACTER = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, Character value) {
+        public void write(RegistryFriendlyByteBuf buf, Character value) {
             buf.writeChar(value);
         }
 
         @Override
-        public Character read(FriendlyByteBuf buf) {
+        public Character read(RegistryFriendlyByteBuf buf) {
             return buf.readChar();
         }
 
         @Override
-        public Tag write(Character value) {
+        public Tag write(HolderLookup.Provider registries, Character value) {
             return IntTag.valueOf(value);
         }
 
         @Override
-        public Character read(Tag tag) {
-            return (char) ((IntTag) tag).getAsInt();
+        public Character read(HolderLookup.Provider registries, Tag tag) {
+            return (char) ((IntTag) tag).intValue();
         }
     };
 
     public static final IDataSerializer<String> STRING = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, String value) {
+        public void write(RegistryFriendlyByteBuf buf, String value) {
             buf.writeUtf(value);
         }
 
         @Override
-        public String read(FriendlyByteBuf buf) {
+        public String read(RegistryFriendlyByteBuf buf) {
             return buf.readUtf();
         }
 
         @Override
-        public Tag write(String value) {
+        public Tag write(HolderLookup.Provider registries, String value) {
             return StringTag.valueOf(value);
         }
 
         @Override
-        public String read(Tag tag) {
-            return tag.getAsString();
+        public String read(HolderLookup.Provider registries, Tag tag) {
+            return ((StringTag) tag).value();
         }
     };
 
     public static final IDataSerializer<CompoundTag> TAG_COMPOUND = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, CompoundTag value) {
+        public void write(RegistryFriendlyByteBuf buf, CompoundTag value) {
             buf.writeNbt(value);
         }
 
         @Override
-        public CompoundTag read(FriendlyByteBuf buf) {
+        public CompoundTag read(RegistryFriendlyByteBuf buf) {
             return buf.readNbt();
         }
 
         @Override
-        public Tag write(CompoundTag value) {
+        public Tag write(HolderLookup.Provider registries, CompoundTag value) {
             return value;
         }
 
         @Override
-        public CompoundTag read(Tag tag) {
+        public CompoundTag read(HolderLookup.Provider registries, Tag tag) {
             return (CompoundTag) tag;
         }
     };
 
     public static final IDataSerializer<BlockPos> BLOCK_POS = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, BlockPos value) {
+        public void write(RegistryFriendlyByteBuf buf, BlockPos value) {
             buf.writeBlockPos(value);
         }
 
         @Override
-        public BlockPos read(FriendlyByteBuf buf) {
+        public BlockPos read(RegistryFriendlyByteBuf buf) {
             return buf.readBlockPos();
         }
 
         @Override
-        public Tag write(BlockPos value) {
+        public Tag write(HolderLookup.Provider registries, BlockPos value) {
             return LongTag.valueOf(value.asLong());
         }
 
         @Override
-        public BlockPos read(Tag tag) {
-            return BlockPos.of(((LongTag) tag).getAsLong());
+        public BlockPos read(HolderLookup.Provider registries, Tag tag) {
+            return BlockPos.of(((LongTag) tag).longValue());
         }
     };
 
     public static final IDataSerializer<UUID> UUID = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, UUID value) {
+        public void write(RegistryFriendlyByteBuf buf, UUID value) {
             buf.writeUUID(value);
         }
 
         @Override
-        public UUID read(FriendlyByteBuf buf) {
+        public UUID read(RegistryFriendlyByteBuf buf) {
             return buf.readUUID();
         }
 
         @Override
-        public Tag write(UUID value) {
+        public Tag write(HolderLookup.Provider registries, UUID value) {
             CompoundTag compound = new CompoundTag();
             compound.putLong("Most", value.getMostSignificantBits());
             compound.putLong("Least", value.getLeastSignificantBits());
@@ -279,53 +280,53 @@ public class Serializers {
         }
 
         @Override
-        public UUID read(Tag tag) {
+        public UUID read(HolderLookup.Provider registries, Tag tag) {
             CompoundTag compound = (CompoundTag) tag;
-            return new UUID(compound.getLong("Most"), compound.getLong("Least"));
+            return new UUID(compound.getLongOr("Most", 0L), compound.getLongOr("Least", 0L));
         }
     };
 
     public static final IDataSerializer<ItemStack> ITEM_STACK = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, ItemStack value) {
-            buf.writeItem(value);
+        public void write(RegistryFriendlyByteBuf buf, ItemStack value) {
+            ItemStack.OPTIONAL_STREAM_CODEC.encode(buf, value);
         }
 
         @Override
-        public ItemStack read(FriendlyByteBuf buf) {
-            return buf.readItem();
+        public ItemStack read(RegistryFriendlyByteBuf buf) {
+            return ItemStack.OPTIONAL_STREAM_CODEC.decode(buf);
         }
 
         @Override
-        public Tag write(ItemStack value) {
-            return value.save(new CompoundTag());
+        public Tag write(HolderLookup.Provider registries, ItemStack value) {
+            return ItemStack.OPTIONAL_CODEC.encodeStart(registries.createSerializationContext(NbtOps.INSTANCE), value).getOrThrow();
         }
 
         @Override
-        public ItemStack read(Tag tag) {
-            return ItemStack.of((CompoundTag) tag);
+        public ItemStack read(HolderLookup.Provider registries, Tag tag) {
+            return ItemStack.OPTIONAL_CODEC.parse(registries.createSerializationContext(NbtOps.INSTANCE), tag).getOrThrow();
         }
     };
 
-    public static final IDataSerializer<ResourceLocation> RESOURCE_LOCATION = new IDataSerializer<>() {
+    public static final IDataSerializer<Identifier> RESOURCE_LOCATION = new IDataSerializer<>() {
         @Override
-        public void write(FriendlyByteBuf buf, ResourceLocation value) {
-            buf.writeResourceLocation(value);
+        public void write(RegistryFriendlyByteBuf buf, Identifier value) {
+            buf.writeIdentifier(value);
         }
 
         @Override
-        public ResourceLocation read(FriendlyByteBuf buf) {
-            return buf.readResourceLocation();
+        public Identifier read(RegistryFriendlyByteBuf buf) {
+            return buf.readIdentifier();
         }
 
         @Override
-        public Tag write(ResourceLocation value) {
+        public Tag write(HolderLookup.Provider registries, Identifier value) {
             return StringTag.valueOf(value.toString());
         }
 
         @Override
-        public ResourceLocation read(Tag tag) {
-            return ResourceLocation.tryParse(tag.getAsString());
+        public Identifier read(HolderLookup.Provider registries, Tag tag) {
+            return Identifier.tryParse(((StringTag) tag).value());
         }
     };
 }

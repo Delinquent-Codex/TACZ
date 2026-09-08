@@ -6,7 +6,7 @@ import com.tacz.guns.client.resource.GunDisplayInstance;
 import com.tacz.guns.resource.CommonAssetsManager;
 import com.tacz.guns.resource.pojo.GunIndexPOJO;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
@@ -17,8 +17,8 @@ public class ClientGunIndex {
     private String name;
     private String type;
     private String itemType;
-    private ResourceLocation gunDataId;
-    private ResourceLocation displayId;
+    private Identifier gunDataId;
+    private Identifier displayId;
 
     private ClientGunIndex() {
     }

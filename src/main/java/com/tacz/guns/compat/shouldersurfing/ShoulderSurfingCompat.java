@@ -7,7 +7,7 @@ public final class ShoulderSurfingCompat {
     private static boolean INSTALLED = false;
 
     public static void init() {
-        INSTALLED = ModList.get().isLoaded(MOD_ID);
+        INSTALLED = ModList.isLoaded(MOD_ID);
     }
 
     public static boolean showCrosshair() {

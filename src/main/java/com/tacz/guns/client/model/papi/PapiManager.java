@@ -1,7 +1,7 @@
 package com.tacz.guns.client.model.papi;
 
 import com.google.common.collect.Maps;
-import net.minecraft.client.resources.language.I18n;
+import net.minecraft.locale.Language;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -25,7 +25,7 @@ public final class PapiManager {
     }
 
     public static String getTextShow(String textKey, ItemStack stack) {
-        String text = I18n.language.getOrDefault(textKey);
+        String text = Language.getInstance().getOrDefault(textKey);
         for (var entry : PAPI.entrySet()) {
             String placeholder = entry.getKey();
             String data = entry.getValue().apply(stack);

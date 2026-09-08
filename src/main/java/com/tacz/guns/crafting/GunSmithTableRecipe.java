@@ -4,7 +4,7 @@ import com.tacz.guns.crafting.result.GunSmithTableResult;
 import com.tacz.guns.init.ModRecipe;
 import com.tacz.guns.resource.pojo.data.recipe.TableRecipe;
 import net.minecraft.core.RegistryAccess;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
@@ -15,17 +15,17 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class GunSmithTableRecipe implements Recipe<Inventory> {
-    private final ResourceLocation id;
+    private final Identifier id;
     private final GunSmithTableResult result;
     private final List<GunSmithTableIngredient> inputs;
 
-    public GunSmithTableRecipe(ResourceLocation id, GunSmithTableResult result, List<GunSmithTableIngredient> inputs) {
+    public GunSmithTableRecipe(Identifier id, GunSmithTableResult result, List<GunSmithTableIngredient> inputs) {
         this.id = id;
         this.result = result;
         this.inputs = inputs;
     }
 
-    public GunSmithTableRecipe(ResourceLocation id, TableRecipe tableRecipe) {
+    public GunSmithTableRecipe(Identifier id, TableRecipe tableRecipe) {
         this(id, tableRecipe.getResult(), tableRecipe.getMaterials());
     }
 
@@ -52,7 +52,7 @@ public class GunSmithTableRecipe implements Recipe<Inventory> {
     }
 
     @Override
-    public ResourceLocation getId() {
+    public Identifier getId() {
         return this.id;
     }
 
@@ -82,7 +82,7 @@ public class GunSmithTableRecipe implements Recipe<Inventory> {
         result.init();
     }
 
-    public ResourceLocation getTab() {
+    public Identifier getTab() {
         return result.getGroup();
     }
 }

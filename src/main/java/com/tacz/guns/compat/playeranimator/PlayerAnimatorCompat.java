@@ -7,7 +7,7 @@ import com.tacz.guns.compat.playeranimator.animation.AnimationManager;
 import com.tacz.guns.compat.playeranimator.animation.PlayerAnimatorAssetManager;
 import com.tacz.guns.compat.playeranimator.animation.PlayerAnimatorLoader;
 import net.minecraft.client.player.AbstractClientPlayer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,16 +18,16 @@ import java.util.function.Consumer;
 import java.util.zip.ZipFile;
 
 public class PlayerAnimatorCompat {
-    public static ResourceLocation LOWER_ANIMATION = new ResourceLocation(GunMod.MOD_ID, "lower_animation");
-    public static ResourceLocation LOOP_UPPER_ANIMATION = new ResourceLocation(GunMod.MOD_ID, "loop_upper_animation");
-    public static ResourceLocation ONCE_UPPER_ANIMATION = new ResourceLocation(GunMod.MOD_ID, "once_upper_animation");
-    public static ResourceLocation ROTATION_ANIMATION = new ResourceLocation(GunMod.MOD_ID, "rotation");
+    public static Identifier LOWER_ANIMATION = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "lower_animation");
+    public static Identifier LOOP_UPPER_ANIMATION = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "loop_upper_animation");
+    public static Identifier ONCE_UPPER_ANIMATION = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "once_upper_animation");
+    public static Identifier ROTATION_ANIMATION = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "rotation");
 
     private static final String MOD_ID = "playeranimator";
     private static boolean INSTALLED = false;
 
     public static void init() {
-        INSTALLED = ModList.get().isLoaded(MOD_ID);
+        INSTALLED = ModList.isLoaded(MOD_ID);
         if (isInstalled()) {
             AnimationDataRegisterFactory.registerData();
             MinecraftForge.EVENT_BUS.register(new AnimationManager());

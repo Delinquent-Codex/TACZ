@@ -2,6 +2,7 @@ package com.tacz.guns.compat.kubejs;
 
 import com.tacz.guns.GunMod;
 import com.tacz.guns.api.GunProperties;
+import com.tacz.guns.api.event.GunEvent;
 import com.tacz.guns.api.item.gun.AbstractGunItem;
 import com.tacz.guns.api.item.gun.GunItemManager;
 import com.tacz.guns.compat.kubejs.custom.CustomGunItemBuilder;
@@ -20,7 +21,7 @@ import dev.latvian.mods.kubejs.registry.RegistryInfo;
 import dev.latvian.mods.kubejs.script.BindingsEvent;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import dev.latvian.mods.rhino.util.wrap.TypeWrappers;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
@@ -32,6 +33,16 @@ import java.util.Map;
 public class TimelessKubeJSPlugin extends KubeJSPlugin {
     public static final String KUBEJS_MODID = "kubejs";
     private static final Map<String, RegistryObject<? extends AbstractGunItem>> GUNTYPE_REGISTER_MAP = new HashMap<>();
+
+    public static void installEventBridge() {
+        GunEvent.installScriptDispatcher((event, scope) -> {
+            switch (scope) {
+                case COMMON -> TimelessCommonEvents.INSTANCE.postKubeJSEvent(event);
+                case CLIENT -> TimelessClientEvents.INSTANCE.postKubeJSEvent(event);
+                case SERVER -> TimelessServerEvents.INSTANCE.postKubeJSEvent(event);
+            }
+        });
+    }
 
     @Override
     public void init() {
@@ -75,7 +86,7 @@ public class TimelessKubeJSPlugin extends KubeJSPlugin {
 
     @SubscribeEvent
     public void onItemRegister(RegisterEvent event) {
-        if (ModList.get().isLoaded(KUBEJS_MODID) && event.getRegistryKey().equals(ForgeRegistries.ITEMS.getRegistryKey())) {
+        if (ModList.isLoaded(KUBEJS_MODID) && event.getRegistryKey().equals(ForgeRegistries.ITEMS.getRegistryKey())) {
             for (Map.Entry<String, RegistryObject<? extends AbstractGunItem>> entry : GUNTYPE_REGISTER_MAP.entrySet()) {
                 GunItemManager.registerGunItem(entry.getKey(), entry.getValue());
             }

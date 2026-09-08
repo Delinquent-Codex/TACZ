@@ -10,7 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -34,18 +34,18 @@ public class GunSmithTableBlockEntity extends BlockEntity implements MenuProvide
     private static final String ID_TAG = "BlockId";
 
     @Nullable
-    private ResourceLocation id = null;
+    private Identifier id = null;
 
     public GunSmithTableBlockEntity(BlockPos pos, BlockState blockState) {
         super(TYPE, pos, blockState);
     }
 
-    public void setId(ResourceLocation id) {
+    public void setId(Identifier id) {
         this.id = id;
     }
 
     @Nullable
-    public ResourceLocation getId() {
+    public Identifier getId() {
         return id;
     }
 
@@ -76,7 +76,7 @@ public class GunSmithTableBlockEntity extends BlockEntity implements MenuProvide
     public void load(CompoundTag tag) {
         super.load(tag);
         if (tag.contains(ID_TAG, Tag.TAG_STRING)) {
-            this.id = ResourceLocation.tryParse(tag.getString(ID_TAG));
+            this.id = Identifier.tryParse(tag.getString(ID_TAG));
         } else {
             this.id = DefaultAssets.DEFAULT_BLOCK_ID;
         }

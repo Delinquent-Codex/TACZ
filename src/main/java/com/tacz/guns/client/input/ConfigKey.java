@@ -17,7 +17,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.client.settings.KeyModifier;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import org.lwjgl.glfw.GLFW;
@@ -43,7 +43,7 @@ public class ConfigKey {
             if (player == null || player.isSpectator()) {
                 return;
             }
-            if (!ModList.get().isLoaded(CompatRegistry.CLOTH_CONFIG)) {
+            if (!ModList.isLoaded(CompatRegistry.CLOTH_CONFIG)) {
                 ClickEvent clickEvent = new ClickEvent(ClickEvent.Action.OPEN_URL, ClothConfigScreen.CLOTH_CONFIG_URL);
                 HoverEvent hoverEvent = new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("gui.tacz.cloth_config_warning.download"));
                 MutableComponent component = Component.translatable("gui.tacz.cloth_config_warning.tips").withStyle(style ->

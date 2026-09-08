@@ -14,7 +14,7 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.client.settings.KeyModifier;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.lwjgl.glfw.GLFW;
 
@@ -62,7 +62,17 @@ public class AimKey {
      * 
      * 建议将按下切换瞄准也支持 键盘按键输入
      * */
+    // The baseline handles both phases; retain its scheduling frequency.
     @SubscribeEvent
+    public static void onAimHoldingPreInput(TickEvent.ClientTickEvent.Pre event) {
+        onAimHoldingPreInput((TickEvent.ClientTickEvent) event);
+    }
+
+    @SubscribeEvent
+    public static void onAimHoldingPreInput(TickEvent.ClientTickEvent.Post event) {
+        onAimHoldingPreInput((TickEvent.ClientTickEvent) event);
+    }
+
     public static void onAimHoldingPreInput(TickEvent.ClientTickEvent event) {
         if (!KeyConfig.HOLD_TO_AIM.get()) {
             return;
@@ -121,10 +131,7 @@ public class AimKey {
     }
 
     @SubscribeEvent
-    public static void cancelAim(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.Phase.END) {
-            return;
-        }
+    public static void cancelAim(TickEvent.ClientTickEvent.Post event) {
         Minecraft mc = Minecraft.getInstance();
         LocalPlayer player = mc.player;
         if (!(player instanceof IClientPlayerGunOperator operator)) {

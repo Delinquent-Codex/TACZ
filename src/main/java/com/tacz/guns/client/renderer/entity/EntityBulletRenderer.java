@@ -14,13 +14,13 @@ import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -44,17 +44,17 @@ public class EntityBulletRenderer extends EntityRenderer<EntityKineticBullet> {
 
     @Override
     public void render(EntityKineticBullet bullet, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        ResourceLocation gunId = bullet.getGunId();
-        ResourceLocation gunDisplayId = bullet.getGunDisplayId();
+        Identifier gunId = bullet.getGunId();
+        Identifier gunDisplayId = bullet.getGunDisplayId();
         Optional<GunDisplayInstance> display = TimelessAPI.getGunDisplay(gunDisplayId, gunId);
         if (display.isEmpty()) {
             return;
         }
         float @Nullable [] tracerColor = bullet.getTracerColorOverride().orElse(display.get().getTracerColor());
-        ResourceLocation ammoId = bullet.getAmmoId();
+        Identifier ammoId = bullet.getAmmoId();
         TimelessAPI.getClientAmmoIndex(ammoId).ifPresent(ammoIndex -> {
             BedrockAmmoModel ammoEntityModel = ammoIndex.getAmmoEntityModel();
-            ResourceLocation textureLocation = ammoIndex.getAmmoEntityTextureLocation();
+            Identifier textureLocation = ammoIndex.getAmmoEntityTextureLocation();
             if (ammoEntityModel != null && textureLocation != null) {
                 poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, bullet.yRotO, bullet.getYRot()) - 180.0F));
                 poseStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(partialTicks, bullet.xRotO, bullet.getXRot())));
@@ -147,7 +147,7 @@ public class EntityBulletRenderer extends EntityRenderer<EntityKineticBullet> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(@NotNull EntityKineticBullet entity) {
+    public Identifier getTextureLocation(@NotNull EntityKineticBullet entity) {
         return null;
     }
 }

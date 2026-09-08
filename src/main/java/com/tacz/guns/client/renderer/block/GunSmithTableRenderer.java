@@ -11,11 +11,11 @@ import com.tacz.guns.client.model.bedrock.BedrockModel;
 import com.tacz.guns.client.resource.index.ClientBlockIndex;
 import com.tacz.guns.config.client.RenderConfig;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,7 +27,7 @@ public class GunSmithTableRenderer implements BlockEntityRenderer<GunSmithTableB
     }
 
     public Optional<ClientBlockIndex> getIndex(GunSmithTableBlockEntity blockEntity) {
-        ResourceLocation id = blockEntity.getId();
+        Identifier id = blockEntity.getId();
         if (id==null || id.equals(DefaultAssets.EMPTY_BLOCK_ID)) {
             return Optional.empty();
         }
@@ -36,7 +36,7 @@ public class GunSmithTableRenderer implements BlockEntityRenderer<GunSmithTableB
 
     public static Optional<ClientBlockIndex> getIndex(ItemStack stack) {
         if (stack.getItem() instanceof IBlock iBlock) {
-            ResourceLocation id = iBlock.getBlockId(stack);
+            Identifier id = iBlock.getBlockId(stack);
             if (id.equals(DefaultAssets.EMPTY_BLOCK_ID)) {
                 return Optional.empty();
             }
@@ -49,7 +49,7 @@ public class GunSmithTableRenderer implements BlockEntityRenderer<GunSmithTableB
     public void render(GunSmithTableBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferIn, int combinedLightIn, int combinedOverlayIn) {
         getIndex(blockEntity).ifPresent(index -> {
             BedrockModel model = index.getModel();
-            ResourceLocation texture = index.getTexture();
+            Identifier texture = index.getTexture();
             if (model == null) {
                 return;
             }

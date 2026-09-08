@@ -12,20 +12,20 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = GunMod.MOD_ID)
 public class ClientPreventGunClick {
     @SubscribeEvent
-    public static void onClickInput(InputEvent.InteractionKeyMappingTriggered event) {
+    public static boolean onClickInput(InputEvent.InteractionKeyMappingTriggered event) {
         LocalPlayer player = Minecraft.getInstance().player;
         if (player == null) {
-            return;
+            return false;
         }
         // 当交互键按下时，允许交互
         if (InteractKey.INTERACT_KEY.isDown()) {
-            return;
+            return false;
         }
         // 只要主手有枪，那么禁止交互
         ItemStack itemInHand = player.getItemInHand(InteractionHand.MAIN_HAND);
@@ -33,11 +33,12 @@ public class ClientPreventGunClick {
             // 展示框可以交互
             HitResult hitResult = Minecraft.getInstance().hitResult;
             if (hitResult instanceof EntityHitResult entityHitResult && entityHitResult.getEntity() instanceof ItemFrame) {
-                return;
+                return false;
             }
             // 这个设置为 false 就能阻止客户端粒子的生成
             event.setSwingHand(false);
-            event.setCanceled(true);
+            return true;
         }
+        return false;
     }
 }

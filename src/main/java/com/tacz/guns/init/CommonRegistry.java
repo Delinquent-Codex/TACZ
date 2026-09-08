@@ -5,12 +5,12 @@ import com.tacz.guns.network.NetworkHandler;
 import com.tacz.guns.resource.GunPackLoader;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber
 public final class CommonRegistry {
     private static boolean LOAD_COMPLETE = false;
 
@@ -32,7 +32,7 @@ public final class CommonRegistry {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeModificationEvent event) {
         event.getTypes().forEach(type -> {
-            event.add(type, ModAttributes.BULLET_RESISTANCE.get());
+            event.add(type, ModAttributes.BULLET_RESISTANCE.getHolder().orElseThrow());
         });
     }
 

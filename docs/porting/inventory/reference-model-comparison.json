@@ -1,0 +1,9 @@
+{
+  "nested_jar": "META-INF/jarjar/simplebedrockmodel-2.2.2-forge+mc1.20.1.jar",
+  "byte_identical_members": 119,
+  "different_members": [
+    "META-INF/MANIFEST.MF"
+  ],
+  "built_only": [],
+  "published_only": []
+}

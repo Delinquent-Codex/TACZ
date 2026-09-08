@@ -11,7 +11,7 @@ public class ARCompat {
 	public static boolean LOADED;
 
 	public static void init() {
-		LOADED = ModList.get().isLoaded(MOD_ID);
+		LOADED = ModList.isLoaded(MOD_ID);
 	}
 
 	public static boolean shouldAccelerate() {

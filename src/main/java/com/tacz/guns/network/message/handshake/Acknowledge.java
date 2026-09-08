@@ -1,30 +1,17 @@
 package com.tacz.guns.network.message.handshake;
 
-import com.tacz.guns.GunMod;
-import com.tacz.guns.network.IMessage;
-import com.tacz.guns.network.LoginIndexHolder;
+import com.tacz.guns.network.MappingConfigurationTask;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraftforge.network.NetworkEvent;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 
-import java.util.function.Supplier;
-
-public class Acknowledge extends LoginIndexHolder implements IMessage<Acknowledge> {
-    public static final Marker ACKNOWLEDGE = MarkerManager.getMarker("HANDSHAKE_ACKNOWLEDGE");
-
-    @Override
-    public void encode(Acknowledge message, FriendlyByteBuf buffer) {
-    }
-
-    @Override
-    public Acknowledge decode(FriendlyByteBuf buf) {
-        return new Acknowledge();
-    }
-
-    @Override
-    public void handle(Acknowledge message, Supplier<NetworkEvent.Context> c) {
-        GunMod.LOGGER.debug(ACKNOWLEDGE, "Received acknowledgement from client");
-        c.get().setPacketHandled(true);
+/** Acknowledges exactly one pending configuration snapshot on this connection. */
+public record Acknowledge(long token) {
+    public static void encode(Acknowledge message, FriendlyByteBuf buffer) { buffer.writeLong(message.token); }
+    public static Acknowledge decode(FriendlyByteBuf buffer) { return new Acknowledge(buffer.readLong()); }
+    public static void handle(Acknowledge message, CustomPayloadEvent.Context context) {
+        if (context.isServerSide()) {
+            context.enqueueWork(() -> MappingConfigurationTask.acknowledge(message.token, context));
+        }
+        context.setPacketHandled(true);
     }
 }

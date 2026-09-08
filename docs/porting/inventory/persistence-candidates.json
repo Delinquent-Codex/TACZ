@@ -1,0 +1,317 @@
+[
+  {
+    "key": "tag",
+    "source": "src/main/java/com/tacz/guns/api/item/nbt/GunItemDataAccessor.java:234",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "tag",
+    "source": "src/main/java/com/tacz/guns/api/item/nbt/GunItemDataAccessor.java:235",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "idle_view",
+    "source": "src/main/java/com/tacz/guns/client/model/BedrockAnimatedModel.java:61",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "laser_beam",
+    "source": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java:130",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "translation",
+    "source": "src/main/java/com/tacz/guns/client/resource/pojo/CommonTransformObject.java:92",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "rotation",
+    "source": "src/main/java/com/tacz/guns/client/resource/pojo/CommonTransformObject.java:93",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "scale",
+    "source": "src/main/java/com/tacz/guns/client/resource/pojo/CommonTransformObject.java:94",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "uv",
+    "source": "src/main/java/com/tacz/guns/client/resource/pojo/model/CubesItem.java:91",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "mirror",
+    "source": "src/main/java/com/tacz/guns/client/resource/pojo/model/CubesItem.java:104",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "lerp_mode",
+    "source": "src/main/java/com/tacz/guns/client/resource/serialize/AnimationKeyframesSerializer.java:70",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "pre",
+    "source": "src/main/java/com/tacz/guns/client/resource/serialize/AnimationKeyframesSerializer.java:72",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "pre",
+    "source": "src/main/java/com/tacz/guns/client/resource/serialize/AnimationKeyframesSerializer.java:73",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "post",
+    "source": "src/main/java/com/tacz/guns/client/resource/serialize/AnimationKeyframesSerializer.java:76",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "post",
+    "source": "src/main/java/com/tacz/guns/client/resource/serialize/AnimationKeyframesSerializer.java:77",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "item",
+    "source": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java:64",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "nbt",
+    "source": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java:99",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "name",
+    "source": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java:165",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "name",
+    "source": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java:37",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "name",
+    "source": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java:70",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": ":",
+    "source": "src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java:88",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": ":",
+    "source": "src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java:104",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "StateType",
+    "source": "src/main/java/com/tacz/guns/entity/sync/ModSerializers.java:28",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "CountDown",
+    "source": "src/main/java/com/tacz/guns/entity/sync/ModSerializers.java:29",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "StateType",
+    "source": "src/main/java/com/tacz/guns/entity/sync/ModSerializers.java:37",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "CountDown",
+    "source": "src/main/java/com/tacz/guns/entity/sync/ModSerializers.java:38",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "ClassKey",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java:33",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "DataKey",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java:34",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "Value",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java:35",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "ClassKey",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java:47",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "DataKey",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java:48",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "Value",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java:49",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "Most",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/Serializers.java:276",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "Least",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/Serializers.java:277",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "Most",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/Serializers.java:284",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "Least",
+    "source": "src/main/java/com/tacz/guns/entity/sync/core/Serializers.java:284",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "HideFlags",
+    "source": "src/main/java/com/tacz/guns/item/GunTooltipPart.java:23",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "HideFlags",
+    "source": "src/main/java/com/tacz/guns/item/GunTooltipPart.java:24",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "HideFlags",
+    "source": "src/main/java/com/tacz/guns/item/GunTooltipPart.java:30",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "start_bolt",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:77",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "tick_bolt",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:94",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "shoot",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:114",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "start_reload",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:132",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "tick_reload",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:149",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "interrupt_reload",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:174",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "tick_heat",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:221",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "calcSpread",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java:325",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "handle_shoot_heat",
+    "source": "src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java:173",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "config",
+    "source": "src/main/java/com/tacz/guns/resource/PackConvertor.java:25",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "package",
+    "source": "src/main/java/com/tacz/guns/resource/manager/ScriptManager.java:53",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "preload",
+    "source": "src/main/java/com/tacz/guns/resource/manager/ScriptManager.java:53",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "x",
+    "source": "src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java:114",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "r",
+    "source": "src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java:115",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "y",
+    "source": "src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java:121",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "id",
+    "source": "src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java:66",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "id",
+    "source": "src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java:69",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "distance",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/DistanceDamagePairSerializer.java:23",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "damage",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/DistanceDamagePairSerializer.java:26",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "distance",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/DistanceDamagePairSerializer.java:31",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "damage",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/DistanceDamagePairSerializer.java:41",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "item",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableIngredientSerializer.java:18",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "nbt",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableResultSerializer.java:33",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": ":",
+    "source": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableResultSerializer.java:37",
+    "classification": "persistence candidate; inspect owner"
+  },
+  {
+    "key": "config",
+    "source": "src/main/java/com/tacz/guns/util/GetJarResources.java:37",
+    "classification": "persistence candidate; inspect owner"
+  }
+]

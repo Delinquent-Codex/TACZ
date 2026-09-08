@@ -1,10 +1,10 @@
 modLoader = "javafml"
-loaderVersion = "[46,)"
+loaderVersion = "[65,)"
 license = "GPL3 / CC BY-NC-ND 4.0"
 
 [[mods]]
 modId = "tacz"
-version = "${file.jarVersion}"
+version = "${mod_version}"
 displayName = "Timeless & Classics Guns: Zero"
 logoFile = "logo.png"
 updateJSONURL = ""
@@ -16,14 +16,14 @@ description = '''
 [[dependencies.tacz]]
 modId = "forge"
 mandatory = true
-versionRange = "[46,)"
+versionRange = "[65.1.0]"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.tacz]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20,1.20.2)"
+versionRange = "[26.2]"
 ordering = "NONE"
 side = "BOTH"
 

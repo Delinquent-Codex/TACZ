@@ -8,10 +8,9 @@ import com.tacz.guns.api.item.gun.AbstractGunItem;
 import com.tacz.guns.network.NetworkHandler;
 import com.tacz.guns.network.message.event.ServerMessageGunReload;
 import com.tacz.guns.resource.pojo.data.gun.Bolt;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.LogicalSide;
 
 public class LivingEntityReload {
@@ -35,7 +34,7 @@ public class LivingEntityReload {
         if (!(currentGunItem.getItem() instanceof AbstractGunItem gunItem)) {
             return;
         }
-        ResourceLocation gunId = gunItem.getGunId(currentGunItem);
+        Identifier gunId = gunItem.getGunId(currentGunItem);
         TimelessAPI.getCommonGunIndex(gunId).ifPresent(gunIndex -> {
             // 检查是否为背包直读
             if (gunItem.useInventoryAmmo(currentGunItem)) {
@@ -62,7 +61,7 @@ public class LivingEntityReload {
                 return;
             }
             // 触发装弹事件
-            if (MinecraftForge.EVENT_BUS.post(new GunReloadEvent(shooter, currentGunItem, LogicalSide.SERVER))) {
+            if (GunReloadEvent.BUS.post(new GunReloadEvent(shooter, currentGunItem, LogicalSide.SERVER))) {
                 return;
             }
             NetworkHandler.sendToTrackingEntity(new ServerMessageGunReload(shooter.getId(), currentGunItem), shooter);

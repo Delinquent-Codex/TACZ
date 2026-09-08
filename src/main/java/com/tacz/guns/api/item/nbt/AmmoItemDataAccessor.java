@@ -6,7 +6,7 @@ import com.tacz.guns.api.item.IAmmo;
 import com.tacz.guns.api.item.IGun;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -18,30 +18,32 @@ public interface AmmoItemDataAccessor extends IAmmo {
 
     @Override
     @Nonnull
-    default ResourceLocation getAmmoId(ItemStack ammo) {
-        CompoundTag nbt = ammo.getOrCreateTag();
-        if (nbt.contains(AMMO_ID_TAG, Tag.TAG_STRING)) {
-            ResourceLocation gunId = ResourceLocation.tryParse(nbt.getString(AMMO_ID_TAG));
+    default Identifier getAmmoId(ItemStack ammo) {
+        CompoundTag nbt = ItemDataAccessor.get(ammo);
+        if (ItemDataAccessor.contains(nbt, AMMO_ID_TAG, Tag.TAG_STRING)) {
+            Identifier gunId = Identifier.tryParse(nbt.getStringOr(AMMO_ID_TAG, ""));
             return Objects.requireNonNullElse(gunId, DefaultAssets.EMPTY_AMMO_ID);
         }
         return DefaultAssets.EMPTY_AMMO_ID;
     }
 
     @Override
-    default void setAmmoId(ItemStack ammo, @Nullable ResourceLocation ammoId) {
-        CompoundTag nbt = ammo.getOrCreateTag();
+    default void setAmmoId(ItemStack ammo, @Nullable Identifier ammoId) {
+        CompoundTag nbt = ItemDataAccessor.get(ammo);
         if (ammoId != null) {
             nbt.putString(AMMO_ID_TAG, ammoId.toString());
+            ItemDataAccessor.set(ammo, nbt);
             return;
         }
         nbt.putString(AMMO_ID_TAG, DefaultAssets.DEFAULT_AMMO_ID.toString());
+        ItemDataAccessor.set(ammo, nbt);
     }
 
     @Override
     default boolean isAmmoOfGun(ItemStack gun, ItemStack ammo) {
         if (gun.getItem() instanceof IGun iGun && ammo.getItem() instanceof IAmmo iAmmo) {
-            ResourceLocation gunId = iGun.getGunId(gun);
-            ResourceLocation ammoId = iAmmo.getAmmoId(ammo);
+            Identifier gunId = iGun.getGunId(gun);
+            Identifier ammoId = iAmmo.getAmmoId(ammo);
             return TimelessAPI.getCommonGunIndex(gunId).map(gunIndex -> gunIndex.getGunData().getAmmoId().equals(ammoId)).orElse(false);
         }
         return false;

@@ -1,0 +1,247 @@
+[
+  {
+    "registry_variable": "ATTRIBUTES",
+    "id": "tacz:tacz.bullet_resistance",
+    "source": "src/main/java/com/tacz/guns/init/ModAttributes.java:13"
+  },
+  {
+    "registry_variable": "ATTRIBUTES",
+    "id": "tacz:tacz.weight_capacity",
+    "source": "src/main/java/com/tacz/guns/init/ModAttributes.java:16"
+  },
+  {
+    "registry_variable": "BLOCKS",
+    "id": "tacz:gun_smith_table",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:22"
+  },
+  {
+    "registry_variable": "BLOCKS",
+    "id": "tacz:workbench_a",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:23"
+  },
+  {
+    "registry_variable": "BLOCKS",
+    "id": "tacz:workbench_b",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:24"
+  },
+  {
+    "registry_variable": "BLOCKS",
+    "id": "tacz:workbench_c",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:25"
+  },
+  {
+    "registry_variable": "BLOCKS",
+    "id": "tacz:target",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:27"
+  },
+  {
+    "registry_variable": "BLOCKS",
+    "id": "tacz:statue",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:28"
+  },
+  {
+    "registry_variable": "TILE_ENTITIES",
+    "id": "tacz:gun_smith_table",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:30"
+  },
+  {
+    "registry_variable": "TILE_ENTITIES",
+    "id": "tacz:target",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:31"
+  },
+  {
+    "registry_variable": "TILE_ENTITIES",
+    "id": "tacz:statue",
+    "source": "src/main/java/com/tacz/guns/init/ModBlocks.java:32"
+  },
+  {
+    "registry_variable": "CONTAINER_TYPE",
+    "id": "tacz:gun_smith_table_menu",
+    "source": "src/main/java/com/tacz/guns/init/ModContainer.java:13"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:other",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:26"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:ammo",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:37"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:scope",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:42"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:muzzle",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:47"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:stock",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:52"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:grip",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:57"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:extended_mag",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:62"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:laser",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:67"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:pistol",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:72"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:sniper",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:77"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:rifle",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:82"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:shotgun",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:87"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:smg",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:92"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:rpg",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:97"
+  },
+  {
+    "registry_variable": "TABS",
+    "id": "tacz:mg",
+    "source": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java:102"
+  },
+  {
+    "registry_variable": "ENTITY_TYPES",
+    "id": "tacz:bullet",
+    "source": "src/main/java/com/tacz/guns/init/ModEntities.java:14"
+  },
+  {
+    "registry_variable": "ENTITY_TYPES",
+    "id": "tacz:target_minecart",
+    "source": "src/main/java/com/tacz/guns/init/ModEntities.java:15"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:modern_kinetic_gun",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:19"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:m67",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:21"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:ammo",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:23"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:attachment",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:24"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:gun_smith_table",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:26"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:workbench_a",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:27"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:workbench_b",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:28"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:workbench_c",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:29"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:target",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:32"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:statue",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:33"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:ammo_box",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:34"
+  },
+  {
+    "registry_variable": "ITEMS",
+    "id": "tacz:target_minecart",
+    "source": "src/main/java/com/tacz/guns/init/ModItems.java:35"
+  },
+  {
+    "registry_variable": "LOOT_MODIFIER_SERIALIZERS",
+    "id": "tacz:loot_table_injector",
+    "source": "src/main/java/com/tacz/guns/init/ModLootModifiers.java:16"
+  },
+  {
+    "registry_variable": "PAINTINGS",
+    "id": "tacz:blood_strike_1",
+    "source": "src/main/java/com/tacz/guns/init/ModPainting.java:12"
+  },
+  {
+    "registry_variable": "PAINTINGS",
+    "id": "tacz:blood_strike_2",
+    "source": "src/main/java/com/tacz/guns/init/ModPainting.java:13"
+  },
+  {
+    "registry_variable": "PARTICLE_TYPES",
+    "id": "tacz:bullet_hole",
+    "source": "src/main/java/com/tacz/guns/init/ModParticles.java:16"
+  },
+  {
+    "registry_variable": "RECIPE_SERIALIZERS",
+    "id": "tacz:gun_smith_table_crafting",
+    "source": "src/main/java/com/tacz/guns/init/ModRecipe.java:18"
+  },
+  {
+    "registry_variable": "RECIPE_TYPES",
+    "id": "tacz:gun_smith_table_crafting",
+    "source": "src/main/java/com/tacz/guns/init/ModRecipe.java:19"
+  },
+  {
+    "registry_variable": "SOUNDS",
+    "id": "tacz:gun",
+    "source": "src/main/java/com/tacz/guns/init/ModSounds.java:13"
+  },
+  {
+    "registry_variable": "SOUNDS",
+    "id": "tacz:target_block_hit",
+    "source": "src/main/java/com/tacz/guns/init/ModSounds.java:14"
+  }
+]

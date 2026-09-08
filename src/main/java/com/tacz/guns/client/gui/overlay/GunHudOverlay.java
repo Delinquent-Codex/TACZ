@@ -23,7 +23,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.gui.overlay.ForgeGui;
@@ -34,11 +34,11 @@ import org.jetbrains.annotations.Nullable;
 import java.text.DecimalFormat;
 
 public class GunHudOverlay implements IGuiOverlay {
-    private static final ResourceLocation SEMI = new ResourceLocation(GunMod.MOD_ID, "textures/hud/fire_mode_semi.png");
-    private static final ResourceLocation AUTO = new ResourceLocation(GunMod.MOD_ID, "textures/hud/fire_mode_auto.png");
-    private static final ResourceLocation BURST = new ResourceLocation(GunMod.MOD_ID, "textures/hud/fire_mode_burst.png");
-    private static final ResourceLocation HEATBAR = new ResourceLocation(GunMod.MOD_ID, "textures/hud/heat_bar.png");
-    private static final ResourceLocation HEATBASE = new ResourceLocation(GunMod.MOD_ID, "textures/hud/heat_base.png");
+    private static final Identifier SEMI = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "textures/hud/fire_mode_semi.png");
+    private static final Identifier AUTO = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "textures/hud/fire_mode_auto.png");
+    private static final Identifier BURST = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "textures/hud/fire_mode_burst.png");
+    private static final Identifier HEATBAR = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "textures/hud/heat_bar.png");
+    private static final Identifier HEATBASE = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "textures/hud/heat_base.png");
 
     private static final DecimalFormat CURRENT_AMMO_FORMAT = new DecimalFormat("000");
     private static final DecimalFormat CURRENT_AMMO_FORMAT_PERCENT = new DecimalFormat("000%");
@@ -63,7 +63,7 @@ public class GunHudOverlay implements IGuiOverlay {
         if (!(stack.getItem() instanceof IGun iGun)) {
             return;
         }
-        ResourceLocation gunId = iGun.getGunId(stack);
+        Identifier gunId = iGun.getGunId(stack);
 
         GunData gunData = TimelessAPI.getClientGunIndex(gunId).map(ClientGunIndex::getGunData).orElse(null);
         GunDisplayInstance display = TimelessAPI.getGunDisplay(stack).orElse(null);
@@ -137,7 +137,7 @@ public class GunHudOverlay implements IGuiOverlay {
 
         // 模组版本信息
         String minecraftVersion = SharedConstants.getCurrentVersion().getName();
-        String modVersion = ModList.get().getModFileById(GunMod.MOD_ID).versionString();
+        String modVersion = ModList.getModFileById(GunMod.MOD_ID).versionString();
         String debugInfo = String.format("%s-%s", minecraftVersion, modVersion);
         // 文本
         poseStack.pushPose();
@@ -152,8 +152,8 @@ public class GunHudOverlay implements IGuiOverlay {
         RenderSystem.defaultBlendFunc();
 
         // 获取图标
-        ResourceLocation hudTexture = display.getHUDTexture();
-        @Nullable ResourceLocation hudEmptyTexture = display.getHudEmptyTexture();
+        Identifier hudTexture = display.getHUDTexture();
+        @Nullable Identifier hudEmptyTexture = display.getHudEmptyTexture();
 
         if (ammoCount <= 0 || overheatLocked) {
             if (hudEmptyTexture == null) {
@@ -167,7 +167,7 @@ public class GunHudOverlay implements IGuiOverlay {
 
         // 渲染开火模式图标
         FireMode fireMode = IGun.getMainHandFireMode(player);
-        ResourceLocation fireModeTexture = switch (fireMode) {
+        Identifier fireModeTexture = switch (fireMode) {
             case AUTO -> AUTO;
             case BURST -> BURST;
             default -> SEMI;

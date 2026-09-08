@@ -12,10 +12,10 @@ import com.tacz.guns.util.RenderDistance;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.apache.commons.lang3.tuple.Pair;
@@ -33,7 +33,7 @@ public class AttachmentItemRenderer extends BlockEntityWithoutLevelRenderer {
     @Override
     public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull MultiBufferSource pBuffer, int pPackedLight, int pPackedOverlay) {
         if (stack.getItem() instanceof IAttachment iAttachment) {
-            ResourceLocation attachmentId = iAttachment.getAttachmentId(stack);
+            Identifier attachmentId = iAttachment.getAttachmentId(stack);
             poseStack.pushPose();
             TimelessAPI.getClientAttachmentIndex(attachmentId).ifPresentOrElse(attachmentIndex -> {
                 // GUI 特殊渲染
@@ -64,11 +64,11 @@ public class AttachmentItemRenderer extends BlockEntityWithoutLevelRenderer {
 
     private void renderDefaultAttachment(@NotNull ItemDisplayContext transformType, @NotNull PoseStack poseStack, @NotNull MultiBufferSource pBuffer, int pPackedLight, int pPackedOverlay, ClientAttachmentIndex attachmentIndex) {
         BedrockAttachmentModel model = attachmentIndex.getAttachmentModel();
-        ResourceLocation texture = attachmentIndex.getModelTexture();
+        Identifier texture = attachmentIndex.getModelTexture();
         // 有模型？正常渲染
         if (model != null && texture != null) {
             // 调用低模
-            Pair<BedrockAttachmentModel, ResourceLocation> lodModel = attachmentIndex.getLodModel();
+            Pair<BedrockAttachmentModel, Identifier> lodModel = attachmentIndex.getLodModel();
             // 有低模、在高模渲染范围外、不是第一人称
             if (lodModel != null && !RenderDistance.inRenderHighPolyModelDistance(poseStack) && !transformType.firstPerson()) {
                 model = lodModel.getLeft();

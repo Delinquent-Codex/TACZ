@@ -8,7 +8,7 @@ import dev.latvian.mods.kubejs.registry.RegistryInfo;
 import dev.latvian.mods.kubejs.util.JsonIO;
 import dev.latvian.mods.kubejs.util.UtilsJS;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.crafting.CraftingHelper;
@@ -53,7 +53,7 @@ public class GunSmithTableResultInfo {
     /**
      * {@link GunSmithTableResultInfo}的TypeWrapper, 将其他类型转为{@link GunSmithTableResultInfo}
      * object为其他类型时优先解析{@link JsonObject}，其次{@link OutputItem}，再其次{@link ItemStack}
-     * 之后尝试转化为{@link String}解析为{@link ResourceLocation}
+     * 之后尝试转化为{@link String}解析为{@link Identifier}
      * 以上均不成功时最终{@link JsonIO#of(Object)}解析
      * @param object 输入待转化对象
      * @return {@link GunSmithTableResultInfo}
@@ -69,8 +69,8 @@ public class GunSmithTableResultInfo {
             return createFromItemStack(stack);
         }
         String idString = object.toString();
-        if (ResourceLocation.isValidResourceLocation(idString)) {
-            ResourceLocation rl = UtilsJS.getMCID(null, idString);
+        if (Identifier.tryParse(idString) != null) {
+            Identifier rl = UtilsJS.getMCID(null, idString);
             TimelessItemWrapper.ItemIndexInfo indexInfo = TimelessItemWrapper.ItemIndexInfo.createFromResourceLocation(rl);
             if (indexInfo.isValidForRecipe()) {
                 return create().setType(indexInfo.getParent()).setId(indexInfo.getIndexId());
@@ -93,11 +93,11 @@ public class GunSmithTableResultInfo {
         return this;
     }
 
-    public ResourceLocation getId() {
-        return ResourceLocation.tryParse(GsonHelper.getAsString(this.json, ID_KEY));
+    public Identifier getId() {
+        return Identifier.tryParse(GsonHelper.getAsString(this.json, ID_KEY));
     }
 
-    public GunSmithTableResultInfo setId(ResourceLocation id) {
+    public GunSmithTableResultInfo setId(Identifier id) {
         this.json.addProperty(ID_KEY, id.toString());
         return this;
     }

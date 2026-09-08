@@ -17,8 +17,8 @@ import com.tacz.guns.resource.modifier.custom.SilenceModifier;
 import it.unimi.dsi.fastutil.Pair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.joml.Matrix3f;
@@ -120,7 +120,7 @@ public class MuzzleFlashRender implements IFunctionalRenderer {
             ItemStack muzzleAttachment = bedrockGunModel.getCurrentAttachmentItem().get(AttachmentType.MUZZLE);
             IAttachment iAttachment = IAttachment.getIAttachmentOrNull(muzzleAttachment);
             if (iAttachment != null) {
-                ResourceLocation attachmentId = iAttachment.getAttachmentId(muzzleAttachment);
+                Identifier attachmentId = iAttachment.getAttachmentId(muzzleAttachment);
                 TimelessAPI.getCommonAttachmentIndex(attachmentId).ifPresent(index -> {
                     var modifier = index.getData().getModifier();
                     if (modifier.containsKey(SilenceModifier.ID) && modifier.get(SilenceModifier.ID).getValue() instanceof Pair<?, ?> pair) {

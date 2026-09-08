@@ -1,7 +1,7 @@
 package com.tacz.guns.compat.cloth.widget;
 
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.events.GuiEventListener;

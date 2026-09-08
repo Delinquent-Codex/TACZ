@@ -1,0 +1,26 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.698
+
+> Task :compilePortingChecksJava
+
+C:\Users\voltp\Downloads\TACZ-26.2\src\portingChecks\java\com\tacz\guns\porting\EventChecks.java:32: warning: Listener always returns true, consider using a void return type combined with @SubscribeEvent(alwaysCancelling = true) or CancellableEventBus#addListener(true, ...) instead
+        public static boolean cancel(GunShootEvent event) {
+                              ^
+1 warning
+> Task :processPortingChecksResources NO-SOURCE
+> Task :portingChecksClasses
+
+> Task :verifyPortingEvents
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+PASS: 13 event assertions against Forge EventBus 7.0.5; no KubeJS runtime or gameplay claimed.
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 4s
+2 actionable tasks: 2 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.0/userguide/configuration_cache_enabling.html

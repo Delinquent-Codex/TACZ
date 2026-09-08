@@ -16,9 +16,8 @@ import com.tacz.guns.network.message.ClientMessagePlayerReloadGun;
 import com.tacz.guns.resource.pojo.data.gun.Bolt;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.LogicalSide;
 
 public class LocalPlayerReload {
@@ -44,7 +43,7 @@ public class LocalPlayerReload {
                 return;
             }
             // 发包通知服务器
-            NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerCancelReload());
+            NetworkHandler.sendToServer(new ClientMessagePlayerCancelReload());
             // 执行本地取消换弹逻辑
             this.cancelReload(display);
         });
@@ -56,7 +55,7 @@ public class LocalPlayerReload {
         if (!(mainHandItem.getItem() instanceof AbstractGunItem gunItem)) {
             return;
         }
-        ResourceLocation gunId = gunItem.getGunId(mainHandItem);
+        Identifier gunId = gunItem.getGunId(mainHandItem);
         GunData gunData = TimelessAPI.getClientGunIndex(gunId).map(ClientGunIndex::getGunData).orElse(null);
         if (gunData == null) {
             return;
@@ -82,11 +81,11 @@ public class LocalPlayerReload {
             data.lockState(operator -> operator.getSynReloadState().getStateType().isReloading());
             data.chargeProgress = 0f;
             // 触发换弹事件
-            if (MinecraftForge.EVENT_BUS.post(new GunReloadEvent(player, player.getMainHandItem(), LogicalSide.CLIENT))) {
+            if (GunReloadEvent.BUS.post(new GunReloadEvent(player, player.getMainHandItem(), LogicalSide.CLIENT))) {
                 return;
             }
             // 发包通知服务器
-            NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerReloadGun());
+            NetworkHandler.sendToServer(new ClientMessagePlayerReloadGun());
             // 执行客户端 reload 相关内容
             this.doReload(gunItem, display, gunData, mainHandItem);
         });

@@ -12,7 +12,6 @@ import com.tacz.guns.network.message.ClientMessagePlayerFireSelect;
 import com.tacz.guns.resource.modifier.AttachmentPropertyManager;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.LogicalSide;
 
 public class LocalPlayerFireSelect {
@@ -34,7 +33,7 @@ public class LocalPlayerFireSelect {
         if (!(mainHandItem.getItem() instanceof IGun iGun)) {
             return;
         }
-        if (MinecraftForge.EVENT_BUS.post(new GunFireSelectEvent(player, player.getMainHandItem(), LogicalSide.CLIENT))) {
+        if (GunFireSelectEvent.BUS.post(new GunFireSelectEvent(player, player.getMainHandItem(), LogicalSide.CLIENT))) {
             return;
         }
 
@@ -42,7 +41,7 @@ public class LocalPlayerFireSelect {
             // 播放音效
             SoundPlayManager.playFireSelectSound(player, gunIndex);
             // 发送切换开火模式的数据包，通知服务器
-            NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerFireSelect());
+            NetworkHandler.sendToServer(new ClientMessagePlayerFireSelect());
             // 客户端切换开火模式
             if (iGun instanceof AbstractGunItem logicGun) {
                 logicGun.fireSelect(null, mainHandItem);

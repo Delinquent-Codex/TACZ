@@ -2,13 +2,18 @@ package com.tacz.guns.api.event.common;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
+import net.minecraftforge.eventbus.api.bus.EventBus;
+import net.minecraftforge.eventbus.api.bus.CancellableEventBus;
+import net.minecraftforge.eventbus.api.event.characteristic.Cancellable;
 import net.minecraftforge.fml.LogicalSide;
 
 /**
  * 生物开始更换枪械弹药时触发的事件。
  */
-public class GunReloadEvent extends Event implements KubeJSGunEventPoster<GunReloadEvent>{
+public class GunReloadEvent extends GunEvent implements Cancellable, KubeJSGunEventPoster<GunReloadEvent>{
+    public static final CancellableEventBus<GunReloadEvent> BUS = cancellableBus(GunReloadEvent.class);
+
     private final LivingEntity entity;
     private final ItemStack gunItemStack;
     private final LogicalSide logicalSide;
@@ -20,10 +25,6 @@ public class GunReloadEvent extends Event implements KubeJSGunEventPoster<GunRel
         postEventToKubeJS(this);
     }
 
-    @Override
-    public boolean isCancelable() {
-        return true;
-    }
 
     public LivingEntity getEntity() {
         return entity;

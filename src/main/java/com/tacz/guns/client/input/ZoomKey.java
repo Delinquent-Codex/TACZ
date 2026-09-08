@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.client.settings.KeyModifier;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.lwjgl.glfw.GLFW;
 
@@ -50,7 +50,7 @@ public class ZoomKey {
             }
             IClientPlayerGunOperator operator = IClientPlayerGunOperator.fromLocalPlayer(player);
             if (operator.isAim()) {
-                NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerZoom());
+                NetworkHandler.sendToServer(new ClientMessagePlayerZoom());
                 return true;
             }
         }
@@ -64,7 +64,7 @@ public class ZoomKey {
         }
         IClientPlayerGunOperator operator = IClientPlayerGunOperator.fromLocalPlayer(player);
         if (operator.isAim()) {
-            NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerZoom());
+            NetworkHandler.sendToServer(new ClientMessagePlayerZoom());
         }
     }
 }

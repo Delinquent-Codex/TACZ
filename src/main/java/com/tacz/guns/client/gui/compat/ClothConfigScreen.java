@@ -1,7 +1,7 @@
 package com.tacz.guns.client.gui.compat;
 
 import com.tacz.guns.init.CompatRegistry;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -27,7 +27,7 @@ public class ClothConfigScreen extends Screen {
     }
 
     public static void registerNoClothConfigPage() {
-        if (!ModList.get().isLoaded(CompatRegistry.CLOTH_CONFIG)) {
+        if (!ModList.isLoaded(CompatRegistry.CLOTH_CONFIG)) {
             ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
                     new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> new ClothConfigScreen(parent)));
         }

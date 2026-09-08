@@ -1,0 +1,1542 @@
+{
+  "source:src/main/java/com/tacz/guns/GunMod.java": {
+    "implementation": "src/main/java/com/tacz/guns/GunMod.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/DefaultAssets.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/DefaultAssets.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/GunProperty.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/GunProperty.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/TimelessAPI.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/TimelessAPI.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/animation/AnimationSoundChannelContent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/animation/AnimationSoundChannelContent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/animation/Animations.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/animation/Animations.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/animation/ObjectAnimationSoundChannel.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/animation/ObjectAnimationSoundChannel.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/event/BeforeRenderHandEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/event/BeforeRenderHandEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/event/RenderItemInHandBobEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/event/RenderItemInHandBobEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/event/RenderLevelBobEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/event/RenderLevelBobEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/client/event/SwapItemWithOffHand.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/client/event/SwapItemWithOffHand.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/AttachmentPropertyEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/AttachmentPropertyEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/EntityHurtByGunEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/EntityHurtByGunEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/EntityKillByGunEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/EntityKillByGunEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunDrawEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunDrawEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunFinishReloadEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunFinishReloadEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunFireEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunFireEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunFireSelectEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunFireSelectEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunMeleeEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunMeleeEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunReloadEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunReloadEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/GunShootEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/GunShootEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/common/KubeJSGunEventPoster.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/common/KubeJSGunEventPoster.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/event/server/AmmoHitBlockEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/event/server/AmmoHitBlockEvent.java",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/IAmmo.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/IAmmo.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/IAmmoBox.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/IAmmoBox.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/IAttachment.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/IAttachment.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/IBlock.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/IBlock.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/IGun.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/IGun.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/builder/AmmoItemBuilder.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/builder/AmmoItemBuilder.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/builder/AttachmentItemBuilder.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/builder/AttachmentItemBuilder.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/builder/BlockItemBuilder.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/builder/BlockItemBuilder.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/builder/GunItemBuilder.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/builder/GunItemBuilder.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/gun/AbstractGunItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/gun/AbstractGunItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/nbt/AmmoBoxItemDataAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/nbt/AmmoBoxItemDataAccessor.java",
+    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/nbt/AmmoItemDataAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/nbt/AmmoItemDataAccessor.java",
+    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/nbt/AttachmentItemDataAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/nbt/AttachmentItemDataAccessor.java",
+    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/nbt/BlockItemDataAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/nbt/BlockItemDataAccessor.java",
+    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/nbt/GunItemDataAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/nbt/GunItemDataAccessor.java",
+    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/nbt/ItemDataAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/nbt/ItemDataAccessor.java",
+    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/resource/JsonResourceLoader.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/resource/JsonResourceLoader.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/animation/screen/RefitTransform.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/animation/screen/RefitTransform.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/ClientHitMark.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/ClientHitMark.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/ClientPreventGunClick.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/ClientPreventGunClick.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/CommonNetworkCacheEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/CommonNetworkCacheEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/FirstPersonRenderGunEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/FirstPersonRenderGunEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/InventoryEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/PlayerEnterWorld.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/PlayerEnterWorld.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/PlayerHurtByGunEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/PlayerHurtByGunEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/RefreshClonePlayerDataEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/RefreshClonePlayerDataEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/ReloadResourceEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/ReloadResourceEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/RenderHeadShotAABB.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/RenderHeadShotAABB.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/TickAnimationEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/TickAnimationEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/TooltipEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/TooltipEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerAim.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerAim.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerBolt.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerBolt.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerCrawl.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerCrawl.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerDraw.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerDraw.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerFireSelect.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerFireSelect.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerMelee.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerMelee.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerReload.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerReload.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerShoot.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerShoot.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/components/GunPackList.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/components/GunPackList.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/components/refit/GunPropertyDiagrams.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/components/refit/GunPropertyDiagrams.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/components/smith/ResultButton.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/components/smith/ResultButton.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/components/smith/TypeButton.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/components/smith/TypeButton.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/init/ModContainerScreen.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/init/ModContainerScreen.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/init/ParticleFactoryRegistry.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/init/ParticleFactoryRegistry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/AimKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/AimKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/ConfigKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/CrawlKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/CrawlKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/FireSelectKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/FireSelectKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/InspectKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/InspectKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/InteractKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/InteractKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/MeleeKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/MeleeKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/RefitKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/ReloadKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/ReloadKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/ShootKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/ShootKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/input/ZoomKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/input/ZoomKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/BedrockGunModel.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/ShellRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/ShellRender.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/papi/AmmoCountPapi.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/papi/AmmoCountPapi.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/papi/PapiManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/papi/PapiManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/crosshair/CrosshairType.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/crosshair/CrosshairType.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/item/AnimateGeoItemRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/item/AnimateGeoItemRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/item/AttachmentItemRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/item/AttachmentItemRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/item/GunItemRendererWrapper.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/item/GunItemRendererWrapper.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/item/GunSmithTableItemRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/item/GunSmithTableItemRenderer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/ClientIndexManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/ClientIndexManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/GunDisplayInstance.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/GunDisplayInstance.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/InternalAssetLoader.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/InternalAssetLoader.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/index/ClientAmmoIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/index/ClientAmmoIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/index/ClientAttachmentIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/index/ClientAttachmentIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/index/ClientAttachmentSkinIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/index/ClientAttachmentSkinIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/index/ClientBlockIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/index/ClientBlockIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/index/ClientGunIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/index/ClientGunIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/manager/DisplayManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/manager/DisplayManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/manager/GltfManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/manager/GltfManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/manager/PackInfoManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/manager/PackInfoManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/animation/bedrock/SoundEffectKeyframes.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/animation/bedrock/SoundEffectKeyframes.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/ammo/AmmoDisplay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/ammo/AmmoDisplay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/ammo/AmmoEntityDisplay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/ammo/AmmoEntityDisplay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/ammo/ShellDisplay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/ammo/ShellDisplay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/attachment/AttachmentDisplay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/attachment/AttachmentDisplay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/attachment/AttachmentLod.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/attachment/AttachmentLod.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/block/BlockDisplay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/block/BlockDisplay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/gun/GunDisplay.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/gun/GunDisplay.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/gun/GunLod.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/gun/GunLod.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/display/gun/MuzzleFlash.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/display/gun/MuzzleFlash.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/pojo/skin/attachment/AttachmentSkin.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/pojo/skin/attachment/AttachmentSkin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/resource/serialize/SoundEffectKeyframesSerializer.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/resource/serialize/SoundEffectKeyframesSerializer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/sound/EntityTrackingGunSoundInstance.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/sound/EntityTrackingGunSoundInstance.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/sound/GunSoundInstance.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/sound/GunSoundInstance.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/sound/SoundPlayManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/sound/SoundPlayManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/tooltip/ClientAttachmentItemTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientAttachmentItemTooltip.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/tooltip/ClientBlockItemTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientBlockItemTooltip.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/tooltip/ClientGunTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientGunTooltip.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/ar/ARCompat.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/ar/ARCompat.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/controllable/ControllableCompat.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/controllable/ControllableCompat.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/jei/entry/AttachmentQueryEntry.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/jei/entry/AttachmentQueryEntry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/events/TimelessForgeEventWrappers.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessForgeEventWrappers.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/util/AttachmentNbtFactory.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/AttachmentNbtFactory.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/util/GunNbtFactory.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/GunNbtFactory.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/util/TimelessItemNbtFactory.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/TimelessItemNbtFactory.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/util/TimelessItemWrapper.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/TimelessItemWrapper.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/oculus/OculusCompat.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/oculus/OculusCompat.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/playeranimator/PlayerAnimatorCompat.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/playeranimator/PlayerAnimatorCompat.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/shouldersurfing/ShoulderSurfingCompat.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/shouldersurfing/ShoulderSurfingCompat.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/config/util/HeadShotAABBConfigRead.java": {
+    "implementation": "src/main/java/com/tacz/guns/config/util/HeadShotAABBConfigRead.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/config/util/InteractKeyConfigRead.java": {
+    "implementation": "src/main/java/com/tacz/guns/config/util/InteractKeyConfigRead.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java": {
+    "implementation": "src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/crafting/GunSmithTableSerializer.java": {
+    "implementation": "src/main/java/com/tacz/guns/crafting/GunSmithTableSerializer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/crafting/result/GunSmithTableResult.java": {
+    "implementation": "src/main/java/com/tacz/guns/crafting/result/GunSmithTableResult.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java": {
+    "implementation": "src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/EntityKineticBullet.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/TargetMinecart.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityAim.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityAim.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityBolt.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityBolt.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityCrawl.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityCrawl.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityDrawGun.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityDrawGun.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityFireSelect.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityFireSelect.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityMelee.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityMelee.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityReload.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityReload.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/ModSerializers.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/ModSerializers.java",
+    "validation": "61 network/serializer assertions include NBT and wire scalar/item round trips; actual entity lifecycle unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/ModSyncedEntityData.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/ModSyncedEntityData.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/DataEntry.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/DataEntry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/DataHolder.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/DataHolder.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/DataHolderCapabilityProvider.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/IDataSerializer.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/IDataSerializer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/Serializers.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/Serializers.java",
+    "validation": "61 network/serializer assertions include NBT and wire scalar/item round trips; actual entity lifecycle unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/SyncedClassKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/SyncedClassKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/SyncedDataKey.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/SyncedDataKey.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/sync/core/SyncedEntityData.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/sync/core/SyncedEntityData.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/ChangeGunPropertyEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/ChangeGunPropertyEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/CommonLoadPack.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/CommonLoadPack.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/EntityDamageEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/EntityDamageEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/HitboxHelperEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/HitboxHelperEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/KnockbackChange.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/KnockbackChange.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/LoadingConfigEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/LoadingConfigEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/PlayerRespawnEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/PlayerRespawnEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/PreventGunClick.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/PreventGunClick.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/ServerTickEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/ServerTickEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/SyncBaseTimestamp.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/SyncBaseTimestamp.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/SyncedEntityDataEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/SyncedEntityDataEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/TravelToDimensionEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/TravelToDimensionEvent.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/ammo/BellRing.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/ammo/BellRing.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/event/ammo/DestroyGlassBlock.java": {
+    "implementation": "src/main/java/com/tacz/guns/event/ammo/DestroyGlassBlock.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/CapabilityRegistry.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/CapabilityRegistry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/CommandRegistry.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/CommandRegistry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/CommonRegistry.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/CommonRegistry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/CompatRegistry.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/CompatRegistry.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModBlocks.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModBlocks.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModCreativeTabs.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModCreativeTabs.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModDamageTypes.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModDamageTypes.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModItems.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModItems.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModPainting.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModPainting.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModRecipe.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModRecipe.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModSounds.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModSounds.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": {
+    "implementation": "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/inventory/tooltip/BlockItemTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/inventory/tooltip/BlockItemTooltip.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/inventory/tooltip/GunTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/inventory/tooltip/GunTooltip.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/AmmoBoxItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/AmmoItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/AmmoItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/AttachmentItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/AttachmentItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/DefaultTableItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/DefaultTableItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/GunSmithTableItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/ModernKineticGunItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/loot/LootTableInjectorModifier.java": {
+    "implementation": "src/main/java/com/tacz/guns/loot/LootTableInjectorModifier.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/GameRendererMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/GameRendererMixin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/MouseHandlerMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/MouseHandlerMixin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/PlayerModelMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/PlayerModelMixin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/SoundManagerPreparationsMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/SoundManagerPreparationsMixin.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/IMessage.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/IMessage.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/NetworkHandler.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/NetworkHandler.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessageCraft.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageCraft.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessageLaserColor.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageLaserColor.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerAim.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerAim.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerBoltGun.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerBoltGun.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerCancelReload.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerCancelReload.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerCrawl.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerCrawl.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerDrawGun.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerDrawGun.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerFireSelect.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerFireSelect.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerMelee.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerMelee.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerReloadGun.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerReloadGun.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerShoot.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerShoot.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerZoom.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerZoom.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessageSyncBaseTimestamp.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageSyncBaseTimestamp.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageLevelUp.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageLevelUp.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageSound.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageSound.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageSwapItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageSwapItem.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageSyncBaseTimestamp.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageSyncBaseTimestamp.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageSyncGunPack.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageSyncGunPack.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/ServerMessageUpdateEntityData.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageUpdateEntityData.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunDraw.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunDraw.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunFire.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunFire.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunFireSelect.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunFireSelect.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunHurt.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunHurt.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunKill.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunKill.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunMelee.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunMelee.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunReload.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunReload.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunShoot.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunShoot.java",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/handshake/Acknowledge.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/handshake/Acknowledge.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/network/message/handshake/ServerMessageSyncedEntityDataMapping.java": {
+    "implementation": "src/main/java/com/tacz/guns/network/message/handshake/ServerMessageSyncedEntityDataMapping.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/CommonAssetsManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/CommonAssetsManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/GunPackLoader.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/GunPackLoader.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/ICommonResourceProvider.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/ICommonResourceProvider.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/VersionChecker.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/VersionChecker.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/filter/RecipeFilter.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/filter/RecipeFilter.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/index/CommonAttachmentIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/index/CommonAttachmentIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/index/CommonBlockIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/index/CommonBlockIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/index/CommonGunIndex.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/index/CommonGunIndex.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/AttachmentsTagManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/AttachmentsTagManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/CommonDataManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/CommonDataManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/INetworkCacheReloadListener.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/INetworkCacheReloadListener.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/JsonDataManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/JsonDataManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/LazyJsonDataManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/LazyJsonDataManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/LootInjectionManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/LootInjectionManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/RecipeFilterManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/RecipeFilterManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/manager/ScriptManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/manager/ScriptManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/network/CommonNetworkCache.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/network/CommonNetworkCache.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/AmmoIndexPOJO.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/AmmoIndexPOJO.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/AttachmentIndexPOJO.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/AttachmentIndexPOJO.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/BlockIndexPOJO.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/BlockIndexPOJO.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/GunIndexPOJO.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/GunIndexPOJO.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/attachment/EffectData.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/attachment/EffectData.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/block/BlockData.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/block/BlockData.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/gun/GunData.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/gun/GunData.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/loot/LootTableInjection.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/loot/LootTableInjection.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/recipe/GunResult.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/recipe/GunResult.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/serialize/GunSmithTableResultSerializer.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableResultSerializer.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/sound/SoundManager.java": {
+    "implementation": "src/main/java/com/tacz/guns/sound/SoundManager.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/AllowAttachmentTagMatcher.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/AllowAttachmentTagMatcher.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/AttachmentDataUtils.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/AttachmentDataUtils.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/EntityUtil.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/EntityUtil.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/RenderHelper.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/ResourceScanner.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/ResourceScanner.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/TacPathVisitor.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/TacPathVisitor.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/block/BlockRayTrace.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/block/BlockRayTrace.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/datafixer/AttachmentIdFix.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/datafixer/AttachmentIdFix.java",
+    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  }
+}

@@ -5,13 +5,13 @@ import com.tacz.guns.config.client.RenderConfig;
 import com.tacz.guns.config.util.HeadShotAABBConfigRead;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderLivingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -27,7 +27,7 @@ public class RenderHeadShotAABB {
             return;
         }
         LivingEntity entity = event.getEntity();
-        ResourceLocation entityId = ForgeRegistries.ENTITY_TYPES.getKey(entity.getType());
+        Identifier entityId = ForgeRegistries.ENTITY_TYPES.getKey(entity.getType());
         if (entityId == null) {
             return;
         }

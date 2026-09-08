@@ -13,8 +13,8 @@ import com.tacz.guns.client.resource.index.ClientGunIndex;
 import com.tacz.guns.client.resource.pojo.display.gun.ShellEjection;
 import com.tacz.guns.compat.oculus.OculusCompat;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.joml.Matrix3f;
@@ -56,7 +56,7 @@ public class ShellRender implements IFunctionalRenderer {
             if (model == null) {
                 return;
             }
-            ResourceLocation location = ammoIndex.getShellTextureLocation();
+            Identifier location = ammoIndex.getShellTextureLocation();
             if (location == null) {
                 return;
             }
@@ -85,7 +85,7 @@ public class ShellRender implements IFunctionalRenderer {
         });
     }
 
-    private void renderSingleShell(ItemDisplayContext transformType1, int light, int overlay, Data data, Vector3f initialVelocity, Vector3f acceleration, Vector3f angularVelocity, BedrockAmmoModel model, ResourceLocation location) {
+    private void renderSingleShell(ItemDisplayContext transformType1, int light, int overlay, Data data, Vector3f initialVelocity, Vector3f acceleration, Vector3f angularVelocity, BedrockAmmoModel model, Identifier location) {
         // 再检查一次
         if (data.normal == null && data.pose == null) {
             return;

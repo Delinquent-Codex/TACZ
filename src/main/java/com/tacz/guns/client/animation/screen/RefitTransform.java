@@ -6,7 +6,7 @@ import com.tacz.guns.client.gui.GunRefitScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nonnull;
@@ -59,7 +59,17 @@ public class RefitTransform {
         return true;
     }
 
+    // The baseline handles both phases; retain its scheduling frequency.
     @SubscribeEvent
+    public static void tickInterpolation(TickEvent.RenderTickEvent.Pre event) {
+        tickInterpolation((TickEvent.RenderTickEvent) event);
+    }
+
+    @SubscribeEvent
+    public static void tickInterpolation(TickEvent.RenderTickEvent.Post event) {
+        tickInterpolation((TickEvent.RenderTickEvent) event);
+    }
+
     public static void tickInterpolation(TickEvent.RenderTickEvent event) {
         // tick opening progress
         if (refitScreenOpeningTimestamp == -1) {

@@ -13,9 +13,9 @@ import dev.latvian.mods.kubejs.event.EventJS;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import dev.latvian.mods.kubejs.script.ScriptTypeHolder;
 import dev.latvian.mods.rhino.util.HideFromJS;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 public class GunKubeJSEvents {
     public static final EventGroup GROUP = EventGroup.of("TimelessGunEvents");
 
-    public static abstract class GunEventJS<E extends Event> extends EventJS implements TimelessForgeEventWrappers.ForgeEventWrapper<E> {
+    public static abstract class GunEventJS<E extends GunEvent> extends EventJS implements TimelessForgeEventWrappers.ForgeEventWrapper<E> {
         protected final E event;
 
         public GunEventJS(E event) {
@@ -41,7 +41,7 @@ public class GunKubeJSEvents {
         };
 
         @Nullable
-        public ResourceLocation getEventSubId() {
+        public Identifier getEventSubId() {
             ItemStack itemStack = getEventItemStack();
             return itemStack.getItem() instanceof IGun iGun ? iGun.getGunId(itemStack) : null;
         }
@@ -54,8 +54,8 @@ public class GunKubeJSEvents {
 
         @Override
         public Object cancel() throws EventExit {
-            if (event.isCancelable()) {
-                event.setCanceled(true);
+            if (event instanceof net.minecraftforge.eventbus.api.event.characteristic.Cancellable) {
+                event.cancelFromScript();
             }
             return super.cancel();
         }
@@ -81,7 +81,7 @@ public class GunKubeJSEvents {
         }
 
         @Override
-        public ResourceLocation getEventSubId() {
+        public Identifier getEventSubId() {
             return event.getGunId();
         }
 
@@ -98,7 +98,7 @@ public class GunKubeJSEvents {
         }
 
         @Override
-        public ResourceLocation getEventSubId() {
+        public Identifier getEventSubId() {
             return event.getGunId();
         }
 
@@ -115,7 +115,7 @@ public class GunKubeJSEvents {
         }
 
         @Override
-        public ResourceLocation getEventSubId() {
+        public Identifier getEventSubId() {
             return event.getGunId();
         }
 
@@ -259,7 +259,7 @@ public class GunKubeJSEvents {
 
         @Override
         @Nullable
-        public ResourceLocation getEventSubId() {
+        public Identifier getEventSubId() {
             return event.getAmmo().getGunId();
         }
     }

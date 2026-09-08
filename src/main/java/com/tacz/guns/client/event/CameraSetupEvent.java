@@ -28,7 +28,7 @@ import com.tacz.guns.util.math.SecondOrderDynamics;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -38,8 +38,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
 import net.minecraftforge.client.event.ViewportEvent;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.Priority;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunction;
 
@@ -132,7 +132,7 @@ public class CameraSetupEvent {
                 event.setFOV(fov);
                 return;
             }
-            ResourceLocation scopeItemId = iGun.getAttachmentId(stack, AttachmentType.SCOPE);
+            Identifier scopeItemId = iGun.getAttachmentId(stack, AttachmentType.SCOPE);
             if (scopeItemId.equals(DefaultAssets.EMPTY_ATTACHMENT_ID)) {
                 scopeItemId = iGun.getBuiltInAttachmentId(stack, AttachmentType.SCOPE);
             }
@@ -179,7 +179,7 @@ public class CameraSetupEvent {
             if (cacheProperty == null) {
                 return;
             }
-            ResourceLocation gunId = iGun.getGunId(mainHandItem);
+            Identifier gunId = iGun.getGunId(mainHandItem);
             Optional<ClientGunIndex> gunIndexOptional = TimelessAPI.getClientGunIndex(gunId);
             if (gunIndexOptional.isEmpty()) {
                 return;
@@ -234,7 +234,7 @@ public class CameraSetupEvent {
         }
     }
 
-    @SubscribeEvent(priority = EventPriority.LOW)
+    @SubscribeEvent(priority = Priority.LOW)
     public static void onComputeMovementFov(ComputeFovModifierEvent event) {
         if (!RenderConfig.DISABLE_MOVEMENT_ATTRIBUTE_FOV.get()) return;
         LocalPlayer player = Minecraft.getInstance().player;

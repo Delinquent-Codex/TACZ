@@ -3,7 +3,7 @@ package com.tacz.guns.compat.kubejs.events;
 import com.tacz.guns.api.event.common.*;
 import dev.latvian.mods.kubejs.event.EventHandler;
 import dev.latvian.mods.kubejs.script.ScriptTypePredicate;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 
 public class TimelessCommonEvents implements TimelessKubeJSEventRegister{
     public static final TimelessCommonEvents INSTANCE = new TimelessCommonEvents();
-    public static final Map<Class<? extends Event>, Consumer<Event>> EVENT_HANDLERS = new HashMap<>();
+    public static final Map<Class<? extends GunEvent>, Consumer<GunEvent>> EVENT_HANDLERS = new HashMap<>();
     public static final EventHandler ENTITY_HURT_BY_GUN_PRE = INSTANCE.registerTimelessCommonEvent(
             "entityHurtByGunPre",
             GunKubeJSEvents.EntityHurtByGunPreEventJS.class,
@@ -83,12 +83,12 @@ public class TimelessCommonEvents implements TimelessKubeJSEventRegister{
     private TimelessCommonEvents() {}
 
     @Override
-    public Map<Class<? extends Event>, Consumer<Event>> getEventHandlers() {
+    public Map<Class<? extends GunEvent>, Consumer<GunEvent>> getEventHandlers() {
         return EVENT_HANDLERS;
     }
 
     @Override
-    public <E extends Event> void registerEventHandler(Class<E> eventClass, Consumer<Event> eventPoster) {
+    public <E extends GunEvent> void registerEventHandler(Class<E> eventClass, Consumer<GunEvent> eventPoster) {
         EVENT_HANDLERS.put(eventClass, eventPoster);
     }
 

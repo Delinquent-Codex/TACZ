@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = GunMod.MOD_ID)
@@ -25,7 +25,17 @@ public class InventoryEvent {
     private static int oldHotbarSelected = -1;
     private static ItemStack oldHotbarSelectItem = ItemStack.EMPTY;
 
+    // The baseline handles both phases; retain its scheduling frequency.
     @SubscribeEvent
+    public static void onPlayerChangeSelect(TickEvent.ClientTickEvent.Pre event) {
+        onPlayerChangeSelect((TickEvent.ClientTickEvent) event);
+    }
+
+    @SubscribeEvent
+    public static void onPlayerChangeSelect(TickEvent.ClientTickEvent.Post event) {
+        onPlayerChangeSelect((TickEvent.ClientTickEvent) event);
+    }
+
     public static void onPlayerChangeSelect(TickEvent.ClientTickEvent event) {
         LocalPlayer player = Minecraft.getInstance().player;
         if (player == null) {
@@ -59,7 +69,7 @@ public class InventoryEvent {
         if (!ItemStack.matches(oldHotbarSelectItem, currentItem)) {
             oldHotbarSelectItem = currentItem.copy();
         }
-        if (event.phase == TickEvent.Phase.END) {
+        if (event instanceof TickEvent.ClientTickEvent.Post) {
             if (player.tickCount % HOTBAR_WARM_UP_INTERVAL_TICKS == 0) {
                 ClientIndexManager.warmUpEquippedAndHotbarModels();
             }

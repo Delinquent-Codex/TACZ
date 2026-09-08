@@ -15,7 +15,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -50,7 +50,7 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
     @Nonnull
     @OnlyIn(Dist.CLIENT)
     public Component getName(@Nonnull ItemStack stack) {
-        ResourceLocation ammoId = this.getAmmoId(stack);
+        Identifier ammoId = this.getAmmoId(stack);
         Optional<ClientAmmoIndex> ammoIndex = TimelessAPI.getClientAmmoIndex(ammoId);
         if (ammoIndex.isPresent()) {
             return Component.translatable(ammoIndex.get().getName());
@@ -58,7 +58,7 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
         return super.getName(stack);
     }
 
-    private static Comparator<Map.Entry<ResourceLocation, CommonAmmoIndex>> idNameSort() {
+    private static Comparator<Map.Entry<Identifier, CommonAmmoIndex>> idNameSort() {
         return Comparator.comparingInt(m -> m.getValue().getSort());
     }
 
@@ -89,7 +89,7 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag isAdvanced) {
-        ResourceLocation ammoId = this.getAmmoId(stack);
+        Identifier ammoId = this.getAmmoId(stack);
         TimelessAPI.getClientAmmoIndex(ammoId).ifPresent(index -> {
             String tooltipKey = index.getTooltipKey();
             if (tooltipKey != null) {

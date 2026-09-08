@@ -1,10 +1,11 @@
 package com.tacz.guns.api.event.common;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
+import net.minecraftforge.eventbus.api.bus.EventBus;
 import net.minecraftforge.fml.LogicalSide;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -14,12 +15,14 @@ import java.util.Optional;
 /**
  * 生物被枪械子弹击杀时触发的事件
  */
-public class EntityKillByGunEvent extends Event implements KubeJSGunEventPoster<EntityKillByGunEvent>{
+public class EntityKillByGunEvent extends GunEvent implements KubeJSGunEventPoster<EntityKillByGunEvent>{
+    public static final EventBus<EntityKillByGunEvent> BUS = EventBus.create(EntityKillByGunEvent.class);
+
     private final Entity bullet;
     private final @Nullable LivingEntity killedEntity;
     private final @Nullable LivingEntity attacker;
-    private final ResourceLocation gunId;
-    private final ResourceLocation gunDisplayId;
+    private final Identifier gunId;
+    private final Identifier gunDisplayId;
     private final float baseDamage;
     private final DamageSource nonApPartDamageSource;
     private final DamageSource apPartDamageSource;
@@ -28,7 +31,7 @@ public class EntityKillByGunEvent extends Event implements KubeJSGunEventPoster<
     private final LogicalSide logicalSide;
 
     public EntityKillByGunEvent(Entity bullet, @Nullable LivingEntity hurtEntity, @Nullable LivingEntity attacker,
-                                ResourceLocation gunId, ResourceLocation gunDisplayId, float baseDamage, @Nullable Pair<DamageSource, DamageSource> sources,
+                                Identifier gunId, Identifier gunDisplayId, float baseDamage, @Nullable Pair<DamageSource, DamageSource> sources,
                                 boolean isHeadShot, float headshotMultiplier, LogicalSide logicalSide) {
         this.bullet = bullet;
         this.killedEntity = hurtEntity;
@@ -61,7 +64,7 @@ public class EntityKillByGunEvent extends Event implements KubeJSGunEventPoster<
         return attacker;
     }
 
-    public ResourceLocation getGunId() {
+    public Identifier getGunId() {
         return gunId;
     }
 
@@ -88,7 +91,7 @@ public class EntityKillByGunEvent extends Event implements KubeJSGunEventPoster<
         return logicalSide;
     }
 
-    public ResourceLocation getGunDisplayId() {
+    public Identifier getGunDisplayId() {
         return gunDisplayId;
     }
 }

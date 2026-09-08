@@ -4,7 +4,7 @@ import dev.latvian.mods.kubejs.event.EventHandler;
 import dev.latvian.mods.kubejs.event.Extra;
 import dev.latvian.mods.kubejs.script.ScriptTypeHolder;
 import dev.latvian.mods.kubejs.script.ScriptTypePredicate;
-import net.minecraftforge.eventbus.api.Event;
+import com.tacz.guns.api.event.GunEvent;
 
 import java.util.Map;
 import java.util.function.Consumer;
@@ -13,11 +13,11 @@ import java.util.function.Function;
 public interface TimelessKubeJSEventRegister {
     default void init() {}
 
-    Map<Class<? extends Event>, Consumer<Event>> getEventHandlers();
+    Map<Class<? extends GunEvent>, Consumer<GunEvent>> getEventHandlers();
 
     ScriptTypePredicate getScriptType();
 
-    default <E extends Event> EventHandler registerTimelessEvent(
+    default <E extends GunEvent> EventHandler registerTimelessEvent(
             String id,
             Class<? extends GunKubeJSEvents.GunEventJS<E>> eventJSClass,
             Class<E> eventClass,
@@ -26,7 +26,7 @@ public interface TimelessKubeJSEventRegister {
         return registerTimelessEvent(id, eventJSClass, eventClass, eventJSFactory, false);
     }
 
-    default <E extends Event> EventHandler registerTimelessEvent(
+    default <E extends GunEvent> EventHandler registerTimelessEvent(
             String id,
             Class<? extends GunKubeJSEvents.GunEventJS<E>> eventJSClass,
             Class<E> eventClass,
@@ -41,7 +41,7 @@ public interface TimelessKubeJSEventRegister {
         return handler;
     }
 
-    default  <E extends Event> EventHandler registerTimelessCommonEvent(
+    default  <E extends GunEvent> EventHandler registerTimelessCommonEvent(
             String id,
             Class<? extends GunKubeJSEvents.GunEventJS<E>> eventJSClass,
             Class<E> eventClass,
@@ -50,7 +50,7 @@ public interface TimelessKubeJSEventRegister {
         return registerTimelessCommonEvent(id, eventJSClass, eventClass, eventJSFactory, false);
     }
 
-    default <E extends Event> EventHandler registerTimelessCommonEvent(
+    default <E extends GunEvent> EventHandler registerTimelessCommonEvent(
             String id,
             Class<? extends GunKubeJSEvents.GunEventJS<E>> eventJSClass,
             Class<E> eventClass,
@@ -70,14 +70,14 @@ public interface TimelessKubeJSEventRegister {
         return handler;
     }
 
-    default <E extends Event> EventHandler registerEventJS(String id, Class<? extends GunKubeJSEvents.GunEventJS<E>> eventJSClass, boolean hasResult) {
+    default <E extends GunEvent> EventHandler registerEventJS(String id, Class<? extends GunKubeJSEvents.GunEventJS<E>> eventJSClass, boolean hasResult) {
         return hasResult ? GunKubeJSEvents.GROUP.add(id, getScriptType(), () -> eventJSClass).extra(Extra.ID).hasResult() : GunKubeJSEvents.GROUP.add(id, getScriptType(), () -> eventJSClass).extra(Extra.ID);
     }
 
-    <E extends Event> void registerEventHandler(Class<E> eventClass, Consumer<Event> eventPoster);
+    <E extends GunEvent> void registerEventHandler(Class<E> eventClass, Consumer<GunEvent> eventPoster);
 
-    default boolean postKubeJSEvent(Event event) {
-        Consumer<Event> eventHandler = getEventHandlers().get(event.getClass());
+    default boolean postKubeJSEvent(GunEvent event) {
+        Consumer<GunEvent> eventHandler = getEventHandlers().get(event.getClass());
         if (eventHandler != null) {
             eventHandler.accept(event);
             return false;

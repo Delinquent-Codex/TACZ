@@ -8,13 +8,13 @@ public class ControllableCompat {
     private static final String MOD_ID = "controllable";
 
     public static void init() {
-        if (ModList.get().isLoaded(MOD_ID)) {
+        if (ModList.isLoaded(MOD_ID)) {
             ControllableInner.init();
         }
     }
 
     public static void onGunShoot(ItemStack gunItem, FireMode fireMode) {
-        if (ModList.get().isLoaded(MOD_ID)) {
+        if (ModList.isLoaded(MOD_ID)) {
             ControllableInner.rumbleShoot(gunItem, fireMode);
         }
     }
