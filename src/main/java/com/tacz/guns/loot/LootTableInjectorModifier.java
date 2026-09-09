@@ -1,6 +1,6 @@
 package com.tacz.guns.loot;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.tacz.guns.init.ModLootModifiers;
 import com.tacz.guns.resource.CommonAssetsManager;
@@ -9,6 +9,7 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
@@ -17,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class LootTableInjectorModifier extends LootModifier {
-    public static final Codec<LootTableInjectorModifier> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<LootTableInjectorModifier> CODEC = RecordCodecBuilder.mapCodec(instance ->
             codecStart(instance).apply(instance, LootTableInjectorModifier::new));
 
     public LootTableInjectorModifier(LootItemCondition[] conditions) {
@@ -25,7 +26,7 @@ public class LootTableInjectorModifier extends LootModifier {
     }
 
     @Override
-    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
+    protected @NotNull ObjectArrayList<ItemStack> doApply(LootTable table, ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         CommonAssetsManager manager = CommonAssetsManager.getInstance();
         if (manager == null) {
             return generatedLoot;
@@ -46,7 +47,7 @@ public class LootTableInjectorModifier extends LootModifier {
     }
 
     @Override
-    public Codec<? extends IGlobalLootModifier> codec() {
+    public MapCodec<? extends IGlobalLootModifier> codec() {
         return ModLootModifiers.LOOT_TABLE_INJECTOR.get();
     }
 }

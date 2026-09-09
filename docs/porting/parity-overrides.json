@@ -1,12 +1,12 @@
 {
   "source:src/main/java/com/tacz/guns/GunMod.java": {
     "implementation": "src/main/java/com/tacz/guns/GunMod.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/api/DefaultAssets.java": {
     "implementation": "src/main/java/com/tacz/guns/api/DefaultAssets.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/api/GunProperty.java": {
@@ -336,7 +336,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java": {
@@ -726,7 +726,7 @@
   },
   "source:src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java": {
     "implementation": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/jei/entry/AttachmentQueryEntry.java": {
@@ -846,22 +846,22 @@
   },
   "source:src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java": {
     "implementation": "src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/crafting/GunSmithTableSerializer.java": {
     "implementation": "src/main/java/com/tacz/guns/crafting/GunSmithTableSerializer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/crafting/result/GunSmithTableResult.java": {
     "implementation": "src/main/java/com/tacz/guns/crafting/result/GunSmithTableResult.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java": {
     "implementation": "src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/entity/EntityKineticBullet.java": {
@@ -1076,12 +1076,12 @@
   },
   "source:src/main/java/com/tacz/guns/init/ModPainting.java": {
     "implementation": "src/main/java/com/tacz/guns/init/ModPainting.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/init/ModRecipe.java": {
     "implementation": "src/main/java/com/tacz/guns/init/ModRecipe.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/init/ModSounds.java": {
@@ -1091,7 +1091,7 @@
   },
   "source:src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": {
     "implementation": "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java": {
@@ -1146,7 +1146,7 @@
   },
   "source:src/main/java/com/tacz/guns/loot/LootTableInjectorModifier.java": {
     "implementation": "src/main/java/com/tacz/guns/loot/LootTableInjectorModifier.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/client/GameRendererMixin.java": {
@@ -1181,7 +1181,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/NetworkHandler.java": {
     "implementation": "src/main/java/com/tacz/guns/network/NetworkHandler.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageCraft.java": {
@@ -1351,12 +1351,12 @@
   },
   "source:src/main/java/com/tacz/guns/resource/CommonAssetsManager.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/CommonAssetsManager.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/GunPackLoader.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/GunPackLoader.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/ICommonResourceProvider.java": {
@@ -1411,12 +1411,12 @@
   },
   "source:src/main/java/com/tacz/guns/resource/manager/LazyJsonDataManager.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/manager/LazyJsonDataManager.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/manager/LootInjectionManager.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/manager/LootInjectionManager.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/manager/RecipeFilterManager.java": {
@@ -1481,7 +1481,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/pojo/data/loot/LootTableInjection.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/loot/LootTableInjection.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/pojo/data/recipe/GunResult.java": {
@@ -1491,7 +1491,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/serialize/GunSmithTableResultSerializer.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableResultSerializer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/sound/SoundManager.java": {
@@ -1537,6 +1537,966 @@
   "source:src/main/java/com/tacz/guns/util/datafixer/AttachmentIdFix.java": {
     "implementation": "src/main/java/com/tacz/guns/util/datafixer/AttachmentIdFix.java",
     "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/12g.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/12g.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/22wmr.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/22wmr.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/308.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/308.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/30_06.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/30_06.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/338.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/338.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/357mag.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/357mag.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/40mm.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/40mm.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/45acp.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/45acp.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/45_70.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/45_70.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/46x30.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/46x30.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/500mag.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/500mag.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/50ae.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/50ae.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/50bmg.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/50bmg.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/545x39.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/545x39.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/556x45.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/556x45.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/57x28.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/57x28.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/58x42.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/58x42.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/68x51fury.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/68x51fury.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x25.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x25.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x39.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x39.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x54.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x54.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/792x57.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/792x57.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/9mm.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/9mm.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/rpg_rocket.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/rpg_rocket.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_fmj.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_fmj.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_he.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_he.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_hp.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_hp.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_i.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_i.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_slug.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_slug.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/bayonet_6h3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/bayonet_6h3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/bayonet_m9.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/bayonet_m9.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/deagle_golden_long_barrel.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/deagle_golden_long_barrel.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_cobra.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_cobra.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_magpul_afg_2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_magpul_afg_2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_osovets_black.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_osovets_black.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk0.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_rk0.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk1_b25u.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_rk1_b25u.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk6.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_rk6.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_se_5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_se_5.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_td.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_td.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_military.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_vertical_military.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_ranger.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_vertical_ranger.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_talon.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_vertical_talon.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_compact.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_compact.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_lopro.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_lopro.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_nightstick.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_nightstick.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_peq6.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_peq6.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/light_extended_mag_1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/light_extended_mag_2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/light_extended_mag_3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_cthulhu.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_cthulhu.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_cyclone_d2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_cyclone_d2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_mastiff_sg.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_mastiff_sg.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_pioneer.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_pioneer.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_timeless50.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_timeless50.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_trex.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_trex.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_choke_sg.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_choke_sg.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_compensator_trident.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_compensator_trident.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_knight_qd.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_knight_qd.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_mirage.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_mirage.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_phantom_s1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_phantom_s1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_ptilopsis.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_ptilopsis.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_sg.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_sg.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_ursus.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_ursus.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_vulture.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_vulture.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_wraith.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_wraith.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_heavy.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/oem_stock_heavy.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_light.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/oem_stock_light.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_tactical.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/oem_stock_tactical.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_1873_6x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_1873_6x.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_98k.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_98k.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_acog_ta31.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_acog_ta31.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_contender.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_contender.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_elcan_4x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_elcan_4x.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_hamr.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_hamr.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_lpvo_1_6.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_lpvo_1_6.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_mk5hd.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_mk5hd.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_qmk152.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_qmk152.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_retro_2x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_retro_2x.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_standard_8x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_standard_8x.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_vudu.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_vudu.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/shotgun_extended_mag_1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/shotgun_extended_mag_2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/shotgun_extended_mag_3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_552.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_552.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_acro_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_acro_pistol.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_acro_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_acro_rifle.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_coyote.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_coyote.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_deltapoint_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_deltapoint_pistol.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_deltapoint_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_deltapoint_rifle.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_exp3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_exp3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_fastfire_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_fastfire_pistol.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_fastfire_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_fastfire_rifle.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_okp7.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_okp7.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_pk06_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_pk06_pistol.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_pk06_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_pk06_rifle.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_rmr_dot.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_rmr_dot.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_sro_dot.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_sro_dot.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_srs_02.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_srs_02.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_t1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_t1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_t2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_t2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_uh1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_uh1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sniper_extended_mag_1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sniper_extended_mag_2.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sniper_extended_mag_3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_ak12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_ak12.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_carbon_bone_c5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_carbon_bone_c5.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_heavy_spas_12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_heavy_spas_12.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_hk_slim_line.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_hk_slim_line.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_m4ss.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_m4ss.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_militech_b5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_militech_b5.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_moe.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_moe.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_ripstock.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_ripstock.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_sba3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_sba3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_tactical_ar.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_tactical_ar.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_tactical_spas_12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_tactical_spas_12.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/aa12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/aa12.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ai_awp.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/ai_awp.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ak47.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/ak47.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/aug.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/aug.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/b93r.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/b93r.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/cz75.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/cz75.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/db_long.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/db_long.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/db_short.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/db_short.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/deagle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/deagle.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/deagle_golden.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/deagle_golden.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/fn_evolys.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/fn_evolys.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/fn_fal.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/fn_fal.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/g36k.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/g36k.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/glock_17.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/glock_17.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk416d.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk416d.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_g3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk_g3.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_mk23.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk_mk23.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_mp5a5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk_mp5a5.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/kar98.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/kar98.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/lonetrail.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/lonetrail.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m1014.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m1014.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m107.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m107.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m16a1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m16a1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m16a4.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m16a4.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m1911.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m1911.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m249.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m249.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m320.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m320.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m4a1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m4a1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m700.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m700.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m870.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m870.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m95.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m95.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m9a4.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m9a4.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/minigun.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/minigun.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/mk14.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/mk14.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/p320.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/p320.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/p90.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/p90.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/qbz_191.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/qbz_191.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/qbz_95.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/qbz_95.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rhino357.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/rhino357.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rpg7.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/rpg7.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rpk.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/rpk.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/scar_h.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/scar_h.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/scar_l.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/scar_l.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/sks_tactical.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/sks_tactical.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/spas_12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/spas_12.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/spr15hb.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/spr15hb.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/springfield1873.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/springfield1873.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/taurus500.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/taurus500.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/timeless50.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/timeless50.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/type_81.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/type_81.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ump45.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/ump45.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/uzi.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/uzi.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/vector45.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/vector45.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/ammo_workbench.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/ammo_workbench.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/attachment_workbench.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/attachment_workbench.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/diamond_ammo_box.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/diamond_ammo_box.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/gold_ammo_box.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/gold_ammo_box.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/gunpowder.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/gunpowder.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/gun_smith_table.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/gun_smith_table.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/iron_ammo_box.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/iron_ammo_box.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/statue.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/statue.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/target.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/target.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/target_minecart.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/target_minecart.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/data/tacz/recipes/misc/blood_strike_1.json": {
+    "implementation": "src/main/resources/data/tacz/recipe/misc/blood_strike_1.json",
+    "validation": "Recipe ID and total quantity preserved. Target path migration; live discovery/crafting still unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/util/LuaNbtAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/util/LuaNbtAccessor.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/crafting/GunSmithTableIngredient.java": {
+    "implementation": "src/main/java/com/tacz/guns/crafting/GunSmithTableIngredient.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/crafting/package-info.java": {
+    "implementation": "src/main/java/com/tacz/guns/crafting/package-info.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModLootModifiers.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModLootModifiers.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/init/ModParticles.java": {
+    "implementation": "src/main/java/com/tacz/guns/init/ModParticles.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/particles/BulletHoleOption.java": {
+    "implementation": "src/main/java/com/tacz/guns/particles/BulletHoleOption.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/particles/package-info.java": {
+    "implementation": "src/main/java/com/tacz/guns/particles/package-info.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/PackConvertor.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/PackConvertor.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/serialize/GunSmithTableIngredientSerializer.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableIngredientSerializer.java",
+    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
     "status": "in progress"
   }
 }

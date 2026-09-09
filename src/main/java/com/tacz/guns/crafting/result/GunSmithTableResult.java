@@ -12,6 +12,12 @@ public class GunSmithTableResult {
     public static final String ATTACHMENT = "attachment";
     public static final String CUSTOM = "custom";
 
+    private com.google.gson.JsonObject definition;
+
+    public void setDefinition(com.google.gson.JsonObject definition) { this.definition = definition.deepCopy(); }
+
+    public com.google.gson.JsonObject getDefinition() { return definition == null ? null : definition.deepCopy(); }
+
     private ItemStack result = ItemStack.EMPTY;
     private Identifier group = null;
 

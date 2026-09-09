@@ -1020,7 +1020,7 @@
     "git_blob": "aa076103b1cbebc4f1abca144843266405143e76",
     "checkout_sha256": "adef9aaea75ab2ffe9e024bc4081213c05686c0161255236d2a7b6219a18ca83",
     "bytes": 2773,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/api/util/LuaNbtAccessor.java"
   },
   {
@@ -3396,7 +3396,7 @@
     "git_blob": "df8dac69e2bbce00a4e64d8e15a1e2f344f0639b",
     "checkout_sha256": "422fb908ba1dcbf5e9238846875a9d855486dfc9c462f82cf4894aa14aa16d82",
     "bytes": 494,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/crafting/GunSmithTableIngredient.java"
   },
   {
@@ -3420,7 +3420,7 @@
     "git_blob": "797792e1de50f9a66fc736dc9f41163e8c41c40b",
     "checkout_sha256": "5f4ee75725fd4b648898b828f1a12555b07630f5ea08be1c20b8a19e5f055d89",
     "bytes": 285,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/crafting/package-info.java"
   },
   {
@@ -3852,7 +3852,7 @@
     "git_blob": "1b357fc5d46448f6f6044ddde38a39b944294f0f",
     "checkout_sha256": "069a05949427e0a8b9031591c02b21e64f2259d7435c23f55d550b72d8abdad3",
     "bytes": 847,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/init/ModLootModifiers.java"
   },
   {
@@ -3868,7 +3868,7 @@
     "git_blob": "b27e65c1e78a7086bea45ab35ee9fe3a9ffabf0d",
     "checkout_sha256": "9f9e9ad9494d9419dba9e8594e10b151cf5702e5c3bf714f8ba3621261eabcc9",
     "bytes": 1372,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/init/ModParticles.java"
   },
   {
@@ -4436,7 +4436,7 @@
     "git_blob": "c27aaa7aacba25dd0e97582d9ebda9e284a1324a",
     "checkout_sha256": "c5331e35739bc2a81cf6899977e5fe5ef5ffeddbb7e3742c5b9590ed4f8e9db8",
     "bytes": 4142,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/particles/BulletHoleOption.java"
   },
   {
@@ -4444,7 +4444,7 @@
     "git_blob": "19ba315734a757bd2e067d18b9ad5cb07f9faab6",
     "checkout_sha256": "a486b918ea84d2adf6279b52cfc8b41589415d006716294452dfe36ed011d772",
     "bytes": 286,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/particles/package-info.java"
   },
   {
@@ -4476,7 +4476,7 @@
     "git_blob": "9e4cd370332e2fcc004c5ad2c7bf9c2359075f88",
     "checkout_sha256": "d519a9987ba848325d0e5baf130cf3a89855d1193fdde951ef2d1c9b11d12e81",
     "bytes": 17395,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/PackConvertor.java"
   },
   {
@@ -5116,7 +5116,7 @@
     "git_blob": "89a8f99967a4a6c74c347d101f648921ab94ba2e",
     "checkout_sha256": "9c2bd1983ee136b2dc0306e791bdea67e0b8c209aa296cfc9703ee95c579f388",
     "bytes": 1242,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableIngredientSerializer.java"
   },
   {
@@ -29796,1376 +29796,1376 @@
     "git_blob": "70650e7680a1b6b7916b4d1ee2669640585a3e5a",
     "checkout_sha256": "888db90c8cd47b9e3a520d71942a8a022bc58de4905f404dc8b1f064c12266e6",
     "bytes": 475,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/12g.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/12g.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/22wmr.json",
     "git_blob": "ac7b4c44418777de0eb8bf8b4afd1afa3a32a267",
     "checkout_sha256": "08588d82d7e4c9be1fab07295fb22dd05e5c2f7555e4761ce4cca9be15e0f3d6",
     "bytes": 379,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/22wmr.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/22wmr.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/308.json",
     "git_blob": "1c8862868f2d58742732255b6f1e0b1dd8a482ad",
     "checkout_sha256": "3ec66680b54a9fb272c9b3bb2fc8219984d7a03511215352bfac2c4740bc3daa",
     "bytes": 460,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/308.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/308.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/30_06.json",
     "git_blob": "d8d92140e414b87ec784351cc047efe083b7b6ba",
     "checkout_sha256": "bf419bd98136bdf18ab5b0bff132d4a7a5818391bc45791ea51274062d134cab",
     "bytes": 379,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/30_06.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/30_06.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/338.json",
     "git_blob": "1ef94de63a94043e078f542b14cf12634e099065",
     "checkout_sha256": "6cb6820dcc6702486c099b7ebf3a39509839d7b5aca40639a3d2d69e52a8e4fe",
     "bytes": 472,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/338.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/338.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/357mag.json",
     "git_blob": "2f82737232baa41542f2d0e5641954918353eb99",
     "checkout_sha256": "ac9c38834264a61e69d43c7d6be1e62a8f76ca74e2c0ab20b851713b5dfa5e36",
     "bytes": 380,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/357mag.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/357mag.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/40mm.json",
     "git_blob": "47a184bfec7c804784007a3cc9826a67b23fc252",
     "checkout_sha256": "1aa680f8f407699763a00a4edc5c9949655259163fa055d9f81f12d2d571a1ea",
     "bytes": 468,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/40mm.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/40mm.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/45_70.json",
     "git_blob": "9ac589f2e355890d3180bef1f5e2080edf282dfe",
     "checkout_sha256": "6c65249f97e01866890037202318408646516855404f8a9b7d5fa26a09167451",
     "bytes": 474,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/45_70.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/45_70.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/45acp.json",
     "git_blob": "ccd294de9921a104ea1b28ab306c13c29183c4f4",
     "checkout_sha256": "01a98052627f14b5f00a387d30d1dd8a4ad751b61fd3212a1fb74ab9e2a07a8d",
     "bytes": 378,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/45acp.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/45acp.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/46x30.json",
     "git_blob": "353a27729e86d39e0097ba6a8fae15717f3b20c0",
     "checkout_sha256": "153cb7ad3eb55d75ff44796b3f5ff5f6fc7c99310ea46860669c068ac6f5b779",
     "bytes": 378,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/46x30.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/46x30.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/500mag.json",
     "git_blob": "5aed1312c2590a876e8da55443d7a36ea833cf90",
     "checkout_sha256": "19cceaecb0433180396f0056c54ed4a1573e8706fdf28342de283ac7cdc6980d",
     "bytes": 476,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/500mag.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/500mag.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/50ae.json",
     "git_blob": "9ad408ea1b84be5255374e16a88709deb0f3c982",
     "checkout_sha256": "f89e2f0ae9c19f70a1584866bd9514ec6984b7b689dd204d7742d3210ce399ef",
     "bytes": 473,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/50ae.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/50ae.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/50bmg.json",
     "git_blob": "45180d5cae8c9f20618165d74d71b357b3310c5a",
     "checkout_sha256": "3a76375d90d1230166b641e8713d5717ac29bc922eec6e3b3f6a97d132654218",
     "bytes": 553,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/50bmg.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/50bmg.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/545x39.json",
     "git_blob": "a2e177ba7f1a3f8c12829c26b8b6a93acafbed83",
     "checkout_sha256": "2b478f18adadc20503e7130fdb6da0fa8a2bde23af8c84038ac5362b4902c13f",
     "bytes": 386,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/545x39.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/545x39.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/556x45.json",
     "git_blob": "795fde0c9c3be724ea7f0b0add27a626650c67b2",
     "checkout_sha256": "126b01ebdf630e9fb00c611c4bae9cff26fe68be2b52dec9f4779169d1f39dac",
     "bytes": 386,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/556x45.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/556x45.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/57x28.json",
     "git_blob": "e3f8148e18aa607e0e6887db48dbf30a19caccec",
     "checkout_sha256": "91cb2ecaa5a434f5a2ac43691ee3c1febcfb2871d08b686695fada25b20b72dc",
     "bytes": 473,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/57x28.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/57x28.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/58x42.json",
     "git_blob": "50e9314fa4e393c8c960e5304d969b7150be2f0f",
     "checkout_sha256": "cd13f288d9389206d17da20b97c793f549aa72be43f0a6f62f7461276d4bfc25",
     "bytes": 385,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/58x42.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/58x42.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/68x51fury.json",
     "git_blob": "eee3ba7409f8b8fc748e8f20aa043d467868a669",
     "checkout_sha256": "133e8b73efed5367c312b2f2c542b28fa1a76f051b3074b98d524aa9a1930f80",
     "bytes": 389,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/68x51fury.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/68x51fury.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x25.json",
     "git_blob": "0453db16ae793d00e418b8fdc0500aa9021fbcab",
     "checkout_sha256": "003f168a6be2f92071476e19623bdc555dda1b3ae65ea6705bdc9b6fde260043",
     "bytes": 379,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x25.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x25.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x39.json",
     "git_blob": "1a6faddd671fcb140166c82eb9317f19493f06c9",
     "checkout_sha256": "a270c2de7933e3b74c60e9e14fe1f57482c23e5dfcfd89e28a0c175376a9f06f",
     "bytes": 386,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x39.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x39.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x54.json",
     "git_blob": "ad871fcf9076368bcb3445c52532b5131a44ab5e",
     "checkout_sha256": "0eeaf3065c6c51c2e2edfdfdf099f9435486b289a438462dc87d24bf272b31db",
     "bytes": 386,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x54.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x54.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/792x57.json",
     "git_blob": "c77097a0b6751be64b76bc21ad27c17b1851cfa9",
     "checkout_sha256": "0b43dddf60f6dd0abf1d5dd4586e106d40e97c2c6cc264fc390062d0edfac044",
     "bytes": 386,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/792x57.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/792x57.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/9mm.json",
     "git_blob": "27482db5008ee3b2176eae396e0db0aab2914dd1",
     "checkout_sha256": "125452fc91c38f986a78d4762e0d17a9f5a45de44369cf6e2b985a27136072c5",
     "bytes": 376,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/9mm.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/9mm.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/rpg_rocket.json",
     "git_blob": "a1442ba238d5dde62a203185335ce5920e8b37fd",
     "checkout_sha256": "b9ef56acfbe86c9476d538724bfc4b8228bced60aad5076cd13a383add6d2ca9",
     "bytes": 476,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/rpg_rocket.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/rpg_rocket.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_fmj.json",
     "git_blob": "52665c0c7858812ad026fbb36590f90826c13c75",
     "checkout_sha256": "b115f0208b517d4b6dd3518131aaf940c91565d90e1ee82da78a4e67a08b0172",
     "bytes": 351,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_fmj.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_fmj.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_he.json",
     "git_blob": "a1369ccefc3ff6336b5f3c8ac364969c77727848",
     "checkout_sha256": "6dce526e532c24bf76289746c288726c736a6da8bca52e25a387ccf8066a8118",
     "bytes": 335,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_he.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_he.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_hp.json",
     "git_blob": "b52b00c4a59eff60a06d77ff9f61816878fe1047",
     "checkout_sha256": "b41c60c9d21a27aa2cdf50d8b2947fa23abae4f437780e52300c47a82b0b2a6b",
     "bytes": 349,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_hp.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_hp.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_i.json",
     "git_blob": "6ae952a25d896d6c4fb5158f8226d824fb39229c",
     "checkout_sha256": "afca3814788b2beaa2d45d64e8672dd93c2ff112d91d6685c4104ddcaaf6580d",
     "bytes": 429,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_i.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_i.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_slug.json",
     "git_blob": "1312ac7215ef0541588155167317a0b304adc238",
     "checkout_sha256": "9f41f623d134b668b962165458c1fe3bd8c8626308be006e09ab355b7238c05b",
     "bytes": 341,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/ammo_mod_slug.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/ammo_mod_slug.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/bayonet_6h3.json",
     "git_blob": "99b9956c553630deb332c6fcc457e1b8bdd4ad90",
     "checkout_sha256": "3b7520354843d20bf35388d4effbf8f88597feceb67078778a2a06c01ecad528",
     "bytes": 337,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/bayonet_6h3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/bayonet_6h3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/bayonet_m9.json",
     "git_blob": "87e8e5385400a1f7232d2ea2f0196d641264869b",
     "checkout_sha256": "23390f57f35b18f5bbe488814df5ddb8f3b3fbcfde509c7a19b7d74f58cb302b",
     "bytes": 337,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/bayonet_m9.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/bayonet_m9.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/deagle_golden_long_barrel.json",
     "git_blob": "d9a279c29779c870fe48345c5dd18042456e28be",
     "checkout_sha256": "1469c1bba21a1a7d8f0c6559c267dc07de26750929ef98e56ee67ef558d9b2c0",
     "bytes": 356,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/deagle_golden_long_barrel.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/deagle_golden_long_barrel.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_1.json",
     "git_blob": "98730755d0cca5fbad80f84a41afe97ba631bb7e",
     "checkout_sha256": "78c4953576d256438bec3cd27e7c1398355871ef5058375f0f2ded2f81a558fb",
     "bytes": 344,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_2.json",
     "git_blob": "e4c2a1e3092c0d5513ba8cd09e97493449bd19dc",
     "checkout_sha256": "7352c673461b75ab008bd9df34c21be39c679c5eb74f9d57468a14eadad192bc",
     "bytes": 439,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_3.json",
     "git_blob": "2258df251b20ed1bb3dde99abab64afd8b9f31ad",
     "checkout_sha256": "13f5e974dbee5cf93e96c1a3eabb28de99a99566555c73bfeee53b35d0d57921",
     "bytes": 442,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_cobra.json",
     "git_blob": "7baeacecd96f4af161f77352956616712de58536",
     "checkout_sha256": "3d8cea96b3f64045b9dcfa01bb97c2249296e55cc25fb033b449528a2c4b5453",
     "bytes": 336,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_cobra.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_cobra.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_magpul_afg_2.json",
     "git_blob": "986edde5475ae9050a3740cd041cb0a0ad5874f2",
     "checkout_sha256": "96ffe2fe90dc922f91832d029095a90eab323eaaab9d3c146a425806a05a08ea",
     "bytes": 343,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_magpul_afg_2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_magpul_afg_2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_osovets_black.json",
     "git_blob": "91c3a9956e98d5917b5e23baab106d6d61d64517",
     "checkout_sha256": "66910a9fc22e01cc429ec999138f6e4d68e950f03baeb943267b5ec848964fb8",
     "bytes": 344,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_osovets_black.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_osovets_black.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk0.json",
     "git_blob": "d78927c809b6eaca1f84cc9499fe226d7918f631",
     "checkout_sha256": "c84a1d285cf4f9d2f117390d4558a6a586f4391c8310462ecda85dbe564006da",
     "bytes": 334,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk0.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_rk0.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk1_b25u.json",
     "git_blob": "9723918d1ee6ac1afb46fcc27fb93a2b208e102c",
     "checkout_sha256": "87bb40cd278c12277ae7224c8ef558bd89d60ecf1ff28378a7eba426cba8e9fe",
     "bytes": 339,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk1_b25u.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_rk1_b25u.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk6.json",
     "git_blob": "d6b5d0586c6f4c5431956e1ab0bffdc262bc4ccb",
     "checkout_sha256": "719b3fac801272159e2eaf2047685e7d618ffafde495c13e8b6c6727585ba04f",
     "bytes": 333,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_rk6.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_rk6.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_se_5.json",
     "git_blob": "aafd957ca525fb0b363eb4cc27313ecb36ee632f",
     "checkout_sha256": "75fc4744dace1959fa65871a4d9c82fdbcd3a66354ea9064dc1a3ef6d678f037",
     "bytes": 335,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_se_5.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_se_5.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_td.json",
     "git_blob": "e44ab2d9e1daf244b6e08fef592a3727bc2b2ee7",
     "checkout_sha256": "d7dcb0dc27da4561d3c3150c38d8380356afbfdce7e53b585fe0cae69d441d3f",
     "bytes": 333,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_td.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_td.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_military.json",
     "git_blob": "735f9c1602a59826a5189751a0e2cc59078d58e2",
     "checkout_sha256": "fd22a7eb759b4e68c3a981cadc5455a902e6ec695b06fac386485822a3009cbd",
     "bytes": 348,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_military.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_vertical_military.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_ranger.json",
     "git_blob": "5ecb5efcd712ab899227e2da59160c2dec2ba9f9",
     "checkout_sha256": "af405d72ad8400349676d92643670b6c5e438f41bf10049ee3d63754067ba15a",
     "bytes": 346,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_ranger.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_vertical_ranger.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_talon.json",
     "git_blob": "aad4a0769b615bb0c470eeb0898c2566508fd759",
     "checkout_sha256": "d5d7458d68634bac53f567e10830a4cda4574c56745e3b75617ef904641811c8",
     "bytes": 345,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/grip_vertical_talon.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/grip_vertical_talon.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_compact.json",
     "git_blob": "d0610aff2511c6c05e67f4189664e807701f8aeb",
     "checkout_sha256": "7522d21be215198ebf044d3797e18095ee6aaaadb2ddee30b36a0d8fdc0d8437",
     "bytes": 345,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_compact.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_compact.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_lopro.json",
     "git_blob": "43dc5b4a80c52e7416717fffd685e9dbe7e63643",
     "checkout_sha256": "d262c962bc561dcca6dc82e0ae9556a0900e4a37493936ff4734d0525d5d6759",
     "bytes": 344,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_lopro.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_lopro.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_nightstick.json",
     "git_blob": "d4634f2ad0a977bbdf123fabf45a32478f5f403c",
     "checkout_sha256": "65b3729232d43dd789b3220850e0a9c421c9cf235da6960242d2d0e8cb206e04",
     "bytes": 348,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_nightstick.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_nightstick.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_peq6.json",
     "git_blob": "9a4b0ff9f4f3740ce2cb3201d01f410db1e40357",
     "checkout_sha256": "5af7ff84c1244971e8493191e3ac79b8efa557a88d347b2afc68e586d45fdfeb",
     "bytes": 441,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/laser_peq6.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/laser_peq6.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_1.json",
     "git_blob": "4b3f3dc3c19ef5f8bdb72d92814c4573168b8bd0",
     "checkout_sha256": "fe4da31584a845156800af78049c4ab09d5652b7e9fb78aa31c07b25fd3ef341",
     "bytes": 253,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/light_extended_mag_1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_2.json",
     "git_blob": "6a693b368c5826cebf69107fe42795fc03cb7ea7",
     "checkout_sha256": "59851f7e7191c4070382ea43a1820a3d2b7b3c9d0cedd869fab8f086e40d5da9",
     "bytes": 349,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/light_extended_mag_2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_3.json",
     "git_blob": "f1ea7ddd0a25674d1d2824b7f1f6da1a48b470c9",
     "checkout_sha256": "7d83aaee6b645dbcf03b1d77595ef34cba33b40f1e4b7bfae18b0e5c89053de6",
     "bytes": 445,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/light_extended_mag_3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/light_extended_mag_3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_cthulhu.json",
     "git_blob": "a557c3c7df3597b5c2e19de4ae17f0888025a302",
     "checkout_sha256": "140c9be0c5ca61348716d103e9eb7aa87b78fdbcdfcc898e96125e6874c0f3a9",
     "bytes": 350,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_cthulhu.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_cthulhu.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_cyclone_d2.json",
     "git_blob": "c9fe0a6ea367f4b8acfcc3bb12f19deb52c26afe",
     "checkout_sha256": "aa2ff5ad1b70f36d704914705fcef88190c2b87f13be5fc934003700fe5eec3c",
     "bytes": 353,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_cyclone_d2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_cyclone_d2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_mastiff_sg.json",
     "git_blob": "29f4558c52a98fa3cdbb55a768b343434e33ed2f",
     "checkout_sha256": "64a09c10e746e279af5d85570bd9e366d04f772221bf372b4a31cfa02b5a7eb7",
     "bytes": 353,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_mastiff_sg.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_mastiff_sg.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_pioneer.json",
     "git_blob": "37eb4397fda150ce7cb9312590e9eef1be0e1f8a",
     "checkout_sha256": "63ddd753ed85f59bbe9de1de6c2efa619ebbc943cf94aa4b21b8ecdbdc1c0aa0",
     "bytes": 350,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_pioneer.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_pioneer.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_timeless50.json",
     "git_blob": "fc01438241d162b055e80db6950946eca8626127",
     "checkout_sha256": "2141697c9311f38bba33f5446fda2941edfac3b8f1e2c4bbea91f44cc736be67",
     "bytes": 356,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_timeless50.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_timeless50.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_trex.json",
     "git_blob": "a6cb71b3f107ff06219416da64caffe06ea6f715",
     "checkout_sha256": "e11095df628ace433e1f30ba495085f8721cadc83bff73e3d3dfec38d5c05a7b",
     "bytes": 347,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_brake_trex.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_brake_trex.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_choke_sg.json",
     "git_blob": "7387c270d9070471cc9f7d2a791a91d9adf92d4b",
     "checkout_sha256": "8c711fbfaf17ba08c4dc765ee2fdece223756a4335b1027da690a5bfd4005d56",
     "bytes": 345,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_choke_sg.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_choke_sg.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_compensator_trident.json",
     "git_blob": "065ef9bb895d4eb463089d5df6dd5bed92245479",
     "checkout_sha256": "9812683ecd3498446e760b7dbfaff378c5866fe2c8880e7a01622cafd2a0f380",
     "bytes": 356,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_compensator_trident.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_compensator_trident.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_knight_qd.json",
     "git_blob": "072e035677cd072eed7ca2cea87bf023cb1de9dd",
     "checkout_sha256": "ca20410add1337bf1030ebc2b528ea9b8032cadaf443a7512ff2dbf6f5020228",
     "bytes": 450,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_knight_qd.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_knight_qd.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_mirage.json",
     "git_blob": "6dacfde548ccdf661202af2e24499d7ba9d4233e",
     "checkout_sha256": "d0a61216117bd1bcf2ad909b977656e6b10d20981998e1d47191bdd6f6cc9c5a",
     "bytes": 355,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_mirage.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_mirage.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_phantom_s1.json",
     "git_blob": "ea8f2a8b5f740ea3283cb4aa43597cd5c75358cf",
     "checkout_sha256": "0d549e92c58368c50d729e170ed7cda83d523381fe8267be18b2039e894014b2",
     "bytes": 451,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_phantom_s1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_phantom_s1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_ptilopsis.json",
     "git_blob": "d0369b2785c528c467b7f1ccaa2bd6eb61dc524f",
     "checkout_sha256": "a46825763f16c8e43a5c4e0559446f0e7fa9e665e9d4dd09c073d16a445dc780",
     "bytes": 358,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_ptilopsis.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_ptilopsis.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_sg.json",
     "git_blob": "83e24eafcddd563b7ce3e8d4fbd4e903d5e47dd3",
     "checkout_sha256": "30c7cee4ea0a7d5bac65ebfd33d5fcfa7d5ee2d6273f37caa12375f4c3941069",
     "bytes": 443,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_sg.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_sg.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_ursus.json",
     "git_blob": "b6e0c8d30ae145322a2046ce03a16de07c8a6628",
     "checkout_sha256": "b1913b1c3a340133157f272757593d7a9d4bd9d25b91511bcabf1ce6e1cba856",
     "bytes": 446,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_ursus.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_ursus.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_vulture.json",
     "git_blob": "ab494ab737bec12b4ff692a4dd0140533c2ca8ab",
     "checkout_sha256": "8b446907235b774e5aafc985a95c737e74e198d86763f0f55f72b66e516b5733",
     "bytes": 448,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_vulture.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_vulture.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_wraith.json",
     "git_blob": "156ce3536239d6cca12af513f82e5d195e3e374a",
     "checkout_sha256": "f25c99642f789b9fdb553a1bd0342d936e5f10caeec663a5df61cd797c032154",
     "bytes": 441,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/muzzle_silencer_wraith.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/muzzle_silencer_wraith.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_heavy.json",
     "git_blob": "40a2b6c01e336afb186ebb96f8f8777ebaed0d45",
     "checkout_sha256": "b748618ab72129a37fa92aba007c0f38d2ad98e4894b264dcb7016d666202442",
     "bytes": 341,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_heavy.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/oem_stock_heavy.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_light.json",
     "git_blob": "68a3c82d3261da31a2d78a850b3f1ab358e20b7f",
     "checkout_sha256": "a67aedeff1f5c88a6933e598a924e8792067bb84d1f34defb63e476e91673c72",
     "bytes": 340,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_light.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/oem_stock_light.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_tactical.json",
     "git_blob": "ff40e82089f37c3908862eff2e1bf9fc8d943a76",
     "checkout_sha256": "1f7e8271041f112f14d9a170af8840c658df7f4f0ab346459d854e08a98467e8",
     "bytes": 344,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/oem_stock_tactical.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/oem_stock_tactical.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_1873_6x.json",
     "git_blob": "13e7ba456967bc96590c83f81c9da2566c1bc855",
     "checkout_sha256": "5c3f80fc72c88fe6be141fc5cc6188b8f30e05a6b739e4496f4ea0e91dfde2f3",
     "bytes": 434,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_1873_6x.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_1873_6x.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_98k.json",
     "git_blob": "d7ac80786ffe81f8ffe6e1c8dbdf9022525e2d85",
     "checkout_sha256": "3364cd0bfb68e362668920d28427d82074c16bc0d4242aa845ab8621d3844492",
     "bytes": 341,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_98k.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_98k.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_acog_ta31.json",
     "git_blob": "30ec2173cb269acde676b38e3546267991549b26",
     "checkout_sha256": "22c9642a3f261073bd0476946bb95a84b08cc52b73451da524cb4cab473b5974",
     "bytes": 446,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_acog_ta31.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_acog_ta31.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_contender.json",
     "git_blob": "9ca9b3387c175a41a38a731d12e492be4200e2c1",
     "checkout_sha256": "d43a77da7ad63364d4d09d9b633f92fa30c6b74b47736fff382700405b39ad99",
     "bytes": 347,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_contender.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_contender.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_elcan_4x.json",
     "git_blob": "0eb7f92a67a4af0e2d797d13b1cf85e9c48a7cce",
     "checkout_sha256": "59183b1e11053f06b52c4341024a4fe651f5f7796c140d68ba04712f4c930d0e",
     "bytes": 446,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_elcan_4x.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_elcan_4x.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_hamr.json",
     "git_blob": "93d9f0b8a124188148e5fe3fcaaeba57e6239891",
     "checkout_sha256": "b20b27937e8443efa05b5ac8bc8855f8183471fd29e34a91c58b7f44d95f4c00",
     "bytes": 442,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_hamr.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_hamr.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_lpvo_1_6.json",
     "git_blob": "e4aeb0924d761cb6281863e2260c959171bb6a78",
     "checkout_sha256": "e38f4199495926765371d1d0129d2e42c921d6e854a3bfac3af6ed0d50d4398b",
     "bytes": 545,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_lpvo_1_6.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_lpvo_1_6.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_mk5hd.json",
     "git_blob": "d2505f89793fe83f705642986cc0314c0dcd6d8c",
     "checkout_sha256": "0d7313ee7abcf040529710494ff776673567820d4efd7b66efa2d3b849e93d99",
     "bytes": 543,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_mk5hd.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_mk5hd.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_qmk152.json",
     "git_blob": "29902efd6c7e7539f557f22a262ce55c698b11ff",
     "checkout_sha256": "cd657a1ef549250f0686887877bb915431a8f471267ae96e1435599b8b357157",
     "bytes": 444,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_qmk152.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_qmk152.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_retro_2x.json",
     "git_blob": "1a220a72c44e02f8dd4079c9fd9cdff4a0fc80ed",
     "checkout_sha256": "355d0e1bf6e32fea4302a0c6b990604899aeb4c00715208b16c342e2419a127f",
     "bytes": 345,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_retro_2x.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_retro_2x.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_standard_8x.json",
     "git_blob": "a7297f19ed114cf422b6c9c23ab755f2d7bd834b",
     "checkout_sha256": "9274c08a048f820166c4d45a8410fe0d8c828b94cbcd9fc950a7e39b44743aac",
     "bytes": 548,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_standard_8x.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_standard_8x.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_vudu.json",
     "git_blob": "d29331304bfbfad6364afa7a12b4259a648cdefc",
     "checkout_sha256": "7c2d893beb990a4271a149bcb9589d616a42c0db347060dc7b570184daf79126",
     "bytes": 541,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/scope_vudu.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/scope_vudu.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_1.json",
     "git_blob": "caa7252fad1f6ada94109d02be8551a3a71f7477",
     "checkout_sha256": "54b23d0354dc80a9633447afca1bfe17d0a7bc3185f2bbb336d5c496995e17ec",
     "bytes": 256,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/shotgun_extended_mag_1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_2.json",
     "git_blob": "5a696647957b46e69496a6b2bfebc8dfb21a7e08",
     "checkout_sha256": "0774eea34941dc7b41fc58f9d16aec8360116d5eaeced1ade4c7a979b7646642",
     "bytes": 352,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/shotgun_extended_mag_2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_3.json",
     "git_blob": "8eb702a2490ec007083efe9a85eb3cdd6cc8a2b9",
     "checkout_sha256": "70b5fad3fe0248c7ee94b74b37ad3e815ad84747ebfbb786a0bd145a3e36cc73",
     "bytes": 447,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/shotgun_extended_mag_3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/shotgun_extended_mag_3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_552.json",
     "git_blob": "01c017330cafd21f6ddf369f08a12b4a1f43c606",
     "checkout_sha256": "615783106b8d8735480c7bca8ed8a97821cd289d0080f1560b0ada08c7956410",
     "bytes": 528,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_552.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_552.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_acro_pistol.json",
     "git_blob": "5aabf700a5e88f8d27a73ee6e96cf843524c0b8b",
     "checkout_sha256": "00ba8ef862a22ba5a0458a5776daa2a6d297512584b2ac92e450eb0e148dc838",
     "bytes": 349,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_acro_pistol.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_acro_pistol.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_acro_rifle.json",
     "git_blob": "b4aa7fdfdfd6eae926fc9c6b639e2e1ac8e8cb64",
     "checkout_sha256": "29b4146ce5fadd28c433f5acd3861ad5d4428d9db511df1407fed55a29b7ca86",
     "bytes": 348,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_acro_rifle.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_acro_rifle.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_coyote.json",
     "git_blob": "23f88ca20ea7af2107567d069a2d4de651ad34c1",
     "checkout_sha256": "5e9c84823eb729afba247136c9f9eee590f1d0d03052341cc8bc59a18232452f",
     "bytes": 434,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_coyote.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_coyote.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_deltapoint_pistol.json",
     "git_blob": "89653bccfca29cc6602b5b985163688ad612e7d0",
     "checkout_sha256": "0da6c69e58f156ffc3aeed2b10ab42ea0ac0573dc1854387a8ee2fa50ab9eee1",
     "bytes": 355,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_deltapoint_pistol.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_deltapoint_pistol.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_deltapoint_rifle.json",
     "git_blob": "5896ed48cb3cb4a602577483077ae399b036512e",
     "checkout_sha256": "f50bf231aa39b6253cbd2053bc7319ad8bf5c8a1651d15581d64f6048d0f5a48",
     "bytes": 354,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_deltapoint_rifle.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_deltapoint_rifle.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_exp3.json",
     "git_blob": "a72061013dd3ec509abc3ddf36b94515d9cb0cac",
     "checkout_sha256": "026d99bf5c04856441a0f563be3bd5263de7a1f2aab1a84bb483025f910ddfcf",
     "bytes": 529,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_exp3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_exp3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_fastfire_pistol.json",
     "git_blob": "9a1c6e55315ca580c86230dd6144dec8ae12e0be",
     "checkout_sha256": "552d75df1a23908a40fc0b9951b8872e4d7a629b2b353e4956203e090c502a03",
     "bytes": 353,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_fastfire_pistol.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_fastfire_pistol.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_fastfire_rifle.json",
     "git_blob": "68a7296d4ff8ac6c1eea215933060a8405750fd6",
     "checkout_sha256": "2e228d1a8a2cc1f88bd072df8813d26489b9ce873c7a1f5fcd3930a8c801f4c4",
     "bytes": 352,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_fastfire_rifle.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_fastfire_rifle.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_okp7.json",
     "git_blob": "0f694e94771063fb6f028a8d29c4bfdac4e01533",
     "checkout_sha256": "3d771e7ac2ee4de0c3b75bdb22c555ae95b7b2342af9a5b8c0e99f682e4f27fa",
     "bytes": 432,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_okp7.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_okp7.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_pk06_pistol.json",
     "git_blob": "7e9c473e19e2385dc598d56ded73ace9c4138bfd",
     "checkout_sha256": "6965e46243096d7a3991b11d487b8f892a84b65a2285d15d23d1df3cd6bd3409",
     "bytes": 349,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_pk06_pistol.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_pk06_pistol.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_pk06_rifle.json",
     "git_blob": "5f08c73f3c1a07e2ae8f88b1c9a7d8b74e1b1f62",
     "checkout_sha256": "6a926823bab2b63948638c26cc992205aab92fa5cb7e0f31be402cfaa80474a3",
     "bytes": 348,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_pk06_rifle.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_pk06_rifle.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_rmr_dot.json",
     "git_blob": "cf087a110231cd7a1f2e94b2cb8b6dac95852b5c",
     "checkout_sha256": "2f8ed8f038d1d3b48774c4dd44b024c48c097150825d1604d357caa339a8676e",
     "bytes": 345,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_rmr_dot.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_rmr_dot.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_sro_dot.json",
     "git_blob": "75c37938848dcc0b9cf7843436b61520ad1262d0",
     "checkout_sha256": "e16498ba148769146856e0fdf1341ff130f4914833bcfe034715afdc8905b410",
     "bytes": 345,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_sro_dot.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_sro_dot.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_srs_02.json",
     "git_blob": "7a22f1ee6aac4729be8706fb0bfab42a38315636",
     "checkout_sha256": "5102cfd10cf46782cdfd47aca5b4e0f0658740be1b3b91f5c2c586c460559b1a",
     "bytes": 434,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_srs_02.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_srs_02.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_t1.json",
     "git_blob": "69b649187f162a427e87404a1c8a6b3b75199dbf",
     "checkout_sha256": "95b49886011c4ca8873f6919a8fc5197f9551fd5526b86df0834eb3793f293c6",
     "bytes": 430,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_t1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_t1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_t2.json",
     "git_blob": "c3dd8af6b80d862cccec03f65e08e2f87f4f3b5a",
     "checkout_sha256": "b99ebf94f22facaa834e6e9a92b12e78907b2356dccc65e7d8b7a4f809d647de",
     "bytes": 430,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_t2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_t2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_uh1.json",
     "git_blob": "54058be6fa81256e0daaa742166b78a8ae4ed05f",
     "checkout_sha256": "87b9aaec59ef786fed851173a637ec3d77b99e66c1d052832e6ac86f356b5505",
     "bytes": 528,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sight_uh1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sight_uh1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_1.json",
     "git_blob": "b3d5e8b4305a6912c989290fd93679ef263ab88b",
     "checkout_sha256": "c94368fccd48e6f9f1b065ed7719006116f09e0c4c2995e4f987c176ad51187e",
     "bytes": 351,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sniper_extended_mag_1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_2.json",
     "git_blob": "72ff4ceddb736e75eb154835c92976e8da4861b0",
     "checkout_sha256": "3dacececa7e4213ea603b81c21d2801a01383cb12df2ce55358a69cfc8a47e5c",
     "bytes": 448,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_2.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sniper_extended_mag_2.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_3.json",
     "git_blob": "7213236c7d384987a017784d988e6ca89309db0d",
     "checkout_sha256": "3fa9c5f3e37de5b3ffb86a48a42c7320b2565fb470d889c610777c3c28069167",
     "bytes": 545,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/sniper_extended_mag_3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/sniper_extended_mag_3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_ak12.json",
     "git_blob": "e8d93c4ae3c85ccf8586140ba4b64cc0327b187f",
     "checkout_sha256": "4b5c19a4a47f11a6c63fb872ef7d086eac7fb73192499e03cb5f7767b1e648c5",
     "bytes": 336,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_ak12.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_ak12.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_carbon_bone_c5.json",
     "git_blob": "c7e159cebb514e4284d4ce220a5d9130de3a8e7c",
     "checkout_sha256": "4f1e96867506b2c3ef80c90be615e27b24f7539755213a5db7d9227dacf48760",
     "bytes": 346,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_carbon_bone_c5.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_carbon_bone_c5.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_heavy_spas_12.json",
     "git_blob": "41a27754d7385c9cfb27d2179d8706e76d0c74ff",
     "checkout_sha256": "4257c076d35b6045d8fa3c6575ecd409fce01e2baad5933c06a63434c8ab2419",
     "bytes": 441,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_heavy_spas_12.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_heavy_spas_12.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_hk_slim_line.json",
     "git_blob": "123d715839b3a8a4029c4e9de0163e070bab00d9",
     "checkout_sha256": "3aa13cff0532aefdd142546ae319b76d453eab59ebba46a921ded546bf5b1a0a",
     "bytes": 344,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_hk_slim_line.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_hk_slim_line.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_m4ss.json",
     "git_blob": "cd6a2f434cb95c41f346001ab984f699e2771d25",
     "checkout_sha256": "6d35c9a8185d190bec12a08fc37950a0c36ea7fe847d8b0c90c44ed4b3aaaf62",
     "bytes": 335,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_m4ss.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_m4ss.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_militech_b5.json",
     "git_blob": "38eb373cc0d63deededf4219c318b3ba6196f2f0",
     "checkout_sha256": "6624ab924cf3f0bfb0695c2045125bc0ebeec4e82e4417777164b5ffc25072ca",
     "bytes": 343,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_militech_b5.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_militech_b5.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_moe.json",
     "git_blob": "e70016a9b276475c6a7b0b44c82d8ec35db6530f",
     "checkout_sha256": "294a5f4769285af5a734792b3a19264c39ff0ff419c6abd42153f719664d0b2e",
     "bytes": 335,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_moe.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_moe.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_ripstock.json",
     "git_blob": "87eb9b1c4105822ab71cccd0b65c1121ef45197a",
     "checkout_sha256": "741499a14fb01cc001cd831570420e83b2bff1384bfaa2cc7cf7c7d0c5380f26",
     "bytes": 340,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_ripstock.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_ripstock.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_sba3.json",
     "git_blob": "a88cc4dacb4c126056efc3ce77541bcf3c79dfde",
     "checkout_sha256": "764f2cdb211004f9d330df08b4e596f32b73bcf0a00c9d0ca5a0ec82d7cf08b0",
     "bytes": 336,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_sba3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_sba3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_tactical_ar.json",
     "git_blob": "46bcecb9751ec406102696e30f092b0caa8b774b",
     "checkout_sha256": "49ff67066088db17dd1242cb31154771a062682a4df6157eafc2dc8ff9973897",
     "bytes": 439,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_tactical_ar.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_tactical_ar.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_tactical_spas_12.json",
     "git_blob": "1e257a0b8535dccbca3084f2c6caf6252a2bc81f",
     "checkout_sha256": "7446ffd64739f360d2495a17e2e74c3ac11acc2f2dc37bafcfe7d7c7d2652910",
     "bytes": 348,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/stock_tactical_spas_12.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/stock_tactical_spas_12.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/aa12.json",
     "git_blob": "0dbda426bbe431dbf0dd3e473124d61c133b1e86",
     "checkout_sha256": "6a999ff51c9a1490d19edde204381c1d7d1c5dee8ae338cec43d4762f36ea094",
     "bytes": 520,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/aa12.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/aa12.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ai_awp.json",
     "git_blob": "24aaa9eaa6cb4ec106c7b985d2df93515ff5e1c9",
     "checkout_sha256": "42fdb3369770ac92d54b7f41903e8c5594b4590310144a8692d965ce5512b1cd",
     "bytes": 593,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ai_awp.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/ai_awp.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ak47.json",
     "git_blob": "547bf225fafc6f3b92b3a3d2934e4efcfd6166df",
     "checkout_sha256": "031acfabc5ce12e9938836e6f88f7da9a08e17e9e35b3288a5e9f7af5e6f706d",
     "bytes": 420,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ak47.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/ak47.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/aug.json",
     "git_blob": "26554ea623dd7e8e4666402eab07d2bdd0b52838",
     "checkout_sha256": "9ac7d84e6d0c15d185eddb1a32437158e1ea9fd92e4c0a383309103963038408",
     "bytes": 516,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/aug.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/aug.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/b93r.json",
     "git_blob": "0450ec7e6d1be0a4b957cb6abaa4a884bddb8aff",
     "checkout_sha256": "85be064ade66aba83b6b43212f5efa3be212b611816adc03f9bf9db901a17c18",
     "bytes": 419,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/b93r.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/b93r.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/cz75.json",
     "git_blob": "457f0743101de5a8749f3d783047f9e5e0304b29",
     "checkout_sha256": "c8f78deb7501f07fb2f09d0db3959a1501bb27d4686e1caf5f49f079a1e540e7",
     "bytes": 231,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/cz75.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/cz75.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/db_long.json",
     "git_blob": "9f0c1d0188fb8f6033b1120e97dbde383f6e1841",
     "checkout_sha256": "77322bfc166cf6ba8b55735faf03f975859d103a17b02a901fa0bdba3aff725b",
     "bytes": 328,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/db_long.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/db_long.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/db_short.json",
     "git_blob": "aca8053bb87b4d2fd72e8854e5f96d4307db9929",
     "checkout_sha256": "9e517506e53b65f4c89b3faf47ab5c06b130bb04502ae05b0c3b793415f503b5",
     "bytes": 327,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/db_short.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/db_short.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/deagle.json",
     "git_blob": "f59d66d57da1aea30aaf1a69ff795af5f9ff839f",
     "checkout_sha256": "d6489cb3bef63d633a689cce9d76b966fbbd1b2106fd70827906f62905ca8fd5",
     "bytes": 502,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/deagle.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/deagle.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/deagle_golden.json",
     "git_blob": "3c3ac9bc9b85b2bdc5f7f7d1aa345cfa326e1d6b",
     "checkout_sha256": "400d1aeea4f3260c5734dedc83ce203f936c0717201058337bda1440755c4fe8",
     "bytes": 510,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/deagle_golden.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/deagle_golden.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/fn_evolys.json",
     "git_blob": "af68781622b0e8e336667f33cb9f3a8fd6952fbd",
     "checkout_sha256": "4cf9c908277e6eaed7783b14bb1ae7d08cef920c27ba93e66a266ae99f4c9fa7",
     "bytes": 526,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/fn_evolys.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/fn_evolys.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/fn_fal.json",
     "git_blob": "520137075346e30eba5787f4461f5c6184d9f525",
     "checkout_sha256": "fbe0cc6ba3051812086b4d6c1090487f805787a146252d63269b6b756cc99ac3",
     "bytes": 520,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/fn_fal.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/fn_fal.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/g36k.json",
     "git_blob": "0f5b2ec94a7430bc3efb23819929f405e8971fda",
     "checkout_sha256": "f9298fe74b60b848d128e7536c98c171ab50ee69b82575b5c01cf321c602b9f9",
     "bytes": 424,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/g36k.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/g36k.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/glock_17.json",
     "git_blob": "de6ebcb34525bfa8adcb9638162875348f8cd5d3",
     "checkout_sha256": "c85cb24e376b3a351c51f5b6403ec2388609658b4f76581d1f8a4a2d0a46e2cd",
     "bytes": 235,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/glock_17.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/glock_17.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk416d.json",
     "git_blob": "e9952714cd90c62d4ce32efc0941323aa2487d26",
     "checkout_sha256": "01bfe7a9f23751da8df1f9a6a8bc38d0c81711f500421691776e8d80fea92929",
     "bytes": 498,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk416d.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk416d.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_g3.json",
     "git_blob": "3a1b5c52125b44e9ed9dc3d3f19a794ee7b066c0",
     "checkout_sha256": "bbb30b231af782effbd0f26714106f60e7984857634f48549a116f56bbb9f4c8",
     "bytes": 424,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_g3.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk_g3.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_mk23.json",
     "git_blob": "29622fa92952c231e2b3e6d987c907640b2f1fba",
     "checkout_sha256": "fc60f1319463b68cdcb3cde697263456124f1eccb6dc6b18541272e734a29009",
     "bytes": 425,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_mk23.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk_mk23.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_mp5a5.json",
     "git_blob": "a0d92ccc76d76f64fb91f9e9f14a4d28a80378a2",
     "checkout_sha256": "a7806f21cbef18af7c190aed6995e698a257abbfa2888da76e61e9dee865aaca",
     "bytes": 330,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/hk_mp5a5.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/hk_mp5a5.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/kar98.json",
     "git_blob": "a6f8c8a9d7b077a8267d3e0c009cff7c9d68346a",
     "checkout_sha256": "c3c4c76914d86257add3edf9a21ae0f89e8cf6cb96a4e6f0e8c2356c36dd6ea0",
     "bytes": 518,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/kar98.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/kar98.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/lonetrail.json",
     "git_blob": "dc7e1ce926bde1e181fb5f82967187d76c2e8ace",
     "checkout_sha256": "74518d8eeaca1f3832b26c25f25474c332bf7d4ca9636a41275b85e12cd11713",
     "bytes": 497,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/lonetrail.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/lonetrail.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m1014.json",
     "git_blob": "6e79a0e144b9f2c0abcf5e0369b5997eec2f8c43",
     "checkout_sha256": "b242b69751e5c4c77d3c50a4ff40a673c810538a2a2e30a9f2acf6c51f4e4c51",
     "bytes": 521,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m1014.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m1014.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m107.json",
     "git_blob": "e933b2f4550e4a7878a2e192499f5b9fdddaed75",
     "checkout_sha256": "5ff4c4d78325531aee6ad52fab1382101f7026efa3150f8238e5c8b74b51019c",
     "bytes": 692,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m107.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m107.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m16a1.json",
     "git_blob": "d72a610cc92d1e8c1de6b633b9dc1c84dc02095c",
     "checkout_sha256": "56e99b6be551096680c9edbd23a39f47498028e67c0e98af26803ba28162defc",
     "bytes": 420,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m16a1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m16a1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m16a4.json",
     "git_blob": "c6b8745ac624d7a47ff4faedfd2b2ddf18439102",
     "checkout_sha256": "1a4c157bd111761352821198f6786fffa5d916920a92ad043d50a43b2864f7c0",
     "bytes": 420,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m16a4.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m16a4.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m1911.json",
     "git_blob": "820d543ab8183c6ae89f15aa3164069345a30297",
     "checkout_sha256": "6b2ee5a12f30ab81f25ead86d62a776bc588c1fcc9a0052af0607b0c863018f5",
     "bytes": 325,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m1911.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m1911.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m249.json",
     "git_blob": "3dd9163107b542d3be24d3cf96516c8507267455",
     "checkout_sha256": "677f3cdbf996632f51997391e5c4bc965b2b2373fa2aa6fe4970b62c62fded36",
     "bytes": 521,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m249.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m249.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m320.json",
     "git_blob": "e24078c516722c01401189896699d4b8f37287ff",
     "checkout_sha256": "1c51467c225f066e9e0b8f395159c12648482fe281f09660a9dc87c50c0d1416",
     "bytes": 423,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m320.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m320.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m4a1.json",
     "git_blob": "771a6ff3c3924af4341bda02c47294d56b3d6152",
     "checkout_sha256": "54492721b63612d3ce1a9f5e0771ba31f02ed04682e384670f7c6dd123fb7567",
     "bytes": 483,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m4a1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m4a1.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m700.json",
     "git_blob": "2ff21ed132bb4e7ecb7f99a2328cbcb57d4c93b0",
     "checkout_sha256": "b1ac8bee7b85149d29ca32aaad949afa86bce00cdd5e685a3033571a5298fb7e",
     "bytes": 493,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m700.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m700.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m870.json",
     "git_blob": "f217346ee65777ade13f5f51a4d3dc65894bc60e",
     "checkout_sha256": "490e8070d05a108395ba495e413ef0bf8054d27103a4f77d58eb72019c6f0687",
     "bytes": 325,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m870.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m870.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m95.json",
     "git_blob": "b8d18532deefabd6688bbe77fc03348e4a4c6f1d",
     "checkout_sha256": "21b9bef830af3129806b1dc16d3a81ebaad73f3c14d2e971e013650aed0b6ae4",
     "bytes": 691,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m95.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m95.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m9a4.json",
     "git_blob": "6202152ebc8253e46651c231c617af34f02640a0",
     "checkout_sha256": "3f84a3bef85ba7c73fdaac32fc0a8eb541eae9fe87bca724b372cee6759f480f",
     "bytes": 231,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/m9a4.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/m9a4.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/minigun.json",
     "git_blob": "195280a52b44e933fd7f334a9028e57951d2c885",
     "checkout_sha256": "6e27ae2267af740db64e66fa3f1c0bc59472bc5e48a05cbc762c1dbc2612de22",
     "bytes": 628,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/minigun.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/minigun.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/mk14.json",
     "git_blob": "b8e37c6153ef6eb7c62136758af7e886428b2f30",
     "checkout_sha256": "4032b34fef07cf5e6b70c7b411ef1ada8a92ac9f263b41a0345d5b2735b8bb89",
     "bytes": 520,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/mk14.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/mk14.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/p320.json",
     "git_blob": "831b962efc13e43ec520eb164ed74088bc8936c6",
     "checkout_sha256": "3dc071afdc057adb4616c9837ca3c4b33b3dd6fbe53e8963c2f96c0f9c63c80f",
     "bytes": 422,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/p320.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/p320.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/p90.json",
     "git_blob": "c17593d2d34f21a8d79a81de0a14d2d02b8a23c4",
     "checkout_sha256": "4e203bb920d35d9b9b3ecc3fffd42fdf1499c89587fa3b56f9da3ae0a48fa859",
     "bytes": 519,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/p90.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/p90.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/qbz_191.json",
     "git_blob": "e2650970b63ddc35f7c23412e9abd8316c6496fc",
     "checkout_sha256": "2b88c43a5a6212db8bfac758206a331b92b12c2da64027ddadca787f9ef111dd",
     "bytes": 523,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/qbz_191.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/qbz_191.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/qbz_95.json",
     "git_blob": "6d1698febdb4a86848cd6b58f2899397173ebdef",
     "checkout_sha256": "fa4639bf194dd4ca9294bcec295c68ba2531a9e0b4db369a7001960c219354a9",
     "bytes": 517,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/qbz_95.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/qbz_95.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rhino357.json",
     "git_blob": "0c5afd50bfb56c8e9d190640e1bec06474faebb6",
     "checkout_sha256": "31769affb12abe19758fd83f482b45e3d7dbdb879a3f4bb7f936673c1c65ff5e",
     "bytes": 519,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rhino357.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/rhino357.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rpg7.json",
     "git_blob": "e6eaff44b057ce1184d5ee3385dc934a9714dbc4",
     "checkout_sha256": "244305ae22584f6431f18bab500a653cd4f035a1f22111d2950a9123f3aecbfd",
     "bytes": 516,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rpg7.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/rpg7.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rpk.json",
     "git_blob": "398ef5ae3a63fa439a36b9e275765dae35f0296a",
     "checkout_sha256": "a889efe5b6d6ff38b8436c6df13996aab011c3243044993e85970161f6393df3",
     "bytes": 585,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/rpk.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/rpk.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/scar_h.json",
     "git_blob": "bd3baa49a864cc858707d9e832cb16ccf8ba0589",
     "checkout_sha256": "f16b92f019553638996514775a009f2c6ab98f677c7108d0b0fea6db92ecd95a",
     "bytes": 522,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/scar_h.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/scar_h.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/scar_l.json",
     "git_blob": "c365ba853948262e7b98c45dd498df409ff332ef",
     "checkout_sha256": "404fbb1568969a25d481989cc6f96ec4df4acdad4387721e5e700131b54fe3fc",
     "bytes": 425,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/scar_l.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/scar_l.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/sks_tactical.json",
     "git_blob": "e16da205eea761845d58f438768442789ce5430b",
     "checkout_sha256": "ad48a20d9698c1e75191d082a2366cabd350ff19ada9a5cf49e9048b85ee8682",
     "bytes": 492,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/sks_tactical.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/sks_tactical.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/spas_12.json",
     "git_blob": "69f8b4cb3dfa9b0d5b1a6d9bae9ff35c773b1660",
     "checkout_sha256": "b5e4aefc149861227a6e14ade21532d7643d3f7511bc8a2178c50adbafc0b315",
     "bytes": 524,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/spas_12.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/spas_12.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/spr15hb.json",
     "git_blob": "76721bf0b5625d408f127cb449e5bb1a18749b6a",
     "checkout_sha256": "06934c3f404242603fb285b497d7581550f7f05249ae611d0f75729f3a112b9f",
     "bytes": 522,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/spr15hb.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/spr15hb.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/springfield1873.json",
     "git_blob": "d4fad963d197e35156a29d6706d78a07b56a413c",
     "checkout_sha256": "66a4b39e63260a8995dbcdb30f6e33f7afd7a8f7185f02d27a40ace0892aa565",
     "bytes": 335,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/springfield1873.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/springfield1873.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/taurus500.json",
     "git_blob": "994c647810aae794273759d7d1a80dc2cb37eac3",
     "checkout_sha256": "b02a9fabc2dfb234429e11582f07b8f25d60c955318cd26e5fc963625016afb2",
     "bytes": 525,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/taurus500.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/taurus500.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/timeless50.json",
     "git_blob": "4d8f557d70ee602c09b73b1fd1b9d4fb3276f1f6",
     "checkout_sha256": "5a37d12403c8cfebbf986f3dde0e98eae698b0820b7c1e40add4d1cd163e75b4",
     "bytes": 430,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/timeless50.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/timeless50.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/type_81.json",
     "git_blob": "c558aa04b3b92f126b1f5fc960edd3ecc18ce5e5",
     "checkout_sha256": "ecae94defaf2fad1813d6ac0306f36d5319091c7b8a847f411796334e117b849",
     "bytes": 328,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/type_81.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/type_81.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ump45.json",
     "git_blob": "6da1375b5b51f765845e98dfb6511afdf19fbcc0",
     "checkout_sha256": "c0311587af39bea07fa6b3be830d6e907b0c1a0dfc07b90232c2ac02c653167b",
     "bytes": 424,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/ump45.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/ump45.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/uzi.json",
     "git_blob": "ac075ff852ac666aab2222ace1a7bd64255dfe05",
     "checkout_sha256": "061d21592e2952ea5d82c06e8f62d0bebaef6ab45ec081ee1953743fa24866e1",
     "bytes": 230,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/uzi.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/uzi.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/vector45.json",
     "git_blob": "51bbe18ee291def47e148250f43ac578ae115282",
     "checkout_sha256": "8b620bf2a24f7660828a9b3bc1ef4191d3efceb71ad42eb9561c6fa1a8f40b44",
     "bytes": 525,
-    "disposition": "retained",
-    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/gun/vector45.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/gun/vector45.json"
   },
   {
     "path": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/scripts/db_short_gun_logic.lua",
@@ -33276,88 +33276,88 @@
     "git_blob": "2e25f5c15bf2829dabfe54ca05507f5318201085",
     "checkout_sha256": "ec20314c2202a8ef91f27f6762033e027d15c147cc1e17045ae3cf68196d930c",
     "bytes": 379,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/ammo_workbench.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/ammo_workbench.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/attachment_workbench.json",
     "git_blob": "1444aa11f555093e0202d2fea5192bc23aa7a958",
     "checkout_sha256": "2a9f3001fa09c9d8a5a73cdd4fd03b2bf1d5906c75cf9899c10879c76ec288be",
     "bytes": 455,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/attachment_workbench.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/attachment_workbench.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/diamond_ammo_box.json",
     "git_blob": "b7a364f9fd114f63ed15282b4537544db5721420",
     "checkout_sha256": "8e1b9914b2f5edf46bccea16c30d89ac07044a30ffc51a8af7128e663402bd4a",
     "bytes": 315,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/diamond_ammo_box.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/diamond_ammo_box.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/gold_ammo_box.json",
     "git_blob": "bebb7b4d171c0c7c6b0cefe84dbc55349a392a97",
     "checkout_sha256": "21cbb45783ba023d53908d5cbcef6349fc8a187321af764195ef51f55466c912",
     "bytes": 314,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/gold_ammo_box.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/gold_ammo_box.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/gun_smith_table.json",
     "git_blob": "49c84d3b0dd203197ddc14e455ea9e1d6e4973d3",
     "checkout_sha256": "9cde4d2345acf67f393dc99b48b4a6453f3f62f164980d9025b9f940294e7763",
     "bytes": 337,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/gun_smith_table.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/gun_smith_table.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/gunpowder.json",
     "git_blob": "60b72bf1e19fb2838b7720b18b3d58a1fd7151df",
     "checkout_sha256": "3e507f824e01e249cdb1f51cbea430a2f916497a4a554822f2a5154d0ce94e19",
     "bytes": 441,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/gunpowder.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/gunpowder.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/iron_ammo_box.json",
     "git_blob": "1487a3d33ed995e0c0c014f465adecbd1e0a4dd4",
     "checkout_sha256": "1571e82ef04d8a765bafe98ef060040f8d1a401c2fec8fef0681aebe7d16dbcb",
     "bytes": 314,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/iron_ammo_box.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/iron_ammo_box.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/misc/blood_strike_1.json",
     "git_blob": "24118598dda19ede1f4849be98448cd16c5d80c0",
     "checkout_sha256": "6b441f7c734434ad940278432614f4437f39ab123e9457893187ab45cd3c2936",
     "bytes": 621,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/misc/blood_strike_1.json"
+    "disposition": "relocated",
+    "target": "src/main/resources/data/tacz/recipe/misc/blood_strike_1.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/statue.json",
     "git_blob": "0ecb7884ca658095c007d045f8ba3129d77ff005",
     "checkout_sha256": "a7f207237c8f0d6af197260138bd0d1ff2fd1a00567250d4d9c7c70f040a3365",
     "bytes": 354,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/statue.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/statue.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/target.json",
     "git_blob": "f9a9f1d533d0ca5e83de07f31eac527b42cb6e25",
     "checkout_sha256": "1885d16df1024cee40175b9be0ed04a2e3a5a2588e885c26ef8f641924dcccdb",
     "bytes": 328,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/target.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/target.json"
   },
   {
     "path": "src/main/resources/data/tacz/recipes/target_minecart.json",
     "git_blob": "905fbceda66a1ac9d0235a9174e1df1878209d40",
     "checkout_sha256": "c9003606beab95cf0e3c89480d80a0b142b8e1d65e31f91f375f7db8efef3456",
     "bytes": 263,
-    "disposition": "retained",
-    "target": "src/main/resources/data/tacz/recipes/target_minecart.json"
+    "disposition": "relocated and modified",
+    "target": "src/main/resources/data/tacz/recipe/target_minecart.json"
   },
   {
     "path": "src/main/resources/data/tacz/tags/blocks/bullet_ignore.json",
@@ -33468,7 +33468,7 @@
     "git_blob": "6837a069107ff60297345474f42a3b7ace76a52f",
     "checkout_sha256": "28a92f0cf836a342a61374707093a90a5ea714152445733388e6f52e918e01cb",
     "bytes": 96,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/pack.mcmeta"
   },
   {

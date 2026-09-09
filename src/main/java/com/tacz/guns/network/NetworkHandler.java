@@ -22,7 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class NetworkHandler {
     // Target-only protocol: exact version required on both ends.
-    public static final int VERSION = 262001;
+    public static final int VERSION = 262002;
 
     public static final SimpleChannel HANDSHAKE_CHANNEL = ChannelBuilder.named(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "handshake")).networkProtocolVersion(VERSION).simpleChannel();
     public static final SimpleChannel CHANNEL = ChannelBuilder.named(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "network")).networkProtocolVersion(VERSION).simpleChannel();
@@ -94,6 +94,10 @@ public class NetworkHandler {
 
         CHANNEL.messageBuilder(ClientMessageLaserColor.class, ID_COUNT.getAndIncrement(), NetworkDirection.PLAY_TO_SERVER)
                 .encoder(ClientMessageLaserColor::encode).decoder(ClientMessageLaserColor::decode).consumerNetworkThread(ClientMessageLaserColor::handle).add();
+
+        CHANNEL.messageBuilder(ServerMessageSyncRecipes.class, ID_COUNT.getAndIncrement(), NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(ServerMessageSyncRecipes::encode).decoder(ServerMessageSyncRecipes::decode)
+                .consumerNetworkThread(ServerMessageSyncRecipes::handle).add();
 
         CHANNEL.build();
         registerConfigurationMessages();

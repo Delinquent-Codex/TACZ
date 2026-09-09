@@ -55,7 +55,7 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeManager;
+import com.tacz.guns.client.resource.ClientRecipeCache;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -122,8 +122,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
         List<Pair<Identifier, Identifier>> recipeIds = Lists.newArrayList();
 
         if (Minecraft.getInstance().level != null) {
-            RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
-            List<GunSmithTableRecipe> recipeList = recipeManager.getAllRecipesFor(ModRecipe.GUN_SMITH_TABLE_CRAFTING.get());
+            List<GunSmithTableRecipe> recipeList = ClientRecipeCache.all();
             Set<String> namespaces = filterList != null ? filterList.namespaceList() : null;
             for (GunSmithTableRecipe recipe : recipeList) {
                 Identifier id = recipe.getId();
@@ -250,14 +249,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
 
     @Nullable
     private GunSmithTableRecipe getSelectedRecipe(Identifier recipeId) {
-        if (Minecraft.getInstance().level != null) {
-            RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
-            Recipe<?> recipe = recipeManager.byKey(recipeId).orElse(null);
-            if (recipe instanceof GunSmithTableRecipe) {
-                return (GunSmithTableRecipe) recipe;
-            }
-        }
-        return null;
+        return Minecraft.getInstance().level == null ? null : ClientRecipeCache.get(recipeId);
     }
 
     private void getPlayerIngredientCount(GunSmithTableRecipe recipe) {

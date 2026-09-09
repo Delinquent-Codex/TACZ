@@ -152,7 +152,7 @@ public class PackConvertor {
             if (matcher.find()) {
                 String namespace = matcher.group(1);
                 String path = matcher.group(2);
-                String newPath = "data/" + namespace + "/recipes/" + path;
+                String newPath = "data/" + namespace + "/recipe/" + path;
 
                 try (InputStream stream = oldPack.getInputStream(entry)) {
                     JsonObject object = GSON.fromJson(new InputStreamReader(stream, StandardCharsets.UTF_8), JsonObject.class);

@@ -69,16 +69,23 @@ def main():
     tree = {entry.split("\t", 1)[1]: entry.split("\t", 1)[0].split()[2]
             for entry in git(baseline, "ls-tree", "-rz", SOURCE_REVISION).split("\0") if entry}
     paths = sorted(tree)
+    moves_file = ROOT / "docs/porting/resource-moves.json"
+    moves = json.loads(moves_file.read_text(encoding="utf-8")) if moves_file.exists() else {}
     files, archives, definitions, languages, registrations, fields, messages = [], [], [], [], [], [], []
     parse_errors = []
     for name in paths:
         blob = (baseline / name).read_bytes()
         # Hash canonical Git contents rather than checkout-specific CRLF changes.
         git_oid = tree[name]
-        target = ROOT / name
+        target_name = moves.get(name, name)
+        target = (ROOT / target_name).resolve()
+        if not target.is_relative_to(ROOT):
+            raise ValueError(f"Inventory target escapes workspace: {target_name}")
         disposition = "retained" if target.exists() and target.read_bytes() == blob else "modified" if target.exists() else "UNACCOUNTED missing file"
+        if target_name != name and target.exists():
+            disposition = "relocated" if disposition == "retained" else "relocated and modified"
         files.append({"path": name, "git_blob": git_oid, "checkout_sha256": digest(blob),
-                      "bytes": len(blob), "disposition": disposition, "target": name if target.exists() else None})
+                      "bytes": len(blob), "disposition": disposition, "target": target_name if target.exists() else None})
         if name.endswith((".jar", ".zip")):
             archives.extend(archive_entries(blob, name))
         if name.endswith(".java"):

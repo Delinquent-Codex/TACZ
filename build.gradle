@@ -110,6 +110,23 @@ sourceSets {
         java.include 'com/tacz/guns/porting/PrimitiveChecks.java'
         java.include 'com/tacz/guns/porting/EventChecks.java'
         java.include 'com/tacz/guns/porting/NetworkChecks.java'
+        java.include 'com/tacz/guns/porting/ContentChecks.java'
+        java.include 'com/tacz/guns/porting/CraftingChecks.java'
+        java.include 'com/tacz/guns/porting/PackChecks.java'
+        java.include 'com/tacz/guns/porting/LuaChecks.java'
+        java.include 'com/tacz/guns/api/util/LuaNbtAccessor.java'
+        java.include 'com/tacz/guns/resource/LegacyRecipePackResources.java'
+        java.include 'net/minecraftforge/registries/PortingRegistryFixture.java'
+        java.include 'com/tacz/guns/crafting/GunSmithTableIngredient.java'
+        java.include 'com/tacz/guns/crafting/GunSmithTableInput.java'
+        java.include 'com/tacz/guns/crafting/IngredientAllocation.java'
+        java.include 'com/tacz/guns/crafting/CraftingOutputs.java'
+        java.include 'com/tacz/guns/resource/serialize/LegacyPackCodecs.java'
+        java.include 'com/tacz/guns/api/TaczConstants.java'
+        java.include 'com/tacz/guns/api/DefaultAssets.java'
+        java.include 'com/tacz/guns/init/ModParticles.java'
+        java.include 'com/tacz/guns/init/ModPainting.java'
+        java.include 'com/tacz/guns/particles/BulletHoleOption.java'
         java.include 'com/tacz/guns/porting/RegistryFixture.java'
         java.include 'com/tacz/guns/network/SyncedDataMapping.java'
         java.include 'com/tacz/guns/entity/sync/core/IDataSerializer.java'
@@ -156,5 +173,37 @@ tasks.register('verifyPortingPrimitives', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.PrimitiveChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('verifyPortingContent', JavaExec) {
+    group = 'verification'
+    description = 'Checks target particle and painting data codecs; does not verify FML registration or rendering.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ContentChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('verifyPortingCrafting', JavaExec) {
+    group = 'verification'
+    description = 'Checks legacy pack codecs and material allocation; no live menu or recipe reload.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.CraftingChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('verifyPortingPacks', JavaExec) {
+    group = 'verification'
+    description = 'Checks actual target folder/ZIP recipe resources; no full gun-pack reload or rendering.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.PackChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('verifyPortingLua', JavaExec) {
+    group = 'verification'
+    description = 'Runs LuaJ scripts against actual component-backed NBT access; no gun gameplay.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.LuaChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

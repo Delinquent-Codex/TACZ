@@ -6,7 +6,6 @@ import com.tacz.guns.GunMod;
 import com.tacz.guns.api.resource.ResourceManager;
 import com.tacz.guns.config.PreLoadConfig;
 import com.tacz.guns.util.GetJarResources;
-import cpw.mods.jarhandling.SecureJar;
 import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -23,7 +22,11 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.forgespi.language.IModInfo;
 import net.minecraftforge.forgespi.locating.IModFile;
 import net.minecraftforge.resource.DelegatingPackResources;
-import net.minecraftforge.resource.PathPackResources;
+import net.minecraft.server.packs.PathPackResources;
+import net.minecraft.server.packs.FilePackResources;
+import net.minecraft.server.packs.PackLocationInfo;
+import net.minecraft.server.packs.PackSelectionConfig;
+import net.minecraft.util.InclusiveRange;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
 import org.apache.maven.artifact.versioning.ArtifactVersion;
@@ -91,47 +94,44 @@ public enum GunPackLoader implements RepositorySource {
         GunMod.LOGGER.info(MARKER, "Start scanning for gun packs in {}", resourcePacksPath);
         List<GunPack> gunPacks = scanExtensions(resourcePacksPath);
         GunMod.LOGGER.info(MARKER, "Found {} possible gunpack(s) and added them to resource set.", gunPacks.size());
-        List<PathPackResources> extensionPacks = new ArrayList<>();
-
-        for(GunPack gunPack : gunPacks) {
-            PathPackResources packResources = new PathPackResources(gunPack.name, false, gunPack.path) {
-                private final SecureJar secureJar = SecureJar.from(gunPack.path);
-
-                @NotNull
-                protected Path resolve(String... paths) {
-                    if (paths.length < 1) {
-                        throw new IllegalArgumentException("Missing path");
-                    } else {
-                        return this.secureJar.getPath(String.join("/", paths));
+        // Each supplier invocation owns fresh resources: metadata probing closes its
+        // instance before the full reload opens another one, including ZIP handles.
+        PackType requestedType = this.packType;
+        var location = new PackLocationInfo("tacz_resources", Component.literal("TACZ Resources"), PackSource.BUILT_IN, Optional.empty());
+        Pack.ResourcesSupplier supplier = new Pack.ResourcesSupplier() {
+            @Override
+            public PackResources openPrimary(PackLocationInfo info) {
+                List<PackResources> delegates = new ArrayList<>();
+                try {
+                    for (GunPack gunPack : gunPacks) {
+                        var childLocation = new PackLocationInfo(gunPack.path.toString(), Component.literal(gunPack.name), PackSource.BUILT_IN, Optional.empty());
+                        Pack.ResourcesSupplier child = Files.isDirectory(gunPack.path)
+                                ? new PathPackResources.PathResourcesSupplier(gunPack.path)
+                                : new FilePackResources.FileResourcesSupplier(gunPack.path);
+                        delegates.add(new LegacyRecipePackResources(child.openPrimary(childLocation)));
                     }
-                }
-
-                public IoSupplier<InputStream> getResource(PackType type, Identifier location) {
-                    return super.getResource(type, location);
-                }
-
-                public void listResources(PackType type, String namespace, String path, PackResources.ResourceOutput resourceOutput) {
-                    super.listResources(type, namespace, path, resourceOutput);
-                }
-            };
-            extensionPacks.add(packResources);
-        }
-
-
-        return Pack.readMetaAndCreate("tacz_resources", Component.literal("TACZ Resources"), true, (id) -> {
-            return new DelegatingPackResources(id, false, new PackMetadataSection(Component.translatable("tacz.resources.modresources"),
-                    SharedConstants.getCurrentVersion().getPackVersion(packType)), extensionPacks) {
-                public IoSupplier<InputStream> getRootResource(String... paths) {
-                    if (paths.length == 1 && paths[0].equals("pack.png")) {
-                        Path logoPath = getModIcon("tacz");
-                        if (logoPath != null) {
-                            return IoSupplier.create(logoPath);
+                    var metadata = new PackMetadataSection(Component.translatable("tacz.resources.modresources"),
+                            new InclusiveRange<>(SharedConstants.getCurrentVersion().packVersion(requestedType)));
+                    return new DelegatingPackResources(info, metadata, delegates) {
+                        @Override
+                        public IoSupplier<InputStream> getRootResource(String... paths) {
+                            if (paths.length == 1 && paths[0].equals("pack.png")) {
+                                Path logo = getModIcon("tacz");
+                                if (logo != null) return IoSupplier.create(logo);
+                            }
+                            return null;
                         }
-                    }
-                    return null;
+                    };
+                } catch (RuntimeException exception) {
+                    delegates.forEach(PackResources::close);
+                    throw exception;
                 }
-            };
-        }, packType, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+            }
+
+            @Override
+            public PackResources openFull(PackLocationInfo info, Pack.Metadata metadata) { return openPrimary(info); }
+        };
+        return Pack.readMetaAndCreate(location, supplier, requestedType, new PackSelectionConfig(true, Pack.Position.BOTTOM, false));
     }
 
     public static @Nullable Path getModIcon(String modId) {

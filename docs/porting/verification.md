@@ -1,6 +1,6 @@
 # Verification log
 
-Date: 2026-09-07. Windows 11 amd64. Baseline revision: `b43eb84c38e9768d8e73c8b14f0b845669704b38`. Current port changes are uncommitted on `port/forge-26.2`. Reference workspaces and complete command output live in `../TACZ-port-reference`; relevant logs will also be checkpointed under `evidence/`.
+Date: 2026-09-07. Windows 11 amd64. Baseline revision: `b43eb84c38e9768d8e73c8b14f0b845669704b38`. Initial implementation checkpoint is `eb33814c`; subsequent local progress is recorded below on `port/forge-26.2`. Reference workspaces and complete command output live in `../TACZ-port-reference`; relevant logs will also be checkpointed under `evidence/`.
 
 | Workspace / command actually executed | Toolchain | Result | Evidence |
 | --- | --- | --- | --- |
@@ -33,3 +33,15 @@ Full target build and dependency closure, complete nested packaging, clean dedic
 Set JAVA_HOME to a Java 25 JDK and run the repository wrapper. Windows: `.\gradlew.bat verifyPortingPrimitives --console=plain`; Unix: `./gradlew verifyPortingPrimitives --console=plain`. Full compilation: replace `verifyPortingPrimitives` with `compileJava`. The Unix command is provided for reproduction and was not executed on this Windows host.
 
 After full compilation and packaging work is finished, test the actual nested JAR in separate clean Forge 65.1.0 client/server game directories. Capture title/world, representative guns and all distinct mechanic/model/script paths, then connect two independent clients and test shooter/observer/late join/reconnect/respawn/dimension/item transfer scenarios. Record tested commit, JAR SHA-256, Java/Forge versions and logs for each run. No runtime gate may be marked passed by the focused primitive task or the MDK build.
+
+## Continuation verification — 2026-09-08
+
+- `verifyPortingContent`: 31 assertions passed: all six particle directions through real data/network codecs, default display ID, invalid/truncated data, painting asset/key/size/metadata and placeable reference.
+- `verifyPortingCrafting`: 421 assertions passed: real Minecraft 1.20.1-to-26.2 item fixes for names/damage/painting variants/extensions; invalid item inputs; old ingredient alternatives; overlapping requirements, insufficient totals, integer-overflow case, 400 independent arithmetic allocation cases; split outputs retain 100 items. The fixture initializes a real Forge ingredient registry and real CompoundIngredient serializer. Its initial missing-registry failure was corrected in fixture setup, not bypassed in production.
+- `verifyPortingPacks`: 25 assertions passed for real target PathPackResources and FilePackResources: namespace/legacy recipe discovery, ingredient/result conversion, duplicate-ID precedence, pass-through client data, absent resources, unchanged original folder/ZIP bytes and both pack metadata types. Client format 88.0 and server format 107.1 were read from the actual target; initial metadata failure is in compile-10.
+- `verifyPortingLua`: 14 assertions passed with actual LuaJ script execution and LuaNbtAccessor: scalar writes, nested writes, current-data reads, component equality/copy isolation, external edits retained, detached snapshots, removed-child behavior, standalone NBT and Java long precision. This does not exercise shipped gun scripts, ScriptManager or game entities.
+- Seventeen legacy Forge tag aliases were resolved recursively in baseline and target Forge universal JARs. Every resolved vanilla item set matched exactly. Reference and target artifact paths plus mappings are described in migration.md and inventory/recipe-tag-aliases.json. Companion-added tag membership remains a runtime gate.
+- Latest command: `gradlew.bat compileJava verifyPortingCrafting verifyPortingContent verifyPortingPacks verifyPortingLua verifyPortingNetwork verifyPortingEvents verifyPortingPrimitives --continue --console=plain`. Java 25, all main sources, 5,000-error limit. **Main build failed with 1,050 diagnostics; all seven focused suites passed, 596 assertions total; 32 seconds.** See evidence/target-compile-11.log and evidence/tested-inputs.json. The prior compile-06 input manifest is retained as evidence/tested-inputs-06.json.
+- `git diff --check` passed. Inventory regenerated from untouched baseline; all 183 resource relocations explicitly mapped. No main source exclusions, target release artifact, real FML launch, client/server world, multiplayer, visual/audio or performance success is claimed.
+
+Recipe result codecs, actual registered TACZ items, crafting extraction/refund, recipe cache/network lifecycle, data reload ordering, default/custom pack content and companion integration still require live tests. These remain open even where the compiler no longer reports a source error.

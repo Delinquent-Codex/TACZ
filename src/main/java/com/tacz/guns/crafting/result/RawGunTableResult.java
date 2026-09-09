@@ -1,6 +1,7 @@
 package com.tacz.guns.crafting.result;
 
-import com.tacz.guns.GunMod;
+import com.tacz.guns.api.TaczConstants;
+import com.tacz.guns.api.item.nbt.ItemDataAccessor;
 import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.item.attachment.AttachmentType;
 import com.tacz.guns.api.item.builder.AmmoItemBuilder;
@@ -53,14 +54,13 @@ public class RawGunTableResult {
             case GunSmithTableResult.ATTACHMENT -> raw.getAttachmentStack();
             default -> new GunSmithTableResult(ItemStack.EMPTY, TabConfig.TAB_EMPTY);
         };
-        if (raw.nbt != null) {
-            CompoundTag itemTag = result.getResult().getOrCreateTag();
-            for (String key : raw.nbt.getAllKeys()) {
-                Tag tag = raw.nbt.get(key);
-                if (tag != null) {
-                    itemTag.put(key, tag);
+        if (raw.nbt != null && !result.getResult().isEmpty()) {
+            ItemDataAccessor.update(result.getResult(), itemTag -> {
+                for (String key : raw.nbt.keySet()) {
+                    Tag tag = raw.nbt.get(key);
+                    if (tag != null) itemTag.put(key, tag.copy());
                 }
-            }
+            });
         }
         return result;
     }
@@ -86,7 +86,7 @@ public class RawGunTableResult {
                     .setFireMode(gunIndex.getGunData().getFireModeSet().get(0)).build();
             String raw = gunIndex.getType();
             if (!raw.contains(":")) {
-                raw = GunMod.MOD_ID + ":" + raw;
+                raw = TaczConstants.MOD_ID + ":" + raw;
             }
             Identifier group = Identifier.tryParse(raw);
             return new GunSmithTableResult(itemStack, group);
@@ -102,7 +102,7 @@ public class RawGunTableResult {
             ItemStack itemStack = AttachmentItemBuilder.create().setCount(count).setId(id).build();
             String raw = attachmentIndex.getType().name().toLowerCase(Locale.US);
             if (!raw.contains(":")) {
-                raw = GunMod.MOD_ID + ":" + raw;
+                raw = TaczConstants.MOD_ID + ":" + raw;
             }
             Identifier group = Identifier.tryParse(raw);
             return new GunSmithTableResult(itemStack, group);

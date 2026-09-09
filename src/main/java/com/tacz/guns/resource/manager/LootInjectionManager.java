@@ -22,6 +22,9 @@ import java.util.List;
 import java.util.Map;
 
 public class LootInjectionManager extends SimplePreparableReloadListener<Map<Identifier, List<JsonElement>>> {
+    private final com.mojang.serialization.DynamicOps<JsonElement> ops;
+
+    public LootInjectionManager(com.mojang.serialization.DynamicOps<JsonElement> ops) { this.ops = ops; }
     private final Map<Identifier, List<LootTableInjection>> injections = Maps.newHashMap();
     private final Gson gson = CommonAssetsManager.GSON;
     private final Marker marker = MarkerManager.getMarker("LootInjection");
@@ -39,7 +42,7 @@ public class LootInjectionManager extends SimplePreparableReloadListener<Map<Ide
             Identifier id = entry.getKey();
             for (JsonElement element : entry.getValue()) {
                 try {
-                    LootTableInjection injection = LootTableInjection.fromJson(id, element);
+                    LootTableInjection injection = LootTableInjection.fromJson(id, element, ops);
                     for (Identifier lootTable : injection.lootTables()) {
                         injections.computeIfAbsent(lootTable, key -> new java.util.ArrayList<>()).add(injection);
                     }

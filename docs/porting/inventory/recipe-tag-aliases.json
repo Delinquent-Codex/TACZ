@@ -1,0 +1,240 @@
+[
+  {
+    "legacy": "forge:glass",
+    "target": "c:glass_blocks",
+    "before": [
+      "minecraft:black_stained_glass",
+      "minecraft:blue_stained_glass",
+      "minecraft:brown_stained_glass",
+      "minecraft:cyan_stained_glass",
+      "minecraft:glass",
+      "minecraft:gray_stained_glass",
+      "minecraft:green_stained_glass",
+      "minecraft:light_blue_stained_glass",
+      "minecraft:light_gray_stained_glass",
+      "minecraft:lime_stained_glass",
+      "minecraft:magenta_stained_glass",
+      "minecraft:orange_stained_glass",
+      "minecraft:pink_stained_glass",
+      "minecraft:purple_stained_glass",
+      "minecraft:red_stained_glass",
+      "minecraft:tinted_glass",
+      "minecraft:white_stained_glass",
+      "minecraft:yellow_stained_glass"
+    ],
+    "after": [
+      "minecraft:black_stained_glass",
+      "minecraft:blue_stained_glass",
+      "minecraft:brown_stained_glass",
+      "minecraft:cyan_stained_glass",
+      "minecraft:glass",
+      "minecraft:gray_stained_glass",
+      "minecraft:green_stained_glass",
+      "minecraft:light_blue_stained_glass",
+      "minecraft:light_gray_stained_glass",
+      "minecraft:lime_stained_glass",
+      "minecraft:magenta_stained_glass",
+      "minecraft:orange_stained_glass",
+      "minecraft:pink_stained_glass",
+      "minecraft:purple_stained_glass",
+      "minecraft:red_stained_glass",
+      "minecraft:tinted_glass",
+      "minecraft:white_stained_glass",
+      "minecraft:yellow_stained_glass"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:gunpowder",
+    "target": "c:gunpowders",
+    "before": [
+      "minecraft:gunpowder"
+    ],
+    "after": [
+      "minecraft:gunpowder"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:leather",
+    "target": "c:leathers",
+    "before": [
+      "minecraft:leather"
+    ],
+    "after": [
+      "minecraft:leather"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:dusts/glowstone",
+    "target": "c:dusts/glowstone",
+    "before": [
+      "minecraft:glowstone_dust"
+    ],
+    "after": [
+      "minecraft:glowstone_dust"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:dusts/redstone",
+    "target": "c:dusts/redstone",
+    "before": [
+      "minecraft:redstone"
+    ],
+    "after": [
+      "minecraft:redstone"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:gems/amethyst",
+    "target": "c:gems/amethyst",
+    "before": [
+      "minecraft:amethyst_shard"
+    ],
+    "after": [
+      "minecraft:amethyst_shard"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:gems/diamond",
+    "target": "c:gems/diamond",
+    "before": [
+      "minecraft:diamond"
+    ],
+    "after": [
+      "minecraft:diamond"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:gems/lapis",
+    "target": "c:gems/lapis",
+    "before": [
+      "minecraft:lapis_lazuli"
+    ],
+    "after": [
+      "minecraft:lapis_lazuli"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:gems/quartz",
+    "target": "c:gems/quartz",
+    "before": [
+      "minecraft:quartz"
+    ],
+    "after": [
+      "minecraft:quartz"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:ingots/copper",
+    "target": "c:ingots/copper",
+    "before": [
+      "minecraft:copper_ingot"
+    ],
+    "after": [
+      "minecraft:copper_ingot"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:ingots/gold",
+    "target": "c:ingots/gold",
+    "before": [
+      "minecraft:gold_ingot"
+    ],
+    "after": [
+      "minecraft:gold_ingot"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:ingots/iron",
+    "target": "c:ingots/iron",
+    "before": [
+      "minecraft:iron_ingot"
+    ],
+    "after": [
+      "minecraft:iron_ingot"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:ingots/netherite",
+    "target": "c:ingots/netherite",
+    "before": [
+      "minecraft:netherite_ingot"
+    ],
+    "after": [
+      "minecraft:netherite_ingot"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:nuggets/iron",
+    "target": "c:nuggets/iron",
+    "before": [
+      "minecraft:iron_nugget"
+    ],
+    "after": [
+      "minecraft:iron_nugget"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:ores/netherite_scrap",
+    "target": "c:ores/netherite_scrap",
+    "before": [
+      "minecraft:ancient_debris"
+    ],
+    "after": [
+      "minecraft:ancient_debris"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:rods/blaze",
+    "target": "c:rods/blaze",
+    "before": [
+      "minecraft:blaze_rod"
+    ],
+    "after": [
+      "minecraft:blaze_rod"
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "legacy": "forge:rods/wooden",
+    "target": "c:rods/wooden",
+    "before": [
+      "minecraft:stick"
+    ],
+    "after": [
+      "minecraft:stick"
+    ],
+    "added": [],
+    "removed": []
+  }
+]

@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(GunMod.MOD_ID)
 public class GunMod {
-    public static final String MOD_ID = "tacz";
+    public static final String MOD_ID = com.tacz.guns.api.TaczConstants.MOD_ID;
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
     /**
      * 默认模型包文件夹
@@ -51,7 +51,6 @@ public class GunMod {
         ModSounds.SOUNDS.register(bus);
         ModParticles.PARTICLE_TYPES.register(bus);
         ModAttributes.ATTRIBUTES.register(bus);
-        ModPainting.PAINTINGS.register(bus);
         if (ModList.isLoaded("kubejs")) {
             TimelessKubeJSPlugin.installEventBridge();
             RegisterEvent.getBus(bus).addListener(new TimelessKubeJSPlugin()::onItemRegister);

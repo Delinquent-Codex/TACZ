@@ -145,7 +145,7 @@ public class LazyJsonDataManager<T> extends SimplePreparableReloadListener<LazyJ
     @Nullable
     protected final JsonElement readResourceElement(ResourceManager manager, Identifier resourcePath) {
         try (Reader reader = openReader(manager, resourcePath)) {
-            return reader == null ? null : GsonHelper.fromJson(gson, reader, JsonElement.class, true);
+            return reader == null ? null : gson.fromJson(reader, JsonElement.class);
         } catch (IOException | JsonParseException | IllegalArgumentException exception) {
             GunMod.LOGGER.error(marker, "Failed to read raw data file {}", resourcePath, exception);
             return null;

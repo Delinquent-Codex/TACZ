@@ -11,6 +11,7 @@ import com.tacz.guns.crafting.result.GunSmithTableResult;
 import com.tacz.guns.init.ModRecipe;
 import com.tacz.guns.network.NetworkHandler;
 import com.tacz.guns.network.message.ServerMessageSyncGunPack;
+import com.tacz.guns.network.message.ServerMessageSyncRecipes;
 import com.tacz.guns.resource.filter.RecipeFilter;
 import com.tacz.guns.resource.index.CommonAmmoIndex;
 import com.tacz.guns.resource.index.CommonAttachmentIndex;
@@ -83,13 +84,13 @@ public class CommonAssetsManager implements ICommonResourceProvider {
     List<LuaLibrary> libList = List.of(new LuaGunLogicConstant());
     private final ScriptManager scriptManager = new ScriptManager(new FileToIdConverter("scripts", ".lua"), libList);
 
-    public void reloadAndRegister(Consumer<PreparableReloadListener> register) {
+    public void reloadAndRegister(Consumer<PreparableReloadListener> register, com.mojang.serialization.DynamicOps<com.google.gson.JsonElement> ops) {
         // 这里会顺序重载，所以需要把index这种依赖data的放在后面
         gunData = register(new CommonDataManager<>(DataType.GUN_DATA, GunData.class, GSON, "data/guns", "GunDataLoader"));
         attachmentData = register(new AttachmentDataManager());
         attachmentsTagManager = register(new AttachmentsTagManager());
         recipeFilterManager = register(new RecipeFilterManager());
-        lootInjectionManager = new LootInjectionManager();
+        lootInjectionManager = new LootInjectionManager(ops);
         register.accept(lootInjectionManager);
         blockData = register(new CommonDataManager<>(DataType.BLOCK_DATA, BlockData.class, GSON, "data/blocks", "BlockDataLoader"));
         register.accept(scriptManager);
@@ -100,7 +101,7 @@ public class CommonAssetsManager implements ICommonResourceProvider {
         blockIndex = register(new CommonDataManager<>(DataType.BLOCK_INDEX, CommonBlockIndex.class, GSON, "index/blocks", "BlockIndexLoader"));
 
         listeners.forEach(register);
-        register.accept((barrier, resourceManager, preparationProfiler, reloadProfiler, backgroundExecutor, gameExecutor) -> {
+        register.accept((state, backgroundExecutor, barrier, gameExecutor) -> {
             return barrier
                     .wait(Void.TYPE)
                     .thenRunAsync(AllowAttachmentTagMatcher::resetCache, gameExecutor);
@@ -238,7 +239,8 @@ public class CommonAssetsManager implements ICommonResourceProvider {
     @SubscribeEvent
     public static void onReload(AddReloadListenerEvent event) {
         var commonAssetsManager = new CommonAssetsManager();
-        commonAssetsManager.reloadAndRegister(event::addListener);
+        commonAssetsManager.reloadAndRegister(event::addListener,
+                event.getConditionContext().wrap(event.getRegistries().createSerializationContext(com.mojang.serialization.JsonOps.INSTANCE)));
         INSTANCE = commonAssetsManager;
         INSTANCE.recipeManager = event.getServerResources().getRecipeManager();
     }
@@ -254,10 +256,12 @@ public class CommonAssetsManager implements ICommonResourceProvider {
     public static void onReload(TagsUpdatedEvent event) {
         if (event.getUpdateCause() == TagsUpdatedEvent.UpdateCause.SERVER_DATA_LOAD){
             if (getInstance() !=null && getInstance().recipeManager != null) {
-                List<GunSmithTableRecipe> recipes = getInstance().recipeManager.getAllRecipesFor(ModRecipe.GUN_SMITH_TABLE_CRAFTING.get());
-                for (GunSmithTableRecipe recipe : recipes) {
-                    recipe.init();
-                }
+                getInstance().recipeManager.getRecipes().forEach(holder -> {
+                    if (holder.value() instanceof GunSmithTableRecipe recipe) {
+                        recipe.bindId(holder.id().identifier());
+                        recipe.init();
+                    }
+                });
             }
         }
     }
@@ -274,10 +278,23 @@ public class CommonAssetsManager implements ICommonResourceProvider {
             return;
         }
         ServerMessageSyncGunPack message = new ServerMessageSyncGunPack(getInstance().getNetworkCache());
+        Map<Identifier, GunSmithTableRecipe> recipes = new TreeMap<>();
+        getInstance().recipeManager.getRecipes().forEach(holder -> {
+            if (holder.value() instanceof GunSmithTableRecipe recipe) {
+                recipe.bindId(holder.id().identifier());
+                recipe.init();
+                recipes.put(holder.id().identifier(), recipe);
+            }
+        });
+        var recipeMessage = new ServerMessageSyncRecipes(recipes);
         if (event.getPlayer() != null) {
             NetworkHandler.sendToClientPlayer(message, event.getPlayer());
+            NetworkHandler.sendToClientPlayer(recipeMessage, event.getPlayer());
         } else {
-            event.getPlayerList().getPlayers().forEach(player -> NetworkHandler.sendToClientPlayer(message, player));
+            event.getPlayerList().getPlayers().forEach(player -> {
+                NetworkHandler.sendToClientPlayer(message, player);
+                NetworkHandler.sendToClientPlayer(recipeMessage, player);
+            });
         }
     }
 
@@ -293,5 +310,4 @@ public class CommonAssetsManager implements ICommonResourceProvider {
         server.reloadResources(collection);
     }
 }
-
 
