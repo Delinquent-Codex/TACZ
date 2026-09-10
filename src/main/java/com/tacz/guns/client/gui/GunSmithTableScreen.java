@@ -359,11 +359,11 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
                 }
                 String url = packInfo.getUrl();
                 if (StringUtils.isNotBlank(url) && minecraft != null) {
-                    minecraft.setScreen(new ConfirmLinkScreen(yes -> {
+                    minecraft.gui.setScreen(new ConfirmLinkScreen(yes -> {
                         if (yes) {
                             Util.getPlatform().openUri(url);
                         }
-                        minecraft.setScreen(this);
+                        minecraft.gui.setScreen(this);
                     }, url, false));
                 }
             }

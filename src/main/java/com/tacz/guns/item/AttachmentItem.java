@@ -32,8 +32,8 @@ import java.util.function.Consumer;
 import static com.tacz.guns.util.datafixer.AttachmentIdFix.updateAttachmentIdInTag;
 
 public class AttachmentItem extends Item implements AttachmentItemDataAccessor {
-    public AttachmentItem() {
-        super(new Properties().stacksTo(1));
+    public AttachmentItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
@@ -99,8 +99,4 @@ public class AttachmentItem extends Item implements AttachmentItemDataAccessor {
         return Optional.of(new AttachmentItemTooltip(this.getAttachmentId(stack), this.getType(stack), stack));
     }
 
-    @Override
-    public void verifyTagAfterLoad(@NotNull CompoundTag tag) {
-        updateAttachmentIdInTag(tag);
-    }
 }

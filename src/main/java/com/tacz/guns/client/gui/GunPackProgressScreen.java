@@ -32,7 +32,7 @@ public class GunPackProgressScreen extends Screen implements ProgressListener {
     @Override
     public void render(@NotNull GuiGraphics gui, int mouseX, int mouseY, float partialTick) {
         if (this.stop) {
-            this.getMinecraft().setScreen(null);
+            this.getMinecraft().gui.setScreen(null);
         } else {
             this.renderBackground(gui);
             if (this.header != null) {

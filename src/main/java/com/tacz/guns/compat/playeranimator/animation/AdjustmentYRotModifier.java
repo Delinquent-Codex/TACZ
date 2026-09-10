@@ -22,7 +22,7 @@ public class AdjustmentYRotModifier implements Function<String, Optional<Adjustm
     @Override
     public Optional<AdjustmentModifier.PartModifier> apply(String partName) {
         Minecraft mc = Minecraft.getInstance();
-        if (player.equals(mc.player) && mc.screen != null) {
+        if (player.equals(mc.player) && mc.gui.screen() != null) {
             return Optional.empty();
         }
 

@@ -11,7 +11,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.crafting.CraftingHelper;
+import com.tacz.guns.resource.serialize.LegacyPackCodecs;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.JsonOps;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.BuiltInRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Type;
@@ -57,6 +61,14 @@ public record TabConfig(Identifier id, String name, ItemStack icon) {
     );
 
     public static class Deserializer implements JsonDeserializer<TabConfig> {
+        private final DynamicOps<JsonElement> ops;
+
+        public Deserializer() {
+            this(RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY).createSerializationContext(JsonOps.INSTANCE));
+        }
+
+        public Deserializer(DynamicOps<JsonElement> ops) { this.ops = ops; }
+
         @Override
         public TabConfig deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
             if (!json.isJsonObject()) {
@@ -67,7 +79,8 @@ public record TabConfig(Identifier id, String name, ItemStack icon) {
                 throw new JsonParseException("TabConfig must have an id");
             }
             Identifier id = context.deserialize(object.get("id"), Identifier.class);
-            ItemStack icon = CraftingHelper.getItemStack(GsonHelper.getAsJsonObject(object, "icon"), true);
+            ItemStack icon = LegacyPackCodecs.ITEM_STACK.parse(ops, GsonHelper.getAsJsonObject(object, "icon"))
+                    .getOrThrow(JsonParseException::new);
             String name = GsonHelper.getAsString(object, "name", "tacz.type.unknown.name");
             return new TabConfig(id, name, icon);
         }

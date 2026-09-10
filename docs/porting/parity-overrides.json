@@ -176,7 +176,7 @@
   },
   "source:src/main/java/com/tacz/guns/api/item/nbt/AttachmentItemDataAccessor.java": {
     "implementation": "src/main/java/com/tacz/guns/api/item/nbt/AttachmentItemDataAccessor.java",
-    "validation": "29 target persistence assertions cover shared primitives and nested attachment conversion; full accessor/gameplay behavior unverified.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/api/item/nbt/BlockItemDataAccessor.java": {
@@ -201,17 +201,17 @@
   },
   "source:src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java": {
     "implementation": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java": {
     "implementation": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/animation/screen/RefitTransform.java": {
     "implementation": "src/main/java/com/tacz/guns/client/animation/screen/RefitTransform.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java": {
@@ -256,7 +256,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/RefreshClonePlayerDataEvent.java": {
@@ -271,7 +271,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/RenderHeadShotAABB.java": {
@@ -336,12 +336,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/components/GunPackList.java": {
@@ -401,7 +401,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/input/ConfigKey.java": {
     "implementation": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/input/CrawlKey.java": {
@@ -431,7 +431,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/input/RefitKey.java": {
     "implementation": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/input/ReloadKey.java": {
@@ -841,7 +841,7 @@
   },
   "source:src/main/java/com/tacz/guns/config/util/InteractKeyConfigRead.java": {
     "implementation": "src/main/java/com/tacz/guns/config/util/InteractKeyConfigRead.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java": {
@@ -996,7 +996,7 @@
   },
   "source:src/main/java/com/tacz/guns/event/PlayerRespawnEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/event/PlayerRespawnEvent.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/event/PreventGunClick.java": {
@@ -1031,7 +1031,7 @@
   },
   "source:src/main/java/com/tacz/guns/event/ammo/DestroyGlassBlock.java": {
     "implementation": "src/main/java/com/tacz/guns/event/ammo/DestroyGlassBlock.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/init/CapabilityRegistry.java": {
@@ -1056,7 +1056,7 @@
   },
   "source:src/main/java/com/tacz/guns/init/ModBlocks.java": {
     "implementation": "src/main/java/com/tacz/guns/init/ModBlocks.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/init/ModCreativeTabs.java": {
@@ -1071,7 +1071,7 @@
   },
   "source:src/main/java/com/tacz/guns/init/ModItems.java": {
     "implementation": "src/main/java/com/tacz/guns/init/ModItems.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/init/ModPainting.java": {
@@ -1111,37 +1111,37 @@
   },
   "source:src/main/java/com/tacz/guns/item/AmmoBoxItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/AmmoItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/AmmoItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/AttachmentItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/AttachmentItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/DefaultTableItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/DefaultTableItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/GunSmithTableItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/ModernKineticGunItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java": {
     "implementation": "src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/loot/LootTableInjectorModifier.java": {
@@ -1261,7 +1261,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageLevelUp.java": {
@@ -1271,7 +1271,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageSound.java": {
@@ -1291,7 +1291,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageSyncGunPack.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageSyncGunPack.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageUpdateEntityData.java": {
@@ -1351,7 +1351,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/CommonAssetsManager.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/CommonAssetsManager.java",
-    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/GunPackLoader.java": {
@@ -1436,7 +1436,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/network/CommonNetworkCache.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/network/CommonNetworkCache.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/pojo/AmmoIndexPOJO.java": {
@@ -1471,7 +1471,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/pojo/data/gun/GunData.java": {
@@ -1496,7 +1496,7 @@
   },
   "source:src/main/java/com/tacz/guns/sound/SoundManager.java": {
     "implementation": "src/main/java/com/tacz/guns/sound/SoundManager.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/AllowAttachmentTagMatcher.java": {
@@ -2497,6 +2497,121 @@
   "source:src/main/java/com/tacz/guns/resource/serialize/GunSmithTableIngredientSerializer.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/serialize/GunSmithTableIngredientSerializer.java",
     "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/item/IAnimationItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/item/IAnimationItem.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/api/util/LuaEntityAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/api/util/LuaEntityAccessor.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/GunSmithTableBlockA.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/GunSmithTableBlockA.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/StatueBlock.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/StatueBlock.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/TargetBlock.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/TargetBlock.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/entity/package-info.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/entity/package-info.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/block/package-info.java": {
+    "implementation": "src/main/java/com/tacz/guns/block/package-info.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/tooltip/package-info.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/tooltip/package-info.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/jei/category/package-info.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/jei/category/package-info.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/config/PreLoadConfig.java": {
+    "implementation": "src/main/java/com/tacz/guns/config/PreLoadConfig.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/GunTooltipPart.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/GunTooltipPart.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/item/TargetMinecartItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/resource/serialize/LegacyPackCodecs.java": {
+    "implementation": "src/main/java/com/tacz/guns/resource/serialize/LegacyPackCodecs.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/InputExtraCheck.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/InputExtraCheck.java",
+    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
     "status": "in progress"
   }
 }

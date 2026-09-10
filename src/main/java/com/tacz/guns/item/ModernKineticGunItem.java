@@ -54,12 +54,12 @@ public class ModernKineticGunItem extends AbstractGunItem implements GunItemData
     public static final String TYPE_NAME = "modern_kinetic";
 
     private static final DoubleFunction<AttributeModifier> AM_FACTORY = amount -> new AttributeModifier(
-            UUID.randomUUID(), "TACZ Melee Damage",
-            amount, AttributeModifier.Operation.ADDITION
+            Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "melee/" + UUID.randomUUID()),
+            amount, AttributeModifier.Operation.ADD_VALUE
     );
 
-    public ModernKineticGunItem() {
-        super(new Properties().stacksTo(1));
+    public ModernKineticGunItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
@@ -509,35 +509,30 @@ public class ModernKineticGunItem extends AbstractGunItem implements GunItemData
     }
 
     private static void doPerLivingHurt(LivingEntity user, LivingEntity target, float knockback, float damage, List<EffectData> effects) {
-        if (target.equals(user)) {
+        if (target.equals(user) || !(user.level() instanceof ServerLevel serverLevel)) {
             return;
         }
-        target.knockback(knockback, (float) Math.sin(Math.toRadians(user.getYRot())), (float) -Math.cos(Math.toRadians(user.getYRot())));
-        if (user instanceof Player player) {
-            target.hurt(user.damageSources().playerAttack(player), damage);
-        } else {
-            target.hurt(user.damageSources().mobAttack(user), damage);
-        }
+        var source = user instanceof Player player ? user.damageSources().playerAttack(player) : user.damageSources().mobAttack(user);
+        target.knockback(knockback, Math.sin(Math.toRadians(user.getYRot())), -Math.cos(Math.toRadians(user.getYRot())), source, damage);
+        target.hurtServer(serverLevel, source, damage);
         // 修复近战枪械不触发神化词条/宝石的bug
-        user.doEnchantDamageEffects(user, target);
+        net.minecraft.world.item.enchantment.EnchantmentHelper.doPostAttackEffects(serverLevel, target, source);
 
         if (!target.isAlive()) {
             return;
         }
         for (EffectData data : effects) {
-            MobEffect mobEffect = ForgeRegistries.MOB_EFFECTS.getValue(data.getEffectId());
-            if (mobEffect == null) {
+            var mobEffect = net.minecraft.core.registries.BuiltInRegistries.MOB_EFFECT.get(data.getEffectId());
+            if (mobEffect.isEmpty()) {
                 continue;
             }
             int time = Math.max(0, data.getTime() * 20);
             int amplifier = Math.max(0, data.getAmplifier());
-            MobEffectInstance effectInstance = new MobEffectInstance(mobEffect, time, amplifier, false, data.isHideParticles());
+            MobEffectInstance effectInstance = new MobEffectInstance(mobEffect.get(), time, amplifier, false, data.isHideParticles());
             target.addEffect(effectInstance);
         }
-        if (user.level() instanceof ServerLevel serverLevel) {
-            int count = (int) (damage * 0.5);
-            serverLevel.sendParticles(ParticleTypes.DAMAGE_INDICATOR, target.getX(), target.getY(0.5), target.getZ(), count, 0.1, 0, 0.1, 0.2);
-        }
+        int count = (int) (damage * 0.5);
+        serverLevel.sendParticles(ParticleTypes.DAMAGE_INDICATOR, target.getX(), target.getY(0.5), target.getZ(), count, 0.1, 0, 0.1, 0.2);
     }
 
     @Nullable

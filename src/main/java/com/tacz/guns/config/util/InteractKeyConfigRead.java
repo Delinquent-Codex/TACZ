@@ -62,14 +62,14 @@ public class InteractKeyConfigRead {
         if (BLACKLIST.containsKey(Type.ENTITY) && BLACKLIST.get(Type.ENTITY).contains(entityId)) {
             return false;
         }
-        if (entity.getType().is(BLACKLIST_ENTITIES)) {
+        if (entity.getType().builtInRegistryHolder().is(BLACKLIST_ENTITIES)) {
             return false;
         }
         // 再检查白名单
         if (WHITELIST.containsKey(Type.ENTITY) && WHITELIST.get(Type.ENTITY).contains(entityId)) {
             return true;
         }
-        return entity.getType().is(WHITELIST_ENTITIES);
+        return entity.getType().builtInRegistryHolder().is(WHITELIST_ENTITIES);
     }
 
     private static void handleConfigData(List<String> configData, EnumMap<Type, List<Identifier>> storeList, Type type) {

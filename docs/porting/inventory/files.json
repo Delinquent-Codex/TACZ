@@ -812,7 +812,7 @@
     "git_blob": "c117734b5631e23c247ba5d7632d8847c46191e1",
     "checkout_sha256": "0d54d7c883c43be580dec6f4d7adf7a712c2f6a07ab53fdde4f423f24b67e645",
     "bytes": 604,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/api/item/IAnimationItem.java"
   },
   {
@@ -1012,7 +1012,7 @@
     "git_blob": "b3f5a2cefd601d8f396db435ed9bdab673980988",
     "checkout_sha256": "51e10dfb6f0a873c3b9c1bd033175ee33d4f1800bcd96a164debf1b3a7898998",
     "bytes": 1109,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/api/util/LuaEntityAccessor.java"
   },
   {
@@ -1068,7 +1068,7 @@
     "git_blob": "073120da8e64179e6b78658f2f63a750f21218c5",
     "checkout_sha256": "f1bb8c23cc4b8537906385114d79a3c3b033d3c2a186ec6f5ea84bd0ff7ad4cc",
     "bytes": 801,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/GunSmithTableBlockA.java"
   },
   {
@@ -1076,7 +1076,7 @@
     "git_blob": "f58789b579e88002fb79ed1efdaf326113e1b908",
     "checkout_sha256": "eb90a582f6e4e56132ca50f5ded72f80b6dc8464ce03d8573c098df87c194bb3",
     "bytes": 4847,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java"
   },
   {
@@ -1084,7 +1084,7 @@
     "git_blob": "b84063ebfc3a0ecbf20922a9a5fac297b7cda7a3",
     "checkout_sha256": "85fd986d641932d15557841dee1a00a063c0be4a598bd9b3854184d52883e008",
     "bytes": 4542,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java"
   },
   {
@@ -1092,7 +1092,7 @@
     "git_blob": "bd8e38a1a407c9d4d3228f94f35d630a0494f13d",
     "checkout_sha256": "57e59585c7185faabce0f7b1239fdd78feb2b55b22cd05869fd7f3fbcd8f6808",
     "bytes": 6514,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/StatueBlock.java"
   },
   {
@@ -1100,7 +1100,7 @@
     "git_blob": "be5cc9e89bb3f0fc99a57b1a941aae36d59b0aee",
     "checkout_sha256": "ad455a9752e8c88d7094acaa33dbf4bd4666eef9acf8afb16f08b060abe73bc8",
     "bytes": 11517,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/TargetBlock.java"
   },
   {
@@ -1116,7 +1116,7 @@
     "git_blob": "488193c638772c04a0f27694a41962f4fdfcd644",
     "checkout_sha256": "a0f35fc2384105a4b41af49756af291eb0574872507699e5c321f3651c67fd59",
     "bytes": 3927,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java"
   },
   {
@@ -1124,7 +1124,7 @@
     "git_blob": "214ae01674815ef27ffa49e8437b52243c3989ee",
     "checkout_sha256": "c8a53e2ee0976a3162f4d1a9339920d6c60b1400ff899f3de929bf3f7b517f0f",
     "bytes": 5602,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java"
   },
   {
@@ -1132,7 +1132,7 @@
     "git_blob": "830ed152e0a7c0fecfa1e1986e21c221a2a82e77",
     "checkout_sha256": "b990549eec2cb39c8302900a3ee59f7a603ebf8e5338d49adcf8a866d9da6848",
     "bytes": 289,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/entity/package-info.java"
   },
   {
@@ -1140,7 +1140,7 @@
     "git_blob": "c9b7b6fc8218890452bf812515df3fd07a03bd20",
     "checkout_sha256": "f9565e7907d91811684179bf21ffe8378739543971f889d6bb1444f195a2edc2",
     "bytes": 282,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/block/package-info.java"
   },
   {
@@ -1164,7 +1164,7 @@
     "git_blob": "09fe0e0b732d4407c50d449096a63c4b309a7058",
     "checkout_sha256": "24bd48a67a2d5e0c0f124707eb905bd27508fb7c84a987685ff88aec4420d8cb",
     "bytes": 17558,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java"
   },
   {
@@ -1412,7 +1412,7 @@
     "git_blob": "c640878044c05f5eb84a6338ec2bf9b41a075e28",
     "checkout_sha256": "1ca3371304b3420cefaecdcca9195fbaa4058b2804c36f5ed962a2a2daa6ede7",
     "bytes": 2451,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java"
   },
   {
@@ -1444,7 +1444,7 @@
     "git_blob": "185b4a8cf557902a25bb22e619093739bdd96ac1",
     "checkout_sha256": "ae812269c255d97cf554266f6dcffc93a3b53e3983eea288ad85ddec6c86ed69",
     "bytes": 2826,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java"
   },
   {
@@ -2724,7 +2724,7 @@
     "git_blob": "fc35882d7adea150eb5d3459c4079e1d428f0fa5",
     "checkout_sha256": "83f1804a39eab0d38339f0284ed709b1326b264b2aa55720eea05f373b30daef",
     "bytes": 291,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/tooltip/package-info.java"
   },
   {
@@ -2988,7 +2988,7 @@
     "git_blob": "3917a97264b96d935c0dd5b7f482748f49af342f",
     "checkout_sha256": "6fda05dfdfc7015b776c17bc0b3e2b81078fa94ae0ed23f74ea820b333d3d01f",
     "bytes": 296,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/jei/category/package-info.java"
   },
   {
@@ -3204,7 +3204,7 @@
     "git_blob": "b2f6e2ac86ea6a8d53060e081167cd9ecdbc35a0",
     "checkout_sha256": "c02215dc9ddef80b42f03f8cc52d75cb09297a59853860768fe4a403b35628f3",
     "bytes": 2757,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java"
   },
   {
@@ -3284,7 +3284,7 @@
     "git_blob": "cf980f964e965f4a47dd33286027c17a4ea95dd8",
     "checkout_sha256": "f452938f3b4ede9268153cabb6a6db91040e603906ded13d5f7d4ebb67313ef0",
     "bytes": 1860,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/config/PreLoadConfig.java"
   },
   {
@@ -3972,7 +3972,7 @@
     "git_blob": "b25774705b5fb3f451695d1ce7cdf96165bef4ca",
     "checkout_sha256": "6c91f7dfb9e883495056509ddbc5edc2642929df0c8b5f3e2e02ce63d6915c61",
     "bytes": 848,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/item/GunTooltipPart.java"
   },
   {
@@ -3996,7 +3996,7 @@
     "git_blob": "b926c0541d813fdfed6e5aed3d9e48c3be2e1466",
     "checkout_sha256": "94fdd204b96d226c505af7a8540aadc52723b9a972f49cd80a15374adb186662",
     "bytes": 2218,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java"
   },
   {
@@ -5036,7 +5036,7 @@
     "git_blob": "8b1fb9ec78dd02ec4ccc4f954019de3095c8bda2",
     "checkout_sha256": "d8751b8b7dc0effcf3d9a00cc4dd18f19f731e2829f4edd4212f67c9d1e7ac9e",
     "bytes": 2602,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java"
   },
   {
@@ -5236,7 +5236,7 @@
     "git_blob": "62ea947bc978076bb98fad875350e6a9cc100fa9",
     "checkout_sha256": "aa991e7eb99f29dfaacf9af0136d47c8edcf672cec5bd15b4735510828037ee7",
     "bytes": 751,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/util/InputExtraCheck.java"
   },
   {
@@ -32116,7 +32116,7 @@
     "git_blob": "774bd5807f0af9e1dadc739bf9e93115c456b37a",
     "checkout_sha256": "4b08ce154971d980651a1eaf9e214780ec2ba8227fed239134f4bf2080ccdb5a",
     "bytes": 24183,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/en_us.json"
   },
   {
@@ -33492,7 +33492,7 @@
     "git_blob": "c226c252355f707b98547294df6905301a6590c6",
     "checkout_sha256": "735b11173b0973f382ea6dea43fb64014b4e531ffa5790612fbed39007f2b842",
     "bytes": 783,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/tacz.mixins.json"
   }
 ]

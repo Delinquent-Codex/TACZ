@@ -7,9 +7,19 @@ import com.tacz.guns.init.ModBlocks;
 import com.tacz.guns.init.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtUtils;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentSerialization;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.component.ResolvableProfile;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.server.level.ServerLevel;
+import com.tacz.guns.api.util.LegacyProfileData;
+import com.tacz.guns.api.util.LegacyComponentData;
+import com.tacz.guns.api.item.nbt.StoredItemData;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -30,7 +40,7 @@ import static com.tacz.guns.block.TargetBlock.OUTPUT_POWER;
 import static com.tacz.guns.block.TargetBlock.STAND;
 
 public class TargetBlockEntity extends BlockEntity implements Nameable {
-    public static final BlockEntityType<TargetBlockEntity> TYPE = BlockEntityType.Builder.of(TargetBlockEntity::new, ModBlocks.TARGET.get()).build(null);
+    public static final BlockEntityType<TargetBlockEntity> TYPE = new BlockEntityType<>(TargetBlockEntity::new, java.util.Set.of(ModBlocks.TARGET.get()));
     /**
      * 标靶复位时间，暂定为 5 秒
      */
@@ -39,7 +49,11 @@ public class TargetBlockEntity extends BlockEntity implements Nameable {
     private static final String CUSTOM_NAME_TAG = "CustomName";
     public float rot = 0;
     public float oRot = 0;
-    private @Nullable GameProfile owner;
+    private @Nullable ResolvableProfile owner;
+    private @Nullable Tag unresolvedOwner;
+    private @Nullable Tag unresolvedName;
+    private int loadedDataVersion;
+    private static final String DATA_VERSION_TAG = "tacz:target_data_version";
     private @Nullable Component name;
 
     public TargetBlockEntity(BlockPos pos, BlockState blockState) {
@@ -57,36 +71,84 @@ public class TargetBlockEntity extends BlockEntity implements Nameable {
 
     @Nullable
     public GameProfile getOwner() {
-        return owner;
+        return owner == null ? null : owner.partialProfile();
     }
 
+    public @Nullable ResolvableProfile getOwnerProfile() { return owner; }
+
     public void setOwner(@Nullable GameProfile owner) {
-        this.owner = owner;
-        SkullBlockEntity.updateGameprofile(this.owner, gameProfile -> {
-            this.owner = gameProfile;
-            this.refresh();
+        this.owner = owner == null ? null : !owner.properties().isEmpty() ? ResolvableProfile.createResolved(owner)
+                : owner.name().isBlank() ? ResolvableProfile.createUnresolved(owner.id()) : ResolvableProfile.createUnresolved(owner.name());
+        this.unresolvedOwner = null;
+        resolveOwner();
+        refresh();
+    }
+
+    public void setOwnerName(String name) {
+        this.owner = net.minecraft.util.StringUtil.isValidPlayerName(name) ? ResolvableProfile.createUnresolved(name) : null;
+        this.unresolvedOwner = null;
+        resolveOwner();
+        refresh();
+    }
+
+    @Override
+    public void onLoad() {
+        super.onLoad();
+        resolveOwner();
+    }
+
+    private void resolveOwner() {
+        if (owner instanceof ResolvableProfile.Dynamic requested && level instanceof ServerLevel serverLevel) {
+            var server = serverLevel.getServer();
+            requested.resolveProfile(server.services().profileResolver()).thenAcceptAsync(profile -> {
+                if (owner == requested && !isRemoved()) {
+                    owner = LegacyProfileData.withResolvedProfile(requested, profile);
+                    refresh();
+                }
+            }, server).exceptionally(error -> {
+                com.tacz.guns.GunMod.LOGGER.warn("Could not resolve target profile at {}", worldPosition, error);
+                return null;
+            });
+        }
+    }
+
+    @Override
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        owner = null;
+        unresolvedOwner = null;
+        unresolvedName = null;
+        input.read(OWNER_TAG, StoredItemData.RAW_TAG_CODEC).ifPresent(saved -> {
+            var decoded = LegacyProfileData.decode(saved);
+            if (decoded.result().isPresent()) owner = decoded.result().get();
+            else {
+                unresolvedOwner = saved.copy();
+                com.tacz.guns.GunMod.LOGGER.error("Preserving unreadable target owner at {}: {}", worldPosition, decoded.error().orElseThrow().message());
+            }
+        });
+        name = null;
+        loadedDataVersion = input.getIntOr(DATA_VERSION_TAG, 0);
+        input.read(CUSTOM_NAME_TAG, StoredItemData.RAW_TAG_CODEC).ifPresent(saved -> {
+            var decoded = loadedDataVersion == 0 && saved instanceof StringTag text
+                    ? LegacyComponentData.decode(text.value(), input.lookup())
+                    : loadedDataVersion == 1 ? ComponentSerialization.CODEC.parse(input.lookup().createSerializationContext(NbtOps.INSTANCE), saved)
+                    : com.mojang.serialization.DataResult.<Component>error(() -> "Unknown target name format/version: " + loadedDataVersion);
+            if (decoded.result().isPresent()) name = decoded.result().get();
+            else unresolvedName = saved.copy();
         });
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        if (tag.contains(OWNER_TAG, Tag.TAG_COMPOUND)) {
-            this.owner = NbtUtils.readGameProfile(tag.getCompound(OWNER_TAG));
-        }
-        if (tag.contains(CUSTOM_NAME_TAG, Tag.TAG_STRING)) {
-            this.name = Component.Serializer.fromJson(tag.getString(CUSTOM_NAME_TAG));
-        }
-    }
-
-    @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        if (owner != null) {
-            tag.put(OWNER_TAG, NbtUtils.writeGameProfile(new CompoundTag(), owner));
-        }
-        if (this.name != null) {
-            tag.putString(CUSTOM_NAME_TAG, Component.Serializer.toJson(this.name));
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        if (unresolvedOwner != null) output.store(OWNER_TAG, StoredItemData.RAW_TAG_CODEC, unresolvedOwner);
+        else output.storeNullable(OWNER_TAG, ResolvableProfile.CODEC, owner);
+        if (unresolvedName != null) {
+            output.store(CUSTOM_NAME_TAG, StoredItemData.RAW_TAG_CODEC, unresolvedName);
+            output.putInt(DATA_VERSION_TAG, loadedDataVersion);
+        } else {
+            output.storeNullable(CUSTOM_NAME_TAG, ComponentSerialization.CODEC, name);
+            output.putInt(DATA_VERSION_TAG, 1);
         }
     }
 
@@ -103,6 +165,8 @@ public class TargetBlockEntity extends BlockEntity implements Nameable {
 
     public void setCustomName(Component name) {
         this.name = name;
+        this.unresolvedName = null;
+        setChanged();
     }
 
     @Override
@@ -111,8 +175,8 @@ public class TargetBlockEntity extends BlockEntity implements Nameable {
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
-        return saveWithoutMetadata();
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
     }
 
     public void refresh() {
@@ -125,7 +189,7 @@ public class TargetBlockEntity extends BlockEntity implements Nameable {
 
     @Override
     public AABB getRenderBoundingBox() {
-        return new AABB(worldPosition.offset(-2, 0, -2), worldPosition.offset(2, 2, 2));
+        return new AABB(net.minecraft.world.phys.Vec3.atLowerCornerOf(worldPosition.offset(-2, 0, -2)), net.minecraft.world.phys.Vec3.atLowerCornerOf(worldPosition.offset(2, 2, 2)));
     }
 
     public void hit(Level level, BlockState state, BlockHitResult hit, boolean isUpperBlock) {
@@ -143,7 +207,7 @@ public class TargetBlockEntity extends BlockEntity implements Nameable {
             // 当声音大于 1 时，距离为 = 16 * volume
             float volume = OtherConfig.TARGET_SOUND_DISTANCE.get() / 16.0f;
             volume = Math.max(volume, 0);
-            level.playSound(null, blockPos, ModSounds.TARGET_HIT.get(), SoundSource.BLOCKS, volume, this.level.random.nextFloat() * 0.1F + 0.9F);
+            level.playSound(null, blockPos, ModSounds.TARGET_HIT.get(), SoundSource.BLOCKS, volume, this.level.getRandom().nextFloat() * 0.1F + 0.9F);
         }
     }
 }

@@ -450,8 +450,6 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
             gunData = TimelessAPI.getClientGunIndex(iGun.getGunId(currentGunItem))
                     .map(ClientGunIndex::getGunData).orElse(null);
         }
-        if (currentGunItem.hasTag()) {
-            nbtUtil = new LuaNbtAccessor(currentGunItem.getTag());
-        }
+        nbtUtil = currentGunItem.isEmpty() ? null : LuaNbtAccessor.from(currentGunItem);
     }
 }

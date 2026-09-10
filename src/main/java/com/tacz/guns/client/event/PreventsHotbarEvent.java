@@ -14,7 +14,7 @@ public class PreventsHotbarEvent {
     @SubscribeEvent
     public static void onRenderHotbarEvent(RenderGuiOverlayEvent.Pre event) {
         // todo 需要测试行为
-        Screen screen = Minecraft.getInstance().screen;
+        Screen screen = Minecraft.getInstance().gui.screen();
         // 枪械合成台界面关闭背景
         if (screen instanceof GunSmithTableScreen) {
             event.setCanceled(true);

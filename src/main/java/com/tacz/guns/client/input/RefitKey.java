@@ -35,14 +35,14 @@ public class RefitKey {
                 return;
             }
             if (isInGame()) {
-                if (IGun.mainHandHoldGun(player) && Minecraft.getInstance().screen == null) {
+                if (IGun.mainHandHoldGun(player) && Minecraft.getInstance().gui.screen() == null) {
                     IGun iGun = IGun.getIGunOrNull(player.getMainHandItem());
                     if (iGun != null && iGun.hasAttachmentLock(player.getMainHandItem())) {
                         return;
                     }
-                    Minecraft.getInstance().setScreen(new GunRefitScreen());
+                    Minecraft.getInstance().gui.setScreen(new GunRefitScreen());
                 }
-            } else if (Minecraft.getInstance().screen instanceof GunRefitScreen refitScreen) {
+            } else if (Minecraft.getInstance().gui.screen() instanceof GunRefitScreen refitScreen) {
                 refitScreen.onClose();
             }
         }

@@ -45,3 +45,13 @@ After full compilation and packaging work is finished, test the actual nested JA
 - `git diff --check` passed. Inventory regenerated from untouched baseline; all 183 resource relocations explicitly mapped. No main source exclusions, target release artifact, real FML launch, client/server world, multiplayer, visual/audio or performance success is claimed.
 
 Recipe result codecs, actual registered TACZ items, crafting extraction/refund, recipe cache/network lifecycle, data reload ordering, default/custom pack content and companion integration still require live tests. These remain open even where the compiler no longer reports a source error.
+
+## Block/item verification — 2026-09-09
+
+The exact command and all 4,230 input hashes are in evidence/tested-inputs.json. Main compile failed with 885 diagnostics (692 client, 63 compat, 60 entity, 39 util, 13 mixin, 9 item, 6 command, 3 api). All nine focused tasks passed 636 assertions in the same invocation. evidence/target-compile-22.log records the full output; earlier input manifests for compile-11 and compile-16 are retained separately.
+
+verifyPortingStoredData passed 31 assertions using actual Minecraft codecs, data fixers, ValueInput/ValueOutput and network buffers. Cases include nested attachment conversion/backups, custom fields, source immutability, empty and invalid items, exact recovery-item data through save/network, malformed raw values, tooltip flags, dye color, owner UUID/name/texture signature, shorthand/dynamic profiles, skin-patch preservation and component names. It does not instantiate a TACZ block entity, resolve an online profile or exercise placement/removal.
+
+verifyPortingDye passed 9 assertions against the shipped recipe JSON and actual target DyeRecipe. A plain Item registered only in the fixture represents tacz:ammo_box; the production AmmoBoxItem class and FML lifecycle are not loaded. Tests bind the 16 actual vanilla dyes, check valid/invalid material combinations, ammo/custom-data preservation, input immutability and recoloring. Initial fixture failures are in reference logs target-compile-17/18, stored-dye-checks-19 and dye-checks-20; corrected standalone run dye-checks-21 passed. Both Forge's registry and its named wrapper must be reopened for the isolated fixture, and the real Forge ingredient registry must be initialized.
+
+All previous focused suites still pass. The newly added ItemStackMixin has only source compilation evidence; FML/Mixin application, pack-dependent ammo limits, standalone attachment fixes, gameplay melee/movement, full scripts, block inventories/recovery, online skins, actual GUI, configuration lifecycle and pack sync remain unverified. No helper or fixture result substitutes for the required runtime/parity gates.

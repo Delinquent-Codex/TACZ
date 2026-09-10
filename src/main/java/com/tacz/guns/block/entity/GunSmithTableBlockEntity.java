@@ -6,6 +6,9 @@ import com.tacz.guns.inventory.GunSmithTableMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -24,12 +27,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.Nullable;
 
 public class GunSmithTableBlockEntity extends BlockEntity implements MenuProvider {
-    public static final BlockEntityType<GunSmithTableBlockEntity> TYPE = BlockEntityType.Builder.of(GunSmithTableBlockEntity::new,
+    public static final BlockEntityType<GunSmithTableBlockEntity> TYPE = new BlockEntityType<>(GunSmithTableBlockEntity::new, java.util.Set.of(
             ModBlocks.GUN_SMITH_TABLE.get(),
             ModBlocks.WORKBENCH_111.get(),
             ModBlocks.WORKBENCH_121.get(),
             ModBlocks.WORKBENCH_211.get()
-    ).build(null);
+    ));
 
     private static final String ID_TAG = "BlockId";
 
@@ -42,6 +45,7 @@ public class GunSmithTableBlockEntity extends BlockEntity implements MenuProvide
 
     public void setId(Identifier id) {
         this.id = id;
+        setChanged();
     }
 
     @Nullable
@@ -58,7 +62,7 @@ public class GunSmithTableBlockEntity extends BlockEntity implements MenuProvide
     @Override
     @OnlyIn(Dist.CLIENT)
     public AABB getRenderBoundingBox() {
-        return new AABB(worldPosition.offset(-2, 0, -2), worldPosition.offset(2, 1, 2));
+        return new AABB(net.minecraft.world.phys.Vec3.atLowerCornerOf(worldPosition.offset(-2, 0, -2)), net.minecraft.world.phys.Vec3.atLowerCornerOf(worldPosition.offset(2, 1, 2)));
     }
 
     @Override
@@ -73,25 +77,19 @@ public class GunSmithTableBlockEntity extends BlockEntity implements MenuProvide
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        if (tag.contains(ID_TAG, Tag.TAG_STRING)) {
-            this.id = Identifier.tryParse(tag.getString(ID_TAG));
-        } else {
-            this.id = DefaultAssets.DEFAULT_BLOCK_ID;
-        }
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        this.id = input.read(ID_TAG, Identifier.CODEC).orElse(DefaultAssets.DEFAULT_BLOCK_ID);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        if (id != null) {
-            tag.putString(ID_TAG, id.toString());
-        }
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        output.storeNullable(ID_TAG, Identifier.CODEC, id);
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
-        return saveWithoutMetadata();
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
     }
 }

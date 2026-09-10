@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_dye",
+  "dye": "#minecraft:dyes",
+  "result": {
+    "id": "tacz:ammo_box"
+  },
+  "target": "tacz:ammo_box"
+}

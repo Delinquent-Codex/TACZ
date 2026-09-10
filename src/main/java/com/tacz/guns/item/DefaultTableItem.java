@@ -9,8 +9,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class DefaultTableItem extends GunSmithTableItem{
     public static final Identifier ID = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "gun_smith_table");
-    public DefaultTableItem(Block block) {
-        super(block);
+    public DefaultTableItem(Block block, Properties properties) {
+        super(block, properties);
     }
 
     @Override

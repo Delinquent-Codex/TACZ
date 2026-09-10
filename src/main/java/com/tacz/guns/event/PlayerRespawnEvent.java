@@ -16,7 +16,7 @@ public class PlayerRespawnEvent {
         if (!GunConfig.AUTO_RELOAD_WHEN_RESPAWN.get()) return;
 
         var player = event.getEntity();
-        player.getInventory().items.forEach(itemStack -> {
+        player.getInventory().getNonEquipmentItems().forEach(itemStack -> {
             if (!(itemStack.getItem() instanceof IGun)) return;
 
             var api = new ModernKineticGunScriptAPI();

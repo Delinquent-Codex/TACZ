@@ -51,7 +51,9 @@ public class ServerMessageSyncGunPack {
         if (remoteConnection) {
             CommonAssetsManager.clearInstance();
         }
-        CommonNetworkCache.INSTANCE.fromNetwork(message.cache);
+        var connection = net.minecraft.client.Minecraft.getInstance().getConnection();
+        if (connection == null) return;
+        CommonNetworkCache.INSTANCE.fromNetwork(message.cache, connection.registryAccess());
         // 通知客户端重新构建ClientIndex
         ClientIndexManager.reload();
     }

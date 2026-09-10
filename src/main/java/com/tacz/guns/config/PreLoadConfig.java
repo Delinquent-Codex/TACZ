@@ -25,10 +25,10 @@ public class PreLoadConfig {
 
     public static PreLoadModConfig getModConfig() {
         ModLoadingContext ctx = ModLoadingContext.get();
-        var c = new PreLoadModConfig(ModConfig.Type.COMMON, spec, ctx.getActiveContainer(), "tacz-pre.toml");
+        var c = new PreLoadModConfig(ModConfig.Type.COMMON, spec, ctx.getContainer(), "tacz-pre.toml");
         // 从 ConfigTracker 中移除，防止从默认文件夹重复加载
-        ConfigTracker.INSTANCE.configSets().get(ModConfig.Type.COMMON).remove(c);
-        ConfigTracker.INSTANCE.fileMap().remove(c.getFileName(), c);
+        ConfigTracker.configSets().get(ModConfig.Type.COMMON).remove(c);
+        ConfigTracker.fileMap().remove(c.getFileName(), c);
         return c;
     }
 

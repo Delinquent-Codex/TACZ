@@ -91,6 +91,7 @@ public final class LegacyPackCodecs {
         legacy.putString("id", object.get("item").getAsString());
         legacy.putByte("Count", (byte) count);
         if (object.has("nbt")) legacy.put("tag", readNbt(object.get("nbt")));
+        legacy.getCompound("tag").ifPresent(com.tacz.guns.item.GunTooltipPart::preserveLegacy);
         // Minecraft's own item fixes migrate display, damage, enchantments, entity data,
         // containers and unknown custom fields. The source pack JSON is never mutated.
         var updated = DataFixers.getDataFixer().update(References.ITEM_STACK, new Dynamic<>(NbtOps.INSTANCE, legacy),

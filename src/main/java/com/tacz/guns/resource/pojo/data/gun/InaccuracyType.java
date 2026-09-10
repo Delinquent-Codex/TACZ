@@ -73,7 +73,8 @@ public enum InaccuracyType {
     }
 
     private static boolean isMove(LivingEntity livingEntity) {
-        double distance = Math.abs(livingEntity.walkDist - livingEntity.walkDistO);
+        // Vanilla removed cumulative walkDist; retain its horizontal distance scale for non-player shooters.
+        double distance = livingEntity.getKnownSpeed().horizontalDistance() * 0.6;
         if (livingEntity instanceof Player player) {
             distance = HitboxHelper.getPlayerVelocity(player).length();
         }

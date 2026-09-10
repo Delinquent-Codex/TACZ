@@ -873,6 +873,7 @@ public class ModernKineticGunScriptAPI {
         if (itemStack == null || !(itemStack.getItem() instanceof AbstractGunItem gunItem)) {
             gunIndex = null;
             abstractGunItem = null;
+            nbtUtil = null;
             return;
         }
         gunId = gunItem.getGunId(itemStack);
@@ -880,9 +881,7 @@ public class ModernKineticGunScriptAPI {
         Optional<CommonGunIndex> gunIndexOptional = TimelessAPI.getCommonGunIndex(gunId);
         gunIndex = gunIndexOptional.orElse(null);
         abstractGunItem = gunItem;
-        if (itemStack.hasTag()) {
-            nbtUtil = new LuaNbtAccessor(itemStack.getTag());
-        }
+        nbtUtil = LuaNbtAccessor.from(itemStack);
     }
 
 

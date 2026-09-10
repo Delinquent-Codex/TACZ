@@ -114,6 +114,12 @@ sourceSets {
         java.include 'com/tacz/guns/porting/CraftingChecks.java'
         java.include 'com/tacz/guns/porting/PackChecks.java'
         java.include 'com/tacz/guns/porting/LuaChecks.java'
+        java.include 'com/tacz/guns/porting/StoredDataChecks.java'
+        java.include 'com/tacz/guns/porting/DyeChecks.java'
+        java.include 'com/tacz/guns/api/item/nbt/StoredItemData.java'
+        java.include 'com/tacz/guns/item/GunTooltipPart.java'
+        java.include 'com/tacz/guns/api/util/LegacyProfileData.java'
+        java.include 'com/tacz/guns/api/util/LegacyComponentData.java'
         java.include 'com/tacz/guns/api/util/LuaNbtAccessor.java'
         java.include 'com/tacz/guns/resource/LegacyRecipePackResources.java'
         java.include 'net/minecraftforge/registries/PortingRegistryFixture.java'
@@ -205,5 +211,22 @@ tasks.register('verifyPortingLua', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.LuaChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('verifyPortingStoredData', JavaExec) {
+    group = 'verification'
+    description = 'Checks nested saved-item, target-owner and name migration with real target ValueInput/ValueOutput.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.StoredDataChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingDye', JavaExec) {
+    group = 'verification'
+    description = 'Checks the shipped ammo-box dye recipe using a real target recipe and a plain registry fixture item.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.DyeChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

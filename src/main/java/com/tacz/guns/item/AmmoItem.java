@@ -33,11 +33,11 @@ import java.util.Optional;
 import java.util.function.Consumer;
 
 public class AmmoItem extends Item implements AmmoItemDataAccessor {
-    public AmmoItem() {
-        super(new Properties().stacksTo(1));
+    public AmmoItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
-    @Override
+    /** Called by ItemStackMixin because the target no longer has Forge's per-item stack-size hook. */
     public int getMaxStackSize(ItemStack stack) {
         if (stack.getItem() instanceof IAmmo iAmmo) {
             return TimelessAPI.getCommonAmmoIndex(iAmmo.getAmmoId(stack))
@@ -88,19 +88,19 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, net.minecraft.world.item.component.TooltipDisplay display, java.util.function.Consumer<Component> components, TooltipFlag isAdvanced) {
         Identifier ammoId = this.getAmmoId(stack);
         TimelessAPI.getClientAmmoIndex(ammoId).ifPresent(index -> {
             String tooltipKey = index.getTooltipKey();
             if (tooltipKey != null) {
-                components.add(Component.translatable(tooltipKey).withStyle(ChatFormatting.GRAY));
+                components.accept(Component.translatable(tooltipKey).withStyle(ChatFormatting.GRAY));
             }
         });
 
         PackInfo packInfoObject = ClientAssetsManager.INSTANCE.getPackInfo(ammoId);
         if (packInfoObject != null) {
             MutableComponent component = Component.translatable(packInfoObject.getName()).withStyle(ChatFormatting.BLUE).withStyle(ChatFormatting.ITALIC);
-            components.add(component);
+            components.accept(component);
         }
     }
 }

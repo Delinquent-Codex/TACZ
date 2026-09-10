@@ -13,12 +13,17 @@ import net.minecraftforge.registries.RegistryManager;
 final class RegistryFixture {
     private RegistryFixture() {}
     static void bootstrap() {
+        bootstrap(() -> {});
+    }
+
+    static void bootstrap(Runnable registerFixtureItems) {
         SharedConstants.tryDetectVersion();
         Bootstrap.bootStrap();
         var componentRegistry = RegistryManager.ACTIVE.getRegistry(Registries.DATA_COMPONENT_TYPE);
         componentRegistry.unfreeze();
         componentRegistry.register(Identifier.parse("tacz:attachments"), ModDataComponents.ATTACHMENT_DATA);
         componentRegistry.freeze();
+        registerFixtureItems.run();
         BuiltInRegistries.DATA_COMPONENT_INITIALIZERS.build(VanillaRegistries.createLookup()).forEach(pending -> pending.apply());
     }
 }

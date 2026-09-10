@@ -52,6 +52,9 @@ public interface AttachmentItemDataAccessor extends IAttachment {
     @Nonnull
     default Identifier getAttachmentId(ItemStack attachmentStack) {
         CompoundTag nbt = ItemDataAccessor.get(attachmentStack);
+        if (com.tacz.guns.util.datafixer.AttachmentIdFix.updateAttachmentIdInTag(nbt)) {
+            ItemDataAccessor.set(attachmentStack, nbt);
+        }
         return getAttachmentIdFromTag(nbt);
     }
 

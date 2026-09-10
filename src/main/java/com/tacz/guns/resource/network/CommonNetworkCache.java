@@ -31,6 +31,7 @@ import java.util.*;
 public enum CommonNetworkCache implements ICommonResourceProvider {
     INSTANCE;
 
+    private com.google.gson.Gson gson = CommonAssetsManager.GSON;
     public Map<Identifier, GunData> gunData = new HashMap<>();
     public Map<Identifier, AttachmentData> attachmentData = new HashMap<>();
     public Map<Identifier, RecipeFilter> recipeFilter = new HashMap<>();
@@ -123,6 +124,7 @@ public enum CommonNetworkCache implements ICommonResourceProvider {
     }
 
     public void clear() {
+        gson = CommonAssetsManager.GSON;
         gunData.clear();
         attachmentData.clear();
         gunIndex.clear();
@@ -138,7 +140,12 @@ public enum CommonNetworkCache implements ICommonResourceProvider {
     }
 
     public void fromNetwork(Map<DataType, Map<Identifier, String>> cache) {
+        fromNetwork(cache, net.minecraft.core.RegistryAccess.fromRegistryOfRegistries(net.minecraft.core.registries.BuiltInRegistries.REGISTRY));
+    }
+
+    public void fromNetwork(Map<DataType, Map<Identifier, String>> cache, net.minecraft.core.HolderLookup.Provider registries) {
         clear();
+        gson = CommonAssetsManager.registryGson(registries.createSerializationContext(com.mojang.serialization.JsonOps.INSTANCE));
         // 延后处理
         Map<DataType, Map<Identifier, String>> delayed = new HashMap<>();
         for (Map.Entry<DataType, Map<Identifier, String>> entry : cache.entrySet()) {
@@ -158,7 +165,7 @@ public enum CommonNetworkCache implements ICommonResourceProvider {
     }
 
     private <T> T parse(String json, Class<T> dataClass) {
-        return CommonAssetsManager.GSON.fromJson(json, dataClass);
+        return gson.fromJson(json, dataClass);
     }
 
     private AttachmentData parseAttachmentData(String json) {

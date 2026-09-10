@@ -84,6 +84,10 @@ public class CommonAssetsManager implements ICommonResourceProvider {
     List<LuaLibrary> libList = List.of(new LuaGunLogicConstant());
     private final ScriptManager scriptManager = new ScriptManager(new FileToIdConverter("scripts", ".lua"), libList);
 
+    public static Gson registryGson(com.mojang.serialization.DynamicOps<com.google.gson.JsonElement> ops) {
+        return GSON.newBuilder().registerTypeAdapter(TabConfig.class, new TabConfig.Deserializer(ops)).create();
+    }
+
     public void reloadAndRegister(Consumer<PreparableReloadListener> register, com.mojang.serialization.DynamicOps<com.google.gson.JsonElement> ops) {
         // 这里会顺序重载，所以需要把index这种依赖data的放在后面
         gunData = register(new CommonDataManager<>(DataType.GUN_DATA, GunData.class, GSON, "data/guns", "GunDataLoader"));
@@ -92,7 +96,7 @@ public class CommonAssetsManager implements ICommonResourceProvider {
         recipeFilterManager = register(new RecipeFilterManager());
         lootInjectionManager = new LootInjectionManager(ops);
         register.accept(lootInjectionManager);
-        blockData = register(new CommonDataManager<>(DataType.BLOCK_DATA, BlockData.class, GSON, "data/blocks", "BlockDataLoader"));
+        blockData = register(new CommonDataManager<>(DataType.BLOCK_DATA, BlockData.class, registryGson(ops), "data/blocks", "BlockDataLoader"));
         register.accept(scriptManager);
 
         ammoIndex = register(new CommonDataManager<>(DataType.AMMO_INDEX, CommonAmmoIndex.class, GSON, "index/ammo", "AmmoIndexLoader"));

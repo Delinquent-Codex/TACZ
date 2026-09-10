@@ -15,8 +15,8 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
 public class TargetMinecartItem extends Item {
-    public TargetMinecartItem() {
-        super((new Item.Properties()).stacksTo(1));
+    public TargetMinecartItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @NotNull
@@ -29,21 +29,21 @@ public class TargetMinecartItem extends Item {
             return InteractionResult.FAIL;
         } else {
             ItemStack itemstack = context.getItemInHand();
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 RailShape railshape = blockstate.getBlock() instanceof BaseRailBlock baseRailBlock ? baseRailBlock.getRailDirection(blockstate, level, blockpos, null) : RailShape.NORTH_SOUTH;
                 double yOffset = 0;
-                if (railshape.isAscending()) {
+                if (railshape.isSlope()) {
                     yOffset = 0.5;
                 }
                 TargetMinecart targetMinecart = new TargetMinecart(level, (double) blockpos.getX() + 0.5, (double) blockpos.getY() + 0.0625 + yOffset, (double) blockpos.getZ() + 0.5);
-                if (itemstack.hasCustomHoverName()) {
+                if (itemstack.has(net.minecraft.core.component.DataComponents.CUSTOM_NAME)) {
                     targetMinecart.setCustomName(itemstack.getHoverName());
                 }
                 level.addFreshEntity(targetMinecart);
                 level.gameEvent(context.getPlayer(), GameEvent.ENTITY_PLACE, blockpos);
             }
             itemstack.shrink(1);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.CONSUME;
         }
     }
 }

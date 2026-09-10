@@ -55,7 +55,7 @@ public class FlatColorButton extends Button {
             graphics.fillGradient(this.getX(), this.getY() + this.height - 1, this.getX() + this.width, this.getY() + this.height, 0xff_F3EFE0, 0xff_F3EFE0);
         }
         this.renderScrollingString(graphics, font, 2, 0xF3EFE0);
-        this.renderToolTip(graphics, minecraft.screen, mouseX, mouseY);
+        this.renderToolTip(graphics, minecraft.gui.screen(), mouseX, mouseY);
     }
 
     public void setSelect(boolean select) {

@@ -7,12 +7,12 @@ import net.minecraft.world.entity.player.Player;
 @SuppressWarnings("unused")
 public record LuaEntityAccessor(LivingEntity entity) {
     public void sendSystemMessage(Component message) {
-        entity.sendSystemMessage(message);
+        if (entity instanceof Player player) player.sendSystemMessage(message);
     }
 
     public void sendActionBar(Component message) {
         if (entity instanceof Player player) {
-            player.displayClientMessage(message, true);
+            player.sendOverlayMessage(message);
         }
     }
 
@@ -21,7 +21,8 @@ public record LuaEntityAccessor(LivingEntity entity) {
     }
 
     public boolean hurt(float amount) {
-        return entity.hurt(entity.level().damageSources().generic(), amount);
+        return entity.level() instanceof net.minecraft.server.level.ServerLevel level
+                && entity.hurtServer(level, entity.level().damageSources().generic(), amount);
     }
 
     public Component literal(String text) {

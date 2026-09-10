@@ -60,43 +60,8 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
     "line": 18,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 26,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 30,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 34,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 24,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 33,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 40,
     "error": "cannot find symbol"
   },
   {
@@ -965,18 +930,8 @@
     "error": "package MultiBufferSource does not exist"
   },
   {
-    "file": "src/main/java/com/tacz/guns/event/ammo/DestroyGlassBlock.java",
-    "line": 8,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
     "line": 10,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
-    "line": 37,
     "error": "cannot find symbol"
   },
   {
@@ -1030,98 +985,8 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/block/entity/package-info.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/package-info.java",
-    "line": 7,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/package-info.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/package-info.java",
-    "line": 7,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/tooltip/package-info.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/tooltip/package-info.java",
-    "line": 7,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/jei/category/package-info.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/jei/category/package-info.java",
-    "line": 7,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
     "line": 46,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/package-info.java",
-    "line": 2,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/package-info.java",
-    "line": 3,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/package-info.java",
-    "line": 2,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/package-info.java",
-    "line": 3,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/tooltip/package-info.java",
-    "line": 2,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/tooltip/package-info.java",
-    "line": 3,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/jei/category/package-info.java",
-    "line": 2,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/jei/category/package-info.java",
-    "line": 3,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java",
-    "line": 76,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java",
-    "line": 76,
     "error": "cannot find symbol"
   },
   {
@@ -1285,16 +1150,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 453,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 454,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
     "line": 86,
     "error": "EntityKineticBullet is not abstract and does not override abstract method defineSynchedData(Builder) in Entity"
@@ -1440,18 +1295,8 @@
     "error": "method does not override or implement a method from a supertype"
   },
   {
-    "file": "src/main/java/com/tacz/guns/api/item/IAnimationItem.java",
-    "line": 18,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/resource/index/ClientAmmoIndex.java",
     "line": 231,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/resource/pojo/data/block/TabConfig.java",
-    "line": 70,
     "error": "cannot find symbol"
   },
   {
@@ -1780,446 +1625,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/api/util/LuaEntityAccessor.java",
-    "line": 10,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/api/util/LuaEntityAccessor.java",
-    "line": 15,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/api/util/LuaEntityAccessor.java",
-    "line": 24,
-    "error": "incompatible types: void cannot be converted to boolean"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 41,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 43,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 48,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 70,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 82,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 93,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "line": 103,
-    "error": "method getCloneItemStack in class BlockBehaviour cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 27,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 61,
-    "error": "incompatible types: BlockPos cannot be converted to Vec3"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 75,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 77,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 78,
-    "error": "method contains in class CompoundTag cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 79,
-    "error": "incompatible types: Optional<String> cannot be converted to String"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 85,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 87,
-    "error": "incompatible types: CompoundTag cannot be converted to ValueOutput"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 93,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "line": 95,
-    "error": "no suitable method found for saveWithoutMetadata(no arguments)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 31,
-    "error": "StatueBlock is not abstract and does not override abstract method codec() in BaseEntityBlock"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 60,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 102,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 105,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 110,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 126,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 133,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 139,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 147,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/StatueBlock.java",
-    "line": 149,
-    "error": "incompatible types: Level cannot be converted to ServerLevel"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 23,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 38,
-    "error": "random has protected access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 39,
-    "error": "random has protected access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 40,
-    "error": "random has protected access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 73,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 75,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 76,
-    "error": "method contains in class CompoundTag cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 77,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 81,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 83,
-    "error": "incompatible types: CompoundTag cannot be converted to ValueOutput"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 84,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 87,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 89,
-    "error": "method getUpdateTag in class BlockEntity cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 90,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/StatueBlockEntity.java",
-    "line": 96,
-    "error": "incompatible types: BlockPos cannot be converted to Vec3"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 38,
-    "error": "TargetBlock is not abstract and does not override abstract method codec() in BaseEntityBlock"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 131,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 138,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 179,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 182,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 184,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 196,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 201,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 203,
-    "error": "method getCloneItemStack in class BlockBehaviour cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/TargetBlock.java",
-    "line": 237,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 33,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 65,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 71,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 73,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 74,
-    "error": "method contains in class CompoundTag cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 75,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 77,
-    "error": "method contains in class CompoundTag cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 78,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 82,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 84,
-    "error": "incompatible types: CompoundTag cannot be converted to ValueOutput"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 86,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 89,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 113,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 115,
-    "error": "no suitable method found for saveWithoutMetadata(no arguments)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 128,
-    "error": "incompatible types: BlockPos cannot be converted to Vec3"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/entity/TargetBlockEntity.java",
-    "line": 146,
-    "error": "random has protected access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockA.java",
-    "line": 11,
-    "error": "GunSmithTableBlockA is not abstract and does not override abstract method codec() in BaseEntityBlock"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 24,
-    "error": "GunSmithTableBlockB is not abstract and does not override abstract method codec() in BaseEntityBlock"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 57,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 60,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 66,
-    "error": "playerWillDestroy(Level,BlockPos,BlockState,Player) in GunSmithTableBlockB cannot override playerWillDestroy(Level,BlockPos,BlockState,Player) in Block"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 65,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 68,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 82,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java",
-    "line": 87,
-    "error": "method updateShape in class BlockBehaviour cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 24,
-    "error": "GunSmithTableBlockC is not abstract and does not override abstract method codec() in BaseEntityBlock"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 54,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 57,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 62,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 79,
-    "error": "playerWillDestroy(Level,BlockPos,BlockState,Player) in GunSmithTableBlockC cannot override playerWillDestroy(Level,BlockPos,BlockState,Player) in Block"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 78,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "line": 81,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/screen/RefitTransform.java",
-    "line": 78,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java",
     "line": 72,
     "error": "cannot find symbol"
@@ -2315,19 +1720,9 @@
     "error": "ClickEvent is abstract; cannot be instantiated"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java",
-    "line": 17,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
     "line": 48,
     "error": "package VanillaGuiOverlay does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 115,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
@@ -2411,23 +1806,8 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
-    "line": 46,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
     "line": 51,
     "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
-    "line": 64,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
-    "line": 60,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
@@ -2438,11 +1818,6 @@
     "file": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
     "line": 42,
     "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
-    "line": 58,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/gui/components/GunPackList.java",
@@ -2628,16 +2003,6 @@
     "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
     "line": 341,
     "error": "no suitable constructor found for ImageButton(int,int,int,int,int,int,int,Identifier,(b)->{ if [...]} } })"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 366,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 362,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
@@ -3000,11 +2365,6 @@
     "error": "method does not override or implement a method from a supertype"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java",
-    "line": 35,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
     "line": 112,
     "error": "method does not override or implement a method from a supertype"
@@ -3185,11 +2545,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/util/InputExtraCheck.java",
-    "line": 16,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/input/AimKey.java",
     "line": 26,
     "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
@@ -3223,11 +2578,6 @@
     "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
     "line": 48,
     "error": "HoverEvent is abstract; cannot be instantiated"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
-    "line": 53,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/input/CrawlKey.java",
@@ -3303,21 +2653,6 @@
     "file": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
     "line": 32,
     "error": "no suitable method found for matches(int,int)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
-    "line": 38,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
-    "line": 43,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
-    "line": 45,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/input/ReloadKey.java",
@@ -4520,26 +3855,6 @@
     "error": "method does not override or implement a method from a supertype"
   },
   {
-    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java",
-    "line": 58,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java",
-    "line": 515,
-    "error": "no suitable method found for knockback(float,float,float)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java",
-    "line": 522,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunItem.java",
-    "line": 534,
-    "error": "incompatible types: MobEffect cannot be converted to Holder<MobEffect>"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/tooltip/ClientGunTooltip.java",
     "line": 44,
     "error": "ClientGunTooltip is not abstract and does not override abstract method getHeight(Font) in ClientTooltipComponent"
@@ -4558,36 +3873,6 @@
     "file": "src/main/java/com/tacz/guns/client/tooltip/ClientGunTooltip.java",
     "line": 316,
     "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/GunTooltipPart.java",
-    "line": 22,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/GunTooltipPart.java",
-    "line": 23,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/GunTooltipPart.java",
-    "line": 24,
-    "error": "incompatible types: Optional<Integer> cannot be converted to int"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/GunTooltipPart.java",
-    "line": 30,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java",
-    "line": 883,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java",
-    "line": 884,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/command/RootCommand.java",
@@ -4735,6 +4020,11 @@
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java",
+    "line": 7,
+    "error": "constructor ModernKineticGunItem in class ModernKineticGunItem cannot be applied to given types;"
+  },
+  {
     "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
     "line": 46,
     "error": "cannot find symbol"
@@ -4791,22 +4081,12 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/item/AmmoItem.java",
-    "line": 40,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoItem.java",
     "line": 79,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/item/AmmoItem.java",
     "line": 78,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoItem.java",
-    "line": 89,
     "error": "method does not override or implement a method from a supertype"
   },
   {
@@ -4820,11 +4100,6 @@
     "error": "method does not override or implement a method from a supertype"
   },
   {
-    "file": "src/main/java/com/tacz/guns/item/AttachmentItem.java",
-    "line": 102,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java",
     "line": 14,
     "error": "cannot access MultiBufferSource$BufferSource"
@@ -4832,11 +4107,6 @@
   {
     "file": "src/main/java/com/tacz/guns/compat/oculus/newly/OculusCompatNewly.java",
     "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java",
-    "line": 25,
     "error": "cannot find symbol"
   },
   {
@@ -4883,31 +4153,6 @@
     "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "line": 215,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/config/PreLoadConfig.java",
-    "line": 28,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/config/PreLoadConfig.java",
-    "line": 30,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/config/PreLoadConfig.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/config/util/InteractKeyConfigRead.java",
-    "line": 65,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/config/util/InteractKeyConfigRead.java",
-    "line": 72,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java",
@@ -4970,16 +4215,6 @@
     "error": "no suitable method found for removeModifier(UUID)"
   },
   {
-    "file": "src/main/java/com/tacz/guns/event/ammo/DestroyGlassBlock.java",
-    "line": 27,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/event/PlayerRespawnEvent.java",
-    "line": 19,
-    "error": "items has private access in Inventory"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
     "line": 38,
     "error": "cannot find symbol"
@@ -4988,51 +4223,6 @@
     "file": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
     "line": 37,
     "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
-    "line": 93,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
-    "line": 94,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
-    "line": 94,
-    "error": "incompatible types: bad type in conditional expression"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/AmmoBoxItem.java",
-    "line": 276,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java",
-    "line": 32,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java",
-    "line": 35,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java",
-    "line": 39,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java",
-    "line": 46,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/item/TargetMinecartItem.java",
-    "line": 46,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/mixin/client/ar/ARCompatMixinPlugin.java",
@@ -5063,21 +4253,6 @@
     "file": "src/main/java/com/tacz/guns/mixin/client/PlayerModelMixin.java",
     "line": 45,
     "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java",
-    "line": 37,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/sound/SoundManager.java",
-    "line": 106,
-    "error": "constructor ChunkPos in record ChunkPos cannot be applied to given types;"
   },
   {
     "file": "src/main/java/com/tacz/guns/util/block/BlockRayTrace.java",

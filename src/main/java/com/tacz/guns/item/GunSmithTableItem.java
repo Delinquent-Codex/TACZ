@@ -26,8 +26,8 @@ import java.util.Optional;
 import java.util.function.Consumer;
 
 public class GunSmithTableItem extends BlockItem implements BlockItemDataAccessor {
-    public GunSmithTableItem(Block block) {
-        super(block, (new Item.Properties()).stacksTo(1));
+    public GunSmithTableItem(Block block, Properties properties) {
+        super(block, properties.stacksTo(1));
     }
 
     @Override
