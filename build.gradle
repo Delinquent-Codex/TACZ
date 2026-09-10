@@ -116,6 +116,11 @@ sourceSets {
         java.include 'com/tacz/guns/porting/LuaChecks.java'
         java.include 'com/tacz/guns/porting/StoredDataChecks.java'
         java.include 'com/tacz/guns/porting/DyeChecks.java'
+        java.include 'com/tacz/guns/porting/ProjectileDataChecks.java'
+        java.include 'com/tacz/guns/porting/ExplosionChecks.java'
+        java.include 'com/tacz/guns/util/block/ExplosionExposure.java'
+        java.include 'com/tacz/guns/entity/BulletSpawnData.java'
+        java.include 'com/tacz/guns/entity/TracerData.java'
         java.include 'com/tacz/guns/api/item/nbt/StoredItemData.java'
         java.include 'com/tacz/guns/item/GunTooltipPart.java'
         java.include 'com/tacz/guns/api/util/LegacyProfileData.java'
@@ -228,5 +233,23 @@ tasks.register('verifyPortingDye', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.DyeChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingProjectileData', JavaExec) {
+    group = 'verification'
+    description = 'Checks projectile spawn wire layout and tracer overrides; no live entity or rendering.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ProjectileDataChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingExplosions', JavaExec) {
+    group = 'verification'
+    description = 'Checks TACZ explosion cover samples and falloff; no live world or damage.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ExplosionChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

@@ -62,11 +62,14 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.entity.PartEntity;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.LogicalSide;
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.common.ForgeHooks;
+import net.minecraft.server.level.ServerEntity;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.syncher.SynchedEntityData;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
@@ -84,7 +87,7 @@ import static com.tacz.guns.api.event.common.GunDamageSourcePart.NON_ARMOR_PIERC
  * 动能武器打出的子弹实体。
  */
 public class EntityKineticBullet extends Projectile implements IEntityAdditionalSpawnData {
-    public static final EntityType<EntityKineticBullet> TYPE = EntityType.Builder.<EntityKineticBullet>of(EntityKineticBullet::new, MobCategory.MISC).noSummon().noSave().fireImmune().sized(0.0625F, 0.0625F).clientTrackingRange(5).updateInterval(5).setShouldReceiveVelocityUpdates(false).build("bullet");
+    public static final EntityType<EntityKineticBullet> TYPE = EntityType.Builder.<EntityKineticBullet>of(EntityKineticBullet::new, MobCategory.MISC).noSummon().noSave().fireImmune().sized(0.0625F, 0.0625F).clientTrackingRange(5).updateInterval(5).setShouldReceiveVelocityUpdates(false).build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.parse("tacz:bullet")));
     public static final TagKey<EntityType<?>> USE_MAGIC_DAMAGE_ON = TagKey.create(Registries.ENTITY_TYPE, Identifier.parse("tacz:use_magic_damage_on"));
     public static final TagKey<EntityType<?>> USE_VOID_DAMAGE_ON = TagKey.create(Registries.ENTITY_TYPE, Identifier.parse("tacz:use_void_damage_on"));
     public static final TagKey<EntityType<?>> PRETEND_MELEE_DAMAGE_ON = TagKey.create(Registries.ENTITY_TYPE, Identifier.parse("tacz:pretend_melee_damage_on"));
@@ -100,13 +103,13 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
      *     bullet.getPersistentData().putIntArray(TRACER_COLOR_OVERRIDER_KEY, new int[]{255, 255, 255, 255});
      * }</pre>
      */
-    public static final String TRACER_COLOR_OVERRIDER_KEY = GunMod.MOD_ID + ":tracer_override";
+    public static final String TRACER_COLOR_OVERRIDER_KEY = TracerData.COLOR_KEY;
 
     /**
      * 这个字段的值的类型是 float。
      * 1 表示默认大小，0 表示 0 倍率粗细（不显示了）
      */
-    public static final String TRACER_SIZE_OVERRIDER_KEY = GunMod.MOD_ID + ":tracer_size";
+    public static final String TRACER_SIZE_OVERRIDER_KEY = TracerData.SIZE_KEY;
 
     private static final ExplosionData DEFAULT_EXPLOSION_DATA = new ExplosionData(false, 0, 0, false, 30, false);
 
@@ -235,8 +238,11 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
     }
 
     @Override
-    protected void defineSynchedData() {
+    protected void defineSynchedData(SynchedEntityData.Builder data) {
     }
+
+    @OnlyIn(Dist.CLIENT)
+    private void spawnTrailParticles() { AmmoParticleSpawner.addParticle(this); }
 
     @Override
     public void tick() {
@@ -244,8 +250,8 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
         // 调用 TaC 子弹服务器事件
         this.onBulletTick();
         // 粒子效果
-        if (this.level().isClientSide) {
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> AmmoParticleSpawner.addParticle(this));
+        if (this.level().isClientSide()) {
+            spawnTrailParticles();
         }
         // 子弹模型的旋转与抛物线
         Vec3 movement = this.getDeltaMovement();
@@ -427,7 +433,7 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
         }
         // 点燃
         if (this.igniteEntity && AmmoConfig.IGNITE_ENTITY.get()) {
-            entity.setSecondsOnFire(this.igniteEntityTime);
+            entity.igniteForSeconds(this.igniteEntityTime);
             // 给予粒子效果
             if (this.level() instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(ParticleTypes.LAVA, entity.getX(), entity.getY() + entity.getEyeHeight(), entity.getZ(), 1, 0, 0, 0, 0);
@@ -444,9 +450,11 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
             KnockBackModifier modifier = KnockBackModifier.fromLivingEntity(livingCore);
             modifier.setKnockBackStrength(this.knockback);
             // 创建伤害
-            tacAttackEntity(parts, damage, sources);
-            // 恢复原位
-            modifier.resetKnockBackStrength();
+            try {
+                tacAttackEntity(parts, damage, sources);
+            } finally {
+                modifier.resetKnockBackStrength();
+            }
         } else {
             // 创建伤害
             tacAttackEntity(parts, damage, sources);
@@ -460,7 +468,7 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
         // 只对 LivingEntity 执行击杀判定
         if (parts.core() instanceof LivingEntity livingCore) {
             // 事件同步，从服务端到客户端
-            if (!level().isClientSide) {
+            if (!level().isClientSide()) {
                 int attackerId = attacker == null ? 0 : attacker.getId();
                 // 如果生物死了
                 if (livingCore.isDeadOrDying()) {
@@ -558,11 +566,11 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
     private Pair<DamageSource, DamageSource> createDamageSources(MaybeMultipartEntity parts) {
         DamageSource source1, source2;
         var hitPartType = parts.hitPart().getType();
-        var directCause = hitPartType.is(PRETEND_MELEE_DAMAGE_ON) ? this.getOwner() : this;
+        var directCause = hitPartType.builtInRegistryHolder().is(PRETEND_MELEE_DAMAGE_ON) ? this.getOwner() : this;
         // 给末影人造成伤害
-        if (hitPartType.is(USE_MAGIC_DAMAGE_ON)) {
+        if (hitPartType.builtInRegistryHolder().is(USE_MAGIC_DAMAGE_ON)) {
             source1 = source2 = this.damageSources().indirectMagic(this, getOwner());
-        } else if (hitPartType.is(USE_VOID_DAMAGE_ON)) {
+        } else if (hitPartType.builtInRegistryHolder().is(USE_VOID_DAMAGE_ON)) {
             source1 = ModDamageTypes.Sources.bulletVoid(this.level().registryAccess(), directCause, this.getOwner(), false);
             source2 = ModDamageTypes.Sources.bulletVoid(this.level().registryAccess(), directCause, this.getOwner(), true);
         } else {
@@ -589,58 +597,40 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
+    public Packet<ClientGamePacketListener> getAddEntityPacket(ServerEntity serverEntity) {
+        return ForgeHooks.getEntitySpawnPacket(this);
     }
 
     @Override
     public void writeSpawnData(FriendlyByteBuf buffer) {
-        buffer.writeFloat(getXRot());
-        buffer.writeFloat(getYRot());
-        buffer.writeDouble(getDeltaMovement().x);
-        buffer.writeDouble(getDeltaMovement().y);
-        buffer.writeDouble(getDeltaMovement().z);
-        Entity entity = getOwner();
-        buffer.writeInt(entity != null ? entity.getId() : 0);
-        buffer.writeIdentifier(ammoId);
-        buffer.writeFloat(this.gravity);
-        buffer.writeBoolean(this.explosion);
-        buffer.writeBoolean(this.igniteEntity);
-        buffer.writeBoolean(this.igniteBlock);
-        buffer.writeFloat(this.explosionRadius);
-        buffer.writeFloat(this.explosionDamage);
-        buffer.writeInt(this.life);
-        buffer.writeFloat(this.speed);
-        buffer.writeFloat(this.friction);
-        buffer.writeInt(this.pierce);
-        buffer.writeBoolean(this.isTracerAmmo);
-        buffer.writeIdentifier(this.gunId);
-        buffer.writeIdentifier(this.gunDisplayId);
+        Entity owner = getOwner();
+        new BulletSpawnData(getXRot(), getYRot(), getDeltaMovement(), owner == null ? 0 : owner.getId(),
+                ammoId, gravity, explosion, igniteEntity, igniteBlock, explosionRadius, explosionDamage,
+                life, speed, friction, pierce, isTracerAmmo, gunId, gunDisplayId).write(buffer);
     }
 
     @Override
-    public void readSpawnData(FriendlyByteBuf additionalData) {
-        setXRot(additionalData.readFloat());
-        setYRot(additionalData.readFloat());
-        setDeltaMovement(additionalData.readDouble(), additionalData.readDouble(), additionalData.readDouble());
-        Entity entity = this.level().getEntity(additionalData.readInt());
-        if (entity != null) {
-            this.setOwner(entity);
-        }
-        this.ammoId = additionalData.readIdentifier();
-        this.gravity = additionalData.readFloat();
-        this.explosion = additionalData.readBoolean();
-        this.igniteEntity = additionalData.readBoolean();
-        this.igniteBlock = additionalData.readBoolean();
-        this.explosionRadius = additionalData.readFloat();
-        this.explosionDamage = additionalData.readFloat();
-        this.life = additionalData.readInt();
-        this.speed = additionalData.readFloat();
-        this.friction = additionalData.readFloat();
-        this.pierce = additionalData.readInt();
-        this.isTracerAmmo = additionalData.readBoolean();
-        this.gunId = additionalData.readIdentifier();
-        this.gunDisplayId = additionalData.readIdentifier();
+    public void readSpawnData(FriendlyByteBuf buffer) {
+        BulletSpawnData data = BulletSpawnData.read(buffer);
+        setXRot(data.pitch());
+        setYRot(data.yaw());
+        setDeltaMovement(data.velocity());
+        Entity owner = level().getEntity(data.ownerId());
+        if (owner != null) setOwner(owner);
+        ammoId = data.ammoId();
+        gravity = data.gravity();
+        explosion = data.explosion();
+        igniteEntity = data.igniteEntity();
+        igniteBlock = data.igniteBlock();
+        explosionRadius = data.explosionRadius();
+        explosionDamage = data.explosionDamage();
+        life = data.life();
+        speed = data.speed();
+        friction = data.friction();
+        pierce = data.pierce();
+        isTracerAmmo = data.tracer();
+        gunId = data.gunId();
+        gunDisplayId = data.gunDisplayId();
     }
 
     public Identifier getAmmoId() {
@@ -688,45 +678,11 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
     }
 
     public Optional<float[]> getTracerColorOverride() {
-        var pd = getPersistentData();
-        if (!pd.contains(TRACER_COLOR_OVERRIDER_KEY, Tag.TAG_INT_ARRAY)) {
-            return Optional.empty();
-        } else {
-            var ints = pd.getIntArray(TRACER_COLOR_OVERRIDER_KEY);
-            // 请避免使用 1 或者 2 个值的数组。
-            // 此处 1~2 个值的分支仅为优雅地处理异常情况来代替崩溃所作的措施 :(
-            switch (ints.length) {
-                case 0:
-                    return Optional.empty();
-                case 1: {
-                    var albedo = ints[0] / 255F;
-                    return Optional.of(new float[]{albedo, albedo, albedo, 1});
-                }
-                case 2: {
-                    var albedo = ints[0] / 255F;
-                    var alpha = ints[1] / 255F;
-                    return Optional.of(new float[]{albedo, albedo, albedo, alpha});
-                }
-                case 3: {
-                    var r = ints[0] / 255F;
-                    var g = ints[1] / 255F;
-                    var b = ints[2] / 255F;
-                    return Optional.of(new float[]{r, g, b, 1});
-                }
-                default: {
-                    var r = ints[0] / 255F;
-                    var g = ints[1] / 255F;
-                    var b = ints[2] / 255F;
-                    var a = ints[3] / 255F;
-                    return Optional.of(new float[]{r, g, b, a});
-                }
-            }
-        }
+        return TracerData.color(getPersistentData());
     }
 
     public float getTracerSizeOverride() {
-        var pd = getPersistentData();
-        return pd.contains(TRACER_SIZE_OVERRIDER_KEY, Tag.TAG_ANY_NUMERIC) ? pd.getFloat(TRACER_SIZE_OVERRIDER_KEY) : 1;
+        return TracerData.size(getPersistentData());
     }
 
     @Override

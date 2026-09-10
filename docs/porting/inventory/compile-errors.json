@@ -30,11 +30,6 @@
     "error": "type MinecartRenderer does not take parameters"
   },
   {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 30,
-    "error": "no interface expected here"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java",
     "line": 9,
     "error": "cannot find symbol"
@@ -42,16 +37,6 @@
   {
     "file": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPart.java",
     "line": 8,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 67,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 69,
     "error": "cannot find symbol"
   },
   {
@@ -585,23 +570,8 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 34,
-    "error": "package net.minecraft.world.entity.vehicle.AbstractMinecart does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 34,
-    "error": "static import only from classes and interfaces"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
     "line": 48,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 146,
     "error": "cannot find symbol"
   },
   {
@@ -835,16 +805,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/command/sub/ConvertCommand.java",
-    "line": 10,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/command/sub/ReloadCommand.java",
-    "line": 12,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java",
     "line": 10,
     "error": "cannot find symbol"
@@ -968,11 +928,6 @@
     "file": "src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java",
     "line": 34,
     "error": "package MultiBufferSource does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 13,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
@@ -1148,141 +1103,6 @@
     "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
     "line": 340,
     "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 86,
-    "error": "EntityKineticBullet is not abstract and does not override abstract method defineSynchedData(Builder) in Entity"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 87,
-    "error": "incompatible types: String cannot be converted to ResourceKey<EntityType<?>>"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 237,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 247,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 248,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 430,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 463,
-    "error": "isClientSide has private access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 561,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 563,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 565,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 591,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 593,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 692,
-    "error": "method contains in class CompoundTag cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 698,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 702,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 706,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 707,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 711,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 712,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 713,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 716,
-    "error": "switch has both boolean values and a default label"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 717,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 718,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 719,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 720,
-    "error": "array required, but Optional<int[]> found"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 729,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "line": 729,
-    "error": "incompatible types: bad type in conditional expression"
   },
   {
     "file": "src/main/java/com/tacz/guns/api/item/gun/AbstractGunItem.java",
@@ -2540,11 +2360,6 @@
     "error": "method register in class BlockEntityRenderers cannot be applied to given types;"
   },
   {
-    "file": "src/main/java/com/tacz/guns/util/InputExtraCheck.java",
-    "line": 12,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/input/AimKey.java",
     "line": 26,
     "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
@@ -3520,86 +3335,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 40,
-    "error": "incompatible types: String cannot be converted to ResourceKey<EntityType<?>>"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 57,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 67,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 72,
-    "error": "random has protected access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 83,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 85,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 88,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 103,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 106,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 106,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 109,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 111,
-    "error": "no suitable method found for spawnAtLocation(ItemStack)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 124,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 133,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 145,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "line": 147,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java",
     "line": 59,
     "error": "method does not override or implement a method from a supertype"
@@ -3875,26 +3610,6 @@
     "error": "method does not override or implement a method from a supertype"
   },
   {
-    "file": "src/main/java/com/tacz/guns/command/RootCommand.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/command/sub/ConvertCommand.java",
-    "line": 22,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/command/sub/ReloadCommand.java",
-    "line": 29,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/command/sub/ReloadCommand.java",
-    "line": 30,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/ar/AcceleratedBeamRenderer.java",
     "line": 22,
     "error": "cannot find symbol"
@@ -4155,66 +3870,6 @@
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java",
-    "line": 77,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java",
-    "line": 78,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 42,
-    "error": "incompatible types: UUID cannot be converted to Identifier"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 43,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 44,
-    "error": "no suitable method found for removeModifier(UUID)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 46,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 53,
-    "error": "incompatible types: UUID cannot be converted to Identifier"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 54,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 55,
-    "error": "no suitable method found for removeModifier(UUID)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 57,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 62,
-    "error": "no suitable method found for removeModifier(UUID)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
-    "line": 63,
-    "error": "no suitable method found for removeModifier(UUID)"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
     "line": 38,
     "error": "cannot find symbol"
@@ -4252,96 +3907,6 @@
   {
     "file": "src/main/java/com/tacz/guns/mixin/client/PlayerModelMixin.java",
     "line": 45,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/BlockRayTrace.java",
-    "line": 44,
-    "error": "no suitable method found for getNearest(double,double,double)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 57,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 74,
-    "error": "random has protected access in Level"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 87,
-    "error": "incompatible types: ProjectileExplosion cannot be converted to Explosion"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 92,
-    "error": "incompatible types: ProjectileExplosion cannot be converted to Explosion"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 105,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 115,
-    "error": "method onExplosionDetonate in class ForgeEventFactory cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 119,
-    "error": "method ignoreExplosion in class Entity cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 158,
-    "error": "reference to ClipContext is ambiguous"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 180,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 183,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
-    "line": 192,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ExplodeUtil.java",
-    "line": 27,
-    "error": "incompatible types: ProjectileExplosion cannot be converted to Explosion"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ExplodeUtil.java",
-    "line": 32,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ExplodeUtil.java",
-    "line": 34,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ExplodeUtil.java",
-    "line": 38,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ExplodeUtil.java",
-    "line": 38,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/HitboxHelper.java",
-    "line": 88,
     "error": "cannot find symbol"
   },
   {
@@ -4413,15 +3978,5 @@
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
     "line": 77,
     "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ResourceScanner.java",
-    "line": 41,
-    "error": "no suitable method found for fromJson(Gson,Reader,Class<JsonElement>,boolean)"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/ResourceScanner.java",
-    "line": 82,
-    "error": "no suitable method found for fromJson(Gson,Reader,Class<JsonElement>,boolean)"
   }
 ]

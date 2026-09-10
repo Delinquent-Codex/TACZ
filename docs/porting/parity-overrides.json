@@ -866,12 +866,12 @@
   },
   "source:src/main/java/com/tacz/guns/entity/EntityKineticBullet.java": {
     "implementation": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/entity/TargetMinecart.java": {
     "implementation": "src/main/java/com/tacz/guns/entity/TargetMinecart.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityAim.java": {
@@ -911,7 +911,7 @@
   },
   "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java": {
     "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/entity/sync/ModSerializers.java": {
@@ -1521,7 +1521,7 @@
   },
   "source:src/main/java/com/tacz/guns/util/ResourceScanner.java": {
     "implementation": "src/main/java/com/tacz/guns/util/ResourceScanner.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/TacPathVisitor.java": {
@@ -1531,7 +1531,7 @@
   },
   "source:src/main/java/com/tacz/guns/util/block/BlockRayTrace.java": {
     "implementation": "src/main/java/com/tacz/guns/util/block/BlockRayTrace.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/datafixer/AttachmentIdFix.java": {
@@ -2611,7 +2611,42 @@
   },
   "source:src/main/java/com/tacz/guns/util/InputExtraCheck.java": {
     "implementation": "src/main/java/com/tacz/guns/util/InputExtraCheck.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/command/RootCommand.java": {
+    "implementation": "src/main/java/com/tacz/guns/command/RootCommand.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/command/sub/ConvertCommand.java": {
+    "implementation": "src/main/java/com/tacz/guns/command/sub/ConvertCommand.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/command/sub/ReloadCommand.java": {
+    "implementation": "src/main/java/com/tacz/guns/command/sub/ReloadCommand.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java": {
+    "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntitySpeedModifier.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/ExplodeUtil.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/ExplodeUtil.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/HitboxHelper.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/HitboxHelper.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java": {
+    "implementation": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
+    "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
     "status": "in progress"
   }
 }

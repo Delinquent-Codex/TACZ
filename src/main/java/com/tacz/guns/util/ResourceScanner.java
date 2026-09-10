@@ -38,7 +38,7 @@ public class ResourceScanner {
             Identifier resourcelocation1 = filetoidconverter.fileToId(resourcelocation);
 
             try (Reader reader = entry.getValue().openAsReader()) {
-                JsonElement jsonelement = GsonHelper.fromJson(pGson, reader, JsonElement.class, true);
+                JsonElement jsonelement = pGson.fromJson(reader, JsonElement.class);
                 JsonElement jsonelement1 = output.put(resourcelocation1, jsonelement);
                 if (jsonelement1 != null) {
                     throw new IllegalStateException("Duplicate data file ignored with ID " + resourcelocation1);
@@ -79,7 +79,7 @@ public class ResourceScanner {
 
             for (Resource resource : entry.getValue()) {
                 try (Reader reader = resource.openAsReader()) {
-                    JsonElement jsonelement = GsonHelper.fromJson(pGson, reader, JsonElement.class, true);
+                    JsonElement jsonelement = pGson.fromJson(reader, JsonElement.class);
                     List<JsonElement> list = output.computeIfAbsent(resourcelocation1, k -> Lists.newArrayList());
                     list.add(jsonelement);
                 } catch (IllegalArgumentException | IOException | JsonParseException jsonparseexception) {

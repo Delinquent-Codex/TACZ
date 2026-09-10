@@ -7,7 +7,8 @@ import com.tacz.guns.resource.PackConvertor;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.loading.FMLLoader;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ConvertCommand {
     private static final String CONVERT_NAME = "convert";
@@ -18,8 +19,11 @@ public class ConvertCommand {
         return reload;
     }
 
+    @OnlyIn(Dist.CLIENT)
+    private static void convertClient(CommandSourceStack source) { PackConvertor.convert(source); }
+
     private static int convert(CommandContext<CommandSourceStack> context) {
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> PackConvertor.convert(context.getSource()));
+        if (FMLLoader.getDist().isClient()) convertClient(context.getSource());
         return Command.SINGLE_SUCCESS;
     }
 }

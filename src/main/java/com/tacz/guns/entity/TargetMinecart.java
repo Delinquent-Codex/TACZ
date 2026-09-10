@@ -10,6 +10,18 @@ import com.tacz.guns.init.ModItems;
 import com.tacz.guns.init.ModSounds;
 import com.tacz.guns.network.NetworkHandler;
 import com.tacz.guns.network.message.event.ServerMessageGunHurt;
+import com.tacz.guns.api.util.LegacyProfileData;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.world.item.component.ResolvableProfile;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.DamageTypeTags;
@@ -31,15 +43,14 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import static net.minecraft.world.entity.vehicle.AbstractMinecart.Type.RIDEABLE;
-
 public class TargetMinecart extends AbstractMinecart implements ITargetEntity {
     public static EntityType<TargetMinecart> TYPE = EntityType.Builder.<TargetMinecart>of(TargetMinecart::new, MobCategory.MISC)
             .sized(0.75F, 2.4F)
             .clientTrackingRange(8)
-            .build("target_minecart");
+            .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.parse("tacz:target_minecart")));
 
-    private @Nullable GameProfile gameProfile = null;
+    private static final ResolvableProfile EMPTY_PROFILE = ResolvableProfile.createUnresolved(net.minecraft.util.Util.NIL_UUID);
+    private static final EntityDataAccessor<ResolvableProfile> DATA_PROFILE = SynchedEntityData.defineId(TargetMinecart.class, EntityDataSerializers.RESOLVABLE_PROFILE);
 
     public TargetMinecart(EntityType<TargetMinecart> type, Level world) {
         super(type, world);
@@ -54,7 +65,7 @@ public class TargetMinecart extends AbstractMinecart implements ITargetEntity {
         if (this.level().isClientSide() || this.isRemoved()) {
             return;
         }
-        if (!(source.isIndirect())) {
+        if (source.isDirect()) {
             return;
         }
         Entity sourceEntity = source.getEntity();
@@ -64,12 +75,12 @@ public class TargetMinecart extends AbstractMinecart implements ITargetEntity {
             this.markHurt();
             this.setDamage(10);
             double dis = this.position().distanceTo(sourceEntity.position());
-            player.displayClientMessage(Component.translatable("message.tacz.target_minecart.hit", String.format("%.1f", damage), String.format("%.2f", dis)), true);
+            player.sendOverlayMessage(Component.translatable("message.tacz.target_minecart.hit", String.format("%.1f", damage), String.format("%.2f", dis)));
             // 原版的声音传播距离由 volume 决定
             // 当声音大于 1 时，距离为 = 16 * volume
             float volume = OtherConfig.TARGET_SOUND_DISTANCE.get() / 16.0f;
             volume = Math.max(volume, 0);
-            level().playSound(null, this, ModSounds.TARGET_HIT.get(), SoundSource.BLOCKS, volume, this.level().random.nextFloat() * 0.1F + 0.9F);
+            level().playSound(null, this, ModSounds.TARGET_HIT.get(), SoundSource.BLOCKS, volume, this.level().getRandom().nextFloat() * 0.1F + 0.9F);
 
             if (entity instanceof EntityKineticBullet projectile) {
                 boolean isHeadshot = false;
@@ -81,12 +92,12 @@ public class TargetMinecart extends AbstractMinecart implements ITargetEntity {
     }
 
     @Override
-    public boolean isInvulnerableTo(DamageSource source) {
-        return source.is(DamageTypeTags.IS_EXPLOSION) || super.isInvulnerableTo(source);
+    public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
+        return !source.is(DamageTypeTags.IS_EXPLOSION) && super.hurtServer(level, source, amount);
     }
 
     @Override
-    public boolean canBeRidden() {
+    public boolean isRideable() {
         return false;
     }
 
@@ -101,14 +112,14 @@ public class TargetMinecart extends AbstractMinecart implements ITargetEntity {
     }
 
     @Override
-    public void destroy(DamageSource source) {
+    public void destroy(ServerLevel level, DamageSource source) {
         this.remove(Entity.RemovalReason.KILLED);
-        if (this.level().getGameRules().getBoolean(GameRules.RULE_DOENTITYDROPS)) {
+        if (level.getGameRules().get(GameRules.ENTITY_DROPS)) {
             ItemStack itemStack = new ItemStack(ModItems.TARGET_MINECART.get());
             if (this.hasCustomName()) {
-                itemStack.setHoverName(this.getCustomName());
+                itemStack.set(DataComponents.CUSTOM_NAME, this.getCustomName());
             }
-            this.spawnAtLocation(itemStack);
+            this.spawnAtLocation(level, itemStack);
         }
     }
 
@@ -121,30 +132,68 @@ public class TargetMinecart extends AbstractMinecart implements ITargetEntity {
     public ItemStack getPickResult() {
         ItemStack itemStack = new ItemStack(ModItems.TARGET_MINECART.get());
         if (this.hasCustomName()) {
-            itemStack.setHoverName(this.getCustomName());
+            itemStack.set(DataComponents.CUSTOM_NAME, this.getCustomName());
         }
         return itemStack;
     }
 
     @Nullable
     public GameProfile getGameProfile() {
-        if (this.gameProfile == null && this.getCustomName() != null) {
-            this.gameProfile = new GameProfile(null, this.getCustomName().getString());
-            SkullBlockEntity.updateGameprofile(this.gameProfile, gameProfile -> this.gameProfile = gameProfile);
+        return validProfileName() ? entityData.get(DATA_PROFILE).partialProfile() : null;
+    }
+
+    public @Nullable ResolvableProfile getOwnerProfile() {
+        return validProfileName() ? entityData.get(DATA_PROFILE) : null;
+    }
+
+    private boolean validProfileName() {
+        return getCustomName() != null && net.minecraft.util.StringUtil.isValidPlayerName(getCustomName().getString());
+    }
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder data) {
+        super.defineSynchedData(data);
+        data.define(DATA_PROFILE, EMPTY_PROFILE);
+    }
+
+    @Override
+    public void setCustomName(@Nullable Component name) {
+        super.setCustomName(name);
+        if (level() instanceof ServerLevel serverLevel) {
+            var requested = validProfileName() ? ResolvableProfile.createUnresolved(name.getString()) : EMPTY_PROFILE;
+            entityData.set(DATA_PROFILE, requested);
+            if (requested != EMPTY_PROFILE) {
+                var server = serverLevel.getServer();
+                requested.resolveProfile(server.services().profileResolver()).thenAcceptAsync(profile -> {
+                    if (!isRemoved() && entityData.get(DATA_PROFILE) == requested) {
+                        entityData.set(DATA_PROFILE, LegacyProfileData.withResolvedProfile(requested, profile));
+                    }
+                }, server).exceptionally(error -> {
+                    com.tacz.guns.GunMod.LOGGER.warn("Could not resolve target minecart profile {}", getUUID(), error);
+                    return null;
+                });
+            }
         }
-        return gameProfile;
+    }
+
+    @Override
+    protected void readAdditionalSaveData(ValueInput input) {
+        super.readAdditionalSaveData(input);
+        input.read("TaczProfile", ResolvableProfile.CODEC).filter(profile -> validProfileName()
+                && profile.name().filter(getCustomName().getString()::equals).isPresent())
+                .ifPresent(profile -> entityData.set(DATA_PROFILE, profile));
+    }
+
+    @Override
+    protected void addAdditionalSaveData(ValueOutput output) {
+        super.addAdditionalSaveData(output);
+        if (validProfileName()) output.store("TaczProfile", ResolvableProfile.CODEC, entityData.get(DATA_PROFILE));
     }
 
     @Override
     @NotNull
     public BlockState getDefaultDisplayBlockState() {
         return ModBlocks.TARGET.get().defaultBlockState();
-    }
-
-    @NotNull
-    @Override
-    public Type getMinecartType() {
-        return RIDEABLE;
     }
 
     @Override
