@@ -12,6 +12,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -52,8 +53,8 @@ public class StatueRenderer implements BlockEntityRenderer<StatueBlockEntity> {
                 poseStack.mulPose(Axis.ZN.rotationDegrees(180));
 
                 RenderType renderType = RenderConfig.BLOCK_ENTITY_TRANSLUCENT.get() ?
-                        RenderType.entityTranslucent(getTextureLocation()) :
-                        RenderType.entityCutout(getTextureLocation());
+                        RenderTypes.entityTranslucent(getTextureLocation()) :
+                        RenderTypes.entityCutout(getTextureLocation());
                 model.render(poseStack, ItemDisplayContext.NONE, renderType, combinedLightIn, combinedOverlayIn);
 
                 poseStack.scale(0.5f, 0.5f, 0.5f);

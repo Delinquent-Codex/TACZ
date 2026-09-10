@@ -11,7 +11,8 @@ import com.tacz.guns.client.resource.pojo.PackInfo;
 import com.tacz.guns.resource.index.CommonAmmoIndex;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -73,10 +74,10 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        consumer.accept(new IClientItemExtensions() {
+        consumer.accept(new TaczClientItemExtensions() {
             AmmoItemRenderer renderer;
             @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+            public TaczItemRenderer getCustomRenderer() {
                 if (renderer == null) {
                     Minecraft minecraft = Minecraft.getInstance();
                     renderer = new AmmoItemRenderer(minecraft.getBlockEntityRenderDispatcher(), minecraft.getEntityModels());

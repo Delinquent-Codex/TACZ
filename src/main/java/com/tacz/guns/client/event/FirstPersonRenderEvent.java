@@ -5,7 +5,7 @@ import com.tacz.guns.api.client.animation.statemachine.AnimationStateMachine;
 import com.tacz.guns.api.client.other.KeepingItemRenderer;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer;
-import com.tacz.guns.compat.oculus.OculusCompat;
+import com.tacz.guns.client.renderer.RenderSubmission;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.InteractionHand;
@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderHandEvent;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = GunMod.MOD_ID)
@@ -21,17 +21,14 @@ public class FirstPersonRenderEvent {
     private static AnimationStateMachine<?> lastStateMachine = null;
 
 //    @SubscribeEvent
-    public static void onRenderHand(RenderHandEvent event) {
+    public static boolean onRenderHand(RenderHandEvent event) {
         LocalPlayer player = Minecraft.getInstance().player;
         if (player == null) {
-            return;
+            return false;
         }
         if (event.getHand() == InteractionHand.OFF_HAND) {
             ItemStack stack = KeepingItemRenderer.getRenderer().getCurrentItem();
-            if (stack.getItem() instanceof IGun) {
-                event.setCanceled(true);
-            }
-            return;
+            return stack.getItem() instanceof IGun;
         }
         // 事件事件给的是被延长渲染修改过后的物品，不是玩家实际手持的
         ItemStack stack = event.getItemStack();
@@ -45,7 +42,7 @@ public class FirstPersonRenderEvent {
         }
 
         // 渲染相关内容整理到物品的IClientItemExtensions了，这个接口有待进一步抽象
-        if (IClientItemExtensions.of(stack.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
+        if (TaczClientItemExtensions.getRenderer(stack.getItem()) instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             // 如果旧的状态机已经不再使用且未正常退出，使其静默退出
             AnimationStateMachine<?> machine = renderer.getStateMachine(stack);
             if (machine != lastStateMachine) {
@@ -60,12 +57,12 @@ public class FirstPersonRenderEvent {
                 renderer.tryInit(stack, player, event.getPartialTick());
             }
 
-			// 防止内存泄漏
-			OculusCompat.endBatch(Minecraft.getInstance().renderBuffers().bufferSource());
-
-            renderer.renderFirstPerson(player, stack, transformType, event.getPoseStack(), event.getMultiBufferSource(),
-                    event.getPackedLight(), event.getPartialTick());
-            event.setCanceled(true);
+            try (var submission = RenderSubmission.enter(event.getNodeCollector())) {
+                renderer.renderFirstPerson(player, stack, transformType, event.getPoseStack(), event.getNodeCollector(),
+                        event.getPackedLight(), event.getPartialTick());
+            }
+            return true;
         }
+        return false;
     }
 }

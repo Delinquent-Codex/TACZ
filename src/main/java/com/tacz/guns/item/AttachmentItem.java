@@ -10,7 +10,8 @@ import com.tacz.guns.client.resource.index.ClientAttachmentIndex;
 import com.tacz.guns.inventory.tooltip.AttachmentItemTooltip;
 import com.tacz.guns.resource.index.CommonAttachmentIndex;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -68,10 +69,10 @@ public class AttachmentItem extends Item implements AttachmentItemDataAccessor {
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        consumer.accept(new IClientItemExtensions() {
+        consumer.accept(new TaczClientItemExtensions() {
             AttachmentItemRenderer renderer;
             @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+            public TaczItemRenderer getCustomRenderer() {
                 if (renderer == null) {
                     Minecraft minecraft = Minecraft.getInstance();
                     renderer = new AttachmentItemRenderer(minecraft.getBlockEntityRenderDispatcher(), minecraft.getEntityModels());

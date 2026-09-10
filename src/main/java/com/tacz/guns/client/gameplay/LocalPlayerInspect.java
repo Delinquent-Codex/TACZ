@@ -10,7 +10,7 @@ import com.tacz.guns.resource.pojo.data.gun.Bolt;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 
 public class LocalPlayerInspect {
     private final LocalPlayerDataHolder data;
@@ -26,7 +26,7 @@ public class LocalPlayerInspect {
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (!(mainHandItem.getItem() instanceof IGun iGun)) {
-            if (IClientItemExtensions.of(mainHandItem).getCustomRenderer() instanceof AnimateGeoItemRenderer<?,?> renderer) {
+            if (TaczClientItemExtensions.getRenderer(mainHandItem) instanceof AnimateGeoItemRenderer<?,?> renderer) {
                 renderer.triggerAnimation(mainHandItem, GunAnimationConstant.INPUT_INSPECT);
             }
             return;

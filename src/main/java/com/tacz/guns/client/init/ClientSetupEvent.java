@@ -23,7 +23,6 @@ import com.tacz.guns.inventory.tooltip.BlockItemTooltip;
 import com.tacz.guns.inventory.tooltip.GunTooltip;
 import com.tacz.guns.item.AmmoBoxItem;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
@@ -77,12 +76,8 @@ public class ClientSetupEvent {
         // 注册自己的的硬编码第三人称动画
         event.enqueueWork(ThirdPersonManager::registerDefault);
 
-        // 注册颜色
-        event.enqueueWork(() -> Minecraft.getInstance().getItemColors().register(AmmoBoxItem::getColor, ModItems.AMMO_BOX.get()));
-
-        // 注册变种
-        // noinspection deprecation
-        event.enqueueWork(() -> ItemProperties.register(ModItems.AMMO_BOX.get(), AmmoBoxItem.PROPERTY_NAME, AmmoBoxItem::getStatue));
+        // Ammo-box dye and state selection are declared in assets/tacz/items/ammo_box.json.
+        // ClientItemModels registers the property before the first resource preparation.
 
         // 初始化自己的枪包下载器
 //        event.enqueueWork(ClientGunPackDownloadManager::init);

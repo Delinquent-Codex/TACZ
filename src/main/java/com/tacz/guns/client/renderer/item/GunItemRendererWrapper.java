@@ -24,8 +24,9 @@ import com.tacz.guns.util.RenderDistance;
 import com.tacz.guns.util.math.MathUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
@@ -160,7 +161,7 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
     }
 
     @Override
-    public void renderFirstPerson(LocalPlayer player, ItemStack stack, ItemDisplayContext ctx, PoseStack poseStack, MultiBufferSource bufferSource,
+    public void renderFirstPerson(LocalPlayer player, ItemStack stack, ItemDisplayContext ctx, PoseStack poseStack, SubmitNodeCollector bufferSource,
                                   int light, float partialTick) {
         if (!(stack.getItem() instanceof IGun)) {
             return;
@@ -215,8 +216,8 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
             }
             // 调用枪械模型渲染
             RenderType renderType = display.enablesTransparency()
-                    ? RenderType.entityTranslucent(display.getModelTexture())
-                    : RenderType.entityCutout(display.getModelTexture());
+                    ? RenderTypes.entityTranslucent(display.getModelTexture())
+                    : RenderTypes.entityCutout(display.getModelTexture());
             gunModel.render(poseStack, stack, ctx, renderType, light, OverlayTexture.NO_OVERLAY);
             // 缓存枪口位置，为第一人称曳光弹渲染作准备
             cacheMuzzlePosition(poseStack, gunModel);
@@ -253,7 +254,7 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
 
 
     @Override
-    public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull MultiBufferSource pBuffer,
+    public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull SubmitNodeCollector pBuffer,
                              int pPackedLight, int pPackedOverlay) {
         if (!(stack.getItem() instanceof IGun)) {
             return;
@@ -297,7 +298,7 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
             // 应用 display 数据中的缩放
             applyScaleTransform(transformType, gunIndex.getTransform().getScale(), poseStack);
             // 渲染枪械模型
-            RenderType renderType = RenderType.entityCutout(gunTexture);
+            RenderType renderType = RenderTypes.entityCutout(gunTexture);
             gunModel.render(poseStack, stack, transformType, renderType, pPackedLight, pPackedOverlay);
         }, () -> {
             // 没有这个 gunID，渲染个错误材质提醒别人
@@ -306,11 +307,10 @@ public class GunItemRendererWrapper extends AnimateGeoItemRenderer<BedrockGunMod
         poseStack.popPose();
     }
 
-    private static void renderSlotTexture(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay, Identifier texture) {
+    private static void renderSlotTexture(PoseStack poseStack, SubmitNodeCollector bufferSource, int packedLight, int packedOverlay, Identifier texture) {
         poseStack.translate(0.5, 1.5, 0.5);
         poseStack.mulPose(Axis.ZN.rotationDegrees(180));
-        VertexConsumer buffer = bufferSource.getBuffer(RenderType.entityTranslucent(texture));
-        SLOT_GUN_MODEL.renderToBuffer(poseStack, buffer, packedLight, packedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
+        SLOT_GUN_MODEL.submit(poseStack, bufferSource, RenderTypes.entityTranslucent(texture), packedLight, packedOverlay);
     }
 
     private static void applyPositioningTransform(ItemDisplayContext transformType, TransformScale scale, BedrockGunModel model,

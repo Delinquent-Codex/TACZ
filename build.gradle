@@ -69,6 +69,16 @@ tasks.named('jarJar') { archiveClassifier = '' }
 dependencies {
     implementation minecraft.dependency("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
     annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
+    implementation('com.maydaymemory:mae:1.1.2') {
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        exclude group: 'it.unimi.dsi', module: 'fastutil'
+        exclude group: 'org.joml', module: 'joml'
+    }
+    jarJar('com.maydaymemory:mae:1.1.2') {
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        exclude group: 'it.unimi.dsi', module: 'fastutil'
+        exclude group: 'org.joml', module: 'joml'
+    }
     annotationProcessor 'org.spongepowered:mixin:0.8.7:processor'
     implementation 'org.apache.commons:commons-math3:3.6.1'
     jarJar 'org.apache.commons:commons-math3:3.6.1'
@@ -118,6 +128,23 @@ sourceSets {
         java.include 'com/tacz/guns/porting/DyeChecks.java'
         java.include 'com/tacz/guns/porting/ProjectileDataChecks.java'
         java.include 'com/tacz/guns/porting/ExplosionChecks.java'
+        java.include 'com/tacz/guns/porting/FirstPersonChecks.java'
+        java.include 'com/tacz/guns/porting/GeometryChecks.java'
+        java.include 'com/tacz/guns/porting/ItemModelChecks.java'
+        java.include 'com/tacz/guns/client/renderer/item/TaczItemModel.java'
+        java.include 'com/tacz/guns/api/client/renderer/TaczItemRenderer.java'
+        java.include 'com/tacz/guns/api/client/renderer/TaczClientItemExtensions.java'
+        java.include 'com/tacz/guns/client/renderer/VertexCapture.java'
+        java.include 'com/tacz/guns/client/renderer/RenderSubmission.java'
+        java.include 'com/tacz/guns/client/model/bedrock/BedrockCube.java'
+        java.include 'com/tacz/guns/client/model/bedrock/BedrockCubeBox.java'
+        java.include 'com/tacz/guns/client/model/bedrock/BedrockCubePerFace.java'
+        java.include 'com/tacz/guns/client/model/bedrock/BedrockPolygon.java'
+        java.include 'com/tacz/guns/client/model/bedrock/BedrockVertex.java'
+        java.include 'com/tacz/guns/client/resource/pojo/model/FaceUVsItem.java'
+        java.include 'com/tacz/guns/client/resource/pojo/model/FaceItem.java'
+        java.include 'com/tacz/guns/api/client/animation/IFPAnimationInstance.java'
+        java.include 'com/tacz/guns/client/animation/FirstPersonItemState.java'
         java.include 'com/tacz/guns/util/block/ExplosionExposure.java'
         java.include 'com/tacz/guns/entity/BulletSpawnData.java'
         java.include 'com/tacz/guns/entity/TracerData.java'
@@ -251,5 +278,32 @@ tasks.register('verifyPortingExplosions', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.ExplosionChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingFirstPerson', JavaExec) {
+    group = 'verification'
+    description = 'Checks first-person item switching and the real MAE library; no live rendering.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.FirstPersonChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingGeometry', JavaExec) {
+    group = 'verification'
+    description = 'Checks actual bedrock vertex output and immutable submissions; no GPU rendering.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.GeometryChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingItemModels', JavaExec) {
+    group = 'verification'
+    description = 'Checks target item-model codecs, resource mappings and dye tint; no model bake or rendering.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ItemModelChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

@@ -23,7 +23,7 @@ public class BedrockPolygon {
                 vertices[i - 1 - j] = bedrockVertex;
             }
         }
-        this.normal = direction.step();
+        this.normal = new Vector3f(direction.getUnitVec3f());
         if (mirror) {
             this.normal.mul(-1.0F, 1.0F, 1.0F);
         }

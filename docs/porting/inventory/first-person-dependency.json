@@ -1,0 +1,13 @@
+{
+  "source_jar": "libs/simplebedrockmodel-2.2.2-forge+mc1.20.1-sources.jar",
+  "source_sha256": "4b886dc17e72b780517b74bca2741008ddaca634d242b756f3e698cae57606c9",
+  "upstream_tag_commit": "0a4a4084eca9e5f055d63fdd2fee37e284dcfb63",
+  "used_direct_classes": [
+    "IFPAnimationInstance",
+    "IFPGeoItemRenderer",
+    "FirstPersonRenderHandler"
+  ],
+  "mae_version": "1.1.2",
+  "mae_jar_sha256": "39e6337f1214a9facadc9128d2aca501be36789d376d7fba56f15b2c3a5a27d3",
+  "status": "implementation in progress; runtime and complete rendering unverified"
+}

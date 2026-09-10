@@ -4,9 +4,8 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.tacz.guns.client.model.IFunctionalRenderer;
 import com.tacz.guns.client.resource.pojo.model.*;
-import com.tacz.guns.compat.oculus.OculusCompat;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
+import com.tacz.guns.client.renderer.RenderSubmission;
+import com.tacz.guns.client.renderer.VertexCapture;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.phys.Vec2;
@@ -353,21 +352,19 @@ public class BedrockModel {
     }
 
     public void render(PoseStack matrixStack, ItemDisplayContext transformType, RenderType renderType, int light, int overlay, float red, float green, float blue, float alpha) {
-        MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
-        VertexConsumer builder = bufferSource.getBuffer(renderType);
+        VertexCapture builder = new VertexCapture();
 
         matrixStack.pushPose();
         for (BedrockPart model : shouldRender) {
             model.render(matrixStack, transformType, builder, light, overlay, red, green, blue, alpha);
         }
         matrixStack.popPose();
-        if (!OculusCompat.endBatch(bufferSource)) {
-            bufferSource.endBatch(renderType);
-        }
+        RenderSubmission.submit(renderType, builder.drain());
 
         for (IFunctionalRenderer renderer : delegateRenderers) {
             renderer.render(matrixStack, builder, transformType, light, overlay);
         }
+        RenderSubmission.submit(renderType, builder.drain());
         delegateRenderers = new ArrayList<>();
     }
 

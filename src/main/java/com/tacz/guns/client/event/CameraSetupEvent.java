@@ -37,7 +37,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
 import net.minecraftforge.client.event.ViewportEvent;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraftforge.eventbus.api.listener.Priority;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -69,7 +69,7 @@ public class CameraSetupEvent {
         }
         ItemStack stack = KeepingItemRenderer.getRenderer().getCurrentItem();
         // 尝试调用物品的自定义相机动画
-        if (IClientItemExtensions.of(stack.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
+        if (TaczClientItemExtensions.getRenderer(stack.getItem()) instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             renderer.applyLevelCameraAnimation(event, stack, player);
         }
 
@@ -86,7 +86,7 @@ public class CameraSetupEvent {
         }
         ItemStack stack = KeepingItemRenderer.getRenderer().getCurrentItem();
         // 尝试调用物品的自定义相机动画
-        if (IClientItemExtensions.of(stack.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
+        if (TaczClientItemExtensions.getRenderer(stack.getItem()) instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             renderer.applyItemInHandCameraAnimation(event, stack, player);
         }
     }

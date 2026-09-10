@@ -1228,7 +1228,7 @@
     "git_blob": "9280d2b0015256b6d977c424d4d5e9cdb79d1968",
     "checkout_sha256": "b7b7ff32fd223bbf9afa41b27185432dba45d38fcd7a7d5b7f02ed0fb614faff",
     "bytes": 3279,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/event/FirstPersonRenderEvent.java"
   },
   {
@@ -1372,7 +1372,7 @@
     "git_blob": "f0cedb7f4c441ad0168f7349472e793072f1a4a5",
     "checkout_sha256": "79d71f95074d360bac67b48aeb95122802a7ea4fb3e7d771e51ddc3baf0e362e",
     "bytes": 2472,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerInspect.java"
   },
   {
@@ -1756,7 +1756,7 @@
     "git_blob": "b4a1af2b184c5db4059be4895c9705a8f2ad1593",
     "checkout_sha256": "581cab4d5de549917204bbb21115bc1281414a18a0f1ee13ed0210912613b736",
     "bytes": 1364,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/SlotModel.java"
   },
   {
@@ -1772,7 +1772,7 @@
     "git_blob": "693f6463a0dce170ec221729fefc31d30f24f5ba",
     "checkout_sha256": "5ae5a857e08f1eaf166eb9c5b9d5728337d262280947eebf6938c7763fd93194",
     "bytes": 4448,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockCubeBox.java"
   },
   {
@@ -1780,7 +1780,7 @@
     "git_blob": "9af5da7a947c6b11ae2a8248cf255f2edf7eb0c1",
     "checkout_sha256": "f2e2e8bebfa4f8537f779574372a94bebeb2b6e0f271406428b76881a17bd1ad",
     "bytes": 4712,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockCubePerFace.java"
   },
   {
@@ -1804,7 +1804,7 @@
     "git_blob": "83d1690ae1a8d950f25ccaf2d2bc6689ad8f0879",
     "checkout_sha256": "11a96a5ec3467b3935ac4c1ca9618fc667d9711e3945468549fccb88d2548d80",
     "bytes": 1262,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPolygon.java"
   },
   {
@@ -32324,7 +32324,7 @@
     "git_blob": "31a1bd3233d229e0a4b518e4ab6ce709e1c232a2",
     "checkout_sha256": "cc191fbbe9e7be7bbb98f63727a0b5ecd0032784b2ccb96701c0bd26a4bd2fe0",
     "bytes": 262,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/ammo.json"
   },
   {
@@ -32412,7 +32412,7 @@
     "git_blob": "5713bcc20d3cd5a41a7bad7008f46c6e16231cf3",
     "checkout_sha256": "d762734a0388b720197799ed874605dbe8e6ba69d413f4c07b3c878802d61297",
     "bytes": 570,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/attachment.json"
   },
   {
@@ -32420,7 +32420,7 @@
     "git_blob": "7960c6d7063ca8573b9811f3b03dd4ef339a29a4",
     "checkout_sha256": "a8865d0a91e78f1a60c20491bd4b155e33148c12ca1cf4e7175b7c030b64152c",
     "bytes": 34,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/gun_smith_table.json"
   },
   {
@@ -32436,7 +32436,7 @@
     "git_blob": "5fb5e818b60ec7c51ab09dc1ccd3e0157392ad2f",
     "checkout_sha256": "9777460cf35e4358d7f9b9cae2db12ddd108baa257c1a3c1de5afb04671d679b",
     "bytes": 59,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/modern_kinetic_gun.json"
   },
   {
@@ -32468,7 +32468,7 @@
     "git_blob": "72e526ae812bfca958c6c37d56dbe76e620fefcd",
     "checkout_sha256": "c6f9201373e263759702abce8e1735e89c3439d9575b64382bea1bd175b7dd8f",
     "bytes": 33,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/workbench_a.json"
   },
   {
@@ -32476,7 +32476,7 @@
     "git_blob": "72e526ae812bfca958c6c37d56dbe76e620fefcd",
     "checkout_sha256": "c6f9201373e263759702abce8e1735e89c3439d9575b64382bea1bd175b7dd8f",
     "bytes": 33,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/workbench_b.json"
   },
   {
@@ -32484,7 +32484,7 @@
     "git_blob": "72e526ae812bfca958c6c37d56dbe76e620fefcd",
     "checkout_sha256": "c6f9201373e263759702abce8e1735e89c3439d9575b64382bea1bd175b7dd8f",
     "bytes": 33,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/models/item/workbench_c.json"
   },
   {

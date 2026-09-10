@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "tacz:item",
+    "base": "tacz:item/ammo"
+  }
+}

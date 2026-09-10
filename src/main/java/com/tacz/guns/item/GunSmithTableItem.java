@@ -7,7 +7,8 @@ import com.tacz.guns.client.renderer.item.GunSmithTableItemRenderer;
 import com.tacz.guns.client.resource.index.ClientBlockIndex;
 import com.tacz.guns.inventory.tooltip.BlockItemTooltip;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -32,10 +33,10 @@ public class GunSmithTableItem extends BlockItem implements BlockItemDataAccesso
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        consumer.accept(new IClientItemExtensions() {
+        consumer.accept(new TaczClientItemExtensions() {
             GunSmithTableItemRenderer renderer;
             @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+            public TaczItemRenderer getCustomRenderer() {
                 if (renderer == null) {
                     Minecraft minecraft = Minecraft.getInstance();
                     renderer = new GunSmithTableItemRenderer(minecraft.getBlockEntityRenderDispatcher(), minecraft.getEntityModels());

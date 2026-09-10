@@ -11,7 +11,7 @@ import com.tacz.guns.resource.modifier.AttachmentPropertyManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraftforge.fml.LogicalSide;
 
 public class LocalPlayerDraw {
@@ -77,7 +77,7 @@ public class LocalPlayerDraw {
     }
 
     private void doPutAway(ItemStack lastItem, long putAwayTime) {
-        if (IClientItemExtensions.of(lastItem.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
+        if (TaczClientItemExtensions.getRenderer(lastItem.getItem()) instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             renderer.tryExit(lastItem, putAwayTime);
             TimelessAPI.getGunDisplay(lastItem).ifPresent(display -> {
                 SoundPlayManager.stopPlayGunSound();
@@ -87,7 +87,7 @@ public class LocalPlayerDraw {
     }
 
     private long getDrawTime(ItemStack lastItem, IGun lastGun, long drawTime) {
-        if (IClientItemExtensions.of(lastItem.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
+        if (TaczClientItemExtensions.getRenderer(lastItem.getItem()) instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             long putAwayTime = renderer.getPutAwayTime(lastItem);
             if (drawTime > putAwayTime) {
                 drawTime = putAwayTime;

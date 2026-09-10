@@ -7,9 +7,10 @@ import com.tacz.guns.client.model.SlotModel;
 import com.tacz.guns.client.model.bedrock.BedrockModel;
 import com.tacz.guns.client.renderer.block.GunSmithTableRenderer;
 import net.minecraft.client.model.geom.EntityModelSet;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.resources.model.cuboid.ItemTransform;
 import net.minecraft.client.resources.model.cuboid.ItemTransforms;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
@@ -20,14 +21,13 @@ import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
-public class GunSmithTableItemRenderer extends BlockEntityWithoutLevelRenderer {
+public class GunSmithTableItemRenderer implements TaczItemRenderer {
     private static final SlotModel SLOT_BLOCK_MODEL = new SlotModel();
     public GunSmithTableItemRenderer(BlockEntityRenderDispatcher dispatcher, EntityModelSet modelSet) {
-        super(dispatcher, modelSet);
     }
 
     @Override
-    public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull MultiBufferSource pBuffer, int pPackedLight, int pPackedOverlay) {
+    public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull SubmitNodeCollector pBuffer, int pPackedLight, int pPackedOverlay) {
         GunSmithTableRenderer.getIndex(stack).ifPresentOrElse(index -> {
             BedrockModel model = index.getModel();
             Identifier texture = index.getTexture();
@@ -46,14 +46,13 @@ public class GunSmithTableItemRenderer extends BlockEntityWithoutLevelRenderer {
 
             poseStack.translate(0.5, 1.5, 0.5);
             poseStack.mulPose(Axis.ZN.rotationDegrees(180));
-            RenderType renderType = RenderType.entityTranslucent(texture);
+            RenderType renderType = RenderTypes.entityTranslucent(texture);
             model.render(poseStack, transformType, renderType, pPackedLight, pPackedOverlay);
             poseStack.popPose();
         }, ()->{
             poseStack.translate(0.5, 1.5, 0.5);
             poseStack.mulPose(Axis.ZN.rotationDegrees(180));
-            VertexConsumer buffer = pBuffer.getBuffer(RenderType.entityTranslucent(MissingTextureAtlasSprite.getLocation()));
-            SLOT_BLOCK_MODEL.renderToBuffer(poseStack, buffer, pPackedLight, pPackedOverlay, 1, 1, 1, 1);
+            SLOT_BLOCK_MODEL.submit(poseStack, pBuffer, RenderTypes.entityTranslucent(MissingTextureAtlasSprite.getLocation()), pPackedLight, pPackedOverlay);
         });
     }
 }

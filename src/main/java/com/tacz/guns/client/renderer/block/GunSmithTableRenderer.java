@@ -12,6 +12,7 @@ import com.tacz.guns.client.resource.index.ClientBlockIndex;
 import com.tacz.guns.config.client.RenderConfig;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
@@ -64,8 +65,8 @@ public class GunSmithTableRenderer implements BlockEntityRenderer<GunSmithTableB
                 poseStack.mulPose(Axis.ZN.rotationDegrees(180));
                 poseStack.mulPose(Axis.YN.rotationDegrees(block.parseRotation(facing)));
                 RenderType renderType = RenderConfig.BLOCK_ENTITY_TRANSLUCENT.get() ?
-                        RenderType.entityTranslucent(texture) :
-                        RenderType.entityCutout(texture);
+                        RenderTypes.entityTranslucent(texture) :
+                        RenderTypes.entityCutout(texture);
                 model.render(poseStack, ItemDisplayContext.NONE, renderType, combinedLightIn, combinedOverlayIn);
                 poseStack.popPose();
             }

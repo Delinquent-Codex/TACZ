@@ -14,6 +14,7 @@ import com.tacz.guns.client.resource.pojo.display.gun.ShellEjection;
 import com.tacz.guns.compat.oculus.OculusCompat;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -115,7 +116,7 @@ public class ShellRender implements IFunctionalRenderer {
         poseStack2.mulPose(Axis.ZP.rotationDegrees((float) zw));
         poseStack2.translate(0, -1.5, 0);
 
-        model.render(poseStack2, transformType1, RenderType.entityCutout(location), light, overlay);
+        model.render(poseStack2, transformType1, RenderTypes.entityCutout(location), light, overlay);
     }
 
     private void checkShellQueue(long lifeTime) {

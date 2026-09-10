@@ -1,6 +1,6 @@
 package com.tacz.guns.client.resource;
 
-import com.github.mcmodderanchor.simplebedrockmodel.v1.client.handler.FirstPersonRenderHandler;
+import com.tacz.guns.client.event.FirstPersonRenderHandler;
 import com.google.common.collect.Maps;
 import com.tacz.guns.GunMod;
 import com.tacz.guns.api.TimelessAPI;

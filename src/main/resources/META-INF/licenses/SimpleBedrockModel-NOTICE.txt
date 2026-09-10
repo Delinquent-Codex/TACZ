@@ -1,0 +1,20 @@
+TACZ first-person item lifecycle adaptation
+
+Derived from SimpleBedrockModel 2.2.2-forge+mc1.20.1, by its contributors.
+Source: https://github.com/MCModderAnchor/SimpleBedrockModel
+Upstream 2.2.2-forge-mc1.20.1 tag: 0a4a4084eca9e5f055d63fdd2fee37e284dcfb63.
+The exact source used is the source JAR in TACZ's original libs directory;
+its SHA-256 is recorded in docs/porting/inventory/first-person-dependency.json.
+LGPL-3.0 license text is included alongside this notice. The project GPL-3.0
+license supplies the incorporated GNU GPL terms.
+
+Adapted on 2026-09-09: IFPAnimationInstance and IFPGeoItemRenderer relocated
+to TACZ's API; FirstPersonRenderHandler's switching state extracted into
+FirstPersonItemState and target event/render adapters. TACZ retains its own
+server swap notification and camera hooks. Target submission collectors
+replace removed rendering buffers. This is the TACZ-used first-person
+surface, not a general replacement distribution of SimpleBedrockModel.
+No SimpleBedrockModel example assets are included in this adaptation.
+
+MAE 1.1.2 (MaydayMemory) is bundled unmodified under its MIT license.
+Source: https://github.com/286799714/MaydayAnimationEngine

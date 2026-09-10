@@ -161,7 +161,7 @@
   },
   "source:src/main/java/com/tacz/guns/api/item/gun/AbstractGunItem.java": {
     "implementation": "src/main/java/com/tacz/guns/api/item/gun/AbstractGunItem.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/api/item/nbt/AmmoBoxItemDataAccessor.java": {
@@ -216,7 +216,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/ClientHitMark.java": {
@@ -281,7 +281,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/TickAnimationEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/TickAnimationEvent.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/TooltipEvent.java": {
@@ -306,7 +306,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerDraw.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerDraw.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerFireSelect.java": {
@@ -376,7 +376,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/init/ModContainerScreen.java": {
@@ -461,12 +461,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java": {
@@ -476,12 +476,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/ShellRender.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/ShellRender.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/papi/AmmoCountPapi.java": {
@@ -501,17 +501,17 @@
   },
   "source:src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/crosshair/CrosshairType.java": {
@@ -521,37 +521,37 @@
   },
   "source:src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/item/AnimateGeoItemRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/item/AnimateGeoItemRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/item/AttachmentItemRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/item/AttachmentItemRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/item/GunItemRendererWrapper.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/item/GunItemRendererWrapper.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/item/GunSmithTableItemRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/item/GunSmithTableItemRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java": {
@@ -561,7 +561,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/resource/ClientIndexManager.java": {
     "implementation": "src/main/java/com/tacz/guns/client/resource/ClientIndexManager.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/resource/GunDisplayInstance.java": {
@@ -1116,12 +1116,12 @@
   },
   "source:src/main/java/com/tacz/guns/item/AmmoItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/AmmoItem.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/AttachmentItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/AttachmentItem.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/DefaultTableItem.java": {
@@ -1131,7 +1131,7 @@
   },
   "source:src/main/java/com/tacz/guns/item/GunSmithTableItem.java": {
     "implementation": "src/main/java/com/tacz/guns/item/GunSmithTableItem.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/item/ModernKineticGunItem.java": {
@@ -1156,7 +1156,7 @@
   },
   "source:src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/client/MouseHandlerMixin.java": {
@@ -2647,6 +2647,36 @@
   "source:src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java": {
     "implementation": "src/main/java/com/tacz/guns/util/block/ProjectileExplosion.java",
     "validation": "Target entity/command/explosion API migration. Focused data and geometry checks only; no live runtime. See compile-28 and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/event/FirstPersonRenderEvent.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/event/FirstPersonRenderEvent.java",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/gameplay/LocalPlayerInspect.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerInspect.java",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/SlotModel.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/SlotModel.java",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockCubeBox.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockCubeBox.java",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockCubePerFace.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockCubePerFace.java",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockPolygon.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPolygon.java",
+    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
     "status": "in progress"
   }
 }

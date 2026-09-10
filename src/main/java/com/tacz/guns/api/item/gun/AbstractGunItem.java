@@ -16,7 +16,8 @@ import com.tacz.guns.resource.pojo.data.gun.FeedType;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
 import com.tacz.guns.util.AllowAttachmentTagMatcher;
 import com.tacz.guns.util.AttachmentDataUtils;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import com.tacz.guns.api.client.renderer.TaczClientItemExtensions;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -360,11 +361,11 @@ public abstract class AbstractGunItem extends Item implements IGun, IAnimationIt
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        consumer.accept(new IClientItemExtensions() {
+        consumer.accept(new TaczClientItemExtensions() {
             GunItemRendererWrapper renderer;
 
             @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+            public TaczItemRenderer getCustomRenderer() {
                 if (renderer == null) {
                     renderer = new GunItemRendererWrapper();
                 }

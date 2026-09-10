@@ -1,7 +1,7 @@
 package com.tacz.guns.client.renderer.item;
 
-import com.github.mcmodderanchor.simplebedrockmodel.v1.client.animation.IFPAnimationInstance;
-import com.github.mcmodderanchor.simplebedrockmodel.v1.client.renderer.IFPGeoItemRenderer;
+import com.tacz.guns.api.client.animation.IFPAnimationInstance;
+import com.tacz.guns.api.client.renderer.IFPGeoItemRenderer;
 import com.maydaymemory.mae.basic.DummyPose;
 import com.maydaymemory.mae.basic.Pose;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -18,9 +18,10 @@ import com.tacz.guns.client.sound.SoundPlayManager;
 import com.tacz.guns.util.math.MathUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
@@ -44,14 +45,13 @@ import java.util.List;
  * @param <CTX> 动画状态机上下文
  */
 public abstract class AnimateGeoItemRenderer<M extends BedrockAnimatedModel, CTX extends ItemAnimationStateContext>
-        extends BlockEntityWithoutLevelRenderer implements IFPGeoItemRenderer {
+        implements TaczItemRenderer, IFPGeoItemRenderer {
     @Nullable
     protected LuaAnimationStateMachine<CTX> stateMachine;
     protected M model;
     public Identifier textureLocation;
 
     public AnimateGeoItemRenderer() {
-        super(Minecraft.getInstance().getBlockEntityRenderDispatcher(), Minecraft.getInstance().getEntityModels());
     }
 
     public void setModel(M model) {
@@ -72,7 +72,7 @@ public abstract class AnimateGeoItemRenderer<M extends BedrockAnimatedModel, CTX
     }
 
     public RenderType getRenderType(ItemStack stack) {
-        return RenderType.entityCutout(getTextureLocation(stack));
+        return RenderTypes.entityCutout(getTextureLocation(stack));
     }
 
     public boolean needReInit(ItemStack stack) {
@@ -211,7 +211,7 @@ public abstract class AnimateGeoItemRenderer<M extends BedrockAnimatedModel, CTX
     /**
      * 渲染第一人称，暂时只用于玩家，入口参见 {@link com.tacz.guns.client.event.FirstPersonRenderEvent}
      */
-    public void renderFirstPerson(LocalPlayer player, ItemStack stack, ItemDisplayContext ctx, PoseStack poseStack, MultiBufferSource bufferSource,
+    public void renderFirstPerson(LocalPlayer player, ItemStack stack, ItemDisplayContext ctx, PoseStack poseStack, SubmitNodeCollector bufferSource,
                                   int light, float partialTick) {
         M model = getModel(stack);
         if (model != null) {
@@ -256,7 +256,7 @@ public abstract class AnimateGeoItemRenderer<M extends BedrockAnimatedModel, CTX
 
     @ParametersAreNonnullByDefault
     @Override
-    public void renderByItem(ItemStack stack, ItemDisplayContext ctx, PoseStack poseStack, MultiBufferSource bufferSource,
+    public void renderByItem(ItemStack stack, ItemDisplayContext ctx, PoseStack poseStack, SubmitNodeCollector bufferSource,
                              int light, int overlay) {
         if (ctx.firstPerson()) return;
         M model = getModel(stack);
@@ -266,7 +266,7 @@ public abstract class AnimateGeoItemRenderer<M extends BedrockAnimatedModel, CTX
             poseStack.translate(0.5, 1.5f, 0.5);
             // 基岩版模型是上下颠倒的，需要翻转过来。
             poseStack.mulPose(Axis.ZP.rotationDegrees(180f));
-            model.render(poseStack, ctx, RenderType.entityCutout(
+            model.render(poseStack, ctx, RenderTypes.entityCutout(
                     getTextureLocation(stack)
             ), light, overlay);
             poseStack.popPose();
@@ -364,10 +364,9 @@ public abstract class AnimateGeoItemRenderer<M extends BedrockAnimatedModel, CTX
 
             @Override
             public void triggerDraw() {
-                if (drawn) return;
+                if (drawn || Minecraft.getInstance().player == null) return;
                 drawn = true;
                 tryInit(lastItem, Minecraft.getInstance().player, 0);
-                if (Minecraft.getInstance().player == null) return;
                 TimelessAPI.getGunDisplay(lastItem).ifPresent(display -> {
                     SoundPlayManager.stopPlayGunSound();
                     SoundPlayManager.playDrawSound(Minecraft.getInstance().player, display);

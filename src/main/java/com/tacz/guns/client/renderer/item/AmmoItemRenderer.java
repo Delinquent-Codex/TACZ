@@ -10,9 +10,10 @@ import com.tacz.guns.client.model.SlotModel;
 import com.tacz.guns.client.model.bedrock.BedrockPart;
 import com.tacz.guns.client.resource.pojo.TransformScale;
 import net.minecraft.client.model.geom.EntityModelSet;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import com.tacz.guns.api.client.renderer.TaczItemRenderer;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.resources.Identifier;
@@ -26,11 +27,10 @@ import java.util.List;
 import static net.minecraft.world.item.ItemDisplayContext.GUI;
 
 
-public class AmmoItemRenderer extends BlockEntityWithoutLevelRenderer {
+public class AmmoItemRenderer implements TaczItemRenderer {
     private static final SlotModel SLOT_AMMO_MODEL = new SlotModel();
 
     public AmmoItemRenderer(BlockEntityRenderDispatcher pBlockEntityRenderDispatcher, EntityModelSet pEntityModelSet) {
-        super(pBlockEntityRenderDispatcher, pEntityModelSet);
     }
 
     private static void applyPositioningNodeTransform(List<BedrockPart> nodePath, PoseStack poseStack, Vector3f scale) {
@@ -57,7 +57,7 @@ public class AmmoItemRenderer extends BlockEntityWithoutLevelRenderer {
     }
 
     @Override
-    public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull MultiBufferSource pBuffer, int pPackedLight, int pPackedOverlay) {
+    public void renderByItem(@Nonnull ItemStack stack, @Nonnull ItemDisplayContext transformType, @Nonnull PoseStack poseStack, @Nonnull SubmitNodeCollector pBuffer, int pPackedLight, int pPackedOverlay) {
         if (!(stack.getItem() instanceof IAmmo iAmmo)) {
             return;
         }
@@ -71,8 +71,7 @@ public class AmmoItemRenderer extends BlockEntityWithoutLevelRenderer {
             if (transformType == GUI || ammoModel == null || modelTexture == null) {
                 poseStack.translate(0.5, 1.5, 0.5);
                 poseStack.mulPose(Axis.ZN.rotationDegrees(180));
-                VertexConsumer buffer = pBuffer.getBuffer(RenderType.entityTranslucent(ammoIndex.getSlotTextureLocation()));
-                SLOT_AMMO_MODEL.renderToBuffer(poseStack, buffer, pPackedLight, pPackedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
+                SLOT_AMMO_MODEL.submit(poseStack, pBuffer, RenderTypes.entityTranslucent(ammoIndex.getSlotTextureLocation()), pPackedLight, pPackedOverlay);
                 return;
             }
             // 剩下的渲染
@@ -85,14 +84,13 @@ public class AmmoItemRenderer extends BlockEntityWithoutLevelRenderer {
             // 应用 display 数据中的缩放
             applyScaleTransform(transformType, ammoIndex.getTransform().getScale(), poseStack);
             // 渲染子弹盒模型
-            RenderType renderType = RenderType.entityCutout(modelTexture);
+            RenderType renderType = RenderTypes.entityCutout(modelTexture);
             ammoModel.render(poseStack, transformType, renderType, pPackedLight, pPackedOverlay);
         }, () -> {
             // 没有这个 ammoID，渲染个错误材质提醒别人
             poseStack.translate(0.5, 1.5, 0.5);
             poseStack.mulPose(Axis.ZN.rotationDegrees(180));
-            VertexConsumer buffer = pBuffer.getBuffer(RenderType.entityTranslucent(MissingTextureAtlasSprite.getLocation()));
-            SLOT_AMMO_MODEL.renderToBuffer(poseStack, buffer, pPackedLight, pPackedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
+            SLOT_AMMO_MODEL.submit(poseStack, pBuffer, RenderTypes.entityTranslucent(MissingTextureAtlasSprite.getLocation()), pPackedLight, pPackedOverlay);
         });
         poseStack.popPose();
     }
