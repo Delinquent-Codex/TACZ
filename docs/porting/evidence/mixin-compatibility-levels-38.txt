@@ -1,0 +1,45 @@
+Compiled from "MixinEnvironment.java"
+public class org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel extends java.lang.Enum<org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel> {
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_6;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_7;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_8;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_9;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_10;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_11;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_12;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_13;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_14;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_15;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_16;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_17;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_18;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_19;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_20;
+  public static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel JAVA_21;
+  public static org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel DEFAULT;
+  public static org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel MAX_SUPPORTED;
+  private final int ver;
+  private final int classVersion;
+  private final int languageFeatures;
+  private org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel maxCompatibleLevel;
+  private static final org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel[] $VALUES;
+  public static org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel[] values();
+  public static org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel valueOf(java.lang.String);
+  private org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel(int, int, int);
+  boolean isSupported();
+  public int classVersion();
+  public int getClassVersion();
+  public int getClassMajorVersion();
+  public int getLanguageFeatures();
+  public boolean supportsMethodsInInterfaces();
+  public boolean supports(int);
+  public boolean isAtLeast(org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel);
+  public boolean isLessThan(org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel);
+  public boolean canElevateTo(org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel);
+  public boolean canSupport(org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel);
+  public static org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel requiredFor(int);
+  public static org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel getMaxEffective();
+  static java.lang.String getSupportedVersions();
+  org.spongepowered.asm.mixin.MixinEnvironment$CompatibilityLevel(java.lang.String, int, int, int, int, org.spongepowered.asm.mixin.MixinEnvironment$1);
+  static {};
+}

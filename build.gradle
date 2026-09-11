@@ -131,6 +131,19 @@ sourceSets {
         java.include 'com/tacz/guns/porting/FirstPersonChecks.java'
         java.include 'com/tacz/guns/porting/GeometryChecks.java'
         java.include 'com/tacz/guns/porting/ItemModelChecks.java'
+        java.include 'com/tacz/guns/porting/WorldRenderChecks.java'
+        java.include 'com/tacz/guns/porting/BulletHoleChecks.java'
+        java.include 'com/tacz/guns/porting/WalkDistanceChecks.java'
+        java.include 'com/tacz/guns/api/entity/LegacyWalkDistance.java'
+        java.include 'com/tacz/guns/api/entity/LegacyWalkProvider.java'
+        java.include 'com/tacz/guns/mixin/common/EntityWalkMixin.java'
+        java.include 'com/tacz/guns/client/particle/BulletHoleVisual.java'
+        java.include 'com/tacz/guns/client/renderer/entity/MinecartRenderPose.java'
+        java.include 'com/tacz/guns/client/renderer/entity/TracerGeometry.java'
+        java.include 'com/tacz/guns/client/model/bedrock/*.java'
+        java.include 'com/tacz/guns/client/model/IFunctionalRenderer.java'
+        java.include 'com/tacz/guns/client/model/FunctionalBedrockPart.java'
+        java.include 'com/tacz/guns/client/resource/pojo/model/*.java'
         java.include 'com/tacz/guns/client/renderer/item/TaczItemModel.java'
         java.include 'com/tacz/guns/api/client/renderer/TaczItemRenderer.java'
         java.include 'com/tacz/guns/api/client/renderer/TaczClientItemExtensions.java'
@@ -305,5 +318,32 @@ tasks.register('verifyPortingItemModels', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.ItemModelChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingWorldRendering', JavaExec) {
+    group = 'verification'
+    description = 'Checks rail/tracer math and all shipped Bedrock geometry on CPU; no FML or GPU.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.WorldRenderChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingBulletHoles', JavaExec) {
+    group = 'verification'
+    description = 'Checks native particle quad extraction against baseline face geometry and fade; no world/GPU.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.BulletHoleChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingWalkDistance', JavaExec) {
+    group = 'verification'
+    description = 'Checks legacy movement accumulation and target hook bytecode; no Mixin transformation/gameplay.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.WalkDistanceChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

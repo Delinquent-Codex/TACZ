@@ -5,36 +5,6 @@
     "error": "wrong number of type arguments; required 3"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "line": 26,
-    "error": "wrong number of type arguments; required 2"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 29,
-    "error": "wrong number of type arguments; required 2"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 29,
-    "error": "wrong number of type arguments; required 2"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 37,
-    "error": "wrong number of type arguments; required 2"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 30,
-    "error": "type MinecartRenderer does not take parameters"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPart.java",
-    "line": 8,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
     "line": 18,
     "error": "cannot find symbol"
@@ -446,11 +416,6 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
-    "line": 21,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
     "line": 22,
     "error": "cannot find symbol"
   },
@@ -472,91 +437,6 @@
   {
     "file": "src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java",
     "line": 19,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java",
-    "line": 12,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/FunctionalBedrockPart.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 36,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "line": 50,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 12,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 38,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 41,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 16,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 47,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 49,
     "error": "cannot find symbol"
   },
   {
@@ -680,11 +560,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java",
-    "line": 10,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
     "line": 6,
     "error": "cannot find symbol"
@@ -780,16 +655,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 11,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
     "line": 46,
     "error": "cannot find symbol"
@@ -845,98 +710,8 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPart.java",
-    "line": 65,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/resource/GunDisplayInstance.java",
     "line": 606,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 70,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 256,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 256,
-    "error": "incompatible types: Object cannot be converted to boolean"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 264,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 264,
-    "error": "incompatible types: Object cannot be converted to boolean"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 272,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 272,
-    "error": "incompatible types: Object cannot be converted to boolean"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 280,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 280,
-    "error": "incompatible types: Object cannot be converted to boolean"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 288,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 288,
-    "error": "incompatible types: Object cannot be converted to boolean"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 329,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 329,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 329,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 340,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 340,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "line": 340,
     "error": "cannot find symbol"
   },
   {
@@ -2095,31 +1870,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java",
-    "line": 24,
-    "error": "method register in class EntityRenderers cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java",
-    "line": 25,
-    "error": "method register in class EntityRenderers cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java",
-    "line": 26,
-    "error": "method register in class BlockEntityRenderers cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java",
-    "line": 27,
-    "error": "method register in class BlockEntityRenderers cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ModEntitiesRender.java",
-    "line": 28,
-    "error": "method register in class BlockEntityRenderers cannot be applied to given types;"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/input/AimKey.java",
     "line": 26,
     "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
@@ -2282,11 +2032,6 @@
   {
     "file": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
     "line": 71,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
-    "line": 132,
     "error": "cannot find symbol"
   },
   {
@@ -2530,478 +2275,13 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java",
-    "line": 50,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java",
-    "line": 64,
-    "error": "package MultiBufferSource does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java",
-    "line": 64,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/FunctionalBedrockPart.java",
-    "line": 51,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 48,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 49,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 50,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 51,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 55,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 60,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 61,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 62,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 66,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 67,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 68,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 72,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 80,
+    "line": 74,
     "error": "random has protected access in Level"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 83,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 85,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 86,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 87,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 97,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 99,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 102,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 104,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 107,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 109,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 112,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 117,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 122,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 124,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 126,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 130,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 132,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 133,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 133,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 134,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 134,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 135,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 135,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 144,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 160,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 161,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 165,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 166,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 167,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 170,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 171,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 171,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 172,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 174,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 175,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 176,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 177,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 180,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 182,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 186,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 191,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 198,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 198,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 198,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 199,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 199,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 199,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 205,
-    "error": "Provider is not abstract and does not override abstract method createParticle(BulletHoleOption,ClientLevel,double,double,double,double,double,double,RandomSource) in ParticleProvider"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "line": 209,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "line": 49,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "line": 76,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 37,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 69,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 72,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 88,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 93,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "line": 98,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 40,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 62,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 67,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 77,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "line": 82,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 46,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 65,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 83,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 97,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 101,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 102,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 136,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 141,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 143,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "line": 150,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 36,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 43,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 48,
-    "error": "method does not override or implement a method from a supertype"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 67,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 72,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "line": 75,
+    "line": 156,
     "error": "cannot find symbol"
   },
   {
@@ -3265,11 +2545,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java",
-    "line": 84,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
     "line": 22,
     "error": "cannot find symbol"
@@ -3456,13 +2731,8 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 36,
-    "error": "invalid method reference"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
     "line": 37,
-    "error": "cannot find symbol"
+    "error": "invalid method reference"
   },
   {
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
@@ -3496,32 +2766,17 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 43,
+    "line": 44,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 63,
+    "line": 44,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 76,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 76,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 77,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 77,
+    "line": 64,
     "error": "cannot find symbol"
   }
 ]

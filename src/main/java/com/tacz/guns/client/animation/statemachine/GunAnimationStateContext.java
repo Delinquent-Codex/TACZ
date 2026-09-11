@@ -4,6 +4,7 @@ import com.tacz.guns.api.DefaultAssets;
 import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator;
 import com.tacz.guns.api.entity.IGunOperator;
+import com.tacz.guns.api.entity.LegacyWalkProvider;
 import com.tacz.guns.api.entity.ReloadState;
 import com.tacz.guns.api.item.IAmmo;
 import com.tacz.guns.api.item.IAmmoBox;
@@ -67,7 +68,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
     }
 
     private <T> Optional<T> processCameraEntity(Function<Entity, T> processor) {
-        Entity entity = Minecraft.getInstance().cameraEntity;
+        Entity entity = Minecraft.getInstance().getCameraEntity();
         if (entity != null) {
             return Optional.ofNullable(processor.apply(entity));
         }
@@ -253,7 +254,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      * @return 玩家的按键输入是否为上 (对应着移动中的前进按键，如 W)
      */
     public boolean isInputUp() {
-        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.up).orElse(false);
+        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.keyPresses.forward()).orElse(false);
     }
 
     /**
@@ -261,7 +262,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      * @return 玩家的按键输入是否为下 (对应着移动中的后退按键，如 S)
      */
     public boolean isInputDown() {
-        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.down).orElse(false);
+        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.keyPresses.backward()).orElse(false);
     }
 
     /**
@@ -269,7 +270,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      * @return 玩家的按键输入是否为左 (对应着移动中的左移按键，如 A)
      */
     public boolean isInputLeft() {
-        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.left).orElse(false);
+        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.keyPresses.left()).orElse(false);
     }
 
     /**
@@ -277,7 +278,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      * @return 玩家的按键输入是否为右 (对应着移动中的右移按键，如 D)
      */
     public boolean isInputRight() {
-        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.right).orElse(false);
+        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.keyPresses.right()).orElse(false);
     }
 
     /**
@@ -285,7 +286,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      * @return 玩家的按键输入是否为跳跃 (对应着移动中的跳跃按键，如 Space)
      */
     public boolean isInputJumping() {
-        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.jumping).orElse(false);
+        return Optional.ofNullable(Minecraft.getInstance().player).map(player -> player.input.keyPresses.jump()).orElse(false);
     }
 
     /**
@@ -326,7 +327,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      */
     public void anchorWalkDist() {
         processCameraEntity(entity -> {
-            walkDistAnchor = entity.walkDist + (entity.walkDist - entity.walkDistO) * partialTicks;
+            walkDistAnchor = LegacyWalkProvider.of(entity).extrapolate(partialTicks);
             return null;
         });
     }
@@ -337,7 +338,7 @@ public class GunAnimationStateContext extends ItemAnimationStateContext {
      */
     public float getWalkDist() {
         return processCameraEntity(entity -> {
-            float currentWalkDist = entity.walkDist + (entity.walkDist - entity.walkDistO) * partialTicks;
+            float currentWalkDist = LegacyWalkProvider.of(entity).extrapolate(partialTicks);
             return currentWalkDist - walkDistAnchor;
         }).orElse(0f);
     }

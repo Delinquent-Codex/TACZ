@@ -1732,7 +1732,7 @@
     "git_blob": "0f332adb381982119fa0632d149750476fa4fa37",
     "checkout_sha256": "f08ab4d6a07b30119670d40ef283e929d5de8a648b473a4ac70819bf690d295b",
     "bytes": 3326,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/FunctionalBedrockPart.java"
   },
   {
@@ -1796,7 +1796,7 @@
     "git_blob": "0e664630a8b2a3d51d5d676a9212cf654b9ff70c",
     "checkout_sha256": "4f556a0ee03fb9d1e95004a9696a114082570775dc93b2d5a2567a48bc6f475a",
     "bytes": 4564,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPart.java"
   },
   {
@@ -1876,7 +1876,7 @@
     "git_blob": "dc41936226320e792ef0cd6506806093fdd9885f",
     "checkout_sha256": "a2e941d4b84444827e3d85bfe9917835615df7ddf3526e8169910f25fa8df454",
     "bytes": 3112,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java"
   },
   {
@@ -2820,7 +2820,7 @@
     "git_blob": "9049d2961957e9af5c0fbe17231e5afcbff34311",
     "checkout_sha256": "f9024380e8564133536b418bf7700ce15adc685d0425fea4ba5569df2124d837",
     "bytes": 3077,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java"
   },
   {

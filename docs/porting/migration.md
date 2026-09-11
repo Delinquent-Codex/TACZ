@@ -77,3 +77,13 @@ The TACZ-used SBM interfaces move to com.tacz.guns.api.client.animation.IFPAnima
 MAE 1.1.2 stays unchanged and is now explicitly bundled by JarJar rather than supplied by an obsolete SBM nested jar. Upstream SBM source adaptations preserve LGPL notices in META-INF/licenses; MAE has its MIT notice. Broader package/license closure remains an open release gate.
 
 Minecraft-facing item definitions move to assets/tacz/items. Seven TACZ custom renderer models use tacz:item with the existing base display transforms; builtin/entity parents are removed from those seven base resources. Three target/statue/minecart items use native model paths. Ammo boxes use range dispatch at thresholds 0..8 and the native dye color source, retaining all variant model resources. TACZ gun-pack model/animation paths are unchanged. Actual model bounds, foil/outline behavior, GUI/world transforms and repeated reload must be validated in a running client.
+
+## World render state and movement API — 2026-09-11
+
+Block/entity renderer entry points now use extractRenderState and submit, with snapshots of mutable world inputs. RenderSubmission carries the collector through Bedrock and deferred callbacks. Model reset and later draws cannot change already captured vertices. Target head visibility/rotation and traversal pose stacks are restored after rendering, including failures. All GPU scopes, shader adapters, crumbling/outline propagation and complete third-person paths remain open.
+
+Bullet holes use native SingleQuadParticle terrain quads; their public provider now accepts the target RandomSource argument. The allowed fade-threshold value 1 is explicitly defined as fully visible until expiry, avoiding the old division-by-zero. Their block material comes from the target model-data-aware particle material lookup.
+
+LegacyWalkProvider/LegacyWalkDistance restore the source walkDist semantics for scripts and non-player firing spread. The required EntityWalkMixin captures resolved movement before getBlockSpeedFactor and snapshots at baseTick. It ignores vertical movement, retains source float rounding, emission/passenger guards and TACZ's current-plus-delta extrapolation. It is transient per entity, like the original vanilla fields; no save schema is introduced. Hook bytecode is checked, while FML application and gameplay timing remain unverified.
+
+Mixin compatibilityLevel denotes supported class language features, not the Java runtime requirement. Exact target Mixin 0.8.7 supports named levels only through JAVA_21, and validates features with LanguageFeatures.scan. The new Java 25 class passes that scanner at JAVA_17. Java 25 remains the compiler/runtime toolchain; complete mixin/refmap packaging and all actual injections still require validation.

@@ -1,7 +1,7 @@
 {
   "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
-  "command": "gradlew.bat compileJava verifyPortingWalkDistance verifyPortingWorldRendering verifyPortingBulletHoles --continue --console=plain",
-  "log": "target-compile-40.log",
+  "command": "gradlew.bat compileJava verifyPortingPrimitives verifyPortingEvents verifyPortingNetwork verifyPortingContent verifyPortingCrafting verifyPortingPacks verifyPortingLua verifyPortingStoredData verifyPortingDye verifyPortingProjectileData verifyPortingExplosions verifyPortingFirstPerson verifyPortingGeometry verifyPortingItemModels verifyPortingWorldRendering verifyPortingBulletHoles verifyPortingWalkDistance --continue --console=plain",
+  "log": "target-compile-39.log",
   "diagnostics": 556,
   "by_subsystem": {
     "client": 474,
@@ -10,9 +10,23 @@
     "util": 10
   },
   "focused_results": [
-    "Walk-distance checks passed: 13 assertions (accumulator and target bytecode; no Mixin application or gameplay).",
+    "PASS: 29 primitive assertions against Minecraft 26.2; no mod startup or gameplay claimed.",
+    "PASS: 15 event assertions against Forge EventBus 7.0.5; no KubeJS runtime or gameplay claimed.",
+    "PASS: 61 mapping and packet assertions; no live handshake, mod startup or multiplayer claimed.",
+    "Content checks passed: 31 assertions (no FML registration or rendering).",
+    "Crafting checks passed: 421 assertions (no live menu or recipe reload).",
+    "Pack checks passed: 25 assertions (no full gun-pack reload).",
+    "Lua checks passed: 14 assertions using LuaJ (no gun gameplay).",
+    "Stored data checks passed: 31 assertions (no live block entity).",
+    "Dye checks passed: 9 assertions (plain fixture item; no TACZ item class or live crafting).",
+    "Projectile data checks passed: 15 assertions (no entity spawn, collision or rendering).",
+    "Explosion checks passed: 18 assertions (geometry and target access; no live damage, blocks or effects).",
+    "First-person checks passed: 23 assertions (state controller and MAE; no game rendering or live inventory).",
+    "Geometry checks passed: 20 assertions (CPU vertices and collector scope; no GPU/model rendering).",
+    "Item model checks passed: 38 assertions (codecs/resources/tint; no model bake or rendering).",
     "World rendering checks passed: 296 assertions; 269 shipped Bedrock models emitted CPU geometry (no FML, GPU, skin download or live entity).",
-    "Bullet-hole checks passed: 57 assertions (real target quad extraction; no particle engine, world or GPU)."
+    "Bullet-hole checks passed: 57 assertions (real target quad extraction; no particle engine, world or GPU).",
+    "Walk-distance checks passed: 12 assertions (accumulator and target bytecode; no Mixin application or gameplay)."
   ],
   "input_sha256": {
     "build.gradle": "d0297cab24254274ff54bb9ba24f8b2d8a7848034b5ebf37647d879e8aefe025",
@@ -280,7 +294,7 @@
     "src/main/java/com/tacz/guns/client/renderer/crosshair/CrosshairType.java": "65c4314332fe4dfef8d25908eafb59214e1510778487a219b6efa48f153b2ef2",
     "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java": "19245ff1d13c635299581768a660669e33153664ec2f52785463b28919f0d1fc",
     "src/main/java/com/tacz/guns/client/renderer/entity/MinecartRenderPose.java": "09ba1465925858f5fe0c7bafcdad013da97a69516f54831c72e76211c6c4a2b5",
-    "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java": "db795d1456b016baf3ac370c7abf353ba298408f4bfedd722247bb78aebe9fce",
+    "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java": "77c03ab94d5aa94f6a101ad622db35df3f5eed42d3c7156ca69b2dac78635420",
     "src/main/java/com/tacz/guns/client/renderer/entity/TracerGeometry.java": "2f8681e7844d08792ff942c5885a9c51208d33671cbfe1ccfa5b8c6b54a478ee",
     "src/main/java/com/tacz/guns/client/renderer/item/AmmoBoxModelProperty.java": "241447cd9fd7e0495b2e86ce853213b9c42aef3b78ec344b0bf80da578a498f0",
     "src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java": "6618a9fc909b8fadf51bc9598ca4de4409d475c46e9ca0ec478ef5fd43577174",
@@ -4285,7 +4299,7 @@
     "src/portingChecks/java/com/tacz/guns/porting/ProjectileDataChecks.java": "d9ac7f85aa72ace2c855eec6a5f799a7cd95dbec5dd066a505470eb1014775bb",
     "src/portingChecks/java/com/tacz/guns/porting/RegistryFixture.java": "cab9c6d3678438d23eb1ed9a1085dd4618231fe51837ca15bfe6b29e2736ffe2",
     "src/portingChecks/java/com/tacz/guns/porting/StoredDataChecks.java": "f2977f0ba5dc2e9a94f31c2004a987fe54bba70070aeb59dd45f3bb6098aae76",
-    "src/portingChecks/java/com/tacz/guns/porting/WalkDistanceChecks.java": "5345b6ec3bbdc98204db0881cdcecb3f1b419554ccd71ff8f559162f177fe35a",
+    "src/portingChecks/java/com/tacz/guns/porting/WalkDistanceChecks.java": "cefc93c848f4b70520dd4d26acc222dc4e0746b8a3646c596b4bd27b2717d42a",
     "src/portingChecks/java/com/tacz/guns/porting/WorldRenderChecks.java": "7701d182960cb1dbdad2a286d5db042e301d0aa4eaa8fd9ed3cb89d079d2578d",
     "src/portingChecks/java/net/minecraftforge/registries/PortingRegistryFixture.java": "45fd2126d18b3c3359042ca5ca9c20fe26f6fc5a036ce05769f1bdb41614fa0e"
   }

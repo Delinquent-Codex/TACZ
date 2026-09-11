@@ -18,7 +18,7 @@ import com.tacz.guns.compat.ar.ARCompat;
 import com.tacz.guns.config.client.RenderConfig;
 import com.tacz.guns.util.LaserColorUtil;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderStateShard;
 import net.minecraft.client.renderer.rendertype.RenderType;
@@ -129,7 +129,7 @@ public class BeamRenderer  {
     private static void stringVertex(float z, float width, VertexConsumer pConsumer, PoseStack.Pose pPose, int r, int g, int b, boolean fadeOut) {
         float halfWidth = width / 2;
         int endAlpha = fadeOut ? 0 : 255;
-        int light = LightTexture.pack(15, 15);
+        int light = LightCoordsUtil.pack(15, 15);
     	pConsumer.vertex(pPose.pose(), -halfWidth, -halfWidth, 0).color(r, g, b, 255).uv(0, 0).uv2(light).endVertex();
         pConsumer.vertex(pPose.pose(), -halfWidth, halfWidth, 0).color(r, g, b, 255).uv(0, 1).uv2(light).endVertex();
         pConsumer.vertex(pPose.pose(), -halfWidth, halfWidth, z).color(r, g, b, endAlpha).uv(1, 1).uv2(light).endVertex();

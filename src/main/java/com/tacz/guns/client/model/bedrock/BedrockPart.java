@@ -5,7 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectList;
-import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -62,19 +62,20 @@ public class BedrockPart {
         int cubePackedLight = light;
         if (illuminated) {
             // 最大亮度
-            cubePackedLight = LightTexture.pack(15, 15);
+            cubePackedLight = LightCoordsUtil.pack(15, 15);
         }
         if (this.visible) {
             if (!this.cubes.isEmpty() || !this.children.isEmpty()) {
                 poseStack.pushPose();
-                this.translateAndRotateAndScale(poseStack);
-                this.compile(poseStack.last(), consumer, cubePackedLight, overlay, red, green, blue, alpha);
-
-                for (BedrockPart part : this.children) {
-                    part.render(poseStack, transformType, consumer, cubePackedLight, overlay, red, green, blue, alpha);
+                try {
+                    this.translateAndRotateAndScale(poseStack);
+                    this.compile(poseStack.last(), consumer, cubePackedLight, overlay, red, green, blue, alpha);
+                    for (BedrockPart part : this.children) {
+                        part.render(poseStack, transformType, consumer, cubePackedLight, overlay, red, green, blue, alpha);
+                    }
+                } finally {
+                    poseStack.popPose();
                 }
-
-                poseStack.popPose();
             }
         }
     }

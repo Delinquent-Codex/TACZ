@@ -73,8 +73,7 @@ public enum InaccuracyType {
     }
 
     private static boolean isMove(LivingEntity livingEntity) {
-        // Vanilla removed cumulative walkDist; retain its horizontal distance scale for non-player shooters.
-        double distance = livingEntity.getKnownSpeed().horizontalDistance() * 0.6;
+        double distance = com.tacz.guns.api.entity.LegacyWalkProvider.of(livingEntity).delta();
         if (livingEntity instanceof Player player) {
             distance = HitboxHelper.getPlayerVelocity(player).length();
         }

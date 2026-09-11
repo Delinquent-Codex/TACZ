@@ -5,13 +5,14 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.tacz.guns.compat.ar.ARCompat;
 import com.tacz.guns.compat.optifine.OptifineCompat;
+import com.tacz.guns.client.renderer.RenderSubmission;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
-import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.renderer.entity.player.AvatarRenderer;
 import net.minecraft.world.entity.HumanoidArm;
+import net.minecraft.world.entity.player.PlayerModelPart;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
@@ -73,8 +74,8 @@ public final class RenderHelper {
     public static void renderFirstPersonArm(LocalPlayer player, HumanoidArm hand, PoseStack matrixStack, int combinedLight) {
         Minecraft mc = Minecraft.getInstance();
         EntityRenderDispatcher renderManager = mc.getEntityRenderDispatcher();
-        PlayerRenderer renderer = (PlayerRenderer) renderManager.getRenderer(player);
-        MultiBufferSource buffer = Minecraft.getInstance().renderBuffers().bufferSource();
+        AvatarRenderer renderer = (AvatarRenderer) renderManager.getRenderer(player);
+        var collector = RenderSubmission.collector();
         // int oldId = RenderSystem.getShaderTexture(0);
         // RenderSystem.setShaderTexture(0, player.getSkinTextureLocation());
 
@@ -82,15 +83,16 @@ public final class RenderHelper {
 			ARCompat.setRenderingLevel();
 		}
 
-        if (hand == HumanoidArm.RIGHT) {
-            renderer.renderRightHand(matrixStack, buffer, combinedLight, player);
-        } else {
-            renderer.renderLeftHand(matrixStack, buffer, combinedLight, player);
+        try {
+            var skin = player.getSkin().body().texturePath();
+            if (hand == HumanoidArm.RIGHT) {
+                renderer.renderRightHand(matrixStack, collector, combinedLight, skin, player.isModelPartShown(PlayerModelPart.RIGHT_SLEEVE));
+            } else {
+                renderer.renderLeftHand(matrixStack, collector, combinedLight, skin, player.isModelPartShown(PlayerModelPart.LEFT_SLEEVE));
+            }
+        } finally {
+            if (ARCompat.shouldAccelerate()) ARCompat.resetRenderingLevel();
         }
-
-		if (ARCompat.shouldAccelerate()) {
-			ARCompat.resetRenderingLevel();
-		}
 
         // RenderSystem.setShaderTexture(0, oldId);
     }

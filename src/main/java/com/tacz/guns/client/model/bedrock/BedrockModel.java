@@ -1,7 +1,6 @@
 package com.tacz.guns.client.model.bedrock;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.tacz.guns.client.model.IFunctionalRenderer;
 import com.tacz.guns.client.resource.pojo.model.*;
 import com.tacz.guns.client.renderer.RenderSubmission;
@@ -354,18 +353,26 @@ public class BedrockModel {
     public void render(PoseStack matrixStack, ItemDisplayContext transformType, RenderType renderType, int light, int overlay, float red, float green, float blue, float alpha) {
         VertexCapture builder = new VertexCapture();
 
-        matrixStack.pushPose();
-        for (BedrockPart model : shouldRender) {
-            model.render(matrixStack, transformType, builder, light, overlay, red, green, blue, alpha);
+        try {
+            matrixStack.pushPose();
+            try {
+                for (BedrockPart model : shouldRender) {
+                    model.render(matrixStack, transformType, builder, light, overlay, red, green, blue, alpha);
+                }
+            } finally {
+                matrixStack.popPose();
+            }
+            RenderSubmission.submit(renderType, builder.drain());
+            // Detach before callbacks: failures or reentrant calls cannot retain this frame's work.
+            List<IFunctionalRenderer> pending = delegateRenderers;
+            delegateRenderers = new ArrayList<>();
+            for (IFunctionalRenderer renderer : pending) {
+                renderer.render(matrixStack, builder, transformType, light, overlay);
+            }
+            RenderSubmission.submit(renderType, builder.drain());
+        } finally {
+            delegateRenderers = new ArrayList<>();
         }
-        matrixStack.popPose();
-        RenderSubmission.submit(renderType, builder.drain());
-
-        for (IFunctionalRenderer renderer : delegateRenderers) {
-            renderer.render(matrixStack, builder, transformType, light, overlay);
-        }
-        RenderSubmission.submit(renderType, builder.drain());
-        delegateRenderers = new ArrayList<>();
     }
 
     protected List<BedrockPart> getPath(@Nullable ModelRendererWrapper rendererWrapper) {

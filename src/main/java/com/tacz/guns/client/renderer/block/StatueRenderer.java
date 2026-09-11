@@ -7,10 +7,15 @@ import com.tacz.guns.block.entity.StatueBlockEntity;
 import com.tacz.guns.client.model.bedrock.BedrockModel;
 import com.tacz.guns.client.resource.InternalAssetLoader;
 import com.tacz.guns.config.client.RenderConfig;
+import com.tacz.guns.client.renderer.RenderSubmission;
 import net.minecraft.util.Util;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.LightTexture;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.util.LightCoordsUtil;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState;
+import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -19,15 +24,25 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import org.jspecify.annotations.Nullable;
 
 import java.util.Optional;
 
-public class StatueRenderer implements BlockEntityRenderer<StatueBlockEntity> {
+public class StatueRenderer implements BlockEntityRenderer<StatueBlockEntity, StatueRenderer.State> {
+    private final ItemModelResolver itemModelResolver;
+
+    public static class State extends BlockEntityRenderState {
+        public @Nullable BedrockModel model;
+        public @Nullable RenderType renderType;
+        public float rotation;
+        public double itemOffset;
+        public final ItemStackRenderState item = new ItemStackRenderState();
+    }
+
     public StatueRenderer(BlockEntityRendererProvider.Context context) {
+        itemModelResolver = context.itemModelResolver();
     }
 
     public static Optional<BedrockModel> getModel() {
@@ -35,50 +50,43 @@ public class StatueRenderer implements BlockEntityRenderer<StatueBlockEntity> {
     }
 
     @Override
-    public void render(StatueBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferIn, int combinedLightIn, int combinedOverlayIn) {
-        getModel().ifPresent(model -> {
-            Level level = blockEntity.getLevel();
-            if (level == null) {
-                return;
-            }
+    public State createRenderState() { return new State(); }
 
-            poseStack.pushPose();
-            {
-                BlockState blockState = blockEntity.getBlockState();
-                Direction facing = blockState.getValue(TargetBlock.FACING);
+    @Override
+    public void extractRenderState(StatueBlockEntity blockEntity, State state, float partialTick,
+                                   Vec3 cameraPosition, ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
+        BlockEntityRenderer.super.extractRenderState(blockEntity, state, partialTick, cameraPosition, breakProgress);
+        state.model = null;
+        state.renderType = null;
+        state.item.clear();
+        Level level = blockEntity.getLevel();
+        if (level == null) return;
+        state.model = getModel().orElse(null);
+        Direction facing = blockEntity.getBlockState().getValue(TargetBlock.FACING);
+        state.rotation = (facing.get2DDataValue() + 2) % 4 * 90;
+        state.itemOffset = Math.sin(Util.getMillis() / 500.0) * 0.1;
+        state.renderType = RenderConfig.BLOCK_ENTITY_TRANSLUCENT.get() ?
+                RenderTypes.entityTranslucent(getTextureLocation()) : RenderTypes.entityCutout(getTextureLocation());
+        itemModelResolver.updateForTopItem(state.item, blockEntity.getGunItem(), ItemDisplayContext.FIXED, level, null, 0);
+    }
 
-                poseStack.translate(0.5, 1.5, 0.5);
-
-                poseStack.mulPose(Axis.YN.rotationDegrees((facing.get2DDataValue() + 2) % 4 * 90));
-                poseStack.mulPose(Axis.ZN.rotationDegrees(180));
-
-                RenderType renderType = RenderConfig.BLOCK_ENTITY_TRANSLUCENT.get() ?
-                        RenderTypes.entityTranslucent(getTextureLocation()) :
-                        RenderTypes.entityCutout(getTextureLocation());
-                model.render(poseStack, ItemDisplayContext.NONE, renderType, combinedLightIn, combinedOverlayIn);
-
-                poseStack.scale(0.5f, 0.5f, 0.5f);
-                poseStack.translate(0, -0.875, -1.2);
-                poseStack.mulPose(Axis.ZP.rotationDegrees(180));
-
-                double offset = Math.sin(Util.getMillis() / 500.0) * 0.1;
-                poseStack.translate(0, offset, 0);
-
-                ItemStack stack = blockEntity.getGunItem();
-
-                Minecraft.getInstance().getItemRenderer().renderStatic(
-                        stack,
-                        ItemDisplayContext.FIXED,
-                        LightTexture.pack(15, 15),
-                        OverlayTexture.NO_OVERLAY,
-                        poseStack,
-                        bufferIn,
-                        level,
-                        0
-                );
-            }
+    @Override
+    public void submit(State state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+        if (state.model == null || state.renderType == null) return;
+        poseStack.pushPose();
+        try (var scope = RenderSubmission.enter(collector)) {
+            poseStack.translate(0.5, 1.5, 0.5);
+            poseStack.mulPose(Axis.YN.rotationDegrees(state.rotation));
+            poseStack.mulPose(Axis.ZN.rotationDegrees(180));
+            state.model.render(poseStack, ItemDisplayContext.NONE, state.renderType, state.lightCoords, OverlayTexture.NO_OVERLAY);
+            poseStack.scale(0.5f, 0.5f, 0.5f);
+            poseStack.translate(0, -0.875, -1.2);
+            poseStack.mulPose(Axis.ZP.rotationDegrees(180));
+            poseStack.translate(0, state.itemOffset, 0);
+            state.item.submit(poseStack, collector, LightCoordsUtil.FULL_BRIGHT, OverlayTexture.NO_OVERLAY, 0);
+        } finally {
             poseStack.popPose();
-        });
+        }
     }
 
     public static Identifier getTextureLocation() {
@@ -91,7 +99,7 @@ public class StatueRenderer implements BlockEntityRenderer<StatueBlockEntity> {
     }
 
     @Override
-    public boolean shouldRenderOffScreen(StatueBlockEntity blockEntity) {
+    public boolean shouldRenderOffScreen() {
         return true;
     }
 

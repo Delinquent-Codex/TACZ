@@ -461,7 +461,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java": {
@@ -471,7 +471,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java": {
@@ -496,22 +496,22 @@
   },
   "source:src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java": {
     "implementation": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/block/GunSmithTableRenderer.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/block/StatueRenderer.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/block/TargetRenderer.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/crosshair/CrosshairType.java": {
@@ -521,12 +521,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/renderer/entity/TargetMinecartRenderer.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/item/AmmoItemRenderer.java": {
@@ -1516,7 +1516,7 @@
   },
   "source:src/main/java/com/tacz/guns/util/RenderHelper.java": {
     "implementation": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/ResourceScanner.java": {
@@ -2556,7 +2556,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java": {
     "implementation": "src/main/java/com/tacz/guns/client/animation/statemachine/GunAnimationStateContext.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java": {
@@ -2601,7 +2601,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/pojo/data/gun/InaccuracyType.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/serialize/LegacyPackCodecs.java": {
@@ -2677,6 +2677,1371 @@
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockPolygon.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPolygon.java",
     "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/FunctionalBedrockPart.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/FunctionalBedrockPart.java",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockPart.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/bedrock/BedrockPart.java",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/TextShowRender.java",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java",
+    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/12g.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/12g.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/308.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/308.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/30_06.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/30_06.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/338.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/338.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/357mag.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/357mag.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/40mm_grenade.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/40mm_grenade.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/45acp.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/45acp.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/46x30.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/46x30.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/50ae.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/50ae.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/50bmg.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/50bmg.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/556x45.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/556x45.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/57x28.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/57x28.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/58x42.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/58x42.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/68x51fury.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/68x51fury.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/762x25.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/762x25.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/762x39.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/762x39.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/762x54.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/762x54.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/9mm.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/9mm.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo_entity/40mm_grenade.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo_entity/40mm_grenade.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo_entity/rpg_rocket.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo_entity/rpg_rocket.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/bayonet_6h3_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/bayonet_6h3_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/bayonet_m9_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/bayonet_m9_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/deagle_golden_long_barrel_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/deagle_golden_long_barrel_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_cobra.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_cobra.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_cqr.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_cqr.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_magpul_afg_2_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_magpul_afg_2_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_osovets_black.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_osovets_black.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_rk0.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_rk0.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_rk1_b25u.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_rk1_b25u.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_rk6.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_rk6.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_se_5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_se_5.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_td.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_td.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_vertical_military_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_vertical_military_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_vertical_ranger_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_vertical_ranger_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_vertical_talon_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/grip_vertical_talon_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_compact_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_compact_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_lopro_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_lopro_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_nightstick_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_nightstick_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_peq15_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_peq15_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_peq6_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/laser_peq6_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_cthulhu_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_cthulhu_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_cyclone_d2_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_cyclone_d2_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_mastiff_sg_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_mastiff_sg_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_pioneer_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_pioneer_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_timeless50_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_timeless50_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_trex_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_brake_trex_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_choke_sg_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_choke_sg_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_compensator_trident_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_compensator_trident_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_duckbill_sg_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_duckbill_sg_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_knight_qd_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_knight_qd_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_mirage_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_mirage_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_phantom_s1_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_phantom_s1_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_ptilopsis_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_ptilopsis_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_sg_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_sg_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_ursus_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_ursus_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_vulture_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_vulture_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_wraith_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/muzzle_silencer_wraith_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_1873_6x_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_1873_6x_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_98k_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_98k_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_acog_ta31_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_acog_ta31_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_aug_default_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_aug_default_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_contender_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_contender_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_elcan_4x_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_elcan_4x_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_hamr_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_hamr_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_lpvo_1_6_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_lpvo_1_6_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_mk5hd_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_mk5hd_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_qmk152_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_qmk152_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_retro_2x_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_retro_2x_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_scout_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_scout_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_standard_8x_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_standard_8x_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_vudu_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/scope_vudu_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_552_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_552_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_acro_pistol_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_acro_pistol_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_acro_rifle_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_acro_rifle_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_coyote_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_coyote_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_deltapoint_pistol_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_deltapoint_pistol_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_deltapoint_rifle_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_deltapoint_rifle_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_exp3_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_exp3_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_fastfire_pistol_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_fastfire_pistol_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_fastfire_rifle_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_fastfire_rifle_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_okp7_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_okp7_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_p90_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_p90_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_pk06_pistol_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_pk06_pistol_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_pk06_rifle_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_pk06_rifle_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_rmr_dot_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_rmr_dot_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_sro_dot_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_sro_dot_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_srs_02_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_srs_02_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_t1_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_t1_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_t2_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_t2_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_uh1_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/sight_uh1_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_ak12_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_ak12_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_carbon_bone_c5_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_carbon_bone_c5_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_heavy_spas_12_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_heavy_spas_12_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_hk_slim_line_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_hk_slim_line_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_m4ss_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_m4ss_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_militech_b5_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_militech_b5_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_moe_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_moe_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_ripstock_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_ripstock_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_sba3_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_sba3_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_tactical_ar_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_tactical_ar_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_tactical_spas_12_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/stock_tactical_spas_12_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/block/ammo_workbench.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/block/ammo_workbench.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/block/attachment_workbench.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/block/attachment_workbench.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/block/gun_smith_table.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/block/gun_smith_table.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/aa12_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/aa12_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/ai_awp_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/ai_awp_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/ak47_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/ak47_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/aug_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/aug_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/b93r_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/b93r_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/cz75_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/cz75_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/db_long_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/db_long_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/db_short_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/db_short_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/deagle_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/deagle_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/deagle_golden_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/deagle_golden_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/fn_evolys_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/fn_evolys_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/fn_fal_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/fn_fal_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/g36k_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/g36k_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/glock_17_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/glock_17_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk416a5_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk416a5_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk416d_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk416d_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk_g3_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk_g3_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk_mk23_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk_mk23_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk_mp5a5_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/hk_mp5a5_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/kar98_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/kar98_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lonetrail_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lonetrail_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m1014_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m1014_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m107_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m107_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m16a1_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m16a1_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m16a4_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m16a4_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m1911_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m1911_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m249_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m249_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m320_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m320_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m4a1_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m4a1_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m700_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m700_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m870_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m870_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m95_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m95_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m9a4_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/m9a4_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/minigun_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/minigun_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/mk14_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/mk14_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/p320_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/p320_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/p90_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/p90_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/qbz_191_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/qbz_191_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/qbz_95_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/qbz_95_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/rhino357_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/rhino357_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/rpg7_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/rpg7_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/rpk_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/rpk_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/scar_h_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/scar_h_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/scar_l_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/scar_l_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/sks_tactical_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/sks_tactical_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/spas_12_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/spas_12_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/spr15hb_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/spr15hb_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/springfield1873_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/springfield1873_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/taurus500_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/taurus500_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/taurus943_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/taurus943_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/timeless50_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/timeless50_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/type_81_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/type_81_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/ump45_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/ump45_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/uzi_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/uzi_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/vector45_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/vector45_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/12g_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/12g_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/22wmr_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/22wmr_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/308_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/308_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/30_06_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/30_06_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/357mag_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/357mag_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/40mm_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/40mm_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/45acp_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/45acp_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/46x30_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/46x30_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/500mag_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/500mag_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/50ae_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/50ae_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/50bmg_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/50bmg_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/545x39_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/545x39_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/556x45_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/556x45_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/57x28_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/57x28_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/58x42_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/58x42_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/762x25_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/762x25_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/762x39_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/762x39_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/762x54_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/762x54_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/9mm_shell.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/shell/9mm_shell.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/laser_compact.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/laser_compact.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/laser_lopro.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/laser_lopro.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/laser_nightstick.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/laser_nightstick.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_acog_ta31.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_acog_ta31.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_elcan_4x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_elcan_4x.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_hamr.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_hamr.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_lpvo_1_6.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_lpvo_1_6.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_mk5hd.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_mk5hd.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_qmk152_geo.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_qmk152_geo.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_retro_2x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_retro_2x.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_scout.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_scout.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_standard_8x.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_standard_8x.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_vudu.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/scope_vudu.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_552.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_552.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_acro_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_acro_pistol.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_acro_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_acro_rifle.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_coyote.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_coyote.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_deltapoint_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_deltapoint_pistol.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_deltapoint_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_deltapoint_rifle.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_exp3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_exp3.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_fastfire_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_fastfire_pistol.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_fastfire_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_fastfire_rifle.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_okp7.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_okp7.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_pk06_pistol.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_pk06_pistol.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_pk06_rifle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_pk06_rifle.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_rmr_dot.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_rmr_dot.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_sro_dot.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_sro_dot.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_srs_02.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_srs_02.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_t1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_t1.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_t2.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_t2.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_uh1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/attachment/lod/sight_uh1.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/aa12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/aa12.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/ai_awp.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/ai_awp.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/ak47.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/ak47.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/aug.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/aug.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/b93r.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/b93r.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/cz75.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/cz75.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/db_long.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/db_long.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/db_short.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/db_short.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/deagle.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/deagle.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/deagle_golden.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/deagle_golden.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/fn_evolys.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/fn_evolys.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/fn_fal.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/fn_fal.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/g36k.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/g36k.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/glock_17.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/glock_17.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk416a5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk416a5.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk416d.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk416d.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk_g3.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk_g3.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk_mk23.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk_mk23.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk_mp5a5.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/hk_mp5a5.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/kar98.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/kar98.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/lonetrail.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/lonetrail.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m1014.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m1014.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m107.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m107.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m16a1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m16a1.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m16a4.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m16a4.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m1911.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m1911.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m249.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m249.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m320.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m320.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m4a1.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m4a1.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m700.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m700.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m870.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m870.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m95.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m95.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m9a4.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/m9a4.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/minigun.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/minigun.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/mk14.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/mk14.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/p320.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/p320.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/p90.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/p90.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/qbz_191.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/qbz_191.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/qbz_95.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/qbz_95.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/rhino357.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/rhino357.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/rpg7.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/rpg7.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/rpk.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/rpk.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/scar_h.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/scar_h.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/scar_l.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/scar_l.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/sks_tactical.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/sks_tactical.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/spas_12.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/spas_12.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/spr15hb.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/spr15hb.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/springfield1873.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/springfield1873.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/taurus500.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/taurus500.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/taurus943.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/taurus943.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/timeless50.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/timeless50.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/type_81.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/type_81.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/ump45.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/ump45.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/uzi.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/uzi.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/vector45.json": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/gun/lod/vector45.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/models/bedrock/basic_bullet.json": {
+    "implementation": "src/main/resources/assets/tacz/models/bedrock/basic_bullet.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/models/bedrock/gun_smith_table.json": {
+    "implementation": "src/main/resources/assets/tacz/models/bedrock/gun_smith_table.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/models/bedrock/statue.json": {
+    "implementation": "src/main/resources/assets/tacz/models/bedrock/statue.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/models/bedrock/target.json": {
+    "implementation": "src/main/resources/assets/tacz/models/bedrock/target.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "resource:src/main/resources/assets/tacz/models/bedrock/target_minecart.json": {
+    "implementation": "src/main/resources/assets/tacz/models/bedrock/target_minecart.json; BedrockModel and VertexCapture",
+    "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
     "status": "in progress"
   }
 }

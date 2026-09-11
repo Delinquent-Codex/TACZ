@@ -1,0 +1,412 @@
+Compiled from "MinecartRenderer.java"
+public class net.minecraft.client.renderer.entity.MinecartRenderer<T extends net.minecraft.world.entity.vehicle.AbstractMinecart> extends net.minecraft.client.renderer.entity.EntityRenderer<T> {
+  private static final net.minecraft.resources.ResourceLocation f_115402_;
+
+  protected final net.minecraft.client.model.EntityModel<T> f_115401_;
+
+  private final net.minecraft.client.renderer.block.BlockRenderDispatcher f_234646_;
+
+  public net.minecraft.client.renderer.entity.MinecartRenderer(net.minecraft.client.renderer.entity.EntityRendererProvider$Context, net.minecraft.client.model.geom.ModelLayerLocation);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #27                 // Method net/minecraft/client/renderer/entity/EntityRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;)V
+       5: aload_0
+       6: ldc           #28                 // float 0.7f
+       8: putfield      #32                 // Field f_114477_:F
+      11: aload_0
+      12: new           #34                 // class net/minecraft/client/model/MinecartModel
+      15: dup
+      16: aload_1
+      17: aload_2
+      18: invokevirtual #38                 // Method net/minecraft/client/renderer/entity/EntityRendererProvider$Context.m_174023_:(Lnet/minecraft/client/model/geom/ModelLayerLocation;)Lnet/minecraft/client/model/geom/ModelPart;
+      21: invokespecial #41                 // Method net/minecraft/client/model/MinecartModel."<init>":(Lnet/minecraft/client/model/geom/ModelPart;)V
+      24: putfield      #43                 // Field f_115401_:Lnet/minecraft/client/model/EntityModel;
+      27: aload_0
+      28: aload_1
+      29: invokevirtual #47                 // Method net/minecraft/client/renderer/entity/EntityRendererProvider$Context.m_234597_:()Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;
+      32: putfield      #49                 // Field f_234646_:Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;
+      35: return
+
+  public void m_7392_(T, float, float, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.MultiBufferSource, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: fload_2
+       3: fload_3
+       4: aload         4
+       6: aload         5
+       8: iload         6
+      10: invokespecial #62                 // Method net/minecraft/client/renderer/entity/EntityRenderer.m_7392_:(Lnet/minecraft/world/entity/Entity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
+      13: aload         4
+      15: invokevirtual #68                 // Method com/mojang/blaze3d/vertex/PoseStack.m_85836_:()V
+      18: aload_1
+      19: invokevirtual #74                 // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_19879_:()I
+      22: i2l
+      23: ldc2_w        #75                 // long 493286711l
+      26: lmul
+      27: lstore        7
+      29: lload         7
+      31: lload         7
+      33: lmul
+      34: ldc2_w        #77                 // long 4392167121l
+      37: lmul
+      38: lload         7
+      40: ldc2_w        #79                 // long 98761l
+      43: lmul
+      44: ladd
+      45: lstore        7
+      47: lload         7
+      49: bipush        16
+      51: lshr
+      52: ldc2_w        #81                 // long 7l
+      55: land
+      56: l2f
+      57: ldc           #83                 // float 0.5f
+      59: fadd
+      60: ldc           #84                 // float 8.0f
+      62: fdiv
+      63: ldc           #83                 // float 0.5f
+      65: fsub
+      66: ldc           #85                 // float 0.004f
+      68: fmul
+      69: fstore        9
+      71: lload         7
+      73: bipush        20
+      75: lshr
+      76: ldc2_w        #81                 // long 7l
+      79: land
+      80: l2f
+      81: ldc           #83                 // float 0.5f
+      83: fadd
+      84: ldc           #84                 // float 8.0f
+      86: fdiv
+      87: ldc           #83                 // float 0.5f
+      89: fsub
+      90: ldc           #85                 // float 0.004f
+      92: fmul
+      93: fstore        10
+      95: lload         7
+      97: bipush        24
+      99: lshr
+     100: ldc2_w        #81                 // long 7l
+     103: land
+     104: l2f
+     105: ldc           #83                 // float 0.5f
+     107: fadd
+     108: ldc           #84                 // float 8.0f
+     110: fdiv
+     111: ldc           #83                 // float 0.5f
+     113: fsub
+     114: ldc           #85                 // float 0.004f
+     116: fmul
+     117: fstore        11
+     119: aload         4
+     121: fload         9
+     123: fload         10
+     125: fload         11
+     127: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.m_252880_:(FFF)V
+     130: fload_3
+     131: f2d
+     132: aload_1
+     133: getfield      #93                 // Field net/minecraft/world/entity/vehicle/AbstractMinecart.f_19790_:D
+     136: aload_1
+     137: invokevirtual #97                 // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_20185_:()D
+     140: invokestatic  #103                // Method net/minecraft/util/Mth.m_14139_:(DDD)D
+     143: dstore        12
+     145: fload_3
+     146: f2d
+     147: aload_1
+     148: getfield      #106                // Field net/minecraft/world/entity/vehicle/AbstractMinecart.f_19791_:D
+     151: aload_1
+     152: invokevirtual #109                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_20186_:()D
+     155: invokestatic  #103                // Method net/minecraft/util/Mth.m_14139_:(DDD)D
+     158: dstore        14
+     160: fload_3
+     161: f2d
+     162: aload_1
+     163: getfield      #112                // Field net/minecraft/world/entity/vehicle/AbstractMinecart.f_19792_:D
+     166: aload_1
+     167: invokevirtual #115                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_20189_:()D
+     170: invokestatic  #103                // Method net/minecraft/util/Mth.m_14139_:(DDD)D
+     173: dstore        16
+     175: ldc2_w        #116                // double 0.30000001192092896d
+     178: dstore        18
+     180: aload_1
+     181: dload         12
+     183: dload         14
+     185: dload         16
+     187: invokevirtual #121                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38179_:(DDD)Lnet/minecraft/world/phys/Vec3;
+     190: astore        20
+     192: fload_3
+     193: aload_1
+     194: getfield      #124                // Field net/minecraft/world/entity/vehicle/AbstractMinecart.f_19860_:F
+     197: aload_1
+     198: invokevirtual #128                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_146909_:()F
+     201: invokestatic  #132                // Method net/minecraft/util/Mth.m_14179_:(FFF)F
+     204: fstore        21
+     206: aload         20
+     208: ifnull        378
+     211: aload_1
+     212: dload         12
+     214: dload         14
+     216: dload         16
+     218: ldc2_w        #116                // double 0.30000001192092896d
+     221: invokevirtual #136                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38096_:(DDDD)Lnet/minecraft/world/phys/Vec3;
+     224: astore        22
+     226: aload_1
+     227: dload         12
+     229: dload         14
+     231: dload         16
+     233: ldc2_w        #137                // double -0.30000001192092896d
+     236: invokevirtual #136                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38096_:(DDDD)Lnet/minecraft/world/phys/Vec3;
+     239: astore        23
+     241: aload         22
+     243: ifnonnull     250
+     246: aload         20
+     248: astore        22
+     250: aload         23
+     252: ifnonnull     259
+     255: aload         20
+     257: astore        23
+     259: aload         4
+     261: aload         20
+     263: getfield      #145                // Field net/minecraft/world/phys/Vec3.f_82479_:D
+     266: dload         12
+     268: dsub
+     269: aload         22
+     271: getfield      #148                // Field net/minecraft/world/phys/Vec3.f_82480_:D
+     274: aload         23
+     276: getfield      #148                // Field net/minecraft/world/phys/Vec3.f_82480_:D
+     279: dadd
+     280: ldc2_w        #149                // double 2.0d
+     283: ddiv
+     284: dload         14
+     286: dsub
+     287: aload         20
+     289: getfield      #153                // Field net/minecraft/world/phys/Vec3.f_82481_:D
+     292: dload         16
+     294: dsub
+     295: invokevirtual #157                // Method com/mojang/blaze3d/vertex/PoseStack.m_85837_:(DDD)V
+     298: aload         23
+     300: aload         22
+     302: getfield      #145                // Field net/minecraft/world/phys/Vec3.f_82479_:D
+     305: dneg
+     306: aload         22
+     308: getfield      #148                // Field net/minecraft/world/phys/Vec3.f_82480_:D
+     311: dneg
+     312: aload         22
+     314: getfield      #153                // Field net/minecraft/world/phys/Vec3.f_82481_:D
+     317: dneg
+     318: invokevirtual #160                // Method net/minecraft/world/phys/Vec3.m_82520_:(DDD)Lnet/minecraft/world/phys/Vec3;
+     321: astore        24
+     323: aload         24
+     325: invokevirtual #163                // Method net/minecraft/world/phys/Vec3.m_82553_:()D
+     328: dconst_0
+     329: dcmpl
+     330: ifeq          378
+     333: aload         24
+     335: invokevirtual #167                // Method net/minecraft/world/phys/Vec3.m_82541_:()Lnet/minecraft/world/phys/Vec3;
+     338: astore        24
+     340: aload         24
+     342: getfield      #153                // Field net/minecraft/world/phys/Vec3.f_82481_:D
+     345: aload         24
+     347: getfield      #145                // Field net/minecraft/world/phys/Vec3.f_82479_:D
+     350: invokestatic  #173                // Method java/lang/Math.atan2:(DD)D
+     353: ldc2_w        #174                // double 180.0d
+     356: dmul
+     357: ldc2_w        #176                // double 3.141592653589793d
+     360: ddiv
+     361: d2f
+     362: fstore_2
+     363: aload         24
+     365: getfield      #148                // Field net/minecraft/world/phys/Vec3.f_82480_:D
+     368: invokestatic  #181                // Method java/lang/Math.atan:(D)D
+     371: ldc2_w        #182                // double 73.0d
+     374: dmul
+     375: d2f
+     376: fstore        21
+     378: aload         4
+     380: fconst_0
+     381: ldc           #184                // float 0.375f
+     383: fconst_0
+     384: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.m_252880_:(FFF)V
+     387: aload         4
+     389: getstatic     #190                // Field com/mojang/math/Axis.f_252436_:Lcom/mojang/math/Axis;
+     392: ldc           #191                // float 180.0f
+     394: fload_2
+     395: fsub
+     396: invokeinterface #195,  2          // InterfaceMethod com/mojang/math/Axis.m_252977_:(F)Lorg/joml/Quaternionf;
+     401: invokevirtual #199                // Method com/mojang/blaze3d/vertex/PoseStack.m_252781_:(Lorg/joml/Quaternionf;)V
+     404: aload         4
+     406: getstatic     #202                // Field com/mojang/math/Axis.f_252403_:Lcom/mojang/math/Axis;
+     409: fload         21
+     411: fneg
+     412: invokeinterface #195,  2          // InterfaceMethod com/mojang/math/Axis.m_252977_:(F)Lorg/joml/Quaternionf;
+     417: invokevirtual #199                // Method com/mojang/blaze3d/vertex/PoseStack.m_252781_:(Lorg/joml/Quaternionf;)V
+     420: aload_1
+     421: invokevirtual #205                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38176_:()I
+     424: i2f
+     425: fload_3
+     426: fsub
+     427: fstore        22
+     429: aload_1
+     430: invokevirtual #208                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38169_:()F
+     433: fload_3
+     434: fsub
+     435: fstore        23
+     437: fload         23
+     439: fconst_0
+     440: fcmpg
+     441: ifge          447
+     444: fconst_0
+     445: fstore        23
+     447: fload         22
+     449: fconst_0
+     450: fcmpl
+     451: ifle          487
+     454: aload         4
+     456: getstatic     #211                // Field com/mojang/math/Axis.f_252529_:Lcom/mojang/math/Axis;
+     459: fload         22
+     461: invokestatic  #215                // Method net/minecraft/util/Mth.m_14031_:(F)F
+     464: fload         22
+     466: fmul
+     467: fload         23
+     469: fmul
+     470: ldc           #216                // float 10.0f
+     472: fdiv
+     473: aload_1
+     474: invokevirtual #219                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38177_:()I
+     477: i2f
+     478: fmul
+     479: invokeinterface #195,  2          // InterfaceMethod com/mojang/math/Axis.m_252977_:(F)Lorg/joml/Quaternionf;
+     484: invokevirtual #199                // Method com/mojang/blaze3d/vertex/PoseStack.m_252781_:(Lorg/joml/Quaternionf;)V
+     487: aload_1
+     488: invokevirtual #222                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38183_:()I
+     491: istore        24
+     493: aload_1
+     494: invokevirtual #226                // Method net/minecraft/world/entity/vehicle/AbstractMinecart.m_38178_:()Lnet/minecraft/world/level/block/state/BlockState;
+     497: astore        25
+     499: aload         25
+     501: invokevirtual #232                // Method net/minecraft/world/level/block/state/BlockState.m_60799_:()Lnet/minecraft/world/level/block/RenderShape;
+     504: getstatic     #238                // Field net/minecraft/world/level/block/RenderShape.INVISIBLE:Lnet/minecraft/world/level/block/RenderShape;
+     507: if_acmpeq     582
+     510: aload         4
+     512: invokevirtual #68                 // Method com/mojang/blaze3d/vertex/PoseStack.m_85836_:()V
+     515: ldc           #239                // float 0.75f
+     517: fstore        26
+     519: aload         4
+     521: ldc           #239                // float 0.75f
+     523: ldc           #239                // float 0.75f
+     525: ldc           #239                // float 0.75f
+     527: invokevirtual #242                // Method com/mojang/blaze3d/vertex/PoseStack.m_85841_:(FFF)V
+     530: aload         4
+     532: ldc           #243                // float -0.5f
+     534: iload         24
+     536: bipush        8
+     538: isub
+     539: i2f
+     540: ldc           #244                // float 16.0f
+     542: fdiv
+     543: ldc           #83                 // float 0.5f
+     545: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.m_252880_:(FFF)V
+     548: aload         4
+     550: getstatic     #190                // Field com/mojang/math/Axis.f_252436_:Lcom/mojang/math/Axis;
+     553: ldc           #245                // float 90.0f
+     555: invokeinterface #195,  2          // InterfaceMethod com/mojang/math/Axis.m_252977_:(F)Lorg/joml/Quaternionf;
+     560: invokevirtual #199                // Method com/mojang/blaze3d/vertex/PoseStack.m_252781_:(Lorg/joml/Quaternionf;)V
+     563: aload_0
+     564: aload_1
+     565: fload_3
+     566: aload         25
+     568: aload         4
+     570: aload         5
+     572: iload         6
+     574: invokevirtual #249                // Method m_7002_:(Lnet/minecraft/world/entity/vehicle/AbstractMinecart;FLnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
+     577: aload         4
+     579: invokevirtual #252                // Method com/mojang/blaze3d/vertex/PoseStack.m_85849_:()V
+     582: aload         4
+     584: ldc           #253                // float -1.0f
+     586: ldc           #253                // float -1.0f
+     588: fconst_1
+     589: invokevirtual #242                // Method com/mojang/blaze3d/vertex/PoseStack.m_85841_:(FFF)V
+     592: aload_0
+     593: getfield      #43                 // Field f_115401_:Lnet/minecraft/client/model/EntityModel;
+     596: aload_1
+     597: fconst_0
+     598: fconst_0
+     599: fconst_0
+     600: fconst_0
+     601: fconst_0
+     602: invokevirtual #259                // Method net/minecraft/client/model/EntityModel.m_6973_:(Lnet/minecraft/world/entity/Entity;FFFFF)V
+     605: aload         5
+     607: aload_0
+     608: getfield      #43                 // Field f_115401_:Lnet/minecraft/client/model/EntityModel;
+     611: aload_0
+     612: aload_1
+     613: invokevirtual #263                // Method m_5478_:(Lnet/minecraft/world/entity/vehicle/AbstractMinecart;)Lnet/minecraft/resources/ResourceLocation;
+     616: invokevirtual #267                // Method net/minecraft/client/model/EntityModel.m_103119_:(Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+     619: invokeinterface #271,  2          // InterfaceMethod net/minecraft/client/renderer/MultiBufferSource.m_6299_:(Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+     624: astore        26
+     626: aload_0
+     627: getfield      #43                 // Field f_115401_:Lnet/minecraft/client/model/EntityModel;
+     630: aload         4
+     632: aload         26
+     634: iload         6
+     636: getstatic     #277                // Field net/minecraft/client/renderer/texture/OverlayTexture.f_118083_:I
+     639: fconst_1
+     640: fconst_1
+     641: fconst_1
+     642: fconst_1
+     643: invokevirtual #281                // Method net/minecraft/client/model/EntityModel.m_7695_:(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIFFFF)V
+     646: aload         4
+     648: invokevirtual #252                // Method com/mojang/blaze3d/vertex/PoseStack.m_85849_:()V
+     651: return
+
+  public net.minecraft.resources.ResourceLocation m_5478_(T);
+    Code:
+       0: getstatic     #317                // Field f_115402_:Lnet/minecraft/resources/ResourceLocation;
+       3: areturn
+
+  protected void m_7002_(T, float, net.minecraft.world.level.block.state.BlockState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.MultiBufferSource, int);
+    Code:
+       0: aload_0
+       1: getfield      #49                 // Field f_234646_:Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;
+       4: aload_3
+       5: aload         4
+       7: aload         5
+       9: iload         6
+      11: getstatic     #277                // Field net/minecraft/client/renderer/texture/OverlayTexture.f_118083_:I
+      14: invokevirtual #325                // Method net/minecraft/client/renderer/block/BlockRenderDispatcher.m_110912_:(Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V
+      17: return
+
+  public net.minecraft.resources.ResourceLocation m_5478_(net.minecraft.world.entity.Entity);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #70                 // class net/minecraft/world/entity/vehicle/AbstractMinecart
+       5: invokevirtual #263                // Method m_5478_:(Lnet/minecraft/world/entity/vehicle/AbstractMinecart;)Lnet/minecraft/resources/ResourceLocation;
+       8: areturn
+
+  public void m_7392_(net.minecraft.world.entity.Entity, float, float, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.MultiBufferSource, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #70                 // class net/minecraft/world/entity/vehicle/AbstractMinecart
+       5: fload_2
+       6: fload_3
+       7: aload         4
+       9: aload         5
+      11: iload         6
+      13: invokevirtual #334                // Method m_7392_:(Lnet/minecraft/world/entity/vehicle/AbstractMinecart;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
+      16: return
+
+  static {};
+    Code:
+       0: new           #337                // class net/minecraft/resources/ResourceLocation
+       3: dup
+       4: ldc_w         #339                // String textures/entity/minecart.png
+       7: invokespecial #342                // Method net/minecraft/resources/ResourceLocation."<init>":(Ljava/lang/String;)V
+      10: putstatic     #317                // Field f_115402_:Lnet/minecraft/resources/ResourceLocation;
+      13: return
+}
