@@ -3,7 +3,7 @@ package com.tacz.guns.mixin.client;
 import net.minecraft.client.resources.language.ClientLanguage;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(ClientLanguage.class)
+@Mixin(value = ClientLanguage.class, remap = false)
 public class LanguageMixin {
 //    @Inject(method = "getOrDefault(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", at = @At(value = "HEAD"), cancellable = true)
 //    public void getCustomLanguage(String key, String defaultValue, CallbackInfoReturnable<String> call) {

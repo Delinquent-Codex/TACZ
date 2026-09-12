@@ -1,6 +1,7 @@
 package com.tacz.guns.client.init;
 
 import com.tacz.guns.GunMod;
+import com.tacz.guns.client.renderer.TaczRenderTypes;
 import com.tacz.guns.client.renderer.item.AmmoBoxModelProperty;
 import com.tacz.guns.client.renderer.item.TaczItemModel;
 import com.tacz.guns.item.AmmoBoxItem;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 public final class ClientItemModels {
     @SubscribeEvent
     public static void register(RegisterClientReloadListenersEvent event) {
+        TaczRenderTypes.registerPipelines();
         // This synchronous constructor event precedes the first resource preparation. Client setup is concurrent with it.
         ItemModels.ID_MAPPER.put(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "item"), TaczItemModel.Unbaked.CODEC);
         RangeSelectItemModelProperties.ID_MAPPER.put(AmmoBoxItem.PROPERTY_NAME, AmmoBoxModelProperty.CODEC);

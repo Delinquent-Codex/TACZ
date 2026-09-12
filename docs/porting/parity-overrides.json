@@ -276,7 +276,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/RenderHeadShotAABB.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/RenderHeadShotAABB.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/TickAnimationEvent.java": {
@@ -466,17 +466,17 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/AttachmentRender.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/BeamRenderer.java",
-    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/functional/MuzzleFlashRender.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/functional/ShellRender.java": {
@@ -691,17 +691,17 @@
   },
   "source:src/main/java/com/tacz/guns/client/tooltip/ClientAttachmentItemTooltip.java": {
     "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientAttachmentItemTooltip.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/tooltip/ClientBlockItemTooltip.java": {
     "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientBlockItemTooltip.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/tooltip/ClientGunTooltip.java": {
     "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientGunTooltip.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/ar/ARCompat.java": {
@@ -1151,27 +1151,27 @@
   },
   "source:src/main/java/com/tacz/guns/mixin/client/GameRendererMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/GameRendererMixin.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/ItemInHandRendererMixin.java",
-    "validation": "Target first-person/rendering foundation. Selected lifecycle, MAE, CPU geometry and item-model codecs have focused checks; full compile fails and runtime/visual parity remains unverified. See verification.md.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/client/MouseHandlerMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/MouseHandlerMixin.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/client/PlayerModelMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/PlayerModelMixin.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/client/SoundManagerPreparationsMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/SoundManagerPreparationsMixin.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/IMessage.java": {
@@ -4042,6 +4042,111 @@
   "resource:src/main/resources/assets/tacz/models/bedrock/target_minecart.json": {
     "implementation": "src/main/resources/assets/tacz/models/bedrock/target_minecart.json; BedrockModel and VertexCapture",
     "validation": "Production loader/model emitted complete finite CPU vertices in verifyPortingWorldRendering; textures, specialized effects, animation and GPU/runtime parity remain unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/init/ClientItemModels.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/init/ClientItemModels.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/LeftHandRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/LeftHandRender.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/model/functional/RightHandRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/model/functional/RightHandRender.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/TaczRenderTypes.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/TaczRenderTypes.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/other/HumanoidOffhandRender.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/other/HumanoidOffhandRender.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/tooltip/ClientAmmoBoxTooltip.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/tooltip/ClientAmmoBoxTooltip.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/ar/AcceleratedBeamRenderer.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/ar/AcceleratedBeamRenderer.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/AbstractButtonMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/AbstractButtonMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/HumanoidModelMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/HumanoidModelMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/ItemInHandLayerMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/ItemInHandLayerMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/LanguageMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/LanguageMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/LocalPlayerMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/LocalPlayerMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/StairBlockAccessor.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/StairBlockAccessor.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/client/ar/BedrockPartMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/client/ar/BedrockPartMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/common/EntityWalkMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/common/EntityWalkMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/common/ItemStackMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/common/ItemStackMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/common/LivingEntityMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/common/LivingEntityMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/common/ServerGamePacketListenerImplMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/common/ServerGamePacketListenerImplMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/common/ServerPlayNetHandlerMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/common/ServerPlayNetHandlerMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java": {
+    "implementation": "src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/client/renderer/other/GunHurtBobTweak.java": {
+    "implementation": "src/main/java/com/tacz/guns/client/renderer/other/GunHurtBobTweak.java",
+    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41\u201346.",
     "status": "in progress"
   }
 }

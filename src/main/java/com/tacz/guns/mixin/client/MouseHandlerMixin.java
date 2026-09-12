@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.Optional;
 
-@Mixin(MouseHandler.class)
+@Mixin(value = MouseHandler.class, remap = false)
 public class MouseHandlerMixin {
     @WrapOperation(method = "turnPlayer", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;turn(DD)V"))
     public void reduceSensitivity(LocalPlayer player, double yaw, double pitch, Operation<Void> original) {

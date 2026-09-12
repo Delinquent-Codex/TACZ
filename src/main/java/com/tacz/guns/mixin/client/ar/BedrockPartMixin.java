@@ -26,7 +26,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Map;
 
-@Mixin(BedrockPart.class)
+@Mixin(value = BedrockPart.class, remap = false)
 public class BedrockPartMixin implements IAcceleratedRenderer<Void> {
 
 	@Unique

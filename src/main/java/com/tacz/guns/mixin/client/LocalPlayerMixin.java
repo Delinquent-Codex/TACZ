@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @SuppressWarnings("ALL")
-@Mixin(LocalPlayer.class)
+@Mixin(value = LocalPlayer.class, remap = false)
 public abstract class LocalPlayerMixin implements IClientPlayerGunOperator {
     private final @Unique LocalPlayer tac$player = (LocalPlayer) (Object) this;
     private final @Unique LocalPlayerDataHolder tac$data = new LocalPlayerDataHolder(tac$player);

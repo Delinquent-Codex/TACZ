@@ -11,3 +11,5 @@ Full compilation, model-library port, rendering, networking, lifecycle migration
 Preserve upstream attribution: code GPL-3.0; assets CC BY-NC-ND 4.0, as specified in the original README and metadata. Original textures, sounds and Bedrock model assets remain; Minecraft-facing item-model definitions, recipe paths and JSON formats have been migrated for local validation. Any future adaptation/distribution permission question must be recorded separately. No public push, upload, release or publication has been performed.
 
 Final installation instructions, source revision, artifact path/hash and supported migration claims will be supplied only after an actual release candidate passes its gates.
+
+Development continuation adds native laser/flash submissions, carried-item states, camera/arm hooks and tooltip extraction. Focused effects and bytecode checks pass; no GPU or packaged-runtime support is claimed. Main compilation currently stops at 99 early missing-type diagnostics, before the remaining method failures can all be enumerated. The old humanoid animation injection, scope/stencil, UI and optional integrations remain unfinished.

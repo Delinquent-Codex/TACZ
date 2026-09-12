@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 @SuppressWarnings("All")
-@Mixin(LivingEntity.class)
+@Mixin(value = LivingEntity.class, remap = false)
 public abstract class LivingEntityMixin extends Entity implements IGunOperator, KnockBackModifier {
     private final @Unique LivingEntity tacz$shooter = (LivingEntity) (Object) this;
     private final @Unique ShooterDataHolder tacz$data = new ShooterDataHolder();

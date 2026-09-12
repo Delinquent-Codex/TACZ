@@ -4,87 +4,65 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.client.resource.pojo.display.gun.LayerGunShow;
-import com.tacz.guns.util.math.MathUtil;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import org.joml.Quaternionf;
-import org.joml.Vector3f;
 
-public class HumanoidOffhandRender {
-    public static void renderGun(LivingEntity entity, PoseStack matrixStack, MultiBufferSource buffer, int packedLight) {
-        renderOffhandGun(entity, matrixStack, buffer, packedLight);
-        renderHotbarGun(entity, matrixStack, buffer, packedLight);
+import java.util.ArrayList;
+import java.util.List;
+
+/** Extracts inventory and pack data while the entity is available; submission owns only render state. */
+public final class HumanoidOffhandRender {
+    public record Gun(ItemStackRenderState item, LayerGunTransform transform) {}
+    public record State(boolean localPlayer, boolean mainHandGun, List<Gun> carriedGuns) {
+        public State { carriedGuns = List.copyOf(carriedGuns); }
     }
 
-    private static void renderOffhandGun(LivingEntity entity, PoseStack matrixStack, MultiBufferSource buffer, int packedLight) {
-        ItemStack itemStack = entity.getOffhandItem();
-        if (itemStack.isEmpty()) {
-            return;
+    public static State extract(LivingEntity entity, ItemModelResolver resolver) {
+        List<Gun> guns = new ArrayList<>();
+        ItemStack offhand = entity.getOffhandItem();
+        if (IGun.getIGunOrNull(offhand) != null) {
+            TimelessAPI.getGunDisplay(offhand).ifPresent(display -> add(guns, offhand, display.getOffhandShow(), entity, resolver));
         }
-        IGun iGun = IGun.getIGunOrNull(itemStack);
-        if (iGun == null) {
-            return;
-        }
-        TimelessAPI.getGunDisplay(itemStack).ifPresent(index -> {
-            LayerGunShow offhandShow = index.getOffhandShow();
-            renderGunItem(entity, matrixStack, buffer, packedLight, itemStack, offhandShow);
-        });
-    }
-
-    private static void renderHotbarGun(LivingEntity entity, PoseStack matrixStack, MultiBufferSource buffer, int packedLight) {
-        if (!(entity instanceof Player player)) {
-            return;
-        }
-        Inventory inventory = player.getInventory();
-        for (int i = 0; i < 9; i++) {
-            if (i == inventory.selected) {
-                continue;
+        if (entity instanceof Player player) {
+            var inventory = player.getInventory();
+            for (int slot = 0; slot < 9; slot++) {
+                if (slot == inventory.getSelectedSlot()) continue;
+                ItemStack stack = inventory.getItem(slot);
+                if (IGun.getIGunOrNull(stack) == null) continue;
+                int index = slot;
+                TimelessAPI.getGunDisplay(stack).ifPresent(display -> {
+                    var hotbar = display.getHotbarShow();
+                    if (hotbar != null && hotbar.containsKey(index)) add(guns, stack, hotbar.get(index), entity, resolver);
+                });
             }
-            ItemStack stack = inventory.getItem(i);
-            renderHotbarGun(entity, matrixStack, buffer, packedLight, stack, i);
         }
+        return new State(entity == Minecraft.getInstance().player, IGun.mainHandHoldGun(entity), guns);
     }
 
-    private static void renderHotbarGun(LivingEntity entity, PoseStack matrixStack, MultiBufferSource buffer, int packedLight, ItemStack itemStack, int inventoryIndex) {
-        if (itemStack.isEmpty()) {
-            return;
-        }
-        IGun iGun = IGun.getIGunOrNull(itemStack);
-        if (iGun == null) {
-            return;
-        }
-        TimelessAPI.getGunDisplay(itemStack).ifPresent(display -> {
-            var hotbarShow = display.getHotbarShow();
-            if (hotbarShow == null || hotbarShow.isEmpty()) {
-                return;
-            }
-            if (!hotbarShow.containsKey(inventoryIndex)) {
-                return;
-            }
-            LayerGunShow gunShow = hotbarShow.get(inventoryIndex);
-            renderGunItem(entity, matrixStack, buffer, packedLight, itemStack, gunShow);
-        });
+    private static void add(List<Gun> guns, ItemStack stack, LayerGunShow show, LivingEntity entity, ItemModelResolver resolver) {
+        if (show == null) return;
+        ItemStackRenderState item = new ItemStackRenderState();
+        // Baseline renderStatic used the world/entity seed without a living owner.
+        resolver.updateForTopItem(item, stack.copy(), ItemDisplayContext.FIXED, entity.level(), null, entity.getId());
+        guns.add(new Gun(item, LayerGunTransform.capture(show.getPos(), show.getRotate(), show.getScale())));
     }
 
-    private static void renderGunItem(LivingEntity entity, PoseStack matrixStack, MultiBufferSource buffer, int packedLight, ItemStack itemStack, LayerGunShow offhandShow) {
-        ItemRenderer renderer = Minecraft.getInstance().getItemRenderer();
-        Vector3f pos = offhandShow.getPos();
-        Vector3f rotate = offhandShow.getRotate();
-        Vector3f scale = offhandShow.getScale();
-        matrixStack.pushPose();
-        matrixStack.translate(-pos.x() / 16f, 1.5 - pos.y() / 16f, pos.z() / 16f);
-        matrixStack.scale(-scale.x(), -scale.y(), scale.z());
-        Quaternionf rotation = new Quaternionf();
-        MathUtil.toQuaternion((float) Math.toRadians(rotate.x), (float) Math.toRadians(rotate.y), (float) Math.toRadians(rotate.z), rotation);
-        matrixStack.mulPose(rotation);
-        renderer.renderStatic(itemStack, ItemDisplayContext.FIXED, packedLight, OverlayTexture.NO_OVERLAY, matrixStack, buffer, entity.level(), entity.getId());
-        matrixStack.popPose();
+    public static void renderGun(State state, PoseStack pose, SubmitNodeCollector collector, int light, int outline) {
+        for (Gun gun : state.carriedGuns()) {
+            pose.pushPose();
+            try {
+                gun.transform().apply(pose);
+                gun.item().submit(pose, collector, light, OverlayTexture.NO_OVERLAY, outline);
+            } finally {
+                pose.popPose();
+            }
+        }
     }
 }

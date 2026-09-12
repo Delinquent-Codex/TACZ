@@ -1844,7 +1844,7 @@
     "git_blob": "a4db7db1a78e3a160dbe70566007277cfaebfb04",
     "checkout_sha256": "3da75b6f13ac1f82d3209b4964e089f6454d9d870b1f0850dc02a56bda7b380a",
     "bytes": 1874,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/functional/LeftHandRender.java"
   },
   {
@@ -1860,7 +1860,7 @@
     "git_blob": "b386b2b07a5fe658915615f93254a190ee16b332",
     "checkout_sha256": "5afbb9db6574ee950a92375bd4b4e827b59c49963037009bf35e877dcbf7d7a0",
     "bytes": 1877,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/model/functional/RightHandRender.java"
   },
   {
@@ -2084,7 +2084,7 @@
     "git_blob": "21d77b28796eaf98a1ff9fd521c59e77f24f352b",
     "checkout_sha256": "ed8db5fd58647452670d23cfbded65f8800ea9daee260c7dc8872592ada3d29f",
     "bytes": 1521,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/renderer/other/GunHurtBobTweak.java"
   },
   {
@@ -2092,7 +2092,7 @@
     "git_blob": "c5c9791a182aa8bdf3ea4c1a093c4e0d5ad5d3d9",
     "checkout_sha256": "064dec44e6dbdc530d177d80b766d33ded63131d0a831adb70e09a0c4d3918e6",
     "bytes": 4152,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/renderer/other/HumanoidOffhandRender.java"
   },
   {
@@ -2692,7 +2692,7 @@
     "git_blob": "c51f77eeeab8d48db1d68e5b140fbc13bb53ddb8",
     "checkout_sha256": "c8a48cc345316a1d0b4a0af3d146be3d952ee3299ad395cb1b3afd2b5e8ddaf4",
     "bytes": 1921,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/tooltip/ClientAmmoBoxTooltip.java"
   },
   {
@@ -2828,7 +2828,7 @@
     "git_blob": "6a5cbe790ec8cd1960f2daa45d7767a9e6ca8623",
     "checkout_sha256": "2ab89eb80791766019cb305dd9e84c461ad3b1036916517868c97b51adee0a4f",
     "bytes": 3374,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/ar/AcceleratedBeamRenderer.java"
   },
   {
@@ -4012,7 +4012,7 @@
     "git_blob": "2d7c5e1ee4bbe3ed827dfb0d7185178cee1dffb0",
     "checkout_sha256": "b8c01063451a77ffd12926cfa8eb803ee83f241f294184100803abd31783c469",
     "bytes": 799,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/AbstractButtonMixin.java"
   },
   {
@@ -4028,7 +4028,7 @@
     "git_blob": "8a5ace69fdc02c876c26e52369d3f9201efd9960",
     "checkout_sha256": "2b12a983b0ea3d0044c12a956959e92388317ecefa2a3d49b0b841009140f0d1",
     "bytes": 1335,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/HumanoidModelMixin.java"
   },
   {
@@ -4036,7 +4036,7 @@
     "git_blob": "1618a0ca8ad0b201e42aac4446fc02a6ab981bb9",
     "checkout_sha256": "62c2eade41bcf19ddec2a27a248714d851c35020684cfb3d613c58afe98932be",
     "bytes": 3160,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/ItemInHandLayerMixin.java"
   },
   {
@@ -4052,7 +4052,7 @@
     "git_blob": "235eb7ea23a6921e250cb68d09b102d523d98254",
     "checkout_sha256": "bf7329dc5caec3c70aeebe35b7a7ac47cef6aba8458872a98364f40b6da261f3",
     "bytes": 1725,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/LanguageMixin.java"
   },
   {
@@ -4060,7 +4060,7 @@
     "git_blob": "b147f6a97323c13cdaa87da5b8a0ea049dd26bbe",
     "checkout_sha256": "c68b852e78baeb3f793598979cd56e161284ae6182109fadfbcbea9959e1b3a7",
     "bytes": 5100,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/LocalPlayerMixin.java"
   },
   {
@@ -4092,7 +4092,7 @@
     "git_blob": "dd23b1f4fb633f523b146e929ae85b6969ce5394",
     "checkout_sha256": "76024360a688762ea0b1f838c968371c8a70a62a628b3256e631af3705b8d425",
     "bytes": 463,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/StairBlockAccessor.java"
   },
   {
@@ -4108,7 +4108,7 @@
     "git_blob": "6fdc924e7a2e0d65c4ee78623fd9adef7583d8e6",
     "checkout_sha256": "35676fdb154df9f7b634f4fb3b8cb0dd46fe2c7ce17ac99a358be0c24a1ead02",
     "bytes": 3590,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/ar/BedrockPartMixin.java"
   },
   {
@@ -4116,7 +4116,7 @@
     "git_blob": "f189d6d1a14d1dd28428cd552004e704d5d1efd6",
     "checkout_sha256": "001521394ea791a52908ed86af5a10fb60e5ff09654d6dc73044a39d4eabd80f",
     "bytes": 9233,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/common/LivingEntityMixin.java"
   },
   {
@@ -4124,7 +4124,7 @@
     "git_blob": "1ee38b52fa5c5bb0b16aff4794fa239116feb942",
     "checkout_sha256": "43a2db46b0e99bfd94c04474093f9f4b8698cccb11e3ef74b7f321161e5072af",
     "bytes": 946,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/common/ServerGamePacketListenerImplMixin.java"
   },
   {
@@ -4132,7 +4132,7 @@
     "git_blob": "465076d1c9ca4a7e3ad75c5463953a18aad73547",
     "checkout_sha256": "d87122463a93a20a1f58a31194c1e2eff514b1337d8f36117961fdcbc9267710",
     "bytes": 1113,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/common/ServerPlayNetHandlerMixin.java"
   },
   {
@@ -4140,7 +4140,7 @@
     "git_blob": "a8edbd223e4d7b62743b2b5e93dd016c8b6db192",
     "checkout_sha256": "8a7d4559509aeae3ab121c3cddc1ad9531ffc994f7217b3d97efb4911e32a6cf",
     "bytes": 708,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java"
   },
   {
@@ -33484,7 +33484,7 @@
     "git_blob": "f6c1382fff6e5bec1097c8be5828358382cc5b59",
     "checkout_sha256": "01e2938518afeb804a98f1ff37f7ac5b92bdd7201cb0267b1f21d6bc683541ea",
     "bytes": 324,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/tacz.compat.acceleratedrendering.mixins.json"
   },
   {

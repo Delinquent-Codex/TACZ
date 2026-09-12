@@ -87,3 +87,13 @@ Bullet holes use native SingleQuadParticle terrain quads; their public provider 
 LegacyWalkProvider/LegacyWalkDistance restore the source walkDist semantics for scripts and non-player firing spread. The required EntityWalkMixin captures resolved movement before getBlockSpeedFactor and snapshots at baseTick. It ignores vertical movement, retains source float rounding, emission/passenger guards and TACZ's current-plus-delta extrapolation. It is transient per entity, like the original vanilla fields; no save schema is introduced. Hook bytecode is checked, while FML application and gameplay timing remain unverified.
 
 Mixin compatibilityLevel denotes supported class language features, not the Java runtime requirement. Exact target Mixin 0.8.7 supports named levels only through JAVA_21, and validates features with LanguageFeatures.scan. The new Java 25 class passes that scanner at JAVA_17. Java 25 remains the compiler/runtime toolchain; complete mixin/refmap packaging and all actual injections still require validation.
+
+## Effects and GUI extraction — 2026-09-11
+
+BeamRenderer keeps its configuration lookup and public entry points but submits geometry to the active RenderSubmission collector. The accelerated consumer is resolved during preparation; shader/rendering companion compatibility is still unverified. Muzzle flashes own copied shot inputs. Carried-gun rendering separates entity/inventory extraction from native item submission; LayerGunTransform copies all pack vectors.
+
+Custom tooltip implementations now implement getHeight(Font), extractText and extractImage with GuiGraphicsExtractor. Text alpha is explicit because the new GUI drops zero-alpha text. The first-person arm mixin targets AvatarRenderer.renderHand and does not copy transforms onto sleeves, which are now child parts.
+
+All target mixins declare remap=false and omit SRG refmaps because 26.2 ships named classes. Required injections remain required; this does not establish that every old descriptor has been migrated. StairBlockAccessor.invokeGetModelBlock remains as a default source bridge to the real base field. AbstractButton click timestamps use the new mouse event signature.
+
+Camera gun-hurt data is copied during Camera.extractRenderState. Bob hooks now consume CameraRenderState, and the hand render call scopes hand/world cancellation events with finally cleanup. The old getFov-based flag is removed because FOV calculation moved to Camera. The existing GunHurtBobTweak.onHurtBobTweak entry point delegates to the same captured-state implementation. Live spectator/local/remote views and event ordering still need validation.

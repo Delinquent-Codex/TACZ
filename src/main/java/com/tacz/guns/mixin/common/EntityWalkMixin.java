@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(Entity.class)
+@Mixin(value = Entity.class, remap = false)
 public abstract class EntityWalkMixin implements LegacyWalkProvider {
     @Unique private final LegacyWalkDistance tacz$walkDistance = new LegacyWalkDistance();
     @Shadow protected abstract Entity.MovementEmission getMovementEmission();

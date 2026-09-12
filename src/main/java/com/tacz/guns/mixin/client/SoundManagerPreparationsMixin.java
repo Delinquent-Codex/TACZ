@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Map;
 
-@Mixin(targets = "net.minecraft.client.sounds.SoundManager$Preparations")
+@Mixin(targets = "net.minecraft.client.sounds.SoundManager$Preparations", remap = false)
 public class SoundManagerPreparationsMixin {
     private static final FileToIdConverter TACZ_SOUND_LISTER = new FileToIdConverter("tacz_sounds", ".ogg");
 

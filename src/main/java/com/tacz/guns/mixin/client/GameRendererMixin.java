@@ -1,73 +1,52 @@
 package com.tacz.guns.mixin.client;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.tacz.guns.api.client.event.RenderItemInHandBobEvent;
 import com.tacz.guns.api.client.event.RenderLevelBobEvent;
-import com.tacz.guns.client.renderer.other.GunHurtBobTweak;
-import net.minecraft.client.Camera;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
+import com.tacz.guns.client.renderer.other.GunCameraStateAccess;
 import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
+import org.joml.Matrix4fc;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(GameRenderer.class)
+@Mixin(value = GameRenderer.class, remap = false)
 public abstract class GameRendererMixin {
-    @Unique
-    private boolean tacz$useFovSetting;
+    @Unique private boolean tacz$renderingHand;
 
-    @Shadow
-    public abstract Minecraft getMinecraft();
-
-    @Shadow
-    public abstract void render(float pPartialTicks, long pNanoTime, boolean pRenderLevel);
+    @WrapMethod(method = "renderItemInHand")
+    private void tacz$handBobScope(CameraRenderState state, float partialTick, Matrix4fc modelView, Operation<Void> original) {
+        boolean previous = tacz$renderingHand;
+        tacz$renderingHand = true;
+        try {
+            original.call(state, partialTick, modelView);
+        } finally {
+            tacz$renderingHand = previous;
+        }
+    }
 
     @Inject(method = "bobHurt", at = @At("HEAD"), cancellable = true)
-    public void onBobHurt(PoseStack pMatrixStack, float pPartialTicks, CallbackInfo ci) {
-        // 取消受伤导致的视角摇晃
-        if (this.getMinecraft().getCameraEntity() instanceof LocalPlayer player && !player.isDeadOrDying()) {
-            if (GunHurtBobTweak.onHurtBobTweak(player, pMatrixStack, pPartialTicks)) {
-                ci.cancel();
-                return;
-            }
-        }
-        // 触发其他事件
-        boolean cancel;
-        if (!tacz$useFovSetting) {
-            cancel = RenderItemInHandBobEvent.BobHurt.BUS.post(new RenderItemInHandBobEvent.BobHurt());
-        } else {
-            cancel = RenderLevelBobEvent.BobHurt.BUS.post(new RenderLevelBobEvent.BobHurt());
-        }
-        if (cancel) {
+    private void tacz$hurtBob(CameraRenderState state, PoseStack pose, CallbackInfo ci) {
+        if (((GunCameraStateAccess) state).tacz$getGunHurtBob().apply(pose)) {
             ci.cancel();
+            return;
         }
+        boolean cancel = tacz$renderingHand
+                ? RenderItemInHandBobEvent.BobHurt.BUS.post(new RenderItemInHandBobEvent.BobHurt())
+                : RenderLevelBobEvent.BobHurt.BUS.post(new RenderLevelBobEvent.BobHurt());
+        if (cancel) ci.cancel();
     }
 
     @Inject(method = "bobView", at = @At("HEAD"), cancellable = true)
-    public void onBobView(PoseStack pMatrixStack, float pPartialTicks, CallbackInfo ci) {
-        boolean cancel;
-        if (!tacz$useFovSetting) {
-            cancel = RenderItemInHandBobEvent.BobView.BUS.post(new RenderItemInHandBobEvent.BobView());
-        } else {
-            cancel = RenderLevelBobEvent.BobView.BUS.post(new RenderLevelBobEvent.BobView());
-        }
-        if (cancel) {
-            ci.cancel();
-        }
-    }
-
-    /**
-     * 是一个 hack 实现。因为 getFov 这个方法只有在构建 投影矩阵 的时候调用。
-     * 因此可以根据 getFov 中的 pUseFovSetting 来判断当前准备渲染 Level 还是渲染 HandWithItem 。
-     * 至于为什么不直接对 renderItemInHand 这个方法 mixin ，是因为安装了 Optifine 之后，这个方法的内容被大幅度修改了。
-     */
-    @Inject(method = "getFov", at = @At("HEAD"))
-    public void switchRenderType(Camera pActiveRenderInfo, float pPartialTicks, boolean pUseFOVSetting, CallbackInfoReturnable<Double> cir) {
-        this.tacz$useFovSetting = pUseFOVSetting;
+    private void tacz$viewBob(CameraRenderState state, PoseStack pose, CallbackInfo ci) {
+        boolean cancel = tacz$renderingHand
+                ? RenderItemInHandBobEvent.BobView.BUS.post(new RenderItemInHandBobEvent.BobView())
+                : RenderLevelBobEvent.BobView.BUS.post(new RenderLevelBobEvent.BobView());
+        if (cancel) ci.cancel();
     }
 }

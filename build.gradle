@@ -134,6 +134,14 @@ sourceSets {
         java.include 'com/tacz/guns/porting/WorldRenderChecks.java'
         java.include 'com/tacz/guns/porting/BulletHoleChecks.java'
         java.include 'com/tacz/guns/porting/WalkDistanceChecks.java'
+        java.include 'com/tacz/guns/porting/EffectGeometryChecks.java'
+        java.include 'com/tacz/guns/client/renderer/BeamGeometry.java'
+        java.include 'com/tacz/guns/client/renderer/other/LayerGunTransform.java'
+        java.include 'com/tacz/guns/client/renderer/other/GunHurtBobTweak.java'
+        java.include 'com/tacz/guns/util/math/MathUtil.java'
+        java.include 'com/tacz/guns/client/renderer/MuzzleFlashGeometry.java'
+        java.include 'com/tacz/guns/client/renderer/TaczRenderTypes.java'
+        java.include 'com/tacz/guns/client/model/SlotModel.java'
         java.include 'com/tacz/guns/api/entity/LegacyWalkDistance.java'
         java.include 'com/tacz/guns/api/entity/LegacyWalkProvider.java'
         java.include 'com/tacz/guns/mixin/common/EntityWalkMixin.java'
@@ -345,5 +353,14 @@ tasks.register('verifyPortingWalkDistance', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.WalkDistanceChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingEffects', JavaExec) {
+    group = 'verification'
+    description = 'Checks laser/flash CPU geometry and native pipeline descriptions; no GPU or optional AR runtime.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.EffectGeometryChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

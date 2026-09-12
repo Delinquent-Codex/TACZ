@@ -3,7 +3,6 @@
   "minVersion": "0.8",
   "package": "com.tacz.guns.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "tacz.refmap.json",
   "mixins": [
     "common.EntityWalkMixin",
     "common.ItemStackMixin",
@@ -13,6 +12,9 @@
     "common.ServerPlayNetHandlerMixin"
   ],
   "client": [
+    "client.ArmedEntityRenderStateMixin",
+    "client.CameraMixin",
+    "client.CameraRenderStateMixin",
     "client.AbstractButtonMixin",
     "client.GameRendererMixin",
     "client.HumanoidModelMixin",

@@ -2,22 +2,19 @@ package com.tacz.guns.client.model.functional;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Axis;
 import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.item.IAttachment;
 import com.tacz.guns.api.item.attachment.AttachmentType;
 import com.tacz.guns.client.model.BedrockGunModel;
 import com.tacz.guns.client.model.IFunctionalRenderer;
-import com.tacz.guns.client.model.SlotModel;
 import com.tacz.guns.client.model.bedrock.BedrockModel;
+import com.tacz.guns.client.renderer.MuzzleFlashGeometry;
+import com.tacz.guns.client.renderer.RenderSubmission;
 import com.tacz.guns.client.resource.GunDisplayInstance;
 import com.tacz.guns.client.resource.pojo.display.gun.MuzzleFlash;
 import com.tacz.guns.compat.oculus.OculusCompat;
 import com.tacz.guns.resource.modifier.custom.SilenceModifier;
 import it.unimi.dsi.fastutil.Pair;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -26,11 +23,10 @@ import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 
 public class MuzzleFlashRender implements IFunctionalRenderer {
-    private static final SlotModel MUZZLE_FLASH_MODEL = new SlotModel(true);
     /**
      * 50ms 显示时间
      */
-    private static final long TIME_RANGE = 50;
+    private static final long TIME_RANGE = MuzzleFlashGeometry.TIME_RANGE;
     public static boolean isSelf = false;
     private static long shootTimeStamp = -1;
     private static boolean muzzleFlashStartMark = false;
@@ -62,44 +58,18 @@ public class MuzzleFlashRender implements IFunctionalRenderer {
             muzzleFlashNormal = new Matrix3f(poseStack.last().normal());
             muzzleFlashPose = new Matrix4f(poseStack.last().pose());
         }
-        bedrockModel.delegateRender((poseStack1, vertexConsumer1, transformType1, light, overlay) -> doRender(light, overlay, muzzleFlash, time));
-    }
-
-    private static void doRender(int light, int overlay, MuzzleFlash muzzleFlash, long time) {
-        if (muzzleFlashNormal != null && muzzleFlashPose != null) {
-            float scale = 0.5f * muzzleFlash.getScale();
-            float scaleTime = TIME_RANGE / 2.0f;
-            scale = time < scaleTime ? (scale * (time / scaleTime)) : scale;
-            muzzleFlashStartMark = false;
-            MultiBufferSource multiBufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
-
-            // 推送到指定位置
-            PoseStack poseStack2 = new PoseStack();
-            poseStack2.last().normal().mul(muzzleFlashNormal);
-            poseStack2.last().pose().mul(muzzleFlashPose);
-
-            // 先渲染一遍半透明背景
-            poseStack2.pushPose();
-            {
-                poseStack2.scale(scale, scale, scale);
-                poseStack2.mulPose(Axis.ZP.rotationDegrees(muzzleFlashRandomRotate));
-                poseStack2.translate(0, -1, 0);
-                RenderType renderTypeBg = RenderTypes.entityTranslucent(muzzleFlash.getTexture());
-                MUZZLE_FLASH_MODEL.renderToBuffer(poseStack2, multiBufferSource.getBuffer(renderTypeBg), light, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
-            }
-            poseStack2.popPose();
-
-            // 然后渲染发光效果
-            poseStack2.pushPose();
-            {
-                poseStack2.scale(scale / 2, scale / 2, scale / 2);
-                poseStack2.mulPose(Axis.ZP.rotationDegrees(muzzleFlashRandomRotate));
-                poseStack2.translate(0, -0.9, 0);
-                RenderType renderTypeLight = RenderTypes.energySwirl(muzzleFlash.getTexture(), 1, 1);
-                MUZZLE_FLASH_MODEL.renderToBuffer(poseStack2, multiBufferSource.getBuffer(renderTypeLight), light, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
-            }
-            poseStack2.popPose();
-        }
+        PoseStack anchor = new PoseStack();
+        anchor.last().normal().set(muzzleFlashNormal);
+        anchor.last().pose().set(muzzleFlashPose);
+        float configuredScale = muzzleFlash.getScale();
+        float rotation = muzzleFlashRandomRotate;
+        Identifier texture = muzzleFlash.getTexture();
+        muzzleFlashStartMark = false;
+        bedrockModel.delegateRender((ignoredPose, ignoredVertices, context, light, overlay) -> {
+            var frame = MuzzleFlashGeometry.capture(anchor.last(), configuredScale, time, rotation, light, overlay);
+            RenderSubmission.submit(RenderTypes.entityTranslucent(texture), frame.background());
+            RenderSubmission.submit(RenderTypes.energySwirl(texture, 1, 1), frame.glow());
+        });
     }
 
     @Override

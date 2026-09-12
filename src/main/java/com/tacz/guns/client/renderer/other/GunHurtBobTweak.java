@@ -9,27 +9,33 @@ public class GunHurtBobTweak {
     private static long hurtByGunTimeStamp = -1L;
     private static float lastTweakMultiplier = 0.05f;
 
-    public static boolean onHurtBobTweak(LocalPlayer player, PoseStack matrixStack, float partialTicks) {
-        // 原版受伤的时长是 500 ms，所以如果大于 500 ms，那么说明不是子弹造成的伤害了
-        if (System.currentTimeMillis() - hurtByGunTimeStamp > 500) {
-            // 返回 false，让程序调用原版受伤晃动
-            return false;
-        }
-        float zRot = (float) player.hurtTime - partialTicks;
-        if (zRot < 0) {
+    public record Frame(boolean replacesVanilla, float yaw, float pitch) {
+        public static final Frame NONE = new Frame(false, 0, 0);
+
+        public boolean apply(PoseStack pose) {
+            if (!replacesVanilla) return false;
+            pose.mulPose(Axis.YP.rotationDegrees(-yaw));
+            pose.mulPose(Axis.XP.rotationDegrees(pitch));
+            pose.mulPose(Axis.YP.rotationDegrees(yaw));
             return true;
         }
-        zRot /= (float) player.hurtDuration;
-        zRot = Mth.sin(zRot * zRot * zRot * zRot * (float) Math.PI);
-        float yRot = player.getHurtDir();
+    }
 
-        yRot = yRot * lastTweakMultiplier;
-        zRot = zRot * lastTweakMultiplier;
+    public static Frame capture(LocalPlayer player, float partialTicks) {
+        return capture(player.hurtTime - partialTicks, player.hurtDuration, player.getHurtDir(),
+                System.currentTimeMillis() - hurtByGunTimeStamp, lastTweakMultiplier);
+    }
 
-        matrixStack.mulPose(Axis.YP.rotationDegrees(-yRot));
-        matrixStack.mulPose(Axis.XP.rotationDegrees(-zRot * 14.0F));
-        matrixStack.mulPose(Axis.YP.rotationDegrees(yRot));
-        return true;
+    public static Frame capture(float hurt, int duration, float direction, long elapsedMillis, float multiplier) {
+        if (elapsedMillis > 500) return Frame.NONE;
+        if (hurt < 0) return new Frame(true, 0, 0);
+        hurt /= duration;
+        hurt = Mth.sin(hurt * hurt * hurt * hurt * (float) Math.PI);
+        return new Frame(true, direction * multiplier, -hurt * multiplier * 14.0F);
+    }
+
+    public static boolean onHurtBobTweak(LocalPlayer player, PoseStack matrixStack, float partialTicks) {
+        return capture(player, partialTicks).apply(matrixStack);
     }
 
     public static void markTimestamp(float tweakMultiplier) {

@@ -1,47 +1,53 @@
 package com.tacz.guns.mixin.client;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.client.model.functional.MuzzleFlashRender;
 import com.tacz.guns.client.model.functional.ShellRender;
+import com.tacz.guns.client.renderer.other.GunLayerStateAccess;
 import com.tacz.guns.client.renderer.other.HumanoidOffhandRender;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
+import net.minecraft.client.renderer.entity.state.ArmedEntityRenderState;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.world.entity.HumanoidArm;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(ItemInHandLayer.class)
+@Mixin(value = ItemInHandLayer.class, remap = false)
 public class ItemInHandLayerMixin {
-    @Inject(method = "render(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/entity/LivingEntity;FFFFFF)V", at = @At(value = "TAIL"))
-    private void render(PoseStack matrixStack, MultiBufferSource buffer, int packedLight, LivingEntity livingEntity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float pNetHeadYaw, float pHeadPitch, CallbackInfo ci) {
-        MuzzleFlashRender.isSelf = false;
-        ShellRender.isSelf = false;
-        HumanoidOffhandRender.renderGun(livingEntity, matrixStack, buffer, packedLight);
-    }
-
-    @Inject(method = "renderArmWithItem(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lnet/minecraft/world/entity/HumanoidArm;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V", at = @At(value = "HEAD"), cancellable = true)
-    private void renderArmWithItemHead(LivingEntity livingEntity, ItemStack itemStack, ItemDisplayContext pDisplayContext, HumanoidArm arm, PoseStack poseStack, MultiBufferSource buffer, int packedLight, CallbackInfo ci) {
-        LocalPlayer player = Minecraft.getInstance().player;
-        if (livingEntity.equals(player)) {
-            MuzzleFlashRender.isSelf = true;
-            ShellRender.isSelf = true;
-        }
-        if (IGun.mainHandHoldGun(livingEntity) && arm == HumanoidArm.LEFT) {
-            ci.cancel();
+    @WrapMethod(method = "submit(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/ArmedEntityRenderState;FF)V")
+    private void tacz$submitGuns(PoseStack pose, SubmitNodeCollector collector, int light, ArmedEntityRenderState state,
+                                 float yRot, float xRot, Operation<Void> original) {
+        boolean previousFlash = MuzzleFlashRender.isSelf;
+        boolean previousShell = ShellRender.isSelf;
+        try {
+            original.call(pose, collector, light, state, yRot, xRot);
+            MuzzleFlashRender.isSelf = false;
+            ShellRender.isSelf = false;
+            HumanoidOffhandRender.renderGun(((GunLayerStateAccess) state).tacz$getGunLayerState(), pose, collector, light, state.outlineColor);
+        } finally {
+            MuzzleFlashRender.isSelf = previousFlash;
+            ShellRender.isSelf = previousShell;
         }
     }
 
-    @Inject(method = "renderArmWithItem(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lnet/minecraft/world/entity/HumanoidArm;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V", at = @At(value = "TAIL"))
-    private void renderArmWithItemTail(LivingEntity livingEntity, ItemStack itemStack, ItemDisplayContext pDisplayContext, HumanoidArm arm, PoseStack poseStack, MultiBufferSource buffer, int packedLight, CallbackInfo ci) {
-        MuzzleFlashRender.isSelf = false;
-        ShellRender.isSelf = false;
+    @WrapMethod(method = "submitArmWithItem")
+    private void tacz$submitArm(ArmedEntityRenderState state, ItemStackRenderState item, ItemStack stack, HumanoidArm arm,
+                                PoseStack pose, SubmitNodeCollector collector, int light, Operation<Void> original) {
+        var guns = ((GunLayerStateAccess) state).tacz$getGunLayerState();
+        // Preserve the source's left-arm suppression while holding a main-hand gun.
+        if (guns.mainHandGun() && arm == HumanoidArm.LEFT) return;
+        boolean previousFlash = MuzzleFlashRender.isSelf;
+        boolean previousShell = ShellRender.isSelf;
+        try {
+            MuzzleFlashRender.isSelf = guns.localPlayer();
+            ShellRender.isSelf = guns.localPlayer();
+            original.call(state, item, stack, arm, pose, collector, light);
+        } finally {
+            MuzzleFlashRender.isSelf = previousFlash;
+            ShellRender.isSelf = previousShell;
+        }
     }
 }

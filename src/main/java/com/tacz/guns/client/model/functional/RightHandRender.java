@@ -34,7 +34,6 @@ public class RightHandRender implements IFunctionalRenderer {
                 poseStack2.last().normal().mul(normal);
                 poseStack2.last().pose().mul(pose);
                 RenderHelper.renderFirstPersonArm(Minecraft.getInstance().player, HumanoidArm.RIGHT, poseStack2, light1);
-                Minecraft.getInstance().renderBuffers().bufferSource().endBatch();
             });
         }
     }

@@ -15,10 +15,9 @@ import com.tacz.guns.inventory.tooltip.AttachmentItemTooltip;
 import com.tacz.guns.resource.pojo.data.attachment.AttachmentData;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -27,7 +26,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
-import org.joml.Matrix4f;
 
 import java.util.Arrays;
 import java.util.List;
@@ -75,8 +73,8 @@ public class ClientAttachmentItemTooltip implements ClientTooltipComponent {
     }
 
     @Override
-    public int getHeight() {
-        if (!Screen.hasShiftDown()) {
+    public int getHeight(Font font) {
+        if (!Minecraft.getInstance().hasShiftDown()) {
             return components.size() * 10 + 28;
         }
         return (showGuns.size() - 1) / 16 * 18 + 50 + components.size() * 10;
@@ -89,7 +87,7 @@ public class ClientAttachmentItemTooltip implements ClientTooltipComponent {
             width[0] = Math.max(width[0], font.width(packInfo) + 4);
         }
         components.forEach(c -> width[0] = Math.max(width[0], font.width(c)));
-        if (!Screen.hasShiftDown()) {
+        if (!Minecraft.getInstance().hasShiftDown()) {
             return Math.max(width[0], font.width(tips) + 4);
         } else {
             width[0] = Math.max(width[0], font.width(support) + 4);
@@ -101,39 +99,39 @@ public class ClientAttachmentItemTooltip implements ClientTooltipComponent {
     }
 
     @Override
-    public void renderText(Font font, int pX, int pY, Matrix4f matrix4f, MultiBufferSource.BufferSource bufferSource) {
+    public void extractText(GuiGraphicsExtractor graphics, Font font, int pX, int pY) {
         int yOffset = pY;
         for (Component component : this.components) {
-            font.drawInBatch(component, pX, yOffset, 0xffaa00, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, 0xF000F0);
+            graphics.text(font, component, pX, yOffset, 0xffffaa00, false);
             yOffset += 10;
         }
-        if (!Screen.hasShiftDown()) {
-            font.drawInBatch(tips, pX, pY + 5 + this.components.size() * 10, 0x9e9e9e, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, 0xF000F0);
+        if (!Minecraft.getInstance().hasShiftDown()) {
+            graphics.text(font, tips, pX, pY + 5 + this.components.size() * 10, 0xff9e9e9e, false);
             yOffset += 10;
         } else {
             yOffset += (showGuns.size() - 1) / 16 * 18 + 32;
         }
         // 枪包名
         if (packInfo != null) {
-            font.drawInBatch(this.packInfo, pX, yOffset + 8, 0xffffff, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, 0xF000F0);
+            graphics.text(font, this.packInfo, pX, yOffset + 8, 0xffffffff, false);
         }
     }
 
     @Override
-    public void renderImage(Font font, int mouseX, int mouseY, GuiGraphics gui) {
-        if (!Screen.hasShiftDown()) {
+    public void extractImage(Font font, int mouseX, int mouseY, int width, int height, GuiGraphicsExtractor gui) {
+        if (!Minecraft.getInstance().hasShiftDown()) {
             return;
         }
         int minY = components.size() * 10 + 3;
         int maxX = getWidth(font);
         gui.fill(mouseX, mouseY + minY, mouseX + maxX, mouseY + minY + 11, 0x8F00b0ff);
-        gui.drawString(font, support, mouseX + 2, mouseY + minY + 2, 0xe3f2fd);
+        gui.text(font, support, mouseX + 2, mouseY + minY + 2, 0xffe3f2fd);
 
         for (int i = 0; i < showGuns.size(); i++) {
             ItemStack stack = showGuns.get(i);
             int x = i % 16 * 16 + 2;
             int y = i / 16 * 18 + minY + 15;
-            gui.renderItem(stack, mouseX + x, mouseY + y);
+            gui.item(stack, mouseX + x, mouseY + y);
         }
     }
 
