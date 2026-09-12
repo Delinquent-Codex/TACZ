@@ -7,38 +7,48 @@ import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.client.resource.GunDisplayInstance;
 import com.tacz.guns.compat.playeranimator.PlayerAnimatorCompat;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+
+import java.util.Optional;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.item.ItemStack;
 
 public class InnerThirdPersonManager {
-    public static void setRotationAnglesHead(LivingEntity entityIn, ModelPart rightArm, ModelPart leftArm, ModelPart body, ModelPart head, float limbSwingAmount) {
-        // 游戏暂停时不进行动画计算，否则会 StackOverflow
-        if (Minecraft.getInstance().isPaused()) {
-            return;
-        }
-        if (entityIn instanceof IGunOperator operator) {
-            ItemStack mainHandItem = entityIn.getMainHandItem();
-            IGun iGun = IGun.getIGunOrNull(mainHandItem);
-            if (iGun == null) {
-                PlayerAnimatorCompat.stopAllAnimation(entityIn);
-                return;
+    public static void setRotationAnglesHead(LivingEntity entity, ModelPart rightArm, ModelPart leftArm, ModelPart body, ModelPart head, float limbSwingAmount) {
+        if (!(entity instanceof IGunOperator operator)) return;
+        activeDisplay(entity).ifPresent(display -> {
+            if (PlayerAnimatorCompat.hasPlayerAnimator3rd(entity, display)) {
+                PlayerAnimatorCompat.playAnimation(entity, display, limbSwingAmount);
+            } else {
+                playVanillaAnimation(entity, rightArm, leftArm, body, head, operator, display);
             }
-            // 睡觉、爬梯、游泳、鞘翅飞行不播放第三人称动画
-            if (entityIn.getPose() == Pose.SLEEPING || entityIn.onClimbable() || entityIn.isSwimming() || entityIn.getPose() == Pose.FALL_FLYING) {
-                PlayerAnimatorCompat.stopAllAnimation(entityIn);
-                return;
-            }
+        });
+    }
 
-            TimelessAPI.getGunDisplay(mainHandItem).ifPresent(display -> {
-                if (PlayerAnimatorCompat.hasPlayerAnimator3rd(entityIn, display)) {
-                    PlayerAnimatorCompat.playAnimation(entityIn, display, limbSwingAmount);
-                } else {
-                    playVanillaAnimation(entityIn, rightArm, leftArm, body, head, operator, display);
-                }
-            });
+    public static <S extends HumanoidRenderState> HumanoidGunPose captureGunPose(LivingEntity entity, HumanoidModel<S> model, S state) {
+        if (!(entity instanceof IGunOperator operator)) return HumanoidGunPose.EMPTY;
+        return activeDisplay(entity).map(display -> {
+            if (PlayerAnimatorCompat.hasPlayerAnimator3rd(entity, display)) {
+                PlayerAnimatorCompat.playAnimation(entity, display, state.walkAnimationSpeed);
+                return HumanoidGunPose.EMPTY;
+            }
+            return HumanoidGunPose.capture(model, state, () ->
+                    playVanillaAnimation(entity, model.rightArm, model.leftArm, model.body, model.head, operator, display));
+        }).orElse(HumanoidGunPose.EMPTY);
+    }
+
+    private static Optional<GunDisplayInstance> activeDisplay(LivingEntity entity) {
+        if (Minecraft.getInstance().isPaused()) return Optional.empty();
+        ItemStack mainHandItem = entity.getMainHandItem();
+        if (IGun.getIGunOrNull(mainHandItem) == null || entity.getPose() == Pose.SLEEPING
+                || entity.onClimbable() || entity.isSwimming() || entity.getPose() == Pose.FALL_FLYING) {
+            PlayerAnimatorCompat.stopAllAnimation(entity);
+            return Optional.empty();
         }
+        return TimelessAPI.getGunDisplay(mainHandItem);
     }
 
     private static void playVanillaAnimation(LivingEntity entityIn, ModelPart rightArm, ModelPart leftArm, ModelPart body, ModelPart head, IGunOperator operator, GunDisplayInstance display) {

@@ -7,9 +7,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(value = StairBlock.class, remap = false)
 public interface StairBlockAccessor {
-    @Accessor("base")
-    Block tacz$getBase();
-
     /** Source API retained after Forge's old getModelBlock helper was removed. */
-    default Block invokeGetModelBlock() { return tacz$getBase(); }
+    @Accessor("base")
+    Block invokeGetModelBlock();
 }

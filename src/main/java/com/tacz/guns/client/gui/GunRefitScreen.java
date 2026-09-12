@@ -18,7 +18,7 @@ import com.tacz.guns.network.message.ClientMessageRefitGun;
 import com.tacz.guns.network.message.ClientMessageUnloadAttachment;
 import com.tacz.guns.sound.SoundManager;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
@@ -110,17 +110,22 @@ public class GunRefitScreen extends Screen {
     }
 
     @Override
-    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float pPartialTick) {
-        super.render(graphics, mouseX, mouseY, pPartialTick);
+    public void extractRenderState(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY, float pPartialTick) {
+        super.extractRenderState(graphics, mouseX, mouseY, pPartialTick);
 
         if (!HIDE_GUN_PROPERTY_DIAGRAMS) {
             GunPropertyDiagrams.draw(graphics, font, 11, 11);
         }
 
         this.renderables.stream().filter(w -> w instanceof IComponentTooltip).forEach(w -> ((IComponentTooltip) w)
-                .renderTooltip(component -> graphics.renderComponentTooltip(font, component, mouseX, mouseY)));
+                .renderTooltip(component -> graphics.setComponentTooltipForNextFrame(font, component, mouseX, mouseY)));
         this.renderables.stream().filter(w -> w instanceof IStackTooltip).forEach(w -> ((IStackTooltip) w)
-                .renderTooltip(stack -> graphics.renderTooltip(font, stack, mouseX, mouseY)));
+                .renderTooltip(stack -> graphics.setTooltipForNextFrame(font, stack, mouseX, mouseY)));
+    }
+
+    @Override
+    public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        // The baseline refit screen intentionally has no background: its gun is the live first-person model.
     }
 
     @Override
@@ -157,7 +162,7 @@ public class GunRefitScreen extends Screen {
                 InventoryAttachmentSlot button = new InventoryAttachmentSlot(startX, currentY, i, inventory, b -> {
                     int slotIndex = ((InventoryAttachmentSlot) b).getSlotIndex();
                     SoundPlayManager.playerRefitSound(inventory.getItem(slotIndex), player, SoundManager.INSTALL_SOUND);
-                    ClientMessageRefitGun message = new ClientMessageRefitGun(slotIndex, inventory.selected, RefitTransform.getCurrentTransformType());
+                    ClientMessageRefitGun message = new ClientMessageRefitGun(slotIndex, inventory.getSelectedSlot(), RefitTransform.getCurrentTransformType());
                     NetworkHandler.sendToServer(message);
                 });
                 this.addRenderableWidget(button);
@@ -205,14 +210,14 @@ public class GunRefitScreen extends Screen {
                             .ifPresent(laserConfig -> {
                                 if (laserConfig.canEdit()) {
                                     // 添加镭射颜色选择器
-                                    HSVSliderGroup hsvSliderGroup = new HSVSliderGroup(width-140, height-64, 120, 16, inventory, inventory.selected, AttachmentType.NONE);
+                                    HSVSliderGroup hsvSliderGroup = new HSVSliderGroup(width-140, height-64, 120, 16, inventory, inventory.getSelectedSlot(), AttachmentType.NONE);
                                     this.addRenderableWidget(hsvSliderGroup.getHueSlider());
                                     this.addRenderableWidget(hsvSliderGroup.getSaturationSlider());
                                 }});
                 }
                 continue;
             }
-            GunAttachmentSlot button = new GunAttachmentSlot(startX, startY, type, inventory.selected, inventory, b -> {
+            GunAttachmentSlot button = new GunAttachmentSlot(startX, startY, type, inventory.getSelectedSlot(), inventory, b -> {
                 AttachmentType buttonType = ((GunAttachmentSlot) b).getType();
                 // 如果这个槽位不允许安装配件，则默认退回概览，不选中槽位。
                 if (!((GunAttachmentSlot) b).isAllow()) {
@@ -242,7 +247,7 @@ public class GunRefitScreen extends Screen {
                         int freeSlot = inventory.getFreeSlot();
                         if (freeSlot != -1) {
                             SoundPlayManager.playerRefitSound(attachmentItem, player, SoundManager.UNINSTALL_SOUND);
-                            ClientMessageUnloadAttachment message = new ClientMessageUnloadAttachment(inventory.selected, RefitTransform.getCurrentTransformType());
+                            ClientMessageUnloadAttachment message = new ClientMessageUnloadAttachment(inventory.getSelectedSlot(), RefitTransform.getCurrentTransformType());
                             NetworkHandler.sendToServer(message);
                         } else {
                             player.sendSystemMessage(Component.translatable("gui.tacz.gun_refit.unload.no_space"));
@@ -258,7 +263,7 @@ public class GunRefitScreen extends Screen {
                                 .ifPresent(laserConfig -> {
                                     if (laserConfig.canEdit()) {
                                         // 添加镭射颜色选择器
-                                        HSVSliderGroup hsvSliderGroup = new HSVSliderGroup(width-140, height-64, 120, 16, inventory, inventory.selected, type);
+                                        HSVSliderGroup hsvSliderGroup = new HSVSliderGroup(width-140, height-64, 120, 16, inventory, inventory.getSelectedSlot(), type);
                                         this.addRenderableWidget(hsvSliderGroup.getHueSlider());
                                         this.addRenderableWidget(hsvSliderGroup.getSaturationSlider());
                                     }});

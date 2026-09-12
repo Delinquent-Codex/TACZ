@@ -99,6 +99,13 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.compilerArgs += ['-Xmaxerrs', '5000']
 }
+// Opt-in diagnostic run: continue attribution/flow after missing-type errors,
+// without generating classes for failed inputs or disabling any processor.
+tasks.named('compileJava', JavaCompile) {
+    if (providers.gradleProperty('portingDiagnosticFlow').isPresent()) {
+        options.compilerArgs += ['-XDshould-stop.ifError=FLOW']
+    }
+}
 tasks.withType(AbstractArchiveTask).configureEach {
     preserveFileTimestamps = false
     reproducibleFileOrder = true
@@ -135,6 +142,16 @@ sourceSets {
         java.include 'com/tacz/guns/porting/BulletHoleChecks.java'
         java.include 'com/tacz/guns/porting/WalkDistanceChecks.java'
         java.include 'com/tacz/guns/porting/EffectGeometryChecks.java'
+        java.include 'com/tacz/guns/porting/ThirdPersonPoseChecks.java'
+        java.include 'com/tacz/guns/porting/HudLayerChecks.java'
+        java.include 'com/tacz/guns/client/gui/GuiDraw.java'
+        java.include 'com/tacz/guns/client/gui/GunPreviewRenderState.java'
+        java.include 'com/tacz/guns/client/gui/components/AtlasButton.java'
+        java.include 'com/tacz/guns/client/gui/components/FlatColorButton.java'
+        java.include 'com/tacz/guns/client/gui/overlay/GunHudLayers.java'
+        java.include 'com/tacz/guns/client/animation/third/HumanoidGunPose.java'
+        java.include 'com/tacz/guns/api/client/other/ThirdPersonManager.java'
+        java.include 'com/tacz/guns/api/client/other/IThirdPersonAnimation.java'
         java.include 'com/tacz/guns/client/renderer/BeamGeometry.java'
         java.include 'com/tacz/guns/client/renderer/other/LayerGunTransform.java'
         java.include 'com/tacz/guns/client/renderer/other/GunHurtBobTweak.java'
@@ -362,5 +379,23 @@ tasks.register('verifyPortingEffects', JavaExec) {
     dependsOn tasks.named('compilePortingChecksJava')
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.EffectGeometryChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingThirdPerson', JavaExec) {
+    group = 'verification'
+    description = 'Checks actual humanoid model pose capture and built-in callbacks; no live entity, FML or Player Animator.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ThirdPersonPoseChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingHud', JavaExec) {
+    group = 'verification'
+    description = 'Checks native HUD layer ordering, live conditions and hook bytecode; no GUI/FML runtime.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.HudLayerChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
 }

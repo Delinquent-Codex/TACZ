@@ -1,8 +1,8 @@
 package com.tacz.guns.client.gui.components.smith;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.tacz.guns.GunMod;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -20,20 +20,21 @@ public class TypeButton extends Button {
     }
 
     @Override
-    protected void renderWidget(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
-        RenderSystem.enableDepthTest();
+    protected void extractContents(@NotNull GuiGraphicsExtractor gui, int pMouseX, int pMouseY, float pPartialTick) {
 
         int vOffset = isHoveredOrFocused() ? 204 + this.height : 204;
         if (isSelected) {
-            gui.blit(TEXTURE, this.getX(), this.getY(), 0, vOffset, this.width, this.height, 256, 256);
+            gui.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, this.getX(), this.getY(), 0, vOffset, this.width, this.height, 256, 256);
         } else {
-            gui.blit(TEXTURE, this.getX(), this.getY(), 26, vOffset, this.width, this.height, 256, 256);
+            gui.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, this.getX(), this.getY(), 26, vOffset, this.width, this.height, 256, 256);
         }
 
-        gui.renderItem(this.stack, this.getX() + 4, this.getY() + 5);
+        gui.item(this.stack, this.getX() + 4, this.getY() + 5);
     }
 
     @Override
+    public void onPress(net.minecraft.client.input.InputWithModifiers input) { onPress(); }
+
     public void onPress() {
         this.isSelected = true;
         this.onPress.onPress(this);

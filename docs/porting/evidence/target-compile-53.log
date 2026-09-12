@@ -1,0 +1,2085 @@
+Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:01.803
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:18: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\serialize\ItemStackSerializer.java:5: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+    public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                       ^
+  symbol:   class GuiGraphics
+  location: class OpenGunPackDirEntry
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+    public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                   ^
+  symbol:   class GuiGraphics
+  location: class AttachmentQueryCategory
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:14: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:26: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+    private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\BedrockPartMixin.java:16: error: cannot find symbol
+import net.minecraft.util.FastColor;
+                         ^
+  symbol:   class FastColor
+  location: package net.minecraft.util
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:307: error: cannot find symbol
+                        RenderSystem.stencilFunc(GL11.GL_GREATER, 127, 0xFF);
+                                    ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:310: error: cannot find symbol
+                        RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+                                    ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:315: error: cannot find symbol
+        RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                    ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:318: error: cannot find symbol
+        RenderSystem.clearStencil(0);
+                    ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:319: error: cannot find symbol
+        RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:351: error: cannot find symbol
+							RenderSystem.stencilFunc(GL11.GL_GREATER, 127, 0xFF);
+							            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:354: error: cannot find symbol
+							RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+							            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:359: error: cannot find symbol
+						RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+						            ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:375: error: cannot find symbol
+			RenderSystem.clearStencil(0);
+			            ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:376: error: cannot find symbol
+			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+			                                                        ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\GunDisplayInstance.java:606: error: cannot find symbol
+                    particle.setParticleOptions(ParticleArgument.readParticle(new StringReader(name), BuiltInRegistries.PARTICLE_TYPE.asLookup()));
+                                                                                                                                     ^
+  symbol:   method asLookup()
+  location: variable PARTICLE_TYPE of type Registry<ParticleType<?>>
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\GunDisplayInstance.java:611: error: exception CommandSyntaxException is never thrown in body of corresponding try statement
+            } catch (CommandSyntaxException e) {
+              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\index\ClientAmmoIndex.java:231: error: cannot find symbol
+                    particle.setParticleOptions(ParticleArgument.readParticle(new StringReader(name), BuiltInRegistries.PARTICLE_TYPE.asLookup()));
+                                                                                                                                     ^
+  symbol:   method asLookup()
+  location: variable PARTICLE_TYPE of type Registry<ParticleType<?>>
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\index\ClientAmmoIndex.java:236: error: exception CommandSyntaxException is never thrown in body of corresponding try statement
+            } catch (CommandSyntaxException e) {
+              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:203: error: package MultiBufferSource does not exist
+        MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:203: error: cannot find symbol
+        MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
+                                                                             ^
+  symbol:   method renderBuffers()
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:215: error: cannot find symbol
+            RenderSystem.colorMask(false, false, false, false);
+                        ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:216: error: cannot find symbol
+            RenderSystem.depthMask(false);
+                        ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:217: error: cannot find symbol
+            RenderSystem.stencilMask(0xFF);
+                        ^
+  symbol:   method stencilMask(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:218: error: cannot find symbol
+            RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_REPLACE);
+                        ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:222: error: cannot find symbol
+                    RenderSystem.stencilFunc(GL11.GL_GREATER, i + 1, 0xFF);
+                                ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:227: error: cannot find symbol
+            RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                        ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:228: error: cannot find symbol
+            RenderSystem.depthMask(true);
+                        ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:229: error: cannot find symbol
+            RenderSystem.colorMask(true, true, true, true);
+                        ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:235: error: cannot find symbol
+            RenderSystem.disableDepthTest();
+                        ^
+  symbol:   method disableDepthTest()
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:237: error: cannot find symbol
+                RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:240: error: cannot find symbol
+            RenderSystem.enableDepthTest();
+                        ^
+  symbol:   method enableDepthTest()
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:246: error: cannot find symbol
+            BufferBuilder builder = Tesselator.getInstance().getBuilder();
+                                    ^
+  symbol:   variable Tesselator
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:248: error: cannot find symbol
+            RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_INVERT);
+                        ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:249: error: cannot find symbol
+            RenderSystem.colorMask(false, false, false, false);
+                        ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:250: error: cannot find symbol
+            RenderSystem.depthMask(false);
+                        ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:255: error: cannot find symbol
+                rad *= IClientPlayerGunOperator.fromLocalPlayer(player).getClientAimingProgress(Minecraft.getInstance().getFrameTime());
+                                                                                                                       ^
+  symbol:   method getFrameTime()
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:261: error: cannot find symbol
+                RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:265: error: cannot find symbol
+                builder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION_COLOR);
+                                          ^
+  symbol:   variable Mode
+  location: class VertexFormat
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:266: error: cannot find symbol
+                builder.vertex(centerX, centerY, -90.0D).color(255, 255, 255, 255).endVertex();
+                       ^
+  symbol:   method vertex(float,float,double)
+  location: variable builder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:271: error: cannot find symbol
+                    builder.vertex(centerX + cos * rad, centerY + sin * rad, -90.0D).color(255, 255, 255, 255).endVertex();
+                           ^
+  symbol:   method vertex(float,float,double)
+  location: variable builder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:273: error: cannot find symbol
+                BufferUploader.drawWithShader(builder.end());
+                ^
+  symbol:   variable BufferUploader
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:273: error: cannot find symbol
+                BufferUploader.drawWithShader(builder.end());
+                                                     ^
+  symbol:   method end()
+  location: variable builder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:275: error: cannot find symbol
+            RenderSystem.depthMask(true);
+                        ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:276: error: cannot find symbol
+            RenderSystem.colorMask(true, true, true, true);
+                        ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:277: error: cannot find symbol
+            RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                        ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:283: error: cannot find symbol
+                    RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                                ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:287: error: cannot find symbol
+                    RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                                ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:291: error: cannot find symbol
+                    RenderSystem.stencilFunc(GL11.GL_EQUAL, b, 0xFF);
+                                ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:307: error: cannot find symbol
+        RenderSystem.clearStencil(0);
+                    ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:308: error: cannot find symbol
+        RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:310: error: cannot find symbol
+            RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                        ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:311: error: cannot find symbol
+            RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                        ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:319: error: cannot find symbol
+            RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+                        ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:327: error: cannot find symbol
+        RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                    ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:341: error: cannot find symbol
+        RenderSystem.clearStencil(0);
+                    ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:342: error: cannot find symbol
+        RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:348: error: cannot find symbol
+        RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                    ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:365: error: cannot find symbol
+        RenderSystem.clearStencil(0);
+                    ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:366: error: cannot find symbol
+        RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:369: error: cannot find symbol
+            RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                        ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:370: error: cannot find symbol
+            RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                        ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:377: error: cannot find symbol
+            RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+                        ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:383: error: cannot find symbol
+        RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                    ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:407: error: cannot find symbol
+			RenderSystem.clearStencil(0);
+			            ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:408: error: cannot find symbol
+			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+			                                                        ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:411: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:412: error: cannot find symbol
+			RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+			            ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:440: error: cannot find symbol
+			BufferUploader.invalidate();
+			^
+  symbol:   variable BufferUploader
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:452: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:463: error: cannot find symbol
+			BufferUploader.invalidate();
+			^
+  symbol:   variable BufferUploader
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:477: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:512: error: cannot find symbol
+			RenderSystem.clearStencil(0);
+			            ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:513: error: cannot find symbol
+			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+			                                                        ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:521: error: cannot find symbol
+			BufferUploader.invalidate();
+			^
+  symbol:   variable BufferUploader
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:535: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:562: error: cannot find symbol
+			RenderSystem.clearStencil(0);
+			            ^
+  symbol:   method clearStencil(int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:563: error: cannot find symbol
+			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+			                                                        ^
+  symbol:   variable ON_OSX
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:566: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:567: error: cannot find symbol
+			RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+			            ^
+  symbol:   method stencilOp(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:595: error: cannot find symbol
+			BufferUploader.invalidate();
+			^
+  symbol:   variable BufferUploader
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:607: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:618: error: cannot find symbol
+			BufferUploader.invalidate();
+			^
+  symbol:   variable BufferUploader
+  location: class BedrockAttachmentModel
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:630: error: cannot find symbol
+			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+			            ^
+  symbol:   method stencilFunc(int,int,int)
+  location: class RenderSystem
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\CameraSetupEvent.java:99: error: cannot find symbol
+        Entity entity = event.getCamera().getEntity();
+                                         ^
+  symbol:   method getEntity()
+  location: class Camera
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\CameraSetupEvent.java:127: error: cannot find symbol
+        Entity entity = event.getCamera().getEntity();
+                                         ^
+  symbol:   method getEntity()
+  location: class Camera
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\CameraSetupEvent.java:192: error: cannot find symbol
+            float partialTicks = Minecraft.getInstance().getFrameTime();
+                                                        ^
+  symbol:   method getFrameTime()
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\ClientHitMark.java:52: error: cannot find symbol
+                player.displayClientMessage(Component.translatable("message.tacz.target_minecart.hit", String.format("%.1f", damageAmount), String.format("%.2f", distance)), true);
+                      ^
+  symbol:   method displayClientMessage(MutableComponent,boolean)
+  location: variable player of type LocalPlayer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\FirstPersonRenderGunEvent.java:207: error: cannot find symbol
+        poseStack.mulPoseMatrix(transformMatrix);
+                 ^
+  symbol:   method mulPoseMatrix(Matrix4f)
+  location: variable poseStack of type PoseStack
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:46: error: selected has private access in Inventory
+        if (oldHotbarSelected != inventory.selected) {
+                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:47: error: selected has private access in Inventory
+            ClientIndexManager.warmUpItem(inventory.getItem(inventory.selected));
+                                                                     ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:53: error: selected has private access in Inventory
+            oldHotbarSelected = inventory.selected;
+                                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:54: error: selected has private access in Inventory
+            oldHotbarSelectItem = inventory.getItem(inventory.selected).copy();
+                                                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:58: error: selected has private access in Inventory
+        ItemStack currentItem = inventory.getItem(inventory.selected);
+                                                           ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\PlayerEnterWorld.java:32: error: HoverEvent is abstract; cannot be instantiated
+                            .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("message.tacz.convert_from_legacy.hover"))
+                                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\PlayerEnterWorld.java:31: error: ClickEvent is abstract; cannot be instantiated
+                            .withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tacz convert"))
+                                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:82: error: cannot assign a value to final variable imageWidth
+        this.imageWidth = 344;
+            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:83: error: cannot assign a value to final variable imageHeight
+        this.imageHeight = 186;
+            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:528: error: cannot find symbol
+            gui.text(font, nameText, (int) ((leftPos + 6) / 0.75f), (int) ((topPos + 122) / 0.75f), (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                                                                          ^
+  symbol:   method getColor()
+  location: variable DARK_GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:538: error: cannot find symbol
+            gui.text(font, ver, (int) (offsetX + nameWidth * 0.75f / 0.5f + 5), offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                                                               ^
+  symbol:   method getColor()
+  location: variable DARK_GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:546: error: cannot find symbol
+                    gui.text(font, charSequence, offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                                         ^
+  symbol:   method getColor()
+  location: variable DARK_GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:554: error: cannot find symbol
+                    offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                            ^
+  symbol:   method getColor()
+  location: variable DARK_GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:561: error: cannot find symbol
+                        offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                ^
+  symbol:   method getColor()
+  location: variable DARK_GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:567: error: cannot find symbol
+                    offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                            ^
+  symbol:   method getColor()
+  location: variable DARK_GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:632: error: ScissorStack.peek() is defined in an inaccessible class or interface
+                System.currentTimeMillis(), graphics.pose(), graphics.getScissorStack().peek()));
+                                                                                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\IComponentTooltip.java:20: error: method getTooltipLines in class ItemStack cannot be applied to given types;
+        return stack.getTooltipLines(player, options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
+                    ^
+  required: TooltipContext,Player,TooltipFlag
+  found:    LocalPlayer,options.ad[...]ORMAL
+  reason: actual and formal argument lists differ in length
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\IComponentTooltip.java:20: error: incompatible types: LocalPlayer cannot be converted to TooltipContext
+        return stack.getTooltipLines(player, options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
+                                     ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunRefitScreen.java:285: error: selected has private access in Inventory
+                ClientMessageLaserColor message = new ClientMessageLaserColor(gun, player.getInventory().selected);
+                                                                                                        ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\HeatBarOverlay.java:94: error: cannot find symbol
+            color = ARGB.lerp(percent * 4 - 1.6f, 0x9FFFFFFF, 0x9FFFFF00);
+                        ^
+  symbol:   method lerp(float,int,int)
+  location: class ARGB
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\HeatBarOverlay.java:96: error: cannot find symbol
+            color = ARGB.lerp((percent-0.65f) / 0.35f, 0x9FFFFF00, 0x9FFF0000);
+                        ^
+  symbol:   method lerp(float,int,int)
+  location: class ARGB
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\InteractKeyTextOverlay.java:91: error: cannot find symbol
+        graphics.text(font, title, (int) ((width - font.width(title)) / 2.0f), (int) (height / 2.0f - 25), (0xFF000000 | ChatFormatting.YELLOW.getColor()), false);
+                                                                                                                                              ^
+  symbol:   method getColor()
+  location: variable YELLOW of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\InteractKeyTextOverlay.java:94: error: cannot find symbol
+            graphics.text(font, filter, (int) ((width - font.width(filter)) / 2.0f), (int) (height / 2.0f - 14), (0xFF000000 | ChatFormatting.GRAY.getColor()), false);
+                                                                                                                                                  ^
+  symbol:   method getColor()
+  location: variable GRAY of type ChatFormatting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\AimKey.java:26: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping AIM_KEY = new KeyMapping("key.tacz.aim.desc",
+                                             ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\AimKey.java:35: error: incompatible types: int cannot be converted to MouseButtonEvent
+        if (isInGame() && AIM_KEY.matchesMouse(event.getButton())) {
+                                                              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:30: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping OPEN_CONFIG_KEY = new KeyMapping("key.tacz.open_config.desc",
+                                                     ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:40: error: no suitable method found for matches(int,int)
+                && OPEN_CONFIG_KEY.matches(event.getKey(), event.getScanCode())
+                                  ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:41: error: cannot find symbol
+                && OPEN_CONFIG_KEY.getKeyModifier().equals(KeyModifier.getActiveModifier())) {
+                                                                      ^
+  symbol:   method getActiveModifier()
+  location: class KeyModifier
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:47: error: ClickEvent is abstract; cannot be instantiated
+                ClickEvent clickEvent = new ClickEvent(ClickEvent.Action.OPEN_URL, ClothConfigScreen.CLOTH_CONFIG_URL);
+                                        ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:48: error: HoverEvent is abstract; cannot be instantiated
+                HoverEvent hoverEvent = new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("gui.tacz.cloth_config_warning.download"));
+                                        ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\CrawlKey.java:25: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping CRAWL_KEY = new KeyMapping("key.tacz.crawl.desc",
+                                               ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\CrawlKey.java:34: error: no suitable method found for matches(int,int)
+        if (isInGame() && CRAWL_KEY.matches(event.getKey(), event.getScanCode())) {
+                                   ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\FireSelectKey.java:23: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping FIRE_SELECT_KEY = new KeyMapping("key.tacz.fire_select.desc",
+                                                     ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\FireSelectKey.java:32: error: no suitable method found for matches(int,int)
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                                 ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\FireSelectKey.java:39: error: incompatible types: int cannot be converted to MouseButtonEvent
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matchesMouse(event.getButton())) {
+                                                                                                              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InspectKey.java:22: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping INSPECT_KEY = new KeyMapping("key.tacz.inspect.desc",
+                                                 ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InspectKey.java:31: error: no suitable method found for matches(int,int)
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && INSPECT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                             ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:29: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping INTERACT_KEY = new KeyMapping("key.tacz.interact.desc",
+                                                  ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:38: error: no suitable method found for matches(int,int)
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && INTERACT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                              ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:45: error: incompatible types: int cannot be converted to MouseButtonEvent
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && INTERACT_KEY.matchesMouse(event.getButton())) {
+                                                                                                           ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\MeleeKey.java:22: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping MELEE_KEY = new KeyMapping("key.tacz.melee.desc",
+                                               ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\MeleeKey.java:31: error: no suitable method found for matches(int,int)
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                           ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\MeleeKey.java:38: error: incompatible types: int cannot be converted to MouseButtonEvent
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matchesMouse(event.getButton())) {
+                                                                                                        ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\RefitKey.java:23: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping REFIT_KEY = new KeyMapping("key.tacz.refit.desc",
+                                               ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\RefitKey.java:32: error: no suitable method found for matches(int,int)
+        if (event.getAction() == GLFW.GLFW_PRESS && REFIT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                             ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ReloadKey.java:29: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping RELOAD_KEY = new KeyMapping("key.tacz.reload.desc",
+                                                ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ReloadKey.java:38: error: no suitable method found for matches(int,int)
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && RELOAD_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                            ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ShootKey.java:30: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping SHOOT_KEY = new KeyMapping("key.tacz.shoot.desc",
+                                               ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ZoomKey.java:24: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+    public static final KeyMapping ZOOM_KEY = new KeyMapping("key.tacz.zoom.desc",
+                                              ^
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+      (argument mismatch; KeyModifier cannot be converted to Type)
+    constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+      (argument mismatch; Type cannot be converted to Key)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ZoomKey.java:33: error: no suitable method found for matches(int,int)
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && ZOOM_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                          ^
+    method KeyMapping.matches(KeyEvent) is not applicable
+      (actual and formal argument lists differ in length)
+    method KeyMapping.matches(Key) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ZoomKey.java:40: error: incompatible types: int cannot be converted to MouseButtonEvent
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && ZOOM_KEY.matchesMouse(event.getButton())) {
+                                                                                                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\particle\BulletHoleParticle.java:74: error: random has protected access in Level
+        return configLife + world.random.nextInt(configLife / 2);
+                                 ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\entity\EntityBulletRenderer.java:156: error: cannot find symbol
+        AABB aabb = bullet.getBoundingBoxForCulling().inflate(0.5);
+                          ^
+  symbol:   method getBoundingBoxForCulling()
+  location: variable bullet of type EntityKineticBullet
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\AnimateGeoItemRenderer.java:314: error: cannot find symbol
+        poseStack.mulPoseMatrix(transformMatrix);
+                 ^
+  symbol:   method mulPoseMatrix(Matrix4f)
+  location: variable poseStack of type PoseStack
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\GunItemRendererWrapper.java:136: error: cannot find symbol
+            float partialTicks = Minecraft.getInstance().getFrameTime();
+                                                        ^
+  symbol:   method getFrameTime()
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\GunItemRendererWrapper.java:152: error: cannot find symbol
+            float partialTicks = Minecraft.getInstance().getFrameTime();
+                                                        ^
+  symbol:   method getFrameTime()
+  location: class Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\GunSmithTableItemRenderer.java:43: error: incompatible types: PoseStack cannot be converted to Pose
+                transform.apply(false, poseStack);
+                                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:66: error: Deserializer has protected access in ItemTransform
+            .registerTypeAdapter(ItemTransform.class, new ItemTransform.Deserializer())
+                                                                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:65: error: Deserializer has protected access in ItemTransforms
+            .registerTypeAdapter(ItemTransforms.class, new ItemTransforms.Deserializer())
+                                                                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:107: error: incompatible types: cannot infer type-variable(s) T
+            register((barrier, resourceManager, preparationProfiler, reloadProfiler, backgroundExecutor, gameExecutor) ->
+                    ^
+    (argument mismatch; incompatible parameter types in lambda expression)
+  where T is a type-variable:
+    T extends PreparableReloadListener declared in method <T>register(T)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:108: error: incompatible types: Class<Void> cannot be converted to long
+                    barrier.wait(Void.TYPE).thenRunAsync(ClientIndexManager::reload, gameExecutor));
+                                     ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\manager\PackInfoManager.java:32: error: no suitable method found for fromJson(Gson,Reader,Class<PackInfo>,boolean)
+                    PackInfo packInfo = GsonHelper.fromJson(CommonAssetsManager.GSON, reader, PackInfo.class, true);
+                                                  ^
+    method GsonHelper.<T#1>fromJson(Gson,Reader,Class<T#1>) is not applicable
+      (cannot infer type-variable(s) T#1
+        (actual and formal argument lists differ in length))
+    method GsonHelper.<T#2>fromJson(Gson,Reader,TypeToken<T#2>) is not applicable
+      (cannot infer type-variable(s) T#2
+        (actual and formal argument lists differ in length))
+    method GsonHelper.<T#3>fromJson(Gson,String,Class<T#3>) is not applicable
+      (cannot infer type-variable(s) T#3
+        (actual and formal argument lists differ in length))
+  where T#1,T#2,T#3 are type-variables:
+    T#1 extends Object declared in method <T#1>fromJson(Gson,Reader,Class<T#1>)
+    T#2 extends Object declared in method <T#2>fromJson(Gson,Reader,TypeToken<T#2>)
+    T#3 extends Object declared in method <T#3>fromJson(Gson,String,Class<T#3>)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientIndexManager.java:182: error: items has private access in Inventory
+        var items = player.getInventory().items;
+                                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientIndexManager.java:190: error: items has private access in Inventory
+        var items = player.getInventory().items;
+                                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\serialize\ItemStackSerializer.java:14: error: cannot find symbol
+            return CraftingHelper.getItemStack(jsonObject, true, false);
+                   ^
+  symbol:   variable CraftingHelper
+  location: class ItemStackSerializer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\sound\GunSoundInstance.java:85: error: incompatible types: String cannot be converted to Identifier
+            super(location.toString(), template.getVolume(), template.getPitch(), template.getWeight(), Type.FILE,
+                                   ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:22: error: cannot find symbol
+            public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                               ^
+  symbol: class GuiGraphics
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:42: error: cannot find symbol
+                    public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                                       ^
+  symbol: class GuiGraphics
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:16: error: OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler
+public class OpenGunPackDirEntry extends AbstractConfigListEntry<Boolean> {
+       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\GunSmithTableCategory.java:69: error: cannot find symbol
+            ItemStack[] items = ingredient.getIngredient().getItems();
+                                                          ^
+  symbol:   method getItems()
+  location: class Ingredient
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:33: error: cannot access ResourceLocation
+public class GunModPlugin implements IModPlugin {
+       ^
+  class file for net.minecraft.resources.ResourceLocation not found
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:94: error: getPluginUid() in GunModPlugin cannot implement getPluginUid() in IModPlugin
+    public Identifier getPluginUid() {
+                      ^
+  return type Identifier is not compatible with ResourceLocation
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:93: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\custom\CustomGunItemBuilder.java:14: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        super(i);
+              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\custom\KubeJSCustomGunItem.java:7: error: constructor ModernKineticGunItem in class ModernKineticGunItem cannot be applied to given types;
+        super();
+        ^
+  required: Properties
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:46: error: cannot find symbol
+        if (JsonIO.of(stack.getTag()) != null) {
+                           ^
+  symbol:   method getTag()
+  location: variable stack of type ItemStack
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:47: error: cannot find symbol
+            itemJson.addProperty("nbt", stack.getOrCreateTag().toString());
+                                             ^
+  symbol:   method getOrCreateTag()
+  location: variable stack of type ItemStack
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:73: error: incompatible types: ResourceLocation cannot be converted to Identifier
+            Identifier rl = UtilsJS.getMCID(null, idString);
+                                           ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:106: error: cannot find symbol
+        return CraftingHelper.getNBT(this.json.get(NBT_KEY));
+               ^
+  symbol:   variable CraftingHelper
+  location: class GunSmithTableResultInfo
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:64: error: cannot find symbol
+            Ingredient ingredient = Ingredient.fromJson(jsonObject.get("item"));
+                                              ^
+  symbol:   method fromJson(JsonElement)
+  location: class Ingredient
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:79: error: cannot find symbol
+            jsonObject.add("item", value.ingredient.toJson());
+                                                   ^
+  symbol:   method toJson()
+  location: variable ingredient of type Ingredient
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:82: error: cannot find symbol
+            jsonObject.add("item", value.ingredient.toJson());
+                                                   ^
+  symbol:   method toJson()
+  location: variable ingredient of type Ingredient
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:99: error: cannot find symbol
+                extraTag = CraftingHelper.getNBT(jsonObject.get("nbt"));
+                           ^
+  symbol:   variable CraftingHelper
+  location: class TimelessRecipeJS
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:117: error: cannot find symbol
+                    ItemStack itemStack = CraftingHelper.getItemStack(resultObject, true);
+                                          ^
+  symbol:   variable CraftingHelper
+  location: class TimelessRecipeJS
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:119: error: cannot find symbol
+                        itemStack.setTag(extraTag);
+                                 ^
+  symbol:   method setTag(CompoundTag)
+  location: variable itemStack of type ItemStack
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\TimelessKubeJSPlugin.java:49: error: incompatible types: invalid constructor reference
+        RegistryInfo.ITEM.addType("tacz_gun", CustomGunItemBuilder.class, CustomGunItemBuilder::new);
+                                                                          ^
+    incompatible types: ResourceLocation cannot be converted to Identifier
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:14: error: cannot access BufferSource
+            fullyBufferedMultiBufferSource.endBatch();
+                                          ^
+  class file for net.minecraft.client.renderer.MultiBufferSource$BufferSource not found
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:14: error: cannot find symbol
+            fullyBufferedMultiBufferSource.endBatch();
+                                          ^
+  symbol:   method endBatch()
+  location: variable fullyBufferedMultiBufferSource of type FullyBufferedMultiBufferSource
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AdjustmentYRotModifier.java:33: error: cannot find symbol
+        float partialTick = mc.getPartialTick();
+                              ^
+  symbol:   method getPartialTick()
+  location: variable mc of type Minecraft
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:9: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOWER_ANIMATION, 93, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:10: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOOP_UPPER_ANIMATION, 94, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:11: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ONCE_UPPER_ANIMATION, 95, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:12: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ROTATION_ANIMATION, 96,
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:52: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:160: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:188: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:215: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                           ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\ARCompatMixinPlugin.java:16: error: get() has private access in LoadingModList
+		loaded = LoadingModList.get().getModFileById("acceleratedrendering") != null;
+		                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\ARCompatMixinPlugin.java:16: error: cannot find symbol
+		loaded = LoadingModList.get().getModFileById("acceleratedrendering") != null;
+		                             ^
+  symbol:   method getModFileById(String)
+  location: class LoadingModListImpl
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\BedrockPartMixin.java:64: error: package FastColor does not exist
+			int color = FastColor.ARGB32.color(
+			                     ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:37: error: invalid method reference
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+                               ^
+  cannot find symbol
+    symbol:   method getPositionTexShader()
+    location: class GameRenderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:38: error: cannot find symbol
+        BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
+                                      ^
+  symbol:   variable Tesselator
+  location: class RenderHelper
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:39: error: cannot find symbol
+        bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+                                        ^
+  symbol:   variable Mode
+  location: class VertexFormat
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:40: error: cannot find symbol
+        bufferbuilder.vertex(matrix, x1, y2, blitOffset).uv(minU, maxV).endVertex();
+                     ^
+  symbol:   method vertex(Matrix4f,float,float,float)
+  location: variable bufferbuilder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:41: error: cannot find symbol
+        bufferbuilder.vertex(matrix, x2, y2, blitOffset).uv(maxU, maxV).endVertex();
+                     ^
+  symbol:   method vertex(Matrix4f,float,float,float)
+  location: variable bufferbuilder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:42: error: cannot find symbol
+        bufferbuilder.vertex(matrix, x2, y1, blitOffset).uv(maxU, minV).endVertex();
+                     ^
+  symbol:   method vertex(Matrix4f,float,float,float)
+  location: variable bufferbuilder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:43: error: cannot find symbol
+        bufferbuilder.vertex(matrix, x1, y1, blitOffset).uv(minU, minV).endVertex();
+                     ^
+  symbol:   method vertex(Matrix4f,float,float,float)
+  location: variable bufferbuilder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:44: error: cannot find symbol
+        BufferUploader.draw(bufferbuilder.end());
+        ^
+  symbol:   variable BufferUploader
+  location: class RenderHelper
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:44: error: cannot find symbol
+        BufferUploader.draw(bufferbuilder.end());
+                                         ^
+  symbol:   method end()
+  location: variable bufferbuilder of type BufferBuilder
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:64: error: cannot find symbol
+            Minecraft.getInstance().getMainRenderTarget().enableStencil();
+                                   ^
+  symbol:   method getMainRenderTarget()
+  location: class Minecraft
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+211 errors
+3 warnings
+
+> Task :compileJava FAILED
+
+> Task :compilePortingChecksJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processPortingChecksResources NO-SOURCE
+> Task :portingChecksClasses
+
+> Task :verifyPortingHud
+HUD layer checks passed: 5 assertions (native layer registry/bytecode; no GUI, font, textures or FML)
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\IComponentTooltip.java:20: error: method getTooltipLines in class ItemStack cannot be applied to given types;
+          return stack.getTooltipLines(player, options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
+                      ^
+    required: TooltipContext,Player,TooltipFlag
+    found:    LocalPlayer,options.ad[...]ORMAL
+    reason: actual and formal argument lists differ in length
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\custom\KubeJSCustomGunItem.java:7: error: constructor ModernKineticGunItem in class ModernKineticGunItem cannot be applied to given types;
+          super();
+          ^
+    required: Properties
+    found:    no arguments
+    reason: actual and formal argument lists differ in length
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\AimKey.java:26: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping AIM_KEY = new KeyMapping("key.tacz.aim.desc",
+                                               ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:30: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping OPEN_CONFIG_KEY = new KeyMapping("key.tacz.open_config.desc",
+                                                       ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:40: error: no suitable method found for matches(int,int)
+                  && OPEN_CONFIG_KEY.matches(event.getKey(), event.getScanCode())
+                                    ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\CrawlKey.java:25: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping CRAWL_KEY = new KeyMapping("key.tacz.crawl.desc",
+                                                 ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\CrawlKey.java:34: error: no suitable method found for matches(int,int)
+          if (isInGame() && CRAWL_KEY.matches(event.getKey(), event.getScanCode())) {
+                                     ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\FireSelectKey.java:23: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping FIRE_SELECT_KEY = new KeyMapping("key.tacz.fire_select.desc",
+                                                       ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\FireSelectKey.java:32: error: no suitable method found for matches(int,int)
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                                   ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InspectKey.java:22: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping INSPECT_KEY = new KeyMapping("key.tacz.inspect.desc",
+                                                   ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InspectKey.java:31: error: no suitable method found for matches(int,int)
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && INSPECT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                               ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:29: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping INTERACT_KEY = new KeyMapping("key.tacz.interact.desc",
+                                                    ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:38: error: no suitable method found for matches(int,int)
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && INTERACT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                                ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\MeleeKey.java:22: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping MELEE_KEY = new KeyMapping("key.tacz.melee.desc",
+                                                 ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\MeleeKey.java:31: error: no suitable method found for matches(int,int)
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                             ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\RefitKey.java:23: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping REFIT_KEY = new KeyMapping("key.tacz.refit.desc",
+                                                 ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\RefitKey.java:32: error: no suitable method found for matches(int,int)
+          if (event.getAction() == GLFW.GLFW_PRESS && REFIT_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                               ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ReloadKey.java:29: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping RELOAD_KEY = new KeyMapping("key.tacz.reload.desc",
+                                                  ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ReloadKey.java:38: error: no suitable method found for matches(int,int)
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && RELOAD_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                              ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ShootKey.java:30: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping SHOOT_KEY = new KeyMapping("key.tacz.shoot.desc",
+                                                 ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ZoomKey.java:24: error: no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)
+      public static final KeyMapping ZOOM_KEY = new KeyMapping("key.tacz.zoom.desc",
+                                                ^
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,Type,int,Category,int) is not applicable
+        (argument mismatch; KeyModifier cannot be converted to Type)
+      constructor KeyMapping.KeyMapping(String,IKeyConflictContext,KeyModifier,Key,Category,int) is not applicable
+        (argument mismatch; Type cannot be converted to Key)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ZoomKey.java:33: error: no suitable method found for matches(int,int)
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && ZOOM_KEY.matches(event.getKey(), event.getScanCode())) {
+                                                                            ^
+      method KeyMapping.matches(KeyEvent) is not applicable
+        (actual and formal argument lists differ in length)
+      method KeyMapping.matches(Key) is not applicable
+        (actual and formal argument lists differ in length)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\manager\PackInfoManager.java:32: error: no suitable method found for fromJson(Gson,Reader,Class<PackInfo>,boolean)
+                      PackInfo packInfo = GsonHelper.fromJson(CommonAssetsManager.GSON, reader, PackInfo.class, true);
+                                                    ^
+      method GsonHelper.<T#1>fromJson(Gson,Reader,Class<T#1>) is not applicable
+        (cannot infer type-variable(s) T#1
+          (actual and formal argument lists differ in length))
+      method GsonHelper.<T#2>fromJson(Gson,Reader,TypeToken<T#2>) is not applicable
+        (cannot infer type-variable(s) T#2
+          (actual and formal argument lists differ in length))
+      method GsonHelper.<T#3>fromJson(Gson,String,Class<T#3>) is not applicable
+        (cannot infer type-variable(s) T#3
+          (actual and formal argument lists differ in length))
+    where T#1,T#2,T#3 are type-variables:
+      T#1 extends Object declared in method <T#1>fromJson(Gson,Reader,Class<T#1>)
+      T#2 extends Object declared in method <T#2>fromJson(Gson,Reader,TypeToken<T#2>)
+      T#3 extends Object declared in method <T#3>fromJson(Gson,String,Class<T#3>)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:82: error: cannot assign a value to final variable imageWidth
+          this.imageWidth = 344;
+              ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:83: error: cannot assign a value to final variable imageHeight
+          this.imageHeight = 186;
+              ^
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:37: error: invalid method reference
+          RenderSystem.setShader(GameRenderer::getPositionTexShader);
+                                 ^
+    cannot find symbol
+      symbol:   method getPositionTexShader()
+      location: class GameRenderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:33: error: cannot access ResourceLocation
+  public class GunModPlugin implements IModPlugin {
+         ^
+    class file for net.minecraft.resources.ResourceLocation not found
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:14: error: cannot access BufferSource
+              fullyBufferedMultiBufferSource.endBatch();
+                                            ^
+    class file for net.minecraft.client.renderer.MultiBufferSource$BufferSource not found
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:18: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\serialize\ItemStackSerializer.java:5: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+      public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                         ^
+    symbol:   class GuiGraphics
+    location: class OpenGunPackDirEntry
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+      public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                     ^
+    symbol:   class GuiGraphics
+    location: class AttachmentQueryCategory
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:14: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:26: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\BedrockPartMixin.java:16: error: cannot find symbol
+  import net.minecraft.util.FastColor;
+                           ^
+    symbol:   class FastColor
+    location: package net.minecraft.util
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:319: error: cannot find symbol
+          RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                  ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:376: error: cannot find symbol
+  			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+  			                                                        ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:246: error: cannot find symbol
+              BufferBuilder builder = Tesselator.getInstance().getBuilder();
+                                      ^
+    symbol:   variable Tesselator
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:265: error: cannot find symbol
+                  builder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION_COLOR);
+                                            ^
+    symbol:   variable Mode
+    location: class VertexFormat
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:273: error: cannot find symbol
+                  BufferUploader.drawWithShader(builder.end());
+                  ^
+    symbol:   variable BufferUploader
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:308: error: cannot find symbol
+          RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                  ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:342: error: cannot find symbol
+          RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                  ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:366: error: cannot find symbol
+          RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+                                                                  ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:408: error: cannot find symbol
+  			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+  			                                                        ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:440: error: cannot find symbol
+  			BufferUploader.invalidate();
+  			^
+    symbol:   variable BufferUploader
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:463: error: cannot find symbol
+  			BufferUploader.invalidate();
+  			^
+    symbol:   variable BufferUploader
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:513: error: cannot find symbol
+  			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+  			                                                        ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:521: error: cannot find symbol
+  			BufferUploader.invalidate();
+  			^
+    symbol:   variable BufferUploader
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:563: error: cannot find symbol
+  			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+  			                                                        ^
+    symbol:   variable ON_OSX
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:595: error: cannot find symbol
+  			BufferUploader.invalidate();
+  			^
+    symbol:   variable BufferUploader
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:618: error: cannot find symbol
+  			BufferUploader.invalidate();
+  			^
+    symbol:   variable BufferUploader
+    location: class BedrockAttachmentModel
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\serialize\ItemStackSerializer.java:14: error: cannot find symbol
+              return CraftingHelper.getItemStack(jsonObject, true, false);
+                     ^
+    symbol:   variable CraftingHelper
+    location: class ItemStackSerializer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:106: error: cannot find symbol
+          return CraftingHelper.getNBT(this.json.get(NBT_KEY));
+                 ^
+    symbol:   variable CraftingHelper
+    location: class GunSmithTableResultInfo
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:99: error: cannot find symbol
+                  extraTag = CraftingHelper.getNBT(jsonObject.get("nbt"));
+                             ^
+    symbol:   variable CraftingHelper
+    location: class TimelessRecipeJS
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:117: error: cannot find symbol
+                      ItemStack itemStack = CraftingHelper.getItemStack(resultObject, true);
+                                            ^
+    symbol:   variable CraftingHelper
+    location: class TimelessRecipeJS
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:38: error: cannot find symbol
+          BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
+                                        ^
+    symbol:   variable Tesselator
+    location: class RenderHelper
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:39: error: cannot find symbol
+          bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+                                          ^
+    symbol:   variable Mode
+    location: class VertexFormat
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:44: error: cannot find symbol
+          BufferUploader.draw(bufferbuilder.end());
+          ^
+    symbol:   variable BufferUploader
+    location: class RenderHelper
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:46: error: selected has private access in Inventory
+          if (oldHotbarSelected != inventory.selected) {
+                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:47: error: selected has private access in Inventory
+              ClientIndexManager.warmUpItem(inventory.getItem(inventory.selected));
+                                                                       ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:53: error: selected has private access in Inventory
+              oldHotbarSelected = inventory.selected;
+                                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:54: error: selected has private access in Inventory
+              oldHotbarSelectItem = inventory.getItem(inventory.selected).copy();
+                                                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\InventoryEvent.java:58: error: selected has private access in Inventory
+          ItemStack currentItem = inventory.getItem(inventory.selected);
+                                                             ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunRefitScreen.java:285: error: selected has private access in Inventory
+                  ClientMessageLaserColor message = new ClientMessageLaserColor(gun, player.getInventory().selected);
+                                                                                                          ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\particle\BulletHoleParticle.java:74: error: random has protected access in Level
+          return configLife + world.random.nextInt(configLife / 2);
+                                   ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:66: error: Deserializer has protected access in ItemTransform
+              .registerTypeAdapter(ItemTransform.class, new ItemTransform.Deserializer())
+                                                                         ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:65: error: Deserializer has protected access in ItemTransforms
+              .registerTypeAdapter(ItemTransforms.class, new ItemTransforms.Deserializer())
+                                                                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientIndexManager.java:182: error: items has private access in Inventory
+          var items = player.getInventory().items;
+                                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientIndexManager.java:190: error: items has private access in Inventory
+          var items = player.getInventory().items;
+                                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\ARCompatMixinPlugin.java:16: error: get() has private access in LoadingModList
+  		loaded = LoadingModList.get().getModFileById("acceleratedrendering") != null;
+  		                       ^
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:93: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+              ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+          ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+          ModLoadingContext ctx = ModLoadingContext.get();
+                                                   ^
+  Note: Some input files use unchecked or unsafe operations.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:307: error: cannot find symbol
+                          RenderSystem.stencilFunc(GL11.GL_GREATER, 127, 0xFF);
+                                      ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:310: error: cannot find symbol
+                          RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+                                      ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:315: error: cannot find symbol
+          RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                      ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:318: error: cannot find symbol
+          RenderSystem.clearStencil(0);
+                      ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:351: error: cannot find symbol
+  							RenderSystem.stencilFunc(GL11.GL_GREATER, 127, 0xFF);
+  							            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:354: error: cannot find symbol
+  							RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+  							            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:359: error: cannot find symbol
+  						RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+  						            ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockGunModel.java:375: error: cannot find symbol
+  			RenderSystem.clearStencil(0);
+  			            ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\GunDisplayInstance.java:606: error: cannot find symbol
+                      particle.setParticleOptions(ParticleArgument.readParticle(new StringReader(name), BuiltInRegistries.PARTICLE_TYPE.asLookup()));
+                                                                                                                                       ^
+    symbol:   method asLookup()
+    location: variable PARTICLE_TYPE of type Registry<ParticleType<?>>
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\index\ClientAmmoIndex.java:231: error: cannot find symbol
+                      particle.setParticleOptions(ParticleArgument.readParticle(new StringReader(name), BuiltInRegistries.PARTICLE_TYPE.asLookup()));
+                                                                                                                                       ^
+    symbol:   method asLookup()
+    location: variable PARTICLE_TYPE of type Registry<ParticleType<?>>
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:203: error: cannot find symbol
+          MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
+                                                                               ^
+    symbol:   method renderBuffers()
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:215: error: cannot find symbol
+              RenderSystem.colorMask(false, false, false, false);
+                          ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:216: error: cannot find symbol
+              RenderSystem.depthMask(false);
+                          ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:217: error: cannot find symbol
+              RenderSystem.stencilMask(0xFF);
+                          ^
+    symbol:   method stencilMask(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:218: error: cannot find symbol
+              RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_REPLACE);
+                          ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:222: error: cannot find symbol
+                      RenderSystem.stencilFunc(GL11.GL_GREATER, i + 1, 0xFF);
+                                  ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:227: error: cannot find symbol
+              RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                          ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:228: error: cannot find symbol
+              RenderSystem.depthMask(true);
+                          ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:229: error: cannot find symbol
+              RenderSystem.colorMask(true, true, true, true);
+                          ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:235: error: cannot find symbol
+              RenderSystem.disableDepthTest();
+                          ^
+    symbol:   method disableDepthTest()
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:237: error: cannot find symbol
+                  RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                              ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:240: error: cannot find symbol
+              RenderSystem.enableDepthTest();
+                          ^
+    symbol:   method enableDepthTest()
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:248: error: cannot find symbol
+              RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_INVERT);
+                          ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:249: error: cannot find symbol
+              RenderSystem.colorMask(false, false, false, false);
+                          ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:250: error: cannot find symbol
+              RenderSystem.depthMask(false);
+                          ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:255: error: cannot find symbol
+                  rad *= IClientPlayerGunOperator.fromLocalPlayer(player).getClientAimingProgress(Minecraft.getInstance().getFrameTime());
+                                                                                                                         ^
+    symbol:   method getFrameTime()
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:261: error: cannot find symbol
+                  RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                              ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:266: error: cannot find symbol
+                  builder.vertex(centerX, centerY, -90.0D).color(255, 255, 255, 255).endVertex();
+                         ^
+    symbol:   method vertex(float,float,double)
+    location: variable builder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:271: error: cannot find symbol
+                      builder.vertex(centerX + cos * rad, centerY + sin * rad, -90.0D).color(255, 255, 255, 255).endVertex();
+                             ^
+    symbol:   method vertex(float,float,double)
+    location: variable builder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:273: error: cannot find symbol
+                  BufferUploader.drawWithShader(builder.end());
+                                                       ^
+    symbol:   method end()
+    location: variable builder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:275: error: cannot find symbol
+              RenderSystem.depthMask(true);
+                          ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:276: error: cannot find symbol
+              RenderSystem.colorMask(true, true, true, true);
+                          ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:277: error: cannot find symbol
+              RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                          ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:283: error: cannot find symbol
+                      RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                                  ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:287: error: cannot find symbol
+                      RenderSystem.stencilFunc(GL11.GL_EQUAL, i + 1, 0xFF);
+                                  ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:291: error: cannot find symbol
+                      RenderSystem.stencilFunc(GL11.GL_EQUAL, b, 0xFF);
+                                  ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:307: error: cannot find symbol
+          RenderSystem.clearStencil(0);
+                      ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:310: error: cannot find symbol
+              RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                          ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:311: error: cannot find symbol
+              RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                          ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:319: error: cannot find symbol
+              RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+                          ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:327: error: cannot find symbol
+          RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                      ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:341: error: cannot find symbol
+          RenderSystem.clearStencil(0);
+                      ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:348: error: cannot find symbol
+          RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                      ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:365: error: cannot find symbol
+          RenderSystem.clearStencil(0);
+                      ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:369: error: cannot find symbol
+              RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                          ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:370: error: cannot find symbol
+              RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+                          ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:377: error: cannot find symbol
+              RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+                          ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:383: error: cannot find symbol
+          RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+                      ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:407: error: cannot find symbol
+  			RenderSystem.clearStencil(0);
+  			            ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:411: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:412: error: cannot find symbol
+  			RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+  			            ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:452: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:477: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:512: error: cannot find symbol
+  			RenderSystem.clearStencil(0);
+  			            ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:535: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:562: error: cannot find symbol
+  			RenderSystem.clearStencil(0);
+  			            ^
+    symbol:   method clearStencil(int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:566: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:567: error: cannot find symbol
+  			RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
+  			            ^
+    symbol:   method stencilOp(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:607: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:630: error: cannot find symbol
+  			RenderSystem.stencilFunc(GL11.GL_ALWAYS, 0, 0xFF);
+  			            ^
+    symbol:   method stencilFunc(int,int,int)
+    location: class RenderSystem
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\CameraSetupEvent.java:99: error: cannot find symbol
+          Entity entity = event.getCamera().getEntity();
+                                           ^
+    symbol:   method getEntity()
+    location: class Camera
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\CameraSetupEvent.java:127: error: cannot find symbol
+          Entity entity = event.getCamera().getEntity();
+                                           ^
+    symbol:   method getEntity()
+    location: class Camera
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\CameraSetupEvent.java:192: error: cannot find symbol
+              float partialTicks = Minecraft.getInstance().getFrameTime();
+                                                          ^
+    symbol:   method getFrameTime()
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\ClientHitMark.java:52: error: cannot find symbol
+                  player.displayClientMessage(Component.translatable("message.tacz.target_minecart.hit", String.format("%.1f", damageAmount), String.format("%.2f", distance)), true);
+                        ^
+    symbol:   method displayClientMessage(MutableComponent,boolean)
+    location: variable player of type LocalPlayer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\FirstPersonRenderGunEvent.java:207: error: cannot find symbol
+          poseStack.mulPoseMatrix(transformMatrix);
+                   ^
+    symbol:   method mulPoseMatrix(Matrix4f)
+    location: variable poseStack of type PoseStack
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:528: error: cannot find symbol
+              gui.text(font, nameText, (int) ((leftPos + 6) / 0.75f), (int) ((topPos + 122) / 0.75f), (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                                                                            ^
+    symbol:   method getColor()
+    location: variable DARK_GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:538: error: cannot find symbol
+              gui.text(font, ver, (int) (offsetX + nameWidth * 0.75f / 0.5f + 5), offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                                                                 ^
+    symbol:   method getColor()
+    location: variable DARK_GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:546: error: cannot find symbol
+                      gui.text(font, charSequence, offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                                           ^
+    symbol:   method getColor()
+    location: variable DARK_GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:554: error: cannot find symbol
+                      offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                              ^
+    symbol:   method getColor()
+    location: variable DARK_GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:561: error: cannot find symbol
+                          offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                                  ^
+    symbol:   method getColor()
+    location: variable DARK_GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:567: error: cannot find symbol
+                      offsetX, offsetY, (0xFF000000 | ChatFormatting.DARK_GRAY.getColor()), false);
+                                                                              ^
+    symbol:   method getColor()
+    location: variable DARK_GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\HeatBarOverlay.java:94: error: cannot find symbol
+              color = ARGB.lerp(percent * 4 - 1.6f, 0x9FFFFFFF, 0x9FFFFF00);
+                          ^
+    symbol:   method lerp(float,int,int)
+    location: class ARGB
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\HeatBarOverlay.java:96: error: cannot find symbol
+              color = ARGB.lerp((percent-0.65f) / 0.35f, 0x9FFFFF00, 0x9FFF0000);
+                          ^
+    symbol:   method lerp(float,int,int)
+    location: class ARGB
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\InteractKeyTextOverlay.java:91: error: cannot find symbol
+          graphics.text(font, title, (int) ((width - font.width(title)) / 2.0f), (int) (height / 2.0f - 25), (0xFF000000 | ChatFormatting.YELLOW.getColor()), false);
+                                                                                                                                                ^
+    symbol:   method getColor()
+    location: variable YELLOW of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\overlay\InteractKeyTextOverlay.java:94: error: cannot find symbol
+              graphics.text(font, filter, (int) ((width - font.width(filter)) / 2.0f), (int) (height / 2.0f - 14), (0xFF000000 | ChatFormatting.GRAY.getColor()), false);
+                                                                                                                                                    ^
+    symbol:   method getColor()
+    location: variable GRAY of type ChatFormatting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:41: error: cannot find symbol
+                  && OPEN_CONFIG_KEY.getKeyModifier().equals(KeyModifier.getActiveModifier())) {
+                                                                        ^
+    symbol:   method getActiveModifier()
+    location: class KeyModifier
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\entity\EntityBulletRenderer.java:156: error: cannot find symbol
+          AABB aabb = bullet.getBoundingBoxForCulling().inflate(0.5);
+                            ^
+    symbol:   method getBoundingBoxForCulling()
+    location: variable bullet of type EntityKineticBullet
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\AnimateGeoItemRenderer.java:314: error: cannot find symbol
+          poseStack.mulPoseMatrix(transformMatrix);
+                   ^
+    symbol:   method mulPoseMatrix(Matrix4f)
+    location: variable poseStack of type PoseStack
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\GunItemRendererWrapper.java:136: error: cannot find symbol
+              float partialTicks = Minecraft.getInstance().getFrameTime();
+                                                          ^
+    symbol:   method getFrameTime()
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\GunItemRendererWrapper.java:152: error: cannot find symbol
+              float partialTicks = Minecraft.getInstance().getFrameTime();
+                                                          ^
+    symbol:   method getFrameTime()
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\GunSmithTableCategory.java:69: error: cannot find symbol
+              ItemStack[] items = ingredient.getIngredient().getItems();
+                                                            ^
+    symbol:   method getItems()
+    location: class Ingredient
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:46: error: cannot find symbol
+          if (JsonIO.of(stack.getTag()) != null) {
+                             ^
+    symbol:   method getTag()
+    location: variable stack of type ItemStack
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:47: error: cannot find symbol
+              itemJson.addProperty("nbt", stack.getOrCreateTag().toString());
+                                               ^
+    symbol:   method getOrCreateTag()
+    location: variable stack of type ItemStack
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:64: error: cannot find symbol
+              Ingredient ingredient = Ingredient.fromJson(jsonObject.get("item"));
+                                                ^
+    symbol:   method fromJson(JsonElement)
+    location: class Ingredient
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:79: error: cannot find symbol
+              jsonObject.add("item", value.ingredient.toJson());
+                                                     ^
+    symbol:   method toJson()
+    location: variable ingredient of type Ingredient
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:82: error: cannot find symbol
+              jsonObject.add("item", value.ingredient.toJson());
+                                                     ^
+    symbol:   method toJson()
+    location: variable ingredient of type Ingredient
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:119: error: cannot find symbol
+                          itemStack.setTag(extraTag);
+                                   ^
+    symbol:   method setTag(CompoundTag)
+    location: variable itemStack of type ItemStack
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:14: error: cannot find symbol
+              fullyBufferedMultiBufferSource.endBatch();
+                                            ^
+    symbol:   method endBatch()
+    location: variable fullyBufferedMultiBufferSource of type FullyBufferedMultiBufferSource
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AdjustmentYRotModifier.java:33: error: cannot find symbol
+          float partialTick = mc.getPartialTick();
+                                ^
+    symbol:   method getPartialTick()
+    location: variable mc of type Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\ARCompatMixinPlugin.java:16: error: cannot find symbol
+  		loaded = LoadingModList.get().getModFileById("acceleratedrendering") != null;
+  		                             ^
+    symbol:   method getModFileById(String)
+    location: class LoadingModListImpl
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:40: error: cannot find symbol
+          bufferbuilder.vertex(matrix, x1, y2, blitOffset).uv(minU, maxV).endVertex();
+                       ^
+    symbol:   method vertex(Matrix4f,float,float,float)
+    location: variable bufferbuilder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:41: error: cannot find symbol
+          bufferbuilder.vertex(matrix, x2, y2, blitOffset).uv(maxU, maxV).endVertex();
+                       ^
+    symbol:   method vertex(Matrix4f,float,float,float)
+    location: variable bufferbuilder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:42: error: cannot find symbol
+          bufferbuilder.vertex(matrix, x2, y1, blitOffset).uv(maxU, minV).endVertex();
+                       ^
+    symbol:   method vertex(Matrix4f,float,float,float)
+    location: variable bufferbuilder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:43: error: cannot find symbol
+          bufferbuilder.vertex(matrix, x1, y1, blitOffset).uv(minU, minV).endVertex();
+                       ^
+    symbol:   method vertex(Matrix4f,float,float,float)
+    location: variable bufferbuilder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:44: error: cannot find symbol
+          BufferUploader.draw(bufferbuilder.end());
+                                           ^
+    symbol:   method end()
+    location: variable bufferbuilder of type BufferBuilder
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\RenderHelper.java:64: error: cannot find symbol
+              Minecraft.getInstance().getMainRenderTarget().enableStencil();
+                                     ^
+    symbol:   method getMainRenderTarget()
+    location: class Minecraft
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:632: error: ScissorStack.peek() is defined in an inaccessible class or interface
+                  System.currentTimeMillis(), graphics.pose(), graphics.getScissorStack().peek()));
+                                                                                         ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\PlayerEnterWorld.java:32: error: HoverEvent is abstract; cannot be instantiated
+                              .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("message.tacz.convert_from_legacy.hover"))
+                                              ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\event\PlayerEnterWorld.java:31: error: ClickEvent is abstract; cannot be instantiated
+                              .withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tacz convert"))
+                                              ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:47: error: ClickEvent is abstract; cannot be instantiated
+                  ClickEvent clickEvent = new ClickEvent(ClickEvent.Action.OPEN_URL, ClothConfigScreen.CLOTH_CONFIG_URL);
+                                          ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ConfigKey.java:48: error: HoverEvent is abstract; cannot be instantiated
+                  HoverEvent hoverEvent = new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("gui.tacz.cloth_config_warning.download"));
+                                          ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:94: error: getPluginUid() in GunModPlugin cannot implement getPluginUid() in IModPlugin
+      public Identifier getPluginUid() {
+                        ^
+    return type Identifier is not compatible with ResourceLocation
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:16: error: OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler
+  public class OpenGunPackDirEntry extends AbstractConfigListEntry<Boolean> {
+         ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\IComponentTooltip.java:20: error: incompatible types: LocalPlayer cannot be converted to TooltipContext
+          return stack.getTooltipLines(player, options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
+                                       ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\AimKey.java:35: error: incompatible types: int cannot be converted to MouseButtonEvent
+          if (isInGame() && AIM_KEY.matchesMouse(event.getButton())) {
+                                                                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\FireSelectKey.java:39: error: incompatible types: int cannot be converted to MouseButtonEvent
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matchesMouse(event.getButton())) {
+                                                                                                                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:45: error: incompatible types: int cannot be converted to MouseButtonEvent
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && INTERACT_KEY.matchesMouse(event.getButton())) {
+                                                                                                             ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\MeleeKey.java:38: error: incompatible types: int cannot be converted to MouseButtonEvent
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matchesMouse(event.getButton())) {
+                                                                                                          ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\ZoomKey.java:40: error: incompatible types: int cannot be converted to MouseButtonEvent
+          if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && ZOOM_KEY.matchesMouse(event.getButton())) {
+                                                                                                         ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\item\GunSmithTableItemRenderer.java:43: error: incompatible types: PoseStack cannot be converted to Pose
+                  transform.apply(false, poseStack);
+                                         ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:107: error: incompatible types: cannot infer type-variable(s) T
+              register((barrier, resourceManager, preparationProfiler, reloadProfiler, backgroundExecutor, gameExecutor) ->
+                      ^
+      (argument mismatch; incompatible parameter types in lambda expression)
+    where T is a type-variable:
+      T extends PreparableReloadListener declared in method <T>register(T)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:108: error: incompatible types: Class<Void> cannot be converted to long
+                      barrier.wait(Void.TYPE).thenRunAsync(ClientIndexManager::reload, gameExecutor));
+                                       ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\sound\GunSoundInstance.java:85: error: incompatible types: String cannot be converted to Identifier
+              super(location.toString(), template.getVolume(), template.getPitch(), template.getWeight(), Type.FILE,
+                                     ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\custom\CustomGunItemBuilder.java:14: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          super(i);
+                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:73: error: incompatible types: ResourceLocation cannot be converted to Identifier
+              Identifier rl = UtilsJS.getMCID(null, idString);
+                                             ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\TimelessKubeJSPlugin.java:49: error: incompatible types: invalid constructor reference
+          RegistryInfo.ITEM.addType("tacz_gun", CustomGunItemBuilder.class, CustomGunItemBuilder::new);
+                                                                            ^
+      incompatible types: ResourceLocation cannot be converted to Identifier
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:9: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOWER_ANIMATION, 93, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:10: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOOP_UPPER_ANIMATION, 94, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:11: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ONCE_UPPER_ANIMATION, 95, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:12: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ROTATION_ANIMATION, 96,
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:52: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:160: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:188: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:215: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                             ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\GunDisplayInstance.java:611: error: exception CommandSyntaxException is never thrown in body of corresponding try statement
+              } catch (CommandSyntaxException e) {
+                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\index\ClientAmmoIndex.java:236: error: exception CommandSyntaxException is never thrown in body of corresponding try statement
+              } catch (CommandSyntaxException e) {
+                ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:22: error: cannot find symbol
+              public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                                 ^
+    symbol: class GuiGraphics
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:42: error: cannot find symbol
+                      public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                                         ^
+    symbol: class GuiGraphics
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+      private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:203: error: package MultiBufferSource does not exist
+          MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
+                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\BedrockPartMixin.java:64: error: package FastColor does not exist
+  			int color = FastColor.ARGB32.color(
+  			                     ^
+  211 errors
+  3 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 22s
+3 actionable tasks: 3 executed

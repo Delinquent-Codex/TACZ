@@ -3,7 +3,7 @@ package com.tacz.guns.client.gui.compat;
 import com.tacz.guns.init.CompatRegistry;
 import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.MultiLineLabel;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
@@ -49,10 +49,10 @@ public class ClothConfigScreen extends Screen {
     }
 
     @Override
-    public void render(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
-        this.renderBackground(gui);
-        this.message.renderCentered(gui, this.width / 2, 80);
-        super.render(gui, pMouseX, pMouseY, pPartialTick);
+    public void extractRenderState(@NotNull GuiGraphicsExtractor gui, int pMouseX, int pMouseY, float pPartialTick) {
+        this.message.visitLines(net.minecraft.client.gui.TextAlignment.CENTER, this.width / 2, 80, 9,
+                gui.textRenderer(GuiGraphicsExtractor.HoveredTextEffects.NONE));
+        super.extractRenderState(gui, pMouseX, pMouseY, pPartialTick);
     }
 
     private void openUrl(String url) {

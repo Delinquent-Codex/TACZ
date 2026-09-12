@@ -1,412 +1,7 @@
 [
   {
-    "file": "src/main/java/com/tacz/guns/mixin/client/StairBlockAccessor.java",
-    "line": 9,
-    "error": "Targetted type 'net.minecraft.world.level.block.StairBlock of com.tacz.guns.mixin.client.StairBlockAccessor is not an interface"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
     "line": 18,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java",
-    "line": 8,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/PreventsHotbarEvent.java",
-    "line": 15,
-    "error": "package RenderGuiOverlayEvent does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 20,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 27,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 28,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 47,
-    "error": "package RenderGuiOverlayEvent does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 118,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 148,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java",
-    "line": 52,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
-    "line": 36,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/FlatColorButton.java",
-    "line": 43,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/GunPackList.java",
-    "line": 10,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 40,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 46,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/GunPackList.java",
-    "line": 121,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/GunPackList.java",
-    "line": 225,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 96,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 490,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 514,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 587,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 686,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "line": 690,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/GunPackList.java",
-    "line": 168,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/GunAttachmentSlot.java",
-    "line": 10,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/GunAttachmentSlot.java",
-    "line": 44,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/GunPropertyDiagrams.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/GunPropertyDiagrams.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/InventoryAttachmentSlot.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/InventoryAttachmentSlot.java",
-    "line": 33,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/RefitTurnPageButton.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/RefitTurnPageButton.java",
-    "line": 23,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/RefitUnloadButton.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/refit/RefitUnloadButton.java",
-    "line": 20,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/smith/ResultButton.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/smith/ResultButton.java",
-    "line": 26,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/smith/TypeButton.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/components/smith/TypeButton.java",
-    "line": 23,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java",
-    "line": 4,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunPackProgressScreen.java",
-    "line": 33,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
-    "line": 21,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
-    "line": 113,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
-    "line": 23,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
-    "line": 29,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
-    "line": 30,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
-    "line": 36,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
-    "line": 53,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
-    "line": 53,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 15,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 18,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 20,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 21,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 25,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/HeatBarOverlay.java",
-    "line": 71,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 24,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 25,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 28,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 31,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 53,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 68,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/InteractKeyTextOverlay.java",
-    "line": 87,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/KillAmountOverlay.java",
-    "line": 9,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/KillAmountOverlay.java",
-    "line": 13,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/KillAmountOverlay.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/KillAmountOverlay.java",
-    "line": 16,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/KillAmountOverlay.java",
-    "line": 21,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/overlay/KillAmountOverlay.java",
-    "line": 21,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/toast/GunLevelUpToast.java",
-    "line": 3,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/toast/GunLevelUpToast.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/toast/GunLevelUpToast.java",
-    "line": 28,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/gui/toast/GunLevelUpToast.java",
-    "line": 28,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java",
-    "line": 29,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java",
-    "line": 35,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java",
-    "line": 35,
-    "error": "static import only from classes and interfaces"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/init/ClientSetupEvent.java",
-    "line": 65,
     "error": "cannot find symbol"
   },
   {
@@ -485,13 +80,893 @@
     "error": "package MultiBufferSource does not exist"
   },
   {
-    "file": "src/main/java/com/tacz/guns/mixin/client/ar/BedrockPartMixin.java",
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 307,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 310,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 315,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 318,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 319,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 351,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 354,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 359,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 375,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
+    "line": 376,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/GunDisplayInstance.java",
+    "line": 606,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/GunDisplayInstance.java",
+    "line": 611,
+    "error": "exception CommandSyntaxException is never thrown in body of corresponding try statement"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/index/ClientAmmoIndex.java",
+    "line": 231,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/index/ClientAmmoIndex.java",
+    "line": 236,
+    "error": "exception CommandSyntaxException is never thrown in body of corresponding try statement"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 203,
+    "error": "package MultiBufferSource does not exist"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 203,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 215,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 216,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 217,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 218,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 222,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 227,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 228,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 229,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 235,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 237,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 240,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 246,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 248,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 249,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 250,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 255,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 261,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 265,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 266,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 271,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 273,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 273,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 275,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 276,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 277,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 283,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 287,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 291,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 307,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 308,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 310,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 311,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 319,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 327,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 341,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 342,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 348,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 365,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 366,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 369,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 370,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 377,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 383,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 407,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 408,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 411,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 412,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 440,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 452,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 463,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 477,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 512,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 513,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 521,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 535,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 562,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 563,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 566,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 567,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 595,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 607,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 618,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 630,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java",
+    "line": 99,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java",
+    "line": 127,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/CameraSetupEvent.java",
+    "line": 192,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/ClientHitMark.java",
+    "line": 52,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/FirstPersonRenderGunEvent.java",
+    "line": 207,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
+    "line": 46,
+    "error": "selected has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
+    "line": 47,
+    "error": "selected has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
+    "line": 53,
+    "error": "selected has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
+    "line": 54,
+    "error": "selected has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
+    "line": 58,
+    "error": "selected has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/PlayerEnterWorld.java",
+    "line": 32,
+    "error": "HoverEvent is abstract; cannot be instantiated"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/event/PlayerEnterWorld.java",
+    "line": 31,
+    "error": "ClickEvent is abstract; cannot be instantiated"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
+    "line": 285,
+    "error": "selected has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/AimKey.java",
+    "line": 26,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/AimKey.java",
+    "line": 35,
+    "error": "incompatible types: int cannot be converted to MouseButtonEvent"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
+    "line": 30,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
+    "line": 40,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
+    "line": 41,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
+    "line": 47,
+    "error": "ClickEvent is abstract; cannot be instantiated"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ConfigKey.java",
+    "line": 48,
+    "error": "HoverEvent is abstract; cannot be instantiated"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/CrawlKey.java",
+    "line": 25,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/CrawlKey.java",
+    "line": 34,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/FireSelectKey.java",
+    "line": 23,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/FireSelectKey.java",
+    "line": 32,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/FireSelectKey.java",
+    "line": 39,
+    "error": "incompatible types: int cannot be converted to MouseButtonEvent"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/InspectKey.java",
+    "line": 22,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/InspectKey.java",
+    "line": 31,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/InteractKey.java",
+    "line": 29,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/InteractKey.java",
+    "line": 38,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/InteractKey.java",
+    "line": 45,
+    "error": "incompatible types: int cannot be converted to MouseButtonEvent"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/MeleeKey.java",
+    "line": 22,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/MeleeKey.java",
+    "line": 31,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/MeleeKey.java",
+    "line": 38,
+    "error": "incompatible types: int cannot be converted to MouseButtonEvent"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
+    "line": 23,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/RefitKey.java",
+    "line": 32,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ReloadKey.java",
+    "line": 29,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ReloadKey.java",
+    "line": 38,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ShootKey.java",
+    "line": 30,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ZoomKey.java",
+    "line": 24,
+    "error": "no suitable constructor found for KeyMapping(String,KeyConflictContext,KeyModifier,Type,int,String)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ZoomKey.java",
+    "line": 33,
+    "error": "no suitable method found for matches(int,int)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/input/ZoomKey.java",
+    "line": 40,
+    "error": "incompatible types: int cannot be converted to MouseButtonEvent"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/particle/BulletHoleParticle.java",
+    "line": 74,
+    "error": "random has protected access in Level"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/renderer/entity/EntityBulletRenderer.java",
+    "line": 156,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/renderer/item/AnimateGeoItemRenderer.java",
+    "line": 314,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/renderer/item/GunItemRendererWrapper.java",
+    "line": 136,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/renderer/item/GunItemRendererWrapper.java",
+    "line": 152,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/renderer/item/GunSmithTableItemRenderer.java",
+    "line": 43,
+    "error": "incompatible types: PoseStack cannot be converted to Pose"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java",
+    "line": 66,
+    "error": "Deserializer has protected access in ItemTransform"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java",
+    "line": 65,
+    "error": "Deserializer has protected access in ItemTransforms"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java",
+    "line": 107,
+    "error": "incompatible types: cannot infer type-variable(s) T"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/ClientAssetsManager.java",
+    "line": 108,
+    "error": "incompatible types: Class<Void> cannot be converted to long"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/manager/PackInfoManager.java",
+    "line": 32,
+    "error": "no suitable method found for fromJson(Gson,Reader,Class<PackInfo>,boolean)"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/ClientIndexManager.java",
+    "line": 182,
+    "error": "items has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/ClientIndexManager.java",
+    "line": 190,
+    "error": "items has private access in Inventory"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/resource/serialize/ItemStackSerializer.java",
+    "line": 14,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/sound/GunSoundInstance.java",
+    "line": 85,
+    "error": "incompatible types: String cannot be converted to Identifier"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
+    "line": 22,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
+    "line": 42,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java",
+    "line": 16,
+    "error": "OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java",
+    "line": 69,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
+    "line": 33,
+    "error": "cannot access ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
+    "line": 94,
+    "error": "getPluginUid() in GunModPlugin cannot implement getPluginUid() in IModPlugin"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
+    "line": 93,
+    "error": "method does not override or implement a method from a supertype"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
+    "line": 14,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java",
+    "line": 7,
+    "error": "constructor ModernKineticGunItem in class ModernKineticGunItem cannot be applied to given types;"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+    "line": 46,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+    "line": 47,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+    "line": 73,
+    "error": "incompatible types: ResourceLocation cannot be converted to Identifier"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+    "line": 106,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "line": 64,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "line": 79,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "line": 82,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "line": 99,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "line": 117,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "line": 119,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",
+    "line": 49,
+    "error": "incompatible types: invalid constructor reference"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java",
+    "line": 14,
+    "error": "cannot access BufferSource"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/oculus/newly/OculusCompatNewly.java",
+    "line": 14,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java",
+    "line": 33,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "line": 9,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "line": 10,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "line": 11,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "line": 12,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "line": 52,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "line": 160,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "line": 188,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "line": 215,
+    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/mixin/client/ar/ARCompatMixinPlugin.java",
+    "line": 16,
+    "error": "get() has private access in LoadingModList"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/mixin/client/ar/ARCompatMixinPlugin.java",
     "line": 16,
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/client/event/RenderCrosshairEvent.java",
-    "line": 46,
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 37,
+    "error": "invalid method reference"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 38,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 39,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 40,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 41,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 42,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 43,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 44,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 44,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
+    "line": 64,
     "error": "cannot find symbol"
   }
 ]

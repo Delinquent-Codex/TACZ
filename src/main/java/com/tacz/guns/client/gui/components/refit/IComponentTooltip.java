@@ -17,7 +17,7 @@ public interface IComponentTooltip {
     static List<Component> getTooltipFromItem(ItemStack stack) {
         Options options = Minecraft.getInstance().options;
         LocalPlayer player = Minecraft.getInstance().player;
-        return stack.getTooltipLines(player, options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
+        return stack.getTooltipLines(net.minecraft.world.item.Item.TooltipContext.of(Minecraft.getInstance().level), player, options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
     }
 
     /**

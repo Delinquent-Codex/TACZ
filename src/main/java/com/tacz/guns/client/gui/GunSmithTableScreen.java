@@ -2,12 +2,6 @@ package com.tacz.guns.client.gui;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.mojang.blaze3d.opengl.GlStateManager;
-import com.mojang.blaze3d.platform.Lighting;
-import com.mojang.blaze3d.platform.Window;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.tacz.guns.GunMod;
 import com.tacz.guns.api.DefaultAssets;
 import com.tacz.guns.api.TimelessAPI;
@@ -37,15 +31,16 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.world.item.crafting.display.SlotDisplayContext;
+import org.joml.Matrix3x2fStack;
+import com.tacz.guns.client.gui.components.AtlasButton;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.FormattedCharSequence;
@@ -83,9 +78,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
     private boolean autoByHandFilterApplied = false;
 
     public GunSmithTableScreen(GunSmithTableMenu menu, Inventory inventory, Component title) {
-        super(menu, inventory, title);
-        this.imageWidth = 344;
-        this.imageHeight = 186;
+        super(menu, inventory, title, 344, 186);
         this.classifyRecipes();
         this.typePage = 0;
         this.indexPage = 0;
@@ -93,9 +86,9 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
         this.getPlayerIngredientCount(this.selectedRecipe);
     }
 
-    public static void drawModCenteredString(GuiGraphics gui, Font font, Component component, int pX, int pY, int color) {
+    public static void drawModCenteredString(GuiGraphicsExtractor gui, Font font, Component component, int pX, int pY, int color) {
         FormattedCharSequence text = component.getVisualOrderText();
-        gui.drawString(font, text, pX - font.width(text) / 2, pY, color, false);
+        gui.text(font, text, pX - font.width(text) / 2, pY, color | 0xFF000000, false);
     }
 
     private void classifyRecipes() {
@@ -264,7 +257,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
             GunSmithTableIngredient ingredient = ingredients.get(i);
             Inventory inventory = player.getInventory();
             int count = 0;
-            for (ItemStack stack : inventory.items) {
+            for (ItemStack stack : inventory.getNonEquipmentItems()) {
                 if (!stack.isEmpty() && ingredient.getIngredient().test(stack)) {
                     count = count + stack.getCount();
                 }
@@ -290,8 +283,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
             this.filterList.setByHandSelected(this.shouldFilterByMainHand());
             this.autoByHandFilterApplied = true;
         }
-        this.filterList.updateSize(134, this.imageHeight, topPos, topPos+imageHeight+1);
-        this.filterList.setLeftPos(leftPos);
+        this.filterList.updateSizeAndPosition(134, imageHeight + 1, leftPos, topPos);
 
         this.classifyRecipes();
         this.updateSelectedRecipeAfterFiltering();
@@ -315,7 +307,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
     }
 
     private void addCraftButton() {
-        this.addRenderableWidget(new ImageButton(leftPos + 289, topPos + 162, 48, 18, 138, 164, 18, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 289, topPos + 162, 48, 18, 138, 164, 18, TEXTURE, b -> {
             if (this.selectedRecipe != null && playerIngredientCount != null) {
                 // 检查是否能合成，不能就不发包
                 List<GunSmithTableIngredient> inputs = selectedRecipe.getInputs();
@@ -338,7 +330,7 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
     }
 
     private void addUrlButton() {
-        this.addRenderableWidget(new ImageButton(leftPos + 112, topPos + 164, 18, 18, 149, 211, 18, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 112, topPos + 164, 18, 18, 149, 211, 18, TEXTURE, b -> {
             if (this.selectedRecipe != null) {
                 ItemStack output = selectedRecipe.getOutput();
                 Item item = output.getItem();
@@ -426,13 +418,13 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
     }
 
     private void addIndexPageButtons() {
-        this.addRenderableWidget(new ImageButton(leftPos + 143, topPos + 56, 96, 6, 40, 166, 6, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 143, topPos + 56, 96, 6, 40, 166, 6, TEXTURE, b -> {
             if (this.indexPage > 0) {
                 this.indexPage--;
                 this.init();
             }
         }));
-        this.addRenderableWidget(new ImageButton(leftPos + 143, topPos + 171, 96, 6, 40, 186, 6, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 143, topPos + 171, 96, 6, 40, 186, 6, TEXTURE, b -> {
             if (selectedRecipeList != null && !selectedRecipeList.isEmpty()) {
                 int maxIndexPage = (selectedRecipeList.size() - 1) / 6;
                 if (this.indexPage < maxIndexPage) {
@@ -444,13 +436,13 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
     }
 
     private void addTypePageButtons() {
-        this.addRenderableWidget(new ImageButton(leftPos + 136, topPos + 4, 18, 20, 0, 162, 20, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 136, topPos + 4, 18, 20, 0, 162, 20, TEXTURE, b -> {
             if (this.typePage > 0) {
                 this.typePage--;
                 this.init();
             }
         }));
-        this.addRenderableWidget(new ImageButton(leftPos + 327, topPos + 4, 18, 20, 20, 162, 20, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 327, topPos + 4, 18, 20, 20, 162, 20, TEXTURE, b -> {
             int maxIndexPage = (recipes.size() - 1) / 7;
             if (this.typePage < maxIndexPage) {
                 this.typePage++;
@@ -460,19 +452,19 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
     }
 
     private void addScaleButtons() {
-        this.addRenderableWidget(new ImageButton(leftPos + 5, topPos + 5, 10, 10, 188, 173, 10, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 5, topPos + 5, 10, 10, 188, 173, 10, TEXTURE, b -> {
             this.scale = Math.min(this.scale + 20, 200);
         }));
-        this.addRenderableWidget(new ImageButton(leftPos + 17, topPos + 5, 10, 10, 200, 173, 10, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 17, topPos + 5, 10, 10, 200, 173, 10, TEXTURE, b -> {
             this.scale = Math.max(this.scale - 20, 10);
         }));
-        this.addRenderableWidget(new ImageButton(leftPos + 29, topPos + 5, 10, 10, 212, 173, 10, TEXTURE, b -> {
+        this.addRenderableWidget(new AtlasButton(leftPos + 29, topPos + 5, 10, 10, 212, 173, 10, TEXTURE, b -> {
             this.scale = 70;
         }));
     }
 
     @Override
-    public boolean mouseScrolled(double pMouseX, double pMouseY, double pDelta) {
+    public boolean mouseScrolled(double pMouseX, double pMouseY, double scrollX, double pDelta) {
         if (pMouseX > leftPos + 143 && pMouseX < leftPos + 143 + 94 && pMouseY > topPos + 66 && pMouseY < topPos + 66 + 85) {
             if (pDelta > 0) {
                 this.indexPage = Math.max(0, this.indexPage - 1);
@@ -483,35 +475,35 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
             this.init();
             return true;
         }
-        return super.mouseScrolled(pMouseX, pMouseY, pDelta);
+        return super.mouseScrolled(pMouseX, pMouseY, scrollX, pDelta);
     }
 
     @Override
-    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        super.render(graphics, mouseX, mouseY, partialTick);
-        drawModCenteredString(graphics, font, Component.translatable("gui.tacz.gun_smith_table.preview"), leftPos + 108, topPos + 5, 0x555555);
+    public void extractRenderState(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
+        drawModCenteredString(graphics, font, Component.translatable("gui.tacz.gun_smith_table.preview"), leftPos + 108, topPos + 5, 0xFF555555);
         if (selectedType != null) {
             var config = recipeKeys.get(selectedType);
             if (config != null) {
-                graphics.drawString(font, config.getName(), leftPos + 150, topPos + 32, 0x555555, false);
+                graphics.text(font, config.getName(), leftPos + 150, topPos + 32, 0xFF555555, false);
             }
         }
-        graphics.drawString(font, Component.translatable("gui.tacz.gun_smith_table.ingredient"), leftPos + 254, topPos + 50, 0x555555, false);
-        drawModCenteredString(graphics, font, Component.translatable("gui.tacz.gun_smith_table.craft"), leftPos + 312, topPos + 167, 0xFFFFFF);
+        graphics.text(font, Component.translatable("gui.tacz.gun_smith_table.ingredient"), leftPos + 254, topPos + 50, 0xFF555555, false);
+        drawModCenteredString(graphics, font, Component.translatable("gui.tacz.gun_smith_table.craft"), leftPos + 312, topPos + 167, 0xFFFFFFFF);
         if (!this.filterEnabled && this.selectedRecipe != null) {
-            this.renderLeftModel(this.selectedRecipe);
+            this.renderLeftModel(graphics, this.selectedRecipe);
             this.renderPackInfo(graphics, this.selectedRecipe);
-            graphics.drawString(font, Component.translatable("gui.tacz.gun_smith_table.count", this.selectedRecipe.getResult().getResult().getCount()), leftPos + 254, topPos + 140, 0x555555, false);
+            graphics.text(font, Component.translatable("gui.tacz.gun_smith_table.count", this.selectedRecipe.getResult().getResult().getCount()), leftPos + 254, topPos + 140, 0xFF555555, false);
         }
         if (selectedRecipeList != null && !selectedRecipeList.isEmpty()) {
             renderIngredient(graphics);
         }
 
         this.renderables.stream().filter(w -> w instanceof ResultButton)
-                .forEach(w -> ((ResultButton) w).renderTooltips(stack -> graphics.renderTooltip(font, stack, mouseX, mouseY)));
+                .forEach(w -> ((ResultButton) w).renderTooltips(stack -> graphics.setTooltipForNextFrame(font, stack, mouseX, mouseY)));
     }
 
-    private void renderPackInfo(GuiGraphics gui, GunSmithTableRecipe recipe) {
+    private void renderPackInfo(GuiGraphicsExtractor gui, GunSmithTableRecipe recipe) {
         ItemStack output = recipe.getOutput();
         Item item = output.getItem();
         Identifier id;
@@ -526,22 +518,22 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
         }
 
         PackInfo packInfo = ClientAssetsManager.INSTANCE.getPackInfo(id);
-        PoseStack poseStack = gui.pose();
+        Matrix3x2fStack poseStack = gui.pose();
         if (packInfo != null) {
-            poseStack.pushPose();
-            poseStack.scale(0.75f, 0.75f, 1);
+            poseStack.pushMatrix();
+            poseStack.scale(0.75f, 0.75f);
             Component nameText = Component.translatable(packInfo.getName());
-            gui.drawString(font, nameText, (int) ((leftPos + 6) / 0.75f), (int) ((topPos + 122) / 0.75f), ChatFormatting.DARK_GRAY.getColor(), false);
-            poseStack.popPose();
+            gui.text(font, nameText, (int) ((leftPos + 6) / 0.75f), (int) ((topPos + 122) / 0.75f), 0xFF555555, false);
+            poseStack.popMatrix();
 
-            poseStack.pushPose();
-            poseStack.scale(0.5f, 0.5f, 1);
+            poseStack.pushMatrix();
+            poseStack.scale(0.5f, 0.5f);
 
             int offsetX = (leftPos + 6) * 2;
             int offsetY = (topPos + 123) * 2;
             int nameWidth = font.width(nameText);
             Component ver = Component.literal("v" + packInfo.getVersion()).withStyle(ChatFormatting.UNDERLINE);
-            gui.drawString(font, ver, (int) (offsetX + nameWidth * 0.75f / 0.5f + 5), offsetY, ChatFormatting.DARK_GRAY.getColor(), false);
+            gui.text(font, ver, (int) (offsetX + nameWidth * 0.75f / 0.5f + 5), offsetY, 0xFF555555, false);
             offsetY += 14;
 
             String descKey = packInfo.getDescription();
@@ -549,42 +541,42 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
                 Component desc = Component.translatable(descKey);
                 List<FormattedCharSequence> split = font.split(desc, 245);
                 for (FormattedCharSequence charSequence : split) {
-                    gui.drawString(font, charSequence, offsetX, offsetY, ChatFormatting.DARK_GRAY.getColor(), false);
+                    gui.text(font, charSequence, offsetX, offsetY, 0xFF555555, false);
                     offsetY += font.lineHeight;
                 }
                 offsetY += 3;
             }
 
-            gui.drawString(font, Component.translatable("gui.tacz.gun_smith_table.license")
+            gui.text(font, Component.translatable("gui.tacz.gun_smith_table.license")
                             .append(Component.literal(packInfo.getLicense()).withStyle(ChatFormatting.DARK_GRAY)),
-                    offsetX, offsetY, ChatFormatting.DARK_GRAY.getColor(), false);
+                    offsetX, offsetY, 0xFF555555, false);
             offsetY += 12;
 
             List<String> authors = packInfo.getAuthors();
             if (!authors.isEmpty()) {
-                gui.drawString(font, Component.translatable("gui.tacz.gun_smith_table.authors")
+                gui.text(font, Component.translatable("gui.tacz.gun_smith_table.authors")
                                 .append(Component.literal(StringUtils.join(authors, ", ")).withStyle(ChatFormatting.DARK_GRAY)),
-                        offsetX, offsetY, ChatFormatting.DARK_GRAY.getColor(), false);
+                        offsetX, offsetY, 0xFF555555, false);
                 offsetY += 12;
             }
 
-            gui.drawString(font, Component.translatable("gui.tacz.gun_smith_table.date")
+            gui.text(font, Component.translatable("gui.tacz.gun_smith_table.date")
                             .append(Component.literal(packInfo.getDate()).withStyle(ChatFormatting.DARK_GRAY)),
-                    offsetX, offsetY, ChatFormatting.DARK_GRAY.getColor(), false);
+                    offsetX, offsetY, 0xFF555555, false);
 
-            poseStack.popPose();
+            poseStack.popMatrix();
         } else {
             Identifier recipeId = recipe.getId();
-            gui.drawString(font, Component.translatable("gui.tacz.gun_smith_table.error").withStyle(ChatFormatting.DARK_RED), leftPos + 6, topPos + 122, 0xAF0000, false);
-            gui.drawString(font, Component.translatable("gui.tacz.gun_smith_table.error.id", recipeId.toString()).withStyle(ChatFormatting.DARK_RED), leftPos + 6, topPos + 134, 0xFFFFFF, false);
+            gui.text(font, Component.translatable("gui.tacz.gun_smith_table.error").withStyle(ChatFormatting.DARK_RED), leftPos + 6, topPos + 122, 0xFFAF0000, false);
+            gui.text(font, Component.translatable("gui.tacz.gun_smith_table.error.id", recipeId.toString()).withStyle(ChatFormatting.DARK_RED), leftPos + 6, topPos + 134, 0xFFFFFFFF, false);
             PackInfo errorPackInfo = ClientAssetsManager.INSTANCE.getPackInfo(id);
             if (errorPackInfo != null) {
-                gui.drawString(font, Component.translatable(errorPackInfo.getName()).withStyle(ChatFormatting.DARK_RED), leftPos + 6, topPos + 146, 0xAF0000, false);
+                gui.text(font, Component.translatable(errorPackInfo.getName()).withStyle(ChatFormatting.DARK_RED), leftPos + 6, topPos + 146, 0xFFAF0000, false);
             }
         }
     }
 
-    private void renderIngredient(GuiGraphics gui) {
+    private void renderIngredient(GuiGraphicsExtractor gui) {
         if (this.selectedRecipe == null) {
             return;
         }
@@ -601,96 +593,52 @@ public class GunSmithTableScreen extends AbstractContainerScreen<GunSmithTableMe
                 GunSmithTableIngredient smithTableIngredient = inputs.get(index);
                 Ingredient ingredient = smithTableIngredient.getIngredient();
 
-                ItemStack[] items = ingredient.getItems();
-                int itemIndex = ((int) (System.currentTimeMillis() / 1_000)) % items.length;
-                ItemStack item = items[itemIndex];
+                List<ItemStack> items = ingredient.display().resolveForStacks(SlotDisplayContext.fromLevel(minecraft.level));
+                int itemIndex = items.isEmpty() ? 0 : (int) ((System.currentTimeMillis() / 1_000) % items.size());
+                ItemStack item = items.isEmpty() ? ItemStack.EMPTY : items.get(itemIndex);
 
-                gui.renderFakeItem(item, offsetX, offsetY);
+                gui.fakeItem(item, offsetX, offsetY);
 
-                PoseStack poseStack = gui.pose();
-                poseStack.pushPose();
+                Matrix3x2fStack poseStack = gui.pose();
+                poseStack.pushMatrix();
 
-                poseStack.translate(0, 0, 200);
-                poseStack.scale(0.5f, 0.5f, 1);
+                gui.nextStratum();
+                poseStack.scale(0.5f, 0.5f);
                 int count = smithTableIngredient.getCount();
                 if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.isCreative()){
-                    gui.drawString(font, String.format("%d/∞", count), (offsetX + 17) * 2, (offsetY + 10) * 2, 0xFFFFFF, false);
+                    gui.text(font, String.format("%d/∞", count), (offsetX + 17) * 2, (offsetY + 10) * 2, 0xFFFFFFFF, false);
                 } else {
                     int hasCount = 0;
                     if (playerIngredientCount != null && index < playerIngredientCount.size()) {
                         hasCount = playerIngredientCount.get(index);
                     }
-                    int color = count <= hasCount ? 0xFFFFFF : 0xFF0000;
-                    gui.drawString(font, String.format("%d/%d", count, hasCount), (offsetX + 17) * 2, (offsetY + 10) * 2, color, false);
+                    int color = count <= hasCount ? 0xFFFFFFFF : 0xFFFF0000;
+                    gui.text(font, String.format("%d/%d", count, hasCount), (offsetX + 17) * 2, (offsetY + 10) * 2, color, false);
                 }
 
 
-                poseStack.popPose();
+                poseStack.popMatrix();
             }
         }
     }
 
-    @SuppressWarnings("deprecation")
-    private void renderLeftModel(GunSmithTableRecipe recipe) {
-        // 先标记一下，渲染高模
+    private void renderLeftModel(GuiGraphicsExtractor graphics, GunSmithTableRecipe recipe) {
         RenderDistance.markGuiRenderTimestamp();
-
-        float rotationPeriod = 8f;
-        int xPos = leftPos + 60;
-        int yPos = topPos + 50;
-        int startX = leftPos + 3;
-        int startY = topPos + 16;
-        int width = 128;
-        int height = 99;
-        float rotPitch = 15;
-
-        Window window = Minecraft.getInstance().getWindow();
-        double windowGuiScale = window.getGuiScale();
-        int scissorX = (int) (startX * windowGuiScale);
-        int scissorY = (int) (window.getHeight() - ((startY + height) * windowGuiScale));
-        int scissorW = (int) (width * windowGuiScale);
-        int scissorH = (int) (height * windowGuiScale);
-        RenderSystem.enableScissor(scissorX, scissorY, scissorW, scissorH);
-
-        Minecraft.getInstance().textureManager.getTexture(TextureAtlas.LOCATION_BLOCKS).setFilter(false, false);
-        RenderSystem.setShaderTexture(0, TextureAtlas.LOCATION_BLOCKS);
-        RenderSystem.enableBlend();
-        RenderSystem.blendFunc(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        PoseStack posestack = RenderSystem.getModelViewStack();
-        posestack.pushPose();
-        posestack.translate(xPos, yPos, 200);
-        posestack.translate(8.0D, 8.0D, 0.0D);
-        posestack.scale(1.0F, -1.0F, 1.0F);
-        posestack.scale(scale, scale, scale);
-        float rot = (System.currentTimeMillis() % (int) (rotationPeriod * 1000)) * (360f / (rotationPeriod * 1000));
-        posestack.mulPose(Axis.XP.rotationDegrees(rotPitch));
-        posestack.mulPose(Axis.YP.rotationDegrees(rot));
-        RenderSystem.applyModelViewMatrix();
-        PoseStack tmpPose = new PoseStack();
-        MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
-        Lighting.setupForFlatItems();
-
-        Minecraft.getInstance().getItemRenderer().renderStatic(recipe.getOutput(), ItemDisplayContext.FIXED, 0xf000f0, OverlayTexture.NO_OVERLAY, tmpPose, bufferSource, null, 0);
-
-        bufferSource.endBatch();
-        RenderSystem.enableDepthTest();
-        Lighting.setupFor3DItems();
-        posestack.popPose();
-        RenderSystem.applyModelViewMatrix();
-
-        RenderSystem.disableScissor();
+        ItemStackRenderState item = new ItemStackRenderState();
+        minecraft.getItemModelResolver().updateForTopItem(item, recipe.getOutput().copy(), ItemDisplayContext.FIXED, null, null, 0);
+        graphics.getRenderState().addPicturesInPictureState(new GunPreviewRenderState(item, leftPos, topPos, scale,
+                System.currentTimeMillis(), graphics.pose(), graphics.getScissorStack().peek()));
     }
 
     @Override
-    protected void renderLabels(@NotNull GuiGraphics gui, int mouseX, int mouseY) {
+    protected void extractLabels(@NotNull GuiGraphicsExtractor gui, int mouseX, int mouseY) {
     }
 
     @Override
-    protected void renderBg(@NotNull GuiGraphics gui, float partialTick, int mouseX, int mouseY) {
-        this.renderBackground(gui);
-        gui.blit(SIDE, leftPos, topPos, 0, 0, 134, 187);
-        gui.blit(TEXTURE, leftPos + 136, topPos + 27, 0, 0, 208, 160);
+    public void extractBackground(@NotNull GuiGraphicsExtractor gui, int mouseX, int mouseY, float partialTick) {
+        super.extractBackground(gui, mouseX, mouseY, partialTick);
+        gui.blit(RenderPipelines.GUI_TEXTURED, SIDE, leftPos, topPos, 0, 0, 134, 187, 256, 256);
+        gui.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, leftPos + 136, topPos + 27, 0, 0, 208, 160, 256, 256);
     }
 
     @Override

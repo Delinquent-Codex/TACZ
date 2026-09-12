@@ -1,0 +1,582 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.732
+
+> Task :compileJava FAILED
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:18: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:6: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:52: error: cannot find symbol
+    public void render(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
+                                ^
+  symbol:   class GuiGraphics
+  location: class ClothConfigScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\FlatColorButton.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\FlatColorButton.java:36: error: cannot find symbol
+    public void renderToolTip(GuiGraphics graphics, Screen screen, int pMouseX, int pMouseY) {
+                              ^
+  symbol:   class GuiGraphics
+  location: class FlatColorButton
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\FlatColorButton.java:43: error: cannot find symbol
+    public void renderWidget(GuiGraphics graphics, int mouseX, int mouseY, float pPartialTick) {
+                             ^
+  symbol:   class GuiGraphics
+  location: class FlatColorButton
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:10: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:40: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:46: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:121: error: cannot find symbol
+    public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
+                       ^
+  symbol:   class GuiGraphics
+  location: class GunPackList
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:225: error: cannot find symbol
+        public void renderWidget(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                 ^
+  symbol:   class GuiGraphics
+  location: class Checkbox
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:96: error: cannot find symbol
+    public static void drawModCenteredString(GuiGraphics gui, Font font, Component component, int pX, int pY, int color) {
+                                             ^
+  symbol:   class GuiGraphics
+  location: class GunSmithTableScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:490: error: cannot find symbol
+    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+                                ^
+  symbol:   class GuiGraphics
+  location: class GunSmithTableScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:514: error: cannot find symbol
+    private void renderPackInfo(GuiGraphics gui, GunSmithTableRecipe recipe) {
+                                ^
+  symbol:   class GuiGraphics
+  location: class GunSmithTableScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:587: error: cannot find symbol
+    private void renderIngredient(GuiGraphics gui) {
+                                  ^
+  symbol:   class GuiGraphics
+  location: class GunSmithTableScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:686: error: cannot find symbol
+    protected void renderLabels(@NotNull GuiGraphics gui, int mouseX, int mouseY) {
+                                         ^
+  symbol:   class GuiGraphics
+  location: class GunSmithTableScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:690: error: cannot find symbol
+    protected void renderBg(@NotNull GuiGraphics gui, float partialTick, int mouseX, int mouseY) {
+                                     ^
+  symbol:   class GuiGraphics
+  location: class GunSmithTableScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:168: error: cannot find symbol
+        public void render(GuiGraphics pGuiGraphics, int pIndex, int pTop, int pLeft, int pWidth, int pHeight, int pMouseX, int pMouseY, boolean pHovering, float pPartialTick) {
+                           ^
+  symbol:   class GuiGraphics
+  location: class Entry
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunAttachmentSlot.java:10: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunAttachmentSlot.java:44: error: cannot find symbol
+    public void renderWidget(@NotNull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                      ^
+  symbol:   class GuiGraphics
+  location: class GunAttachmentSlot
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunPropertyDiagrams.java:14: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunPropertyDiagrams.java:31: error: cannot find symbol
+    public static void draw(GuiGraphics graphics, Font font, int x, int y) {
+                            ^
+  symbol:   class GuiGraphics
+  location: class GunPropertyDiagrams
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\InventoryAttachmentSlot.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\InventoryAttachmentSlot.java:33: error: cannot find symbol
+    public void renderWidget(@Nonnull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                      ^
+  symbol:   class GuiGraphics
+  location: class InventoryAttachmentSlot
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitTurnPageButton.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitTurnPageButton.java:23: error: cannot find symbol
+    public void renderWidget(@Nonnull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                      ^
+  symbol:   class GuiGraphics
+  location: class RefitTurnPageButton
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitUnloadButton.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitUnloadButton.java:20: error: cannot find symbol
+    public void renderWidget(@Nonnull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                      ^
+  symbol:   class GuiGraphics
+  location: class RefitUnloadButton
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\ResultButton.java:6: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\ResultButton.java:26: error: cannot find symbol
+    protected void renderWidget(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
+                                         ^
+  symbol:   class GuiGraphics
+  location: class ResultButton
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\TypeButton.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\TypeButton.java:23: error: cannot find symbol
+    protected void renderWidget(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
+                                         ^
+  symbol:   class GuiGraphics
+  location: class TypeButton
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunPackProgressScreen.java:4: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunPackProgressScreen.java:33: error: cannot find symbol
+    public void render(@NotNull GuiGraphics gui, int mouseX, int mouseY, float partialTick) {
+                                ^
+  symbol:   class GuiGraphics
+  location: class GunPackProgressScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunRefitScreen.java:21: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunRefitScreen.java:113: error: cannot find symbol
+    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float pPartialTick) {
+                                ^
+  symbol:   class GuiGraphics
+  location: class GunRefitScreen
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:3: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:5: error: cannot find symbol
+import net.minecraft.client.gui.components.toasts.ToastComponent;
+                                                 ^
+  symbol:   class ToastComponent
+  location: package net.minecraft.client.gui.components.toasts
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:28: error: cannot find symbol
+    public Visibility render(@NotNull GuiGraphics gui, ToastComponent toastComponent, long timeSinceLastVisible) {
+                                      ^
+  symbol:   class GuiGraphics
+  location: class GunLevelUpToast
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:28: error: cannot find symbol
+    public Visibility render(@NotNull GuiGraphics gui, ToastComponent toastComponent, long timeSinceLastVisible) {
+                                                       ^
+  symbol:   class ToastComponent
+  location: class GunLevelUpToast
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\serialize\ItemStackSerializer.java:5: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+    public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                       ^
+  symbol:   class GuiGraphics
+  location: class OpenGunPackDirEntry
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+    public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                   ^
+  symbol:   class GuiGraphics
+  location: class AttachmentQueryCategory
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:14: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:26: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+    private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\BedrockPartMixin.java:16: error: cannot find symbol
+import net.minecraft.util.FastColor;
+                         ^
+  symbol:   class FastColor
+  location: package net.minecraft.util
+56 errors
+
+> Task :compilePortingChecksJava UP-TO-DATE
+> Task :processPortingChecksResources NO-SOURCE
+> Task :portingChecksClasses UP-TO-DATE
+
+> Task :verifyPortingThirdPerson
+Third-person pose checks passed: 19 assertions (real model/builtin callbacks; no live entity, FML or Player Animator)
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:18: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:6: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:52: error: cannot find symbol
+      public void render(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
+                                  ^
+    symbol:   class GuiGraphics
+    location: class ClothConfigScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\FlatColorButton.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\FlatColorButton.java:36: error: cannot find symbol
+      public void renderToolTip(GuiGraphics graphics, Screen screen, int pMouseX, int pMouseY) {
+                                ^
+    symbol:   class GuiGraphics
+    location: class FlatColorButton
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\FlatColorButton.java:43: error: cannot find symbol
+      public void renderWidget(GuiGraphics graphics, int mouseX, int mouseY, float pPartialTick) {
+                               ^
+    symbol:   class GuiGraphics
+    location: class FlatColorButton
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:10: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:40: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:46: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:121: error: cannot find symbol
+      public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
+                         ^
+    symbol:   class GuiGraphics
+    location: class GunPackList
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:225: error: cannot find symbol
+          public void renderWidget(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                   ^
+    symbol:   class GuiGraphics
+    location: class Checkbox
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:96: error: cannot find symbol
+      public static void drawModCenteredString(GuiGraphics gui, Font font, Component component, int pX, int pY, int color) {
+                                               ^
+    symbol:   class GuiGraphics
+    location: class GunSmithTableScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:490: error: cannot find symbol
+      public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+                                  ^
+    symbol:   class GuiGraphics
+    location: class GunSmithTableScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:514: error: cannot find symbol
+      private void renderPackInfo(GuiGraphics gui, GunSmithTableRecipe recipe) {
+                                  ^
+    symbol:   class GuiGraphics
+    location: class GunSmithTableScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:587: error: cannot find symbol
+      private void renderIngredient(GuiGraphics gui) {
+                                    ^
+    symbol:   class GuiGraphics
+    location: class GunSmithTableScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:686: error: cannot find symbol
+      protected void renderLabels(@NotNull GuiGraphics gui, int mouseX, int mouseY) {
+                                           ^
+    symbol:   class GuiGraphics
+    location: class GunSmithTableScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:690: error: cannot find symbol
+      protected void renderBg(@NotNull GuiGraphics gui, float partialTick, int mouseX, int mouseY) {
+                                       ^
+    symbol:   class GuiGraphics
+    location: class GunSmithTableScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\GunPackList.java:168: error: cannot find symbol
+          public void render(GuiGraphics pGuiGraphics, int pIndex, int pTop, int pLeft, int pWidth, int pHeight, int pMouseX, int pMouseY, boolean pHovering, float pPartialTick) {
+                             ^
+    symbol:   class GuiGraphics
+    location: class Entry
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunAttachmentSlot.java:10: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunAttachmentSlot.java:44: error: cannot find symbol
+      public void renderWidget(@NotNull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                        ^
+    symbol:   class GuiGraphics
+    location: class GunAttachmentSlot
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunPropertyDiagrams.java:14: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\GunPropertyDiagrams.java:31: error: cannot find symbol
+      public static void draw(GuiGraphics graphics, Font font, int x, int y) {
+                              ^
+    symbol:   class GuiGraphics
+    location: class GunPropertyDiagrams
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\InventoryAttachmentSlot.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\InventoryAttachmentSlot.java:33: error: cannot find symbol
+      public void renderWidget(@Nonnull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                        ^
+    symbol:   class GuiGraphics
+    location: class InventoryAttachmentSlot
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitTurnPageButton.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitTurnPageButton.java:23: error: cannot find symbol
+      public void renderWidget(@Nonnull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                        ^
+    symbol:   class GuiGraphics
+    location: class RefitTurnPageButton
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitUnloadButton.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\refit\RefitUnloadButton.java:20: error: cannot find symbol
+      public void renderWidget(@Nonnull GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick) {
+                                        ^
+    symbol:   class GuiGraphics
+    location: class RefitUnloadButton
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\ResultButton.java:6: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\ResultButton.java:26: error: cannot find symbol
+      protected void renderWidget(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
+                                           ^
+    symbol:   class GuiGraphics
+    location: class ResultButton
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\TypeButton.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\components\smith\TypeButton.java:23: error: cannot find symbol
+      protected void renderWidget(@NotNull GuiGraphics gui, int pMouseX, int pMouseY, float pPartialTick) {
+                                           ^
+    symbol:   class GuiGraphics
+    location: class TypeButton
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunPackProgressScreen.java:4: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunPackProgressScreen.java:33: error: cannot find symbol
+      public void render(@NotNull GuiGraphics gui, int mouseX, int mouseY, float partialTick) {
+                                  ^
+    symbol:   class GuiGraphics
+    location: class GunPackProgressScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunRefitScreen.java:21: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunRefitScreen.java:113: error: cannot find symbol
+      public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float pPartialTick) {
+                                  ^
+    symbol:   class GuiGraphics
+    location: class GunRefitScreen
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:3: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.components.toasts.ToastComponent;
+                                                   ^
+    symbol:   class ToastComponent
+    location: package net.minecraft.client.gui.components.toasts
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:28: error: cannot find symbol
+      public Visibility render(@NotNull GuiGraphics gui, ToastComponent toastComponent, long timeSinceLastVisible) {
+                                        ^
+    symbol:   class GuiGraphics
+    location: class GunLevelUpToast
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\toast\GunLevelUpToast.java:28: error: cannot find symbol
+      public Visibility render(@NotNull GuiGraphics gui, ToastComponent toastComponent, long timeSinceLastVisible) {
+                                                         ^
+    symbol:   class ToastComponent
+    location: class GunLevelUpToast
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\serialize\ItemStackSerializer.java:5: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+      public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                         ^
+    symbol:   class GuiGraphics
+    location: class OpenGunPackDirEntry
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+      public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                     ^
+    symbol:   class GuiGraphics
+    location: class AttachmentQueryCategory
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:14: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:26: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\mixin\client\ar\BedrockPartMixin.java:16: error: cannot find symbol
+  import net.minecraft.util.FastColor;
+                           ^
+    symbol:   class FastColor
+    location: package net.minecraft.util
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+      private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  56 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 4s
+3 actionable tasks: 2 executed, 1 up-to-date

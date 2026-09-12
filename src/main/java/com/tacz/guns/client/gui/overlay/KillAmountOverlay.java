@@ -1,24 +1,25 @@
 package com.tacz.guns.client.gui.overlay;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
+import org.joml.Matrix3x2fStack;
 import com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.config.client.RenderConfig;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.DeltaTracker;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.client.gui.overlay.ForgeGui;
-import net.minecraftforge.client.gui.overlay.IGuiOverlay;
+import net.minecraftforge.client.gui.overlay.ForgeLayer;
 
-public class KillAmountOverlay implements IGuiOverlay {
+public class KillAmountOverlay implements ForgeLayer {
     private static long killTimestamp = -1L;
     private static int killAmount = 0;
 
     @Override
-    public void render(ForgeGui gui, GuiGraphics graphics, float partialTick, int width, int height) {
+    public void extract(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
+        int width = graphics.guiWidth(), height = graphics.guiHeight();
         if (!RenderConfig.KILL_AMOUNT_ENABLE.get()) {
             return;
         }
@@ -54,18 +55,15 @@ public class KillAmountOverlay implements IGuiOverlay {
         }
         int color = Mth.hsvToRgb(hue, 0.75f, 1) + (alpha << 24);
 
-        RenderSystem.enableBlend();
-        RenderSystem.defaultBlendFunc();
 
-        PoseStack poseStack = graphics.pose();
+        Matrix3x2fStack poseStack = graphics.pose();
 
-        poseStack.pushPose();
+        poseStack.pushMatrix();
         {
-            poseStack.scale(0.5f, 0.5f, 1);
-            graphics.drawString(mc.font, text, (int) (width - fontWith / 2.0f), (height - 45) * 2 - 1, color);
+            poseStack.scale(0.5f, 0.5f);
+            graphics.text(mc.font, text, (int) (width - fontWith / 2.0f), (height - 45) * 2 - 1, color);
         }
-        poseStack.popPose();
-        RenderSystem.disableBlend();
+        poseStack.popMatrix();
     }
 
     public static void markTimestamp() {

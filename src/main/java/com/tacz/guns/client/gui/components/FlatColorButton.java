@@ -2,7 +2,8 @@ package com.tacz.guns.client.gui.components;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -33,14 +34,14 @@ public class FlatColorButton extends Button {
         return this;
     }
 
-    public void renderToolTip(GuiGraphics graphics, Screen screen, int pMouseX, int pMouseY) {
+    public void renderToolTip(GuiGraphicsExtractor graphics, Screen screen, int pMouseX, int pMouseY) {
         if (this.isHovered && tooltips != null) {
-            graphics.renderComponentTooltip(screen.getMinecraft().font, tooltips, pMouseX, pMouseY);
+            graphics.setComponentTooltipForNextFrame(screen.getMinecraft().font, tooltips, pMouseX, pMouseY);
         }
     }
 
     @Override
-    public void renderWidget(GuiGraphics graphics, int mouseX, int mouseY, float pPartialTick) {
+    public void extractContents(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float pPartialTick) {
         Minecraft minecraft = Minecraft.getInstance();
         Font font = minecraft.font;
         if (isSelect) {
@@ -54,7 +55,8 @@ public class FlatColorButton extends Button {
             graphics.fillGradient(this.getX() + this.width - 1, this.getY() + 1, this.getX() + this.width, this.getY() + this.height - 1, 0xff_F3EFE0, 0xff_F3EFE0);
             graphics.fillGradient(this.getX(), this.getY() + this.height - 1, this.getX() + this.width, this.getY() + this.height, 0xff_F3EFE0, 0xff_F3EFE0);
         }
-        this.renderScrollingString(graphics, font, 2, 0xF3EFE0);
+        this.extractScrollingStringOverContents(graphics.textRenderer(GuiGraphicsExtractor.HoveredTextEffects.NONE),
+                this.getMessage().copy().withStyle(style -> style.withColor(0xF3EFE0)), 2);
         this.renderToolTip(graphics, minecraft.gui.screen(), mouseX, mouseY);
     }
 

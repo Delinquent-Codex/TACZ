@@ -16,6 +16,11 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = GunMod.MOD_ID)
 public final class ClientItemModels {
     @SubscribeEvent
+    public static void registerPreview(net.minecraftforge.client.event.RegisterPictureInPictureRendererEvent event) {
+        event.register(new com.tacz.guns.client.gui.GunPreviewRenderer());
+    }
+
+    @SubscribeEvent
     public static void register(RegisterClientReloadListenersEvent event) {
         TaczRenderTypes.registerPipelines();
         // This synchronous constructor event precedes the first resource preparation. Client setup is concurrent with it.

@@ -26,13 +26,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
-import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
+import net.minecraftforge.client.event.AddGuiOverlayLayersEvent;
+import com.tacz.guns.client.gui.overlay.GunHudLayers;
+import com.tacz.guns.client.event.RenderCrosshairEvent;
+import com.tacz.guns.api.item.IGun;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-import static net.minecraftforge.client.gui.overlay.VanillaGuiOverlay.CROSSHAIR;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = GunMod.MOD_ID)
 public class ClientSetupEvent {
@@ -62,13 +64,11 @@ public class ClientSetupEvent {
     }
 
     @SubscribeEvent
-    public static void onRegisterGuiOverlays(RegisterGuiOverlaysEvent event) {
-        // 注册 HUD
-        event.registerAboveAll("tac_gun_hud_overlay", new GunHudOverlay());
-        event.registerAboveAll("tac_heat_bar", new HeatBarOverlay());
-        event.registerAboveAll("tac_kill_amount_overlay", new KillAmountOverlay());
-        event.registerAbove(CROSSHAIR.id(), "tac_interact_key_overlay", new InteractKeyTextOverlay());
-
+    public static void onRegisterGuiOverlays(AddGuiOverlayLayersEvent event) {
+        GunHudLayers.register(event.getLayeredDraw(),
+                () -> Minecraft.getInstance().gui.hud.isHidden(),
+                () -> Minecraft.getInstance().player != null && IGun.mainHandHoldGun(Minecraft.getInstance().player),
+                RenderCrosshairEvent::extract, new InteractKeyTextOverlay(), new GunHudOverlay(), new HeatBarOverlay(), new KillAmountOverlay());
     }
 
     @SubscribeEvent
