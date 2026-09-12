@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Sunucu tarafında atış bekleme süresi kontrolü devre dışı bırakılmıştır.\n §6UYARI: Bunu kapatmak, sunucu tarafında atış bekleme süresi kontrolünü tamamen devre dışı bırakacaktır ve bu da hile yapılmasına yol açabilir. Bunu kapatmayı, yalnızca hiç atış yapamıyorsanız düşünün.",
   "message.tacz.fire_select.fail": "Bilinmeyen atış modu, silah ateşlenemiyor",
   "key.category.tacz": "Zamansız & Klasik Silahlar: Sıfırdan",
+  "key.category.tacz.guns": "Zamansız & Klasik Silahlar: Sıfırdan",
   "message.tacz.target_minecart.hit": "Hasar: %s Uzaklık: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ silah paketi formatını değiştirdi, eski silah paketi formatı kullanımdan kaldırıldı ve artık desteklenmiyor.",

@@ -2636,7 +2636,7 @@
     "git_blob": "cd93c81c8e64565e3ea59020e7ab1028fb91a70f",
     "checkout_sha256": "bdd9f500d180259ee215fcd0eb86080af4035b034cc81a9e7c6ea8545e3ea6ab",
     "bytes": 762,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/resource/serialize/ItemStackSerializer.java"
   },
   {
@@ -3252,7 +3252,7 @@
     "git_blob": "373d1753eed56a9781f39e2d8b04721bcfba29e1",
     "checkout_sha256": "531f87d738b333022c6ca7651ae81dd456f2a9ff6cf45170dbf1a62161afc03c",
     "bytes": 432,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/shouldersurfing/ShoulderSurfingCompatInner.java"
   },
   {
@@ -3260,7 +3260,7 @@
     "git_blob": "80c0e28d25a61812d063ea1cca15703705a4c287",
     "checkout_sha256": "6d6ae1c10decf5c64ec255bd35acfe6a821c734a7af876a9dac23be47721697c",
     "bytes": 499,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/shouldersurfing/ShoulderSurfingPlugin.java"
   },
   {
@@ -4100,7 +4100,7 @@
     "git_blob": "1fd1fb2a7520fddc0715bb4ce7daa36891cecedc",
     "checkout_sha256": "6e4ef9aed1a942c4ba0afad083a84ca46fcc5b708e789808eb0ad94fbf6553c4",
     "bytes": 1245,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/mixin/client/ar/ARCompatMixinPlugin.java"
   },
   {
@@ -32092,7 +32092,7 @@
     "git_blob": "8fa0a7a95ac6841f7e9c794d60157b0cbf826514",
     "checkout_sha256": "c957dab84b6d16a3dce96cf79a4892717b9dbe9a7cbf155deb499f88db7315d2",
     "bytes": 25965,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/ca_es.json"
   },
   {
@@ -32100,7 +32100,7 @@
     "git_blob": "7be0560f7047cb42ccac3473a6b58ccfdadddecd",
     "checkout_sha256": "5a1b8db0030eb6881cae9ca4518c0ba0b61f0fcb714f2b7d75117c53911ad2ba",
     "bytes": 24054,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/da_dk.json"
   },
   {
@@ -32108,7 +32108,7 @@
     "git_blob": "de0ecab70071f45f0017ff8cd6b81d3dbe3d912c",
     "checkout_sha256": "77fa6ddcd393cc260014db7041d45b891039092e7ecf2137eb105e3d29f195e8",
     "bytes": 25485,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/de_de.json"
   },
   {
@@ -32124,7 +32124,7 @@
     "git_blob": "33810623de70a1e63ed50dd211763873b548fd92",
     "checkout_sha256": "e9c21c5d9b1cf2f5ceac597d06f2768413513ac51e98fe6d3a8903342488f045",
     "bytes": 25668,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/es_es.json"
   },
   {
@@ -32132,7 +32132,7 @@
     "git_blob": "a9a901feb44de954ea700845ed3e72e9692ed664",
     "checkout_sha256": "ae5411779007721a0bc90c97335d08f4457c4c04423563206662072a841a7154",
     "bytes": 24913,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/eu_es.json"
   },
   {
@@ -32140,7 +32140,7 @@
     "git_blob": "d339ff6aa54b67e726a446ef54420bee7bbb388d",
     "checkout_sha256": "2df69a3560316b28cd498a9447bef5b94fd9ac9b2904992c803602d93f580b41",
     "bytes": 26054,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/fr_fr.json"
   },
   {
@@ -32148,7 +32148,7 @@
     "git_blob": "9695779dd2c6175705e7dcdd9b2bb9a811b6ba51",
     "checkout_sha256": "60d9ee75eaec48b959ad7e43c58300328df1aa7158b4ead65c889540b3c4d509",
     "bytes": 24668,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/id_id.json"
   },
   {
@@ -32156,7 +32156,7 @@
     "git_blob": "6ca2d39624e6d08043a68416837971f12d60a9f1",
     "checkout_sha256": "b9561a208cd2dd699eb4b2417be8b548d37e5ee939798d23bf1e9b1235f35c80",
     "bytes": 26446,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/it_it.json"
   },
   {
@@ -32164,7 +32164,7 @@
     "git_blob": "ae7e4894f4719c18d5f62469c9feeb799e77e056",
     "checkout_sha256": "c94991304da3793423c44445fd98d67820fbf1c0a38a1137585f93eef00b1c87",
     "bytes": 28116,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/ja_jp.json"
   },
   {
@@ -32172,7 +32172,7 @@
     "git_blob": "cd26ddf737bd2b2046dc43bd8115e6b0d3be976e",
     "checkout_sha256": "efcdb29598b104224e55299b364590ba646fc0ea8547b306a618666d0efea3f4",
     "bytes": 26345,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/ko_kr.json"
   },
   {
@@ -32180,7 +32180,7 @@
     "git_blob": "bbca89457be1a3d670f89ff8b6af24ebd77c0f55",
     "checkout_sha256": "90c808e03a36b3de2b1b8e6f969e53e72bf079b731464f0527be125139322039",
     "bytes": 25858,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/pl_pl.json"
   },
   {
@@ -32188,7 +32188,7 @@
     "git_blob": "6704698c3283b2c0e17e5a07c73ba3476b05f53f",
     "checkout_sha256": "f5eb9127d67d0d8afafd882ec1d9a334c855776bf9a2ecda88e4732edd369a2f",
     "bytes": 25400,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/pt_br.json"
   },
   {
@@ -32196,7 +32196,7 @@
     "git_blob": "294147ac38e32a91ee64ec6ee7ffa353a54ea96a",
     "checkout_sha256": "9a512818119490f33b6c3d03786f14706b3029f62b4b92a1bab721e5ff330fc0",
     "bytes": 33527,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/ru_ru.json"
   },
   {
@@ -32204,7 +32204,7 @@
     "git_blob": "7fd6952cd3f66e6b3460b7df03b435b09caa96d3",
     "checkout_sha256": "f05c6bbdae505269d3ef7cd94b2c7dc20d062a9781db577bce1559736b5aaf68",
     "bytes": 36603,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/th_th.json"
   },
   {
@@ -32212,7 +32212,7 @@
     "git_blob": "0becb14bb2fa4490af843e93ec74a487599df059",
     "checkout_sha256": "baba7c2fed02c2ac65c0e1b37aadecd571044d2bf923e57bf35e53ae331d9f76",
     "bytes": 12750,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/tr-TR.json"
   },
   {
@@ -32220,7 +32220,7 @@
     "git_blob": "f96461006b0c1fdf8067f07854ead18cd2822745",
     "checkout_sha256": "e5e09188ba25a80ed147809f54fc19060de95394e0156965205eda2a9a979eab",
     "bytes": 26251,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/tr_tr.json"
   },
   {
@@ -32228,7 +32228,7 @@
     "git_blob": "565965f8df5c40a3f49d5314022ab99cc8e03c07",
     "checkout_sha256": "816e4012a4c05b89a3e39b4e55c0199c7a9b412b80e22ccdd72f2b615c7da371",
     "bytes": 31159,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/uk_ua.json"
   },
   {
@@ -32236,7 +32236,7 @@
     "git_blob": "0398f8a8d6b58fa57c1768028a56e22a21f16b5e",
     "checkout_sha256": "26663d7852dda50f5d7dd21e8cdc6a231b07508bbfe916bb99fbbdefb7185f6e",
     "bytes": 26165,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/vi_vn.json"
   },
   {
@@ -32244,7 +32244,7 @@
     "git_blob": "55f804c567d5434d78b05cc78f1bd1dad0c5e1f6",
     "checkout_sha256": "4dc54b5db6d74d42dbee53eae9c19ff444c8fb92a4fa1e25e582f6cfca841d56",
     "bytes": 23712,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/zh_cn.json"
   },
   {
@@ -32252,7 +32252,7 @@
     "git_blob": "41bcf27f154767fd454867ab94570da7cd5de302",
     "checkout_sha256": "7d53df08359e8ed09535c72d6d92904379ab056d00f054ffd0c771865998fc3c",
     "bytes": 23576,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/resources/assets/tacz/lang/zh_tw.json"
   },
   {

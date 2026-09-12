@@ -45,6 +45,14 @@ public final class HudLayerChecks {
         calls.clear(); hidden.set(false); holding.set(false); root.extract(null, null);
         check(calls.indexOf("vanilla_crosshair") < calls.indexOf("gun_crosshair"), "conditions remain live after toggling F1 and gun state");
 
+        var category = com.tacz.guns.client.input.GunKeyMappings.CATEGORY;
+        check(category.id().toLanguageKey("key.category").equals("key.category.tacz.guns"), "native key category has stable namespace");
+        try (var files = java.nio.file.Files.list(java.nio.file.Path.of("src/main/resources/assets/tacz/lang"))) {
+            for (var file : files.filter(path -> path.toString().endsWith(".json")).toList()) {
+                var json = com.google.gson.JsonParser.parseString(java.nio.file.Files.readString(file)).getAsJsonObject();
+                check(json.get("key.category.tacz").equals(json.get("key.category.tacz.guns")), "source category label retained: " + file.getFileName());
+            }
+        }
         checkPreview();
         ClassNode hud = new ClassNode();
         try (var input = HudLayerChecks.class.getClassLoader().getResourceAsStream("net/minecraft/client/gui/Hud.class")) {

@@ -13,7 +13,7 @@ public class ARCompatMixinPlugin implements IMixinConfigPlugin {
 	private final boolean loaded;
 
 	public ARCompatMixinPlugin() {
-		loaded = LoadingModList.get().getModFileById("acceleratedrendering") != null;
+		loaded = LoadingModList.getModFileById("acceleratedrendering") != null;
 	}
 
 	@Override

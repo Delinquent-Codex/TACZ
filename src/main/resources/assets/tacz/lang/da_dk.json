@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Server-side skud cooldown check er deaktiveret.\n §6ADVARSEL: Dette vil deaktivere nedkølingskontrollen i server-siden, hvilket kan føre til potentiale for snyd. Overvej kun at lukke dette, når du ofte ikke kan skyde.",
   "message.tacz.fire_select.fail": "Ukendt skydningstilstand, kan ikke skyde",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "Skade: %s Afstand: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ har opgraderet våbenpakkernes format, gamle våbenpakkers formater er forældet og kan ikke længere bruges.",

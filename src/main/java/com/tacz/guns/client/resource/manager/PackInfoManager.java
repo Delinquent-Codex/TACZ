@@ -29,7 +29,7 @@ public class PackInfoManager extends SimplePreparableReloadListener<Map<String, 
         for (String namespaces : manager.getNamespaces()) {
             manager.getResource(Identifier.fromNamespaceAndPath(namespaces, PACK_INFO_NAME)).ifPresent(rl -> {
                 try (Reader reader = rl.openAsReader()) {
-                    PackInfo packInfo = GsonHelper.fromJson(CommonAssetsManager.GSON, reader, PackInfo.class, true);
+                    PackInfo packInfo = CommonAssetsManager.GSON.fromJson(reader, PackInfo.class);
                     PackInfo packInfo1 = output.put(namespaces, packInfo);
                     if (packInfo1 != null) {
                         throw new IllegalStateException("Duplicate data file ignored with namespace " + namespaces);

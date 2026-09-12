@@ -1,36 +1,13 @@
 {
   "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
-  "command": ".\\gradlew.bat compileJava verifyPortingPrimitives verifyPortingEvents verifyPortingNetwork verifyPortingContent verifyPortingCrafting verifyPortingPacks verifyPortingLua verifyPortingStoredData verifyPortingDye verifyPortingProjectileData verifyPortingExplosions verifyPortingFirstPerson verifyPortingGeometry verifyPortingItemModels verifyPortingWorldRendering verifyPortingBulletHoles verifyPortingWalkDistance verifyPortingEffects verifyPortingThirdPerson verifyPortingHud verifyPortingParticleOptions -PportingDiagnosticFlow --continue --console=plain",
-  "log": "target-compile-58.log",
-  "diagnostics": 130,
+  "command": ".\\gradlew.bat build jarJar --console=plain",
+  "log": "target-build-59.log",
+  "diagnostics": 15,
   "by_subsystem": {
-    "client": 76,
-    "compat": 44,
-    "util": 10
+    "client": 1,
+    "compat": 14
   },
-  "focused_results": [
-    "PASS: 29 primitive assertions against Minecraft 26.2; no mod startup or gameplay claimed.",
-    "PASS: 15 event assertions against Forge EventBus 7.0.5; no KubeJS runtime or gameplay claimed.",
-    "PASS: 61 mapping and packet assertions; no live handshake, mod startup or multiplayer claimed.",
-    "Content checks passed: 31 assertions (no FML registration or rendering).",
-    "Crafting checks passed: 424 assertions (no live menu or recipe reload).",
-    "Pack checks passed: 25 assertions (no full gun-pack reload).",
-    "Lua checks passed: 14 assertions using LuaJ (no gun gameplay).",
-    "Stored data checks passed: 31 assertions (no live block entity).",
-    "Dye checks passed: 9 assertions (plain fixture item; no TACZ item class or live crafting).",
-    "Projectile data checks passed: 15 assertions (no entity spawn, collision or rendering).",
-    "Explosion checks passed: 18 assertions (geometry and target access; no live damage, blocks or effects).",
-    "First-person checks passed: 23 assertions (state controller and MAE; no game rendering or live inventory).",
-    "Geometry checks passed: 20 assertions (CPU vertices and collector scope; no GPU/model rendering).",
-    "Item model checks passed: 38 assertions (codecs/resources/tint; no model bake or rendering).",
-    "World rendering checks passed: 296 assertions; 269 shipped Bedrock models emitted CPU geometry (no FML, GPU, skin download or live entity).",
-    "Bullet-hole checks passed: 57 assertions (real target quad extraction; no particle engine, world or GPU).",
-    "Walk-distance checks passed: 13 assertions (accumulator and target bytecode; no Mixin application or gameplay).",
-    "Effect geometry checks passed: 68 assertions (CPU geometry/pipeline descriptions; no GPU or AR runtime)",
-    "Third-person pose checks passed: 19 assertions (real model/builtin callbacks; no live entity, FML or Player Animator)",
-    "HUD layer checks passed: 35 assertions (native layer registry/bytecode; no GUI, font, textures or FML)",
-    "Particle-option checks passed: 43 assertions (native options/codecs and 8 shipped definitions; no particle engine or GPU)."
-  ],
+  "focused_results": [],
   "input_sha256": {
     "build.gradle": "550bf40e972c77ee3397c5c34bc53d453f369b10de11b043b8810da7775ad59d",
     "gradle/legacy-dependencies.gradle": "489c2adfb4d610a30be9d606652ee48c07ea2b9b1557ada5644c153d214a61c5",

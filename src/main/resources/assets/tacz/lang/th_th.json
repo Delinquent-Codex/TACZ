@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r ปิดการตรวจสอบคูลดาวน์การยิงฝั่งเซิร์ฟเวอร์แล้ว\n §6คำเตือน: การปิดนี้จะทำให้การตรวจสอบคูลดาวน์การยิงฝั่งเซิร์ฟเวอร์ถูกปิดทั้งหมด ซึ่งอาจทำให้เกิดการโกงได้\nควรพิจารณาปิดเฉพาะเมื่อคุณไม่สามารถยิงได้เลยบ่อยครั้งเท่านั้น",
   "message.tacz.fire_select.fail": "ไม่ทราบโหมดการยิง ยิงไม่ได้",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "เดเมจ: %s ระยะ: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "ม็อด TACZ ได้อัปเกรดเวอร์ชั่นแพ็คปืนแล้ว แพ็คปืนเวอร์ชั่นเก่าจะไม่ถูกใช้งานอีกต่อไป",

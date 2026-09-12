@@ -28,11 +28,11 @@ public class AimKey {
             KeyModifier.NONE,
             InputConstants.Type.MOUSE,
             GLFW.GLFW_MOUSE_BUTTON_RIGHT,
-            "key.category.tacz");
+            GunKeyMappings.CATEGORY, 0);
 
     @SubscribeEvent
     public static void onAimPress(InputEvent.MouseButton.Post event) {
-        if (isInGame() && AIM_KEY.matchesMouse(event.getButton())) {
+        if (isInGame() && AIM_KEY.matches(InputConstants.Type.MOUSE.getOrCreate(event.getButton()))) {
             LocalPlayer player = Minecraft.getInstance().player;
             if (player == null || player.isSpectator()) {
                 return;

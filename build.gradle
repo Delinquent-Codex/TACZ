@@ -42,6 +42,10 @@ repositories {
     maven fg.forgeMaven
     maven fg.minecraftLibsMaven
     mavenCentral()
+    exclusiveContent {
+        forRepository { maven { url = 'https://api.modrinth.com/maven' } }
+        filter { includeGroup 'maven.modrinth' }
+    }
     maven { url = 'https://maven.blamejared.com/' }
     maven { url = 'https://maven.shedaniel.me/' }
     maven { url = 'https://maven.kosmx.dev/' }
@@ -68,6 +72,8 @@ tasks.named('jar') { archiveClassifier = 'slim' }
 tasks.named('jarJar') { archiveClassifier = '' }
 dependencies {
     implementation minecraft.dependency("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
+    // Verified Forge 26.2 artifact; optional, supplied separately by the user.
+    compileOnly('maven.modrinth:shoulder-surfing-reloaded:f7tjIKIo') { transitive = false }
     annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
     implementation('com.maydaymemory:mae:1.1.2') {
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
@@ -128,6 +134,8 @@ sourceSets {
         java.include 'com/tacz/guns/porting/EventChecks.java'
         java.include 'com/tacz/guns/porting/NetworkChecks.java'
         java.include 'com/tacz/guns/porting/ContentChecks.java'
+        java.include 'com/tacz/guns/porting/ParticleOptionChecks.java'
+        java.include 'com/tacz/guns/resource/serialize/LegacyParticleParser.java'
         java.include 'com/tacz/guns/porting/CraftingChecks.java'
         java.include 'com/tacz/guns/porting/PackChecks.java'
         java.include 'com/tacz/guns/porting/LuaChecks.java'
@@ -145,6 +153,9 @@ sourceSets {
         java.include 'com/tacz/guns/porting/ThirdPersonPoseChecks.java'
         java.include 'com/tacz/guns/porting/HudLayerChecks.java'
         java.include 'com/tacz/guns/client/gui/GuiDraw.java'
+        java.include 'com/tacz/guns/client/input/GunKeyMappings.java'
+        java.include 'com/tacz/guns/client/resource/ClientAssetRegistries.java'
+        java.include 'com/tacz/guns/client/resource/serialize/ItemStackSerializer.java'
         java.include 'com/tacz/guns/client/gui/GunPreviewRenderState.java'
         java.include 'com/tacz/guns/client/gui/components/AtlasButton.java'
         java.include 'com/tacz/guns/client/gui/components/FlatColorButton.java'
@@ -398,4 +409,13 @@ tasks.register('verifyPortingHud', JavaExec) {
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.HudLayerChecks'
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+// Exercises both legacy pack strings and native target particle codecs.
+tasks.register('verifyPortingParticleOptions', JavaExec) {
+    group = 'verification'
+    description = 'Check legacy and target gun-pack particle arguments without launching a client.'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ParticleOptionChecks'
 }

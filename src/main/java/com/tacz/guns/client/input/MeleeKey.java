@@ -24,18 +24,18 @@ public class MeleeKey {
             KeyModifier.NONE,
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_V,
-            "key.category.tacz");
+            GunKeyMappings.CATEGORY, 0);
 
     @SubscribeEvent
     public static void onMeleeKeyPress(InputEvent.Key event) {
-        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matches(event.getKey(), event.getScanCode())) {
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matches(event.getInfo())) {
             doMeleeLogic();
         }
     }
 
     @SubscribeEvent
     public static void onMeleeMousePress(InputEvent.MouseButton.Post event) {
-        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matchesMouse(event.getButton())) {
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && MELEE_KEY.matches(InputConstants.Type.MOUSE.getOrCreate(event.getButton()))) {
             doMeleeLogic();
         }
     }

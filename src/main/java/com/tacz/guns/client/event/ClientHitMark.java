@@ -49,7 +49,7 @@ public class ClientHitMark {
                     damageAmount = event.getAmount();
                 }
                 float distance = player.distanceTo(event.getHurtEntity());
-                player.displayClientMessage(Component.translatable("message.tacz.target_minecart.hit", String.format("%.1f", damageAmount), String.format("%.2f", distance)), true);
+                player.sendOverlayMessage(Component.translatable("message.tacz.target_minecart.hit", String.format("%.1f", damageAmount), String.format("%.2f", distance)));
 
                 lastHitTimestamp = System.currentTimeMillis();
             }

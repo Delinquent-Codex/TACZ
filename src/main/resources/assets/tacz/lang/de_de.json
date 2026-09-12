@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Serverseitiger Schuss Abklingzeit ist deaktiviert. §6WARNING: Beim Schließen wird die Serverseitige Schuss Abklingzeit durchgehend deaktiviert, was zum potenziellen Betrügen führen könnte. Schließe dies, nur wenn du nicht oft Schießen kannst.",
   "message.tacz.fire_select.fail": "Unbekannter Feuermodus, kann nicht schießen",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "Schaden: %s Entfernung: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ hat das Formatieren der Waffen Pakete verbessert, die alte Waffen Pakete Formatierung ist veraltet und wird nicht länger benutzt.",

@@ -25,18 +25,18 @@ public class FireSelectKey {
             KeyModifier.NONE,
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_G,
-            "key.category.tacz");
+            GunKeyMappings.CATEGORY, 0);
 
     @SubscribeEvent
     public static void onFireSelectKeyPress(InputEvent.Key event) {
-        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matches(event.getKey(), event.getScanCode())) {
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matches(event.getInfo())) {
             doFireSelectLogic();
         }
     }
 
     @SubscribeEvent
     public static void onFireSelectMousePress(InputEvent.MouseButton.Post event) {
-        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matchesMouse(event.getButton())) {
+        if (isInGame() && event.getAction() == GLFW.GLFW_PRESS && FIRE_SELECT_KEY.matches(InputConstants.Type.MOUSE.getOrCreate(event.getButton()))) {
             doFireSelectLogic();
         }
     }

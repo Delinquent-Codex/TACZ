@@ -41,6 +41,13 @@ public final class CraftingChecks {
         var target = LegacyPackCodecs.ITEM_STACK.encodeStart(ops, sword).getOrThrow();
         check(target.getAsJsonObject().has("components") && !target.getAsJsonObject().has("nbt"), "writes component syntax");
         check(ItemStack.isSameItemSameComponents(sword, LegacyPackCodecs.ITEM_STACK.parse(ops, target).getOrThrow()), "target round trip");
+        var displayGson = new com.google.gson.GsonBuilder().registerTypeAdapter(ItemStack.class,
+                new com.tacz.guns.client.resource.serialize.ItemStackSerializer(ops)).create();
+        check(ItemStack.isSameItemSameComponents(sword, displayGson.fromJson(legacy, ItemStack.class)), "client display adapter retains legacy components and extension data");
+        check(ItemStack.isSameItemSameComponents(sword, displayGson.fromJson(target, ItemStack.class)), "client display adapter reads native component syntax");
+        boolean invalidDisplay = false;
+        try { displayGson.fromJson("[]", ItemStack.class); } catch (com.google.gson.JsonParseException expected) { invalidDisplay = true; }
+        check(invalidDisplay, "display adapter rejects a non-object instead of returning an empty icon");
         var originalPainting = JsonParser.parseString("{\"item\":\"minecraft:painting\",\"nbt\":{\"EntityTag\":{\"variant\":\"minecraft:kebab\"}}}");
         var painting = LegacyPackCodecs.ITEM_STACK.parse(net.minecraft.data.registries.VanillaRegistries.createLookup().createSerializationContext(JsonOps.INSTANCE), originalPainting).getOrThrow();
         check(painting.has(DataComponents.PAINTING_VARIANT), "legacy painting variant becomes typed component");

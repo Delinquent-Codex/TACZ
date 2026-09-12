@@ -40,7 +40,7 @@ public class GunSmithTableItemRenderer implements TaczItemRenderer {
             if (transforms != null) {
                 poseStack.translate(0.5F, 0.5F, 0.5F);
                 ItemTransform transform = transforms.getTransform(transformType);
-                transform.apply(false, poseStack);
+                transform.apply(false, poseStack.last());
                 poseStack.translate(-0.5F, -0.5F, -0.5F);
             }
 

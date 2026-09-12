@@ -1,7 +1,5 @@
 package com.tacz.guns.client.event;
 
-import com.github.exopandora.shouldersurfing.api.client.IShoulderSurfingCamera;
-import com.github.exopandora.shouldersurfing.api.client.ShoulderSurfing;
 import com.tacz.guns.GunMod;
 import com.tacz.guns.api.DefaultAssets;
 import com.tacz.guns.api.TimelessAPI;
@@ -96,7 +94,7 @@ public class CameraSetupEvent {
         if (!event.usedConfiguredFov()) {
             return; // 只修改世界渲染的 fov，因此如果是手部渲染 fov 事件，则返回
         }
-        Entity entity = event.getCamera().getEntity();
+        Entity entity = event.getCamera().entity();
         if (entity instanceof LivingEntity livingEntity) {
             ItemStack stack = KeepingItemRenderer.getRenderer().getCurrentItem();
             if (!(stack.getItem() instanceof IGun iGun)) {
@@ -124,7 +122,7 @@ public class CameraSetupEvent {
         if (event.usedConfiguredFov()) {
             return; // 只修改手部物品的 fov，因此如果是世界渲染 fov 事件，则返回
         }
-        Entity entity = event.getCamera().getEntity();
+        Entity entity = event.getCamera().entity();
         if (entity instanceof LivingEntity livingEntity) {
             ItemStack stack = KeepingItemRenderer.getRenderer().getCurrentItem();
             if (!(stack.getItem() instanceof IGun iGun)) {
@@ -189,7 +187,7 @@ public class CameraSetupEvent {
             // 获取所有配件对摄像机后坐力的修改
             ParameterizedCachePair<Float, Float> attachmentRecoilModifier = cacheProperty.getCache(RecoilModifier.ID);
             IClientPlayerGunOperator clientPlayerGunOperator = IClientPlayerGunOperator.fromLocalPlayer(player);
-            float partialTicks = Minecraft.getInstance().getFrameTime();
+            float partialTicks = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
             float aimingProgress = clientPlayerGunOperator.getClientAimingProgress(partialTicks);
             float zoom = iGun.getAimingZoom(mainHandItem);
             float aimingRecoilModifier = 1 - aimingProgress + aimingProgress / (float) Math.min(Math.sqrt(zoom), 1.5);
@@ -214,20 +212,14 @@ public class CameraSetupEvent {
         long timeTotal = System.currentTimeMillis() - shootTimeStamp;
         if (pitchSplineFunction != null && pitchSplineFunction.isValidPoint(timeTotal)) {
             double value = pitchSplineFunction.value(timeTotal);
-            if (ShoulderSurfingCompat.isInstalled() && ShoulderSurfing.getInstance().isShoulderSurfing()) {
-                IShoulderSurfingCamera camera = ShoulderSurfing.getInstance().getCamera();
-                camera.setXRot(camera.getXRot() - (float) (value - xRotO));
-            } else {
+            if (!ShoulderSurfingCompat.applyRecoil((float) (value - xRotO), true)) {
                 player.setXRot(player.getXRot() - (float) (value - xRotO));
             }
             xRotO = value;
         }
         if (yawSplineFunction != null && yawSplineFunction.isValidPoint(timeTotal)) {
             double value = yawSplineFunction.value(timeTotal);
-            if (ShoulderSurfingCompat.isInstalled() && ShoulderSurfing.getInstance().isShoulderSurfing()) {
-                IShoulderSurfingCamera camera = ShoulderSurfing.getInstance().getCamera();
-                camera.setYRot(camera.getYRot() - (float) (value - yRotO));
-            } else {
+            if (!ShoulderSurfingCompat.applyRecoil((float) (value - yRotO), false)) {
                 player.setYRot(player.getYRot() - (float) (value - yRotO));
             }
             yRotO = value;

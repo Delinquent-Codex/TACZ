@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Controllo di ricarica lato server disattivato.\n §6ATTENZIONE: Chiudere questo disabiliterà il controllo di ricarica dello sparo nel lato server, il che può portare a potenziali bari. Considera di chiudere questo solo quando non riesci a sparare spesso.",
   "message.tacz.fire_select.fail": "Modalità di fuoco sconosciuta, impossibile sparare",
   "key.category.tacz": "Armi Classiche e Senza tempo: Zero",
+  "key.category.tacz.guns": "Armi Classiche e Senza tempo: Zero",
   "message.tacz.target_minecart.hit": "Danno: %s Distanza: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ ha aggiornato il formato del pacchetto armi, il vecchio formato del pacchetto armi è deprecato e non è più utilizzato.",

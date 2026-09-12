@@ -28,8 +28,8 @@ public class PlayerEnterWorld {
             Component component = Component.translatable("message.tacz.convert_from_legacy")
                     .append(Component.translatable("message.tacz.convert_from_legacy.button")
                             .withStyle(Style.EMPTY.withColor(ChatFormatting.GREEN)
-                            .withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tacz convert"))
-                            .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("message.tacz.convert_from_legacy.hover"))
+                            .withClickEvent(new ClickEvent.RunCommand("/tacz convert"))
+                            .withHoverEvent(new HoverEvent.ShowText(Component.translatable("message.tacz.convert_from_legacy.hover"))
             )));
             event.getEntity().sendSystemMessage(pre(component));
             event.getEntity().sendSystemMessage(pre(Component.translatable("message.tacz.convert_from_legacy.hint")));

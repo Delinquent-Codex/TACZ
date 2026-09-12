@@ -27,11 +27,11 @@ public class CrawlKey {
             KeyModifier.NONE,
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_C,
-            "key.category.tacz");
+            GunKeyMappings.CATEGORY, 0);
 
     @SubscribeEvent
     public static void onCrawlPress(InputEvent.Key event) {
-        if (isInGame() && CRAWL_KEY.matches(event.getKey(), event.getScanCode())) {
+        if (isInGame() && CRAWL_KEY.matches(event.getInfo())) {
             if (!SyncConfig.ENABLE_CRAWL.get()) {
                 return;
             }

@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Pemeriksaan cooldown tembakan di server di matikan.\n §6Peringatan: Menutup ini akan menonaktifkan pemeriksaan cooldown tembakan di server sama sekali. Pertimbangkan menutup ini jika kamu tidak sering menembak.",
   "message.tacz.fire_select.fail": "Mode tembak tidak diketahui, tidak bisa menembak",
   "key.category.tacz": "Senjata Timeless & Classics: Zero",
+  "key.category.tacz.guns": "Senjata Timeless & Classics: Zero",
   "message.tacz.target_minecart.hit": "Kerusakan: %s Jarak: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ telah mengelola ulang format gun pack, format gun pack yang lama sudah tidak berlaku dan tidak digunakan lagi.",

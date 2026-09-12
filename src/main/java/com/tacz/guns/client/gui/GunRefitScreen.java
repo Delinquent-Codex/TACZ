@@ -282,7 +282,7 @@ public class GunRefitScreen extends Screen {
         if (player != null) {
             ItemStack gun = player.getMainHandItem();
             if (player.getMainHandItem().getItem() instanceof IGun) {
-                ClientMessageLaserColor message = new ClientMessageLaserColor(gun, player.getInventory().selected);
+                ClientMessageLaserColor message = new ClientMessageLaserColor(gun, player.getInventory().getSelectedSlot());
                 NetworkHandler.sendToServer(message);
             }
         }

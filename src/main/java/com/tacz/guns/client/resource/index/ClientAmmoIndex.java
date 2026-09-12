@@ -1,7 +1,6 @@
 package com.tacz.guns.client.resource.index;
 
 import com.google.common.base.Preconditions;
-import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.tacz.guns.GunMod;
 import com.tacz.guns.client.model.BedrockAmmoModel;
@@ -14,7 +13,7 @@ import com.tacz.guns.config.client.ResourceConfig;
 import com.tacz.guns.resource.pojo.AmmoIndexPOJO;
 import com.tacz.guns.util.ColorHex;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
-import net.minecraft.commands.arguments.ParticleArgument;
+import com.tacz.guns.resource.serialize.LegacyParticleParser;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import org.apache.commons.lang3.StringUtils;
@@ -227,14 +226,14 @@ public class ClientAmmoIndex {
             try {
                 AmmoParticle particle = display.getParticle();
                 String name = particle.getName();
-                if (StringUtils.isNoneBlank()) {
-                    particle.setParticleOptions(ParticleArgument.readParticle(new StringReader(name), BuiltInRegistries.PARTICLE_TYPE.asLookup()));
+                if (StringUtils.isNotBlank(name)) {
+                    particle.setParticleOptions(LegacyParticleParser.parse(name, com.tacz.guns.client.resource.ClientAssetRegistries.current()));
                     Preconditions.checkArgument(particle.getCount() > 0, "particle count must be greater than 0");
                     Preconditions.checkArgument(particle.getLifeTime() > 0, "particle life time must be greater than 0");
                     index.particle = particle;
                 }
             } catch (CommandSyntaxException e) {
-                e.fillInStackTrace();
+                GunMod.LOGGER.warn("Invalid ammo particle {}: {}", display.getParticle().getName(), e.getMessage());
             }
         }
     }

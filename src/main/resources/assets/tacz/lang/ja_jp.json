@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r サーバー側での射撃クールダウンチェックが無効化されました。\n§6警告：これを閉じると、サーバー側での射撃クールダウンチェックがすべて無効化されるため、チートにつながる可能性があります。銃を全く撃てない際にのみ使用してください。",
   "message.tacz.fire_select.fail": "射撃モードに異常があるため発砲できません。",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "ダメージ: %s 距離: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZは銃パックのフォーマットを一新しました、古いフォーマットは廃止され、使用できなくなりました。",

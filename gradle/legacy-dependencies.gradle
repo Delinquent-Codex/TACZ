@@ -6,7 +6,6 @@ dependencies {
     compileOnly 'mezz.jei:jei-1.20.1-forge-api:15.0.0.12'
     compileOnly 'curse.maven:framework-549225:7573740'
     compileOnly 'curse.maven:controllable-317269:7943200'
-    compileOnly 'curse.maven:shoulder-surfing-reloaded-243190:5455954'
     compileOnly 'me.shedaniel.cloth:cloth-config-forge:11.1.106'
     compileOnly 'curse.maven:embeddium-908741:5175031'
     compileOnly 'libs:oculus_legacy:mc1.20.1-1.6.13'

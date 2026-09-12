@@ -104,7 +104,7 @@ public enum ClientAssetsManager {
             gltfAnimation = register(new GltfManager());
             scriptManager = register(new ScriptManager(new FileToIdConverter("scripts", ".lua"), libList));
             packInfo = register(new PackInfoManager());
-            register((barrier, resourceManager, preparationProfiler, reloadProfiler, backgroundExecutor, gameExecutor) ->
+            register((sharedState, backgroundExecutor, barrier, gameExecutor) ->
                     barrier.wait(Void.TYPE).thenRunAsync(ClientIndexManager::reload, gameExecutor));
         }
         listeners.forEach(register);

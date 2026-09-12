@@ -12,4 +12,6 @@ Preserve upstream attribution: code GPL-3.0; assets CC BY-NC-ND 4.0, as specifie
 
 Final installation instructions, source revision, artifact path/hash and supported migration claims will be supplied only after an actual release candidate passes its gates.
 
-Development continuation adds native laser/flash submissions, carried-item states, camera/arm hooks and tooltip extraction. Focused effects and bytecode checks pass; no GPU or packaged-runtime support is claimed. Main compilation currently stops at 99 early missing-type diagnostics, before the remaining method failures can all be enumerated. The old humanoid animation injection, scope/stencil, UI and optional integrations remain unfinished.
+The latest continuation adds native laser/flash submissions, carried-item and humanoid pose states, camera/arm hooks, HUD/screens/tooltips, key input and client resource decoding. Legacy particle argument adapters and the verified Forge 26.2-5.0.11 Shoulder Surfing API adapter are implemented. All 21 focused suites passed 1,284 assertions together. No GPU or packaged-runtime support is claimed.
+
+Ordinary build/jarJar still fails (15 early missing-type diagnostics); the fuller FLOW diagnostic compile reports 130 errors in scope/stencil rendering and optional integrations. Several companions have no verified Forge 26.2 artifact in the inspected providers. Their adapters and all source remain in scope. Runtime dependency closure, client/server startup, gameplay, multiplayer, visual/audio parity, migrations and performance gates remain unmet.

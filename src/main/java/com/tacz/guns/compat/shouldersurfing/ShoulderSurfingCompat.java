@@ -20,4 +20,9 @@ public final class ShoulderSurfingCompat {
     public static boolean isInstalled() {
         return INSTALLED;
     }
+
+    /** Keeps optional companion types out of the core camera event's signatures. */
+    public static boolean applyRecoil(float delta, boolean pitch) {
+        return INSTALLED && ShoulderSurfingCompatInner.applyRecoil(delta, pitch);
+    }
 }

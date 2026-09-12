@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r La vérification de l'intervalle de tir par le serveur est désactivée.\n §6ATTENTION: Désactiver cette option empêchera totalement le serveur de vérifier l'intervalle de tir, ce qui pourrait faciliter la triche.",
   "message.tacz.fire_select.fail": "Mode de tir inconnu, impossible de tirer",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "Dégâts: %s Distance: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ a mis à niveau le format du pack d'armes, l'ancien format du pack d'armes est obsolète et n'est plus utilisé",

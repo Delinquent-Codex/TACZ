@@ -71,7 +71,7 @@ public class BulletHoleParticle extends SingleQuadParticle {
         if (configLife <= 1) {
             return configLife;
         }
-        return configLife + world.random.nextInt(configLife / 2);
+        return configLife + world.getRandom().nextInt(configLife / 2);
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.tacz.guns.client.resource;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.tacz.guns.GunMod;
 import com.tacz.guns.api.client.animation.AnimationController;
@@ -28,7 +27,7 @@ import com.tacz.guns.sound.SoundManager;
 import com.tacz.guns.util.ColorHex;
 import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
-import net.minecraft.commands.arguments.ParticleArgument;
+import com.tacz.guns.resource.serialize.LegacyParticleParser;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraftforge.api.distmarker.Dist;
@@ -602,14 +601,14 @@ public class GunDisplayInstance {
         if (particle != null) {
             try {
                 String name = particle.getName();
-                if (StringUtils.isNoneBlank()) {
-                    particle.setParticleOptions(ParticleArgument.readParticle(new StringReader(name), BuiltInRegistries.PARTICLE_TYPE.asLookup()));
+                if (StringUtils.isNotBlank(name)) {
+                    particle.setParticleOptions(LegacyParticleParser.parse(name, com.tacz.guns.client.resource.ClientAssetRegistries.current()));
                     Preconditions.checkArgument(particle.getCount() > 0, "particle count must be greater than 0");
                     Preconditions.checkArgument(particle.getLifeTime() > 0, "particle life time must be greater than 0");
                     this.particle = particle;
                 }
             } catch (CommandSyntaxException e) {
-                e.fillInStackTrace();
+                GunMod.LOGGER.warn("Invalid pack particle {}: {}", particle.getName(), e.getMessage());
             }
         }
     }

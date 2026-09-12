@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Server-side shoot cooldown check is disabled.\n §6WARNING: Close this will disable the shoot cooldown check in server-side at all, which may lead to potential for cheating. Only consider to close this when you can't shoot at all often.",
   "message.tacz.fire_select.fail": "Mode de tir desconegut, no pots disparar",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "Dany: %s Distància: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ ha millorat el format del paquet d'armes, el format del paquet d'armes antic és obsolet i no s'utilitzarà més.",

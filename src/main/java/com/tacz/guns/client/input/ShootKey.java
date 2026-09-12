@@ -32,7 +32,7 @@ public class ShootKey {
             KeyModifier.NONE,
             InputConstants.Type.MOUSE,
             GLFW.GLFW_MOUSE_BUTTON_LEFT,
-            "key.category.tacz");
+            GunKeyMappings.CATEGORY, 0);
     private static boolean lastTimeShootSuccess = false;
     private static boolean controllerShootDown = false;
 

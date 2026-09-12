@@ -153,7 +153,7 @@ public class EntityBulletRenderer extends EntityRenderer<EntityKineticBullet, En
 
     @Override
     public boolean shouldRender(EntityKineticBullet bullet, Frustum camera, double pCamX, double pCamY, double pCamZ) {
-        AABB aabb = bullet.getBoundingBoxForCulling().inflate(0.5);
+        AABB aabb = getBoundingBoxForCulling(bullet).inflate(0.5);
         if (aabb.hasNaN() || aabb.getSize() == 0) {
             aabb = new AABB(bullet.getX() - 2.0, bullet.getY() - 2.0, bullet.getZ() - 2.0, bullet.getX() + 2.0, bullet.getY() + 2.0, bullet.getZ() + 2.0);
         }

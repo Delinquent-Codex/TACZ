@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Od strony serwera sprawdzanie opóźnienia jest wyłączone.\n §6UWAGA: Zamknięcie tego wyłączy sprawdzanie opóźnienia strzału po stronie serwera całkowicie, co może doprowadzić do oszukiwania. Rozważ zamknięcie tego tylko kiedy w ogóle nie możesz strzelać.",
   "message.tacz.fire_select.fail": "Nieznany tryb ognia, nie można strzelić",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "Obrażenia: %s Dystans: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ ulepszył format paczek broni, więc stary format paczek nie jest już obsługiwany.",

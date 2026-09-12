@@ -32,20 +32,20 @@ public class ConfigKey {
             KeyModifier.ALT,
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_T,
-            "key.category.tacz");
+            GunKeyMappings.CATEGORY, 0);
 
     @SubscribeEvent
     public static void onOpenConfig(InputEvent.Key event) {
         if (isInGame() && event.getAction() == GLFW.GLFW_PRESS
-                && OPEN_CONFIG_KEY.matches(event.getKey(), event.getScanCode())
-                && OPEN_CONFIG_KEY.getKeyModifier().equals(KeyModifier.getActiveModifier())) {
+                && OPEN_CONFIG_KEY.matches(event.getInfo())
+                && OPEN_CONFIG_KEY.getKeyModifier().equals(GunKeyMappings.activeModifier())) {
             LocalPlayer player = Minecraft.getInstance().player;
             if (player == null || player.isSpectator()) {
                 return;
             }
             if (!ModList.isLoaded(CompatRegistry.CLOTH_CONFIG)) {
-                ClickEvent clickEvent = new ClickEvent(ClickEvent.Action.OPEN_URL, ClothConfigScreen.CLOTH_CONFIG_URL);
-                HoverEvent hoverEvent = new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("gui.tacz.cloth_config_warning.download"));
+                ClickEvent clickEvent = new ClickEvent.OpenUrl(java.net.URI.create(ClothConfigScreen.CLOTH_CONFIG_URL));
+                HoverEvent hoverEvent = new HoverEvent.ShowText(Component.translatable("gui.tacz.cloth_config_warning.download"));
                 MutableComponent component = Component.translatable("gui.tacz.cloth_config_warning.tips").withStyle(style ->
                         style.applyFormat(ChatFormatting.BLUE).applyFormat(ChatFormatting.UNDERLINE).withClickEvent(clickEvent).withHoverEvent(hoverEvent));
                 player.sendSystemMessage(component);

@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Kiểm tra thời gian giữa phát bắn ở phía máy chủ đang tắt.\n §6CẢNH BÁO: Đóng mục này sẽ vô hiệu hóa hoàn toàn việc kiểm tra thời gian giữa phát bắn ở phía máy chủ, điều này có thể dẫn đến khả năng gian lận. Chỉ cân nhắc tắt mục này khi bạn không thể bắn ổn định.",
   "message.tacz.fire_select.fail": "Không rõ chế độ bắn, không thể bắn",
   "key.category.tacz": "Timeless & Classic Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classic Guns: Zero",
   "message.tacz.target_minecart.hit": "Sát Thương: %s Khoảng Cách: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "TACZ đã nâng cấp định dạng mở rộng, gói mở rộng sử dụng định dạng cũ đã lỗi thời và không thể sử dụng.",

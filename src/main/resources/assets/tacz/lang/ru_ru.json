@@ -20,6 +20,7 @@
   "commands.tacz.config.server_shoot_cooldown_check.disabled": "§a§l[TACZ]§r Серверная проверка перезарядки отключена.\n §6ПРЕДУПРЕЖДЕНИЕ: Полное отключение проверки перезарядки на стороне сервера может привести к читерству. Рекомендуется отключать её только если часто вы вообще не можете стрелять.",
   "message.tacz.fire_select.fail": "Неизвестный режим огня, невозможно стрелять",
   "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "key.category.tacz.guns": "Timeless & Classics Guns: Zero",
   "message.tacz.target_minecart.hit": "Урон: %s / Дистанция: %s",
   "message.tacz.pre": "§a§l[TACZ]§r ",
   "message.tacz.convert_from_legacy.intro": "Формат паков TACZ был обновлён, старый формат устарел и более не используется.",
