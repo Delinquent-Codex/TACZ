@@ -28,6 +28,7 @@
     "client.MouseHandlerMixin",
     "client.PlayerModelMixin",
     "client.SoundManagerPreparationsMixin",
+    "client.ScopeFeatureDispatcherMixin",
     "client.StairBlockAccessor"
   ],
   "injectors": {

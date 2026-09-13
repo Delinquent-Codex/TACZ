@@ -184,6 +184,9 @@ sourceSets {
         java.include 'com/tacz/guns/api/client/renderer/TaczItemRenderer.java'
         java.include 'com/tacz/guns/api/client/renderer/TaczClientItemExtensions.java'
         java.include 'com/tacz/guns/client/renderer/VertexCapture.java'
+        java.include 'com/tacz/guns/client/renderer/scope/*.java'
+        java.include 'com/tacz/guns/porting/ScopeRenderChecks.java'
+        java.include 'com/tacz/guns/porting/ScopeGpuChecks.java'
         java.include 'com/tacz/guns/client/renderer/RenderSubmission.java'
         java.include 'com/tacz/guns/client/model/bedrock/BedrockCube.java'
         java.include 'com/tacz/guns/client/model/bedrock/BedrockCubeBox.java'
@@ -418,4 +421,47 @@ tasks.register('verifyPortingParticleOptions', JavaExec) {
     javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
     classpath = sourceSets.portingChecks.runtimeClasspath
     mainClass = 'com.tacz.guns.porting.ParticleOptionChecks'
+}
+
+
+tasks.register('verifyPortingScopes', JavaExec) {
+    group = 'verification'
+    description = 'Checks scope mask reference fixtures, ordered passes and native pipeline descriptions; no GPU/FML.'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ScopeRenderChecks'
+}
+
+
+// Offscreen verification only; matches the pinned Minecraft 26.2 LWJGL runtime.
+configurations { portingGpuNatives }
+def gpuOs = System.getProperty('os.name').toLowerCase(Locale.ROOT)
+def gpuArch = System.getProperty('os.arch').toLowerCase(Locale.ROOT)
+def gpuNativeClassifier = gpuOs.contains('win') ? 'natives-windows' : gpuOs.contains('mac') ? 'natives-macos' : 'natives-linux'
+if (gpuArch in ['aarch64', 'arm64']) gpuNativeClassifier += '-arm64'
+dependencies {
+    ['lwjgl', 'lwjgl-glfw', 'lwjgl-opengl', 'lwjgl-jemalloc', 'lwjgl-stb', 'lwjgl-vma', 'lwjgl-shaderc', 'lwjgl-spvc', 'lwjgl-openal', 'lwjgl-tinyfd', 'lwjgl-freetype'].each { module ->
+        portingGpuNatives "org.lwjgl:${module}:3.4.1:${gpuNativeClassifier}"
+    }
+}
+
+tasks.register('verifyPortingScopeGpu', JavaExec) {
+    group = 'verification'
+    description = 'Runs native OpenGL scope passes in a hidden window and checks texture readback; no Minecraft/FML.'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    classpath += configurations.portingGpuNatives
+    mainClass = 'com.tacz.guns.porting.ScopeGpuChecks'
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+}
+
+
+tasks.register('verifyPortingScopeVulkan', JavaExec) {
+    group = 'verification'
+    description = 'Runs native Vulkan scope passes in a hidden window and checks texture readback; no Minecraft/FML.'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+    classpath = sourceSets.portingChecks.runtimeClasspath + configurations.portingGpuNatives
+    mainClass = 'com.tacz.guns.porting.ScopeGpuChecks'
+    args '--vulkan'
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
 }

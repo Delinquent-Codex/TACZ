@@ -2,7 +2,16 @@
 
 Work started 2026-09-07. **Incomplete; no installable target JAR exists.**
 
-## Latest checkpoint — 2026-09-12
+## Latest checkpoint — 2026-09-13
+
+- Resumed from `1f01edd5`, preserved all existing work and implemented a native sampled-mask scope backend in `client/renderer/scope/`. It prepares immutable geometry and executes ordered mask/color passes with target GPU APIs, current shader wrapping, depth/alpha rejection and fenced texture/view cleanup. The original attachment/gun stencil call paths are **not yet connected** and still fail compilation.
+- **All 24 verification tasks passed together: 1,553 assertions** in run 69 (2m05s). This includes the prior 1,284 assertions, 241 scope CPU/native-description assertions, **14 actual offscreen OpenGL pixel checks and 14 Vulkan pixel checks**. The GPU tasks execute the production backend with small fixture shaders/geometry; they do not launch Minecraft/FML or verify actual gun models. Exact command and 4,309 input hashes are in `evidence/tested-inputs-69.json` and current tested-inputs.json.
+- OpenGL tested AMD Radeon 760M Graphics (3.3 core / 26.8.1.260810); Vulkan tested NVIDIA GeForce RTX 5050 Laptop GPU (1.4.351 / 616.92). Both cover overlapping ocular IDs, blackout/reticle/body clipping, alpha/depth rejection, the production aperture fan, repeated target resize and replacement shader recompilation. Actual FML/Mixin registration, gun shaders/models/projection, resource-pack reload, fabulous targets, companion behavior and performance remain unverified.
+- All-source FLOW compilation remains **130 errors**: attachment 66, gun 10, RenderHelper 10, optional integrations 44. New scope production classes compile in the focused target source set and produce no main FLOW diagnostics. Ordinary `build jarJar` still fails with **15 early missing-type diagnostics** in run 70 (5s). No target release JAR or game/client/server runtime evidence exists.
+- Corrected the earlier source audit: Forge **does** expose `RenderTarget.enableStencil` and stencil texture allocation; the pipeline has no stencil state and Vulkan uses the overload that ignores the stencil flag. The sampled-mask backend works through both native backends. See scope-rendering.md for implementation limits and source semantics.
+- **Next:** extend the scope job to capture all affected native feature submissions (text, arms/models, nested items/attachments), then migrate BedrockAttachmentModel/BedrockGunModel and RenderHelper to that job while preserving the mixed mask phases and temporary state cleanup. Capturing only VertexCapture geometry would leave functional renderers outside the scope mask. Keep AR/Oculus and the remaining optional integrations in scope. Continue full compilation, dependency closure, packaging and all original runtime gates afterward.
+
+## Previous checkpoint — 2026-09-12
 
 - Resumed from `678805ac` and retained the existing client-input/resource changes. Current all-source FLOW compilation reports **130 errors**: BedrockAttachmentModel 66, BedrockGunModel 10, RenderHelper 10, optional integrations 44. No mixin, input, GUI, resource, sound or other client error is reported in this diagnostic run; this does not prove code generation or runtime linkage.
 - All **21 focused suites passed together: 1,284 assertions**, including 269 shipped Bedrock models emitting CPU geometry and all eight active default-pack particle definitions parsing. Run 58 took 1m21s; exact command and 4,300 input hashes are in `evidence/tested-inputs-58.json` (also the current tested-inputs.json).

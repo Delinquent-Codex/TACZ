@@ -44,3 +44,8 @@ The version-by-version response and exact query URLs are saved in [companion rel
 The source's adaptive-item Predicate checks both hands in the baseline registrar bytecode. The target adapter registers ComputePlayerAimStateEventHandler and sets true if either hand holds IGun, retaining results from other handlers. The Perspective package changed; the existing FREE_LOOK key guard remains. Recoil uses IShoulderSurfing's current camera and keeps optional types inside the companion adapter. Actual plugin discovery, camera interaction/order and configurations remain runtime gates.
 
 For projects whose queried Modrinth slugs returned 404, official listings were also inspected: [Controllable](https://www.curseforge.com/minecraft/mc-mods/controllable) and [Framework](https://www.curseforge.com/minecraft/mc-mods/framework) show Fabric/NeoForge 26.2 files; [Accelerated Rendering](https://www.curseforge.com/minecraft/mc-mods/accelerated-rendering) lists Forge 1.20.1 and NeoForge 1.21/1.21.1. No verified Forge 26.2 artifact was found for these. No substitute loader is used.
+
+
+## Offscreen scope verification libraries — 2026-09-12
+
+The separate `portingGpuNatives` configuration supplies the pinned target's LWJGL **3.4.1** native artifacts (system, GLFW, OpenGL, jemalloc, STB, VMA, shaderc, SPVC, OpenAL, tinyfd and FreeType) for the two offscreen GPU verification tasks. The OS/architecture classifier is selected locally; only `natives-windows` on amd64 was exercised. These are test runtime inputs, not extra packaged mod dependencies. NativeLibrariesBootstrap runs before device creation, including Vulkan-loader discovery. The host OpenGL/Vulkan drivers and tested versions are recorded in scope-rendering.md and the actual logs.

@@ -1,7 +1,7 @@
 {
   "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
-  "command": ".\\gradlew.bat compileJava verifyPortingPrimitives verifyPortingEvents verifyPortingNetwork verifyPortingContent verifyPortingCrafting verifyPortingPacks verifyPortingLua verifyPortingStoredData verifyPortingDye verifyPortingProjectileData verifyPortingExplosions verifyPortingFirstPerson verifyPortingGeometry verifyPortingItemModels verifyPortingWorldRendering verifyPortingBulletHoles verifyPortingWalkDistance verifyPortingEffects verifyPortingThirdPerson verifyPortingHud verifyPortingParticleOptions verifyPortingScopes verifyPortingScopeGpu verifyPortingScopeVulkan -PportingDiagnosticFlow --continue --console=plain",
-  "log": "target-compile-69.log",
+  "command": ".\\gradlew.bat compileJava verifyPortingScopeGpu verifyPortingScopeVulkan -PportingDiagnosticFlow --continue --console=plain",
+  "log": "target-compile-68.log",
   "diagnostics": 130,
   "by_subsystem": {
     "client": 76,
@@ -9,30 +9,8 @@
     "util": 10
   },
   "focused_results": [
-    "PASS: 29 primitive assertions against Minecraft 26.2; no mod startup or gameplay claimed.",
-    "PASS: 15 event assertions against Forge EventBus 7.0.5; no KubeJS runtime or gameplay claimed.",
-    "PASS: 61 mapping and packet assertions; no live handshake, mod startup or multiplayer claimed.",
-    "Content checks passed: 31 assertions (no FML registration or rendering).",
-    "Crafting checks passed: 424 assertions (no live menu or recipe reload).",
-    "Pack checks passed: 25 assertions (no full gun-pack reload).",
-    "Lua checks passed: 14 assertions using LuaJ (no gun gameplay).",
-    "Stored data checks passed: 31 assertions (no live block entity).",
-    "Dye checks passed: 9 assertions (plain fixture item; no TACZ item class or live crafting).",
-    "Projectile data checks passed: 15 assertions (no entity spawn, collision or rendering).",
-    "Explosion checks passed: 18 assertions (geometry and target access; no live damage, blocks or effects).",
-    "First-person checks passed: 23 assertions (state controller and MAE; no game rendering or live inventory).",
-    "Geometry checks passed: 20 assertions (CPU vertices and collector scope; no GPU/model rendering).",
-    "Item model checks passed: 38 assertions (codecs/resources/tint; no model bake or rendering).",
-    "World rendering checks passed: 296 assertions; 269 shipped Bedrock models emitted CPU geometry (no FML, GPU, skin download or live entity).",
-    "Bullet-hole checks passed: 57 assertions (real target quad extraction; no particle engine, world or GPU).",
-    "Walk-distance checks passed: 13 assertions (accumulator and target bytecode; no Mixin application or gameplay).",
-    "Effect geometry checks passed: 68 assertions (CPU geometry/pipeline descriptions; no GPU or AR runtime)",
-    "Third-person pose checks passed: 19 assertions (real model/builtin callbacks; no live entity, FML or Player Animator)",
-    "HUD layer checks passed: 35 assertions (native layer registry/bytecode; no GUI, font, textures or FML)",
-    "Particle-option checks passed: 43 assertions (native options/codecs and 8 shipped definitions; no particle engine or GPU).",
-    "Scope rendering checks passed: 241 assertions (CPU/native descriptions only; no GPU/FML)",
-    "\u001b[mScope GPU checks passed: 14 assertions (native OpenGL fixtures; no Minecraft/FML/gun visuals)",
-    "\u001b[mScope GPU checks passed: 14 assertions (native Vulkan fixtures; no Minecraft/FML/gun visuals)"
+    "Scope GPU checks passed: 12 assertions (native OpenGL fixtures; no Minecraft/FML/gun visuals)",
+    "Scope GPU checks passed: 12 assertions (native Vulkan fixtures; no Minecraft/FML/gun visuals)"
   ],
   "input_sha256": {
     "build.gradle": "c8c7eda52a838d790a542e4e91b47749d54e1bfacf5d53607933dfc7fa302720",
@@ -4337,7 +4315,7 @@
     "src/portingChecks/java/com/tacz/guns/porting/PrimitiveChecks.java": "b2c2afd401e46ef1ca57137fc08b38cc3624be556c06240ccfdf2cb9ffed5c37",
     "src/portingChecks/java/com/tacz/guns/porting/ProjectileDataChecks.java": "d9ac7f85aa72ace2c855eec6a5f799a7cd95dbec5dd066a505470eb1014775bb",
     "src/portingChecks/java/com/tacz/guns/porting/RegistryFixture.java": "cab9c6d3678438d23eb1ed9a1085dd4618231fe51837ca15bfe6b29e2736ffe2",
-    "src/portingChecks/java/com/tacz/guns/porting/ScopeGpuChecks.java": "b0ff8d0b00a124bd73810f794fe1aab82ef8df691a038bf3bfaee0a05e0845da",
+    "src/portingChecks/java/com/tacz/guns/porting/ScopeGpuChecks.java": "0b32a25fc9cda0fda8c96251737d626fee132ae40e4e33afc724846e2c57f8df",
     "src/portingChecks/java/com/tacz/guns/porting/ScopeRenderChecks.java": "d6416c6015326375c41aa6c9583cf8b2cd39a9ae07c74900059b0c17dd2eef7a",
     "src/portingChecks/java/com/tacz/guns/porting/StoredDataChecks.java": "f2977f0ba5dc2e9a94f31c2004a987fe54bba70070aeb59dd45f3bb6098aae76",
     "src/portingChecks/java/com/tacz/guns/porting/ThirdPersonPoseChecks.java": "5f377a7a625141bfd3c7ef7e061a47b8b100954ce94bd7a51ab5560733156039",

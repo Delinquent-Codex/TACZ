@@ -451,12 +451,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native scope backend has 241 CPU assertions and offscreen OpenGL/Vulkan pixel fixtures. This original stencil call path still fails compilation and is not connected to the backend. Functional submissions, real gun shader/model visuals and runtime parity remain open; see scope-rendering.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockGunModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Native scope backend has 241 CPU assertions and offscreen OpenGL/Vulkan pixel fixtures. This original stencil call path still fails compilation and is not connected to the backend. Functional submissions, real gun shader/model visuals and runtime parity remain open; see scope-rendering.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {
@@ -1516,7 +1516,7 @@
   },
   "source:src/main/java/com/tacz/guns/util/RenderHelper.java": {
     "implementation": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "validation": "Native scope backend has 241 CPU assertions and offscreen OpenGL/Vulkan pixel fixtures. This original stencil call path still fails compilation and is not connected to the backend. Functional submissions, real gun shader/model visuals and runtime parity remain open; see scope-rendering.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/ResourceScanner.java": {

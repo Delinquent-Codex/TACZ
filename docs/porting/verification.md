@@ -123,3 +123,18 @@ Particle checks compare legacy dust/transition channel order and scale clamps, a
 Shoulder Surfing's downloaded runtime and API source artifacts matched published hashes. Actual target source confirmed plugin discovery still reads shouldersurfing_plugin.json. Baseline registrar bytecode confirmed the old Predicate checks both hand slots. The migrated adapter has no errors in FLOW-57/58, but has not been loaded through FML or the companion's event bus; no live crosshair/recoil or absent-mod startup claim is made.
 
 Checkpoint audit: all 4,300 working input hashes matched FLOW-58 after documentation updates; the untouched baseline worktree was clean, inventory regeneration reported zero JSON parse errors and no unaccounted baseline files, and the Gradle-resolved Shoulder Surfing runtime JAR matched the inspected SHA-256. `git -c core.whitespace=cr-at-eol diff --check` passed; this accommodates the existing CRLF-indexed zh_cn.json without changing its line endings.
+
+
+## Native scope backend — 2026-09-13 checkpoint
+
+- Run 60: new production backend classes compiled; FLOW main remained 130 errors. The CPU suite reached a fixture-only Identifier constructor error (the native String pipeline-location overload assumes the default namespace). Corrected to the Identifier overload.
+- Run 61: scope CPU suite passed 241 assertions; Effects 68 and Geometry 20 also passed; main remained 130.
+- Runs 62–64: offscreen harness fixes used the public GlBackend factory, supplied target LWJGL native artifacts, and corrected fence creation to occur **before** submit. These attempts did not pass the GPU suite.
+- Run 65: first OpenGL pass, 12 real pixel checks. Runs 66–67 exposed missing native-library bootstrap and game-version initialization in the standalone Vulkan harness; no Vulkan pass was claimed for those attempts.
+- Run 68: OpenGL and Vulkan each passed 12 pixel checks after calling the real NativeLibrariesBootstrap and SharedConstants version detection. Run 69 adds the production aperture fan and passes **14 pixel checks on each backend**.
+- Run 69 executes all **24** verification tasks together: **1,553 assertions** (1,525 CPU/description/codec assertions plus 28 GPU pixel assertions). Full FLOW main compilation remains 130 errors. Total command duration 2m05s. Full command and 4,309 input hashes: `evidence/tested-inputs-69.json` / current tested-inputs.json; complete log: `evidence/target-compile-69.log`.
+- Run 70: ordinary `.\gradlew.bat build jarJar --console=plain` still fails with 15 early missing-type errors in 5s. `evidence/tested-inputs-70.json` records the same unchanged source/build inputs. Primary compile-errors.json retains run 69's fuller FLOW diagnostic inventory.
+
+The hidden-window tests create real target GPU devices, pipelines, textures, native staged vertex/index buffers and readbacks. They execute ScopeFeatureRenderer, ScopePipelines, ScopeShader and ScopeAperture. Fixture shader source and prepared texture/transform context are explicit constructor inputs; no main class is stubbed or excluded. These tests do not instantiate Minecraft/FML or prove entity/text/laser shader compatibility, actual gun visual parity, lifecycle integration or runtime performance. Vulkan validation layers were disabled. Scope-rendering.md records devices, constraints and next integration work.
+
+Reproduce the GPU fixtures with Java 25 using `verifyPortingScopeGpu` and `verifyPortingScopeVulkan`; they require functioning corresponding host graphics drivers and use hidden windows. The dedicated portingGpuNatives configuration is test-only and matches the target's LWJGL 3.4.1. Normal compile/build tasks continue to include every main source.
