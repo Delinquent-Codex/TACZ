@@ -215,6 +215,7 @@ sourceSets {
         java.include 'com/tacz/guns/crafting/IngredientAllocation.java'
         java.include 'com/tacz/guns/crafting/CraftingOutputs.java'
         java.include 'com/tacz/guns/resource/serialize/LegacyPackCodecs.java'
+        java.include 'com/tacz/guns/compat/kubejs/util/ScriptRecipeData.java'
         java.include 'com/tacz/guns/api/TaczConstants.java'
         java.include 'com/tacz/guns/api/DefaultAssets.java'
         java.include 'com/tacz/guns/init/ModParticles.java'

@@ -2,7 +2,16 @@
 
 Work started 2026-09-07. **Incomplete; no installable target JAR exists.**
 
-## Latest checkpoint — 2026-09-13, native scope integration
+## Latest checkpoint — 2026-09-13, script recipe data
+
+- Continued from native-scope checkpoint `c8940aa5`. KubeJS's TACZ-owned recipe boundary now uses registry-aware native ingredient/item codecs, preserving native item components and accepting legacy pack JSON. Legacy custom-result root NBT replaces the old tag before data fixing. Native component JSON plus root NBT replacement fails explicitly rather than losing data. The new ScriptRecipeData helper has no KubeJS dependency.
+- GunSmithTableResultInfo writes component-bearing custom items, provides a caller-registry overload and uses native Identifier/NBT parsing. The custom gun item now receives target Item.Properties with its registry ID. KubeJS itself remains externally blocked; its old builder/registration signatures still fail compilation and no script lifecycle was tested.
+- JEI ingredient alternatives now resolve native SlotDisplay values and copy required counts, retaining component-bearing display stacks. Its GUI/plugin APIs and Forge 26.2 runtime availability remain unmet.
+- **All 25 verification tasks passed together: 1,743 assertions** in run 82 (1m23s), including crafting 433, 36 real GPU pixel checks and 138 actual target shader compilation/version checks. The added nine recipe checks cover components, legacy replacement, input immutability, ingredient alternatives, dynamic-registry round trips and explicit missing-registry failure. See `evidence/tested-inputs-82.json` / current tested-inputs.json for the exact command and **4,318 source/build/resource/library hashes**.
+- Full all-source FLOW compilation is down to **86 errors**: 56 in old accelerated attachment/gun scope paths, plus 30 optional-integration errors (Cloth, JEI, KubeJS, Oculus, Player Animator). Ordinary `build jarJar` still fails with **13 early errors** in run 83 (3s). No target JAR, FML/client/server launch, gameplay, actual gun visuals or multiplayer evidence exists. Every main source and required Mixin remains enabled.
+- **Next:** replace the remaining legacy accelerated-renderer and companion boundaries using verified Forge 26.2-compatible APIs, and validate native scope phase/dispatcher Mixins through FML. Several companion artifacts remain unavailable in the inspected providers; keep these unmet integration requirements visible. Then finish full compilation, runtime dependency closure, installable packaging and all original runtime/migration/performance gates. Full port completion remains blocked and unclaimed.
+
+## Previous checkpoint — 2026-09-13, native scope integration
 
 - Resumed from `124234f8`, preserving the in-progress native capture work. Non-accelerated BedrockAttachmentModel/BedrockGunModel now collect complete optic/gun jobs, preserving simple/mixed scope stages, gun masks and both source attachment super.render calls. Temporary visibility/ancestor poses and mask state restore on exceptions. Legacy accelerated paths remain intact and incompatible.
 - Added native feature capture for custom geometry, models, text, items and block models, reusing target feature builders with a narrow access transformer. Native Model.Simple arm/part geometry freezes during extraction. Required simple/translucent phase Mixins intercept functional submissions; actual FML/Mixin application is **unverified**.

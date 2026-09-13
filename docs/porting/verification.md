@@ -154,3 +154,14 @@ Native checks exercise actual Custom/Model/Text/Item/BlockModelFeatureRenderer c
 Separate-output pixel checks preserve an unmasked smaller target and masked same-size outputs with independent depth rejection. The fixtures still use simple geometry/shaders for pixel colors; they do not establish fabulous frame-graph composition. The additional shader tests compile the real pinned resource text for 17 native/TACZ pipelines and three scope variants per pipeline, with the native GLSL preprocessor/import rules. They do not bind real game textures, bake assets or draw actual guns.
 
 Both GPU tasks read Mavenizer's 26.2 client.jar, SHA-256 `40896ee9f1e2bec3c934daac7e93d41e9e3d9c2f8ae0ca366d52ffbfd1afa290`; logs record the file/hash/version. Override a different cache layout with `-PportingClientAssets=<absolute client.jar path>`. The current target's native OpenGL/Vulkan devices are used; Vulkan validation layers remain disabled. No actual game/FML/companion/release gate is closed by this checkpoint.
+
+
+## Script recipe data and JEI ingredient display — 2026-09-13
+
+Run 80: main FLOW dropped to 87 errors; Lua 14 and events 15 passed. A new painting round-trip fixture failed because it created a different registry lookup after decoding the holder. Native codecs correctly rejected that holder ownership mismatch. Run 81 reuses the decoding lookup and separately verifies rejection with a missing dynamic registry: crafting **433**, Lua 14, events 15 passed; main remained 87.
+
+Run 82 includes the native JEI display migration and runs all **25** tasks: **1,743 assertions pass**, main FLOW fails with **86 errors**, duration 1m23s. Breakdown: 1,569 CPU/native-description/codec assertions, 36 GPU pixel assertions, 138 target shader compilation/version assertions. Exact command and 4,318 input hashes are in evidence/tested-inputs-82.json and current tested-inputs.json. No source exclusions or disabled injection requirements are introduced.
+
+Run 83: ordinary `.\gradlew.bat build jarJar --console=plain`, exit 1, **13 early missing-type errors**, 3s. Same source/build inputs, recorded in tested-inputs-83.json; primary compile-errors.json retains FLOW-82. No installable artifact exists.
+
+The new ScriptRecipeData tests run its real target codecs without KubeJS: component serialization, legacy tag replacement before data fixing, unknown extension fields, source immutability, native/legacy ingredient alternatives, painting holder round trips, missing registry rejection and startup registry fallback. Custom gun registration, KubeJS/Rhino execution, and JEI GUI/layout/reload behavior are not tested. Old companion binary signatures remain temporary scaffolding and prevent release readiness.

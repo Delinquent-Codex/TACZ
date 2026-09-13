@@ -740,8 +740,8 @@
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java": {
-    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java; compat/kubejs/util/ScriptRecipeData",
+    "validation": "Run 82: crafting 433 includes nine real component/legacy/script-data registry fixtures; no KubeJS runtime. Custom item target properties supplied; legacy companion builder/factory signatures still fail compilation. Forge 26.2 companion unavailable in inspected providers.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java": {
@@ -775,8 +775,8 @@
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java": {
-    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java; compat/kubejs/util/ScriptRecipeData",
+    "validation": "Run 82: crafting 433 includes nine real component/legacy/script-data registry fixtures; no KubeJS runtime. Custom item target properties supplied; legacy companion builder/factory signatures still fail compilation. Forge 26.2 companion unavailable in inspected providers.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/kubejs/util/AttachmentNbtFactory.java": {
@@ -790,8 +790,8 @@
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java": {
-    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java; compat/kubejs/util/ScriptRecipeData",
+    "validation": "Run 82: crafting 433 includes nine real component/legacy/script-data registry fixtures; no KubeJS runtime. Custom item target properties supplied; legacy companion builder/factory signatures still fail compilation. Forge 26.2 companion unavailable in inspected providers.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/kubejs/util/TimelessItemNbtFactory.java": {
@@ -4317,6 +4317,16 @@
   "resource:src/main/resources/assets/tacz/lang/zh_tw.json": {
     "implementation": "src/main/resources/assets/tacz/lang/zh_tw.json",
     "validation": "Original category label retained; native key.category.tacz.guns alias checked against every shipped locale in HUD-58. Live language/UI rendering unverified.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java; compat/kubejs/util/ScriptRecipeData",
+    "validation": "Run 82: crafting 433 includes nine real component/legacy/script-data registry fixtures; no KubeJS runtime. Custom item target properties supplied; legacy companion builder/factory signatures still fail compilation. Forge 26.2 companion unavailable in inspected providers.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java",
+    "validation": "Native ingredient SlotDisplay resolution and copied counts; no diagnostics for this category in FLOW-82. JEI plugin/GUI companion APIs still block full build, and no JEI layout/runtime test exists.",
     "status": "in progress"
   }
 }

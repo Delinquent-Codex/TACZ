@@ -30,16 +30,6 @@
     "error": "cannot find symbol"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 26,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java",
     "line": 5,
     "error": "cannot find symbol"
@@ -365,11 +355,6 @@
     "error": "OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java",
-    "line": 69,
-    "error": "cannot find symbol"
-  },
-  {
     "file": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
     "line": 33,
     "error": "cannot access ResourceLocation"
@@ -386,63 +371,8 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
-    "line": 14,
+    "line": 17,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java",
-    "line": 7,
-    "error": "constructor ModernKineticGunItem in class ModernKineticGunItem cannot be applied to given types;"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
-    "line": 46,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
-    "line": 47,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
-    "line": 73,
-    "error": "incompatible types: ResourceLocation cannot be converted to Identifier"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
-    "line": 106,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 64,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 79,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 82,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 99,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 117,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
-    "line": 119,
-    "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",

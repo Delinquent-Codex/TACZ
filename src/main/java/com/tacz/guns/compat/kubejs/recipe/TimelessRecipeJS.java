@@ -8,6 +8,8 @@ import com.tacz.guns.api.item.builder.AmmoItemBuilder;
 import com.tacz.guns.api.item.builder.AttachmentItemBuilder;
 import com.tacz.guns.api.item.builder.GunItemBuilder;
 import com.tacz.guns.compat.kubejs.util.GunSmithTableResultInfo;
+import com.tacz.guns.compat.kubejs.util.ScriptRecipeData;
+import com.tacz.guns.resource.serialize.LegacyPackCodecs;
 import com.tacz.guns.crafting.result.GunSmithTableResult;
 import com.tacz.guns.resource.CommonAssetsManager;
 import com.tacz.guns.resource.index.CommonGunIndex;
@@ -16,14 +18,11 @@ import dev.latvian.mods.kubejs.item.InputItem;
 import dev.latvian.mods.kubejs.item.OutputItem;
 import dev.latvian.mods.kubejs.recipe.RecipeExceptionJS;
 import dev.latvian.mods.kubejs.recipe.RecipeJS;
-import dev.latvian.mods.kubejs.registry.RegistryInfo;
-import dev.latvian.mods.kubejs.util.JsonIO;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.crafting.CraftingHelper;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -61,7 +60,7 @@ public class TimelessRecipeJS extends RecipeJS {
             if (!jsonObject.has("item")) {
                 throw new RecipeExceptionJS("Expected " + jsonObject + " must has a item member");
             }
-            Ingredient ingredient = Ingredient.fromJson(jsonObject.get("item"));
+            Ingredient ingredient = ScriptRecipeData.readIngredient(jsonObject.get("item"), ScriptRecipeData.currentRegistries());
             int count = 1;
             if (jsonObject.has("count")) {
                 count = Math.max(GsonHelper.getAsInt(jsonObject, "count"), 1);
@@ -76,10 +75,10 @@ public class TimelessRecipeJS extends RecipeJS {
     public JsonElement writeInputItem(InputItem value) {
         JsonObject jsonObject = new JsonObject();
         if (value.count > 1) {
-            jsonObject.add("item", value.ingredient.toJson());
+            jsonObject.add("item", ScriptRecipeData.writeIngredient(value.ingredient, ScriptRecipeData.currentRegistries()));
             jsonObject.addProperty("count", value.count);
         } else {
-            jsonObject.add("item", value.ingredient.toJson());
+            jsonObject.add("item", ScriptRecipeData.writeIngredient(value.ingredient, ScriptRecipeData.currentRegistries()));
         }
         return jsonObject;
     }
@@ -96,7 +95,7 @@ public class TimelessRecipeJS extends RecipeJS {
                 count = Math.max(GsonHelper.getAsInt(jsonObject, "count"), 1);
             }
             if (jsonObject.has("nbt")) {
-                extraTag = CraftingHelper.getNBT(jsonObject.get("nbt"));
+                extraTag = LegacyPackCodecs.readNbt(jsonObject.get("nbt"));
             }
             ItemStack resultItemStack = ItemStack.EMPTY;
             switch (typeName) {
@@ -114,10 +113,8 @@ public class TimelessRecipeJS extends RecipeJS {
                 }
                 case GunSmithTableResult.CUSTOM -> {
                     JsonObject resultObject = GsonHelper.getAsJsonObject(jsonObject, "item");
-                    ItemStack itemStack = CraftingHelper.getItemStack(resultObject, true);
-                    if (extraTag != null) {
-                        itemStack.setTag(extraTag);
-                    }
+                    ItemStack itemStack = ScriptRecipeData.readItem(resultObject,
+                            extraTag == null ? null : jsonObject.get("nbt"), ScriptRecipeData.currentRegistries());
                     resultItemStack = itemStack;
                 }
             }
@@ -136,12 +133,7 @@ public class TimelessRecipeJS extends RecipeJS {
     @Override
     public JsonElement writeOutputItem(OutputItem value) {
         JsonObject jsonObject = new JsonObject();
-        JsonObject itemJson = new JsonObject();
-        itemJson.addProperty("item", RegistryInfo.ITEM.getId(value.item.getItem()).toString());
-        itemJson.addProperty("count", value.getCount());
-        if (JsonIO.of(value.getNbt()) != null) {
-            itemJson.addProperty("nbt", value.getNbt().toString());
-        }
+        JsonObject itemJson = ScriptRecipeData.writeItem(value.item.copyWithCount(value.getCount()), ScriptRecipeData.currentRegistries());
         jsonObject.addProperty("type", "custom");
         jsonObject.add("item", itemJson);
         if (!outputGroup.isEmpty()) {

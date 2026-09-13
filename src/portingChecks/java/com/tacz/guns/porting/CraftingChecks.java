@@ -6,6 +6,7 @@ import com.tacz.guns.crafting.GunSmithTableIngredient;
 import com.tacz.guns.crafting.GunSmithTableInput;
 import com.tacz.guns.crafting.IngredientAllocation;
 import com.tacz.guns.resource.serialize.LegacyPackCodecs;
+import com.tacz.guns.compat.kubejs.util.ScriptRecipeData;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -49,7 +50,8 @@ public final class CraftingChecks {
         try { displayGson.fromJson("[]", ItemStack.class); } catch (com.google.gson.JsonParseException expected) { invalidDisplay = true; }
         check(invalidDisplay, "display adapter rejects a non-object instead of returning an empty icon");
         var originalPainting = JsonParser.parseString("{\"item\":\"minecraft:painting\",\"nbt\":{\"EntityTag\":{\"variant\":\"minecraft:kebab\"}}}");
-        var painting = LegacyPackCodecs.ITEM_STACK.parse(net.minecraft.data.registries.VanillaRegistries.createLookup().createSerializationContext(JsonOps.INSTANCE), originalPainting).getOrThrow();
+        var allRegistries = net.minecraft.data.registries.VanillaRegistries.createLookup();
+        var painting = LegacyPackCodecs.ITEM_STACK.parse(allRegistries.createSerializationContext(JsonOps.INSTANCE), originalPainting).getOrThrow();
         check(painting.has(DataComponents.PAINTING_VARIANT), "legacy painting variant becomes typed component");
         for (String malformed : new String[]{"{\"item\":\"missing:unknown\"}", "{\"item\":\"minecraft:stone\",\"count\":0}",
                 "{\"item\":\"minecraft:stone\",\"count\":100}", "{\"item\":\"minecraft:stone\",\"nbt\":\"{bad\"}",
@@ -59,6 +61,32 @@ public final class CraftingChecks {
         var planks = LegacyPackCodecs.INGREDIENT.parse(ops, JsonParser.parseString("[{\"item\":\"minecraft:oak_planks\"},{\"item\":\"minecraft:birch_planks\"}]")).getOrThrow();
         check(planks.test(new ItemStack(Items.OAK_PLANKS)) && planks.test(new ItemStack(Items.BIRCH_PLANKS)) && !planks.test(new ItemStack(Items.STONE)), "legacy alternatives preserved");
         check(LegacyPackCodecs.INGREDIENT.parse(ops, JsonParser.parseString("{\"item\":\"minecraft:stone\",\"tag\":\"minecraft:planks\"}")).error().isPresent(), "ambiguous ingredient rejected");
+        var registries = RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY);
+        var scriptItemJson = ScriptRecipeData.writeItem(sword, registries);
+        check(scriptItemJson.has("components") && !scriptItemJson.has("nbt") && scriptItemJson.get("id").getAsString().equals("minecraft:diamond_sword"),
+                "script result writer emits all native item components");
+        check(ItemStack.isSameItemSameComponents(sword, ScriptRecipeData.readItem(scriptItemJson, null, registries)),
+                "script results preserve damage, custom name and unknown extension components");
+        var override = JsonParser.parseString("{\"Damage\":3,\"ScriptExtension\":{\"retained\":42}}");
+        var replaced = ScriptRecipeData.readItem(legacy.getAsJsonObject(), override, registries);
+        check(replaced.getDamageValue() == 3 && !replaced.has(DataComponents.CUSTOM_NAME)
+                && replaced.get(DataComponents.CUSTOM_DATA).copyTag().getCompoundOrEmpty("ScriptExtension").getIntOr("retained", 0) == 42,
+                "deprecated script root NBT replaces legacy item NBT before target component conversion");
+        check(legacy.equals(copy) && sword.getDamageValue() == 7, "script legacy override leaves input JSON and previous item unchanged");
+        boolean ambiguous = false;
+        try { ScriptRecipeData.readItem(scriptItemJson, override, registries); } catch (com.google.gson.JsonParseException expected) { ambiguous = true; }
+        check(ambiguous, "native components plus legacy root NBT replacement require explicit migration");
+        var nativeIngredient = ScriptRecipeData.writeIngredient(planks, registries);
+        var scriptIngredient = ScriptRecipeData.readIngredient(nativeIngredient, registries);
+        check(scriptIngredient.test(new ItemStack(Items.OAK_PLANKS)) && scriptIngredient.test(new ItemStack(Items.BIRCH_PLANKS))
+                && !scriptIngredient.test(new ItemStack(Items.STONE)), "script ingredient native encoding preserves legacy alternatives");
+        check(ItemStack.isSameItemSameComponents(painting, ScriptRecipeData.readItem(ScriptRecipeData.writeItem(painting, allRegistries), null, allRegistries)),
+                "script component output round trip retains dynamic-registry painting variant with caller lookup");
+        boolean wrongRegistry = false;
+        try { ScriptRecipeData.writeItem(painting, registries); } catch (com.google.gson.JsonParseException expected) { wrongRegistry = true; }
+        check(wrongRegistry, "missing dynamic registry fails explicitly instead of discarding component data");
+        check(ScriptRecipeData.currentRegistries().lookupOrThrow(net.minecraft.core.registries.Registries.ITEM).getOrThrow(Items.STONE.builtInRegistryHolder().key()).value() == Items.STONE,
+                "startup script fallback exposes actual built-in items without requiring a client class");
 
         var oak = Ingredient.of(Items.OAK_PLANKS);
         var onlyOak = new GunSmithTableInput(List.of(new ItemStack(Items.OAK_PLANKS, 3)));

@@ -2980,7 +2980,7 @@
     "git_blob": "fa0d9455d9fc5982e8be6fe27c83b5fbe194ba87",
     "checkout_sha256": "70d9053cef437d3579dfbc13eb491e6e2cfcba028c199952786d61ee18658958",
     "bytes": 3704,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java"
   },
   {
@@ -3020,7 +3020,7 @@
     "git_blob": "b6fd6dc2cc8d907faf8f0b4a5742694e8eb8bd0a",
     "checkout_sha256": "bc1064ac51749c86e7d3ead7508cb0858345f7e9a9b45704d656e5a1f00a7231",
     "bytes": 230,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java"
   },
   {

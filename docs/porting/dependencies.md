@@ -49,3 +49,8 @@ For projects whose queried Modrinth slugs returned 404, official listings were a
 ## Offscreen scope verification libraries — 2026-09-12
 
 The separate `portingGpuNatives` configuration supplies the pinned target's LWJGL **3.4.1** native artifacts (system, GLFW, OpenGL, jemalloc, STB, VMA, shaderc, SPVC, OpenAL, tinyfd and FreeType) for the two offscreen GPU verification tasks. The OS/architecture classifier is selected locally; only `natives-windows` on amd64 was exercised. These are test runtime inputs, not extra packaged mod dependencies. NativeLibrariesBootstrap runs before device creation, including Vulkan-loader discovery. The host OpenGL/Vulkan drivers and tested versions are recorded in scope-rendering.md and the actual logs.
+
+
+## Companion adapter continuation — 2026-09-13
+
+TACZ-owned KubeJS recipe/item conversion now uses native registry-aware codecs and preserves component data. Item properties carry the target registry ID. The old KubeJS ItemBuilder and registry factory signatures still use ResourceLocation and fail compilation; no compatible binary was added or fabricated. JEI ingredient display now uses native SlotDisplay resolution, while its old plugin/GUI signatures remain incompatible. These source migrations do not change the availability or runtime status in the matrix. No source is excluded and legacy-dependencies.gradle remains explicitly unreleasable scaffolding.

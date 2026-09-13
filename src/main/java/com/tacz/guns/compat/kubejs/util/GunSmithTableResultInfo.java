@@ -1,17 +1,17 @@
 package com.tacz.guns.compat.kubejs.util;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
 import com.tacz.guns.crafting.result.GunSmithTableResult;
 import dev.latvian.mods.kubejs.item.ItemStackJS;
 import dev.latvian.mods.kubejs.item.OutputItem;
-import dev.latvian.mods.kubejs.registry.RegistryInfo;
 import dev.latvian.mods.kubejs.util.JsonIO;
-import dev.latvian.mods.kubejs.util.UtilsJS;
+import com.tacz.guns.resource.serialize.LegacyPackCodecs;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.crafting.CraftingHelper;
 
 public class GunSmithTableResultInfo {
     private static final String TYPE_KEY = "type";
@@ -39,14 +39,12 @@ public class GunSmithTableResultInfo {
     }
 
     public static GunSmithTableResultInfo createFromItemStack(ItemStack stack) {
+        return createFromItemStack(stack, ScriptRecipeData.currentRegistries());
+    }
+
+    public static GunSmithTableResultInfo createFromItemStack(ItemStack stack, HolderLookup.Provider registries) {
         GunSmithTableResultInfo info = create().setType(GunSmithTableResult.CUSTOM);
-        JsonObject itemJson = new JsonObject();
-        itemJson.addProperty("item", RegistryInfo.ITEM.getId(stack.getItem()).toString());
-        itemJson.addProperty("count", stack.getCount());
-        if (JsonIO.of(stack.getTag()) != null) {
-            itemJson.addProperty("nbt", stack.getOrCreateTag().toString());
-        }
-        info.setCustomItem(itemJson);
+        info.setCustomItem(ScriptRecipeData.writeItem(stack, registries));
         return info;
     }
 
@@ -70,7 +68,7 @@ public class GunSmithTableResultInfo {
         }
         String idString = object.toString();
         if (Identifier.tryParse(idString) != null) {
-            Identifier rl = UtilsJS.getMCID(null, idString);
+            Identifier rl = Identifier.parse(idString);
             TimelessItemWrapper.ItemIndexInfo indexInfo = TimelessItemWrapper.ItemIndexInfo.createFromResourceLocation(rl);
             if (indexInfo.isValidForRecipe()) {
                 return create().setType(indexInfo.getParent()).setId(indexInfo.getIndexId());
@@ -103,7 +101,8 @@ public class GunSmithTableResultInfo {
     }
 
     public CompoundTag getNbt() {
-        return CraftingHelper.getNBT(this.json.get(NBT_KEY));
+        JsonElement value = this.json.get(NBT_KEY);
+        return value == null || value.isJsonNull() ? null : LegacyPackCodecs.readNbt(value);
     }
 
     public GunSmithTableResultInfo setNbt(CompoundTag nbt) {

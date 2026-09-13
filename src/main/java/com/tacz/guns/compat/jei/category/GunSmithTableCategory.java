@@ -12,9 +12,10 @@ import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.display.SlotDisplayContext;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -66,9 +67,8 @@ public class GunSmithTableCategory implements IRecipeCategory<GunSmithTableRecip
     private List<ItemStack> getInput(List<GunSmithTableIngredient> inputs, int index) {
         if (index < inputs.size()) {
             GunSmithTableIngredient ingredient = inputs.get(index);
-            ItemStack[] items = ingredient.getIngredient().getItems();
-            Arrays.stream(items).forEach(stack -> stack.setCount(ingredient.getCount()));
-            return List.of(items);
+            return ingredient.getIngredient().display().resolveForStacks(SlotDisplayContext.fromLevel(Minecraft.getInstance().level))
+                    .stream().map(stack -> stack.copyWithCount(ingredient.getCount())).toList();
         }
         return Collections.singletonList(ItemStack.EMPTY);
     }
