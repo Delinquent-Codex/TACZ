@@ -6,6 +6,9 @@ import com.tacz.guns.client.model.bedrock.BedrockCubeBox;
 import com.tacz.guns.client.model.bedrock.BedrockCubePerFace;
 import com.tacz.guns.client.renderer.RenderSubmission;
 import com.tacz.guns.client.renderer.VertexCapture;
+import com.tacz.guns.client.renderer.TexturedBlit;
+import com.tacz.guns.client.renderer.TaczRenderTypes;
+import net.minecraft.resources.Identifier;
 import com.tacz.guns.client.resource.pojo.model.FaceUVsItem;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.util.ARGB;
@@ -88,11 +91,50 @@ public final class GeometryChecks {
         boolean cleared = false;
         try { RenderSubmission.collector(); } catch (NullPointerException expected) { cleared = true; }
         check(cleared, "scope releases target collector on exit");
+        texturedBlit();
         System.out.println("Geometry checks passed: " + assertions + " assertions (CPU vertices and collector scope; no GPU/model rendering).");
     }
 
     private static SubmitNodeCollector collector() {
         return (SubmitNodeCollector) Proxy.newProxyInstance(GeometryChecks.class.getClassLoader(),
                 new Class<?>[]{SubmitNodeCollector.class}, (proxy, method, args) -> { throw new AssertionError("Unexpected collector call " + method); });
+    }
+
+    private static void texturedBlit() {
+        var pose = new PoseStack(); pose.translate(10, 20, 30);
+        var quad = TexturedBlit.capture(pose, 2, 3, 4, 8, 16, 32, 64, 128);
+        pose.setIdentity();
+        var points = quad.vertices();
+        check(points.size() == 4 && points.get(0).x() == 12 && points.get(0).y() == 55 && points.get(0).z() == 30
+                && points.get(2).x() == 28 && points.get(2).y() == 23, "blit preserves source quad order and copied pose");
+        check(points.get(0).u() == .0625F && points.get(0).v() == .3125F
+                && points.get(2).u() == .3125F && points.get(2).v() == .0625F, "blit normalizes source texture offsets and dimensions");
+        var inverted = TexturedBlit.capture(pose, 0, 0, 4, 8, -16, -32, 64, 128).vertices();
+        check(inverted.get(0).y() == -32 && inverted.get(2).x() == -16 && inverted.get(2).u() == -.1875F,
+                "negative source dimensions keep their mirrored geometry and UV semantics");
+        Identifier first = Identifier.parse("tacz:fixture/first"), second = Identifier.parse("tacz:fixture/second");
+        var submitted = new java.util.ArrayList<Object[]>();
+        var collector = (SubmitNodeCollector) Proxy.newProxyInstance(GeometryChecks.class.getClassLoader(),
+                new Class<?>[]{SubmitNodeCollector.class}, (proxy, method, args) -> {
+                    if (!method.getName().equals("submitCustomGeometry")) throw new AssertionError(method);
+                    submitted.add(args); return null;
+                });
+        try (var ignored = RenderSubmission.enter(collector)) {
+            TexturedBlit.withTexture(first, () -> {
+                try {
+                    TexturedBlit.withTexture(second, () -> {
+                        TexturedBlit.submit(TexturedBlit.currentTexture(), pose, 0, 0, 0, 0, 16, 16, 16, 16);
+                        throw new IllegalStateException("interrupt texture binding");
+                    });
+                } catch (IllegalStateException expected) { }
+                check(TexturedBlit.currentTexture().equals(first), "nested failed blit restores enclosing texture binding");
+                TexturedBlit.submit(TexturedBlit.currentTexture(), pose, 0, 0, 0, 0, 16, 16, 16, 16);
+            });
+        }
+        check(submitted.size() == 2 && submitted.get(0)[1] == TaczRenderTypes.texturedBlit(second)
+                && submitted.get(1)[1] == TaczRenderTypes.texturedBlit(first), "deferred blits retain each bound texture after binding changes");
+        boolean unbound = false;
+        try { TexturedBlit.currentTexture(); } catch (NullPointerException expected) { unbound = true; }
+        check(unbound, "coordinate-only source bridge reports a missing explicit texture binding");
     }
 }

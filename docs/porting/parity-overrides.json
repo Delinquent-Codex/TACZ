@@ -450,13 +450,13 @@
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java": {
-    "implementation": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "validation": "Native scope backend has 241 CPU assertions and offscreen OpenGL/Vulkan pixel fixtures. This original stencil call path still fails compilation and is not connected to the backend. Functional submissions, real gun shader/model visuals and runtime parity remain open; see scope-rendering.md.",
+    "implementation": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java; client/renderer/scope/ScopeCapture, ScopeSequence, ScopeNativeGeometry, ScopeFeatureRenderer",
+    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test. Legacy accelerated methods still fail full compilation.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockGunModel.java": {
-    "implementation": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "validation": "Native scope backend has 241 CPU assertions and offscreen OpenGL/Vulkan pixel fixtures. This original stencil call path still fails compilation and is not connected to the backend. Functional submissions, real gun shader/model visuals and runtime parity remain open; see scope-rendering.md.",
+    "implementation": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java; client/renderer/scope/ScopeCapture, ScopeSequence, ScopeNativeGeometry, ScopeFeatureRenderer",
+    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test. Legacy accelerated methods still fail full compilation.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {
@@ -1515,8 +1515,8 @@
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/RenderHelper.java": {
-    "implementation": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "validation": "Native scope backend has 241 CPU assertions and offscreen OpenGL/Vulkan pixel fixtures. This original stencil call path still fails compilation and is not connected to the backend. Functional submissions, real gun shader/model visuals and runtime parity remain open; see scope-rendering.md.",
+    "implementation": "src/main/java/com/tacz/guns/util/RenderHelper.java; client/renderer/TexturedBlit",
+    "validation": "Run 78: geometry 26 includes explicit texture quad/UV/pose and nested binding fixtures. Real blit shaders compile on OpenGL/Vulkan. No main FLOW diagnostic; actual blit/arm/legacy shader companion behavior unverified. Source API migration in migration.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/ResourceScanner.java": {

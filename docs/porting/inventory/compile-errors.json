@@ -1,7 +1,7 @@
 [
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 18,
+    "line": 25,
     "error": "cannot find symbol"
   },
   {
@@ -76,162 +76,42 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 307,
+    "line": 363,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 310,
+    "line": 366,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 315,
+    "line": 371,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 318,
+    "line": 387,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 319,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 351,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 354,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 359,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 375,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java",
-    "line": 376,
+    "line": 388,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 203,
+    "line": 260,
     "error": "package MultiBufferSource does not exist"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 203,
+    "line": 260,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 215,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 216,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 217,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 218,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 222,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 227,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 228,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 229,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 235,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 237,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 240,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 246,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 248,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 249,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 250,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 255,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 261,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 265,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 266,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 271,
+    "line": 272,
     "error": "cannot find symbol"
   },
   {
@@ -241,7 +121,7 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 273,
+    "line": 274,
     "error": "cannot find symbol"
   },
   {
@@ -251,27 +131,52 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 276,
+    "line": 279,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 277,
+    "line": 284,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 283,
+    "line": 285,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 287,
+    "line": 286,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 291,
+    "line": 292,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 294,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 297,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 303,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 305,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 306,
     "error": "cannot find symbol"
   },
   {
@@ -281,37 +186,62 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 308,
+    "line": 312,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 310,
+    "line": 318,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 311,
+    "line": 322,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 319,
+    "line": 323,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 327,
+    "line": 328,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 341,
+    "line": 330,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 342,
+    "line": 330,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 332,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 333,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 334,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 340,
+    "error": "cannot find symbol"
+  },
+  {
+    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
+    "line": 344,
     "error": "cannot find symbol"
   },
   {
@@ -321,132 +251,102 @@
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 365,
+    "line": 397,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 366,
+    "line": 398,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 369,
+    "line": 401,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 370,
+    "line": 402,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 377,
+    "line": 430,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 383,
+    "line": 442,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 407,
+    "line": 453,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 408,
+    "line": 467,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 411,
+    "line": 502,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 412,
+    "line": 503,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 440,
+    "line": 511,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 452,
+    "line": 525,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 463,
+    "line": 552,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 477,
+    "line": 553,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 512,
+    "line": 556,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 513,
+    "line": 557,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 521,
+    "line": 585,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 535,
+    "line": 597,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 562,
+    "line": 608,
     "error": "cannot find symbol"
   },
   {
     "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 563,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 566,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 567,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 595,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 607,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 618,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java",
-    "line": 630,
+    "line": 620,
     "error": "cannot find symbol"
   },
   {
@@ -598,55 +498,5 @@
     "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "line": 215,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 37,
-    "error": "invalid method reference"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 38,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 39,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 40,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 41,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 42,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 43,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 44,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 44,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/util/RenderHelper.java",
-    "line": 64,
-    "error": "cannot find symbol"
   }
 ]

@@ -29,6 +29,8 @@
     "client.PlayerModelMixin",
     "client.SoundManagerPreparationsMixin",
     "client.ScopeFeatureDispatcherMixin",
+    "client.ScopeSimplePhaseMixin",
+    "client.ScopeTranslucentPhaseMixin",
     "client.StairBlockAccessor"
   ],
   "injectors": {

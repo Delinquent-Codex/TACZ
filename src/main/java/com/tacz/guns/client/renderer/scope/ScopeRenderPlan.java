@@ -2,16 +2,25 @@ package com.tacz.guns.client.renderer.scope;
 
 import com.tacz.guns.client.renderer.VertexCapture;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.feature.submit.SubmitNode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 /** A complete lens/reticle/body job. Draws inside a job must never be sorted or consolidated. */
-public record ScopeRenderPlan(List<Draw> draws) {
+public record ScopeRenderPlan(List<Command> draws) {
     public ScopeRenderPlan { draws = List.copyOf(draws); }
 
-    public record Draw(RenderType type, VertexCapture.Snapshot geometry, ScopeMaskState mask) {
+    public sealed interface Command permits Draw, NativeDraw {
+        ScopeMaskState mask();
+    }
+
+    public record NativeDraw(SubmitNode submit, ScopeMaskState mask) implements Command {
+        public NativeDraw { Objects.requireNonNull(submit); Objects.requireNonNull(mask); }
+    }
+
+    public record Draw(RenderType type, VertexCapture.Snapshot geometry, ScopeMaskState mask) implements Command {
         public Draw {
             Objects.requireNonNull(type);
             Objects.requireNonNull(geometry);
@@ -20,10 +29,14 @@ public record ScopeRenderPlan(List<Draw> draws) {
     }
 
     public static final class Builder {
-        private final List<Draw> draws = new ArrayList<>();
+        private final List<Command> draws = new ArrayList<>();
 
         public void draw(RenderType type, VertexCapture.Snapshot geometry, ScopeMaskState mask) {
             if (!geometry.vertices().isEmpty()) draws.add(new Draw(type, geometry, mask));
+        }
+
+        public void nativeDraw(SubmitNode submit, ScopeMaskState mask) {
+            draws.add(new NativeDraw(submit, mask));
         }
 
         public ScopeRenderPlan build() { return new ScopeRenderPlan(draws); }

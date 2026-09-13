@@ -1,0 +1,160 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.661
+
+> Task :compileJava FAILED
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:25: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+    public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                       ^
+  symbol:   class GuiGraphics
+  location: class OpenGunPackDirEntry
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+    public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                   ^
+  symbol:   class GuiGraphics
+  location: class AttachmentQueryCategory
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:14: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:26: error: cannot find symbol
+import net.minecraftforge.common.crafting.CraftingHelper;
+                                         ^
+  symbol:   class CraftingHelper
+  location: package net.minecraftforge.common.crafting
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+    private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+15 errors
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\model\BedrockAttachmentModel.java:25: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+      public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                         ^
+    symbol:   class GuiGraphics
+    location: class OpenGunPackDirEntry
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+      public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                     ^
+    symbol:   class GuiGraphics
+    location: class AttachmentQueryCategory
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\util\GunSmithTableResultInfo.java:14: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\recipe\TimelessRecipeJS.java:26: error: cannot find symbol
+  import net.minecraftforge.common.crafting.CraftingHelper;
+                                           ^
+    symbol:   class CraftingHelper
+    location: package net.minecraftforge.common.crafting
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+      private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  15 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 3s
+1 actionable task: 1 executed

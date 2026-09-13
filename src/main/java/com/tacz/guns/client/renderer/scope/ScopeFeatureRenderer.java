@@ -71,23 +71,39 @@ public final class ScopeFeatureRenderer implements FeatureRenderer<ScopeFeatureR
         var jobs = new ArrayList<List<PreparedDraw>>();
         for (Submit submit : submits) {
             var draws = new ArrayList<PreparedDraw>();
-            for (ScopeRenderPlan.Draw draw : submit.plan.draws()) {
-                var type = draw.type();
-                var staged = context.stagedVertexBuffer().appendDraw(type.format(), type.primitiveTopology(),
-                        type.sortOnUpload() ? RenderSystem.getProjectionType().vertexSorting() : null);
-                draw.geometry().render(new PoseStack().last(), context.stagedVertexBuffer().getVertexBuilder(staged));
-                draws.add(new PreparedDraw(prepareType.apply(type), staged, draw.mask()));
+            for (ScopeRenderPlan.Command command : submit.plan.draws()) {
+                switch (command) {
+                    case ScopeRenderPlan.Draw draw -> prepareDraw(context, draws, draw.type(), prepareType.apply(draw.type()), draw.geometry(), draw.mask());
+                    case ScopeRenderPlan.NativeDraw nativeDraw -> {
+                        for (var batch : ScopeNativeGeometry.capture(context, nativeDraw.submit(), prepareType)) {
+                            prepareDraw(context, draws, batch.type(), batch.prepared(), batch.geometry(), nativeDraw.mask());
+                        }
+                    }
+                }
             }
             jobs.add(List.copyOf(draws));
         }
         groups.add(List.copyOf(jobs));
     }
 
+    private static void prepareDraw(FeatureFrameContext context, List<PreparedDraw> draws, RenderType type, PreparedRenderType prepared,
+                                    com.tacz.guns.client.renderer.VertexCapture.Snapshot geometry, ScopeMaskState mask) {
+        var staged = context.stagedVertexBuffer().appendDraw(type.format(), type.primitiveTopology(),
+                type.sortOnUpload() ? RenderSystem.getProjectionType().vertexSorting() : null);
+        geometry.render(new PoseStack().last(), context.stagedVertexBuffer().getVertexBuilder(staged));
+        draws.add(new PreparedDraw(prepared, staged, mask));
+    }
+
     @Override
     public void executeGroup(FeatureFrameContext context, int groupIndex, List<Submit> submits, boolean strictlyOrdered) {
         for (List<PreparedDraw> draws : groups.get(groupIndex)) {
             if (!draws.isEmpty()) {
-                ScopeRenderPlan.execute(draws, PreparedDraw::mask, new NativePasses(context, draws.getFirst()));
+                PreparedDraw masked = draws.stream().filter(draw -> !draw.mask.equals(ScopeMaskState.UNMASKED)).findFirst().orElse(null);
+                if (masked == null) {
+                    for (PreparedDraw draw : draws) drawNative(context, draw);
+                } else {
+                    ScopeRenderPlan.execute(draws, PreparedDraw::mask, new NativePasses(context, masked));
+                }
             }
         }
     }
@@ -97,6 +113,11 @@ public final class ScopeFeatureRenderer implements FeatureRenderer<ScopeFeatureR
 
     private record PreparedDraw(PreparedRenderType type, StagedVertexBuffer.Draw staged, ScopeMaskState mask) {}
     private record PipelineKey(RenderPipeline original, boolean writesMask, boolean depthTest) {}
+
+    private static void drawNative(FeatureFrameContext context, PreparedDraw draw) {
+        var info = context.stagedVertexBuffer().getExecuteInfo(draw.staged);
+        if (info != null) draw.type.drawFromBuffer(info);
+    }
 
     private RenderPipeline pipeline(PreparedDraw draw) {
         RenderPipeline original = draw.type.pipeline();
@@ -126,8 +147,6 @@ public final class ScopeFeatureRenderer implements FeatureRenderer<ScopeFeatureR
     private final class NativePasses implements ScopeRenderPlan.Passes<PreparedDraw> {
         private final FeatureFrameContext context;
         private final CommandEncoder encoder = RenderSystem.getDevice().createCommandEncoder();
-        private final GpuTextureView targetColor;
-        private final GpuTextureView targetDepth;
         private final int width, height;
         private final GpuTexture[] masks = new GpuTexture[2];
         private final GpuTextureView[] views = new GpuTextureView[2];
@@ -135,8 +154,7 @@ public final class ScopeFeatureRenderer implements FeatureRenderer<ScopeFeatureR
 
         private NativePasses(FeatureFrameContext context, PreparedDraw first) {
             this.context = context;
-            targetColor = color(first.type);
-            targetDepth = depth(first.type);
+            GpuTextureView targetColor = color(first.type);
             width = targetColor.getWidth(0);
             height = targetColor.getHeight(0);
             try {
@@ -161,8 +179,15 @@ public final class ScopeFeatureRenderer implements FeatureRenderer<ScopeFeatureR
         }
 
         @Override public void draw(PreparedDraw draw, int source, int target) {
-            if (color(draw.type) != targetColor || depth(draw.type) != targetDepth) {
-                throw new IllegalArgumentException("A scope job must use one color/depth target, including output overrides");
+            // Lasers and other unmasked features retain their native output target/pipeline.
+            if (draw.mask.equals(ScopeMaskState.UNMASKED)) {
+                drawNative(context, draw);
+                return;
+            }
+            GpuTextureView targetColor = color(draw.type);
+            GpuTextureView targetDepth = depth(draw.type);
+            if (targetColor.getWidth(0) != width || targetColor.getHeight(0) != height) {
+                throw new IllegalArgumentException("Masked scope outputs must share a pixel coordinate space");
             }
             var info = context.stagedVertexBuffer().getExecuteInfo(draw.staged);
             if (info == null) return;

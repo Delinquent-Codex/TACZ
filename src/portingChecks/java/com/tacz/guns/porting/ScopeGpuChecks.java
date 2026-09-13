@@ -110,6 +110,12 @@ public final class ScopeGpuChecks {
                 fixture.apertureFan();
                 checkPixel(fixture, 32, 16, 0xffffffff, "production 90-segment aperture exposes its center");
                 checkPixel(fixture, 60, 16, 0x000000ff, "production aperture leaves peripheral blackout");
+                fixture.separateOutputs(false);
+                checkPixel(fixture, 8, 16, 0x0000ffff, "main scope mask is independent of a preceding smaller unmasked output");
+                checkPixel(fixture.alternate, 8, 8, 0xff0000ff, "unmasked native draw retains its smaller output target");
+                fixture.separateOutputs(true);
+                checkPixel(fixture.alternate, 8, 16, 0x00ff00ff, "matching pixel coordinates share the mask across distinct native output targets");
+                checkPixel(fixture.alternate, 56, 16, 0xff0000ff, "masked alternate output preserves its own depth rejection");
 
                 // Reuse the renderer and pipeline descriptions after resizing and clearing the
                 // same native cache that ShaderManager clears during resource reload.
@@ -127,6 +133,7 @@ public final class ScopeGpuChecks {
                 fixture.render(false);
                 checkPixel(fixture, 40, 16, 0xffffffff, "reload and second resize restore current shader output");
             }
+            ScopeShaderChecks.run(device);
             System.out.println("Scope GPU checks passed: " + assertions + " assertions (native " + backend.getName() + " fixtures; no Minecraft/FML/gun visuals)");
         } finally {
             if (initialized) RenderSystem.shutdownRenderer();
@@ -138,7 +145,11 @@ public final class ScopeGpuChecks {
     }
 
     private static void checkPixel(Fixture fixture, int x, int y, int expected, String message) {
-        int value = fixture.pixel(x, y);
+        checkPixel(fixture.target, x, y, expected, message);
+    }
+
+    private static void checkPixel(TextureTarget target, int x, int y, int expected, String message) {
+        int value = Fixture.pixel(target, x, y);
         assertions++;
         if (value != expected) throw new AssertionError(message + ": expected " + Integer.toHexString(expected) + " got " + Integer.toHexString(value));
     }
@@ -146,11 +157,14 @@ public final class ScopeGpuChecks {
     private static final class Fixture implements AutoCloseable {
         private final TextureTarget target = new TextureTarget("scope fixture", 64, 32, true, GpuFormat.RGBA8_UNORM);
         private final OutputTarget output = new OutputTarget("scope fixture", () -> target);
+        private final TextureTarget alternate = new TextureTarget("scope alternate fixture", 16, 16, true, GpuFormat.RGBA8_UNORM);
+        private final OutputTarget alternateOutput = new OutputTarget("scope alternate fixture", () -> alternate);
         private final RenderPipeline pipeline = RenderPipeline.builder().withLocation(Identifier.parse("tacz:scope_gpu_fixture"))
                 .withVertexShader(VERTEX).withFragmentShader(FRAGMENT).withBindGroupLayout(BindGroupLayouts.DYNAMIC_TRANSFORMS)
                 .withVertexBinding(0, DefaultVertexFormat.POSITION_COLOR).withPrimitiveTopology(PrimitiveTopology.QUADS)
                 .withDepthStencilState(DepthStencilState.DEFAULT).withCull(false).build();
         private final RenderType type = RenderType.create("scope fixture", RenderSetup.builder(pipeline).setOutputTarget(output).createRenderSetup());
+        private final RenderType alternateType = RenderType.create("scope alternate fixture", RenderSetup.builder(pipeline).setOutputTarget(alternateOutput).createRenderSetup());
         private final RenderPipeline fanPipeline = RenderPipeline.builder().withLocation(Identifier.parse("tacz:scope_gpu_fan"))
                 .withVertexShader(VERTEX).withFragmentShader(FRAGMENT).withBindGroupLayout(BindGroupLayouts.DYNAMIC_TRANSFORMS)
                 .withVertexBinding(0, DefaultVertexFormat.POSITION_COLOR).withPrimitiveTopology(PrimitiveTopology.TRIANGLES)
@@ -159,7 +173,7 @@ public final class ScopeGpuChecks {
         private final StagedVertexBuffer staged = new StagedVertexBuffer(() -> "scope fixture", 65536);
         private final FeatureFrameContext context = new FeatureFrameContext(null, null, null, null, null, null, null, staged);
         private final ScopeFeatureRenderer renderer = new ScopeFeatureRenderer(SHADERS, renderType ->
-                new PreparedRenderType(renderType.pipeline(), output, RenderSystem.getDynamicUniforms().writeTransform(
+                new PreparedRenderType(renderType.pipeline(), renderType.outputTarget(), RenderSystem.getDynamicUniforms().writeTransform(
                         renderType == fanType ? new Matrix4f().scaling(.01F, .01F, -.01F) : new Matrix4f()),
                         new ScissorState(), List.of()));
 
@@ -195,17 +209,38 @@ public final class ScopeGpuChecks {
         }
 
         void rect(ScopeRenderPlan.Builder builder, float left, float right, float z, int argb, ScopeMaskState mask) {
+            rect(builder, type, left, right, z, argb, mask);
+        }
+
+        void separateOutputs(boolean masked) {
+            var builder = new ScopeRenderPlan.Builder();
+            if (masked) alternate.resize(64, 32);
+            rect(builder, alternateType, -1, 1, .5F, 0xffff0000, ScopeMaskState.UNMASKED);
+            rect(builder, -1, 1, .5F, -1, ScopeMaskState.ocular(1));
+            rect(builder, -1, 1, .6F, 0xff0000ff, ScopeMaskState.color(EQUAL, 1, true));
+            if (masked) {
+                rect(builder, alternateType, -1, 0, .6F, 0xff00ff00, ScopeMaskState.color(EQUAL, 1, true));
+                rect(builder, alternateType, 0, 1, .3F, 0xff00ff00, ScopeMaskState.color(EQUAL, 1, true));
+            }
+            execute(builder.build());
+        }
+
+        void rect(ScopeRenderPlan.Builder builder, RenderType drawType, float left, float right, float z, int argb, ScopeMaskState mask) {
             var capture = new VertexCapture();
             capture.addVertex(left, -1, z).setColor(argb);
             capture.addVertex(right, -1, z).setColor(argb);
             capture.addVertex(right, 1, z).setColor(argb);
             capture.addVertex(left, 1, z).setColor(argb);
-            builder.draw(type, capture.drain(), mask);
+            // Exercise the actual target CustomFeatureRenderer geometry builder through the
+            // production native-feature bridge, with the access-transformed target class.
+            builder.nativeDraw(new net.minecraft.client.renderer.feature.CustomFeatureRenderer.Submit(
+                    new com.mojang.blaze3d.vertex.PoseStack().last().copy(), drawType, capture.drain()), mask);
         }
 
         void execute(ScopeRenderPlan plan) {
             var encoder = RenderSystem.getDevice().createCommandEncoder();
             encoder.clearColorAndDepthTextures(target.getColorTexture(), new Vector4f(), target.getDepthTexture(), 0.25);
+            encoder.clearColorAndDepthTextures(alternate.getColorTexture(), new Vector4f(), alternate.getDepthTexture(), 0.25);
             var submits = List.of(new ScopeFeatureRenderer.Submit(plan));
             renderer.prepareGroup(context, submits, false);
             staged.upload();
@@ -219,7 +254,7 @@ public final class ScopeGpuChecks {
             RenderSystem.getDynamicUniforms().reset();
         }
 
-        int pixel(int x, int y) {
+        static int pixel(TextureTarget target, int x, int y) {
             int width = target.width, height = target.height;
             var encoder = RenderSystem.getDevice().createCommandEncoder();
             try (var readback = RenderSystem.getDevice().createBuffer(() -> "scope fixture readback",
@@ -238,6 +273,6 @@ public final class ScopeGpuChecks {
             }
         }
 
-        @Override public void close() { renderer.close(); staged.close(); target.destroyBuffers(); }
+        @Override public void close() { renderer.close(); staged.close(); target.destroyBuffers(); alternate.destroyBuffers(); }
     }
 }

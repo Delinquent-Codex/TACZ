@@ -13,6 +13,10 @@ import com.tacz.guns.api.item.attachment.AttachmentType;
 import com.tacz.guns.client.model.bedrock.BedrockPart;
 import com.tacz.guns.client.model.bedrock.ModelRendererWrapper;
 import com.tacz.guns.client.model.functional.*;
+import com.tacz.guns.client.renderer.RenderSubmission;
+import com.tacz.guns.client.renderer.scope.ScopeCapture;
+import com.tacz.guns.client.renderer.scope.ScopeFeatureRenderer;
+import com.tacz.guns.client.renderer.scope.ScopeMaskState;
 import com.tacz.guns.client.model.listener.model.ModelAdditionalMagazineListener;
 import com.tacz.guns.client.resource.index.ClientAttachmentIndex;
 import com.tacz.guns.client.resource.pojo.display.gun.TextShow;
@@ -288,35 +292,43 @@ public class BedrockGunModel extends BedrockAnimatedModel {
 			return;
 		}
 
-        // 镜子需要先渲染，写入模板值
+        // Keep the optic and every gun feature in one ordered native scope job.
         ItemStack attachmentItem = currentAttachmentItem.get(AttachmentType.SCOPE);
         IAttachment iAttachment = IAttachment.getIAttachmentOrNull(attachmentItem);
+        ClientAttachmentIndex index = iAttachment == null ? null
+                : TimelessAPI.getClientAttachmentIndex(iAttachment.getAttachmentId(attachmentItem)).orElse(null);
+        boolean optical = transformType.firstPerson() && scopePosPath != null && index != null && (index.isScope() || index.isSight());
+        ScopeMaskState gunMask = optical && index.isScope()
+                ? ScopeMaskState.color(index.isSight() ? ScopeMaskState.Comparison.GREATER : ScopeMaskState.Comparison.EQUAL,
+                        index.isSight() ? 127 : 0, true)
+                : ScopeMaskState.UNMASKED;
+        if (optical && !ScopeCapture.active()) {
+            ScopeCapture capture = ScopeCapture.begin();
+            try (capture) {
+                renderNativeContents(matrixStack, attachmentItem, transformType, renderType, light, overlay, gunMask);
+            }
+            ScopeFeatureRenderer.submit(RenderSubmission.collector(), 0, capture.plan());
+        } else {
+            renderNativeContents(matrixStack, attachmentItem, transformType, renderType, light, overlay, gunMask);
+        }
+    }
+
+    private void renderNativeContents(PoseStack matrixStack, ItemStack attachmentItem, ItemDisplayContext transformType,
+                                      RenderType renderType, int light, int overlay, ScopeMaskState gunMask) {
         if (scopePosPath != null && attachmentItem != null && !attachmentItem.isEmpty()) {
             matrixStack.pushPose();
-            for (BedrockPart bedrockPart : scopePosPath) {
-                bedrockPart.translateAndRotateAndScale(matrixStack);
-            }
-            AttachmentRender.renderAttachment(attachmentItem, currentGunItem, matrixStack, transformType, light, overlay);
-            matrixStack.popPose();
-            // 开启模板测试，因为镜内不渲染枪体
-            if (iAttachment != null) {
-                Optional<ClientAttachmentIndex> attachmentIndex = TimelessAPI.getClientAttachmentIndex(iAttachment.getAttachmentId(attachmentItem));
-                attachmentIndex.ifPresent(index -> {
-                    if (index.isScope() && index.isSight()) { // 组合镜
-                        RenderHelper.enableItemEntityStencilTest();
-                        RenderSystem.stencilFunc(GL11.GL_GREATER, 127, 0xFF);
-                    } else if (index.isScope()) { // 长筒镜
-                        RenderHelper.enableItemEntityStencilTest();
-                        RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
-                    }
-                });
+            try {
+                for (BedrockPart bedrockPart : scopePosPath) bedrockPart.translateAndRotateAndScale(matrixStack);
+                AttachmentRender.renderAttachment(attachmentItem, currentGunItem, matrixStack, transformType, light, overlay);
+            } finally {
+                matrixStack.popPose();
             }
         }
-        RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
-        super.render(matrixStack, transformType, renderType, light, overlay);
-        RenderHelper.disableItemEntityStencilTest();
-        RenderSystem.clearStencil(0);
-        RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
+        if (ScopeCapture.active() && !gunMask.equals(ScopeMaskState.UNMASKED)) {
+            ScopeCapture.withMask(gunMask, () -> super.render(matrixStack, transformType, renderType, light, overlay));
+        } else {
+            super.render(matrixStack, transformType, renderType, light, overlay);
+        }
     }
 
 	public void renderAccelerated(PoseStack matrixStack, ItemStack gunItem, ItemDisplayContext transformType, RenderType renderType, int light, int overlay) {

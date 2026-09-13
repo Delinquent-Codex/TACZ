@@ -184,9 +184,12 @@ sourceSets {
         java.include 'com/tacz/guns/api/client/renderer/TaczItemRenderer.java'
         java.include 'com/tacz/guns/api/client/renderer/TaczClientItemExtensions.java'
         java.include 'com/tacz/guns/client/renderer/VertexCapture.java'
+        java.include 'com/tacz/guns/client/renderer/TexturedBlit.java'
         java.include 'com/tacz/guns/client/renderer/scope/*.java'
         java.include 'com/tacz/guns/porting/ScopeRenderChecks.java'
+        java.include 'com/tacz/guns/porting/ScopeNativeChecks.java'
         java.include 'com/tacz/guns/porting/ScopeGpuChecks.java'
+        java.include 'com/tacz/guns/porting/ScopeShaderChecks.java'
         java.include 'com/tacz/guns/client/renderer/RenderSubmission.java'
         java.include 'com/tacz/guns/client/model/bedrock/BedrockCube.java'
         java.include 'com/tacz/guns/client/model/bedrock/BedrockCubeBox.java'
@@ -464,4 +467,24 @@ tasks.register('verifyPortingScopeVulkan', JavaExec) {
     mainClass = 'com.tacz.guns.porting.ScopeGpuChecks'
     args '--vulkan'
     jvmArgs '--enable-native-access=ALL-UNNAMED'
+}
+
+
+tasks.register('verifyPortingScopeNative', JavaExec) {
+    group = 'verification'
+    description = 'Checks target feature geometry builders inside scope capture; no FML or asset/atlas bake.'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+    classpath = sourceSets.portingChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.ScopeNativeChecks'
+}
+
+// Mavenizer downloads this original client archive while resolving the pinned target. The
+// tests read its GLSL directly; a path override accommodates alternate Gradle cache layouts.
+def portingClientAssets = providers.gradleProperty('portingClientAssets').orElse(
+        new File(gradle.gradleUserHomeDir, "caches/minecraftforge/forgegradle/mavenizer/caches/minecraft_tasks/${minecraft_version}/client.jar").absolutePath)
+['verifyPortingScopeGpu', 'verifyPortingScopeVulkan'].each { name ->
+    tasks.named(name, JavaExec) {
+        systemProperty 'porting.clientAssets', portingClientAssets.get()
+        inputs.file(portingClientAssets)
+    }
 }
