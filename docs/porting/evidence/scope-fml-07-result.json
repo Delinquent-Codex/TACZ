@@ -1,0 +1,8 @@
+{
+  "fixture": "production scope renderer and three Mixins; NOT full TACZ",
+  "minecraft": "26.2",
+  "forge": "65.1.0",
+  "screen": "net.minecraft.client.gui.screens.AccessibilityOnboardingScreen",
+  "status": "passed",
+  "assertions": 14
+}

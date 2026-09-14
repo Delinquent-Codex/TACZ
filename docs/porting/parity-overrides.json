@@ -451,12 +451,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java; client/renderer/scope/ScopeCapture, ScopeSequence, ScopeNativeGeometry, ScopeFeatureRenderer",
-    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test. Legacy accelerated methods still fail full compilation.",
+    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test in that earlier run. Legacy accelerated methods still fail full compilation. Separate Forge client/world fixture now verifies all three native scope Mixins and AT, real font/baked-item/glint preparation, and 24 live GPU mask/color checks per backend (48 total assertions each, scope-fml-16/17). Actual TACZ gun models, full-mod Mixin coexistence and companions remain unverified.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockGunModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java; client/renderer/scope/ScopeCapture, ScopeSequence, ScopeNativeGeometry, ScopeFeatureRenderer",
-    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test. Legacy accelerated methods still fail full compilation.",
+    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test in that earlier run. Legacy accelerated methods still fail full compilation. Separate Forge client/world fixture now verifies all three native scope Mixins and AT, real font/baked-item/glint preparation, and 24 live GPU mask/color checks per backend (48 total assertions each, scope-fml-16/17). Actual TACZ gun models, full-mod Mixin coexistence and companions remain unverified.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {

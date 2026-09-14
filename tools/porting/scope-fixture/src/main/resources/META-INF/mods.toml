@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[65,)"
+license="GPL-3.0-or-later"
+clientSideOnly=true
+[[mods]]
+modId="tacz_scope_fixture"
+version="1.0"
+displayName="TACZ Scope FML Test Fixture (not TACZ)"
+description='''Runs bounded production scope Mixin checks and closes the client. Not an installable TACZ port.'''
+[[dependencies.tacz_scope_fixture]]
+modId="forge"
+mandatory=true
+versionRange="[65.1.0]"
+ordering="NONE"
+side="CLIENT"
+[[dependencies.tacz_scope_fixture]]
+modId="minecraft"
+mandatory=true
+versionRange="[26.2]"
+ordering="NONE"
+side="CLIENT"

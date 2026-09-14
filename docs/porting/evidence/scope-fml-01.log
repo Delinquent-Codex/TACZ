@@ -1,0 +1,18 @@
+Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\scope-fixture\build.gradle' line: 39
+
+* What went wrong:
+A problem occurred evaluating root project 'tacz-scope-fml-fixture'.
+> Could not set unknown property 'accessTransformer' for extension 'minecraft' of type net.minecraftforge.gradle.internal.MinecraftExtensionImpl$ForProjectImpl.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5s
