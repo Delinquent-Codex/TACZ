@@ -74,6 +74,8 @@ dependencies {
     implementation minecraft.dependency("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
     // Verified Forge 26.2 artifact; optional, supplied separately by the user.
     compileOnly('maven.modrinth:shoulder-surfing-reloaded:f7tjIKIo') { transitive = false }
+    // Published loader-independent API only. No Forge 26.2 JEI runtime is verified or bundled.
+    compileOnly('mezz.jei:jei-26.2-common-api:30.32.0.221') { transitive = false }
     annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
     implementation('com.maydaymemory:mae:1.1.2') {
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
@@ -188,6 +190,8 @@ sourceSets {
         java.include 'com/tacz/guns/client/renderer/scope/*.java'
         java.include 'com/tacz/guns/porting/ScopeRenderChecks.java'
         java.include 'com/tacz/guns/porting/ScopeNativeChecks.java'
+        java.include 'com/tacz/guns/porting/ARConsumerChecks.java'
+        java.include 'com/tacz/guns/compat/ar/*.java'
         java.include 'com/tacz/guns/porting/ScopeGpuChecks.java'
         java.include 'com/tacz/guns/porting/ScopeShaderChecks.java'
         java.include 'com/tacz/guns/client/renderer/RenderSubmission.java'
@@ -244,6 +248,27 @@ sourceSets {
     }
 }
 dependencies { portingChecksAnnotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5' }
+
+tasks.register('verifyPortingARConsumers', JavaExec) {
+    group = 'verification'
+    description = 'Checks native consumer rejection using the actual legacy AR signatures; not AR runtime compatibility.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath + configurations.portingGpuNatives
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+    mainClass = 'com.tacz.guns.porting.ARConsumerChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.register('verifyPortingARAbsent', JavaExec) {
+    group = 'verification'
+    description = 'Checks the production AR facade with the companion artifact removed from the test classpath.'
+    dependsOn tasks.named('compilePortingChecksJava')
+    classpath = sourceSets.portingChecks.runtimeClasspath.filter { !it.name.startsWith('accelerated-rendering-1314021-') } + configurations.portingGpuNatives
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+    mainClass = 'com.tacz.guns.porting.ARConsumerChecks'
+    args '--absent'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
 tasks.register('verifyPortingEvents', JavaExec) {
     group = 'verification'
     description = 'Checks actual migrated TACZ events on EventBus 7; does not launch TACZ or KubeJS.'

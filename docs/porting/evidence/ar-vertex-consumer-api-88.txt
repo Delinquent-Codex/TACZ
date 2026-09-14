@@ -1,0 +1,20 @@
+Compiled from "VertexConsumerExtension.java"
+public class com.github.argon4w.acceleratedrendering.core.buffers.accelerated.builders.VertexConsumerExtension {
+  public com.github.argon4w.acceleratedrendering.core.buffers.accelerated.builders.VertexConsumerExtension();
+    Code:
+         0: aload_0
+         1: invokespecial #9                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public static com.github.argon4w.acceleratedrendering.core.buffers.accelerated.builders.IAcceleratedVertexConsumer getAccelerated(com.mojang.blaze3d.vertex.VertexConsumer);
+    Code:
+         0: aload_0
+         1: checkcast     #15                 // class com/github/argon4w/acceleratedrendering/core/buffers/accelerated/builders/IAcceleratedVertexConsumer
+         4: areturn
+
+  public static com.github.argon4w.acceleratedrendering.core.buffers.accelerated.IAccelerationHolder getHolder(com.mojang.blaze3d.vertex.VertexConsumer);
+    Code:
+         0: aload_0
+         1: checkcast     #21                 // class com/github/argon4w/acceleratedrendering/core/buffers/accelerated/IAccelerationHolder
+         4: areturn
+}

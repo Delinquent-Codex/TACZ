@@ -2,6 +2,7 @@ package com.tacz.guns.compat.ar;
 
 import com.github.argon4w.acceleratedrendering.core.CoreFeature;
 import com.github.argon4w.acceleratedrendering.core.buffers.accelerated.builders.VertexConsumerExtension;
+import com.github.argon4w.acceleratedrendering.core.buffers.accelerated.builders.IAcceleratedVertexConsumer;
 import com.github.argon4w.acceleratedrendering.features.entities.AcceleratedEntityRenderingFeature;
 import com.github.argon4w.acceleratedrendering.features.items.AcceleratedItemRenderingFeature;
 import com.github.argon4w.acceleratedrendering.features.text.AcceleratedTextRenderingFeature;
@@ -19,7 +20,9 @@ public class ARCompatImpl {
 	}
 
 	public static boolean isAccelerated(VertexConsumer vertexConsumer) {
-		return VertexConsumerExtension.getAccelerated(vertexConsumer).isAccelerated();
+		// Native scope builders supply TACZ-owned consumers, which AR does not transform.
+		// The legacy getAccelerated helper is an unchecked cast, not a capability lookup.
+		return vertexConsumer instanceof IAcceleratedVertexConsumer accelerated && accelerated.isAccelerated();
 	}
 
 	public static void setRenderingLevel() {

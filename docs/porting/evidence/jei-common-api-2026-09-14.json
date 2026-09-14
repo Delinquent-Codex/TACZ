@@ -1,0 +1,24 @@
+{
+  "coordinate": "mezz.jei:jei-26.2-common-api:30.32.0.221",
+  "role": "compile-only loader-independent API; not a Forge JEI runtime",
+  "artifacts": [
+    {
+      "url": "https://maven.blamejared.com/mezz/jei/jei-26.2-common-api/30.32.0.221/jei-26.2-common-api-30.32.0.221.pom",
+      "sha1": "fa07ef4eb0c010336152c45e1e6364b74b178f3f",
+      "sha256": "cf910adce1ab19f69138d88c9aff65e25ee0b1f6883f7cf0d62c10aac13ab854"
+    },
+    {
+      "url": "https://maven.blamejared.com/mezz/jei/jei-26.2-common-api/30.32.0.221/jei-26.2-common-api-30.32.0.221.jar",
+      "sha1": "6fec9b3e36212986bb13ca7826781a2a79b89ec9",
+      "sha256": "2bd00ebaa3cf47b484a0dad8351b35cbc5e9150a19075ceb34927e048380f822"
+    },
+    {
+      "url": "https://maven.blamejared.com/mezz/jei/jei-26.2-common-api/30.32.0.221/jei-26.2-common-api-30.32.0.221-sources.jar",
+      "sha1": "4f9f94b662c307c4e68fc2d676e70a1b6f2db337",
+      "sha256": "6044c064c4cbbc5c18091c5c2240520de1363714fadd57b623e0cded9bb6e5d7"
+    }
+  ],
+  "java_sources": 181,
+  "loader_imports": [],
+  "mod_descriptors": []
+}

@@ -1,6 +1,7 @@
 package com.tacz.guns.client.renderer.scope;
 
 import net.minecraft.client.renderer.feature.submit.SubmitNode;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 
@@ -23,6 +24,21 @@ public final class ScopeCapture implements AutoCloseable {
     }
 
     public static boolean active() { return CURRENT.get() != null; }
+
+    /** Append nested optics to the current job; publish a new job only after successful extraction. */
+    public static void submit(SubmitNodeCollector collector, int order, Runnable render) {
+        Objects.requireNonNull(collector);
+        Objects.requireNonNull(render);
+        if (active()) {
+            render.run();
+            return;
+        }
+        ScopeCapture capture = begin();
+        try (capture) {
+            render.run();
+        }
+        ScopeFeatureRenderer.submit(collector, order, capture.plan());
+    }
 
     /** Called at the native phase submission boundary, after the collector has captured the pose. */
     public static boolean capture(SubmitNode submit) {

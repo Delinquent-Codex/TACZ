@@ -2964,7 +2964,7 @@
     "git_blob": "e75c15c68b8ca5ee5a4306b7d0b494fdf13740e0",
     "checkout_sha256": "394918f3dbbbe515875227e5f1d1d2a0f51717f819d0a6f467d10ec17a1b15ca",
     "bytes": 2155,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/jei/GunModSubtype.java"
   },
   {
@@ -2972,7 +2972,7 @@
     "git_blob": "1ae63f351b027340ef50758f6dd37e449a53f235",
     "checkout_sha256": "13a8216c9c250bac9110e27e06002062d3cb963accfa06359455eb01257d7402",
     "bytes": 3935,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/jei/category/AttachmentQueryCategory.java"
   },
   {

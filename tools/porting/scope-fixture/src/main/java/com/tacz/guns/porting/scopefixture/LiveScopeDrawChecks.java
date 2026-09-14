@@ -105,11 +105,9 @@ final class LiveScopeDrawChecks {
         var storage = new SubmitNodeStorage();
         if (masks == null) scene.accept(storage);
         else {
-            var capture = ScopeCapture.begin();
-            try (capture) {
+            ScopeCapture.submit(storage, 0, () -> {
                 for (var mask : masks) ScopeCapture.withMask(mask, () -> scene.accept(storage));
-            }
-            ScopeFeatureRenderer.submit(storage, 0, capture.plan());
+            });
         }
         minecraft.gameRenderer.featureRenderDispatcher().renderAllFeatures(storage);
         var copy = RenderSystem.getDevice().createCommandEncoder();

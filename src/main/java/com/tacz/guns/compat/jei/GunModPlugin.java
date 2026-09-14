@@ -13,7 +13,7 @@ import com.tacz.guns.init.ModRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
-import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.types.IRecipeType;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
@@ -33,7 +33,7 @@ import java.util.Objects;
 public class GunModPlugin implements IModPlugin {
     private static final Identifier UID = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "jei");
 
-    private Map<Identifier, RecipeType<GunSmithTableRecipe>> recipeTypeMap = new HashMap<>();
+    private Map<Identifier, IRecipeType<GunSmithTableRecipe>> recipeTypeMap = new HashMap<>();
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
@@ -42,7 +42,7 @@ public class GunModPlugin implements IModPlugin {
         for (var entry : map) {
             BlockItem item = entry.getValue().getBlock();
             ItemStack icon = BlockItemBuilder.create(item).setId(entry.getKey()).build();
-            RecipeType<GunSmithTableRecipe> type = RecipeType.create(GunMod.MOD_ID, "gun_smith_table/" + entry.getKey().toString().replace(':', '_'), GunSmithTableRecipe.class);
+            IRecipeType<GunSmithTableRecipe> type = IRecipeType.create(GunMod.MOD_ID, "gun_smith_table/" + entry.getKey().toString().replace(':', '_'), GunSmithTableRecipe.class);
             registration.addRecipeCategories(new GunSmithTableCategory(registration.getJeiHelpers().getGuiHelper(), icon, type, item.getName(icon)));
             recipeTypeMap.put(entry.getKey(), type);
         }

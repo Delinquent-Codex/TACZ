@@ -1,0 +1,391 @@
+Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+
+> Configure project :
+Minecraft Mavenizer 0.5.21 by Forge Development LLC
+  Output:             C:\Users\voltp\Downloads\TACZ-26.2\.gradle\mavenizer\repo
+  Output JSON:        C:\Users\voltp\Downloads\TACZ-26.2\.gradle\mavenizer\dependencies\default.json
+  Dependencies Only:  false
+  Cache:              C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\mavenizer\caches
+  JDK Cache:          C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\mavenizer\caches
+  Offline:            false
+  Cache Only:         false
+  Ignore Cache:       false
+  Mappings:           auto
+  Foreign Repos:      [https://maven.latvian.dev/releases/, https://jitpack.io/, https://cursemaven.com/, https://maven.architectury.dev/, https://api.modrinth.com/maven/, https://maven.shedaniel.me/, https://maven.kosmx.dev/, https://repo.maven.apache.org/maven2/, https://maven.blamejared.com/, https://maven.minecraftforge.net/, https://libraries.minecraft.net/]
+  GradleVariantHack:  true
+  Disable Gradle:     false
+  Stub Jars:          false
+  Access Transformer: C:\Users\voltp\Downloads\TACZ-26.2\src\main\resources\META-INF\accesstransformer.cfg
+
+Processing Minecraft dependency: net.minecraftforge:forge:26.2-65.1.0
+Using Mappings: official-26.2
+Processing Minecraft Forge (userdev): 26.2-65.1.0
+Mappings Zip
+  srg2names[official-26.2][Empty]
+Mappings POM
+  pom[mappings_official]
+Client Extra
+  downloadLauncherManifest
+  downloadVersionJson[26.2]
+  download[26.2][client]
+    Cache miss!
+    java.lang.Exception: Cache miss! Stacktrace for Information Only
+    	at net.minecraftforge.mcmaven.impl.Mavenizer.assertNotCacheOnly(Mavenizer.java:60)
+    	at net.minecraftforge.mcmaven.impl.Mavenizer.checkCache(Mavenizer.java:94)
+    	at net.minecraftforge.mcmaven.impl.repo.mcpconfig.MinecraftTasks.downloadVersionFile(MinecraftTasks.java:153)
+    	at net.minecraftforge.mcmaven.impl.repo.mcpconfig.MinecraftTasks.lambda$versionFile$1(MinecraftTasks.java:141)
+    	at net.minecraftforge.mcmaven.impl.util.Task$Simple.execute(Task.java:145)
+    	at net.minecraftforge.mcmaven.impl.util.Task$Simple.execute(Task.java:131)
+    	at net.minecraftforge.mcmaven.impl.util.Task$Simple.execute(Task.java:131)
+    	at net.minecraftforge.mcmaven.impl.repo.Repo$PendingArtifact.get(Repo.java:243)
+    	at net.minecraftforge.mcmaven.impl.MinecraftMaven.finalize(MinecraftMaven.java:408)
+    	at net.minecraftforge.mcmaven.impl.MinecraftMaven.createForge(MinecraftMaven.java:241)
+    	at net.minecraftforge.mcmaven.impl.MinecraftMaven.run(MinecraftMaven.java:119)
+    	at net.minecraftforge.mcmaven.cli.MavenTask.run(MavenTask.java:218)
+    	at net.minecraftforge.mcmaven.cli.Main.run(Main.java:70)
+    	at net.minecraftforge.mcmaven.cli.Main.main(Main.java:23)
+  extra[client]
+  access-transform
+Client Maven POM
+  pom[client-extra]
+Sources
+  listLibraries
+  stripClient
+  download[26.2][server]
+  extractServer
+  stripServer
+  merge
+  modifyAccess
+  stripSides
+  decompile
+  patch
+  patch[forge]
+  downloadSources
+  injectSources[forge]
+  remap[forge][official-26.2][javadoc]
+  remap[forge][official-26.2][javadoc][variants]
+Classes
+  recompile[forge][official-26.2]
+  injectData[forge][official-26.2]
+  access-transform
+  injectData[forge][official-26.2][variants]
+Maven POM
+  pom[forge]
+Metadata
+  metadata[forge]
+  metadata[forge][variants]
+Minecraft Maven has finished, took 0:09.828
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+    public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                       ^
+  symbol:   class GuiGraphics
+  location: class OpenGunPackDirEntry
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  symbol:   class GuiGraphics
+  location: package net.minecraft.client.gui
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+    public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                   ^
+  symbol:   class GuiGraphics
+  location: class AttachmentQueryCategory
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+import net.minecraft.client.renderer.MultiBufferSource;
+                                    ^
+  symbol:   class MultiBufferSource
+  location: package net.minecraft.client.renderer
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+    private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+    public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:22: error: cannot find symbol
+            public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                               ^
+  symbol: class GuiGraphics
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:42: error: cannot find symbol
+                    public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                                       ^
+  symbol: class GuiGraphics
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:16: error: OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler
+public class OpenGunPackDirEntry extends AbstractConfigListEntry<Boolean> {
+       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:33: error: cannot access ResourceLocation
+public class GunModPlugin implements IModPlugin {
+       ^
+  class file for net.minecraft.resources.ResourceLocation not found
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:94: error: getPluginUid() in GunModPlugin cannot implement getPluginUid() in IModPlugin
+    public Identifier getPluginUid() {
+                      ^
+  return type Identifier is not compatible with ResourceLocation
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:93: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\custom\CustomGunItemBuilder.java:17: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        super(i);
+              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\TimelessKubeJSPlugin.java:49: error: incompatible types: invalid constructor reference
+        RegistryInfo.ITEM.addType("tacz_gun", CustomGunItemBuilder.class, CustomGunItemBuilder::new);
+                                                                          ^
+    incompatible types: ResourceLocation cannot be converted to Identifier
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:14: error: cannot access BufferSource
+            fullyBufferedMultiBufferSource.endBatch();
+                                          ^
+  class file for net.minecraft.client.renderer.MultiBufferSource$BufferSource not found
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:14: error: cannot find symbol
+            fullyBufferedMultiBufferSource.endBatch();
+                                          ^
+  symbol:   method endBatch()
+  location: variable fullyBufferedMultiBufferSource of type FullyBufferedMultiBufferSource
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:9: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOWER_ANIMATION, 93, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:10: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOOP_UPPER_ANIMATION, 94, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:11: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ONCE_UPPER_ANIMATION, 95, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:12: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ROTATION_ANIMATION, 96,
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:52: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:160: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:188: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:215: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                           ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+30 errors
+3 warnings
+
+> Task :compileJava FAILED
+
+> Task :compilePortingChecksJava
+C:\Users\voltp\Downloads\TACZ-26.2\src\portingChecks\java\com\tacz\guns\porting\ARConsumerChecks.java:20: error: unreported exception IOException; must be caught or declared to be thrown
+        com.mojang.blaze3d.platform.NativeLibrariesBootstrap.loadLibraries();
+                                                                          ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 error
+
+> Task :compilePortingChecksJava FAILED
+> Task :processPortingChecksResources NO-SOURCE
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:33: error: cannot access ResourceLocation
+  public class GunModPlugin implements IModPlugin {
+         ^
+    class file for net.minecraft.resources.ResourceLocation not found
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:14: error: cannot access BufferSource
+              fullyBufferedMultiBufferSource.endBatch();
+                                            ^
+    class file for net.minecraft.client.renderer.MultiBufferSource$BufferSource not found
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:6: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:5: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:48: error: cannot find symbol
+      public void render(GuiGraphics graphics, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean isHovered, float delta) {
+                         ^
+    symbol:   class GuiGraphics
+    location: class OpenGunPackDirEntry
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:18: error: cannot find symbol
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    symbol:   class GuiGraphics
+    location: package net.minecraft.client.gui
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\category\AttachmentQueryCategory.java:39: error: cannot find symbol
+      public void draw(AttachmentQueryEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+                                                                                     ^
+    symbol:   class GuiGraphics
+    location: class AttachmentQueryCategory
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:5: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:7: error: cannot find symbol
+  import net.minecraft.client.renderer.MultiBufferSource;
+                                      ^
+    symbol:   class MultiBufferSource
+    location: package net.minecraft.client.renderer
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:93: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+              ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+          ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+          ModLoadingContext ctx = ModLoadingContext.get();
+                                                   ^
+  Note: Some input files use unchecked or unsafe operations.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:14: error: cannot find symbol
+              fullyBufferedMultiBufferSource.endBatch();
+                                            ^
+    symbol:   method endBatch()
+    location: variable fullyBufferedMultiBufferSource of type FullyBufferedMultiBufferSource
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:94: error: getPluginUid() in GunModPlugin cannot implement getPluginUid() in IModPlugin
+      public Identifier getPluginUid() {
+                        ^
+    return type Identifier is not compatible with ResourceLocation
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\custom\CustomGunItemBuilder.java:17: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          super(i);
+                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\kubejs\TimelessKubeJSPlugin.java:49: error: incompatible types: invalid constructor reference
+          RegistryInfo.ITEM.addType("tacz_gun", CustomGunItemBuilder.class, CustomGunItemBuilder::new);
+                                                                            ^
+      incompatible types: ResourceLocation cannot be converted to Identifier
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:9: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOWER_ANIMATION, 93, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:10: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOOP_UPPER_ANIMATION, 94, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:11: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ONCE_UPPER_ANIMATION, 95, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:12: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ROTATION_ANIMATION, 96,
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:52: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:160: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:188: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:215: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                             ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\OpenGunPackDirEntry.java:16: error: OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler
+  public class OpenGunPackDirEntry extends AbstractConfigListEntry<Boolean> {
+         ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:22: error: cannot find symbol
+              public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                                 ^
+    symbol: class GuiGraphics
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\widget\CrosshairDropdown.java:42: error: cannot find symbol
+                      public void render(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, int width, int height, float delta) {
+                                         ^
+    symbol: class GuiGraphics
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\legacy\OculusCompatLegacy.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\newly\OculusCompatNewly.java:12: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:16: error: package MultiBufferSource does not exist
+      private static Function<MultiBufferSource.BufferSource, Boolean> END_BATCH_FUNCTION;
+                                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\oculus\OculusCompat.java:45: error: package MultiBufferSource does not exist
+      public static boolean endBatch(MultiBufferSource.BufferSource bufferSource) {
+                                                      ^
+  30 errors
+  3 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':compilePortingChecksJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\portingChecks\java\com\tacz\guns\porting\ARConsumerChecks.java:20: error: unreported exception IOException; must be caught or declared to be thrown
+          com.mojang.blaze3d.platform.NativeLibrariesBootstrap.loadLibraries();
+                                                                            ^
+  Note: Recompile with -Xlint:deprecation for details.
+  Note: Some input files use or override a deprecated API.
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+==============================================================================
+
+BUILD FAILED in 37s
+2 actionable tasks: 2 executed

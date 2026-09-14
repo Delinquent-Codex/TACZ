@@ -451,12 +451,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/BedrockAttachmentModel.java; client/renderer/scope/ScopeCapture, ScopeSequence, ScopeNativeGeometry, ScopeFeatureRenderer",
-    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test in that earlier run. Legacy accelerated methods still fail full compilation. Separate Forge client/world fixture now verifies all three native scope Mixins and AT, real font/baked-item/glint preparation, and 24 live GPU mask/color checks per backend (48 total assertions each, scope-fml-16/17). Actual TACZ gun models, full-mod Mixin coexistence and companions remain unverified.",
+    "validation": "Native ordered masks now replace old accelerated GL routines; public accelerated-named entry points remain native source bridges. FLOW-88 has no model diagnostics but full build still fails (25 companion errors). Scope/native checks 241+29, standalone OpenGL/Vulkan 18 pixel+69 shader checks each. Separate FML fixtures 18/19 pass 56 checks each, including shared/nested submission and failure cleanup plus 24 live pixel comparisons per backend. These fixtures do not compile/render actual TACZ gun models; full-mod visual parity, AR batching/performance and companion behavior remain unverified.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/BedrockGunModel.java": {
     "implementation": "src/main/java/com/tacz/guns/client/model/BedrockGunModel.java; client/renderer/scope/ScopeCapture, ScopeSequence, ScopeNativeGeometry, ScopeFeatureRenderer",
-    "validation": "Run 78: scope CPU 241, native builders/order/arm snapshots 29, OpenGL/Vulkan 18 pixels and 69 actual shader/version assertions each. Non-accelerated optic/gun jobs connected; no actual gun/FML/companion runtime test in that earlier run. Legacy accelerated methods still fail full compilation. Separate Forge client/world fixture now verifies all three native scope Mixins and AT, real font/baked-item/glint preparation, and 24 live GPU mask/color checks per backend (48 total assertions each, scope-fml-16/17). Actual TACZ gun models, full-mod Mixin coexistence and companions remain unverified.",
+    "validation": "Native ordered masks now replace old accelerated GL routines; public accelerated-named entry points remain native source bridges. FLOW-88 has no model diagnostics but full build still fails (25 companion errors). Scope/native checks 241+29, standalone OpenGL/Vulkan 18 pixel+69 shader checks each. Separate FML fixtures 18/19 pass 56 checks each, including shared/nested submission and failure cleanup plus 24 live pixel comparisons per backend. These fixtures do not compile/render actual TACZ gun models; full-mod visual parity, AR batching/performance and companion behavior remain unverified.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/model/bedrock/BedrockModel.java": {
@@ -706,7 +706,7 @@
   },
   "source:src/main/java/com/tacz/guns/compat/ar/ARCompat.java": {
     "implementation": "src/main/java/com/tacz/guns/compat/ar/ARCompat.java",
-    "validation": "Exact target source API migration; full compilation still fails. See verification.md and inventory/compile-errors.json.",
+    "validation": "Actual old AR helper hard-casts consumers. The adapter/Mixin now checks capability before that cast. Run 88 passes six consumer-boundary and five AR-artifact-absent facade checks. Full compile still fails outside these sources. No companion FML, positive accelerated mesh path or AR performance validation; external availability remains blocked.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java": {
@@ -726,7 +726,7 @@
   },
   "source:src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java": {
     "implementation": "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java",
-    "validation": "Target API migration; full compilation still fails. Focused codec/script checks cover selected helpers only. See verification.md.",
+    "validation": "Verified loader-independent jei-26.2-common-api:30.32.0.221 replaces old signatures, compile-only and absent from runtimeClasspath. Target recipe types, dimensions/GUI extraction and subtype keys/null migrated; FLOW-88 has no JEI diagnostics. Actual Forge companion discovery, layout, recipe refresh and runtime parity remain unavailable/unverified. No loader runtime substitution. See dependencies.md and verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/compat/jei/entry/AttachmentQueryEntry.java": {
@@ -2696,7 +2696,7 @@
   },
   "source:src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java": {
     "implementation": "src/main/java/com/tacz/guns/compat/ar/ARCompatImpl.java",
-    "validation": "Native rendering/movement API port; focused CPU geometry, particle and movement checks pass. Full compilation, FML/Mixin application and visual/gameplay parity remain unmet. See verification.md.",
+    "validation": "Actual old AR helper hard-casts consumers. The adapter/Mixin now checks capability before that cast. Run 88 passes six consumer-boundary and five AR-artifact-absent facade checks. Full compile still fails outside these sources. No companion FML, positive accelerated mesh path or AR performance validation; external availability remains blocked.",
     "status": "in progress"
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/assets/tacz/geo_models/ammo/12g.json": {
@@ -4111,7 +4111,7 @@
   },
   "source:src/main/java/com/tacz/guns/mixin/client/ar/BedrockPartMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/client/ar/BedrockPartMixin.java",
-    "validation": "Native target API migration; main build still fails. Humanoid/GUI helpers have focused CPU and bytecode checks; no FML/GPU/gameplay or companion validation. See verification.md and compile-54.",
+    "validation": "Actual old AR helper hard-casts consumers. The adapter/Mixin now checks capability before that cast. Run 88 passes six consumer-boundary and five AR-artifact-absent facade checks. Full compile still fails outside these sources. No companion FML, positive accelerated mesh path or AR performance validation; external availability remains blocked.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/mixin/common/EntityWalkMixin.java": {
@@ -4326,7 +4326,17 @@
   },
   "source:src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java": {
     "implementation": "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java",
-    "validation": "Native ingredient SlotDisplay resolution and copied counts; no diagnostics for this category in FLOW-82. JEI plugin/GUI companion APIs still block full build, and no JEI layout/runtime test exists.",
+    "validation": "Verified loader-independent jei-26.2-common-api:30.32.0.221 replaces old signatures, compile-only and absent from runtimeClasspath. Target recipe types, dimensions/GUI extraction and subtype keys/null migrated; FLOW-88 has no JEI diagnostics. Actual Forge companion discovery, layout, recipe refresh and runtime parity remain unavailable/unverified. No loader runtime substitution. See dependencies.md and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/jei/GunModSubtype.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/jei/GunModSubtype.java",
+    "validation": "Verified loader-independent jei-26.2-common-api:30.32.0.221 replaces old signatures, compile-only and absent from runtimeClasspath. Target recipe types, dimensions/GUI extraction and subtype keys/null migrated; FLOW-88 has no JEI diagnostics. Actual Forge companion discovery, layout, recipe refresh and runtime parity remain unavailable/unverified. No loader runtime substitution. See dependencies.md and verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/compat/jei/category/AttachmentQueryCategory.java": {
+    "implementation": "src/main/java/com/tacz/guns/compat/jei/category/AttachmentQueryCategory.java",
+    "validation": "Verified loader-independent jei-26.2-common-api:30.32.0.221 replaces old signatures, compile-only and absent from runtimeClasspath. Target recipe types, dimensions/GUI extraction and subtype keys/null migrated; FLOW-88 has no JEI diagnostics. Actual Forge companion discovery, layout, recipe refresh and runtime parity remain unavailable/unverified. No loader runtime substitution. See dependencies.md and verification.md.",
     "status": "in progress"
   }
 }

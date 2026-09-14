@@ -135,6 +135,37 @@ public final class ScopeFixture {
         var jobs = drain(storage);
         check(jobs.size() == 1 && jobs.getFirst() instanceof ScopeFeatureRenderer.Submit job && job.plan() == capture.plan(), "complete scope enters native phase once as an atomic job");
 
+        ScopeCapture.submit(storage, 3, () -> {
+            storage.submitCustomGeometry(pose, solid, (p, out) -> {});
+            ScopeCapture.withMask(ScopeMaskState.ocular(4), () -> ScopeCapture.submit(storage, 9, () -> {
+                check(ScopeCapture.active(), "nested source bridge reuses outer capture");
+                storage.submitCustomGeometry(pose, translucent, (p, out) -> {});
+            }));
+            check(drain(storage).isEmpty(), "nested source bridge does not publish a partial scope job");
+            storage.submitCustomGeometry(pose, solid, (p, out) -> {});
+        });
+        var bridged = drain(storage);
+        check(bridged.size() == 1 && bridged.getFirst() instanceof ScopeFeatureRenderer.Submit,
+                "outer source bridge submits the complete job exactly once");
+        var bridgedDraws = ((ScopeFeatureRenderer.Submit) bridged.getFirst()).plan().draws();
+        check(bridgedDraws.size() == 3 && bridgedDraws.get(0).mask().equals(ScopeMaskState.UNMASKED)
+                        && bridgedDraws.get(1).mask().equals(ScopeMaskState.ocular(4))
+                        && bridgedDraws.get(2).mask().equals(ScopeMaskState.UNMASKED),
+                "nested bridge inherits its parent mask and preserves surrounding order");
+        check(!ScopeCapture.active(), "source bridge releases capture after success");
+        try {
+            ScopeCapture.submit(storage, 0, () -> {
+                storage.submitCustomGeometry(pose, solid, (p, out) -> {});
+                throw new IllegalStateException("bridge failure");
+            });
+            throw new AssertionError("source bridge swallowed extraction failure");
+        } catch (IllegalStateException expected) {
+            check(expected.getMessage().equals("bridge failure"), "source bridge propagates extraction failure");
+        }
+        check(drain(storage).isEmpty() && !ScopeCapture.active(), "failed source bridge publishes no partial job and releases capture");
+        ScopeCapture.submit(storage, 0, () -> storage.submitCustomGeometry(pose, solid, (p, out) -> {}));
+        check(drain(storage).size() == 1, "source bridge can submit again after failure");
+
         try (var failed = ScopeCapture.begin()) {
             ScopeCapture.withMask(ScopeMaskState.ocular(2), () -> { throw new IllegalStateException("fixture failure"); });
         } catch (IllegalStateException expected) {

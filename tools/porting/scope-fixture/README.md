@@ -39,7 +39,8 @@ limitations are recorded in `docs/porting/verification.md`.
 
 The checks exercise actual FML discovery, Mixin transformation, the access
 transformer, native simple/translucent phase interception, pass-through outside
-capture, mask/vertex ownership, exception cleanup, and registration and execution
+capture, mask/vertex ownership, nested ScopeCapture.submit jobs, failed-publication
+cleanup, and registration and execution
 through the game's feature dispatcher. No fake Minecraft services or replacement
 scope implementations are supplied. The live client also resolves vanilla fonts,
 baked diamond-sword and compass item models, and standard/special glint. At 128x128,

@@ -5,11 +5,10 @@ import com.tacz.guns.crafting.GunSmithTableRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
-import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.types.IRecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
@@ -21,13 +20,13 @@ import java.util.List;
 
 public class GunSmithTableCategory implements IRecipeCategory<GunSmithTableRecipe> {
     private final Component title;
-    private final IDrawableStatic bgDraw;
+    private final IDrawable bgDraw;
     private final IDrawable slotDraw;
     private final IDrawable iconDraw;
-    private final RecipeType<GunSmithTableRecipe> type;
+    private final IRecipeType<GunSmithTableRecipe> type;
 
-    public GunSmithTableCategory(IGuiHelper guiHelper, ItemStack icon, RecipeType<GunSmithTableRecipe> type, Component title) {
-        this.bgDraw = guiHelper.createBlankDrawable(160, 40);
+    public GunSmithTableCategory(IGuiHelper guiHelper, ItemStack icon, IRecipeType<GunSmithTableRecipe> type, Component title) {
+        this.bgDraw = guiHelper.createBlankDrawable(getWidth(), getHeight());
         this.slotDraw = guiHelper.getSlotDrawable();
         this.iconDraw = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, icon);
         this.type = type;
@@ -37,7 +36,7 @@ public class GunSmithTableCategory implements IRecipeCategory<GunSmithTableRecip
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, GunSmithTableRecipe recipe, IFocusGroup focuses) {
         ItemStack output = recipe.getOutput();
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 3, 12).addItemStack(output).setBackground(slotDraw, -1, -1);
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 3, 12).add(output).setBackground(slotDraw, -1, -1);
 
         List<GunSmithTableIngredient> inputs = recipe.getInputs();
         int size = inputs.size();
@@ -78,11 +77,15 @@ public class GunSmithTableCategory implements IRecipeCategory<GunSmithTableRecip
         return title;
     }
 
+    /** Legacy source accessor; current JEI uses getWidth/getHeight for category sizing. */
+    @Deprecated
+    public IDrawable getBackground() { return bgDraw; }
+
     @Override
-    @SuppressWarnings("removal")
-    public IDrawable getBackground() {
-        return bgDraw;
-    }
+    public int getWidth() { return 160; }
+
+    @Override
+    public int getHeight() { return 40; }
 
     @Override
     public IDrawable getIcon() {
@@ -90,7 +93,7 @@ public class GunSmithTableCategory implements IRecipeCategory<GunSmithTableRecip
     }
 
     @Override
-    public RecipeType<GunSmithTableRecipe> getRecipeType() {
+    public IRecipeType<GunSmithTableRecipe> getRecipeType() {
         return type;
     }
 }

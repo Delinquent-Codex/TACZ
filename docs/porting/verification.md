@@ -188,3 +188,37 @@ Executed from the repository root with `JAVA_HOME=C:\Users\voltp\Downloads\TACZ-
 Fixture development failures are retained: 01/02 corrected AT/task configuration, 03 corrected target GUI access, 04 corrected Groovy String/GString selection, 05 exposed separate class/resource outputs and loader conflicts (fixed with ForgeGradle's merge-source-sets setting). Run 06 loaded but did not finish its menu callback and was stopped; run 07 uses a render event and passed 14 checks. Run 08 fixed static ModList access. Run 09 passed the font checks but item construction failed because 26.2 default components had not been bound by world loading; run 10 entered a real world and passed 24. Run 11 fixed the new test's target texture/render-type signatures. Runs 12/13 reached live GPU comparison but the test incorrectly assumed JOML's default Vector4f had zero alpha; its denied image was entirely opaque black. An explicit transparent clear fixes the test, with no production renderer change. Run 14 passed 36 checks on OpenGL; run 15 passed 36 on Vulkan. Runs 16/17 add mask writes/inversion and are the final evidence above. Routine OSHI process-information and unauthenticated Realms warnings are present; no Realms/multiplayer validation is claimed.
 
 Remaining gates: compile and load full TACZ alongside every production Mixin; installable JAR/dependency closure; dedicated server, actual guns/packs/scripts, gameplay/two-client behavior, migrations, external companions, fabulous composition and representative performance. The fixture does not close those gates.
+
+
+## Native scope entry points, AR consumer boundary and JEI API — 2026-09-14
+
+Continued from local checkpoint 12b4be7e. All required main sources, annotation processors and Mixin requirements remain enabled. The original accelerated GL stencil routines are replaced with the native ordered renderer; public entry points remain native source bridges. No AR compatibility or performance claim is made. The separate Forge fixture invokes the same new ScopeCapture.submit helper in its native pixel tests.
+
+| Run | Command / scope | Actual result |
+| --- | --- | --- |
+| 84 | compileJava + AR consumer, scope and native-scope tasks, diagnostic FLOW / continue | Main 30 errors; scope 241 + native 29 pass. New consumer test fails loading lwjgl.dll. 13s. |
+| 85 | Same requested tasks, test native runtime added | Main 30 errors; focused compilation fails because NativeLibrariesBootstrap.loadLibraries requires IOException handling. 37s. |
+| 86 | compileJava + all 27 focused tasks, diagnostic FLOW / continue | Main 30 errors; all 1,754 assertions pass, 1m49s. |
+| 87 | compileJava -PportingDiagnosticFlow | After JEI common API migration: 25 errors, no JEI diagnostics, 14s. |
+| 88 | compileJava + all 27 focused tasks, diagnostic FLOW / continue | Main 25 errors; all 1,754 assertions pass, 1m42s. |
+| 89 | build jarJar | Ordinary compiler fails early with 10 errors, 5s. No TACZ JAR. |
+
+Every command starts with `.\gradlew.bat` and uses `--console=plain`. Exact expanded command strings and input hashes are in evidence/tested-inputs-84.json through tested-inputs-89.json. The current primary tested-inputs.json and compile-errors.json retain diagnostic run 88; ordinary run 89 is separate. Each manifest was recorded from completed output before changing tested inputs. Current root inputs total 4,319. The eleven new checks are six consumer capability checks with the actual old AR interface and five facade-linkage checks with the actual AR JAR absent. The test corrects its missing native library/bootstrap setup; no product failure was hidden. Aggregate 1,754 comprises 1,580 CPU/native/API/codec assertions, 36 standalone GPU pixel checks and 138 target shader compilation/version checks.
+
+The actual legacy AR `VertexConsumerExtension.getAccelerated` bytecode casts directly to IAcceleratedVertexConsumer. The native target BufferBuilder and TACZ VertexCapture do not implement that companion interface. ARCompatImpl.isAccelerated now uses instanceof, and the BedrockPart Mixin checks capability before casting. The positive accelerated path, mesh caching, companion FML injection and runtime remain unverified. `verifyPortingARAbsent` validates that CoreFeature is not found on its test classpath before exercising the real facade; changing only a LOADED flag is not counted as absence of an artifact.
+
+The JEI common API 30.32.0.221 was downloaded from its official Maven repository, with published SHA-1 checks and retained SHA-256/source/POM evidence. Its 181 Java sources have no loader imports; the JAR has no mod descriptor. `dependencyInsight --dependency jei --configuration compileClasspath --console=plain` and the corresponding runtimeClasspath command passed: only the new common API resolves for compilation; no JEI runtime dependency matches. No Fabric/NeoForge runtime is installed or used as a Forge substitute. API migration includes recipe types, dimensions, GUI extraction and subtype null semantics. Complete TACZ code generation, actual JEI initialization/UI, layout/recipe refresh, and dependency-present compatibility are not established by a failed FLOW compile with no JEI diagnostics.
+
+Separate fixture commands remain:
+
+```powershell
+.\gradlew.bat -p tools/porting/scope-fixture verifyScopeFml -PfixtureGraphicsBackend=OPENGL --console=plain
+.\gradlew.bat -p tools/porting/scope-fixture verifyScopeFml -PfixtureGraphicsBackend=VULKAN --console=plain
+```
+
+- scope-fml-18: exit 0, **56 assertions**, 51s, OpenGL 4.6 / AMD Radeon 760M / driver 26.8.1.260810.
+- scope-fml-19: exit 0, **56 assertions**, 43s, Vulkan 1.4.351 / NVIDIA RTX 5050 Laptop / driver 616.92.
+- Matching result JSON, prelaunch input manifests, debug logs and Gradle logs are retained. Both 28-input fixture manifests match the final sources. Each run creates its own real flat world and logs clean integrated-server/client shutdown. No owned fixture process remains running.
+- Eight additional assertions cover shared/nested capture ownership, parent mask inheritance, single-job publication, surrounding order, exception propagation, no partial outer publication and successful reuse after failure. The 24 live pixel comparisons per backend now exercise the shared submission helper; previous font/panel RGBA and glint-alpha limits remain unchanged.
+
+These 112 FML-fixture assertions are separate from the 1,754 root focused checks. No full TACZ entry point, actual gun model, other TACZ Mixins, dedicated server, multiplayer, gameplay, audio, migration, companion or performance gate is claimed. Remaining errors are Cloth 6, Oculus 9, KubeJS 2 and Player Animator 8; see the current compile inventory. The next task is verified API migration or explicit optional-companion isolation, then full compilation/packaging and the original runtime gates.

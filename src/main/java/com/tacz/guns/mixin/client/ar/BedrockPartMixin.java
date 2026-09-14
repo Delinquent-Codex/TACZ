@@ -56,9 +56,8 @@ public class BedrockPartMixin implements IAcceleratedRenderer<Void> {
 			float alpha,
 			CallbackInfo ci
 	) {
-		var extension = VertexConsumerExtension.getAccelerated(consumer);
-
-		if (ARCompat.shouldAccelerate() && extension.isAccelerated()) {
+		if (ARCompat.isAccelerated(consumer) && ARCompat.shouldAccelerate()) {
+			var extension = VertexConsumerExtension.getAccelerated(consumer);
 			ci.cancel();
 
 			int color = ARGB.color(

@@ -2,7 +2,6 @@ package com.tacz.guns.client.model;
 
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.client.animation.AnimationListener;
@@ -15,14 +14,12 @@ import com.tacz.guns.client.model.bedrock.ModelRendererWrapper;
 import com.tacz.guns.client.model.functional.*;
 import com.tacz.guns.client.renderer.RenderSubmission;
 import com.tacz.guns.client.renderer.scope.ScopeCapture;
-import com.tacz.guns.client.renderer.scope.ScopeFeatureRenderer;
 import com.tacz.guns.client.renderer.scope.ScopeMaskState;
 import com.tacz.guns.client.model.listener.model.ModelAdditionalMagazineListener;
 import com.tacz.guns.client.resource.index.ClientAttachmentIndex;
 import com.tacz.guns.client.resource.pojo.display.gun.TextShow;
 import com.tacz.guns.client.resource.pojo.model.BedrockModelPOJO;
 import com.tacz.guns.client.resource.pojo.model.BedrockVersion;
-import com.tacz.guns.compat.ar.ARCompat;
 import com.tacz.guns.util.RenderHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.rendertype.RenderType;
@@ -30,7 +27,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import org.lwjgl.opengl.GL11;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -287,11 +283,10 @@ public class BedrockGunModel extends BedrockAnimatedModel {
             BeamRenderer.renderLaserBeam(gunItem, matrixStack, transformType, laserBeamPaths);
         }
 
-		if (ARCompat.shouldAccelerate()) {
-			renderAccelerated(matrixStack, gunItem, transformType, renderType, light, overlay);
-			return;
-		}
+        renderNativeGun(matrixStack, transformType, renderType, light, overlay);
+    }
 
+    private void renderNativeGun(PoseStack matrixStack, ItemDisplayContext transformType, RenderType renderType, int light, int overlay) {
         // Keep the optic and every gun feature in one ordered native scope job.
         ItemStack attachmentItem = currentAttachmentItem.get(AttachmentType.SCOPE);
         IAttachment iAttachment = IAttachment.getIAttachmentOrNull(attachmentItem);
@@ -302,12 +297,9 @@ public class BedrockGunModel extends BedrockAnimatedModel {
                 ? ScopeMaskState.color(index.isSight() ? ScopeMaskState.Comparison.GREATER : ScopeMaskState.Comparison.EQUAL,
                         index.isSight() ? 127 : 0, true)
                 : ScopeMaskState.UNMASKED;
-        if (optical && !ScopeCapture.active()) {
-            ScopeCapture capture = ScopeCapture.begin();
-            try (capture) {
-                renderNativeContents(matrixStack, attachmentItem, transformType, renderType, light, overlay, gunMask);
-            }
-            ScopeFeatureRenderer.submit(RenderSubmission.collector(), 0, capture.plan());
+        if (optical) {
+            ScopeCapture.submit(RenderSubmission.collector(), 0, () ->
+                    renderNativeContents(matrixStack, attachmentItem, transformType, renderType, light, overlay, gunMask));
         } else {
             renderNativeContents(matrixStack, attachmentItem, transformType, renderType, light, overlay, gunMask);
         }
@@ -331,74 +323,15 @@ public class BedrockGunModel extends BedrockAnimatedModel {
         }
     }
 
-	public void renderAccelerated(PoseStack matrixStack, ItemStack gunItem, ItemDisplayContext transformType, RenderType renderType, int light, int overlay) {
-		// 镜子需要先渲染，写入模板值
-		var attachmentItem = currentAttachmentItem.get(AttachmentType.SCOPE);
-		var iAttachment = IAttachment.getIAttachmentOrNull(attachmentItem);
-		var useStencil = false;
-
-		if (scopePosPath != null && attachmentItem != null && !attachmentItem.isEmpty()) {
-			matrixStack.pushPose();
-
-			for (BedrockPart bedrockPart : scopePosPath) {
-				bedrockPart.translateAndRotateAndScale(matrixStack);
-			}
-
-			AttachmentRender.renderAttachment(attachmentItem, currentGunItem, matrixStack, transformType, light, overlay);
-			matrixStack.popPose();
-
-			// 开启模板测试，因为镜内不渲染枪体
-			if (iAttachment != null) {
-				var attachmentIndex = TimelessAPI.getClientAttachmentIndex(iAttachment.getAttachmentId(attachmentItem));
-
-				// 这里不用ifPresent是因为需要设置useStencil, lambda无法设置局部变量
-				if (attachmentIndex.isPresent()) {
-					// 如果有attachment, 则设置层前任务开启模板缓冲区设置对应的模板函数
-					ARCompat.setRenderBeforeFunction(() -> {
-						// 获取实际的attachmentIndex
-						var index = attachmentIndex.get();
-
-						if (index.isScope() && index.isSight()) { // 组合镜
-							RenderHelper.enableItemEntityStencilTest();
-							RenderSystem.stencilFunc(GL11.GL_GREATER, 127, 0xFF);
-						} else if (index.isScope()) { // 长筒镜
-							RenderHelper.enableItemEntityStencilTest();
-							RenderSystem.stencilFunc(GL11.GL_EQUAL, 0, 0xFF);
-						}
-
-						// 设置不改变任何模板值, 这里本来是无论是否有attachment都要执行的, 但是如果不执行到这里模板测试自然不会开启
-						// 也就无论如何都不会改变模板值, 所以一同在此处设置应该也没有问题
-						RenderSystem.stencilOp(GL11.GL_KEEP, GL11.GL_KEEP, GL11.GL_KEEP);
-					});
-
-					// 确认使用层前行为, 应在渲染完毕后重置层前行为
-					useStencil = true;
-				}
-			}
-		}
-
-		ARCompat.setRenderLayer(-943 + 3);
-
-		// 设置层后任务
-		ARCompat.setRenderAfterFunction(() -> {
-			// 关闭模板测试
-			RenderHelper.disableItemEntityStencilTest();
-			// 重置模板缓冲区
-			RenderSystem.clearStencil(0);
-			RenderSystem.clear(GL11.GL_STENCIL_BUFFER_BIT, Minecraft.ON_OSX);
-		});
-
-		super.render(matrixStack, transformType, renderType, light, overlay);
-
-		// 重置层和层后任务, 还原现场
-		ARCompat.resetRenderLayer();
-		ARCompat.resetRenderAfterFunction();
-
-		// 如果使用了层前行为, 则进行重置, 还原现场
-		if (useStencil) {
-			ARCompat.resetRenderBeforeFunction();
-		}
-	}
+    /**
+     * Source bridge for callers that already prepared this model's gun/attachment state.
+     * Native jobs retain scope and gun-body clipping without deferred AR GL callbacks.
+     * AR acceleration itself still needs a compatible companion and runtime validation.
+     */
+    @Deprecated
+    public void renderAccelerated(PoseStack matrixStack, ItemStack gunItem, ItemDisplayContext transformType, RenderType renderType, int light, int overlay) {
+        renderNativeGun(matrixStack, transformType, renderType, light, overlay);
+    }
 
     @Nullable
     private IFunctionalRenderer ammoHiddenRender(BedrockPart bedrockPart, Predicate<IGun> predicate) {

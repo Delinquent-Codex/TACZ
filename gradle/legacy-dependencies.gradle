@@ -2,8 +2,6 @@
 // No integration sources are excluded. Replace all entries before release.
 // The used SimpleBedrockModel lifecycle is being ported in source; MAE is declared in the main build.
 dependencies {
-    compileOnly 'mezz.jei:jei-1.20.1-common-api:15.0.0.12'
-    compileOnly 'mezz.jei:jei-1.20.1-forge-api:15.0.0.12'
     compileOnly 'curse.maven:framework-549225:7573740'
     compileOnly 'curse.maven:controllable-317269:7943200'
     compileOnly 'me.shedaniel.cloth:cloth-config-forge:11.1.106'

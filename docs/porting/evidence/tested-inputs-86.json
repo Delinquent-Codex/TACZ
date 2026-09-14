@@ -1,10 +1,10 @@
 {
   "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
   "command": ".\\gradlew.bat compileJava verifyPortingARConsumers verifyPortingARAbsent verifyPortingPrimitives verifyPortingEvents verifyPortingNetwork verifyPortingContent verifyPortingCrafting verifyPortingPacks verifyPortingLua verifyPortingStoredData verifyPortingDye verifyPortingProjectileData verifyPortingExplosions verifyPortingFirstPerson verifyPortingGeometry verifyPortingItemModels verifyPortingWorldRendering verifyPortingBulletHoles verifyPortingWalkDistance verifyPortingEffects verifyPortingThirdPerson verifyPortingHud verifyPortingParticleOptions verifyPortingScopes verifyPortingScopeNative verifyPortingScopeGpu verifyPortingScopeVulkan -PportingDiagnosticFlow --continue --console=plain",
-  "log": "target-compile-88.log",
-  "diagnostics": 25,
+  "log": "target-compile-86.log",
+  "diagnostics": 30,
   "by_subsystem": {
-    "compat": 25
+    "compat": 30
   },
   "focused_results": [
     "AR consumer boundary checks passed: 6 assertions (legacy interface only; no companion runtime)",
@@ -38,8 +38,8 @@
     "Scope GPU checks passed: 18 assertions (native Vulkan fixtures; no Minecraft/FML/gun visuals)"
   ],
   "input_sha256": {
-    "build.gradle": "ea5f80da65054bff0021f8d1f837fa166dff962cf859943f9f9f2ed46adc8ac4",
-    "gradle/legacy-dependencies.gradle": "5694c6190acf6831f0b7e369e7c6e00e1a2b006654b6e58ce11bd6d6bb28387b",
+    "build.gradle": "1aafad7f61393df71b4bf1bf696093b333aacbf3c68cbacfe3b0de4274eb476f",
+    "gradle/legacy-dependencies.gradle": "489c2adfb4d610a30be9d606652ee48c07ea2b9b1557ada5644c153d214a61c5",
     "gradle/wrapper/gradle-wrapper.jar": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7",
     "gradle/wrapper/gradle-wrapper.properties": "1d1d22c6b202a3cf4e95baf80b87e4529a464f3c220d104f78cfb3455b97a591",
     "gradle.properties": "100f8be1f106330352ece22ec21b217da4ae5fcb8d965823754b4fa84d09f7ac",
@@ -449,12 +449,12 @@
     "src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java": "39327a71fc26e5afe62de2d4b9543bf5bd007621e8a1b3530155c2dd6c640c01",
     "src/main/java/com/tacz/guns/compat/controllable/ControllableCompat.java": "47fa4b327e8965198b63818acf420a03b23816d9c2371acaf719694b771111d1",
     "src/main/java/com/tacz/guns/compat/controllable/ControllableInner.java": "26a27336d38d05bc9feb31dce06fb029b2f1102f82d6e582c167c69781ceb19c",
-    "src/main/java/com/tacz/guns/compat/jei/category/AttachmentQueryCategory.java": "b7ed0c857de5c89025453170c80abb6beaa52e124f11eb2619a1fc46f0ad06d5",
-    "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java": "035db23fbfd8138015b4d70698bb2f9d9d2ca80f64d1c4ec8adb7c2721fb4eb7",
+    "src/main/java/com/tacz/guns/compat/jei/category/AttachmentQueryCategory.java": "13a8216c9c250bac9110e27e06002062d3cb963accfa06359455eb01257d7402",
+    "src/main/java/com/tacz/guns/compat/jei/category/GunSmithTableCategory.java": "1a0893a97223005f5e183ab6b386d95eea103e697287aecef46352c98114672a",
     "src/main/java/com/tacz/guns/compat/jei/category/package-info.java": "364900457c4cc6492c211b34550943db83f9b9d52983a6b24958e424e72bb539",
     "src/main/java/com/tacz/guns/compat/jei/entry/AttachmentQueryEntry.java": "72f20bba7a21e5c80b08a0b081844d9ae3031f780b49e62f76fb1701ccf59f64",
-    "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java": "36fba4b7acfe9516b184d03eba3d2b02e5d40b87e4f40c903357a177d2b1ef9c",
-    "src/main/java/com/tacz/guns/compat/jei/GunModSubtype.java": "91d7a99171e1cc35c7033c23fba4a35eafabfcd207d3c63bc2585d577300f473",
+    "src/main/java/com/tacz/guns/compat/jei/GunModPlugin.java": "322311c20198cadd77bb652f4133349194a264877e1422553cfded1fcfa8e854",
+    "src/main/java/com/tacz/guns/compat/jei/GunModSubtype.java": "394918f3dbbbe515875227e5f1d1d2a0f51717f819d0a6f467d10ec17a1b15ca",
     "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java": "e8374a5c3b544a48387873a99711fd355634252477c6976b6febc89e650495fc",
     "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java": "534d801bdf842342766b91a5e990ab71356caf6ff2aeb64d6449d91b729add9b",
     "src/main/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java": "a89a32cc767ecddcffde44f0186ef25b33aba82e9ad338dfab23b05348ea2f8f",
