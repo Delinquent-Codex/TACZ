@@ -18,8 +18,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -62,7 +60,7 @@ public class KnockbackModifier implements IAttachmentModifier<Modifier, Float> {
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public List<DiagramsData> getPropertyDiagramsData(ItemStack gunItem, GunData gunData, AttachmentCacheProperty cacheProperty) {
         // 必要数据获取
         IGun iGun = Objects.requireNonNull(IGun.getIGunOrNull(gunItem));
@@ -92,7 +90,7 @@ public class KnockbackModifier implements IAttachmentModifier<Modifier, Float> {
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public int getDiagramsDataSize() {
         return 1;
     }

@@ -17,6 +17,7 @@ import net.minecraft.nbt.TagParser;
 import net.minecraft.util.datafix.DataFixers;
 import net.minecraft.util.datafix.fixes.References;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.UnaryOperator;
@@ -26,6 +27,14 @@ public final class LegacyPackCodecs {
     public static final int SOURCE_DATA_VERSION = 3465;
     public static final Codec<Ingredient> INGREDIENT = compatible(Ingredient.CODEC, LegacyPackCodecs::upgradeIngredient);
     public static final Codec<ItemStack> ITEM_STACK = compatible(ItemStack.CODEC, LegacyPackCodecs::upgradeItemStack);
+    /** Datapack reload decodes templates before Minecraft binds item default components. */
+    public static final Codec<ItemStackTemplate> ITEM_STACK_TEMPLATE = compatible(ItemStackTemplate.CODEC, LegacyPackCodecs::upgradeItemStack);
+
+    public static ItemStack createStack(ItemStackTemplate template) {
+        // Unlike ItemStackTemplate.create(), propagate invalid component combinations to the caller.
+        return ItemStack.validateStrict(new ItemStack(template.item(), template.count(), template.components()))
+                .getOrThrow(IllegalArgumentException::new);
+    }
 
     private LegacyPackCodecs() {}
 
@@ -97,5 +106,38 @@ public final class LegacyPackCodecs {
         var updated = DataFixers.getDataFixer().update(References.ITEM_STACK, new Dynamic<>(NbtOps.INSTANCE, legacy),
                 SOURCE_DATA_VERSION, SharedConstants.getCurrentVersion().dataVersion().version());
         return updated.convert(JsonOps.INSTANCE).getValue();
+    }
+
+    /** Preserve legacy custom-data loot merges; vanilla NBT needs an explicit target function. */
+    public static JsonElement upgradeLootFunctions(JsonElement input) {
+        if (input.isJsonArray()) {
+            JsonArray result = new JsonArray();
+            input.getAsJsonArray().forEach(value -> result.add(upgradeLootFunctions(value)));
+            return result;
+        }
+        if (!input.isJsonObject()) return input.deepCopy();
+        JsonObject result = input.getAsJsonObject().deepCopy();
+        if (result.has("function") && result.get("function").isJsonPrimitive()
+                && java.util.Set.of("minecraft:set_nbt", "set_nbt").contains(result.get("function").getAsString())) {
+            CompoundTag tag = readNbt(result.get("tag"));
+            JsonObject probe = new JsonObject();
+            probe.addProperty("item", "minecraft:stone");
+            probe.addProperty("nbt", tag.toString());
+            JsonObject upgraded = upgradeItemStack(probe).getAsJsonObject();
+            JsonObject components = upgraded.has("components") ? upgraded.getAsJsonObject("components") : new JsonObject();
+            if (components.keySet().stream().anyMatch(key -> !key.equals("minecraft:custom_data"))) {
+                throw new IllegalArgumentException("Legacy set_nbt changes vanilla item components; use explicit target loot functions for those fields");
+            }
+            result.addProperty("function", "minecraft:set_custom_data");
+            // The target function uses the same recursive compound merge, including unknown custom fields.
+            result.addProperty("tag", tag.toString());
+        }
+        for (String key : java.util.List.copyOf(result.keySet())) {
+            // These values are user item data, not loot-function syntax.
+            if (!java.util.Set.of("tag", "nbt", "components").contains(key)) {
+                result.add(key, upgradeLootFunctions(result.get(key)));
+            }
+        }
+        return result;
     }
 }

@@ -1,0 +1,192 @@
+Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:01.825
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\animation\third\HumanoidGunPose.java:87: error: children has private access in ModelPart
+        part.children.forEach((name, child) -> visit(output, path + "/" + name, child));
+            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gameplay\LocalPlayerCrawl.java:75: error: jumping has protected access in LivingEntity
+        if (player.isSpectator() || player.isPassenger() || player.jumping || player.isSwimming() || !player.onGround()) {
+                                                                  ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gameplay\LocalPlayerDraw.java:45: error: ensureHasSentCarriedItem() has private access in MultiPlayerGameMode
+            Minecraft.getInstance().gameMode.ensureHasSentCarriedItem();
+                                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:630: error: ScissorStack.peek() is defined in an inaccessible class or interface
+                System.currentTimeMillis(), graphics.pose(), graphics.getScissorStack().peek()));
+                                                                                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\init\ClientItemModels.java:27: error: ID_MAPPER has private access in ItemModels
+        ItemModels.ID_MAPPER.put(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "item"), TaczItemModel.Unbaked.CODEC);
+                  ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\init\ClientItemModels.java:28: error: ID_MAPPER has private access in RangeSelectItemModelProperties
+        RangeSelectItemModelProperties.ID_MAPPER.put(AmmoBoxItem.PROPERTY_NAME, AmmoBoxModelProperty.CODEC);
+                                      ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:102: error: startUseItem() has private access in Minecraft
+            mc.startUseItem();
+              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:109: error: startUseItem() has private access in Minecraft
+            mc.startUseItem();
+              ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:81: error: getVertexBuilder(RenderType) in Custom cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+        @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                           ^
+  overridden method is final
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:89: error: getVertexBuilder(RenderType) in EntityModel cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+        @Override protected VertexConsumer getVertexBuilder(RenderType type) { return buffer.apply(type); }
+                                           ^
+  overridden method is final
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:96: error: getVertexBuilder(RenderType) in Text cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+        @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                           ^
+  overridden method is final
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:103: error: getVertexBuilder(RenderType) in Item cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+        @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                           ^
+  overridden method is final
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:110: error: getVertexBuilder(RenderType) in BlockModel cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+        @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                           ^
+  overridden method is final
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:66: error: Deserializer has protected access in ItemTransform
+            .registerTypeAdapter(ItemTransform.class, new ItemTransform.Deserializer())
+                                                                       ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:65: error: Deserializer has protected access in ItemTransforms
+            .registerTypeAdapter(ItemTransforms.class, new ItemTransforms.Deserializer())
+                                                                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:75: warning: [removal] addRecipeCatalyst(ItemStack,IRecipeType<?>...) in IRecipeCatalystRegistration has been deprecated and marked for removal
+                registration.addRecipeCatalyst(stack, entry.getValue());
+                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\entity\shooter\LivingEntityCrawl.java:46: error: jumping has protected access in LivingEntity
+        if (shooter.isSpectator() || shooter.isPassenger() || shooter.jumping || shooter.isSwimming() || !shooter.onGround()) {
+                                                                     ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\block\ProjectileExplosion.java:81: error: cannot find symbol
+            this.interactWithBlocks(this.toBlow);
+                ^
+  symbol: method interactWithBlocks(List<BlockPos>)
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\block\ProjectileExplosion.java:84: error: cannot find symbol
+            this.createFire(this.toBlow);
+                ^
+  symbol: method createFire(List<BlockPos>)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+18 errors
+4 warnings
+
+> Task :compileJava FAILED
+> Task :processResources
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:81: error: getVertexBuilder(RenderType) in Custom cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+          @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                             ^
+    overridden method is final
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:89: error: getVertexBuilder(RenderType) in EntityModel cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+          @Override protected VertexConsumer getVertexBuilder(RenderType type) { return buffer.apply(type); }
+                                             ^
+    overridden method is final
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:96: error: getVertexBuilder(RenderType) in Text cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+          @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                             ^
+    overridden method is final
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:103: error: getVertexBuilder(RenderType) in Item cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+          @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                             ^
+    overridden method is final
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\renderer\scope\ScopeNativeGeometry.java:110: error: getVertexBuilder(RenderType) in BlockModel cannot override getVertexBuilder(RenderType) in RenderTypeFeatureRenderer
+          @Override protected VertexConsumer getVertexBuilder(RenderType type) { return output.buffer(type); }
+                                             ^
+    overridden method is final
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\block\ProjectileExplosion.java:81: error: cannot find symbol
+              this.interactWithBlocks(this.toBlow);
+                  ^
+    symbol: method interactWithBlocks(List<BlockPos>)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\util\block\ProjectileExplosion.java:84: error: cannot find symbol
+              this.createFire(this.toBlow);
+                  ^
+    symbol: method createFire(List<BlockPos>)
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\GunSmithTableScreen.java:630: error: ScissorStack.peek() is defined in an inaccessible class or interface
+                  System.currentTimeMillis(), graphics.pose(), graphics.getScissorStack().peek()));
+                                                                                         ^
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\animation\third\HumanoidGunPose.java:87: error: children has private access in ModelPart
+          part.children.forEach((name, child) -> visit(output, path + "/" + name, child));
+              ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gameplay\LocalPlayerCrawl.java:75: error: jumping has protected access in LivingEntity
+          if (player.isSpectator() || player.isPassenger() || player.jumping || player.isSwimming() || !player.onGround()) {
+                                                                    ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gameplay\LocalPlayerDraw.java:45: error: ensureHasSentCarriedItem() has private access in MultiPlayerGameMode
+              Minecraft.getInstance().gameMode.ensureHasSentCarriedItem();
+                                              ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\init\ClientItemModels.java:27: error: ID_MAPPER has private access in ItemModels
+          ItemModels.ID_MAPPER.put(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "item"), TaczItemModel.Unbaked.CODEC);
+                    ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\init\ClientItemModels.java:28: error: ID_MAPPER has private access in RangeSelectItemModelProperties
+          RangeSelectItemModelProperties.ID_MAPPER.put(AmmoBoxItem.PROPERTY_NAME, AmmoBoxModelProperty.CODEC);
+                                        ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:102: error: startUseItem() has private access in Minecraft
+              mc.startUseItem();
+                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\input\InteractKey.java:109: error: startUseItem() has private access in Minecraft
+              mc.startUseItem();
+                ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:66: error: Deserializer has protected access in ItemTransform
+              .registerTypeAdapter(ItemTransform.class, new ItemTransform.Deserializer())
+                                                                         ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\resource\ClientAssetsManager.java:65: error: Deserializer has protected access in ItemTransforms
+              .registerTypeAdapter(ItemTransforms.class, new ItemTransforms.Deserializer())
+                                                                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\entity\shooter\LivingEntityCrawl.java:46: error: jumping has protected access in LivingEntity
+          if (shooter.isSpectator() || shooter.isPassenger() || shooter.jumping || shooter.isSwimming() || !shooter.onGround()) {
+                                                                       ^
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+              ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                               ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+          ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                           ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:75: warning: [removal] addRecipeCatalyst(ItemStack,IRecipeType<?>...) in IRecipeCatalystRegistration has been deprecated and marked for removal
+                  registration.addRecipeCatalyst(stack, entry.getValue());
+                              ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+          ModLoadingContext ctx = ModLoadingContext.get();
+                                                   ^
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  Note: Some input files use unchecked or unsafe operations.
+  18 errors
+  4 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 28s
+2 actionable tasks: 2 executed

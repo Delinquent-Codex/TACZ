@@ -14,13 +14,11 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.player.PlayerModelPart;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;
 
-@OnlyIn(Dist.CLIENT)
+// Client-only API; caller-side isolation replaces obsolete Forge member stripping.
 public final class RenderHelper {
     /** Source bridge: replace old RenderSystem.setShaderTexture calls with withBlitTexture. */
     public static void blit(PoseStack poseStack, float x, float y, float uOffset, float vOffset, float width, float height, float textureWidth, float textureHeight) {

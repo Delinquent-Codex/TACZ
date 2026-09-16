@@ -11,7 +11,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 
 public class LocalPlayerDataHolder {
-    public static final ScheduledExecutorService SCHEDULED_EXECUTOR_SERVICE = Executors.newScheduledThreadPool(2);
+    public static final ScheduledExecutorService SCHEDULED_EXECUTOR_SERVICE = Executors.newScheduledThreadPool(2,
+            Thread.ofPlatform().name("tacz-client-shot-", 0).factory());
     public long clientBaseTimestamp = -1L;
     /**
      * 上一个 tick 的瞄准进度，用于插值，范围 0 ~ 1

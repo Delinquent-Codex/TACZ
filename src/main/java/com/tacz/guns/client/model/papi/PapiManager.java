@@ -3,13 +3,11 @@ package com.tacz.guns.client.model.papi;
 import com.google.common.collect.Maps;
 import net.minecraft.locale.Language;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Map;
 import java.util.function.Function;
 
-@OnlyIn(Dist.CLIENT)
+// Client-only API; caller-side isolation replaces obsolete Forge member stripping.
 public final class PapiManager {
     private static final Map<String, Function<ItemStack, String>> PAPI = Maps.newHashMap();
 

@@ -1,0 +1,51 @@
+{
+  "command": [
+    "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\jdk25\\jdk-25.0.4.1+1\\bin\\java.exe",
+    "-Dterminal.jline=false",
+    "@user_jvm_args.txt",
+    "@libraries/net/minecraftforge/forge/26.2-65.1.0/win_args.txt",
+    "--nogui"
+  ],
+  "working_directory": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\server-26.2",
+  "artifact": "tacz-26.2-1.1.8-hotfix-port.1.jar",
+  "artifact_sha256": "a320d7a8dc613352addf99e66caf79d1deb3009a0951b0ce648b385fe24a0c71",
+  "harness_sha256": "d751c14bc569b587a3a60e895a19b03ebec49f5d304f5bb0b435d5b3c41a41f3",
+  "commands": [
+    {
+      "command": "list",
+      "response": "There are 0 of a max of 20 players online: \n"
+    },
+    {
+      "command": "tacz reload",
+      "response": "\u00a7a\u00a7l[TACZ]\u00a7r All pack is reload, time: 524.585 ms\n"
+    },
+    {
+      "command": "reload",
+      "response": "Reloading!\n"
+    },
+    {
+      "command": "save-all flush",
+      "response": "Saving the game (this may take a moment!)\nSaved the game\n"
+    },
+    {
+      "command": "stop",
+      "response": "Stopping the server\n"
+    }
+  ],
+  "result": "passed-with-host-diagnostics",
+  "forced_stop": false,
+  "exit_code": 0,
+  "recipe_loads": [
+    "1769",
+    "1769",
+    "1769"
+  ],
+  "host_diagnostics": [
+    "[15:54:08] [main/ERROR] [os.dr.wi.re.HkeyPerformanceDataUtil/]: Unable to locate English counter names in registry Perflib 009. Counters may need to be rebuilt: ",
+    "2026-09-16T22:54:19.759428800Z Server thread ERROR An exception occurred processing Appender DebugFile",
+    "2026-09-16T22:54:19.765430100Z Server thread ERROR An exception occurred processing Appender DebugFile"
+  ],
+  "error_lines": [],
+  "error_free_log": false,
+  "log_sha256": "2b415754ff2e540adb9882334da0e38d7cf7d6c93c1ae95a45dd2bdf88ed639e"
+}

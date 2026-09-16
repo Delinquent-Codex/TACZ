@@ -6,8 +6,6 @@ import com.tacz.guns.crafting.GunSmithTableSerializer;
 import io.netty.handler.codec.DecoderException;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.resources.Identifier;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 
 import java.util.Collections;
@@ -45,10 +43,12 @@ public record ServerMessageSyncRecipes(Map<Identifier, GunSmithTableRecipe> reci
     }
 
     public static void handle(ServerMessageSyncRecipes message, CustomPayloadEvent.Context context) {
-        if (context.isClientSide()) context.enqueueWork(() -> install(message));
+        if (context.isClientSide()) context.enqueueWork(() -> ClientHandler.install(message));
         context.setPacketHandled(true);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private static void install(ServerMessageSyncRecipes message) { ClientRecipeCache.replace(message.recipes); }
+    // Loading codecs on the server must not verify client-only callback bytecode.
+    private static final class ClientHandler {
+        private static void install(ServerMessageSyncRecipes message) { ClientRecipeCache.replace(message.recipes); }
+    }
 }

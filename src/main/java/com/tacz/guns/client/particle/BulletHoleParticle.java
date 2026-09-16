@@ -20,8 +20,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -151,7 +149,7 @@ public class BulletHoleParticle extends SingleQuadParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static class Provider implements ParticleProvider<BulletHoleOption> {
         public Provider() {
         }

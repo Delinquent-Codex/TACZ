@@ -7,8 +7,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 
@@ -60,20 +58,22 @@ public class ServerMessageGunKill {
 
     public static void handle(ServerMessageGunKill message, CustomPayloadEvent.Context context) {
         if (context.isClientSide()) {
-            context.enqueueWork(() -> onKill(message));
+            context.enqueueWork(() -> ClientHandler.onKill(message));
         }
         context.setPacketHandled(true);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private static void onKill(ServerMessageGunKill message) {
-        ClientLevel level = Minecraft.getInstance().level;
-        if (level == null) {
-            return;
+    // Loading codecs on the server must not verify client-only callback bytecode.
+    private static final class ClientHandler {
+        private static void onKill(ServerMessageGunKill message) {
+            ClientLevel level = Minecraft.getInstance().level;
+            if (level == null) {
+                return;
+            }
+            @Nullable Entity bullet = level.getEntity(message.bulletId);
+            @Nullable LivingEntity killedEntity = level.getEntity(message.killEntityId) instanceof LivingEntity livingEntity ? livingEntity : null;
+            @Nullable LivingEntity attacker = level.getEntity(message.attackerId) instanceof LivingEntity livingEntity ? livingEntity : null;
+            EntityKillByGunEvent.BUS.post(new EntityKillByGunEvent(bullet, killedEntity, attacker, message.gunId, message.gunDisplayId, message.baseDamage, null, message.isHeadShot, message.headshotMultiplier, LogicalSide.CLIENT));
         }
-        @Nullable Entity bullet = level.getEntity(message.bulletId);
-        @Nullable LivingEntity killedEntity = level.getEntity(message.killEntityId) instanceof LivingEntity livingEntity ? livingEntity : null;
-        @Nullable LivingEntity attacker = level.getEntity(message.attackerId) instanceof LivingEntity livingEntity ? livingEntity : null;
-        EntityKillByGunEvent.BUS.post(new EntityKillByGunEvent(bullet, killedEntity, attacker, message.gunId, message.gunDisplayId, message.baseDamage, null, message.isHeadShot, message.headshotMultiplier, LogicalSide.CLIENT));
     }
 }

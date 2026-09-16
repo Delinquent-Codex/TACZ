@@ -6,8 +6,6 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 
@@ -34,20 +32,22 @@ public class ServerMessageGunFire {
 
     public static void handle(ServerMessageGunFire message, CustomPayloadEvent.Context context) {
         if (context.isClientSide()) {
-            context.enqueueWork(() -> doClientEvent(message));
+            context.enqueueWork(() -> ClientHandler.doClientEvent(message));
         }
         context.setPacketHandled(true);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private static void doClientEvent(ServerMessageGunFire message) {
-        ClientLevel level = Minecraft.getInstance().level;
-        if (level == null) {
-            return;
-        }
-        if (level.getEntity(message.shooterId) instanceof LivingEntity shooter) {
-            GunFireEvent gunFireEvent = new GunFireEvent(shooter, message.gunItemStack, LogicalSide.CLIENT);
-            GunFireEvent.BUS.post(gunFireEvent);
+    // Loading codecs on the server must not verify client-only callback bytecode.
+    private static final class ClientHandler {
+        private static void doClientEvent(ServerMessageGunFire message) {
+            ClientLevel level = Minecraft.getInstance().level;
+            if (level == null) {
+                return;
+            }
+            if (level.getEntity(message.shooterId) instanceof LivingEntity shooter) {
+                GunFireEvent gunFireEvent = new GunFireEvent(shooter, message.gunItemStack, LogicalSide.CLIENT);
+                GunFireEvent.BUS.post(gunFireEvent);
+            }
         }
     }
 }

@@ -6,3 +6,6 @@ src/generated/**/*.json text eol=lf
 gradlew text eol=lf
 # Keep captured compiler output verbatim, including diagnostic indentation.
 docs/porting/evidence/*.log -text -whitespace
+# JVM thread dumps and crash reports are also verbatim runtime evidence.
+docs/porting/evidence/*-threads.txt -text -whitespace
+docs/porting/evidence/*-crash.txt -text -whitespace

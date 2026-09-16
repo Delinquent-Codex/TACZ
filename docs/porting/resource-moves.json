@@ -181,5 +181,22 @@
   "src/main/resources/data/tacz/recipes/statue.json": "src/main/resources/data/tacz/recipe/statue.json",
   "src/main/resources/data/tacz/recipes/target.json": "src/main/resources/data/tacz/recipe/target.json",
   "src/main/resources/data/tacz/recipes/target_minecart.json": "src/main/resources/data/tacz/recipe/target_minecart.json",
-  "src/main/resources/data/tacz/recipes/misc/blood_strike_1.json": "src/main/resources/data/tacz/recipe/misc/blood_strike_1.json"
+  "src/main/resources/data/tacz/recipes/misc/blood_strike_1.json": "src/main/resources/data/tacz/recipe/misc/blood_strike_1.json",
+  "src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/recipe/GunSmithTableResultComponents.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/recipe/GunSmithTableResultComponents.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessGunSmithTableRecipeSchema.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/recipe/TimelessGunSmithTableRecipeSchema.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+  "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+  "src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java",
+  "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+  "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+  "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java",
+  "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java",
+  "src/main/resources/kubejs.plugins.txt": "src/kubejsCompat/resources/kubejs.plugins.txt"
 }

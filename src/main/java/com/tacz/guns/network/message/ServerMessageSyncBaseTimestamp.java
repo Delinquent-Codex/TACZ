@@ -7,8 +7,6 @@ import com.tacz.guns.network.NetworkHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
@@ -29,17 +27,19 @@ public class ServerMessageSyncBaseTimestamp {
     public static void handle(ServerMessageSyncBaseTimestamp message, CustomPayloadEvent.Context context) {
         if (context.isClientSide()) {
             long timestamp = System.currentTimeMillis();
-            context.enqueueWork(() -> updateBaseTimestamp(timestamp));
+            context.enqueueWork(() -> ClientHandler.updateBaseTimestamp(timestamp));
         }
         context.setPacketHandled(true);
         NetworkHandler.CHANNEL.reply(new ClientMessageSyncBaseTimestamp(), context);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private static void updateBaseTimestamp(long timestamp) {
-        LocalPlayer player = Objects.requireNonNull(Minecraft.getInstance().player);
-        LocalPlayerDataHolder dataHolder = IClientPlayerGunOperator.fromLocalPlayer(player).getDataHolder();
-        dataHolder.clientBaseTimestamp = timestamp;
-        GunMod.LOGGER.debug(MARKER, "Update client base timestamp: {}", dataHolder.clientBaseTimestamp);
+    // Loading codecs on the server must not verify client-only callback bytecode.
+    private static final class ClientHandler {
+        private static void updateBaseTimestamp(long timestamp) {
+            LocalPlayer player = Objects.requireNonNull(Minecraft.getInstance().player);
+            LocalPlayerDataHolder dataHolder = IClientPlayerGunOperator.fromLocalPlayer(player).getDataHolder();
+            dataHolder.clientBaseTimestamp = timestamp;
+            GunMod.LOGGER.debug(MARKER, "Update client base timestamp: {}", dataHolder.clientBaseTimestamp);
+        }
     }
 }

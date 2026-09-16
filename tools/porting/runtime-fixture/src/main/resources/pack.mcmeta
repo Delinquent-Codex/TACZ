@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "TACZ runtime verification resources",
+    "min_format": [88, 0],
+    "max_format": [107, 1]
+  }
+}

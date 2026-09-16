@@ -35,8 +35,6 @@ import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
@@ -52,7 +50,7 @@ import java.util.function.Consumer;
  * 客户端资源管理器<br/>
  * 所有枪包资源缓存在此
  */
-@OnlyIn(Dist.CLIENT)
+// Client-only API; caller-side isolation replaces obsolete Forge member stripping.
 public enum ClientAssetsManager {
     INSTANCE;
     public static final Gson GSON = new GsonBuilder().registerTypeAdapter(Identifier.class, new com.tacz.guns.resource.serialize.IdentifierSerializer())
@@ -176,7 +174,7 @@ public enum ClientAssetsManager {
         return packInfo.getData(namespace.getNamespace());
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static void reloadAllPack() {
         try {
             Minecraft.getInstance().reloadResourcePacks().get();

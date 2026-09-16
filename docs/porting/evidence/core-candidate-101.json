@@ -1,0 +1,123 @@
+{
+  "scope": "Core artifact/source archive inspection only; see separate build and runtime evidence",
+  "path": "C:/Users/voltp/Downloads/TACZ-26.2/build/libs/tacz-26.2-1.1.8-hotfix-port.1.jar",
+  "sha256": "a320d7a8dc613352addf99e66caf79d1deb3009a0951b0ce648b385fe24a0c71",
+  "bytes": 57876343,
+  "entries": 4818,
+  "main_classes": 936,
+  "compiled_main_classes_byte_identical": 936,
+  "nested": {
+    "jars": [
+      {
+        "identifier": {
+          "group": "io.github.llamalad7",
+          "artifact": "mixinextras-forge"
+        },
+        "version": {
+          "range": "[0.5.4,)",
+          "artifactVersion": "0.5.4"
+        },
+        "path": "META-INF/jarjar/mixinextras-forge-0.5.4.jar",
+        "isObfuscated": false
+      },
+      {
+        "identifier": {
+          "group": "com.github.FiguraMC.luaj",
+          "artifact": "luaj-jse"
+        },
+        "version": {
+          "range": "[3.0.8-figura,)",
+          "artifactVersion": "3.0.8-figura"
+        },
+        "path": "META-INF/jarjar/luaj-jse-3.0.8-figura.jar",
+        "isObfuscated": false
+      },
+      {
+        "identifier": {
+          "group": "com.github.FiguraMC.luaj",
+          "artifact": "luaj-core"
+        },
+        "version": {
+          "range": "[3.0.8-figura,)",
+          "artifactVersion": "3.0.8-figura"
+        },
+        "path": "META-INF/jarjar/luaj-core-3.0.8-figura.jar",
+        "isObfuscated": false
+      },
+      {
+        "identifier": {
+          "group": "org.apache.bcel",
+          "artifact": "bcel"
+        },
+        "version": {
+          "range": "[6.6.1,)",
+          "artifactVersion": "6.6.1"
+        },
+        "path": "META-INF/jarjar/bcel-6.6.1.jar",
+        "isObfuscated": false
+      },
+      {
+        "identifier": {
+          "group": "org.apache.commons",
+          "artifact": "commons-math3"
+        },
+        "version": {
+          "range": "[3.6.1,)",
+          "artifactVersion": "3.6.1"
+        },
+        "path": "META-INF/jarjar/commons-math3-3.6.1.jar",
+        "isObfuscated": false
+      },
+      {
+        "identifier": {
+          "group": "com.maydaymemory",
+          "artifact": "mae"
+        },
+        "version": {
+          "range": "[1.1.2,)",
+          "artifactVersion": "1.1.2"
+        },
+        "path": "META-INF/jarjar/mae-1.1.2.jar",
+        "isObfuscated": false
+      }
+    ]
+  },
+  "notices": [
+    "META-INF/licenses/",
+    "META-INF/licenses/MAE-MIT.txt",
+    "META-INF/licenses/SimpleBedrockModel-LGPL-3.0.txt",
+    "META-INF/licenses/SimpleBedrockModel-NOTICE.txt"
+  ],
+  "kubejs_plugin_descriptor_present": false,
+  "blocked_adapter_classes_present": [],
+  "nested_sha256": {
+    "META-INF/jarjar/mixinextras-forge-0.5.4.jar": "7922899a121a27f63a69a9ffe57470d8719cc52d239dfa9408e15d32a7b4c264",
+    "META-INF/jarjar/luaj-jse-3.0.8-figura.jar": "1783d249b5152c6f110c1bcca5fb0d4ef0075fc291c912f6b74e2bb61472e95e",
+    "META-INF/jarjar/luaj-core-3.0.8-figura.jar": "6050678ca1dad5e2a4c401cc9ce968d282d30105b2ea46f79c30abccdfa30fbe",
+    "META-INF/jarjar/bcel-6.6.1.jar": "50e909f555c772285d0f282d22ec7ca246010fa6996d40226357a28555445904",
+    "META-INF/jarjar/commons-math3-3.6.1.jar": "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308",
+    "META-INF/jarjar/mae-1.1.2.jar": "39e6337f1214a9facadc9128d2aca501be36789d376d7fba56f15b2c3a5a27d3"
+  },
+  "retained_optional_source_entries": [
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/recipe/GunSmithTableResultComponents.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/recipe/TimelessGunSmithTableRecipeSchema.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",
+    "optional/kubejsCompat/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java",
+    "optional/kubejsCompat/kubejs.plugins.txt",
+    "optional/playerAnimatorCompat/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java",
+    "optional/playerAnimatorCompat/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "optional/playerAnimatorCompat/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "optional/playerAnimatorCompat/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java",
+    "optional/playerAnimatorCompat/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java",
+    "optional/playerAnimatorCompat/com/tacz/guns/compat/playeranimator/PlayerAnimatorAdapter.java"
+  ],
+  "source_archive_sha256": "a4da5446965f6c770591dfcf691a7c9a547cfdc5709dc8500de9df36f6839c55",
+  "audit_script_sha256": "ba1f11beaf7365a6a493741566a04da5a5d8b9b4fbd640380a8a90033dbf369f"
+}

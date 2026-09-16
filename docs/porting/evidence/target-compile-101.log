@@ -1,0 +1,458 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.650
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:75: warning: [removal] addRecipeCatalyst(ItemStack,IRecipeType<?>...) in IRecipeCatalystRegistration has been deprecated and marked for removal
+                registration.addRecipeCatalyst(stack, entry.getValue());
+                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :jarJarMetadata
+> Task :jar
+> Task :jarJar
+> Task :sourcesJar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+> Task :compileOptionalBoundaryChecksJava UP-TO-DATE
+> Task :processOptionalBoundaryChecksResources NO-SOURCE
+> Task :optionalBoundaryChecksClasses UP-TO-DATE
+
+> Task :verifyPortingOptionalAbsent
+Inspected distribution metadata of 936 actual production classes.
+PASS: 23 optional-boundary assertions; production main classes, no KubeJS/Player Animator runtime or FML launch claimed.
+
+> Task :compilePortingChecksJava UP-TO-DATE
+> Task :processPortingChecksResources NO-SOURCE
+> Task :portingChecksClasses UP-TO-DATE
+
+> Task :verifyPortingARConsumers
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.lwjgl.system.MemoryUtil (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/129e06a04f93992cb2a45172435b21fc4b60dd7d/lwjgl-3.4.1-unsafe.jar)
+WARNING: Please consider reporting this to the maintainers of class org.lwjgl.system.MemoryUtil
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+AR consumer boundary checks passed: 6 assertions (legacy interface only; no companion runtime)
+
+> Task :verifyPortingARAbsent
+AR absent-artifact checks passed: 5 assertions (no companion JAR on classpath; no FML)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.lwjgl.system.MemoryUtil (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/129e06a04f93992cb2a45172435b21fc4b60dd7d/lwjgl-3.4.1-unsafe.jar)
+WARNING: Please consider reporting this to the maintainers of class org.lwjgl.system.MemoryUtil
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+
+> Task :verifyPortingPrimitives
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+PASS: 29 primitive assertions against Minecraft 26.2; no mod startup or gameplay claimed.
+
+> Task :verifyPortingEvents
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+PASS: 15 event assertions against Forge EventBus 7.0.5; no KubeJS runtime or gameplay claimed.
+
+> Task :verifyPortingNetwork
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+PASS: 61 mapping and packet assertions; no live handshake, mod startup or multiplayer claimed.
+
+> Task :verifyPortingContent
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Content checks passed: 31 assertions (no FML registration or rendering).
+
+> Task :verifyPortingCrafting
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Crafting checks passed: 439 assertions (no live menu or recipe reload).
+
+> Task :verifyPortingPacks
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+CLIENT_RESOURCES target pack format: 88.0
+SERVER_DATA target pack format: 107.1
+Pack checks passed: 25 assertions (no full gun-pack reload).
+
+> Task :verifyPortingLua
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Lua checks passed: 14 assertions using LuaJ (no gun gameplay).
+
+> Task :verifyPortingStoredData
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Stored data checks passed: 31 assertions (no live block entity).
+
+> Task :verifyPortingDye
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Dye checks passed: 9 assertions (plain fixture item; no TACZ item class or live crafting).
+
+WARNING: A restricted method in java.lang.System has been called
+> Task :verifyPortingProjectileData
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Projectile data checks passed: 15 assertions (no entity spawn, collision or rendering).
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+> Task :verifyPortingExplosions
+Explosion checks passed: 18 assertions (geometry and target access; no live damage, blocks or effects).
+
+> Task :verifyPortingFirstPerson
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+First-person checks passed: 23 assertions (state controller and MAE; no game rendering or live inventory).
+
+> Task :verifyPortingGeometry
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Geometry checks passed: 26 assertions (CPU vertices and collector scope; no GPU/model rendering).
+
+> Task :verifyPortingItemModels
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Item model checks passed: 38 assertions (codecs/resources/tint; no model bake or rendering).
+
+> Task :verifyPortingWorldRendering
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+World rendering checks passed: 296 assertions; 269 shipped Bedrock models emitted CPU geometry (no FML, GPU, skin download or live entity).
+
+> Task :verifyPortingBulletHoles
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Bullet-hole checks passed: 57 assertions (real target quad extraction; no particle engine, world or GPU).
+
+> Task :verifyPortingWalkDistance
+Walk-distance checks passed: 13 assertions (accumulator and target bytecode; no Mixin application or gameplay).
+
+> Task :verifyPortingEffects
+WARNING: A restricted method in java.lang.System has been called
+Effect geometry checks passed: 68 assertions (CPU geometry/pipeline descriptions; no GPU or AR runtime)
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+
+> Task :verifyPortingThirdPerson
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Third-person pose checks passed: 19 assertions (real model/builtin callbacks; no live entity, FML or Player Animator)
+
+> Task :verifyPortingHud
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+HUD layer checks passed: 35 assertions (native layer registry/bytecode; no GUI, font, textures or FML)
+
+> Task :verifyPortingParticleOptions
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Particle-option checks passed: 43 assertions (native options/codecs and 8 shipped definitions; no particle engine or GPU).
+
+> Task :verifyPortingScopes
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Scope rendering checks passed: 241 assertions (CPU/native descriptions only; no GPU/FML)
+
+> Task :verifyPortingScopeNative
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Scope native checks passed: 29 assertions (native builders and explicit fixtures; no FML/atlas/model assets)
+
+> Task :verifyPortingScopeGpu
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.lwjgl.system.MemoryUtil (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/129e06a04f93992cb2a45172435b21fc4b60dd7d/lwjgl-3.4.1-unsafe.jar)
+WARNING: Please consider reporting this to the maintainers of class org.lwjgl.system.MemoryUtil
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Scope GPU device: DeviceInfo[name=AMD Radeon 760M Graphics, vendorName=ATI Technologies Inc., driverInfo=3.3.0 Core Profile Context 26.8.1.260810, isZZeroToOne=true, backendName=OpenGL, timestampPeriod=1.0, limits=DeviceLimits[maxAnisotropy=16, minUniformOffsetAlignment=16, maxTextureSize=16384, maxMemoryAllocationSize=9223372036854775807, maxMultiDrawDirectInterleavedDrawCount=0, maxColorAttachments=8], features=DeviceFeatures[shaderDrawParameters=true, multiDrawDirectInterleaved=false, multiDrawDirectSeparate=true, multiDrawIndirect=true, drawIndirect=true, nonZeroFirstInstance=true, persistentMapping=true], underlyingExtensions=[GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic], hintsAndWorkarounds=HintsAndWorkarounds[writeToBufferIsSlow=false, anisotropyHasKnownIssues=true], type=OTHER]
+[32m[15:53:01] [main/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[mTarget shader assets: C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\mavenizer\caches\minecraft_tasks\26.2\client.jar SHA-256=40896ee9f1e2bec3c934daac7e93d41e9e3d9c2f8ae0ca366d52ffbfd1afa290
+Target scope shader checks passed: 69 assertions (OpenGL; real 26.2/mod GLSL compilation, no game textures or gun visuals)
+Scope GPU checks passed: 18 assertions (native OpenGL fixtures; no Minecraft/FML/gun visuals)
+
+> Task :verifyPortingScopeVulkan
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.lwjgl.system.MemoryUtil (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/129e06a04f93992cb2a45172435b21fc4b60dd7d/lwjgl-3.4.1-unsafe.jar)
+WARNING: Please consider reporting this to the maintainers of class org.lwjgl.system.MemoryUtil
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: No valid vk_loader_settings.json file found, no loader settings will be active
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_app_package_manifest_path: Failed to find mapping layers packages by family name
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json" from PnP registry: E
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amd-vulkan64.json" from PnP registry: E
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Located json file "C:\Program Files (x86)\Epic Games\Epic Online Services\managedArtifacts\98bc04bc842e4906993fd6d6644ffb8d\EOSOverlayVkLayer-Win64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Located json file "C:\ProgramData\obs-studio-hook\obs-vulkan64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Located json file "C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Located json file "C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found manifest file C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json (file version 1.0.1)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found manifest file C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amd-vulkan64.json (file version 1.0.0)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found manifest file C:\Program Files (x86)\Epic Games\Epic Online Services\managedArtifacts\98bc04bc842e4906993fd6d6644ffb8d\EOSOverlayVkLayer-Win64.json (file version 1.1.2)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found manifest file C:\ProgramData\obs-studio-hook\obs-vulkan64.json (file version 1.1.2)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found manifest file C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json (file version 1.0.0)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found manifest file C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json (file version 1.0.0)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ExplicitLayers
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: opening device PCI\VEN_1002&DEV_1900&SUBSYS_19091025&REV_B8\4&17857bc2&0&0041
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(2) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 5 - SWD\DRIVERENUM\AMDCP&5&833CC5E&0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(5) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 6 - SWD\DRIVERENUM\AMDFDANS&5&833CC5E&0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(6) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 7 - SWD\DRIVERENUM\AMDOCL&5&833CC5E&0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(7) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 8 - SWD\DRIVERENUM\AMDOGL&5&833CC5E&0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(8) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 9 - SWD\DRIVERENUM\AMDVLK&5&833CC5E&0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(9) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 10 - SWD\DRIVERENUM\AMDWIN&5&833CC5E&0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(10) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: Opening child device 11 - DISPLAY\AUO2CB8\5&833CC5E&0&UID512
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: opening device PCI\VEN_10DE&DEV_2D98&SUBSYS_18371025&REV_A1\FB203D4EBF2DB04800
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_entry: Device ID(1) Does not contain a value for "VulkanExplicitLayers"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: unable to open child-device error:13
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_device_registry_files: found no registry files
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found no registry files in HKEY_CURRENT_USER\SOFTWARE\Khronos\Vulkan\ExplicitLayers
+[m[33m[15:53:05] [main/WARN] [mojang/VulkanDebug$Enabled]: windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_get_app_package_manifest_path: Failed to find mapping layers packages by family name
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Checking for Driver Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json" from PnP registry: E
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amd-vulkan64.json" from PnP registry: E
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found no registry files in HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found ICD manifest file C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json, version 1.0.1
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Found ICD manifest file C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amd-vulkan64.json, version 1.0.0
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Insert instance layer "VK_LAYER_OBS_HOOK" (C:\ProgramData\obs-studio-hook\graphics-hook64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Insert instance layer "VK_LAYER_AMD_switchable_graphics" (C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amdvlk64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Insert instance layer "VK_LAYER_NV_present" (C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Insert instance layer "VK_LAYER_NV_optimus" (C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: vkCreateInstance layer callstack setup to:
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    <Application>
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    <Loader>
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_NV_optimus
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_NV_present
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_LAYER_NV_PRESENT_1
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_AMD_switchable_graphics
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amd-vulkan64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amdvlk64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_OBS_HOOK
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_VULKAN_OBS_CAPTURE
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\ProgramData\obs-studio-hook\obs-vulkan64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\ProgramData\obs-studio-hook\graphics-hook64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    <Drivers>
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanBackend]: Preferring discrete GPU: NVIDIA GeForce RTX 5050 Laptop GPU
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Inserted device layer "VK_LAYER_OBS_HOOK" (C:\ProgramData\obs-studio-hook\graphics-hook64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Failed to find vkGetDeviceProcAddr in layer "C:\WINDOWS\System32\DriverStore\FileRepository\amdvlk.inf_amd64_914ba89eaaafdf60\amdvlk64.dll"
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Inserted device layer "VK_LAYER_NV_present" (C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: Inserted device layer "VK_LAYER_NV_optimus" (C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll)
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]: vkCreateDevice layer callstack setup to:
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    <Application>
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    <Loader>
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_NV_optimus
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_NV_present
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_LAYER_NV_PRESENT_1
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nv-vk64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    VK_LAYER_OBS_HOOK
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Type: Implicit
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Enabled By: Implicit Layer
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:                Disable Env Var:  DISABLE_VULKAN_OBS_CAPTURE
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Manifest: C:\ProgramData\obs-studio-hook\obs-vulkan64.json
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:            Library:  C:\ProgramData\obs-studio-hook\graphics-hook64.dll
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:      ||
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:    <Device>
+[m[32m[15:53:05] [main/INFO] [mojang/VulkanDebug$Enabled]:        Using "NVIDIA GeForce RTX 5050 Laptop GPU" with driver: "C:\WINDOWS\System32\DriverStore\FileRepository\nvaci.inf_amd64_9af2124ec40bcd88\nvoglv64.dll"
+[mScope GPU device: DeviceInfo[name=NVIDIA GeForce RTX 5050 Laptop GPU, vendorName=NVIDIA, driverInfo=1.4.351 NVIDIA 616.92, isZZeroToOne=true, backendName=Vulkan, timestampPeriod=1.0, limits=DeviceLimits[maxAnisotropy=16, minUniformOffsetAlignment=64, maxTextureSize=32768, maxMemoryAllocationSize=9223372036854775807, maxMultiDrawDirectInterleavedDrawCount=2147483647, maxColorAttachments=8], features=DeviceFeatures[shaderDrawParameters=true, multiDrawDirectInterleaved=true, multiDrawDirectSeparate=false, multiDrawIndirect=true, drawIndirect=true, nonZeroFirstInstance=true, persistentMapping=true], underlyingExtensions=[VK_KHR_synchronization2 (D), VK_EXT_multi_draw (D), VK_AMD_buffer_marker (D), VK_EXT_vertex_attribute_divisor (D), VK_KHR_win32_surface (I), VK_KHR_swapchain (D), VK_KHR_surface (I), VK_KHR_push_descriptor (D), VK_EXT_debug_utils (I), VK_KHR_dynamic_rendering (D)], hintsAndWorkarounds=HintsAndWorkarounds[writeToBufferIsSlow=false, anisotropyHasKnownIssues=false], type=DISCRETE]
+[32m[15:53:05] [main/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[mTarget shader assets: C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\mavenizer\caches\minecraft_tasks\26.2\client.jar SHA-256=40896ee9f1e2bec3c934daac7e93d41e9e3d9c2f8ae0ca366d52ffbfd1afa290
+Target scope shader checks passed: 69 assertions (Vulkan; real 26.2/mod GLSL compilation, no game textures or gun visuals)
+Scope GPU checks passed: 18 assertions (native Vulkan fixtures; no Minecraft/FML/gun visuals)
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 1m 46s
+36 actionable tasks: 33 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.0/userguide/configuration_cache_enabling.html

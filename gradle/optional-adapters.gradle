@@ -1,0 +1,49 @@
+// These integrations have no verified Forge 26.2 companion. Preserve their full
+// implementations and explicit failing compilation tasks without making absent
+// optional mods prerequisites of core startup. See docs/porting/dependencies.md.
+sourceSets {
+    kubejsCompat
+    playerAnimatorCompat
+}
+configurations {
+    kubejsSignatures { canBeConsumed = false }
+    playerAnimatorSignatures { canBeConsumed = false }
+}
+dependencies {
+    kubejsSignatures('dev.latvian.mods:kubejs-forge:2001.6.5-build.14') { transitive = false }
+    kubejsSignatures('dev.latvian.mods:rhino-forge:2001.2.3-build.6') { transitive = false }
+    kubejsSignatures('dev.architectury:architectury-forge:9.2.14') { transitive = false }
+    playerAnimatorSignatures('dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20') { transitive = false }
+}
+[kubejsCompat: configurations.kubejsSignatures, playerAnimatorCompat: configurations.playerAnimatorSignatures].each { name, signatures ->
+    def sources = sourceSets.getByName(name)
+    sources.compileClasspath = sourceSets.main.output + sourceSets.main.compileClasspath + signatures
+    sources.annotationProcessorPath = sourceSets.main.annotationProcessorPath
+    tasks.named(sources.compileJavaTaskName, JavaCompile) {
+        if (providers.gradleProperty('portingDiagnosticFlow').isPresent()) {
+            options.compilerArgs += ['-XDshould-stop.ifError=FLOW']
+        }
+    }
+    // Keep blocked sources and discovery resources in the delivered source archive.
+    tasks.named('sourcesJar', Jar) { from(sources.allSource) { into "optional/${name}" } }
+}
+tasks.register('verifyOptionalAdapters') {
+    group = 'verification'
+    description = 'Compile all retained blocked adapters. Failure remains a full-port parity blocker.'
+    dependsOn 'compileKubejsCompatJava', 'compilePlayerAnimatorCompatJava'
+}
+
+sourceSets {
+    optionalBoundaryChecks {
+        compileClasspath = sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath = output + sourceSets.main.output + sourceSets.main.runtimeClasspath
+    }
+}
+tasks.register('verifyPortingOptionalAbsent', JavaExec) {
+    group = 'verification'
+    description = 'Check production main entry points with unavailable companions physically absent.'
+    dependsOn 'compileOptionalBoundaryChecksJava'
+    classpath = sourceSets.optionalBoundaryChecks.runtimeClasspath
+    mainClass = 'com.tacz.guns.porting.OptionalBoundaryChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}

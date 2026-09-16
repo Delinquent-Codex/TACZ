@@ -27,8 +27,6 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.IItemHandler;
@@ -317,8 +315,9 @@ public abstract class AbstractGunItem extends Item implements IGun, IAnimationIt
      */
     @Override
     @Nonnull
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public Component getName(@Nonnull ItemStack stack) {
+        if (!net.minecraftforge.fml.loading.FMLLoader.getDist().isClient()) return super.getName(stack);
         Identifier gunId = this.getGunId(stack);
         Optional<ClientGunIndex> gunIndex = TimelessAPI.getClientGunIndex(gunId);
         if (gunIndex.isPresent()) {

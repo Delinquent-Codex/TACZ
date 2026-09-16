@@ -1,0 +1,20 @@
+{
+  "coordinate": "me.shedaniel.cloth:cloth-config:26.2.155",
+  "role": "published common code, compile-only; not a Forge runtime",
+  "artifacts": [
+    {
+      "url": "https://maven.shedaniel.me/me/shedaniel/cloth/cloth-config/26.2.155/cloth-config-26.2.155.pom",
+      "sha256": "e245273dfd7c9bba3c58dac2aace865abbb0e552ce93cd205e2e4aa05dc42be8"
+    },
+    {
+      "url": "https://maven.shedaniel.me/me/shedaniel/cloth/cloth-config/26.2.155/cloth-config-26.2.155.jar",
+      "sha256": "f0886a4570c5c5ed3cab6347ec8af098da1344eb33383dd2816907228f1df097"
+    },
+    {
+      "url": "https://maven.shedaniel.me/me/shedaniel/cloth/cloth-config/26.2.155/cloth-config-26.2.155-sources.jar",
+      "sha256": "53f48a3c8add8417b1f2c5526f49d40fe9d94ce2ba5b7dcd4e391c54ba32fc4f"
+    }
+  ],
+  "loader_imports": [],
+  "runtime_limit": "POM declares Fabric loader 0.19.3 at runtime; transitive=false prevents importing any loader; no runtime replacement is installed"
+}

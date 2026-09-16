@@ -1,10 +1,8 @@
 package com.tacz.guns.util;
 
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
+// Client-only API; caller-side isolation replaces obsolete Forge member stripping.
 public final class InputExtraCheck {
     public static boolean isInGame() {
         Minecraft mc = Minecraft.getInstance();

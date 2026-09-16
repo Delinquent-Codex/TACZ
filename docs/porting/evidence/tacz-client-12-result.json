@@ -1,0 +1,17 @@
+{
+  "fixture": "complete packaged TACZ in Forge development client; startup and content, not gameplay/visual parity",
+  "world": "tacz-runtime-f993e20c-e508-4daa-adfb-2b50a97dcc0e",
+  "device": "DeviceInfo[name\u003dNVIDIA GeForce RTX 5050 Laptop GPU, vendorName\u003dNVIDIA, driverInfo\u003d1.4.351 NVIDIA 616.92, isZZeroToOne\u003dtrue, backendName\u003dVulkan, timestampPeriod\u003d1.0, limits\u003dDeviceLimits[maxAnisotropy\u003d16, minUniformOffsetAlignment\u003d64, maxTextureSize\u003d32768, maxMemoryAllocationSize\u003d9223372036854775807, maxMultiDrawDirectInterleavedDrawCount\u003d2147483647, maxColorAttachments\u003d8], features\u003dDeviceFeatures[shaderDrawParameters\u003dtrue, multiDrawDirectInterleaved\u003dtrue, multiDrawDirectSeparate\u003dfalse, multiDrawIndirect\u003dtrue, drawIndirect\u003dtrue, nonZeroFirstInstance\u003dtrue, persistentMapping\u003dtrue], underlyingExtensions\u003d[VK_KHR_synchronization2 (D), VK_EXT_multi_draw (D), VK_AMD_buffer_marker (D), VK_EXT_vertex_attribute_divisor (D), VK_KHR_win32_surface (I), VK_KHR_swapchain (D), VK_KHR_surface (I), VK_KHR_push_descriptor (D), VK_EXT_debug_utils (I), VK_KHR_dynamic_rendering (D)], hintsAndWorkarounds\u003dHintsAndWorkarounds[writeToBufferIsSlow\u003dfalse, anisotropyHasKnownIssues\u003dfalse], type\u003dDISCRETE]",
+  "backend": "Vulkan",
+  "mods": [
+    "minecraft@26.2",
+    "tacz@1.1.8-hotfix-port.1",
+    "forge@65.1.0",
+    "tacz_runtime_fixture@1.0"
+  ],
+  "status": "passed",
+  "assertions": 51,
+  "held_gun": "tacz:ak47",
+  "custom_hand_frames": 119,
+  "held_gun_scope": "actual inventory sync, active first-person animation and cancelled native hand events; no pixel/visual parity or shooting claim"
+}

@@ -5,8 +5,6 @@ import com.tacz.guns.resource.modifier.AttachmentPropertyManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 
 
@@ -20,18 +18,20 @@ public class ServerMessageRefreshRefitScreen {
 
     public static void handle(ServerMessageRefreshRefitScreen message, CustomPayloadEvent.Context context) {
         if (context.isClientSide()) {
-            context.enqueueWork(ServerMessageRefreshRefitScreen::updateScreen);
+            context.enqueueWork(ClientHandler::updateScreen);
         }
         context.setPacketHandled(true);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private static void updateScreen() {
-        LocalPlayer player = Minecraft.getInstance().player;
-        if (player != null && Minecraft.getInstance().gui.screen() instanceof GunRefitScreen screen) {
-            screen.init();
-            // 刷新配件数据，客户端的
-            AttachmentPropertyManager.postChangeEvent(player, player.getMainHandItem());
+    // Loading codecs on the server must not verify client-only callback bytecode.
+    private static final class ClientHandler {
+        private static void updateScreen() {
+            LocalPlayer player = Minecraft.getInstance().player;
+            if (player != null && Minecraft.getInstance().gui.screen() instanceof GunRefitScreen screen) {
+                screen.init();
+                // 刷新配件数据，客户端的
+                AttachmentPropertyManager.postChangeEvent(player, player.getMainHandItem());
+            }
         }
     }
 }

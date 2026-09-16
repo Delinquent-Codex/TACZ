@@ -1,0 +1,1295 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.666
+
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :slimeLauncherMetadataForForge UP-TO-DATE
+
+> Task :runClient
+Slime Launcher setup is up-to-date, took 517ms
+Launching using main class: net.minecraftforge.bootstrap.ForgeBootstrap
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by net.minecraftforge.unsafe.UnsafeHacks (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.minecraftforge/unsafe/0.9.2/33bad02861cabd77c54a8c9d1205e8638bbbbb4f/unsafe-0.9.2.jar)
+WARNING: Please consider reporting this to the maintainers of class net.minecraftforge.unsafe.UnsafeHacks
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.freetype.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.4.1/a677b4a7bba84f925b4cc4f52a58c5248974bdeb/lwjgl-freetype-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.freetype.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.4.1/81431d868bcf162d4c915b9c39b2c7aae155ad4f/lwjgl-freetype-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.glfw.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.4.1/196101d96d9b2aa73264a96ae1dc8944a1446cee/lwjgl-glfw-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.glfw.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.4.1/a48bbdd544f00c88f8906e9d09e3f31bc1c17fac/lwjgl-glfw-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.jemalloc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.4.1/662e0926dd990f679e1cfb31d710d22d175bdabc/lwjgl-jemalloc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.jemalloc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.4.1/d8cf69e1155df83260f9bbe01944fe91f8ca3955/lwjgl-jemalloc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.openal.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.4.1/4b996cc3321a807ee34e7ce53aba7fe529dc485a/lwjgl-openal-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.openal.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.4.1/9e4bab87e9b89876fa77ea3c19e1b45334b97c10/lwjgl-openal-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.opengl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/4b6a9c5d7d5325312b740d9886087b7292b43bf9/lwjgl-opengl-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.opengl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/cfd47352b758a0c9f7046de467b103182ec77eb1/lwjgl-opengl-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.shaderc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-shaderc/3.4.1/50884f728fdd7cff33731403fdc53b724ff09c85/lwjgl-shaderc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.shaderc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-shaderc/3.4.1/cd3ab907c096e27a9024917dcab4379e90c7799d/lwjgl-shaderc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.spvc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-spvc/3.4.1/a60a8d48822ec9449a5de9b6c50e5ed6ae7e8e9f/lwjgl-spvc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.spvc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-spvc/3.4.1/cea4bc145dce25e8a436575f9034a7bd142b0528/lwjgl-spvc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.stb.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/7f4c39b3d56c7bae4900ee6e59d8f75432bdb18f/lwjgl-stb-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.stb.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/e091cd3b25ab7db88f0e34a0d2797dc396a528fa/lwjgl-stb-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.tinyfd.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/9c93b8211856bfe682f3225ccac811e74243f98e/lwjgl-tinyfd-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.tinyfd.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/f585da74a17695ba38351697712c03784ee1348b/lwjgl-tinyfd-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.vma.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/bfbf1a41c54641f396ba42541075f5db517c7ad9/lwjgl-vma-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.vma.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/c6abacce75eeb8e23bd88ad89faf233be6e053c3/lwjgl-vma-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/d1d3a7052da47ccde2a5fdf3a1bd45d801c3157c/lwjgl-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/65de43bd52507e108a58247c0da57a50ce3ee6f6/lwjgl-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/6105690714874b995aa7812e4f7732a21109276c/lwjgl-3.4.1.jar!/]
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in module com.sun.jna (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar!/)
+WARNING: Use --enable-native-access=com.sun.jna to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jline.nativ.JLineNativeLoader in module org.jline.nativ (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.jline/jline-native/3.25.1/7f58e474f7d94db5bf87b1fddf4fa646475779f2/jline-native-3.25.1.jar!/)
+WARNING: Use --enable-native-access=org.jline.nativ to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[32m[21:28:56] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 32, --assetsDir, C:\Users\voltp\AppData\Roaming\.minecraft\assets, --username, TaczFixture, --width, 854, --height, 480, --graphicsBackend, OPENGL]
+[m[32m[21:28:56] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 25.0.4.1+1-LTS
+[m[32m[21:28:56] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.6 starting: java version 25.0.4.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[m[32m[21:28:56] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.system.Library$$Lambda/0x00000000393ac000 in module org.lwjgl (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/129e06a04f93992cb2a45172435b21fc4b60dd7d/lwjgl-3.4.1-unsafe.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:28:56] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[m[32m[21:28:57] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.opengl.GL$$Lambda/0x00000000393c2400 in module org.lwjgl.opengl (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/830412cab823c029cda6b9729f9d2ed36cf79959/lwjgl-opengl-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.opengl to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:28:57] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon 760M Graphics GL version 4.6.0 Core Profile Context 26.8.1.260810, ATI Technologies Inc.
+[m[32m[21:28:57] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=CLIENT
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.stb.LibSTB$$Lambda/0x0000000039407c00 in module org.lwjgl.stb (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/f077c3dafc31924fbe8acb0b913f08977ba27f8e/lwjgl-stb-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.stb to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-core
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-core-3.0.8-figura.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-jse
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-jse-3.0.8-figura.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.LlamaLad7:MixinExtras
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.maydaymemory:mae
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mae-1.1.2.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for io.github.llamalad7:mixinextras-forge
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 mixinextras-forge-0.5.4.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.bcel:bcel
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/bcel-6.6.1.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.commons:commons-math3
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/commons-math3-3.6.1.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Closeing unselected FileSystem tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:28:58] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Found 7 dependencies adding them to mods collection
+[m[32m[21:28:58] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[m[32m[21:28:58] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_client' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\voltp\AppData\Roaming\.minecraft\assets, --assetIndex, 32, --username, TaczFixture, --width, 854, --height, 480, --graphicsBackend, OPENGL]
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.util.tinyfd.TinyFileDialogs$$Lambda/0x00000000395e4000 in module org.lwjgl.tinyfd (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/562697d40dbd2ed0424bf24dcf65d51170f81adf/lwjgl-tinyfd-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.tinyfd to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.util.vma.LibVma$$Lambda/0x00000000395e6800 in module org.lwjgl.vma (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/2c54ce10154feb1ede4d23c5947438cdbfdcc003/lwjgl-vma-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.vma to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:29:00] [Datafixer Bootstrap #0/INFO] [mojang/DataFixerBuilder]: 295 Datafixer optimizations took 421 milliseconds
+[m[1;31m[21:29:00] [main/ERROR] [os.dr.wi.re.HkeyPerformanceDataUtil/]: Unable to locate English counter names in registry Perflib 009. Counters may need to be rebuilt: 
+com.sun.jna.platform.win32.Win32Exception: The parameter is incorrect.
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:921) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:898) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.mapCounterIndicesFromRegistry(HkeyPerformanceDataUtil.java:274) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.<clinit>(HkeyPerformanceDataUtil.java:51) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.ProcessPerformanceData.buildProcessMapFromRegistry(ProcessPerformanceData.java:45) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.queryProcessMapFromRegistry(WindowsOperatingSystem.java:328) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.util.Memoizer$1.get(Memoizer.java:65) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.processMapToList(WindowsOperatingSystem.java:298) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.getProcess(WindowsOperatingSystem.java:292) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.OperatingSystem.getCurrentProcess(OperatingSystem.java:246) [oshi-core-6.9.0.jar!/:6.9.0]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[33m[21:29:00] [main/WARN] [os.ut.pl.wi.PerfCounterQuery/]: Unable to locate English counter names in registry Perflib 009. Assuming English counters. Error 0x80070057. See https://support.microsoft.com/en-us/help/300956/how-to-manually-rebuild-performance-counter-library-values
+[m[33m[21:29:00] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Loads
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$0(SystemReport.java:191) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:188) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[33m[21:29:00] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Virtual Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$1(SystemReport.java:208) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:208) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[33m[21:29:00] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Resident Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$2(SystemReport.java:209) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:209) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[32m[21:29:00] [pool-5-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[m[33m[21:29:04] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/.gradle/mavenizer/repo/net/minecraftforge/forge/26.2-65.1.0/forge-26.2-65.1.0.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[m[33m[21:29:04] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/.gradle/mavenizer/repo/net/minecraftforge/forge/26.2-65.1.0/forge-26.2-65.1.0.jar%230!/data/.mcassetsroot' uses unexpected schema
+[m[32m[21:29:04] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[m[32m[21:29:04] [Render thread/INFO] [minecraft/Minecraft]: Setting user: TaczFixture
+[m[32m[21:29:04] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.4.1+2
+[m[33m[21:29:04] [Render thread/WARN] [minecraft/Minecraft]: Graphics backend forced to opengl by launch argument, in-game preferred graphics backend setting is ignored
+[m[32m[21:29:04] [Render thread/INFO] [minecraft/Minecraft]: Using graphics backend OpenGL, using drivers: 4.6.0 Core Profile Context 26.8.1.260810
+[m[32m[21:29:04] [Render thread/INFO] [minecraft/Minecraft]: Using graphics device: AMD Radeon 760M Graphics (ATI Technologies Inc.)
+[m[32m[21:29:04] [Render thread/INFO] [minecraft/Minecraft]: Using graphics device extensions: GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic
+[m[32m[21:29:04] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 65.1.0, for MC 26.2 with MCP 20260616.103818
+[m[32m[21:29:04] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v65.1.0 Initialized
+[m[32m[21:29:04] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[m[32m[21:29:05] [Render thread/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\run\tacz
+[m[32m[21:29:05] [Render thread/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[m[32m[21:29:05] [Render thread/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[m[32m[21:29:05] [Download-1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[m[1;31m[21:29:05] [Download-1/ERROR] [mojang/RealmsClient]: Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:517) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:162) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.realmsclient.client.RealmsClient
+    REASON: classloading
+[m[32m[21:29:05] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, tacz_resources, mod_resources
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.GenericMessageScreen@78324e97, overlay=net.minecraftforge.client.loading.ForgeLoadingOverlay@73417494
+TACZ_RUNTIME_RELOAD progress=0.322241 done=false forgeLoading=true
+[32m[21:29:06] [Worker-Main-8/INFO] [minecraft/UnihexProvider]: Found unifont_pua-17.0.01.hex, loading
+[m[32m[21:29:06] [Worker-Main-10/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-17.0.01.hex, loading
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
+[m[32m[21:29:06] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
+[m[32m[21:29:06] [Worker-Main-9/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-17.0.01.hex, loading
+[m[32m[21:29:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[m[32m[21:29:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 65.1.0 Target: null
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/modern_kinetic_gun:
+    particle
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/ammo:
+    particle
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/gun_smith_table:
+    particle
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/workbench_b:
+    particle
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/workbench_c:
+    particle
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/attachment:
+    particle
+[m[33m[21:29:07] [Worker-Main-3/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/workbench_a:
+    particle
+[m[32m[21:29:09] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 2048x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[m[32m[21:29:09] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.TitleScreen@695c8b32, overlay=net.minecraftforge.client.loading.ForgeLoadingOverlay@73417494
+[32m[21:29:10] [Download-1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[m[1;31m[21:29:10] [Download-1/ERROR] [mojang/RealmsAvailability]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:517) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:284) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:50) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.realmsclient.RealmsAvailability
+    REASON: classloading
+  com.mojang.realmsclient.client.RealmsClient
+    REASON: classloading
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.TitleScreen@695c8b32, overlay=null
+[32m[21:29:12] [Render thread/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\run\tacz
+[m[32m[21:29:12] [Render thread/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[m[32m[21:29:12] [Render thread/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[m[32m[21:29:12] [Render thread/INFO] [minecraft/MinecraftServer]: Found new data pack tacz_resources, loading it automatically
+[m[32m[21:29:13] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 1769 recipes
+[m[32m[21:29:13] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 1688 advancements
+[m[32m[21:29:13] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 26.2
+[m[32m[21:29:13] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file .\saves\tacz-runtime-2fd0c745-94b2-452e-8c1e-5498d19633a9\serverconfig\tacz-server.toml is not correct. Correcting
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistBlocks was corrected from null to its default, []. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistEntities was corrected from null to its default, []. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistBlocks was corrected from null to its default, []. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistEntities was corrected from null to its default, []. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.DamageBaseMultiplier was corrected from null to its default, 1.0. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.ArmorIgnoreBaseMultiplier was corrected from null to its default, 1.0. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.HeadShotBaseMultiplier was corrected from null to its default, 1.0. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.WeightSpeedMultiplier was corrected from null to its default, 0.015. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.HeadShotAABB was corrected from null to its default, []. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.AmmoBoxStackSize was corrected from null to its default, 3. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ClientGunPackDownloadUrls was corrected from null to its default, []. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableCrawl was corrected from null to its default, true. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableDefaultGunSmithTableFilter was corrected from null to its default, true. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootNetworkCheck was corrected from null to its default, true. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootCooldownCheck was corrected from null to its default, true. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file .\saves\tacz-runtime-2fd0c745-94b2-452e-8c1e-5498d19633a9\serverconfig\forge-server.toml is not correct. Correcting
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[m[33m[21:29:13] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Selecting global world spawn...
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Loading 0 persistent chunks...
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 16%
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:overworld
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_end
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_nether
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[m[32m[21:29:14] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.LevelLoadingScreen@41db6e4b, overlay=null
+[32m[21:29:14] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Loading 48 chunks for player spawn...
+[m[32m[21:29:14] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 16%
+[m[32m[21:29:15] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Time elapsed: 920 ms
+[m[32m[21:29:15] [Server thread/INFO] [minecraft/PlayerList]: TaczFixture[local:E:a3e84551] logged in with entity id 1 at (2.5, 4.0, 5.5)
+[m[32m[21:29:15] [Server thread/INFO] [minecraft/MinecraftServer]: TaczFixture joined the game
+[m[32m[21:29:15] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 16, from 10
+[m[32m[21:29:15] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 12, from 0
+[m[32m[21:29:15] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[m[32m[21:29:15] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 2 advancements
+[m[32m[21:29:15] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[m[32m[21:29:15] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[m[32m[21:29:15] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 2 reached during a single frame. New capacity will be 8.
+[m[32m[21:29:15] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[m[32m[21:29:16] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[m[32m[21:29:16] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[mTACZ_RUNTIME_WAIT screen=null, overlay=null
+[32m[21:29:16] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[m[33m[21:29:17] [Render thread/WARN] [tacz/]: [TACZ Sound] Missing gun sound resource, skipped. sound=minecraft:ar_akilo_drop, path=minecraft:tacz_sounds/ar_akilo_drop.ogg
+[m[32m[21:29:17] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[m[33m[21:29:17] [Render thread/WARN] [tacz/]: [TACZ Sound] Missing gun sound resource, skipped. sound=minecraft:ar_akilo_raise_shoulder, path=minecraft:tacz_sounds/ar_akilo_raise_shoulder.ogg
+[m[32m[21:29:18] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[mTACZ_GAMEPLAY_STAGE SHOT
+[33m[21:29:19] [Render thread/WARN] [tacz/]: [TACZ Sound] Missing gun sound resource, skipped. sound=tacz:ak47/ak47_reload_tactical, path=tacz:tacz_sounds/ak47/ak47_reload_tactical.ogg
+[mTACZ_GAMEPLAY_STAGE RELOAD
+TACZ_GAMEPLAY_STAGE SETTLE
+TACZ_RUNTIME_RESULT {fixture=complete packaged TACZ in Forge development client; startup and content, not gameplay/visual parity, world=tacz-runtime-2fd0c745-94b2-452e-8c1e-5498d19633a9, device=DeviceInfo[name=AMD Radeon 760M Graphics, vendorName=ATI Technologies Inc., driverInfo=4.6.0 Core Profile Context 26.8.1.260810, isZZeroToOne=true, backendName=OpenGL, timestampPeriod=1.0, limits=DeviceLimits[maxAnisotropy=16, minUniformOffsetAlignment=16, maxTextureSize=16384, maxMemoryAllocationSize=9223372036854775807, maxMultiDrawDirectInterleavedDrawCount=0, maxColorAttachments=8], features=DeviceFeatures[shaderDrawParameters=true, multiDrawDirectInterleaved=false, multiDrawDirectSeparate=true, multiDrawIndirect=true, drawIndirect=true, nonZeroFirstInstance=true, persistentMapping=true], underlyingExtensions=[GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic], hintsAndWorkarounds=HintsAndWorkarounds[writeToBufferIsSlow=false, anisotropyHasKnownIssues=true], type=OTHER], backend=OpenGL, mods=[minecraft@26.2, tacz@1.1.8-hotfix-port.1, forge@65.1.0, tacz_runtime_fixture@1.0], status=passed, assertions=66, held_gun=tacz:ak47, custom_hand_frames=119, held_gun_scope=actual inventory sync, active first-person animation and cancelled native hand events; no pixel/visual parity or shooting claim, shoot_result=SUCCESS, after_shot=Snapshot[magazine=29, chamber=true, reserve=64, reloading=false, survival=true], after_reload=Snapshot[magazine=30, chamber=true, reserve=63, reloading=false, survival=true], gameplay_scope=one survival AK-47 shot and partial reload through client operator API and real integrated play packets; no remote multiplayer or visual/audio parity claim, gameplay_stage=SETTLE, server_shoot_events=1, server_reload_events=1, server_projectiles=1, client_projectiles=1}
+[32m[21:29:23] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.GenericMessageScreen@76982efa, overlay=null
+[32m[21:29:23] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[m[32m[21:29:23] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[m[32m[21:29:23] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TaczFixture lost connection: Disconnected
+[m[32m[21:29:23] [Server thread/INFO] [minecraft/MinecraftServer]: TaczFixture left the game
+[m[32m[21:29:23] [Server thread/INFO] [minecraft/ServerCommonPacketListenerImpl]: Stopping singleplayer server as player logged out
+[m[32m[21:29:23] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[m[32m[21:29:23] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:overworld
+[m[32m[21:29:24] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_end
+[m[32m[21:29:24] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_nether
+[m[32m[21:29:24] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[m[32m[21:29:24] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[m[32m[21:29:24] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[m[32m[21:29:24] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.ProgressScreen@4843fc3c, overlay=null
+[33m[21:29:40] [Client shutdown watchdog #1/WARN] [minecraft/SystemReport]: Failed to get system info for Process Loads
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$0(SystemReport.java:191) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:188) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:94) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.blaze3d.platform.ClientShutdownWatchdog
+    REASON: classloading
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.dedicated.ServerWatchdog
+    REASON: classloading
+[m[33m[21:29:40] [Client shutdown watchdog #1/WARN] [minecraft/SystemReport]: Failed to get system info for Process Virtual Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$1(SystemReport.java:208) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:208) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:94) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.blaze3d.platform.ClientShutdownWatchdog
+    REASON: classloading
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.dedicated.ServerWatchdog
+    REASON: classloading
+[m[33m[21:29:40] [Client shutdown watchdog #1/WARN] [minecraft/SystemReport]: Failed to get system info for Process Resident Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$2(SystemReport.java:209) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:209) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:94) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.blaze3d.platform.ClientShutdownWatchdog
+    REASON: classloading
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.dedicated.ServerWatchdog
+    REASON: classloading
+[m[1;31m[21:29:40] [Client shutdown watchdog #1/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID b792e2ff-9125-4243-af94-a2e866cc34d8
+[m---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 2026-09-15 21:29:40
+Description: Client shutdown from post-main
+
+java.lang.Error: Watchdog (Client shutdown from post-main) detected that a single server tick took too long
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:83) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.blaze3d.platform.ClientShutdownWatchdog
+    REASON: classloading
+  net.minecraft.server.dedicated.ServerWatchdog
+    REASON: classloading
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client shutdown watchdog #1
+Suspected Mods: NONE
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:83) ~[forge-26.2-65.1.0.jar%230!/:?]
+Transformer Audit:
+  net.minecraft.server.dedicated.ServerWatchdog
+    REASON: classloading
+-- Thread Dump --
+Details:
+	Threads: 
+"DestroyJavaVM" prio=5 Id=124 RUNNABLE
+
+
+"pool-11-thread-1" prio=5 Id=117 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@24d736b0
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@24d736b0
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"pool-11-thread-2" prio=5 Id=118 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@24d736b0
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@24d736b0
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Attach Listener" daemon prio=5 Id=17 RUNNABLE
+
+
+"Client shutdown watchdog #1" daemon prio=10 Id=122 RUNNABLE
+	at java.management@25.0.4.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@25.0.4.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:505)
+	at java.management@25.0.4.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:493)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.util.Util.dumpThreadInfo(Util.java:536)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:80)
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34)
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog$$Lambda/0x000000003b982400.run(Unknown Source)
+	at java.base@25.0.4.1/java.lang.Thread.runWith(Thread.java:1487)
+	...
+
+
+"Notification Thread" daemon prio=9 Id=24 RUNNABLE
+
+
+"Reference Handler" daemon prio=10 Id=14 RUNNABLE
+	at java.base@25.0.4.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@25.0.4.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+	at java.base@25.0.4.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+
+"Signal Dispatcher" daemon prio=9 Id=16 RUNNABLE
+
+
+"Finalizer" daemon prio=8 Id=15 WAITING on java.lang.ref.ReferenceQueue$Lock@b730349
+	at java.base@25.0.4.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@b730349
+	at java.base@25.0.4.1/java.lang.Object.wait(Object.java:389)
+	at java.base@25.0.4.1/java.lang.Object.wait(Object.java:351)
+	at java.base@25.0.4.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:137)
+	at java.base@25.0.4.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:215)
+	at java.base@25.0.4.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:165)
+
+
+"Sound engine" daemon prio=10 Id=120 WAITING on java.lang.String@42ae8a29
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@42ae8a29
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundEngineExecutor.waitForTasks(SoundEngineExecutor.java:59)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:145)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundEngineExecutor.run(SoundEngineExecutor.java:53)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundEngineExecutor$$Lambda/0x000000003ab90c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.lang.Thread.runWith(Thread.java:1487)
+	at java.base@25.0.4.1/java.lang.Thread.run(Thread.java:1474)
+
+
+"Thread-10" daemon prio=5 Id=69 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-11" daemon prio=5 Id=70 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-12" daemon prio=5 Id=71 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-13" daemon prio=5 Id=72 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-15" daemon prio=5 Id=74 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-4" daemon prio=5 Id=63 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-7" daemon prio=5 Id=66 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-8" daemon prio=5 Id=67 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"Thread-9" daemon prio=5 Id=68 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3c0a3b31
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1154)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	...
+
+
+"modloading-worker-0" daemon prio=5 Id=58 WAITING on java.util.concurrent.ForkJoinPool@7ca40ae8
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@7ca40ae8
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+
+"modloading-worker-0" daemon prio=5 Id=59 WAITING on java.util.concurrent.ForkJoinPool@7ca40ae8
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@7ca40ae8
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+
+"tacz-client-asset-preload" daemon prio=10 Id=116 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@571d0688
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@571d0688
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.base@25.0.4.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+	...
+
+
+"Common-Cleaner" daemon prio=8 Id=25 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@4513b9d1
+	at java.base@25.0.4.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@4513b9d1
+	at java.base@25.0.4.1/java.lang.Object.wait(Object.java:389)
+	at java.base@25.0.4.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+	at java.base@25.0.4.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+	at java.base@25.0.4.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:146)
+	at java.base@25.0.4.1/java.lang.Thread.runWith(Thread.java:1487)
+	at java.base@25.0.4.1/java.lang.Thread.run(Thread.java:1474)
+	at java.base@25.0.4.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)
+
+
+"Download-1" daemon prio=5 Id=51 TIMED_WAITING on java.util.concurrent.SynchronousQueue$Transferer@41c7fd1f
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.SynchronousQueue$Transferer@41c7fd1f
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408)
+	at java.base@25.0.4.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452)
+	at java.base@25.0.4.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194)
+	at java.base@25.0.4.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235)
+	at java.base@25.0.4.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+	...
+
+
+"Download-2" daemon prio=5 Id=52 TIMED_WAITING on java.util.concurrent.SynchronousQueue$Transferer@41c7fd1f
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.SynchronousQueue$Transferer@41c7fd1f
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408)
+	at java.base@25.0.4.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452)
+	at java.base@25.0.4.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194)
+	at java.base@25.0.4.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235)
+	at java.base@25.0.4.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+	...
+
+
+"EarlyDisplay" daemon prio=5 Id=36 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@112a389d
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@112a389d
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	...
+
+
+"ForkJoinPool.commonPool-delayScheduler" daemon prio=5 Id=75 TIMED_WAITING
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@25.0.4.1/java.util.concurrent.DelayScheduler.loop(DelayScheduler.java:253)
+	at java.base@25.0.4.1/java.util.concurrent.DelayScheduler.run(DelayScheduler.java:221)
+
+
+"JNA Cleaner" daemon prio=5 Id=32 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@25b54463
+	at java.base@25.0.4.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@25b54463
+	at java.base@25.0.4.1/java.lang.Object.wait(Object.java:389)
+	at java.base@25.0.4.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+	at java.base@25.0.4.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+	at SECURE-BOOTSTRAP/com.sun.jna@5.17.0/com.sun.jna.internal.Cleaner$CleanerThread.run(Cleaner.java:154)
+
+
+"Netty Local Client IO #0" daemon prio=10 Id=113 TIMED_WAITING on io.netty.channel.local.LocalIoHandler@4d27c3d8
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on io.netty.channel.local.LocalIoHandler@4d27c3d8
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.local.LocalIoHandler.run(LocalIoHandler.java:63)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1195)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@25.0.4.1/java.lang.Thread.runWith(Thread.java:1487)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@2099b749
+
+
+"Netty Local Server IO #0" daemon prio=10 Id=112 TIMED_WAITING on io.netty.channel.local.LocalIoHandler@7c36116d
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on io.netty.channel.local.LocalIoHandler@7c36116d
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.local.LocalIoHandler.run(LocalIoHandler.java:63)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1195)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@25.0.4.1/java.lang.Thread.runWith(Thread.java:1487)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@2672b3b
+
+
+"Netty Local Server IO #1" daemon prio=10 Id=114 TIMED_WAITING on io.netty.channel.local.LocalIoHandler@3a53dd74
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on io.netty.channel.local.LocalIoHandler@3a53dd74
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.local.LocalIoHandler.run(LocalIoHandler.java:63)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225)
+	at SECURE-BOOTSTRAP/io.netty.transport@4.2.15.Final/io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1195)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@25.0.4.1/java.lang.Thread.runWith(Thread.java:1487)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@76a217b4
+
+
+"Thread-1" daemon prio=5 Id=60 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics.update(SecondOrderDynamics.java:89)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics$$Lambda/0x000000003aac5c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base@25.0.4.1/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@325139ae
+
+
+"Thread-14" daemon prio=5 Id=73 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics.update(SecondOrderDynamics.java:89)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics$$Lambda/0x000000003aac5c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base@25.0.4.1/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@217f1ea3
+
+
+"Thread-2" daemon prio=5 Id=61 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics.update(SecondOrderDynamics.java:89)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics$$Lambda/0x000000003aac5c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base@25.0.4.1/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@1fe3d107
+
+
+"Thread-3" daemon prio=5 Id=62 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics.update(SecondOrderDynamics.java:89)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics$$Lambda/0x000000003aac5c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base@25.0.4.1/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@4911837
+
+
+"Thread-5" daemon prio=5 Id=64 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics.update(SecondOrderDynamics.java:89)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics$$Lambda/0x000000003aac5c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base@25.0.4.1/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@2ebe097
+
+
+"Thread-6" daemon prio=5 Id=65 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics.update(SecondOrderDynamics.java:89)
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.math.SecondOrderDynamics$$Lambda/0x000000003aac5c00.run(Unknown Source)
+	at java.base@25.0.4.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base@25.0.4.1/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@3017224
+
+
+"Timer hack thread" daemon prio=5 Id=48 TIMED_WAITING
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@25.0.4.1/java.lang.Thread.sleepNanos(Thread.java:509)
+	at java.base@25.0.4.1/java.lang.Thread.sleep(Thread.java:540)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.util.Util$9.run(Util.java:980)
+
+
+"Yggdrasil Key Fetcher" daemon prio=5 Id=50 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3331bc4f
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3331bc4f
+	at java.base@25.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+	at java.base@25.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+	at java.base@25.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+	at java.base@25.0.4.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	...
+
+
+"modloading-worker-0" daemon prio=5 Id=57 TIMED_WAITING on java.util.concurrent.ForkJoinPool@7ca40ae8
+	at java.base@25.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@7ca40ae8
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027)
+	at java.base@25.0.4.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.ServerWatchdog.createWatchdogCrashReport(ServerWatchdog.java:83) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.blaze3d.platform.ClientShutdownWatchdog
+    REASON: classloading
+  net.minecraft.server.dedicated.ServerWatchdog
+    REASON: classloading
+
+
+-- Client watchdog shutdown details --
+Details:
+	Modules: 
+		ADVAPI32.dll:Advanced Windows 32 Base API:10.0.26100.3624 (WinBuild.160101.0800):Microsoft Corporation
+		AUDIOSES.DLL:Audio Session:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		AVRT.dll:Multimedia Realtime Runtime:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:User Experience Controls Library:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		COMDLG32.dll:Common Dialogs DLL:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPT32.dll:Crypto API32:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		CoreMessaging.dll:Microsoft CoreMessaging Dll:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		DEVOBJ.dll:Device Information Set DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DNS Client API DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		DSPARSE.dll:Active Directory Domain Services API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		DWrite.dll:Microsoft DirectX Typography Services:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.26100.8328 (WinBuild.160101.0800):Microsoft Corporation
+		GLU32.dll:OpenGL Utility Library DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:IP Helper API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Windows NT BASE API Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Windows NT BASE API Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		MMDevApi.dll:MMDevice API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		MSASN1.dll:ASN.1 Runtime APIs:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		MSCTF.dll:MSCTF Server DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		MpOav.dll:IOfficeAntiVirus Module:4.18.26080.3 (9e1f3147fbc83f18a98a965394a23e07747d7295):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		NTASN1.dll:Microsoft ASN.1 API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		OpenAL.dll:Main implementation library:1.25.1:
+		POWRPROF.dll:Power Profile Helper DLL:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		PSAPI.DLL:Process Status Helper:10.0.26100.8521 (WinBuild.160101.0800):Microsoft Corporation
+		Pdh.dll:Windows Performance Data Helper DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:Remote Procedure Call Runtime:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		SETUPAPI.dll:Windows Setup API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Windows Shell Common Dll:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		SspiCli.dll:Security Support Provider Interface:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		UMPDC.dll:User Mode Power Dependency Coordinator:10.0.26100.8972 (WinBuild.160101.0800):Microsoft Corporation
+		USER32.dll:Multi-User Windows USER API Client DLL:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.26100.7920 (WinBuild.160101.0800):Microsoft Corporation
+		USP10.dll:Uniscribe Unicode script processor:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft� C Runtime Library:14.40.33810.0:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINSTA.dll:Winstation Library:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		WINTRUST.dll:Microsoft Trust Verification APIs:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:Windows Socket 2.0 32-Bit DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		Wtsapi32.dll:Windows Remote Desktop Session Host Server SDK APIs:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		amdihk64.dll:Radeon Settings: Host Service:2,00,00,1788:Advanced Micro Devices, Inc.
+		amsi.dll:Anti-Malware Scan Interface:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		atig6pxx.dll:atiglpxx.dll:8.14.01.6564:Advanced Micro Devices, Inc. 
+		atio6axx.dll:AMD OpenGL Driver:26.08.300126_e4d6776:Advanced Micro Devices, Inc
+		bcrypt.dll:Windows Cryptographic Primitives Library:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		cfgmgr32.dll:Configuration Manager DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:Microsoft COM for Windows:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		dinput8.dll:Microsoft DirectInput:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		directxdatabasehelper.dll:DirectXDatabaseHelper:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		dwmapi.dll:Microsoft Desktop Window Manager API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		dxcore.dll:DXCore:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		extnet.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		fastprox.dll:WMI Custom Marshaller:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		freetype.dll:Font Rendering Library:2.14.1:The FreeType Project
+		fwpuclnt.dll:FWP/IPsec User-Mode API:10.0.26100.3915 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		glfw.dll:GLFW 3.5.0 DLL:3.5.0:GLFW
+		icm32.dll:Microsoft Color Management Module (CMM):10.0.26100.9168 (WinBuild.160101.0800):Microsoft Corporation
+		iertutil.dll:Run time utility for Internet Explorer:11.00.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		inputhost.dll:InputHost:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		java.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		java.exe:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		jemalloc.dll
+		jimage.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		jli.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		jlinenative-3.25.1-39b12d3a190713ef-jlinenative.dll
+		jna15759602528374815348.dll:JNA native library:7.0.2:Java(TM) Native Access (JNA)
+		jvm.dll:OpenJDK 64-Bit server VM:25.0.4.1:Eclipse Adoptium
+		kernel.appcore.dll:AppModel API Host:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		lwjgl.dll
+		lwjgl_opengl.dll
+		lwjgl_stb.dll
+		lwjgl_tinyfd.dll
+		lwjgl_vma.dll
+		management.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		management_ext.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		mscms.dll:Microsoft Color Matching System DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		msvcp140.dll:Microsoft� C Runtime Library:14.40.33810.0:Microsoft Corporation
+		msvcp_win.dll:Microsoft� C Runtime Library:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Microsoft Windows Sockets 2.0 Service Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:E-mail Naming Shim Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		ncrypt.dll:Windows NCrypt Router:10.0.26100.1591 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		netutils.dll:Net Win32 API Helpers DLL:10.0.26100.1882 (WinBuild.160101.0800):Microsoft Corporation
+		nio.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		nlansp_c.dll:NLA Namespace Service Provider DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		ntdll.dll:NT Layer DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		ole32.dll:Microsoft OLE for Windows:10.0.26100.6725 (WinBuild.160101.0800):Microsoft Corporation
+		opengl32.dll:OpenGL Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:Windows System Performance Objects DLL:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		perfproc.dll:Windows System Process Performance Objects DLL:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		pfclient.dll:SysMain Client:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.26100.7920 (WinBuild.160101.0800):Microsoft Corporation
+		resourcepolicyclient.dll:Resource Policy Client:10.0.26100.8115 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		sapi.dll:Speech API:5.3.29131.00 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		shaderc.dll
+		shlwapi.dll:Shell Light-weight Utility Library:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		spirv-cross.dll
+		srvcli.dll:Server Service Client DLL:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		sunmscapi.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		textinputframework.dll:"TextInputFramework.DYNLINK":10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		ucrtbase.dll:Microsoft� C Runtime Library:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		urlmon.dll:OLE32 Extensions for Win32:11.00.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		uxtheme.dll:Microsoft UxTheme Library:10.0.26100.7019 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft� C Runtime Library:14.40.33810.0:Microsoft Corporation
+		verify.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		vulkan-1.dll:Vulkan Loader:1.4.341.0:
+		wbemcomn.dll:WMI:10.0.26100.7920 (WinBuild.160101.0800):Microsoft Corporation
+		wbemprox.dll:WMI:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		wbemsvc.dll:WMI:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		win32u.dll:Win32u:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		windows.staterepositorycore.dll:Windows StateRepository API Core:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:Microsoft WinRT Storage API:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.26100.8875 (WinBuild.160101.0800):Microsoft Corporation
+		wshunix.dll:AF_UNIX Winsock2 Helper DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		xinput1_4.dll:Microsoft Common Controller API:10.0.26100.8457 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/com.mojang.blaze3d.platform.ClientShutdownWatchdog.lambda$startShutdownWatchdog$0(ClientShutdownWatchdog.java:34) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.blaze3d.platform.ClientShutdownWatchdog
+    REASON: classloading
+
+
+-- System Details --
+Details:
+	Minecraft Version: 26.2
+	Minecraft Version ID: 26.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 25.0.4.1, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 679771352 bytes (648 MiB) / 1841299456 bytes (1756 MiB) up to 4110417920 bytes (3920 MiB)
+	Memory (heap): init: 246MiB, used: 1105MiB, committed: 1756MiB, max: 3920MiB
+	Memory (non-head): init: 007MiB, used: 251MiB, committed: 254MiB, max: 000MiB
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 240 w/ Radeon 760M Graphics        
+	Identifier: AuthenticAMD Family 25 Model 117 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 4.29
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 5050 Laptop GPU
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8151.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.16.1692
+	Graphics card #1 name: AMD Radeon 760M Graphics
+	Graphics card #1 vendor: Advanced Micro Devices, Inc.
+	Graphics card #1 VRAM (MiB): 512.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.31041.1004
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: DDR5
+	Virtual memory max (MiB): 24892.36
+	Virtual memory used (MiB): 15536.50
+	Swap memory total (MiB): 9216.00
+	Swap memory used (MiB): 136.59
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 337472.84, total: 487309.00
+	Space in storage for workdir (MiB): available: 337472.84, total: 487309.00
+	Operating System Version: Microsoft Windows 11 (Home) build 26200
+	Process Elevated: false
+	Process Loads: ~~ERROR~~ NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	Process Virtual Size (MiB): ~~ERROR~~ NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	Process Resident Size (MiB): ~~ERROR~~ NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	JVM Flags: 1 total; -XX:+UseCompactObjectHeaders
+	Debug Flags: 0 total; 
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.4.1+2
+	Window size: <not initialized>
+	Surface Info: <no surface>
+	GFLW Platform: win32
+	Graphics Device: AMD Radeon 760M Graphics
+	Graphics Backend: OpenGL
+	Graphics Vendor: ATI Technologies Inc.
+	Graphics Drivers: 4.6.0 Core Profile Context 26.8.1.260810
+	Graphics Device Extensions: GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic
+	Graphics Device Type: OTHER
+	Graphics Device Features: DeviceFeatures[shaderDrawParameters=true, multiDrawDirectInterleaved=false, multiDrawDirectSeparate=true, multiDrawIndirect=true, drawIndirect=true, nonZeroFirstInstance=true, persistentMapping=true]
+	GL debug messages: 
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Universe: 404
+	Type: Client
+	Locale: en_US
+	System encoding: Cp1252
+	File encoding: UTF-8
+	CPU: 12x AMD Ryzen 5 240 w/ Radeon 760M Graphics 
+	ModLauncher: 10.2
+	ModLauncher launch target: forge_userdev_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ forge TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@65
+		minecraft@1.0
+		javafml@65.1.0
+	Mod List: 
+		union:/C:/Users/voltp/Downloads/TACZ-26.2/tools/po|Minecraft                     |minecraft                     |26.2                |DONE      |Manifest: NOSIGNATURE
+		tacz-26.2-1.1.8-hotfix-port.1.jar                 |Timeless & Classics Guns: Zero|tacz                          |1.1.8-hotfix-port.1 |DONE      |Manifest: NOSIGNATURE
+		union:/C:/Users/voltp/Downloads/TACZ-26.2/tools/po|Forge                         |forge                         |65.1.0              |DONE      |Manifest: NOSIGNATURE
+		C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\r|TACZ Full Runtime Test Fixture|tacz_runtime_fixture          |1.0                 |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: b792e2ff-9125-4243-af94-a2e866cc34d8
+	FML: 65.1
+	Forge: net.minecraftforge:65.1.0
+[1;31m[21:29:40] [Client shutdown watchdog #1/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID d1a71c85-d39e-41f5-a10f-221c3d77143f
+[m#@!@# Game crashed! Crash report saved to: #@!@# C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\run\.\crash-reports\crash-2026-09-15_21.29.40-client.txt
+Something went wrong! Here is some debug info.
+Args: [--main, net.minecraftforge.bootstrap.ForgeBootstrap, --cache, C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\slime-launcher\cache\net\minecraftforge\forge\26.2-65.1.0, --metadata, C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\build\minecraftforge\forgegradle\slimeLauncherMetadataForForge\metadata, --, --gameDir, ., --launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, {asset_index}, --assetsDir, {assets_root}, --username, TaczFixture, --width, 854, --height, 480, --graphicsBackend, OPENGL]
+JVM Args: [-Djava.net.preferIPv6Addresses=system, -XX:+UseCompactObjectHeaders]
+Environment:
+	MCP_MAPPINGS: official_26.2
+System:
+	eventbus.api.strictRuntimeChecks: true
+	tacz.fixture.holdGun: true
+	mixin.debug.countInjections: true
+	forge.enableGameTest: true
+	tacz.fixture.gameplay: true
+Options: SlimeLauncherOptionsImpl{name=client, mainClass=net.minecraftforge.bootstrap.ForgeBootstrap, args=[--gameDir, ., --launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, {asset_index}, --assetsDir, {assets_root}, --username, TaczFixture, --width, 854, --height, 480, --graphicsBackend, OPENGL], jvmArgs=[-Djava.net.preferIPv6Addresses=system, -XX:+UseCompactObjectHeaders], classpath=[], minHeapSize=null, maxHeapSize=null, systemProperties={forge.enableGameTest=true, eventbus.api.strictRuntimeChecks=true, mixin.debug.countInjections=true, tacz.fixture.holdGun=true, tacz.fixture.gameplay=true}, environment={MCP_MAPPINGS={mcp_mappings}}, workingDir=C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\run, client=true}
+
+> Task :runClient FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':runClient' (registered by plugin class 'net.minecraftforge.gradle.internal.ForgeGradlePlugin').
+> Process 'command 'C:\Users\voltp\Downloads\TACZ-port-reference\jdk25\jdk-25.0.4.1+1\bin\java.exe'' finished with non-zero exit value -8 (NTSTATUS 0xFFFFFFF8)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 49s
+4 actionable tasks: 2 executed, 2 up-to-date

@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "assertions": 0,
+  "failure": "Full client did not reach the world checks within 60 seconds",
+  "screen": "net.minecraftforge.client.gui.LoadingErrorScreen@2926f7bd",
+  "overlay": "null"
+}

@@ -1,0 +1,26 @@
+{
+  "fixture": "complete packaged TACZ in Forge development client; see held_gun_scope and gameplay_scope for selected coverage",
+  "world": "tacz-runtime-f3936660-57be-4ecf-bbdb-a465fe5b93c6",
+  "device": "DeviceInfo[name\u003dNVIDIA GeForce RTX 5050 Laptop GPU, vendorName\u003dNVIDIA, driverInfo\u003d1.4.351 NVIDIA 616.92, isZZeroToOne\u003dtrue, backendName\u003dVulkan, timestampPeriod\u003d1.0, limits\u003dDeviceLimits[maxAnisotropy\u003d16, minUniformOffsetAlignment\u003d64, maxTextureSize\u003d32768, maxMemoryAllocationSize\u003d9223372036854775807, maxMultiDrawDirectInterleavedDrawCount\u003d2147483647, maxColorAttachments\u003d8], features\u003dDeviceFeatures[shaderDrawParameters\u003dtrue, multiDrawDirectInterleaved\u003dtrue, multiDrawDirectSeparate\u003dfalse, multiDrawIndirect\u003dtrue, drawIndirect\u003dtrue, nonZeroFirstInstance\u003dtrue, persistentMapping\u003dtrue], underlyingExtensions\u003d[VK_KHR_synchronization2 (D), VK_EXT_multi_draw (D), VK_AMD_buffer_marker (D), VK_EXT_vertex_attribute_divisor (D), VK_KHR_win32_surface (I), VK_KHR_swapchain (D), VK_KHR_surface (I), VK_KHR_push_descriptor (D), VK_EXT_debug_utils (I), VK_KHR_dynamic_rendering (D)], hintsAndWorkarounds\u003dHintsAndWorkarounds[writeToBufferIsSlow\u003dfalse, anisotropyHasKnownIssues\u003dfalse], type\u003dDISCRETE]",
+  "backend": "Vulkan",
+  "mods": [
+    "minecraft@26.2",
+    "tacz@1.1.8-hotfix-port.1",
+    "forge@65.1.0",
+    "tacz_runtime_fixture@1.0"
+  ],
+  "status": "passed",
+  "assertions": 66,
+  "held_gun": "tacz:ak47",
+  "custom_hand_frames": 119,
+  "held_gun_scope": "actual inventory sync, active first-person animation and cancelled native hand events; no pixel/visual parity or shooting claim",
+  "shoot_result": "SUCCESS",
+  "after_shot": "Snapshot[magazine\u003d29, chamber\u003dtrue, reserve\u003d64, reloading\u003dfalse, survival\u003dtrue]",
+  "after_reload": "Snapshot[magazine\u003d30, chamber\u003dtrue, reserve\u003d63, reloading\u003dfalse, survival\u003dtrue]",
+  "gameplay_scope": "one survival AK-47 shot and partial reload through client operator API and real integrated play packets; no remote multiplayer or visual/audio parity claim",
+  "gameplay_stage": "SETTLE",
+  "server_shoot_events": 1,
+  "server_reload_events": 1,
+  "server_projectiles": 1,
+  "client_projectiles": 1
+}

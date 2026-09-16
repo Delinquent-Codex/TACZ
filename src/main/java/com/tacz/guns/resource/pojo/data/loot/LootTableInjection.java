@@ -20,7 +20,8 @@ public record LootTableInjection(List<Identifier> lootTables, LootTable lootTabl
         if (!object.has("pools")) {
             throw new JsonParseException("Loot injection " + fileId + " must define pools");
         }
-        LootTable table = LootTable.DIRECT_CODEC.parse(ops, object).getOrThrow(message -> new JsonParseException(fileId + ": " + message));
+        JsonElement upgraded = com.tacz.guns.resource.serialize.LegacyPackCodecs.upgradeLootFunctions(object);
+        LootTable table = LootTable.DIRECT_CODEC.parse(ops, upgraded).getOrThrow(message -> new JsonParseException(fileId + ": " + message));
         return new LootTableInjection(lootTables, table);
     }
 

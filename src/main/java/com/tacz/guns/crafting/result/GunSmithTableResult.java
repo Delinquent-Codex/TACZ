@@ -3,6 +3,8 @@ package com.tacz.guns.crafting.result;
 import com.tacz.guns.resource.pojo.data.block.TabConfig;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
+import com.tacz.guns.resource.serialize.LegacyPackCodecs;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,6 +25,13 @@ public class GunSmithTableResult {
 
     @Nullable
     private RawGunTableResult raw = null;
+    private ItemStackTemplate template;
+
+    public static GunSmithTableResult fromTemplate(ItemStackTemplate template, @Nullable Identifier group) {
+        GunSmithTableResult result = new GunSmithTableResult(ItemStack.EMPTY, group);
+        result.template = template;
+        return result;
+    }
 
     public GunSmithTableResult(ItemStack result, @Nullable Identifier group) {
         this.result = result;
@@ -40,6 +49,10 @@ public class GunSmithTableResult {
     }
 
     public void init() {
+        if (template != null) {
+            result = LegacyPackCodecs.createStack(template);
+            template = null;
+        }
         if (raw != null) {
             GunSmithTableResult result = RawGunTableResult.init(raw);
             this.result = result.getResult();
@@ -51,6 +64,7 @@ public class GunSmithTableResult {
     }
 
     public ItemStack getResult() {
+        if (template != null) init();
         return result;
     }
 

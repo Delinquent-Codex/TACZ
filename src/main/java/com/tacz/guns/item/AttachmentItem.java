@@ -19,8 +19,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,8 +37,9 @@ public class AttachmentItem extends Item implements AttachmentItemDataAccessor {
 
     @Override
     @Nonnull
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public Component getName(@Nonnull ItemStack stack) {
+        if (!net.minecraftforge.fml.loading.FMLLoader.getDist().isClient()) return super.getName(stack);
         Identifier attachmentId = this.getAttachmentId(stack);
         Optional<ClientAttachmentIndex> attachmentIndex = TimelessAPI.getClientAttachmentIndex(attachmentId);
         if (attachmentIndex.isPresent()) {

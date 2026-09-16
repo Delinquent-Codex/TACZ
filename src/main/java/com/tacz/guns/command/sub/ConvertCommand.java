@@ -6,9 +6,7 @@ import com.mojang.brigadier.context.CommandContext;
 import com.tacz.guns.resource.PackConvertor;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.loading.FMLLoader;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ConvertCommand {
     private static final String CONVERT_NAME = "convert";
@@ -19,7 +17,7 @@ public class ConvertCommand {
         return reload;
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     private static void convertClient(CommandSourceStack source) { PackConvertor.convert(source); }
 
     private static int convert(CommandContext<CommandSourceStack> context) {

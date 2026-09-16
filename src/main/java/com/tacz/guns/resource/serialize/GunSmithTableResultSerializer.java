@@ -10,6 +10,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.*;
 import net.minecraft.core.RegistryAccess;
@@ -25,7 +26,7 @@ public class GunSmithTableResultSerializer implements JsonDeserializer<GunSmithT
         public <T> DataResult<Pair<GunSmithTableResult, T>> decode(DynamicOps<T> ops, T input) {
             try {
                 JsonElement json = ops.convertTo(JsonOps.INSTANCE, input);
-                var result = read(json, item -> LegacyPackCodecs.ITEM_STACK.parse(ops,
+                var result = read(json, item -> LegacyPackCodecs.ITEM_STACK_TEMPLATE.parse(ops,
                         JsonOps.INSTANCE.convertTo(ops, item)).getOrThrow(JsonParseException::new));
                 return DataResult.success(Pair.of(result, ops.empty()));
             } catch (RuntimeException exception) {
@@ -53,7 +54,7 @@ public class GunSmithTableResultSerializer implements JsonDeserializer<GunSmithT
         return CODEC.parse(ops, json).getOrThrow(JsonParseException::new);
     }
 
-    private static GunSmithTableResult read(JsonElement json, java.util.function.Function<JsonElement, ItemStack> itemDecoder) {
+    private static GunSmithTableResult read(JsonElement json, java.util.function.Function<JsonElement, ItemStackTemplate> itemDecoder) {
         if (json.isJsonObject()) {
             JsonObject jsonObject = json.getAsJsonObject();
             String typeName = GsonHelper.getAsString(jsonObject, "type");
@@ -93,8 +94,8 @@ public class GunSmithTableResultSerializer implements JsonDeserializer<GunSmithT
                 }
                 case GunSmithTableResult.CUSTOM -> {
                     JsonObject resultObject = GsonHelper.getAsJsonObject(jsonObject, "item");
-                    ItemStack itemStack = itemDecoder.apply(resultObject);
-                    result = new GunSmithTableResult(itemStack, tabOverride);
+                    ItemStackTemplate item = itemDecoder.apply(resultObject);
+                    result = GunSmithTableResult.fromTemplate(item, tabOverride);
                 }
                 default -> {
                     throw new JsonSyntaxException("Unknown gunsmith result type: " + typeName);

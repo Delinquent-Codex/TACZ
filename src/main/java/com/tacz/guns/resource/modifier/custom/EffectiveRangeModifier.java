@@ -14,8 +14,6 @@ import com.tacz.guns.resource.pojo.data.gun.GunData;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -58,7 +56,7 @@ public class EffectiveRangeModifier implements IAttachmentModifier<Modifier, Flo
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public List<DiagramsData> getPropertyDiagramsData(ItemStack gunItem, GunData gunData, AttachmentCacheProperty cacheProperty) {
         // 必要数据获取
         float modifiedDistance = cacheProperty.getCache(EffectiveRangeModifier.ID);
@@ -92,7 +90,7 @@ public class EffectiveRangeModifier implements IAttachmentModifier<Modifier, Flo
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public int getDiagramsDataSize() {
         return 1;
     }

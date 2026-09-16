@@ -11,6 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import com.tacz.guns.resource.serialize.LegacyPackCodecs;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.JsonOps;
@@ -20,8 +21,35 @@ import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.AbstractList;
+import java.util.function.Supplier;
+import com.google.common.base.Suppliers;
 
-public record TabConfig(Identifier id, String name, ItemStack icon) {
+public final class TabConfig {
+    private final Identifier id;
+    private final String name;
+    private final Supplier<ItemStack> icon;
+
+    public TabConfig(Identifier id, String name, ItemStack icon) {
+        this(id, name, () -> icon);
+    }
+
+    private TabConfig(Identifier id, String name, Supplier<ItemStack> icon) {
+        this.id = id;
+        this.name = name;
+        this.icon = Suppliers.memoize(icon::get);
+    }
+
+    public Identifier id() { return id; }
+    public String name() { return name; }
+    public ItemStack icon() { return icon.get(); }
+
+    @Override public boolean equals(Object other) {
+        return other instanceof TabConfig tab && java.util.Objects.equals(id, tab.id)
+                && java.util.Objects.equals(name, tab.name) && java.util.Objects.equals(icon(), tab.icon());
+    }
+    @Override public int hashCode() { return java.util.Objects.hash(id, name, icon()); }
+    @Override public String toString() { return "TabConfig[id=" + id + ", name=" + name + ", icon=" + icon() + "]"; }
     public static final Identifier TAB_AMMO = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "ammo");
 
     public static final Identifier TAB_PISTOL = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "pistol");
@@ -42,7 +70,16 @@ public record TabConfig(Identifier id, String name, ItemStack icon) {
     public static final Identifier TAB_MISC = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "misc");
     public static final Identifier TAB_EMPTY = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "empty");
 
-    public static final List<TabConfig> DEFAULT_TABS = List.of(
+    // Recipe parsing needs the tab IDs before Minecraft binds item default components.
+    // Only materialize icon stacks when a caller actually asks for the tab entries.
+    private static final Supplier<List<TabConfig>> DEFAULT_TAB_VALUES = Suppliers.memoize(TabConfig::createDefaultTabs);
+    public static final List<TabConfig> DEFAULT_TABS = new AbstractList<>() {
+        @Override public TabConfig get(int index) { return DEFAULT_TAB_VALUES.get().get(index); }
+        @Override public int size() { return DEFAULT_TAB_VALUES.get().size(); }
+    };
+
+    private static List<TabConfig> createDefaultTabs() {
+        return List.of(
             new TabConfig(TabConfig.TAB_AMMO, "tacz.type.ammo.name", AmmoItemBuilder.create().setId(DefaultAssets.DEFAULT_AMMO_ID).build()),
             new TabConfig(TabConfig.TAB_PISTOL, "tacz.type.pistol.name", GunItemBuilder.create().setId(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "glock_17")).forceBuild()),
             new TabConfig(TabConfig.TAB_SNIPER, "tacz.type.sniper.name", GunItemBuilder.create().setId(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "ai_awp")).forceBuild()),
@@ -58,7 +95,8 @@ public record TabConfig(Identifier id, String name, ItemStack icon) {
             new TabConfig(TabConfig.TAB_EXTENDED_MAG, "tacz.type.extended_mag.name", AttachmentItemBuilder.create().setId(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "extended_mag_3")).build()),
             new TabConfig(TabConfig.TAB_LASER, "tacz.type.laser.name", AttachmentItemBuilder.create().setId(Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "laser_compact")).build()),
             new TabConfig(TabConfig.TAB_MISC, "tacz.type.misc.name", ModItems.GUN_SMITH_TABLE.get().getDefaultInstance())
-    );
+        );
+    }
 
     public static class Deserializer implements JsonDeserializer<TabConfig> {
         private final DynamicOps<JsonElement> ops;
@@ -79,10 +117,10 @@ public record TabConfig(Identifier id, String name, ItemStack icon) {
                 throw new JsonParseException("TabConfig must have an id");
             }
             Identifier id = context.deserialize(object.get("id"), Identifier.class);
-            ItemStack icon = LegacyPackCodecs.ITEM_STACK.parse(ops, GsonHelper.getAsJsonObject(object, "icon"))
+            ItemStackTemplate icon = LegacyPackCodecs.ITEM_STACK_TEMPLATE.parse(ops, GsonHelper.getAsJsonObject(object, "icon"))
                     .getOrThrow(JsonParseException::new);
             String name = GsonHelper.getAsString(object, "name", "tacz.type.unknown.name");
-            return new TabConfig(id, name, icon);
+            return new TabConfig(id, name, () -> LegacyPackCodecs.createStack(icon));
         }
     }
 

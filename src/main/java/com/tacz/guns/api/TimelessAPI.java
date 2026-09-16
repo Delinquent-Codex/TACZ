@@ -18,15 +18,13 @@ import com.tacz.guns.resource.index.CommonGunIndex;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
 public final class TimelessAPI {
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Optional<GunDisplayInstance> getGunDisplay(ItemStack stack) {
         if (stack.getItem() instanceof IGun iGun) {
             Identifier gunId = iGun.getGunId(stack);
@@ -43,12 +41,12 @@ public final class TimelessAPI {
         return Optional.empty();
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Optional<ClientGunIndex> getClientGunIndex(Identifier gunId) {
         return Optional.ofNullable(ClientIndexManager.GUN_INDEX.get(gunId));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Optional<GunDisplayInstance> getGunDisplay(Identifier displayId, Identifier fallbackGunId) {
         if (displayId == null || displayId.equals(DefaultAssets.DEFAULT_GUN_DISPLAY_ID)) {
             return getClientGunIndex(fallbackGunId).map(ClientGunIndex::getDefaultDisplay);
@@ -61,32 +59,32 @@ public final class TimelessAPI {
         return Optional.of(instance);
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Optional<ClientAttachmentIndex> getClientAttachmentIndex(Identifier attachmentId) {
         return Optional.ofNullable(ClientIndexManager.ATTACHMENT_INDEX.get(attachmentId));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Optional<ClientAmmoIndex> getClientAmmoIndex(Identifier ammoId) {
         return Optional.ofNullable(ClientIndexManager.AMMO_INDEX.get(ammoId));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Optional<ClientBlockIndex> getClientBlockIndex(Identifier blockId) {
         return Optional.ofNullable(ClientIndexManager.BLOCK_INDEX.get(blockId));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Set<Map.Entry<Identifier, ClientGunIndex>> getAllClientGunIndex() {
         return ClientIndexManager.getAllGuns();
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Set<Map.Entry<Identifier, ClientAmmoIndex>> getAllClientAmmoIndex() {
         return ClientIndexManager.getAllAmmo();
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static Set<Map.Entry<Identifier, ClientAttachmentIndex>> getAllClientAttachmentIndex() {
         return ClientIndexManager.getAllAttachments();
     }

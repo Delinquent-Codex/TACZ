@@ -5,6 +5,7 @@ import com.tacz.guns.api.client.event.SwapItemWithOffHand;
 import com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator;
 import com.tacz.guns.api.item.IAnimationItem;
 import com.tacz.guns.api.item.IGun;
+import com.tacz.guns.client.gameplay.LocalPlayerDataHolder;
 import com.tacz.guns.client.resource.ClientIndexManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.GameShuttingDownEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -93,6 +95,13 @@ public class InventoryEvent {
         // 离开游戏时重置客户端 draw 状态
         oldHotbarSelected = -1;
         oldHotbarSelectItem = ItemStack.EMPTY;
+    }
+
+    @SubscribeEvent
+    public static void onGameShuttingDown(GameShuttingDownEvent event) {
+        // Forge fires this once for physical client shutdown, not on world disconnect.
+        // Keep the scheduler reusable between worlds, but do not hold up JVM exit.
+        LocalPlayerDataHolder.SCHEDULED_EXECUTOR_SERVICE.shutdownNow();
     }
 
     private static boolean isSame(ItemStack i, ItemStack j) {

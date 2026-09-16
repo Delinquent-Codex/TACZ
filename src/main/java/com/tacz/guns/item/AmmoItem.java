@@ -21,8 +21,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,8 +47,9 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
 
     @Override
     @Nonnull
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public Component getName(@Nonnull ItemStack stack) {
+        if (!net.minecraftforge.fml.loading.FMLLoader.getDist().isClient()) return super.getName(stack);
         Identifier ammoId = this.getAmmoId(stack);
         Optional<ClientAmmoIndex> ammoIndex = TimelessAPI.getClientAmmoIndex(ammoId);
         if (ammoIndex.isPresent()) {
@@ -88,8 +87,12 @@ public class AmmoItem extends Item implements AmmoItemDataAccessor {
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public void appendHoverText(ItemStack stack, TooltipContext context, net.minecraft.world.item.component.TooltipDisplay display, java.util.function.Consumer<Component> components, TooltipFlag isAdvanced) {
+        if (!net.minecraftforge.fml.loading.FMLLoader.getDist().isClient()) {
+            super.appendHoverText(stack, context, display, components, isAdvanced);
+            return;
+        }
         Identifier ammoId = this.getAmmoId(stack);
         TimelessAPI.getClientAmmoIndex(ammoId).ifPresent(index -> {
             String tooltipKey = index.getTooltipKey();

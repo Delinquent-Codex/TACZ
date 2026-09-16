@@ -1,0 +1,457 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.826
+
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :slimeLauncherMetadataForForge UP-TO-DATE
+
+> Task :runClient
+Slime Launcher setup is up-to-date, took 628ms
+Launching using main class: net.minecraftforge.bootstrap.ForgeBootstrap
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by net.minecraftforge.unsafe.UnsafeHacks (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.minecraftforge/unsafe/0.9.2/33bad02861cabd77c54a8c9d1205e8638bbbbb4f/unsafe-0.9.2.jar)
+WARNING: Please consider reporting this to the maintainers of class net.minecraftforge.unsafe.UnsafeHacks
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.freetype.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.4.1/a677b4a7bba84f925b4cc4f52a58c5248974bdeb/lwjgl-freetype-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.freetype.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.4.1/81431d868bcf162d4c915b9c39b2c7aae155ad4f/lwjgl-freetype-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.glfw.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.4.1/196101d96d9b2aa73264a96ae1dc8944a1446cee/lwjgl-glfw-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.glfw.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.4.1/a48bbdd544f00c88f8906e9d09e3f31bc1c17fac/lwjgl-glfw-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.jemalloc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.4.1/662e0926dd990f679e1cfb31d710d22d175bdabc/lwjgl-jemalloc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.jemalloc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.4.1/d8cf69e1155df83260f9bbe01944fe91f8ca3955/lwjgl-jemalloc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.openal.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.4.1/4b996cc3321a807ee34e7ce53aba7fe529dc485a/lwjgl-openal-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.openal.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.4.1/9e4bab87e9b89876fa77ea3c19e1b45334b97c10/lwjgl-openal-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.opengl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/4b6a9c5d7d5325312b740d9886087b7292b43bf9/lwjgl-opengl-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.opengl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/cfd47352b758a0c9f7046de467b103182ec77eb1/lwjgl-opengl-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.shaderc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-shaderc/3.4.1/50884f728fdd7cff33731403fdc53b724ff09c85/lwjgl-shaderc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.shaderc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-shaderc/3.4.1/cd3ab907c096e27a9024917dcab4379e90c7799d/lwjgl-shaderc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.spvc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-spvc/3.4.1/a60a8d48822ec9449a5de9b6c50e5ed6ae7e8e9f/lwjgl-spvc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.spvc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-spvc/3.4.1/cea4bc145dce25e8a436575f9034a7bd142b0528/lwjgl-spvc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.stb.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/7f4c39b3d56c7bae4900ee6e59d8f75432bdb18f/lwjgl-stb-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.stb.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/e091cd3b25ab7db88f0e34a0d2797dc396a528fa/lwjgl-stb-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.tinyfd.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/9c93b8211856bfe682f3225ccac811e74243f98e/lwjgl-tinyfd-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.tinyfd.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/f585da74a17695ba38351697712c03784ee1348b/lwjgl-tinyfd-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.vma.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/bfbf1a41c54641f396ba42541075f5db517c7ad9/lwjgl-vma-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.vma.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/c6abacce75eeb8e23bd88ad89faf233be6e053c3/lwjgl-vma-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/d1d3a7052da47ccde2a5fdf3a1bd45d801c3157c/lwjgl-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/65de43bd52507e108a58247c0da57a50ce3ee6f6/lwjgl-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/6105690714874b995aa7812e4f7732a21109276c/lwjgl-3.4.1.jar!/]
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in module com.sun.jna (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar!/)
+WARNING: Use --enable-native-access=com.sun.jna to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jline.nativ.JLineNativeLoader in module org.jline.nativ (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.jline/jline-native/3.25.1/7f58e474f7d94db5bf87b1fddf4fa646475779f2/jline-native-3.25.1.jar!/)
+WARNING: Use --enable-native-access=org.jline.nativ to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[32m[21:21:23] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 32, --assetsDir, C:\Users\voltp\AppData\Roaming\.minecraft\assets, --username, TaczFixture, --width, 854, --height, 480, --graphicsBackend, OPENGL]
+[m[32m[21:21:23] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 25.0.4.1+1-LTS
+[m[32m[21:21:23] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.6 starting: java version 25.0.4.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[m[32m[21:21:23] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.system.Library$$Lambda/0x00000000913ac000 in module org.lwjgl (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/129e06a04f93992cb2a45172435b21fc4b60dd7d/lwjgl-3.4.1-unsafe.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:21:23] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[m[32m[21:21:23] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.opengl.GL$$Lambda/0x00000000913c3400 in module org.lwjgl.opengl (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/830412cab823c029cda6b9729f9d2ed36cf79959/lwjgl-opengl-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.opengl to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:21:24] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon 760M Graphics GL version 4.6.0 Core Profile Context 26.8.1.260810, ATI Technologies Inc.
+[m[32m[21:21:24] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=CLIENT
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.stb.LibSTB$$Lambda/0x0000000091408400 in module org.lwjgl.stb (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/f077c3dafc31924fbe8acb0b913f08977ba27f8e/lwjgl-stb-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.stb to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-core
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-core-3.0.8-figura.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-jse
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-jse-3.0.8-figura.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.LlamaLad7:MixinExtras
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.maydaymemory:mae
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mae-1.1.2.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for io.github.llamalad7:mixinextras-forge
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 mixinextras-forge-0.5.4.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.bcel:bcel
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/bcel-6.6.1.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.commons:commons-math3
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/commons-math3-3.6.1.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Closeing unselected FileSystem tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:21:25] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Found 7 dependencies adding them to mods collection
+[m[32m[21:21:25] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[m[32m[21:21:25] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_client' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\voltp\AppData\Roaming\.minecraft\assets, --assetIndex, 32, --username, TaczFixture, --width, 854, --height, 480, --graphicsBackend, OPENGL]
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.util.tinyfd.TinyFileDialogs$$Lambda/0x00000000915e0000 in module org.lwjgl.tinyfd (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/562697d40dbd2ed0424bf24dcf65d51170f81adf/lwjgl-tinyfd-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.tinyfd to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.lwjgl.util.vma.LibVma$$Lambda/0x00000000915e2c00 in module org.lwjgl.vma (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/2c54ce10154feb1ede4d23c5947438cdbfdcc003/lwjgl-vma-3.4.1.jar!/)
+WARNING: Use --enable-native-access=org.lwjgl.vma to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[m[32m[21:21:27] [Datafixer Bootstrap #0/INFO] [mojang/DataFixerBuilder]: 295 Datafixer optimizations took 437 milliseconds
+[m[1;31m[21:21:27] [main/ERROR] [os.dr.wi.re.HkeyPerformanceDataUtil/]: Unable to locate English counter names in registry Perflib 009. Counters may need to be rebuilt: 
+com.sun.jna.platform.win32.Win32Exception: The parameter is incorrect.
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:921) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:898) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.mapCounterIndicesFromRegistry(HkeyPerformanceDataUtil.java:274) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.<clinit>(HkeyPerformanceDataUtil.java:51) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.ProcessPerformanceData.buildProcessMapFromRegistry(ProcessPerformanceData.java:45) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.queryProcessMapFromRegistry(WindowsOperatingSystem.java:328) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.util.Memoizer$1.get(Memoizer.java:65) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.processMapToList(WindowsOperatingSystem.java:298) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.getProcess(WindowsOperatingSystem.java:292) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.OperatingSystem.getCurrentProcess(OperatingSystem.java:246) [oshi-core-6.9.0.jar!/:6.9.0]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[33m[21:21:27] [main/WARN] [os.ut.pl.wi.PerfCounterQuery/]: Unable to locate English counter names in registry Perflib 009. Assuming English counters. Error 0x80070057. See https://support.microsoft.com/en-us/help/300956/how-to-manually-rebuild-performance-counter-library-values
+[m[33m[21:21:27] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Loads
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$0(SystemReport.java:191) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:188) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[33m[21:21:27] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Virtual Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$1(SystemReport.java:208) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:208) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[33m[21:21:27] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Resident Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$2(SystemReport.java:209) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:209) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:159) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.client.main.Main
+    REASON: classloading
+[m[32m[21:21:27] [pool-5-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[m[33m[21:21:32] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/.gradle/mavenizer/repo/net/minecraftforge/forge/26.2-65.1.0/forge-26.2-65.1.0.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[m[33m[21:21:32] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/.gradle/mavenizer/repo/net/minecraftforge/forge/26.2-65.1.0/forge-26.2-65.1.0.jar%230!/data/.mcassetsroot' uses unexpected schema
+[m[32m[21:21:32] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[m[32m[21:21:32] [Render thread/INFO] [minecraft/Minecraft]: Setting user: TaczFixture
+[m[32m[21:21:32] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.4.1+2
+[m[33m[21:21:32] [Render thread/WARN] [minecraft/Minecraft]: Graphics backend forced to opengl by launch argument, in-game preferred graphics backend setting is ignored
+[m[32m[21:21:33] [Render thread/INFO] [minecraft/Minecraft]: Using graphics backend OpenGL, using drivers: 4.6.0 Core Profile Context 26.8.1.260810
+[m[32m[21:21:33] [Render thread/INFO] [minecraft/Minecraft]: Using graphics device: AMD Radeon 760M Graphics (ATI Technologies Inc.)
+[m[32m[21:21:33] [Render thread/INFO] [minecraft/Minecraft]: Using graphics device extensions: GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic
+[m[32m[21:21:33] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 65.1.0, for MC 26.2 with MCP 20260616.103818
+[m[32m[21:21:33] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v65.1.0 Initialized
+[m[32m[21:21:33] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[m[32m[21:21:33] [Render thread/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\run\tacz
+[m[32m[21:21:33] [Render thread/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[m[32m[21:21:33] [Render thread/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[m[32m[21:21:34] [Download-1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[m[1;31m[21:21:34] [Download-1/ERROR] [mojang/RealmsClient]: Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:517) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:162) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.realmsclient.client.RealmsClient
+    REASON: classloading
+[m[32m[21:21:34] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, tacz_resources, mod_resources
+[m[32m[21:21:34] [Worker-Main-8/INFO] [minecraft/UnihexProvider]: Found unifont_pua-17.0.01.hex, loading
+[m[32m[21:21:34] [Worker-Main-2/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-17.0.01.hex, loading
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
+[m[32m[21:21:34] [Render thread/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
+[m[32m[21:21:34] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.GenericMessageScreen@b53ce18, overlay=net.minecraftforge.client.loading.ForgeLoadingOverlay@2a666c8e
+TACZ_RUNTIME_RELOAD progress=0.60765046 done=false forgeLoading=true
+[32m[21:21:34] [Worker-Main-1/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-17.0.01.hex, loading
+[m[32m[21:21:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 65.1.0 Target: null
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/modern_kinetic_gun:
+    particle
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/ammo:
+    particle
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/gun_smith_table:
+    particle
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/workbench_b:
+    particle
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/workbench_c:
+    particle
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/attachment:
+    particle
+[m[33m[21:21:35] [Worker-Main-6/WARN] [minecraft/MaterialBaker]: Missing texture references in model tacz:item/workbench_a:
+    particle
+[m[32m[21:21:37] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[m[32m[21:21:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 2048x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[m[32m[21:21:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.TitleScreen@729d1428, overlay=net.minecraftforge.client.loading.ForgeLoadingOverlay@2a666c8e
+[32m[21:21:39] [Download-1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[m[1;31m[21:21:39] [Download-1/ERROR] [mojang/RealmsAvailability]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:517) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:284) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:50) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.mojang.realmsclient.RealmsAvailability
+    REASON: classloading
+  com.mojang.realmsclient.client.RealmsClient
+    REASON: classloading
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.TitleScreen@729d1428, overlay=null
+[32m[21:21:41] [Render thread/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\run\tacz
+[m[32m[21:21:41] [Render thread/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[m[32m[21:21:41] [Render thread/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[m[32m[21:21:41] [Render thread/INFO] [minecraft/MinecraftServer]: Found new data pack tacz_resources, loading it automatically
+[m[32m[21:21:43] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 1769 recipes
+[m[32m[21:21:43] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 1688 advancements
+[m[32m[21:21:43] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 26.2
+[m[32m[21:21:43] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file .\saves\tacz-runtime-ebc01461-47b8-477e-9397-f9be5370be98\serverconfig\tacz-server.toml is not correct. Correcting
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistBlocks was corrected from null to its default, []. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistEntities was corrected from null to its default, []. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistBlocks was corrected from null to its default, []. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistEntities was corrected from null to its default, []. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.DamageBaseMultiplier was corrected from null to its default, 1.0. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.ArmorIgnoreBaseMultiplier was corrected from null to its default, 1.0. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.HeadShotBaseMultiplier was corrected from null to its default, 1.0. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.WeightSpeedMultiplier was corrected from null to its default, 0.015. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.HeadShotAABB was corrected from null to its default, []. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.AmmoBoxStackSize was corrected from null to its default, 3. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ClientGunPackDownloadUrls was corrected from null to its default, []. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableCrawl was corrected from null to its default, true. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableDefaultGunSmithTableFilter was corrected from null to its default, true. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootNetworkCheck was corrected from null to its default, true. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootCooldownCheck was corrected from null to its default, true. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file .\saves\tacz-runtime-ebc01461-47b8-477e-9397-f9be5370be98\serverconfig\forge-server.toml is not correct. Correcting
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[m[33m[21:21:43] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[m[32m[21:21:43] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Selecting global world spawn...
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Loading 0 persistent chunks...
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 16%
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:overworld
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_nether
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_end
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[m[32m[21:21:44] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.LevelLoadingScreen@1dd4c691, overlay=null
+[32m[21:21:44] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Loading 47 chunks for player spawn...
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 16%
+[m[32m[21:21:44] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 16%
+[m[32m[21:21:45] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Time elapsed: 1399 ms
+[m[32m[21:21:45] [Server thread/INFO] [minecraft/PlayerList]: TaczFixture[local:E:92f5b2a4] logged in with entity id 1 at (-6.5, 4.0, -1.5)
+[m[32m[21:21:45] [Server thread/INFO] [minecraft/MinecraftServer]: TaczFixture joined the game
+[m[32m[21:21:45] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 16, from 10
+[m[32m[21:21:45] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 12, from 0
+[m[32m[21:21:45] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[m[32m[21:21:45] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 2 advancements
+[m[32m[21:21:45] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[m[32m[21:21:45] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[m[32m[21:21:46] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 2 reached during a single frame. New capacity will be 8.
+[m[32m[21:21:46] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[m[32m[21:21:46] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[m[32m[21:21:46] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[mTACZ_RUNTIME_WAIT screen=null, overlay=null
+[32m[21:21:46] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[m[33m[21:21:47] [Render thread/WARN] [tacz/]: [TACZ Sound] Missing gun sound resource, skipped. sound=minecraft:ar_akilo_drop, path=minecraft:tacz_sounds/ar_akilo_drop.ogg
+[m[33m[21:21:47] [Render thread/WARN] [tacz/]: [TACZ Sound] Missing gun sound resource, skipped. sound=minecraft:ar_akilo_raise_shoulder, path=minecraft:tacz_sounds/ar_akilo_raise_shoulder.ogg
+[m[32m[21:21:47] [Render thread/INFO] [minecraft/DynamicUniformStorage]: Resizing Chunk Sections UBO, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[mTACZ_RUNTIME_RESULT {fixture=complete packaged TACZ in Forge development client; startup and content, not gameplay/visual parity, world=tacz-runtime-ebc01461-47b8-477e-9397-f9be5370be98, device=DeviceInfo[name=AMD Radeon 760M Graphics, vendorName=ATI Technologies Inc., driverInfo=4.6.0 Core Profile Context 26.8.1.260810, isZZeroToOne=true, backendName=OpenGL, timestampPeriod=1.0, limits=DeviceLimits[maxAnisotropy=16, minUniformOffsetAlignment=16, maxTextureSize=16384, maxMemoryAllocationSize=9223372036854775807, maxMultiDrawDirectInterleavedDrawCount=0, maxColorAttachments=8], features=DeviceFeatures[shaderDrawParameters=true, multiDrawDirectInterleaved=false, multiDrawDirectSeparate=true, multiDrawIndirect=true, drawIndirect=true, nonZeroFirstInstance=true, persistentMapping=true], underlyingExtensions=[GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic], hintsAndWorkarounds=HintsAndWorkarounds[writeToBufferIsSlow=false, anisotropyHasKnownIssues=true], type=OTHER], mods=[minecraft@26.2, tacz@1.1.8-hotfix-port.1, forge@65.1.0, tacz_runtime_fixture@1.0], status=passed, assertions=51, held_gun=tacz:ak47, custom_hand_frames=119, held_gun_scope=actual inventory sync, active first-person animation and cancelled native hand events; no pixel/visual parity or shooting claim}
+[32m[21:21:48] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.GenericMessageScreen@66c70e18, overlay=null
+[32m[21:21:48] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[m[32m[21:21:48] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[m[32m[21:21:48] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TaczFixture lost connection: Disconnected
+[m[32m[21:21:48] [Server thread/INFO] [minecraft/MinecraftServer]: TaczFixture left the game
+[m[32m[21:21:48] [Server thread/INFO] [minecraft/ServerCommonPacketListenerImpl]: Stopping singleplayer server as player logged out
+[m[32m[21:21:48] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[m[32m[21:21:48] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:overworld
+[m[32m[21:21:49] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_nether
+[m[32m[21:21:49] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[TACZ runtime fixture]'/minecraft:the_end
+[m[32m[21:21:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[m[32m[21:21:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[m[32m[21:21:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[m[32m[21:21:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[mTACZ_RUNTIME_WAIT screen=net.minecraft.client.gui.screens.ProgressScreen@47fb038d, overlay=null
+
+> Task :verifyTaczClient
+Full TACZ client fixture passed 51 assertions
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 34s
+5 actionable tasks: 3 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.0/userguide/configuration_cache_enabling.html

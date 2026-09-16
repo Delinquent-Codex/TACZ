@@ -1,0 +1,26 @@
+{
+  "fixture": "complete packaged TACZ in Forge development client; startup and content, not gameplay/visual parity",
+  "world": "tacz-runtime-2fd0c745-94b2-452e-8c1e-5498d19633a9",
+  "device": "DeviceInfo[name\u003dAMD Radeon 760M Graphics, vendorName\u003dATI Technologies Inc., driverInfo\u003d4.6.0 Core Profile Context 26.8.1.260810, isZZeroToOne\u003dtrue, backendName\u003dOpenGL, timestampPeriod\u003d1.0, limits\u003dDeviceLimits[maxAnisotropy\u003d16, minUniformOffsetAlignment\u003d16, maxTextureSize\u003d16384, maxMemoryAllocationSize\u003d9223372036854775807, maxMultiDrawDirectInterleavedDrawCount\u003d0, maxColorAttachments\u003d8], features\u003dDeviceFeatures[shaderDrawParameters\u003dtrue, multiDrawDirectInterleaved\u003dfalse, multiDrawDirectSeparate\u003dtrue, multiDrawIndirect\u003dtrue, drawIndirect\u003dtrue, nonZeroFirstInstance\u003dtrue, persistentMapping\u003dtrue], underlyingExtensions\u003d[GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic], hintsAndWorkarounds\u003dHintsAndWorkarounds[writeToBufferIsSlow\u003dfalse, anisotropyHasKnownIssues\u003dtrue], type\u003dOTHER]",
+  "backend": "OpenGL",
+  "mods": [
+    "minecraft@26.2",
+    "tacz@1.1.8-hotfix-port.1",
+    "forge@65.1.0",
+    "tacz_runtime_fixture@1.0"
+  ],
+  "status": "passed",
+  "assertions": 66,
+  "held_gun": "tacz:ak47",
+  "custom_hand_frames": 119,
+  "held_gun_scope": "actual inventory sync, active first-person animation and cancelled native hand events; no pixel/visual parity or shooting claim",
+  "shoot_result": "SUCCESS",
+  "after_shot": "Snapshot[magazine\u003d29, chamber\u003dtrue, reserve\u003d64, reloading\u003dfalse, survival\u003dtrue]",
+  "after_reload": "Snapshot[magazine\u003d30, chamber\u003dtrue, reserve\u003d63, reloading\u003dfalse, survival\u003dtrue]",
+  "gameplay_scope": "one survival AK-47 shot and partial reload through client operator API and real integrated play packets; no remote multiplayer or visual/audio parity claim",
+  "gameplay_stage": "SETTLE",
+  "server_shoot_events": 1,
+  "server_reload_events": 1,
+  "server_projectiles": 1,
+  "client_projectiles": 1
+}

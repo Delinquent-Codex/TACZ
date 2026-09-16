@@ -11,7 +11,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.client.settings.KeyModifier;
@@ -23,7 +22,7 @@ import org.lwjgl.glfw.GLFW;
 
 import static com.tacz.guns.util.InputExtraCheck.isInGame;
 
-@OnlyIn(Dist.CLIENT)
+// Client-only API; caller-side isolation replaces obsolete Forge member stripping.
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class ReloadKey {
     public static final KeyMapping RELOAD_KEY = new KeyMapping("key.tacz.reload.desc",
@@ -64,7 +63,7 @@ public class ReloadKey {
         return false;
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     @SubscribeEvent
     public static void autoReload(TickEvent.PlayerTickEvent.Pre event) {
         if (event.side() != LogicalSide.CLIENT) {

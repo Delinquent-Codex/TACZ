@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[65,)"
+license="GPL-3.0-or-later"
+clientSideOnly=true
+[[mods]]
+modId="tacz_runtime_fixture"
+version="1.0"
+displayName="TACZ Full Runtime Test Fixture"
+description='''Automated startup and pack checks alongside the complete TACZ JAR. Test infrastructure only.'''
+[[dependencies.tacz_runtime_fixture]]
+modId="tacz"
+mandatory=true
+versionRange="[1.1.8-hotfix-port.1]"
+ordering="AFTER"
+side="CLIENT"

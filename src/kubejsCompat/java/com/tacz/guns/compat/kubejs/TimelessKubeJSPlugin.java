@@ -22,6 +22,7 @@ import dev.latvian.mods.kubejs.script.BindingsEvent;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import dev.latvian.mods.rhino.util.wrap.TypeWrappers;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
@@ -30,9 +31,15 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TimelessKubeJSPlugin extends KubeJSPlugin {
+public class TimelessKubeJSPlugin extends KubeJSPlugin implements KubeJSIntegration {
     public static final String KUBEJS_MODID = "kubejs";
     private static final Map<String, RegistryObject<? extends AbstractGunItem>> GUNTYPE_REGISTER_MAP = new HashMap<>();
+
+    @Override
+    public void install(BusGroup modBus) {
+        installEventBridge();
+        RegisterEvent.getBus(modBus).addListener(this::onItemRegister);
+    }
 
     public static void installEventBridge() {
         GunEvent.installScriptDispatcher((event, scope) -> {

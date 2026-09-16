@@ -1,0 +1,108 @@
+
+> Configure project :
+Minecraft Mavenizer 0.5.21 by Forge Development LLC
+  Output:             C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\.gradle\mavenizer\repo
+  Output JSON:        C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\.gradle\mavenizer\dependencies\default.json
+  Dependencies Only:  false
+  Cache:              C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\mavenizer\caches
+  JDK Cache:          C:\Users\voltp\.gradle\caches\minecraftforge\forgegradle\mavenizer\caches
+  Offline:            false
+  Cache Only:         false
+  Ignore Cache:       false
+  Mappings:           auto
+  Foreign Repos:      [https://repo.maven.apache.org/maven2/, https://maven.minecraftforge.net/, https://libraries.minecraft.net/]
+  GradleVariantHack:  true
+  Disable Gradle:     false
+  Stub Jars:          false
+
+Processing Minecraft dependency: net.minecraftforge:forge:26.2-65.1.0
+Using Mappings: official-26.2
+Processing Minecraft Forge (userdev): 26.2-65.1.0
+Mappings Zip
+  srg2names[official-26.2][Empty]
+Mappings POM
+  pom[mappings_official]
+Client Extra
+  downloadLauncherManifest
+  downloadVersionJson[26.2]
+  download[26.2][client]
+  extra[client]
+Client Maven POM
+  pom[client-extra]
+Sources
+  listLibraries
+  stripClient
+  download[26.2][server]
+  extractServer
+  stripServer
+  merge
+  modifyAccess
+  stripSides
+  decompile
+  patch
+  patch[forge]
+  downloadSources
+  injectSources[forge]
+  remap[forge][official-26.2][javadoc]
+  remap[forge][official-26.2][javadoc][variants]
+Cache miss!
+java.lang.Exception: Cache miss! Stacktrace for Information Only
+	at net.minecraftforge.mcmaven.impl.Mavenizer.assertNotCacheOnly(Mavenizer.java:60)
+	at net.minecraftforge.mcmaven.impl.Mavenizer.checkCache(Mavenizer.java:94)
+	at net.minecraftforge.mcmaven.impl.MinecraftMaven.finalize(MinecraftMaven.java:416)
+	at net.minecraftforge.mcmaven.impl.MinecraftMaven.createForge(MinecraftMaven.java:241)
+	at net.minecraftforge.mcmaven.impl.MinecraftMaven.run(MinecraftMaven.java:119)
+	at net.minecraftforge.mcmaven.cli.MavenTask.run(MavenTask.java:218)
+	at net.minecraftforge.mcmaven.cli.Main.run(Main.java:70)
+	at net.minecraftforge.mcmaven.cli.Main.main(Main.java:23)
+Classes
+  recompile[forge][official-26.2]
+  injectData[forge][official-26.2]
+  injectData[forge][official-26.2][variants]
+Maven POM
+  pom[forge]
+Metadata
+  metadata[forge]
+  metadata[forge][variants]
+Minecraft Maven has finished, took 0:01.272
+
+> Task :compileJava
+C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\src\main\java\com\tacz\guns\porting\runtimefixture\RuntimeFixture.java:51: error: cannot find symbol
+            check(ModList.get().isLoaded("tacz"), "full mod is loaded");
+                         ^
+  symbol:   method get()
+  location: class ModList
+Note: C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\src\main\java\com\tacz\guns\porting\runtimefixture\RuntimeFixture.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 error
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/runtime-fixture/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  Note: C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\src\main\java\com\tacz\guns\porting\runtimefixture\RuntimeFixture.java uses or overrides a deprecated API.
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\runtime-fixture\src\main\java\com\tacz\guns\porting\runtimefixture\RuntimeFixture.java:51: error: cannot find symbol
+              check(ModList.get().isLoaded("tacz"), "full mod is loaded");
+                           ^
+    symbol:   method get()
+    location: class ModList
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 5s
+1 actionable task: 1 executed

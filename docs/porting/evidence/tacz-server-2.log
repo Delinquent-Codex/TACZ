@@ -1,0 +1,515 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.736
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :slimeLauncherMetadataForForge UP-TO-DATE
+
+> Task :runServer
+Slime Launcher setup is up-to-date, took 151ms
+Launching using main class: net.minecraftforge.bootstrap.ForgeBootstrap
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by net.minecraftforge.unsafe.UnsafeHacks (file:/C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.minecraftforge/unsafe/0.9.2/33bad02861cabd77c54a8c9d1205e8638bbbbb4f/unsafe-0.9.2.jar)
+WARNING: Please consider reporting this to the maintainers of class net.minecraftforge.unsafe.UnsafeHacks
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.freetype.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.4.1/a677b4a7bba84f925b4cc4f52a58c5248974bdeb/lwjgl-freetype-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.freetype.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.4.1/81431d868bcf162d4c915b9c39b2c7aae155ad4f/lwjgl-freetype-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.glfw.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.4.1/196101d96d9b2aa73264a96ae1dc8944a1446cee/lwjgl-glfw-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.glfw.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.4.1/a48bbdd544f00c88f8906e9d09e3f31bc1c17fac/lwjgl-glfw-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.jemalloc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.4.1/662e0926dd990f679e1cfb31d710d22d175bdabc/lwjgl-jemalloc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.jemalloc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.4.1/d8cf69e1155df83260f9bbe01944fe91f8ca3955/lwjgl-jemalloc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.openal.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.4.1/4b996cc3321a807ee34e7ce53aba7fe529dc485a/lwjgl-openal-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.openal.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.4.1/9e4bab87e9b89876fa77ea3c19e1b45334b97c10/lwjgl-openal-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.opengl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/4b6a9c5d7d5325312b740d9886087b7292b43bf9/lwjgl-opengl-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.opengl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.4.1/cfd47352b758a0c9f7046de467b103182ec77eb1/lwjgl-opengl-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.shaderc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-shaderc/3.4.1/50884f728fdd7cff33731403fdc53b724ff09c85/lwjgl-shaderc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.shaderc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-shaderc/3.4.1/cd3ab907c096e27a9024917dcab4379e90c7799d/lwjgl-shaderc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.spvc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-spvc/3.4.1/a60a8d48822ec9449a5de9b6c50e5ed6ae7e8e9f/lwjgl-spvc-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.spvc.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-spvc/3.4.1/cea4bc145dce25e8a436575f9034a7bd142b0528/lwjgl-spvc-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.stb.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/7f4c39b3d56c7bae4900ee6e59d8f75432bdb18f/lwjgl-stb-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.stb.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.4.1/e091cd3b25ab7db88f0e34a0d2797dc396a528fa/lwjgl-stb-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.tinyfd.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/9c93b8211856bfe682f3225ccac811e74243f98e/lwjgl-tinyfd-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.tinyfd.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.4.1/f585da74a17695ba38351697712c03784ee1348b/lwjgl-tinyfd-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.vma.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/bfbf1a41c54641f396ba42541075f5db517c7ad9/lwjgl-vma-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.vma.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-vma/3.4.1/c6abacce75eeb8e23bd88ad89faf233be6e053c3/lwjgl-vma-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/d1d3a7052da47ccde2a5fdf3a1bd45d801c3157c/lwjgl-3.4.1-natives-windows-arm64.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl.natives: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/65de43bd52507e108a58247c0da57a50ce3ee6f6/lwjgl-3.4.1-natives-windows-x86.jar!/]
+Ignoring duplicate module on SecureModuleFinder: org.lwjgl: Jar[jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.4.1/6105690714874b995aa7812e4f7732a21109276c/lwjgl-3.4.1.jar!/]
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in module com.sun.jna (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.17.0/33d12735bef894440780fce64f9758d420c7bae2/jna-5.17.0.jar!/)
+WARNING: Use --enable-native-access=com.sun.jna to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jline.nativ.JLineNativeLoader in module org.jline.nativ (jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.jline/jline-native/3.25.1/7f58e474f7d94db5bf87b1fddf4fa646475779f2/jline-native-3.25.1.jar!/)
+WARNING: Use --enable-native-access=org.jline.nativ to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[32m[21:10:47] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, forge_userdev_server, --mixin.config=tacz.mixins.json, --mixin.config=tacz.compat.acceleratedrendering.mixins.json, --nogui]
+[m[32m[21:10:47] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 25.0.4.1+1-LTS
+[m[32m[21:10:47] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.6 starting: java version 25.0.4.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[m[32m[21:10:47] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_server
+[m[32m[21:10:47] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/voltp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=SERVER
+[m[32m[21:10:48] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.LlamaLad7:MixinExtras
+[m[32m[21:10:48] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[m[32m[21:10:48] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for io.github.llamalad7:mixinextras-forge
+[m[32m[21:10:48] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*mixinextras-forge-0.5.4.jar
+[m[32m[21:10:48] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Found 2 dependencies adding them to mods collection
+[m[32m[21:10:48] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[m[32m[21:10:48] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_server' with arguments [--gameDir, ., --nogui]
+[m[1;31m[21:10:49] [main/ERROR] [os.dr.wi.re.HkeyPerformanceDataUtil/]: Unable to locate English counter names in registry Perflib 009. Counters may need to be rebuilt: 
+com.sun.jna.platform.win32.Win32Exception: The parameter is incorrect.
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:921) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:898) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.mapCounterIndicesFromRegistry(HkeyPerformanceDataUtil.java:274) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.<clinit>(HkeyPerformanceDataUtil.java:51) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.ProcessPerformanceData.buildProcessMapFromRegistry(ProcessPerformanceData.java:45) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.queryProcessMapFromRegistry(WindowsOperatingSystem.java:328) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.util.Memoizer$1.get(Memoizer.java:65) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.processMapToList(WindowsOperatingSystem.java:298) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.getProcess(WindowsOperatingSystem.java:292) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.OperatingSystem.getCurrentProcess(OperatingSystem.java:246) [oshi-core-6.9.0.jar!/:6.9.0]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[m[33m[21:10:49] [main/WARN] [os.ut.pl.wi.PerfCounterQuery/]: Unable to locate English counter names in registry Perflib 009. Assuming English counters. Error 0x80070057. See https://support.microsoft.com/en-us/help/300956/how-to-manually-rebuild-performance-counter-library-values
+[m[33m[21:10:49] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Loads
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$0(SystemReport.java:191) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:188) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[m[33m[21:10:49] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Virtual Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$1(SystemReport.java:208) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:208) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[m[33m[21:10:49] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Resident Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$2(SystemReport.java:209) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:209) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:115) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[m[32m[21:10:49] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[m[33m[21:10:51] [main/WARN] [mixin/]: Error loading class: com/tacz/guns/item/AmmoItem (java.lang.UnsupportedOperationException: Method getName in mod class com/tacz/guns/item/AmmoItem is annotated with @OnlyIn, this is no longer supported as it slowed down startup times)
+[m[1;31m[21:10:51] [main/ERROR] [minecraft/Main]: Failed to start the minecraft server
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:142) ~[modlauncher-10.2.6.jar:10.2.6]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:93) ~[modlauncher-10.2.6.jar:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:105) ~[modlauncher-10.2.6.jar:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:49) ~[modlauncher-10.2.6.jar:?]
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.readerToClass(SecureModuleClassLoader.java:480) ~[securemodules-2.2.24.jar!/:?]
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.findClass(SecureModuleClassLoader.java:406) ~[securemodules-2.2.24.jar!/:?]
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.loadClass(SecureModuleClassLoader.java:422) ~[securemodules-2.2.24.jar!/:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[?:?]
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3146) ~[?:?]
+	at java.base/java.lang.Class.getMethod0(Class.java:3131) ~[?:?]
+	at java.base/java.lang.Class.getMethod(Class.java:2164) ~[?:?]
+	at java.base/java.lang.Class.getEnumConstantsShared(Class.java:3436) ~[?:?]
+	at java.base/java.lang.System$1.getEnumConstantsShared(System.java:2028) ~[?:?]
+	at java.base/java.util.EnumMap.getKeyUniverse(EnumMap.java:751) ~[?:?]
+	at java.base/java.util.EnumMap.<init>(EnumMap.java:138) ~[?:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.util.Util.makeEnumMap(Util.java:625) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.EquipmentAssets.<clinit>(EquipmentAssets.java:23) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.Equippable.lambda$static$0(Equippable.java:49) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at SECURE-BOOTSTRAP/datafixerupper@10.0.21/com.mojang.serialization.codecs.RecordCodecBuilder.create(RecordCodecBuilder.java:72) ~[datafixerupper-10.0.21.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.Equippable.<clinit>(Equippable.java:46) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.lambda$static$32(DataComponents.java:194) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.register(DataComponents.java:437) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.<clinit>(DataComponents.java:193) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.Item$Properties.fireResistant(Item.java:465) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.Items.<clinit>(Items.java:177) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.block.ComposterBlock.bootStrap(ComposterBlock.java:74) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Bootstrap.bootStrap(Bootstrap.java:52) ~[forge-26.2-65.1.0.jar%230!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:125) [forge-26.2-65.1.0.jar%230!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268) [slime-launcher-0.2.3.jar:0.2.3]
+	at net.minecraftforge.launcher.Main.main(Main.java:57) [slime-launcher-0.2.3.jar:0.2.3]
+Caused by: org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: com.tacz.guns.item.AmmoItem
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.transformMethod(MixinPreProcessorStandard.java:754) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.transform(MixinPreProcessorStandard.java:739) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.attach(MixinPreProcessorStandard.java:310) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.createContextFor(MixinPreProcessorStandard.java:280) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinInfo.createContextFor(MixinInfo.java:1288) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:201) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:398) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:380) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.7.jar:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	... 51 more
+Transformer Audit:
+  net.minecraft.core.component.DataComponents
+    REASON: classloading
+  net.minecraft.server.Bootstrap
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+  net.minecraft.util.Util
+    REASON: classloading
+  net.minecraft.world.item.Item$Properties
+    REASON: classloading
+  net.minecraft.world.item.Items
+    REASON: classloading
+  net.minecraft.world.item.equipment.EquipmentAssets
+    REASON: classloading
+  net.minecraft.world.item.equipment.Equippable
+    REASON: classloading
+  net.minecraft.world.level.block.ComposterBlock
+    REASON: classloading
+2026-09-15T04:10:51.223112800Z main ERROR An exception occurred processing Appender File
+org.apache.logging.log4j.core.appender.AppenderLoggingException: java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.world.item.Items
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:164)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:807)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:765)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:741)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.logParent(LoggerConfig.java:798)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:767)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:741)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:685)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:92)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.Logger.log(Logger.java:187)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2970)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2922)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2904)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2648)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:2587)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.slf4j2.impl@2.26.0/org.apache.logging.slf4j.Log4jLogger.error(Log4jLogger.java:348)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:269)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96)
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17)
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133)
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53)
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19)
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282)
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268)
+	at net.minecraftforge.launcher.Main.main(Main.java:57)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.world.item.Items
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.util.LoaderUtil.loadClass(LoaderUtil.java:212)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.lambda$static$1(ThrowableExtendedStackTraceRenderer.java:196)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.loadClass(ThrowableExtendedStackTraceRenderer.java:180)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.createClassResourceInfoByName(ThrowableExtendedStackTraceRenderer.java:166)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.ofThrowable(ThrowableExtendedStackTraceRenderer.java:96)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.access$000(ThrowableExtendedStackTraceRenderer.java:81)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:43)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:34)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableStackTraceRenderer.renderThrowable(ThrowableStackTraceRenderer.java:55)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowablePatternConverter.format(ThrowablePatternConverter.java:130)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout$NoFormatPatternSerializer.toSerializable(PatternLayout.java:354)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.toText(PatternLayout.java:251)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:237)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:57)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:227)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:220)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:211)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.append(RollingRandomAccessFileAppender.java:395)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160)
+	... 37 more
+Caused by: java.lang.ExceptionInInitializerError: Exception org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered [in thread "main"]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:142)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:93)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:105)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:49)
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.readerToClass(SecureModuleClassLoader.java:480)
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.findClass(SecureModuleClassLoader.java:406)
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.loadClass(SecureModuleClassLoader.java:422)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3146)
+	at java.base/java.lang.Class.getMethod0(Class.java:3131)
+	at java.base/java.lang.Class.getMethod(Class.java:2164)
+	at java.base/java.lang.Class.getEnumConstantsShared(Class.java:3436)
+	at java.base/java.lang.System$1.getEnumConstantsShared(System.java:2028)
+	at java.base/java.util.EnumMap.getKeyUniverse(EnumMap.java:751)
+	at java.base/java.util.EnumMap.<init>(EnumMap.java:138)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.util.Util.makeEnumMap(Util.java:625)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.EquipmentAssets.<clinit>(EquipmentAssets.java:23)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.Equippable.lambda$static$0(Equippable.java:49)
+	at SECURE-BOOTSTRAP/datafixerupper@10.0.21/com.mojang.serialization.codecs.RecordCodecBuilder.create(RecordCodecBuilder.java:72)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.Equippable.<clinit>(Equippable.java:46)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.lambda$static$32(DataComponents.java:194)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.register(DataComponents.java:437)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.<clinit>(DataComponents.java:193)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.Item$Properties.fireResistant(Item.java:465)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.Items.<clinit>(Items.java:177)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.block.ComposterBlock.bootStrap(ComposterBlock.java:74)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Bootstrap.bootStrap(Bootstrap.java:52)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:125)
+	... 18 more
+
+2026-09-15T04:10:51.225117300Z main ERROR An exception occurred processing Appender DebugFile
+org.apache.logging.log4j.core.appender.AppenderLoggingException: java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.world.item.Items
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:164)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:807)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:765)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:741)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.logParent(LoggerConfig.java:798)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:767)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:741)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:685)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:92)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.Logger.log(Logger.java:187)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2970)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2922)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2904)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2648)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:2587)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.slf4j2.impl@2.26.0/org.apache.logging.slf4j.Log4jLogger.error(Log4jLogger.java:348)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:269)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96)
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17)
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133)
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53)
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19)
+	at net.minecraftforge.launcher.Main$Launcher.run(Main.java:282)
+	at net.minecraftforge.launcher.Main$Launcher.access$000(Main.java:268)
+	at net.minecraftforge.launcher.Main.main(Main.java:57)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.world.item.Items
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.util.LoaderUtil.loadClass(LoaderUtil.java:212)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.lambda$static$1(ThrowableExtendedStackTraceRenderer.java:196)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.loadClass(ThrowableExtendedStackTraceRenderer.java:180)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.createClassResourceInfoByName(ThrowableExtendedStackTraceRenderer.java:166)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.ofThrowable(ThrowableExtendedStackTraceRenderer.java:96)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.access$000(ThrowableExtendedStackTraceRenderer.java:81)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:43)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:34)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableStackTraceRenderer.renderThrowable(ThrowableStackTraceRenderer.java:55)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowablePatternConverter.format(ThrowablePatternConverter.java:130)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout$NoFormatPatternSerializer.toSerializable(PatternLayout.java:354)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.toText(PatternLayout.java:251)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:237)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:57)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:227)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:220)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:211)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.append(RollingRandomAccessFileAppender.java:395)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160)
+	... 37 more
+Caused by: java.lang.ExceptionInInitializerError: Exception org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered [in thread "main"]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:142)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:93)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:105)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:49)
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.readerToClass(SecureModuleClassLoader.java:480)
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.findClass(SecureModuleClassLoader.java:406)
+	at cpw.mods.securejarhandler/net.minecraftforge.securemodules.SecureModuleClassLoader.loadClass(SecureModuleClassLoader.java:422)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3146)
+	at java.base/java.lang.Class.getMethod0(Class.java:3131)
+	at java.base/java.lang.Class.getMethod(Class.java:2164)
+	at java.base/java.lang.Class.getEnumConstantsShared(Class.java:3436)
+	at java.base/java.lang.System$1.getEnumConstantsShared(System.java:2028)
+	at java.base/java.util.EnumMap.getKeyUniverse(EnumMap.java:751)
+	at java.base/java.util.EnumMap.<init>(EnumMap.java:138)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.util.Util.makeEnumMap(Util.java:625)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.EquipmentAssets.<clinit>(EquipmentAssets.java:23)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.Equippable.lambda$static$0(Equippable.java:49)
+	at SECURE-BOOTSTRAP/datafixerupper@10.0.21/com.mojang.serialization.codecs.RecordCodecBuilder.create(RecordCodecBuilder.java:72)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.equipment.Equippable.<clinit>(Equippable.java:46)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.lambda$static$32(DataComponents.java:194)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.register(DataComponents.java:437)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.core.component.DataComponents.<clinit>(DataComponents.java:193)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.Item$Properties.fireResistant(Item.java:465)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.item.Items.<clinit>(Items.java:177)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.block.ComposterBlock.bootStrap(ComposterBlock.java:74)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Bootstrap.bootStrap(Bootstrap.java:52)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:125)
+	... 18 more
+
+[m
+BUILD SUCCESSFUL in 8s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.0/userguide/configuration_cache_enabling.html

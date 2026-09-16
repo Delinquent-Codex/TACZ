@@ -1,126 +1,51 @@
 [
   {
-    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
-    "line": 6,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java",
-    "line": 48,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java",
-    "line": 12,
-    "error": "package MultiBufferSource does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/newly/OculusCompatNewly.java",
-    "line": 5,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/newly/OculusCompatNewly.java",
-    "line": 12,
-    "error": "package MultiBufferSource does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/OculusCompat.java",
-    "line": 7,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/OculusCompat.java",
-    "line": 16,
-    "error": "package MultiBufferSource does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/OculusCompat.java",
-    "line": 45,
-    "error": "package MultiBufferSource does not exist"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
-    "line": 22,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/CrosshairDropdown.java",
-    "line": 42,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/cloth/widget/OpenGunPackDirEntry.java",
-    "line": 16,
-    "error": "OpenGunPackDirEntry is not abstract and does not override abstract method setFocused(@org.jspecify.annotations.Nullable GuiEventListener) in ContainerEventHandler"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
+    "file": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
     "line": 17,
     "error": "cannot access ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",
-    "line": 49,
+    "file": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java",
+    "line": 56,
     "error": "incompatible types: invalid constructor reference"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java",
-    "line": 14,
-    "error": "cannot access BufferSource"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/oculus/newly/OculusCompatNewly.java",
-    "line": 14,
-    "error": "cannot find symbol"
-  },
-  {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
     "line": 9,
-    "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
+    "error": "cannot access ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
     "line": 10,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
     "line": 11,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
     "line": 12,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "line": 52,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "line": 160,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "line": 188,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   },
   {
-    "file": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
+    "file": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "line": 215,
     "error": "incompatible types: Identifier cannot be converted to ResourceLocation"
   }

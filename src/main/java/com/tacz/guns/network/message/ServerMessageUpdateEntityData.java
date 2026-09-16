@@ -6,8 +6,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 
 import java.util.ArrayList;
@@ -43,22 +41,24 @@ public class ServerMessageUpdateEntityData {
 
     public static void handle(ServerMessageUpdateEntityData message, CustomPayloadEvent.Context context) {
         if (context.isClientSide()) {
-            context.enqueueWork(() -> onHandle(message));
+            context.enqueueWork(() -> ClientHandler.onHandle(message));
         }
         context.setPacketHandled(true);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private static void onHandle(ServerMessageUpdateEntityData message) {
-        Level level = Minecraft.getInstance().level;
-        if (level == null) {
-            return;
+    // Loading codecs on the server must not verify client-only callback bytecode.
+    private static final class ClientHandler {
+        private static void onHandle(ServerMessageUpdateEntityData message) {
+            Level level = Minecraft.getInstance().level;
+            if (level == null) {
+                return;
+            }
+            Entity entity = level.getEntity(message.entityId);
+            if (entity == null) {
+                return;
+            }
+            SyncedEntityData instance = SyncedEntityData.instance();
+            message.entries.forEach(entry -> instance.set(entity, entry.getKey(), entry.getValue()));
         }
-        Entity entity = level.getEntity(message.entityId);
-        if (entity == null) {
-            return;
-        }
-        SyncedEntityData instance = SyncedEntityData.instance();
-        message.entries.forEach(entry -> instance.set(entity, entry.getKey(), entry.getValue()));
     }
 }

@@ -1,0 +1,1 @@
+gradle.projectsEvaluated { allprojects { tasks.matching { it.name == 'runServer' }.configureEach { systemProperty 'terminal.jline', 'false'; standardInput = new ByteArrayInputStream('list\ntacz reload\nsave-all\nstop\n'.getBytes('UTF-8')); timeout = java.time.Duration.ofMinutes(3) } } }

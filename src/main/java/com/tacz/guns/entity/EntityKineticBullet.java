@@ -61,8 +61,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.entity.PartEntity;
 import net.minecraftforge.fml.LogicalSide;
@@ -241,7 +239,7 @@ public class EntityKineticBullet extends Projectile implements IEntityAdditional
     protected void defineSynchedData(SynchedEntityData.Builder data) {
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     private void spawnTrailParticles() { AmmoParticleSpawner.addParticle(this); }
 
     @Override

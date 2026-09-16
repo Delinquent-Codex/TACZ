@@ -250,65 +250,75 @@ public class LocalPlayerShoot {
         // 连发计数器
         AtomicInteger count = new AtomicInteger(0);
 
-        LocalPlayerDataHolder.SCHEDULED_EXECUTOR_SERVICE.scheduleAtFixedRate(() -> {
+        class ShootTask implements Runnable {
+            private ScheduledFuture<?> future;
 
-            if (count.get() == 0) {
-                // 转换 isRecord 状态，允许下一个tick的开火检测。
-                data.isShootRecorded = true;
+            private synchronized void start() {
+                // Hold the same monitor as run(): a zero-delay callback must not run
+                // before its own future is assigned.
+                future = LocalPlayerDataHolder.SCHEDULED_EXECUTOR_SERVICE.scheduleAtFixedRate(this, delay, period, TimeUnit.MILLISECONDS);
             }
-            //Handle Heat Data
-            if(gunData.hasHeatData()) {
-                if(iGun.isOverheatLocked(mainHandItem)) {
-                    ScheduledFuture<?> future = (ScheduledFuture<?>) Thread.currentThread();
+
+            @Override
+            public synchronized void run() {
+
+                if (count.get() == 0) {
+                    // 转换 isRecord 状态，允许下一个tick的开火检测。
+                    data.isShootRecorded = true;
+                }
+                //Handle Heat Data
+                if(gunData.hasHeatData()) {
+                    if(iGun.isOverheatLocked(mainHandItem)) {
+                        future.cancel(false); // 取消当前任务
+                        return;
+                    }
+                }
+                // 如果达到最大连发次数，或者玩家已经死亡，取消任务
+                if (count.get() >= maxCount || player.isDeadOrDying()) {
                     future.cancel(false); // 取消当前任务
                     return;
                 }
-            }
-            // 如果达到最大连发次数，或者玩家已经死亡，取消任务
-            if (count.get() >= maxCount || player.isDeadOrDying()) {
-                ScheduledFuture<?> future = (ScheduledFuture<?>) Thread.currentThread();
-                future.cancel(false); // 取消当前任务
-                return;
-            }
 
-            // 以下逻辑只需要执行一次
-            if (count.get() == 0) {
-                // 如果状态锁正在准备锁定，且不是开火的状态锁，则不允许开火(主要用于防止切枪后开火动作覆盖切枪动作)
-                if (data.clientStateLock && data.lockedCondition != SHOOT_LOCKED_CONDITION && data.lockedCondition != null) {
-                    return;
-                }
-                // 记录新的开火时间戳
-                data.clientLastShootTimestamp = data.clientShootTimestamp;
-                data.clientShootTimestamp = System.currentTimeMillis();
-                // 发送开火的数据包，通知服务器
-                NetworkHandler.sendToServer(new ClientMessagePlayerShoot(data.clientShootTimestamp - data.clientBaseTimestamp, chargeProgress));
-            }
-
-            // todo 需要检查
-            // 播放声音和状态机触发需要从异步线程上传到主线程执行，否则会引起cme
-            Minecraft.getInstance().submitAsync(() -> {
-                // 触发击发事件
-                boolean fire = !GunFireEvent.BUS.post(new GunFireEvent(player, mainHandItem, LogicalSide.CLIENT));
-                if (fire) {
-                    // 动画和声音循环播放
-                    AnimationStateMachine<?> animationStateMachine = display.getAnimationStateMachine();
-                    if (animationStateMachine != null) {
-                        animationStateMachine.trigger(GunAnimationConstant.INPUT_SHOOT);
+                // 以下逻辑只需要执行一次
+                if (count.get() == 0) {
+                    // 如果状态锁正在准备锁定，且不是开火的状态锁，则不允许开火(主要用于防止切枪后开火动作覆盖切枪动作)
+                    if (data.clientStateLock && data.lockedCondition != SHOOT_LOCKED_CONDITION && data.lockedCondition != null) {
+                        return;
                     }
-                    // 获取消音
-                    final boolean useSilenceSound = this.useSilenceSound();
-                    // 开火需要打断检视
-                    SoundPlayManager.stopPlayGunSound(display, SoundManager.INSPECT_SOUND);
-                    if (useSilenceSound) {
-                        SoundPlayManager.playSilenceSound(player, display, gunData);
-                    } else {
-                        SoundPlayManager.playShootSound(player, display, gunData);
-                    }
+                    // 记录新的开火时间戳
+                    data.clientLastShootTimestamp = data.clientShootTimestamp;
+                    data.clientShootTimestamp = System.currentTimeMillis();
+                    // 发送开火的数据包，通知服务器
+                    NetworkHandler.sendToServer(new ClientMessagePlayerShoot(data.clientShootTimestamp - data.clientBaseTimestamp, chargeProgress));
                 }
-            });
 
-            count.getAndIncrement();
-        }, delay, period, TimeUnit.MILLISECONDS);
+                // todo 需要检查
+                // 播放声音和状态机触发需要从异步线程上传到主线程执行，否则会引起cme
+                Minecraft.getInstance().submitAsync(() -> {
+                    // 触发击发事件
+                    boolean fire = !GunFireEvent.BUS.post(new GunFireEvent(player, mainHandItem, LogicalSide.CLIENT));
+                    if (fire) {
+                        // 动画和声音循环播放
+                        AnimationStateMachine<?> animationStateMachine = display.getAnimationStateMachine();
+                        if (animationStateMachine != null) {
+                            animationStateMachine.trigger(GunAnimationConstant.INPUT_SHOOT);
+                        }
+                        // 获取消音
+                        final boolean useSilenceSound = LocalPlayerShoot.this.useSilenceSound();
+                        // 开火需要打断检视
+                        SoundPlayManager.stopPlayGunSound(display, SoundManager.INSPECT_SOUND);
+                        if (useSilenceSound) {
+                            SoundPlayManager.playSilenceSound(player, display, gunData);
+                        } else {
+                            SoundPlayManager.playShootSound(player, display, gunData);
+                        }
+                    }
+                });
+
+                count.getAndIncrement();
+            }
+        }
+        new ShootTask().start();
     }
 
     private boolean useSilenceSound() {

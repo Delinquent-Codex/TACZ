@@ -30,8 +30,6 @@ import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import com.tacz.guns.resource.serialize.LegacyParticleParser;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.Nullable;
@@ -46,7 +44,7 @@ import java.util.function.BiFunction;
 /**
  * 经过处理和校验的枪械显示数据
  */
-@OnlyIn(Dist.CLIENT)
+// Client-only API; caller-side isolation replaces obsolete Forge member stripping.
 public class GunDisplayInstance {
     private final Identifier displayId;
     private final GunDisplay display;

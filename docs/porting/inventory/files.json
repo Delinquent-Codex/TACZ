@@ -604,7 +604,7 @@
     "git_blob": "9e995c072dafa302809cdd802526be57a53ab905",
     "checkout_sha256": "773c19d85c6780b2aadcbdf19219080c62bf253f759bee4660700366480fc30b",
     "bytes": 2080,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/api/client/gameplay/IClientPlayerGunOperator.java"
   },
   {
@@ -964,7 +964,7 @@
     "git_blob": "b01459c0400e045fe963833975fd20347660c2c1",
     "checkout_sha256": "d89a3cf01fd6f515bfbb429b59be683bc77e24fa18c85793fcdf04b83dcf45e0",
     "bytes": 3177,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/api/modifier/IAttachmentModifier.java"
   },
   {
@@ -1348,7 +1348,7 @@
     "git_blob": "34f380aec9f5b91505d560140207dd25e2e2f6ac",
     "checkout_sha256": "d3c272a77b7f89489e65aa2869667d74dcee6e300a873dd3d915fc1e9ee7294f",
     "bytes": 4626,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerDataHolder.java"
   },
   {
@@ -1980,7 +1980,7 @@
     "git_blob": "15514db8275546c5fb618d434c41b2c9437e289d",
     "checkout_sha256": "8315549d7104d622349e571a882f4111726ba438618646cc07c63d58c02974d5",
     "bytes": 4185,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/client/particle/AmmoParticleSpawner.java"
   },
   {
@@ -3004,16 +3004,16 @@
     "git_blob": "86da3cfd14dd0ec0b3b38ed4820d0947b6d85ee0",
     "checkout_sha256": "e0a5493cef5e38e6c2da016391786a7d8ac1538cdd4ecd4c7a3d28da276e8fa8",
     "bytes": 3762,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/TimelessKubeJSPlugin.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java",
     "git_blob": "4d47e6b593f4a4e1fcb4aa13db63b04b98388961",
     "checkout_sha256": "638172c230b567e8f4ecdeb06603142795494245eeca81f8357936d0ba3ccf65",
     "bytes": 867,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/custom/CustomGunItemBuilder.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/custom/KubeJSCustomGunItem.java",
@@ -3028,24 +3028,24 @@
     "git_blob": "6784aedae3619e7e4d565e1f66ff044498ab3feb",
     "checkout_sha256": "4e99f4f2b57a4ad7cfad2ddb91d7b73fa1c6d8248986685ac5760f1f45f91f55",
     "bytes": 10064,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/GunKubeJSEvents.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java",
     "git_blob": "b45c2843d767ac46f90204c2eb8e82b5080179d9",
     "checkout_sha256": "aa204296193c99d0b56348e074515a6f53e9a548f90f43220438f9d0981641d7",
     "bytes": 3294,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessClientEvents.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java",
     "git_blob": "680a25cd77e921d5c0cb3286fcd681458cef4565",
     "checkout_sha256": "4eafbde0cc080506e07f5dd916049f055b1f7f1ac094328e5031cba827bc03ac",
     "bytes": 3995,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessCommonEvents.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessForgeEventWrappers.java",
@@ -3060,40 +3060,40 @@
     "git_blob": "8bdea814f3c74943e4ba3be46bb0c998d6dea44b",
     "checkout_sha256": "88b3e49005504b8f2412626993b64169bbbc5d04561fba20860a6d5380084023",
     "bytes": 3731,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessKubeJSEventRegister.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java",
     "git_blob": "6d4b1059c52ae7b1a3871a093fdf357230c096c1",
     "checkout_sha256": "e285cbba4e87a3f3ec16ec43d7978803cb30fa5d4665818608c106224b321b04",
     "bytes": 1799,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/events/TimelessServerEvents.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/recipe/GunSmithTableResultComponents.java",
     "git_blob": "65da3630e8b8e1eeedb634d361d8a069ed911ea3",
     "checkout_sha256": "33cf7d8cff5771f829605b9f64e64f104b5a8533912d7d38282c8ce9d31fcbf4",
     "bytes": 1345,
-    "disposition": "retained",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/recipe/GunSmithTableResultComponents.java"
+    "disposition": "relocated",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/recipe/GunSmithTableResultComponents.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessGunSmithTableRecipeSchema.java",
     "git_blob": "c96ee1b2cce153985108b3133592f6364d40e3e5",
     "checkout_sha256": "6bcfbba5930b448709a3badd7f510de1a3dbb05ae3b87383d0deda9110114694",
     "bytes": 697,
-    "disposition": "retained",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessGunSmithTableRecipeSchema.java"
+    "disposition": "relocated",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/recipe/TimelessGunSmithTableRecipeSchema.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java",
     "git_blob": "999a1a9ad76897e4fc5748cbab1a8eace657b015",
     "checkout_sha256": "ac5096a5d15bfcdc21ba314199d6d41a9da7610e7e18e9b5dbef29f2425c2b43",
     "bytes": 8394,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/recipe/TimelessRecipeJS.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/util/AmmoNbtFactory.java",
@@ -3124,8 +3124,8 @@
     "git_blob": "5a903185fb2bd21381df755ecf52d45b819bcb3b",
     "checkout_sha256": "8e10e8bfa78bd9fd9a7145b0ebf866bec533f702601e1e7d86e86a745fed7a35",
     "bytes": 6075,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java"
+    "disposition": "relocated and modified",
+    "target": "src/kubejsCompat/java/com/tacz/guns/compat/kubejs/util/GunSmithTableResultInfo.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/kubejs/util/TimelessItemNbtFactory.java",
@@ -3164,7 +3164,7 @@
     "git_blob": "2f83126be10737f599e01f28d70699e3a8f02a73",
     "checkout_sha256": "c3573d838b29254e77dfe2cb1657b0ab7c0bfe2f6c6e11eabbdd43ac47ad8515",
     "bytes": 725,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/oculus/legacy/OculusCompatLegacy.java"
   },
   {
@@ -3172,7 +3172,7 @@
     "git_blob": "15ebb28b346075615b6a581d6137f2fefe9cff10",
     "checkout_sha256": "11e1604366160925a5528c1f7682a054bd7505842ca5a93fd4d0d1033beebd75",
     "bytes": 727,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/compat/oculus/newly/OculusCompatNewly.java"
   },
   {
@@ -3204,40 +3204,40 @@
     "git_blob": "b2f6e2ac86ea6a8d53060e081167cd9ecdbc35a0",
     "checkout_sha256": "c02215dc9ddef80b42f03f8cc52d75cb09297a59853860768fe4a403b35628f3",
     "bytes": 2757,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java"
+    "disposition": "relocated and modified",
+    "target": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AdjustmentYRotModifier.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java",
     "git_blob": "6e2c999250105b0d52d80b00242ff427695e575b",
     "checkout_sha256": "8153a9738df2ce7059ee10239cb2aeb1b1cd80bf27e2f8949e76e0473e6fabf9",
     "bytes": 1010,
-    "disposition": "retained",
-    "target": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java"
+    "disposition": "relocated",
+    "target": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationDataRegisterFactory.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java",
     "git_blob": "7c2cd47568edcfb2d3685295635365e33405a086",
     "checkout_sha256": "6aeda9ffac75c55d023cb2d1dbc4e43c91ef2091ea25ca39ac2fc4cc857d287e",
     "bytes": 16588,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java"
+    "disposition": "relocated and modified",
+    "target": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/AnimationManager.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java",
     "git_blob": "357da6e056a6439601a6ad7db6cce7a7367cf540",
     "checkout_sha256": "d71c3d403df43e29dc75d83d1477c543c7ed3fad3eb1745caefc099d7cb467db",
     "bytes": 4097,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java"
+    "disposition": "relocated and modified",
+    "target": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorAssetManager.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java",
     "git_blob": "b4907b9c7e809c96c86bd64c0adb4e572d9e08b4",
     "checkout_sha256": "395dae916f45f7aba9460c72d522576ecaee1b907cc20c087296e660ff34edfe",
     "bytes": 2945,
-    "disposition": "modified",
-    "target": "src/main/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java"
+    "disposition": "relocated and modified",
+    "target": "src/playerAnimatorCompat/java/com/tacz/guns/compat/playeranimator/animation/PlayerAnimatorLoader.java"
   },
   {
     "path": "src/main/java/com/tacz/guns/compat/shouldersurfing/ShoulderSurfingCompat.java",
@@ -4652,7 +4652,7 @@
     "git_blob": "870669d992bc46f21401177f5a5cbed49d0809f3",
     "checkout_sha256": "5996a9339ec2345118bb5ebb59367a435acd38a117bc2bcd98cc107ca355fd0d",
     "bytes": 4721,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/AdsModifier.java"
   },
   {
@@ -4660,7 +4660,7 @@
     "git_blob": "d9a5c9b4da89d40bc99f62a8560d8fae04ecb20b",
     "checkout_sha256": "2bf04d9527c095d16e41102d787be348cc6eb4fb1dd2ce6a05ebd61e2ab084df",
     "bytes": 2908,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/AimInaccuracyModifier.java"
   },
   {
@@ -4668,7 +4668,7 @@
     "git_blob": "0f03182a6fddf173c5dcb7c04a9594280dabfafd",
     "checkout_sha256": "605a5ecd0a12d034cb8866c23abfe1f7710028d64496242719e48616b4bf9c36",
     "bytes": 5134,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/AmmoSpeedModifier.java"
   },
   {
@@ -4676,7 +4676,7 @@
     "git_blob": "88269103fb2318feb2165f4b7592eee8d31d619c",
     "checkout_sha256": "023972c429a6088e2d29b3b05b694a71dbb7ca0659a3e03683e0d0463807b3c7",
     "bytes": 5823,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/ArmorIgnoreModifier.java"
   },
   {
@@ -4684,7 +4684,7 @@
     "git_blob": "e389c62fee917965a01673cf92a1c63a42d0b398",
     "checkout_sha256": "737a1454e643261152311526a1e752e4792935a269dd6ef0d082e513580efcbd",
     "bytes": 7276,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/DamageModifier.java"
   },
   {
@@ -4692,7 +4692,7 @@
     "git_blob": "21a2cbe4ceee424051f2f0300116b1104af77203",
     "checkout_sha256": "48d74a0ab88e2932e95e5107a3684329e69817599dad31045256ebe514eb199e",
     "bytes": 5143,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/EffectiveRangeModifier.java"
   },
   {
@@ -4716,7 +4716,7 @@
     "git_blob": "84696755791a6aeaef2ab02663fe4246c2337364",
     "checkout_sha256": "c0934dd1dbafc430df09dd897b88af721ab58b6876c9d2aa9e4c6f184715c43c",
     "bytes": 5782,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/HeadShotModifier.java"
   },
   {
@@ -4732,7 +4732,7 @@
     "git_blob": "9db0fb6c99ab30a6105e4aad752b7a187ceded80",
     "checkout_sha256": "3c86559746c2cf38e56f4f9fee3557abc5ec805860eee0dd3ef8ac268ca00524",
     "bytes": 12192,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/InaccuracyModifier.java"
   },
   {
@@ -4740,7 +4740,7 @@
     "git_blob": "460c22c695829d768df8d653f89ebb2ffc441d63",
     "checkout_sha256": "a6758f80289c6353484b9304a4f2a3b08b27d2e40796a560b799f95f04d605f0",
     "bytes": 5268,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/KnockbackModifier.java"
   },
   {
@@ -4748,7 +4748,7 @@
     "git_blob": "5db4e5efd445ddffbec0fe803591c1213672b68d",
     "checkout_sha256": "41294ff53ba8cc6b751928c3c220d035e585383ef6395057494b51dba23ad637",
     "bytes": 4147,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/PierceModifier.java"
   },
   {
@@ -4756,7 +4756,7 @@
     "git_blob": "22c17a4168492cc5bbe68e43e05444aaacd3aca9",
     "checkout_sha256": "d2622bab6dd19c7e97083b7154189a16db020fb436929d972339605cb483e157",
     "bytes": 8553,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/RecoilModifier.java"
   },
   {
@@ -4764,7 +4764,7 @@
     "git_blob": "2666cece9a5deaa285296a5fb3af1d8d8b52788c",
     "checkout_sha256": "58c1cae719f2a6a02f1db9c0244155589728c19f9c96be0ba4c50211962501b2",
     "bytes": 4481,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/RpmModifier.java"
   },
   {
@@ -4780,7 +4780,7 @@
     "git_blob": "b23d0fa2f738a85521a2eca0600d837235d6ecbb",
     "checkout_sha256": "ba3ee0902007f6c1628467d9fd056a3197460abe38faf854137495698222311e",
     "bytes": 4814,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/resource/modifier/custom/WeightModifier.java"
   },
   {
@@ -5196,7 +5196,7 @@
     "git_blob": "f4e55cb15347cf3283bc7dc3844a6f108bad103a",
     "checkout_sha256": "6bb19e321c2f157c96c8681ef35bf69a2b473fe368adf65b3562beee3ad66e83",
     "bytes": 1246,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/util/DelayedTask.java"
   },
   {
@@ -5268,7 +5268,7 @@
     "git_blob": "b80bdaa98176201a7f2caa3f48e78af9068e597d",
     "checkout_sha256": "44f34dfb2f69c697712a52a73e0aea22c0ba250bc7beaaef48dc3f731e45379b",
     "bytes": 1143,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": "src/main/java/com/tacz/guns/util/RenderDistance.java"
   },
   {
@@ -33452,8 +33452,8 @@
     "git_blob": "414316ab6012b5e1e0b6287dad32ee886b209955",
     "checkout_sha256": "cff64c5ba81cb4855b0bb05bdc2581d7dc25bbcdb42893e7cae7b4989bb8e7ee",
     "bytes": 48,
-    "disposition": "retained",
-    "target": "src/main/resources/kubejs.plugins.txt"
+    "disposition": "relocated",
+    "target": "src/kubejsCompat/resources/kubejs.plugins.txt"
   },
   {
     "path": "src/main/resources/logo.png",

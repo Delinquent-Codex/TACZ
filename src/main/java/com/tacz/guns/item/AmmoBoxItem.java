@@ -11,7 +11,6 @@ import com.tacz.guns.config.sync.SyncConfig;
 import com.tacz.guns.init.ModItems;
 import com.tacz.guns.inventory.tooltip.AmmoBoxTooltip;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -27,8 +26,6 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -54,13 +51,13 @@ public class AmmoBoxItem extends Item implements AmmoBoxItemDataAccessor {
         super(properties.stacksTo(1));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
     public static int getColor(ItemStack stack, int tintIndex) {
         return tintIndex > 0 ? -1 : getTagColor(stack);
     }
 
-    @OnlyIn(Dist.CLIENT)
-    public static float getStatue(ItemStack stack, @Nullable ClientLevel level, @Nullable LivingEntity entity, int seed) {
+    // Client-only API; caller-side isolation replaces obsolete Forge member stripping.
+    public static float getStatue(ItemStack stack, @Nullable Level level, @Nullable LivingEntity entity, int seed) {
         int openStatue = OPEN;
         int ammoLevel = IRON_LEVEL;
         if (stack.getItem() instanceof IAmmoBox iAmmoBox) {

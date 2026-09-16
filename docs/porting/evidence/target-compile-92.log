@@ -1,0 +1,146 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.966
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:75: warning: [removal] addRecipeCatalyst(ItemStack,IRecipeType<?>...) in IRecipeCatalystRegistration has been deprecated and marked for removal
+                registration.addRecipeCatalyst(stack, entry.getValue());
+                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+> Task :processResources UP-TO-DATE
+> Task :classes
+
+> Task :compileKubejsCompatJava FAILED
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\kubejsCompat\java\com\tacz\guns\compat\kubejs\custom\CustomGunItemBuilder.java:17: error: cannot access ResourceLocation
+        super(i);
+             ^
+  class file for net.minecraft.resources.ResourceLocation not found
+C:\Users\voltp\Downloads\TACZ-26.2\src\kubejsCompat\java\com\tacz\guns\compat\kubejs\TimelessKubeJSPlugin.java:56: error: incompatible types: invalid constructor reference
+        RegistryInfo.ITEM.addType("tacz_gun", CustomGunItemBuilder.class, CustomGunItemBuilder::new);
+                                                                          ^
+    incompatible types: ResourceLocation cannot be converted to Identifier
+Note: C:\Users\voltp\Downloads\TACZ-26.2\src\kubejsCompat\java\com\tacz\guns\compat\kubejs\events\TimelessKubeJSEventRegister.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2 errors
+
+> Task :compilePlayerAnimatorCompatJava FAILED
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:9: error: cannot access ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOWER_ANIMATION, 93, player -> new ModifierLayer<>());
+                                                     ^
+  class file for net.minecraft.resources.ResourceLocation not found
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:10: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOOP_UPPER_ANIMATION, 94, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:11: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ONCE_UPPER_ANIMATION, 95, player -> new ModifierLayer<>());
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:12: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ROTATION_ANIMATION, 96,
+                                                                                          ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:52: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:160: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:188: error: incompatible types: Identifier cannot be converted to ResourceLocation
+            var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                               ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:215: error: incompatible types: Identifier cannot be converted to ResourceLocation
+        var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                           ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+8 errors
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':compileKubejsCompatJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\kubejsCompat\java\com\tacz\guns\compat\kubejs\TimelessKubeJSPlugin.java:56: error: incompatible types: invalid constructor reference
+          RegistryInfo.ITEM.addType("tacz_gun", CustomGunItemBuilder.class, CustomGunItemBuilder::new);
+                                                                            ^
+      incompatible types: ResourceLocation cannot be converted to Identifier
+  C:\Users\voltp\Downloads\TACZ-26.2\src\kubejsCompat\java\com\tacz\guns\compat\kubejs\custom\CustomGunItemBuilder.java:17: error: cannot access ResourceLocation
+          super(i);
+               ^
+    class file for net.minecraft.resources.ResourceLocation not found
+  Note: C:\Users\voltp\Downloads\TACZ-26.2\src\kubejsCompat\java\com\tacz\guns\compat\kubejs\events\TimelessKubeJSEventRegister.java uses unchecked or unsafe operations.
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  2 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':compilePlayerAnimatorCompatJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:10: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOOP_UPPER_ANIMATION, 94, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:11: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ONCE_UPPER_ANIMATION, 95, player -> new ModifierLayer<>());
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:12: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.ROTATION_ANIMATION, 96,
+                                                                                            ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:52: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:160: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:188: error: incompatible types: Identifier cannot be converted to ResourceLocation
+              var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                                 ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationManager.java:215: error: incompatible types: Identifier cannot be converted to ResourceLocation
+          var modifierLayer = (ModifierLayer<IAnimation>) associatedData.get(dataId);
+                                                                             ^
+  C:\Users\voltp\Downloads\TACZ-26.2\src\playerAnimatorCompat\java\com\tacz\guns\compat\playeranimator\animation\AnimationDataRegisterFactory.java:9: error: cannot access ResourceLocation
+          PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(PlayerAnimatorCompat.LOWER_ANIMATION, 93, player -> new ModifierLayer<>());
+                                                       ^
+    class file for net.minecraft.resources.ResourceLocation not found
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+  Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+  8 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+==============================================================================
+
+BUILD FAILED in 13s
+4 actionable tasks: 3 executed, 1 up-to-date

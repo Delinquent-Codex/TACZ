@@ -1,0 +1,64 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.688
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\client\gui\compat\ClothConfigScreen.java:31: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+            ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                             ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\cloth\MenuIntegration.java:37: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                         ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\compat\jei\GunModPlugin.java:75: warning: [removal] addRecipeCatalyst(ItemStack,IRecipeType<?>...) in IRecipeCatalystRegistration has been deprecated and marked for removal
+                registration.addRecipeCatalyst(stack, entry.getValue());
+                            ^
+C:\Users\voltp\Downloads\TACZ-26.2\src\main\java\com\tacz\guns\config\PreLoadConfig.java:27: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext ctx = ModLoadingContext.get();
+                                                 ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :jarJarMetadata UP-TO-DATE
+> Task :jar
+> Task :jarJar
+> Task :sourcesJar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+> Task :compileOptionalBoundaryChecksJava UP-TO-DATE
+> Task :processOptionalBoundaryChecksResources NO-SOURCE
+> Task :optionalBoundaryChecksClasses UP-TO-DATE
+
+> Task :verifyPortingOptionalAbsent FAILED
+Exception in thread "main" java.lang.AssertionError: No empty automatic event subscribers: [com/tacz/guns/client/event/FirstPersonRenderEvent]
+	at com.tacz.guns.porting.OptionalBoundaryChecks.check(OptionalBoundaryChecks.java:37)
+	at com.tacz.guns.porting.OptionalBoundaryChecks.checkDistributionMetadata(OptionalBoundaryChecks.java:84)
+
+	at com.tacz.guns.porting.OptionalBoundaryChecks.main(OptionalBoundaryChecks.java:89)
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':verifyPortingOptionalAbsent' (registered in script 'gradle\optional-adapters.gradle').
+> Process 'command 'C:\Users\voltp\Downloads\TACZ-port-reference\jdk25\jdk-25.0.4.1+1\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 13s
+8 actionable tasks: 5 executed, 3 up-to-date

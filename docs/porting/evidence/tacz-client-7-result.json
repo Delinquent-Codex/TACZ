@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "assertions": 0,
+  "failure": "Full client did not reach the world checks within 60 seconds",
+  "screen": "net.minecraft.client.gui.screens.AccessibilityOnboardingScreen@206e5183",
+  "overlay": "null",
+  "forge_warnings": []
+}

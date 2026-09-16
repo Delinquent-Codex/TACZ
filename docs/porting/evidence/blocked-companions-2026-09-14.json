@@ -1,0 +1,21 @@
+{
+  "queried_at": "2026-09-15T04:14:28.252984+00:00",
+  "scope": "Official project Modrinth version API, exact game version. No result means unavailable from this provider, not proof across every possible fork.",
+  "projects": [
+    {
+      "project": "playeranimator",
+      "url": "https://api.modrinth.com/v2/project/playeranimator/version?game_versions=%5B%2226.2%22%5D",
+      "versions": []
+    },
+    {
+      "project": "kubejs",
+      "url": "https://api.modrinth.com/v2/project/kubejs/version?game_versions=%5B%2226.2%22%5D",
+      "versions": []
+    },
+    {
+      "project": "rhino",
+      "url": "https://api.modrinth.com/v2/project/rhino/version?game_versions=%5B%2226.2%22%5D",
+      "versions": []
+    }
+  ]
+}

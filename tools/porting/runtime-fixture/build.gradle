@@ -1,0 +1,60 @@
+plugins { id 'java'; id 'net.minecraftforge.gradle' version '7.0.36' }
+group = 'com.tacz.porting'
+version = '1.0'
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+def repo = file('../../..')
+def candidate = new File(repo, 'build/libs/tacz-26.2-1.1.8-hotfix-port.1.jar')
+minecraft {
+    runs {
+        register('client') {
+            workingDir = layout.projectDirectory.dir('run')
+            args '--username', 'TaczFixture', '--width', '854', '--height', '480'
+            args '--graphicsBackend', providers.gradleProperty('fixtureGraphicsBackend').orElse('OPENGL').get()
+            systemProperty 'eventbus.api.strictRuntimeChecks', 'true'
+            systemProperty 'mixin.debug.countInjections', 'true'
+            systemProperty 'tacz.fixture.holdGun', providers.gradleProperty('fixtureHoldGun').orElse('false').get()
+            systemProperty 'tacz.fixture.gameplay', providers.gradleProperty('fixtureGameplay').orElse('false').get()
+        }
+    }
+}
+repositories { minecraft.mavenizer(it); maven fg.forgeMaven; maven fg.minecraftLibsMaven; mavenCentral() }
+dependencies {
+    implementation minecraft.dependency('net.minecraftforge:forge:26.2-65.1.0')
+    compileOnly files(candidate)
+    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.matching { it.name == 'runClient' }.configureEach {
+    timeout = java.time.Duration.ofMinutes(3)
+    doFirst {
+        if (!candidate.isFile()) throw new GradleException('Build the root core candidate first')
+        file('run/runtime-fixture-result.json').delete()
+        copy { from candidate; into file('run/mods') }
+        def digest = { File input -> java.security.MessageDigest.getInstance('SHA-256').digest(input.bytes).encodeHex().toString() }
+        def inputs = new LinkedHashSet<File>(tasks.named('compileJava').get().source.files)
+        inputs.addAll(sourceSets.main.resources.files)
+        inputs.addAll([file('build.gradle'), file('settings.gradle'), file('gradle.properties'), candidate])
+        def data = [scope: 'full packaged TACZ plus automated fixture in Forge development client',
+                started: java.time.Instant.now().toString(), candidate_sha256: digest(candidate),
+                holdGun: providers.gradleProperty('fixtureHoldGun').orElse('false').get(),
+                gameplay: providers.gradleProperty('fixtureGameplay').orElse('false').get(),
+                input_sha256: inputs.sort { it.absolutePath }.collectEntries { [(it.absolutePath): digest(it)] },
+                runtime_classpath_sha256: sourceSets.main.runtimeClasspath.files.findAll { it.isFile() }
+                    .sort { it.absolutePath }.collectEntries { [(it.absolutePath): digest(it)] }]
+        file('run/runtime-fixture-inputs.json').text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(data))
+    }
+}
+tasks.register('verifyTaczClient') {
+    group = 'verification'
+    description = 'Load the complete packaged TACZ mod, create a world, check pack data and close the client.'
+    dependsOn 'runClient'
+    doLast {
+        def result = file('run/runtime-fixture-result.json')
+        if (!result.exists()) throw new GradleException('Full TACZ client exited without fixture results')
+        def data = new groovy.json.JsonSlurper().parse(result)
+        if (data.status != 'passed') throw new GradleException("Full TACZ client failed: ${data}")
+        def requested = providers.gradleProperty('fixtureGraphicsBackend').orElse('OPENGL').get()
+        if (!requested.equalsIgnoreCase(data.backend)) throw new GradleException("Requested ${requested} but got ${data.backend}")
+        logger.lifecycle("Full TACZ client fixture passed ${data.assertions} assertions")
+    }
+}

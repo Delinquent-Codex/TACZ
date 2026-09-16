@@ -39,6 +39,26 @@ public final class CraftingChecks {
         check(sword.get(DataComponents.CUSTOM_NAME).getString().equals("Port fixture"), "legacy name remains a name component");
         check(sword.get(DataComponents.CUSTOM_DATA).copyTag().getCompoundOrEmpty("Extension").getIntOr("keep", 0) == 42, "unknown extension preserved");
         check(copy.equals(legacy), "source JSON unchanged by migration");
+        var template = LegacyPackCodecs.ITEM_STACK_TEMPLATE.parse(ops, legacy).getOrThrow();
+        check(ItemStack.isSameItemSameComponents(sword, LegacyPackCodecs.createStack(template)), "deferred template preserves all migrated components");
+        var fromTemplate = LegacyPackCodecs.createStack(template);
+        fromTemplate.setDamageValue(2);
+        check(LegacyPackCodecs.createStack(template).getDamageValue() == 7, "template materializations do not share mutable item state");
+        check(LegacyPackCodecs.ITEM_STACK_TEMPLATE.parse(ops, JsonParser.parseString("{\"item\":\"missing:unknown\"}")).error().isPresent(), "deferred templates reject unknown items during decoding");
+        var loot = JsonParser.parseString("{\"functions\":[{\"function\":\"minecraft:set_nbt\",\"tag\":\"{GunId:\\\"tacz:ak47\\\",Extra:{keep:42}}\",\"conditions\":[]}]}");
+        var lootCopy = loot.deepCopy();
+        var function = LegacyPackCodecs.upgradeLootFunctions(loot).getAsJsonObject().getAsJsonArray("functions").get(0).getAsJsonObject();
+        check(function.get("function").getAsString().equals("minecraft:set_custom_data") && loot.equals(lootCopy), "legacy loot function migrates without mutating the source pack");
+        var merge = net.minecraft.world.level.storage.loot.functions.SetCustomDataFunction.MAP_CODEC.codec().parse(ops, function).getOrThrow();
+        var lootStack = sword.copy();
+        merge.run(lootStack, null);
+        check(lootStack.getDamageValue() == 7 && lootStack.get(DataComponents.CUSTOM_DATA).copyTag().getStringOr("GunId", "").equals("tacz:ak47")
+                && lootStack.get(DataComponents.CUSTOM_DATA).copyTag().getCompoundOrEmpty("Extension").getIntOr("keep", 0) == 42,
+                "actual target loot function merges custom data while preserving existing components");
+        boolean vanillaLootRejected = false;
+        try { LegacyPackCodecs.upgradeLootFunctions(JsonParser.parseString("{\"function\":\"minecraft:set_nbt\",\"tag\":\"{Damage:5}\"}")); }
+        catch (IllegalArgumentException expected) { vanillaLootRejected = true; }
+        check(vanillaLootRejected, "vanilla NBT loot writes require explicit target migration rather than becoming inert custom data");
         var target = LegacyPackCodecs.ITEM_STACK.encodeStart(ops, sword).getOrThrow();
         check(target.getAsJsonObject().has("components") && !target.getAsJsonObject().has("nbt"), "writes component syntax");
         check(ItemStack.isSameItemSameComponents(sword, LegacyPackCodecs.ITEM_STACK.parse(ops, target).getOrThrow()), "target round trip");

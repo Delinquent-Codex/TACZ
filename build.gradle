@@ -15,7 +15,8 @@ java {
 sourceSets.main.resources.srcDir 'src/generated/resources'
 minecraft {
     // 26.2 ships named classes; no SRG reobfuscation or Parchment layer.
-    accessTransformer = true
+    // Explicit path: optional source sets must not change FG's inferred resource owner.
+    accessTransformers = files('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
         configureEach {
             systemProperty 'eventbus.api.strictRuntimeChecks', 'true'
@@ -76,6 +77,10 @@ dependencies {
     compileOnly('maven.modrinth:shoulder-surfing-reloaded:f7tjIKIo') { transitive = false }
     // Published loader-independent API only. No Forge 26.2 JEI runtime is verified or bundled.
     compileOnly('mezz.jei:jei-26.2-common-api:30.32.0.221') { transitive = false }
+    // Published common code for target signatures only; its Fabric runtime is not resolved.
+    // No compatible Forge Cloth runtime is installed or bundled.
+    compileOnly('me.shedaniel.cloth:cloth-config:26.2.155') { transitive = false }
+    compileOnly('me.shedaniel.cloth:basic-math:0.6.1') { transitive = false }
     annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
     implementation('com.maydaymemory:mae:1.1.2') {
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
@@ -101,8 +106,9 @@ dependencies {
     jarJar 'io.github.llamalad7:mixinextras-forge:0.5.4'
 }
 // Temporary migration signatures, not verified runtime dependencies.
-// Every original integration source remains compiled. See dependencies.md.
+// Optional blocked adapters retain their own compilation tasks. See dependencies.md.
 apply from: 'gradle/legacy-dependencies.gradle'
+apply from: 'gradle/optional-adapters.gradle'
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.compilerArgs += ['-Xmaxerrs', '5000']

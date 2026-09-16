@@ -2,15 +2,11 @@ package com.tacz.guns.compat.playeranimator;
 
 import com.tacz.guns.GunMod;
 import com.tacz.guns.client.resource.GunDisplayInstance;
-import com.tacz.guns.compat.playeranimator.animation.AnimationDataRegisterFactory;
-import com.tacz.guns.compat.playeranimator.animation.AnimationManager;
-import com.tacz.guns.compat.playeranimator.animation.PlayerAnimatorAssetManager;
-import com.tacz.guns.compat.playeranimator.animation.PlayerAnimatorLoader;
+import com.tacz.guns.compat.OptionalIntegration;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModList;
 
 import java.io.File;
@@ -24,69 +20,68 @@ public class PlayerAnimatorCompat {
     public static Identifier ROTATION_ANIMATION = Identifier.fromNamespaceAndPath(GunMod.MOD_ID, "rotation");
 
     private static final String MOD_ID = "playeranimator";
-    private static boolean INSTALLED = false;
+    private static PlayerAnimatorIntegration integration;
 
     public static void init() {
-        INSTALLED = ModList.isLoaded(MOD_ID);
-        if (isInstalled()) {
-            AnimationDataRegisterFactory.registerData();
-            MinecraftForge.EVENT_BUS.register(new AnimationManager());
+        PlayerAnimatorIntegration loaded = OptionalIntegration.load(MOD_ID, ModList.isLoaded(MOD_ID),
+                "com.tacz.guns.compat.playeranimator.PlayerAnimatorAdapter", PlayerAnimatorIntegration.class);
+        if (loaded != null) {
+            loaded.initialize();
         }
+        integration = loaded;
     }
 
     public static boolean loadAnimationFromZip(ZipFile zipFile, String zipPath) {
         if (isInstalled()) {
-            return PlayerAnimatorLoader.load(zipFile, zipPath);
+            return integration.load(zipFile, zipPath);
         }
         return false;
     }
 
     public static void loadAnimationFromFile(File file) {
         if (isInstalled()) {
-            PlayerAnimatorLoader.load(file);
+            integration.load(file);
         }
     }
 
     public static void clearAllAnimationCache() {
         if (isInstalled()) {
-            PlayerAnimatorAssetManager.get().clearAll();
+            integration.clearAllAnimationCache();
         }
     }
 
     public static boolean hasPlayerAnimator3rd(LivingEntity livingEntity, GunDisplayInstance display) {
         if (isInstalled() && livingEntity instanceof AbstractClientPlayer) {
-            return AnimationManager.hasPlayerAnimator3rd(display);
+            return integration.hasPlayerAnimator3rd(display);
         }
         return false;
     }
 
     public static void stopAllAnimation(LivingEntity livingEntity) {
         if (isInstalled() && livingEntity instanceof AbstractClientPlayer player) {
-            AnimationManager.stopAllAnimation(player);
+            integration.stopAllAnimation(player);
         }
     }
 
     public static void stopAllAnimation(LivingEntity livingEntity, int fadeTime) {
         if (isInstalled() && livingEntity instanceof AbstractClientPlayer player) {
-            AnimationManager.stopAllAnimation(player, fadeTime);
+            integration.stopAllAnimation(player, fadeTime);
         }
     }
 
     public static void playAnimation(LivingEntity livingEntity, GunDisplayInstance display, float limbSwingAmount) {
         if (isInstalled() && livingEntity instanceof AbstractClientPlayer player) {
-            AnimationManager.playLowerAnimation(player, display, limbSwingAmount);
-            AnimationManager.playLoopUpperAnimation(player, display, limbSwingAmount);
-            AnimationManager.playRotationAnimation(player, display);
+            integration.playAnimation(player, display, limbSwingAmount);
         }
     }
 
     public static boolean isInstalled() {
-        return INSTALLED;
+        return integration != null;
     }
 
     public static void registerReloadListener(Consumer<PreparableReloadListener> register) {
         if (isInstalled()) {
-            register.accept(PlayerAnimatorAssetManager.get());
+            integration.registerReloadListener(register);
         }
     }
 }

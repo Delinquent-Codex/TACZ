@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\jdk25\\jdk-25.0.4.1+1\\bin\\java.exe",
+    "-Dterminal.jline=false",
+    "@user_jvm_args.txt",
+    "@libraries/net/minecraftforge/forge/26.2-65.1.0/win_args.txt",
+    "--nogui"
+  ],
+  "working_directory": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\server-26.2",
+  "artifact": "tacz-26.2-1.1.8-hotfix-port.1.jar",
+  "artifact_sha256": "9bf9c7f5e8b49486aee29d61e74da34fdccb99b92666444376ab9a5c786df234",
+  "harness_sha256": "cf63ae8c298e4d777ce95485968e27ffa16c92753fe9c5b745c00edc871bcfc1",
+  "commands": [
+    {
+      "command": "list",
+      "response": "There are 0 of a max of 20 players online: \n"
+    },
+    {
+      "command": "tacz reload",
+      "response": "\u00a7a\u00a7l[TACZ]\u00a7r All pack is reload, time: 619.104 ms\n"
+    }
+  ],
+  "result": "failed",
+  "forced_stop": false,
+  "failure": "tacz reload: unexpected response '\u00a7a\u00a7l[TACZ]\u00a7r All pack is reload, time: 619.104 ms\\n'",
+  "exit_code": 0,
+  "log_sha256": "63bef88acd221830f8d5e49044192e56defcb2f4bf3ab3e21055da1b07c25ac1"
+}
