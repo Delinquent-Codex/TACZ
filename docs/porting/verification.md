@@ -26,7 +26,7 @@ Date: 2026-09-07. Windows 11 amd64. Baseline revision: `b43eb84c38e9768d8e73c8b1
 
 The local evidence directory records selected full logs and SHA-256 hashes of all Java, resource and build inputs at this checkpoint. Earlier logs remain in the reference workspace. The baseline/reference ZIP comparison found no missing/extra members; two members differ, as described in status.md. Bytecode inspection is provenance evidence, not an observed runtime parity check. `git diff --check` with CR-at-EOL handling passed after the changes.
 
-The core build and nested packaging pass as of run 101; the installed dedicated server completes world/start/reload/save/stop with separately recorded host diagnostics. The complete packaged mod now reaches a development client world and renders a held AK-47 on both backends. Still open: clean installed-client lifecycle, complete gameplay and visual/audio parity, two-client multiplayer, every mechanic/content path, external pack sync, persistence beyond focused fixtures, companion-present behavior and measured performance/stability. A development candidate hash is recorded below; no release is approved.
+The core build and nested packaging pass as of run 101; the installed dedicated server completes world/start/reload/save/stop with separately recorded host diagnostics. The complete packaged mod passes instrumented installed-client gameplay and TACZ-only saved-world/normal-close checks on both backends (see installed-client checkpoint below). Still open: complete gameplay and visual/audio parity, two-client multiplayer, every mechanic/content path, external pack sync, persistence beyond focused fixtures, companion-present behavior and measured performance/stability. A development candidate hash is recorded below; no release is approved.
 
 ## Reproduction
 
@@ -271,3 +271,32 @@ python tools/porting/audit_candidate.py --output docs/porting/evidence/core-cand
 Use `tools/porting/runtime-fixture/README.md` for modes, evidence paths and limits; run clients sequentially. `server_smoke.py --help` describes the isolated installed-server harness. Do not pass `--initialize` to an existing world. Its local RCON credentials stay outside Git/evidence. Full-port gates remain open as listed in status.md and audit-areas.md.
 
 Final checkpoint review: all 4,325 root input hashes still match run101; all nine fixture/candidate input hashes match both client15 and client16; installed-server3 candidate/harness/log hashes match. The untouched baseline has no tracked changes, whitespace checks pass, and no owned client/installed-server process remains running.
+
+## Official installed-client verification — 2026-09-16
+
+Production revision `da7059e0`, candidate101 SHA-256 `a320d7a8dc613352addf99e66caf79d1deb3009a0951b0ce648b385fe24a0c71`; no production edits in these runs. Installed with the verified official Forge 26.2-65.1.0 installer using `java -jar ../TACZ-port-reference/downloads/forge-26.2-65.1.0-installer.jar --installClient ../TACZ-port-reference/installations/client-26.2`. Only this separate directory received a minimal launcher_profiles.json and the verified vanilla client/profile. Patched client SHA-1 `f9ef709fa7988febfca4c91b87d3d1ad8a438097` matches the installer (79,191,195 bytes). Installer logs are `evidence/forge-client-install-1.log` and `forge-client-installer-detail.log`.
+
+`tools/porting/installed_client.py` consumes the actual inherited vanilla/Forge release profile, verifies every allowed/merged library and asset against official metadata, and launches `forge_client` with Java 25. Its 126 classpath files are 125 installed libraries plus the vanilla client, not the development runtime. The normal game directory supplies only read-only, checksum-verified public asset/library caches. An explicit offline singleplayer test identity uses no launcher account credentials; authentication/Realms are not tested. Input/result manifests preserve actual JVM arguments, libraries, candidate, installed mods, controller and (for instrumented runs) fixture source/build/JAR hashes. Logs and results are distinct from the development fixture evidence.
+
+| Installed attempt | Configuration | Result |
+| --- | --- | --- |
+| 1 | OpenGL, full TACZ plus packaged fixture | 66 checks, exit 0, no forced stop; original controller retained as installed-client-harness-1.py |
+| 2 | Vulkan, full TACZ plus packaged fixture | 66 checks, 31.1s, exit 0, no forced stop; fixture source/build hashes also recorded |
+| 3 | OpenGL, only TACZ, reopen run2 world | **Failed:** unconfirmed experimental custom world, no join in 120s; controller forcibly stopped owned JVM; raw failure preserved |
+| 4 | OpenGL, full TACZ plus fixture with native disposable-world confirmation | 66 checks, 29.6s, exit 0; result records confirmed experimental state |
+| 5 | OpenGL, only TACZ, reopen run4 world | **Passed**, 28.0s, at least ten seconds joined, ordinary window close, exit 0, all dimensions saved |
+| 6 | Vulkan, only TACZ, reopen run4 world | **Passed**, at least ten seconds joined, ordinary window close, exit 0, all dimensions saved |
+
+The exact target WorldOpenFlows asks for backup/confirmation when custom world settings are experimental and PrimaryLevelData has no confirmed flag. The test fixture's fresh-world creation bypasses the selection dialog. Its server-thread setup now records the native `withConfirmedWarning(lifecycle != Lifecycle.stable())` transition used by the normal world-open flow, solely for that newly created disposable test world. Run3's level.dat was inspected read-only and had the flag false. No production world-loading code, warning screen, or user save was changed. These tests do not establish upgrading 1.20.1 worlds or complete item persistence.
+
+Actual commands after setting JAVA_HOME to the pinned JDK25 (Python denotes the bundled Python executable):
+
+```powershell
+.\gradlew.bat -p tools/porting/runtime-fixture jar --console=plain
+python tools/porting/installed_client.py --installation ../TACZ-port-reference/installations/client-26.2 --java ../TACZ-port-reference/jdk25/jdk-25.0.4.1+1/bin/java.exe --backend OPENGL --evidence-prefix docs/porting/evidence/installed-client-4
+$worldId = (Get-Content docs/porting/evidence/installed-client-4-result.json -Raw | ConvertFrom-Json).fixture_result.world
+python tools/porting/installed_client.py --installation ../TACZ-port-reference/installations/client-26.2 --java ../TACZ-port-reference/jdk25/jdk-25.0.4.1+1/bin/java.exe --backend OPENGL --clean-world $worldId --evidence-prefix docs/porting/evidence/installed-client-5
+python tools/porting/installed_client.py --installation ../TACZ-port-reference/installations/client-26.2 --java ../TACZ-port-reference/jdk25/jdk-25.0.4.1+1/bin/java.exe --backend VULKAN --clean-world $worldId --evidence-prefix docs/porting/evidence/installed-client-6
+```
+
+Fixture jar builds 1/2/3 passed; their logs are retained. Run4 records the revised fixture inputs; runs5/6 have exactly the candidate in mods and no TACZ_RUNTIME_RESULT marker. All six raw logs and input/result manifests are retained. Earlier raw controller versions preserve the exact failed/run1 orchestration; the current controller includes a strict ten-second dwell check. Host OSHI/Realms diagnostics and missing model-particle/inherited sound references still appear. Successful lifecycle is not an error-free log, captured visual/audio comparison, actual keyboard/UI interaction, remote multiplayer or broad gameplay result.

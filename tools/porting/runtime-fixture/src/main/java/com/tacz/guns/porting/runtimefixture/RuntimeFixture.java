@@ -90,7 +90,8 @@ public final class RuntimeFixture {
         if (minecraft.level == null || minecraft.player == null || minecraft.gui.screen() != null || ++loadedFrames < 60) return;
         ran = true;
         var result = new LinkedHashMap<String, Object>();
-        result.put("fixture", "complete packaged TACZ in Forge development client; see held_gun_scope and gameplay_scope for selected coverage");
+        result.put("fixture", "complete packaged TACZ; see held_gun_scope and gameplay_scope for selected coverage");
+        result.put("launch_environment", System.getProperty("tacz.fixture.environment", "Forge development client"));
         result.put("world", worldId);
         result.put("device", RenderSystem.getDevice().getDeviceInfo().toString());
         result.put("backend", RenderSystem.getDevice().getDeviceInfo().backendName());

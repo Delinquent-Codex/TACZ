@@ -39,7 +39,27 @@ is not a successful run** (see attempt 14 in the verification log).
 Watchdogs capture FML startup warnings/errors or action timeouts, then request
 ordinary client shutdown. A three-minute Gradle timeout bounds unexpected hangs.
 No screenshots, pixel comparisons, audio capture, remote multiplayer, keyboard
-bindings, clean installed-client, complete mechanic/content coverage, optional
+bindings, complete mechanic/content coverage, optional
 companions or performance claims follow from these checks. Host OSHI/Realms
 diagnostics, missing model-particle warnings and baseline missing animation/sound
 references remain visible in the logs; see `docs/porting/verification.md`.
+
+## Installed release profile
+
+`tools/porting/installed_client.py` also runs the packaged fixture JAR in a separate
+installation made by the official Forge installer. Build this fixture with
+`.\gradlew.bat -p tools/porting/runtime-fixture jar --console=plain`, then follow
+the actual commands in `docs/porting/verification.md`. This route uses installed
+release libraries and assets, with `forge_client`, and verifies their metadata
+checksums and evidence hashes. It uses an offline test identity and no launcher
+account credentials. The normal Minecraft directory is never modified.
+
+Instrumented installed runs have TACZ plus this fixture in mods. `--clean-world`
+removes only the copied fixture, reopens the named saved world with TACZ alone,
+requires ten seconds joined, then requests ordinary closure of the owned JVM
+window and requires normal exit and saved dimensions. Run clients sequentially.
+The fixture prepares only its own fresh disposable world's native experimental
+confirmation state, matching WorldOpenFlows, so a later quick-play reopen can
+proceed without a confirmation dialog. This does not bypass production warnings
+or validate legacy-world migration. Installed runs 1/2/4 pass 66 checks; clean runs 5/6
+pass lifecycle on OpenGL/Vulkan. Failed3 is retained with its forced-stop result.

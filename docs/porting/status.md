@@ -2,6 +2,15 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Installed-client checkpoint — 2026-09-16
+
+- Continued from `da7059e0`; production inputs and candidate101 are unchanged. The new controller uses a separate official Forge 65.1.0 installation with the normal `forge_client` release profile, verifies 125 profile libraries, the vanilla client and 5,057 asset entries, and reads no launcher account credentials.
+- **Installed clients 1 / 2 pass 66 assertions**, OpenGL / Vulkan. Run **4** repeats the 66 checks on OpenGL after native test-world preparation (29.6s). These instrumented runs contain the complete TACZ JAR plus the packaged fixture. They cover content, recipes, held AK-47 rendering, one survival shot and partial Lua reload through actual play packets, with normal process exit.
+- **TACZ-only clients 5 / 6 pass**, OpenGL / Vulkan: reopen the fixture's saved world, remain joined for at least ten seconds, then close through the owned JVM's normal window-close request. Exit 0, no forced termination, all dimensions saved. No fixture JAR, development launcher or development classpath is present. Offline test identity; no account authentication, manual input or visual/audio parity claim.
+- Failed clean attempt **3** remains preserved: an unconfirmed experimental custom test world waited for Minecraft's confirmation, so the controller timed out and forcibly stopped its own process. HeldGunCheck now prepares only its freshly created disposable world with the same native `PrimaryLevelData.withConfirmedWarning` transition as target WorldOpenFlows. The controller's ten-second dwell requirement is explicit. This is test-world preparation, not a production warning bypass or legacy-world migration test.
+- Controller: `tools/porting/installed_client.py`; historical versions `evidence/installed-client-harness-1.py` / `-2.py`. Current fixture build: `runtime-fixture-jar-3.log`. Sequential launches share the test installation. See verification.md for reproduction and input/log hashes.
+- **Next:** two independent clients against an isolated dedicated server: configuration handshake, shooter/observer, late join and reconnect; then broaden mechanics, transitions, presentation, migration, companions and performance. Next root compile 103 (only after production changes), installed client 7, development client 17. Full port remains incomplete.
+
 ## Current checkpoint â€” 2026-09-16, packaged gameplay and clean shutdown
 
 - Continued from `ee4a8702` on `port/forge-26.2`; all prior migration work is preserved. This checkpoint resolves the remaining core compile and startup failures and adds real packaged client/server fixtures. The full port remains incomplete.

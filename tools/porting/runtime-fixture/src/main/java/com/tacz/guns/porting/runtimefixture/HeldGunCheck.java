@@ -1,6 +1,7 @@
 package com.tacz.guns.porting.runtimefixture;
 
 import com.google.gson.GsonBuilder;
+import com.mojang.serialization.Lifecycle;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.api.item.builder.GunItemBuilder;
 import com.tacz.guns.api.item.gun.FireMode;
@@ -8,6 +9,7 @@ import com.tacz.guns.client.event.FirstPersonRenderHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.level.storage.PrimaryLevelData;
 import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.event.TickEvent;
 
@@ -46,6 +48,14 @@ final class HeldGunCheck {
         TickEvent.RenderTickEvent.Post.BUS.addListener(this::tick);
         var uuid = minecraft.player.getUUID();
         equip = minecraft.getSingleplayerServer().submit(() -> {
+            // The fixture creates its own disposable custom flat world without the
+            // selection screen. Record the same confirmation as WorldOpenFlows so
+            // the subsequent TACZ-only quick-play test can reopen this saved world.
+            var worldData = minecraft.getSingleplayerServer().getWorldData();
+            if (!(worldData instanceof PrimaryLevelData primaryData))
+                throw new IllegalStateException("Fixture world has no primary level data");
+            primaryData.withConfirmedWarning(worldData.worldGenSettingsLifecycle() != Lifecycle.stable());
+            result.put("test_world_experimental_warning_confirmed", primaryData.hasConfirmedExperimentalWarning());
             var player = minecraft.getSingleplayerServer().getPlayerList().getPlayer(uuid);
             if (player == null) throw new IllegalStateException("Fixture player missing from integrated server");
             var gun = GunItemBuilder.create().setId(GUN).setAmmoCount(30).setAmmoInBarrel(true).setFireMode(FireMode.AUTO).build();

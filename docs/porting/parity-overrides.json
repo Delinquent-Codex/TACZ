@@ -4361,7 +4361,7 @@
   },
   "data/index/guns/tacz:ak47": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/guns/ak47.json",
-    "validation": "Packaged client15/16: actual held gun, one survival shot, one synchronized projectile and partial Lua reload with exact magazine/chamber/reserve counts, clean quit on OpenGL/Vulkan. Other actions, visuals/audio, damage and multiplayer remain unverified. See verification.md.",
+    "validation": "Packaged development client15/16 and official installed client1/2/4: actual held gun, one survival shot, one synchronized projectile and partial Lua reload with exact magazine/chamber/reserve counts, clean quit on OpenGL/Vulkan. TACZ-only installed clients5/6 reopen/save/close the prepared world. Other actions, visuals/audio, damage and multiplayer remain unverified. See verification.md.",
     "status": "in progress"
   }
 }

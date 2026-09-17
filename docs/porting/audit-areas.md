@@ -4,7 +4,7 @@ All areas below remain in scope. The generated file and definition ledger supple
 
 | Area | Baseline evidence | Required target validation | Status |
 | --- | --- | --- | --- |
-| Build and packaging | build.gradle, settings.gradle, gradle.properties, META-INF metadata, mixin configs, libs | Wrapper build, nested dependency closure, source JAR, clean packaged startup | in progress; core101 + installed server3 + full packaged development clients15/16 pass; clean installed-client/release gates open |
+| Build and packaging | build.gradle, settings.gradle, gradle.properties, META-INF metadata, mixin configs, libs | Wrapper build, nested dependency closure, source JAR, clean packaged startup | in progress; core101 + installed server3 + instrumented installed clients1/2/4 + TACZ-only clients5/6 pass; remaining release gates open |
 | Registration and lifecycle | GunMod; init; client/init | Same registry IDs; event phases; server class loading; generated resources | in progress; real packaged common/client/server startup passes; all gameplay hook scenarios remain open |
 | Gun mechanics and operators | api/entity; entity; api/item; item | All fire/charge/bolt modes, cadence, chamber, magazine, reload/cancel/interruption, aim, sprint, crawl, melee, heat, damage, headshots, armor, penetration, explosions; player and non-player operators | in progress; real survival AK-47 single shot and partial Lua reload pass; all other modes/operators/damage/transitions remain open |
 | Persistence and migration | item; api/item; compat/kubejs/util; entity | Non-default IDs, ammo, fire mode, attachments, skins, extensions; copy/split/craft/loot; saved component/NBT round trips; recoverable idempotent conversions | in progress; runtime unverified |
