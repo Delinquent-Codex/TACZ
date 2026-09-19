@@ -1,0 +1,26 @@
+{
+  "scope": "baseline source expectations only; no baseline runtime observation",
+  "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
+  "files": {
+    "scripts/xmag_reload_logic.lua": {
+      "baseline_sha256": "5f25d34f7866fa928d2c937d52a2a5e14c47adce1cbf727d5b58114f33755f46",
+      "target_sha256": "5f25d34f7866fa928d2c937d52a2a5e14c47adce1cbf727d5b58114f33755f46",
+      "byte_identical": true
+    },
+    "scripts/m870_gun_logic.lua": {
+      "baseline_sha256": "b3c3c7cabfa9321030918ba93e8c555443bdc6e87d7a29b463100d169698013d",
+      "target_sha256": "b3c3c7cabfa9321030918ba93e8c555443bdc6e87d7a29b463100d169698013d",
+      "byte_identical": true
+    },
+    "data/guns/ak47_data.json": {
+      "baseline_sha256": "94150d1da83f32ed76397614c7ff61926ce80b984178190e545c58b14bfd14e4",
+      "target_sha256": "94150d1da83f32ed76397614c7ff61926ce80b984178190e545c58b14bfd14e4",
+      "byte_identical": true
+    },
+    "data/guns/m870_data.json": {
+      "baseline_sha256": "c543696b7bbdc96e06116e4c00f4f23cc6b748c74b68b1bc63d618823f063844",
+      "target_sha256": "c543696b7bbdc96e06116e4c00f4f23cc6b748c74b68b1bc63d618823f063844",
+      "byte_identical": true
+    }
+  }
+}

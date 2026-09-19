@@ -28,7 +28,7 @@
     "git_blob": "82b510d4a010f090b8456f6c84cefe5521dfa5d2",
     "checkout_sha256": "0a3cf55058ea9f4f8176d15f0d4e5589924aaffe470a11a6b7223ddba2cc7e36",
     "bytes": 1331,
-    "disposition": "retained",
+    "disposition": "modified",
     "target": ".gitignore"
   },
   {

@@ -1,0 +1,233 @@
+{
+  "scope": "evidence integrity audit; not additional gameplay assertions",
+  "root_inputs_verified": 4325,
+  "root_mismatches": [],
+  "runs": {
+    "8": {
+      "result": "failed",
+      "checks": 72,
+      "failure": "M870 early empty feeding",
+      "elapsed_seconds": 151.953,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "controller_inputs": {
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\multiplayer_smoke.py": "docs\\porting\\evidence\\multiplayer-harness-8.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\server_smoke.py": "tools\\porting\\server_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\installed_client.py": "tools\\porting\\installed_client.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\reload_scenarios.py": "docs\\porting\\evidence\\reload-harness-8.py"
+      },
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\build\\libs\\tacz-full-runtime-fixture-1.0.jar": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\multiplayer-8\\shooter\\mods\\tacz-full-runtime-fixture-1.0.jar",
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\src\\main\\java\\com\\tacz\\guns\\porting\\runtimefixture\\RemoteCheck.java": "docs\\porting\\evidence\\RemoteCheck-3.java"
+          },
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\build\\libs\\tacz-full-runtime-fixture-1.0.jar": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\multiplayer-8\\observer\\mods\\tacz-full-runtime-fixture-1.0.jar",
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\src\\main\\java\\com\\tacz\\guns\\porting\\runtimefixture\\RemoteCheck.java": "docs\\porting\\evidence\\RemoteCheck-3.java"
+          },
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        }
+      },
+      "server_libraries_verified": 95
+    },
+    "9": {
+      "result": "passed",
+      "checks": 152,
+      "failure": null,
+      "elapsed_seconds": 109.657,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "controller_inputs": {
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\multiplayer_smoke.py": "docs\\porting\\evidence\\multiplayer-harness-8.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\server_smoke.py": "tools\\porting\\server_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\installed_client.py": "tools\\porting\\installed_client.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\reload_scenarios.py": "docs\\porting\\evidence\\reload-harness-9.py"
+      },
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\build\\libs\\tacz-full-runtime-fixture-1.0.jar": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\multiplayer-9\\shooter\\mods\\tacz-full-runtime-fixture-1.0.jar",
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\src\\main\\java\\com\\tacz\\guns\\porting\\runtimefixture\\RemoteCheck.java": "docs\\porting\\evidence\\RemoteCheck-4.java"
+          },
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\build\\libs\\tacz-full-runtime-fixture-1.0.jar": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\multiplayer-9\\observer\\mods\\tacz-full-runtime-fixture-1.0.jar",
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\src\\main\\java\\com\\tacz\\guns\\porting\\runtimefixture\\RemoteCheck.java": "docs\\porting\\evidence\\RemoteCheck-4.java"
+          },
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        }
+      },
+      "server_libraries_verified": 95
+    },
+    "10": {
+      "result": "passed",
+      "checks": 152,
+      "failure": null,
+      "elapsed_seconds": 118.985,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "controller_inputs": {
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\multiplayer_smoke.py": "docs\\porting\\evidence\\multiplayer-harness-8.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\server_smoke.py": "tools\\porting\\server_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\installed_client.py": "tools\\porting\\installed_client.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\reload_scenarios.py": "docs\\porting\\evidence\\reload-harness-9.py"
+      },
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\build\\libs\\tacz-full-runtime-fixture-1.0.jar": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\multiplayer-10\\shooter\\mods\\tacz-full-runtime-fixture-1.0.jar",
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\src\\main\\java\\com\\tacz\\guns\\porting\\runtimefixture\\RemoteCheck.java": "docs\\porting\\evidence\\RemoteCheck-4.java"
+          },
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\build\\libs\\tacz-full-runtime-fixture-1.0.jar": "C:\\Users\\voltp\\Downloads\\TACZ-port-reference\\installations\\multiplayer-10\\observer\\mods\\tacz-full-runtime-fixture-1.0.jar",
+            "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\runtime-fixture\\src\\main\\java\\com\\tacz\\guns\\porting\\runtimefixture\\RemoteCheck.java": "docs\\porting\\evidence\\RemoteCheck-4.java"
+          },
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        }
+      },
+      "server_libraries_verified": 95
+    },
+    "11": {
+      "result": "passed",
+      "checks": 278,
+      "failure": null,
+      "elapsed_seconds": 125.578,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "controller_inputs": {
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\multiplayer_smoke.py": "tools\\porting\\multiplayer_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\server_smoke.py": "tools\\porting\\server_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\installed_client.py": "tools\\porting\\installed_client.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\reload_scenarios.py": "tools\\porting\\reload_scenarios.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\bolt_scenarios.py": "tools\\porting\\bolt_scenarios.py"
+      },
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {},
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {},
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        }
+      },
+      "server_libraries_verified": 95
+    },
+    "12": {
+      "result": "passed",
+      "checks": 278,
+      "failure": null,
+      "elapsed_seconds": 130.5,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "controller_inputs": {
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\multiplayer_smoke.py": "tools\\porting\\multiplayer_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\server_smoke.py": "tools\\porting\\server_smoke.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\installed_client.py": "tools\\porting\\installed_client.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\reload_scenarios.py": "tools\\porting\\reload_scenarios.py",
+        "C:\\Users\\voltp\\Downloads\\TACZ-26.2\\tools\\porting\\bolt_scenarios.py": "tools\\porting\\bolt_scenarios.py"
+      },
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {},
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true,
+          "inputs_verified": 16,
+          "historical_input_copies": {},
+          "options_note": "Prelaunch hash retained in input manifest; native game rewrites options at shutdown, excluded from post-run equality.",
+          "installed_mods_verified": 2,
+          "classpath_files_verified": 126
+        }
+      },
+      "server_libraries_verified": 95
+    }
+  },
+  "current_source_archives": {
+    "RemoteCheck-5.java": "6003e02cea9b40aa4b1f99b2060c861b927b674ddbd8fc9b73c1d37bb4e3b798",
+    "multiplayer-harness-11.py": "4486c3dc26161c71a31f42bb4d13360fc23d13916ff8af0fcf5b92cfb2ceff7e",
+    "reload-harness-11.py": "4f59a52d1140b204de71f0af333ef87211f0a9de8d0e88bd14a1d4ae03cbf8d7",
+    "bolt-harness-11.py": "0a6cc5127e596a817fb03f574ca56b916a6741818029d4f0d6afafb3431ca782"
+  }
+}

@@ -37,7 +37,6 @@ def main():
     parser.add_argument('--backend', choices=['OPENGL', 'VULKAN'], default='OPENGL')
     parser.add_argument('--boundary-probe', action='store_true', help='After networking checks, inspect a free projectile and resume its distant chunks')
     parser.add_argument('--reload-probe', action='store_true', help='Exercise empty and interrupted shipped reload scripts')
-    parser.add_argument('--bolt-probe', action='store_true', help='Fire the shipped manual-action M870 through empty and dry fire')
     args = parser.parse_args()
     root, prefix = args.root.resolve(), args.evidence_prefix.resolve()
     if root.exists():
@@ -69,8 +68,7 @@ def main():
               'authentication': 'offline test identities; no account or Internet multiplayer evidence',
               'candidate_sha256': digest(candidate), 'result': 'failed', 'checks': [], 'events': [],
               'input_sha256': {str(p): digest(p) for p in [Path(__file__), REPO / 'tools/porting/server_smoke.py',
-                  REPO / 'tools/porting/installed_client.py', REPO / 'tools/porting/reload_scenarios.py',
-                  REPO / 'tools/porting/bolt_scenarios.py']},
+                  REPO / 'tools/porting/installed_client.py', REPO / 'tools/porting/reload_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -277,9 +275,6 @@ def main():
         if args.reload_probe:
             from reload_scenarios import run_reload_scenarios
             run_reload_scenarios(check, command, client, state, wait, server_number, report)
-        if args.bolt_probe:
-            from bolt_scenarios import run_bolt_scenarios
-            run_bolt_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():

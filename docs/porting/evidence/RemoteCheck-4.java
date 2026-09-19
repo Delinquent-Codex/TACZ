@@ -43,8 +43,6 @@ final class RemoteCheck {
     private int lastCommand;
     private String previousReloadPhase;
     private final List<Map<String, Object>> reloadTransitions = new ArrayList<>();
-    private Map<String, Object> previousGunState;
-    private final List<Map<String, Object>> gunTransitions = new ArrayList<>();
 
     static void start() { new RemoteCheck().startListening(); }
 
@@ -74,7 +72,6 @@ final class RemoteCheck {
         }
         data.put("reloading", IGunOperator.fromLivingEntity(player).getSynReloadState().getStateType().isReloading());
         data.put("reload_phase", IGunOperator.fromLivingEntity(player).getSynReloadState().getStateType().name());
-        data.put("bolting", IGunOperator.fromLivingEntity(player).getSynIsBolting());
         return data;
     }
 
@@ -94,7 +91,6 @@ final class RemoteCheck {
         data.put("projectiles", projectiles);
         data.put("auto_reload", com.tacz.guns.config.client.KeyConfig.AUTO_RELOAD.get());
         data.put("reload_transitions", List.copyOf(reloadTransitions));
-        data.put("gun_transitions", List.copyOf(gunTransitions));
         var players = new LinkedHashMap<String, Object>();
         if (minecraft.level != null)
             for (var player : minecraft.level.players()) players.put(player.getName().getString(), playerState(player));
@@ -121,12 +117,6 @@ final class RemoteCheck {
             for (var player : minecraft.level.players()) {
                 if (!player.getName().getString().equals("TaczShooter")) continue;
                 var value = playerState(player);
-                if (!value.equals(previousGunState)) {
-                    previousGunState = new LinkedHashMap<>(value);
-                    var observed = new LinkedHashMap<>(value);
-                    observed.put("player_tick", player.tickCount);
-                    gunTransitions.add(observed);
-                }
                 String phase = (String) value.get("reload_phase");
                 if (!phase.equals(previousReloadPhase)) {
                     value.put("player_tick", player.tickCount);
@@ -134,10 +124,7 @@ final class RemoteCheck {
                     previousReloadPhase = phase;
                 }
             }
-        } else {
-            previousReloadPhase = null;
-            previousGunState = null;
-        }
+        } else previousReloadPhase = null;
         if (minecraft.gui.screen() instanceof net.minecraft.client.gui.screens.AccessibilityOnboardingScreen onboarding)
             onboarding.onClose();
         // Each path is published once. Replacing a file another process is

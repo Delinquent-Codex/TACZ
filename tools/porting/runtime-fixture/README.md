@@ -102,3 +102,18 @@ Server config is recorded with its RCON password omitted. Input/result manifests
 full logs and all command observations belong together. Individual client reports
 only confirm the command executor and normal exit; behavioral assertions live in
 the overall multiplayer result. Earlier failures remain in the evidence history.
+
+`--reload-probe` adds six source-derived AK-47/M870 cases: empty magazine,
+early/post-shell cancellation via attempted fire, resumed partial reload,
+reserve exhaustion and a complete per-shell empty reload. Native synchronized
+phases are sampled each client tick; server inventory queries independently check
+ammo. Setup respects the asynchronous draw transition and client state lock.
+The original auto-reload default is observed disabled. No reload state is injected.
+
+`--bolt-probe` fires all six loaded M870 shells through the client operator.
+The production client tick initiates its automatic bolt packets and the actual
+shipped Lua transfers magazine rounds into the chamber. The controller checks
+each chamber/bolt transition, nine projectiles per shot on both clients, reserve
+retention, the final empty state and dry-fire rejection. It does not directly call
+the server bolt API or validate pellet damage, sound or pixel output. Options can
+be combined; see verification.md for results and exact evidence boundaries.
