@@ -51,3 +51,4 @@ forge*changelog.txt
 /.narrafork/project.db
 /.narrafork/project.db-shm
 /.narrafork/project.db-wal
+/tools/porting/__pycache__/

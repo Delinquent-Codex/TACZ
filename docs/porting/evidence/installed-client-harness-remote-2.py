@@ -184,7 +184,6 @@ def main():
               'installed_mods_sha256': {path.name: digest(path) for path in mods.glob('*.jar')},
               'input_sha256': {str(path): digest(path) for path in
                 [Path(__file__), profile_path, vanilla_path, index_path, candidate, argfile]
-                + ([installation / 'options.txt'] if (installation / 'options.txt').is_file() else [])
                 + ([] if args.clean_world else [fixture] + fixture_inputs)},
               'classpath_sha256': {str(path): digest(path) for path in paths},
               'asset_entries_verified': len(index['objects']), 'result': 'failed', 'forced_stop': False}

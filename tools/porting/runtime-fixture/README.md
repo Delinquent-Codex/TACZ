@@ -63,3 +63,42 @@ confirmation state, matching WorldOpenFlows, so a later quick-play reopen can
 proceed without a confirmation dialog. This does not bypass production warnings
 or validate legacy-world migration. Installed runs 1/2/4 pass 66 checks; clean runs 5/6
 pass lifecycle on OpenGL/Vulkan. Failed3 is retained with its forced-stop result.
+
+## Two-client dedicated-server fixture
+
+`tools/porting/multiplayer_smoke.py` creates fresh server, shooter and observer
+directories from the verified installed templates. The server contains only the
+candidate JAR; this client-only test mod is present in the two independent release
+clients. The isolated server binds to 127.0.0.1, uses offline test identities and
+has a random private RCON password outside the evidence. No account credentials
+are read and no authenticated Internet multiplayer result is implied.
+
+RemoteCheck invokes the actual client gun operator for shoot/reload, observes real
+client events, projectiles, synchronized content and player equipment, and uses
+native disconnect/connect calls. Ordinary RCON commands equip and inspect the
+server inventory. Numbered command/response files coordinate the test; they do not
+replace any game packets or authoritative gameplay. Each file is atomically
+published once to avoid Windows sharing races. Both processes receive a normal
+quit, and the server must save and stop normally for the overall result to pass.
+
+The scenario checks initial sync, late observer join, live shot/reload broadcast,
+exact magazine/chamber/reserve changes and continued firing after a same-process
+shooter reconnect. A stone backstop keeps the initial projectiles in ticking
+chunks, with server-side removal verified before late join. `--boundary-probe`
+adds a separate free-flight observation and temporarily force-loads a distant
+corridor to test removal after suspended simulation resumes. It changes only the
+disposable test world; no production chunk loading or projectile logic changes.
+
+```powershell
+python tools/porting/multiplayer_smoke.py --root ../TACZ-port-reference/installations/multiplayer-7 --client-template ../TACZ-port-reference/installations/client-26.2 --server-template ../TACZ-port-reference/installations/server-26.2 --java ../TACZ-port-reference/jdk25/jdk-25.0.4.1+1/bin/java.exe --backend OPENGL --boundary-probe --evidence-prefix docs/porting/evidence/multiplayer-7
+```
+
+Choose a **new** root and evidence prefix for every run. `--backend VULKAN` is also
+supported. Run controller scenarios sequentially because they use ports 25570 and
+25580; each scenario intentionally runs its two clients concurrently. Public
+libraries/assets are hard-linked from installed templates, while all mutable
+state is separate; the verifier rejects checksum mismatches in shared files.
+Server config is recorded with its RCON password omitted. Input/result manifests,
+full logs and all command observations belong together. Individual client reports
+only confirm the command executor and normal exit; behavioral assertions live in
+the overall multiplayer result. Earlier failures remain in the evidence history.

@@ -1,0 +1,142 @@
+{
+  "scope": "evidence integrity audit; not additional gameplay assertions",
+  "root_inputs_verified": 4325,
+  "root_mismatches": [],
+  "runs": {
+    "1": {
+      "result": "failed",
+      "checks": 7,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    },
+    "2": {
+      "result": "failed",
+      "checks": 10,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    },
+    "3": {
+      "result": "failed",
+      "checks": 22,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    },
+    "4": {
+      "result": "failed",
+      "checks": 45,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    },
+    "5": {
+      "result": "passed",
+      "checks": 60,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    },
+    "6": {
+      "result": "passed",
+      "checks": 66,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    },
+    "7": {
+      "result": "passed",
+      "checks": 68,
+      "server_exit": 0,
+      "forced_stop": false,
+      "server_log_hash_matches": true,
+      "clients": {
+        "shooter": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        },
+        "observer": {
+          "result": "passed",
+          "exit": 0,
+          "forced_stop": false,
+          "log_hash_matches": true
+        }
+      }
+    }
+  }
+}

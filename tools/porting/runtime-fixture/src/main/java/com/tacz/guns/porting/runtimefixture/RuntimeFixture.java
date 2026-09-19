@@ -30,6 +30,10 @@ public final class RuntimeFixture {
     private long lastProgress;
 
     public RuntimeFixture() {
+        if (!System.getProperty("tacz.fixture.remote", "").isEmpty()) {
+            RemoteCheck.start();
+            return;
+        }
         TickEvent.RenderTickEvent.Post.BUS.addListener(this::tick);
         // FML can shut down the event bus after a loading failure. Capture that
         // failure through the normal client executor instead of hanging the test.

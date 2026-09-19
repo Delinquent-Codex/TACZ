@@ -1,0 +1,22 @@
+{
+  "scope": "source comparison only; not an observed baseline runtime test",
+  "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
+  "baseline_sha256": "3624b430ead5e6a886992379207e9297651913ffc3d1f48be0cb349f691bb4fe",
+  "target_sha256": "d2cd847d10f003252ec0817ece5a1368487c75bb0fdf0435cdcc518b58aed49c",
+  "tick_method_diff": [
+    "--- baseline tick\n",
+    "+++ target tick\n",
+    "@@ -3,8 +3,8 @@\n",
+    "         // \u8c03\u7528 TaC \u5b50\u5f39\u670d\u52a1\u5668\u4e8b\u4ef6",
+    "         this.onBulletTick();",
+    "         // \u7c92\u5b50\u6548\u679c",
+    "-        if (this.level().isClientSide) {",
+    "-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> AmmoParticleSpawner.addParticle(this));",
+    "+        if (this.level().isClientSide()) {",
+    "+            spawnTrailParticles();",
+    "         }",
+    "         // \u5b50\u5f39\u6a21\u578b\u7684\u65cb\u8f6c\u4e0e\u629b\u7269\u7ebf",
+    "         Vec3 movement = this.getDeltaMovement();"
+  ],
+  "notes": "Only physical-client particle dispatch and isClientSide accessor differ in tick(). Position, friction, gravity and tickCount-versus-life discard logic are unchanged. The networking scenario uses an in-range stone backstop; free flight at a simulation boundary is a separate probe."
+}

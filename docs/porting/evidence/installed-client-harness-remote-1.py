@@ -29,8 +29,6 @@ def digest(path, algorithm='sha256'):
 def verified_file(spec, destination, caches=()):
     if destination.is_file() and digest(destination, 'sha1') == spec['sha1']:
         return
-    if destination.is_file() and destination.stat().st_nlink > 1:
-        raise ValueError(f'Checksum mismatch in shared immutable installation file: {destination}')
     destination.parent.mkdir(parents=True, exist_ok=True)
     for cache in caches:
         if cache.is_file() and digest(cache, 'sha1') == spec['sha1']:
@@ -184,7 +182,6 @@ def main():
               'installed_mods_sha256': {path.name: digest(path) for path in mods.glob('*.jar')},
               'input_sha256': {str(path): digest(path) for path in
                 [Path(__file__), profile_path, vanilla_path, index_path, candidate, argfile]
-                + ([installation / 'options.txt'] if (installation / 'options.txt').is_file() else [])
                 + ([] if args.clean_world else [fixture] + fixture_inputs)},
               'classpath_sha256': {str(path): digest(path) for path in paths},
               'asset_entries_verified': len(index['objects']), 'result': 'failed', 'forced_stop': False}

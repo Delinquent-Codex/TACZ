@@ -9,3 +9,6 @@ docs/porting/evidence/*.log -text -whitespace
 # JVM thread dumps and crash reports are also verbatim runtime evidence.
 docs/porting/evidence/*-threads.txt -text -whitespace
 docs/porting/evidence/*-crash.txt -text -whitespace
+# Preserve historical test-controller/source bytes for recorded input hashes.
+docs/porting/evidence/*-harness-*.py -text
+docs/porting/evidence/RemoteCheck-*.java -text
