@@ -1,0 +1,147 @@
+{
+  "scope": "source comparison and expectations; no observed baseline runtime parity",
+  "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
+  "files": {
+    "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/guns/m16a4_data.json": {
+      "baseline_sha256": "84a8454cb6efacf3fe13cbefeded6696fe0b31b10e3e4140031ebe3b555a5127",
+      "target_sha256": "84a8454cb6efacf3fe13cbefeded6696fe0b31b10e3e4140031ebe3b555a5127",
+      "byte_identical": true
+    },
+    "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/guns/rhino357_data.json": {
+      "baseline_sha256": "2025c4ab12e69aa10b4ba038e25b7dfad76768f749222a57697b8c7a6fe96bff",
+      "target_sha256": "2025c4ab12e69aa10b4ba038e25b7dfad76768f749222a57697b8c7a6fe96bff",
+      "byte_identical": true
+    },
+    "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/guns/minigun_data.json": {
+      "baseline_sha256": "a8b0ae5f562c3009cda7fb16e2d138287e9b2ec162be1452667795a41119ba6a",
+      "target_sha256": "a8b0ae5f562c3009cda7fb16e2d138287e9b2ec162be1452667795a41119ba6a",
+      "byte_identical": true
+    },
+    "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/ammo/556x45.json": {
+      "baseline_sha256": "5408cbdb72256257ec866a34390f2225564495d853311269a96ac6bbdd40a4e0",
+      "target_sha256": "5408cbdb72256257ec866a34390f2225564495d853311269a96ac6bbdd40a4e0",
+      "byte_identical": true
+    },
+    "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/ammo/357mag.json": {
+      "baseline_sha256": "f6b66334e4cf77ad355acb9081e88e64a15470f092ced151bc22aada7f4b9566",
+      "target_sha256": "f6b66334e4cf77ad355acb9081e88e64a15470f092ced151bc22aada7f4b9566",
+      "byte_identical": true
+    },
+    "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/ammo/308.json": {
+      "baseline_sha256": "297a8a5a5f05fb9928183c714ba1d694e5f0572c7265c8060d09c3c925b48b8b",
+      "target_sha256": "297a8a5a5f05fb9928183c714ba1d694e5f0572c7265c8060d09c3c925b48b8b",
+      "byte_identical": true
+    }
+  },
+  "burst_event_order": {
+    "file": "src/main/java/com/tacz/guns/item/ModernKineticGunScriptAPI.java",
+    "snippet": "            // 触发击发事件\n            boolean fire = !MinecraftForge.EVENT_BUS.post(new GunFireEvent(shooter, itemStack, LogicalSide.SERVER));\n            if (fire) {\n                NetworkHandler.sendToTrackingEntity(new ServerMessageGunFire(shooter.getId(), itemStack), shooter);\n                // 削减弹药\n                if (consumeAmmo) {\n                    if (!this.reduceAmmoOnce()) {\n                        return false;\n                    }\n                }\n                //Handle Heat Data\n                if(gunIndex.getGunData().hasHeatData()) {\n                    Optional.ofNullable(gunIndex.getScript())\n                            .map(script -> checkFunction(script.get(\"handle_shoot_heat\")))\n                            .ifPresentOrElse(\n                                    func -> func.call(CoerceJavaToLua.coerce(this)),\n                                    this::handleShootHeat\n                            );\n                }\n",
+    "target_identical": false,
+    "note": "Fire event/broadcast precedes ammo-consumption failure; truncated burst can have more remote fire events than projectiles.",
+    "target_snippet": "            // 触发击发事件\n            boolean fire = !GunFireEvent.BUS.post(new GunFireEvent(shooter, itemStack, LogicalSide.SERVER));\n            if (fire) {\n                NetworkHandler.sendToTrackingEntity(new ServerMessageGunFire(shooter.getId(), itemStack), shooter);\n                // 削减弹药\n                if (consumeAmmo) {\n                    if (!this.reduceAmmoOnce()) {\n                        return false;\n                    }\n                }\n                //Handle Heat Data\n                if(gunIndex.getGunData().hasHeatData()) {\n                    Optional.ofNullable(gunIndex.getScript())\n                            .map(script -> checkFunction(script.get(\"handle_shoot_heat\")))\n                            .ifPresentOrElse(\n                                    func -> func.call(CoerceJavaToLua.coerce(this)),\n                                    this::handleShootHeat\n                            );\n                }\n",
+    "target_identical_after_eventbus_migration": true
+  },
+  "expectations": {
+    "m16a4": "3-cycle burst; immediate second trigger cooldown; native select to semi; 2-round truncated burst has client fire2, remote fire3, projectile2 due retained event ordering",
+    "rhino357": "auto charge +0.1 per tick, maximum0.3; 2-tick release cancels, 3-tick press fires; open bolt consumes magazine only",
+    "minigun": "inventory feed; heat +2 capped500; overheat lock; delay2500ms before cooling, unlock at0; ammo stack limit48"
+  },
+  "inventory_hud_cache": {
+    "file": "src/main/java/com/tacz/guns/client/gui/overlay/GunHudOverlay.java",
+    "baseline_sha256": "f15ffe0e68ee58099bf6e5f2e32eeac622c0547c51bad0f14b6f8ca8b4e0eba1",
+    "target_sha256": "f15ffe0e68ee58099bf6e5f2e32eeac622c0547c51bad0f14b6f8ca8b4e0eba1",
+    "identical": true,
+    "note": "HUD writes inventory-fed gun local GunCurrentAmmoCount from inventory total; remote/server stored field remains separate."
+  },
+  "client_prediction": {
+    "observed_run18": "258 successful local API calls/trigger/fire events; 257 observer trigger/fire events and 257 projectile joins on each client; server inventory consumption 257.",
+    "source_interpretation": "Both versions emit local trigger before scheduled packet and local fire callbacks without an acceptance acknowledgment. The server independently checks cooldown, timestamp validity and heat before broadcasting accepted trigger events; ClientMessagePlayerShoot ignores the returned ShootResult.",
+    "limit": "Local events are predictions, not acknowledgments. The exact reason for the extra local event in run18 is unconfirmed; no baseline runtime, visual/audio, latency or packet-rejection parity is inferred.",
+    "files": {
+      "src/main/java/com/tacz/guns/client/gameplay/LocalPlayerShoot.java": {
+        "baseline": {
+          "sha256": "23ed3e4f0c6e767be45415e9f30c1b5581288ed25dc112c2e3519dc9158f4a8f",
+          "snippets": [
+            {
+              "line": 158,
+              "text": "        if (MinecraftForge.EVENT_BUS.post(new GunShootEvent(player, mainHandItem, LogicalSide.CLIENT))) {\n            return ShootResult.FORGE_EVENT_CANCEL;\n        }\n        // 切换状态锁，不允许换弹、检视等行为进行。\n        data.lockState(SHOOT_LOCKED_CONDITION);\n        data.isShootRecorded = false;\n        // 调用开火逻辑\n        float finalChargeProgress = data.chargeProgress;\n        this.doShoot(display, iGun, mainHandItem, gunData, coolDown, finalChargeProgress);\n\n        FireMode fireMode = iGun.getFireMode(mainHandItem);\n        ChargeData chargeData = gunData.getChargeData(fireMode);\n        if (chargeData != null) {\n            if (chargeData.getChargeType() == ChargeType.DELAY) {\n                data.chargeProgress = 0f;\n            } else {\n                data.chargeProgress = Math.max(0f, data.chargeProgress - chargeData.getDecreaseOnFire());\n            }\n        }\n"
+            },
+            {
+              "line": 285,
+              "text": "                NetworkHandler.CHANNEL.sendToServer(new ClientMessagePlayerShoot(data.clientShootTimestamp - data.clientBaseTimestamp, chargeProgress));\n            }\n\n            // todo 需要检查\n            // 播放声音和状态机触发需要从异步线程上传到主线程执行，否则会引起cme\n            Minecraft.getInstance().submitAsync(() -> {\n                // 触发击发事件\n                boolean fire = !MinecraftForge.EVENT_BUS.post(new GunFireEvent(player, mainHandItem, LogicalSide.CLIENT));\n                if (fire) {\n                    // 动画和声音循环播放\n                    AnimationStateMachine<?> animationStateMachine = display.getAnimationStateMachine();\n                    if (animationStateMachine != null) {\n                        animationStateMachine.trigger(GunAnimationConstant.INPUT_SHOOT);\n                    }\n                    // 获取消音"
+            }
+          ]
+        },
+        "target": {
+          "sha256": "51031516ae72b4ae9153673bed9e0082a65b286d13fab7aca882f001c5f1e94e",
+          "snippets": [
+            {
+              "line": 157,
+              "text": "        if (GunShootEvent.BUS.post(new GunShootEvent(player, mainHandItem, LogicalSide.CLIENT))) {\n            return ShootResult.FORGE_EVENT_CANCEL;\n        }\n        // 切换状态锁，不允许换弹、检视等行为进行。\n        data.lockState(SHOOT_LOCKED_CONDITION);\n        data.isShootRecorded = false;\n        // 调用开火逻辑\n        float finalChargeProgress = data.chargeProgress;\n        this.doShoot(display, iGun, mainHandItem, gunData, coolDown, finalChargeProgress);\n\n        FireMode fireMode = iGun.getFireMode(mainHandItem);\n        ChargeData chargeData = gunData.getChargeData(fireMode);\n        if (chargeData != null) {\n            if (chargeData.getChargeType() == ChargeType.DELAY) {\n                data.chargeProgress = 0f;\n            } else {\n                data.chargeProgress = Math.max(0f, data.chargeProgress - chargeData.getDecreaseOnFire());\n            }\n        }\n"
+            },
+            {
+              "line": 292,
+              "text": "                    NetworkHandler.sendToServer(new ClientMessagePlayerShoot(data.clientShootTimestamp - data.clientBaseTimestamp, chargeProgress));\n                }\n\n                // todo 需要检查\n                // 播放声音和状态机触发需要从异步线程上传到主线程执行，否则会引起cme\n                Minecraft.getInstance().submitAsync(() -> {\n                    // 触发击发事件\n                    boolean fire = !GunFireEvent.BUS.post(new GunFireEvent(player, mainHandItem, LogicalSide.CLIENT));\n                    if (fire) {\n                        // 动画和声音循环播放\n                        AnimationStateMachine<?> animationStateMachine = display.getAnimationStateMachine();\n                        if (animationStateMachine != null) {\n                            animationStateMachine.trigger(GunAnimationConstant.INPUT_SHOOT);\n                        }\n                        // 获取消音"
+            }
+          ]
+        }
+      },
+      "src/main/java/com/tacz/guns/entity/shooter/LivingEntityShoot.java": {
+        "baseline": {
+          "sha256": "48893446dbede0bdb2ee89583496778820b1d7a89a24e2d0f6caf5044fc65d07",
+          "snippets": [
+            {
+              "line": 65,
+              "text": "        if (SyncConfig.SERVER_SHOOT_COOLDOWN_V.get()) {\n            // 判断射击是否正在冷却\n            long coolDown = getShootCoolDown(timestamp);\n            if (coolDown == -1) {\n                // 一般来说不太可能为 -1，原因未知\n                return ShootResult.UNKNOWN_FAIL;\n            }\n            if (coolDown > 0) {\n                return ShootResult.COOL_DOWN;\n            }\n        }\n        if (SyncConfig.SERVER_SHOOT_NETWORK_V.get()) {\n            // 根据 tick time 和 允许的网络延迟波动 计算 时间戳的接受窗口\n            MinecraftServer server = Objects.requireNonNull(shooter.getServer());\n            double tickTime = Math.max(server.tickTimes[server.getTickCount() % 100] * 1.0E-6D, 50);\n            long alpha = System.currentTimeMillis() - data.baseTimestamp - timestamp;\n            if (alpha < -300 || alpha > 300 + tickTime * 2) { // 允许 +- 300ms 的网络波动、窗口下限再扩大 2 个 tick time 时间(最坏情况射击会延迟2个 tick)\n                if (shooter instanceof ServerPlayer player) {\n                    NetworkHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new ServerMessageSyncBaseTimestamp());\n                }\n                return ShootResult.NETWORK_FAIL;\n            }\n        }\n        // 检查是否正在换弹\n        if (data.reloadStateType.isReloading()) {\n            return ShootResult.IS_RELOADING;\n        }\n        // 检查是否在切枪\n        if (draw.getDrawCoolDown() != 0) {\n            return ShootResult.IS_DRAWING;\n        }"
+            },
+            {
+              "line": 125,
+              "text": "        if(gunIndex.getGunData().hasHeatData()) {\n            if(iGun.isOverheatLocked(currentGunItem)) {\n                return ShootResult.OVERHEATED;\n            }\n        }\n        // 检查膛内子弹\n        if (boltType == Bolt.MANUAL_ACTION && !hasAmmoInBarrel) {\n            return ShootResult.NEED_BOLT;\n        }"
+            },
+            {
+              "line": 145,
+              "text": "        if (MinecraftForge.EVENT_BUS.post(new GunShootEvent(shooter, currentGunItem, LogicalSide.SERVER))) {\n            return ShootResult.FORGE_EVENT_CANCEL;\n        }\n\n        NetworkHandler.sendToTrackingEntity(new ServerMessageGunShoot(shooter.getId(), currentGunItem), shooter);\n        data.lastShootTimestamp = data.shootTimestamp;\n        data.heatTimestamp = System.currentTimeMillis();\n        data.shootTimestamp = timestamp;\n        data.chargeProgress = validateChargeProgress(chargeData, chargeProgress, hasChargeContext);\n        // 执行枪械射击逻辑\n        if (iGun instanceof AbstractGunItem logicGun) {\n            logicGun.shoot(data, currentGunItem, pitch, yaw, shooter);\n        }\n        return ShootResult.SUCCESS;\n    }\n\n    // 简单校验，服务端不追踪扳机按住状态，所以只拒绝超过“客户端一直按住蓄力”时理论可达到的最大进度。"
+            }
+          ]
+        },
+        "target": {
+          "sha256": "fe62a3088b48770b5a37fd99d34cfd49b10ecfc9f9c559028869041b9b70d1f5",
+          "snippets": [
+            {
+              "line": 64,
+              "text": "        if (SyncConfig.SERVER_SHOOT_COOLDOWN_V.get()) {\n            // 判断射击是否正在冷却\n            long coolDown = getShootCoolDown(timestamp);\n            if (coolDown == -1) {\n                // 一般来说不太可能为 -1，原因未知\n                return ShootResult.UNKNOWN_FAIL;\n            }\n            if (coolDown > 0) {\n                return ShootResult.COOL_DOWN;\n            }\n        }\n        if (SyncConfig.SERVER_SHOOT_NETWORK_V.get()) {\n            // 根据 tick time 和 允许的网络延迟波动 计算 时间戳的接受窗口\n            if (!(shooter.level() instanceof net.minecraft.server.level.ServerLevel serverLevel)) return ShootResult.NETWORK_FAIL;\n            MinecraftServer server = serverLevel.getServer();\n            double tickTime = Math.max(server.getTickTimesNanos()[server.getTickCount() % 100] * 1.0E-6D, 50);\n            long alpha = System.currentTimeMillis() - data.baseTimestamp - timestamp;\n            if (alpha < -300 || alpha > 300 + tickTime * 2) { // 允许 +- 300ms 的网络波动、窗口下限再扩大 2 个 tick time 时间(最坏情况射击会延迟2个 tick)\n                if (shooter instanceof ServerPlayer player) {\n                    NetworkHandler.CHANNEL.send(new ServerMessageSyncBaseTimestamp(), PacketDistributor.PLAYER.with(player));\n                }\n                return ShootResult.NETWORK_FAIL;\n            }\n        }\n        // 检查是否正在换弹\n        if (data.reloadStateType.isReloading()) {\n            return ShootResult.IS_RELOADING;\n        }\n        // 检查是否在切枪\n        if (draw.getDrawCoolDown() != 0) {\n            return ShootResult.IS_DRAWING;"
+            },
+            {
+              "line": 125,
+              "text": "        if(gunIndex.getGunData().hasHeatData()) {\n            if(iGun.isOverheatLocked(currentGunItem)) {\n                return ShootResult.OVERHEATED;\n            }\n        }\n        // 检查膛内子弹\n        if (boltType == Bolt.MANUAL_ACTION && !hasAmmoInBarrel) {\n            return ShootResult.NEED_BOLT;\n        }"
+            },
+            {
+              "line": 145,
+              "text": "        if (GunShootEvent.BUS.post(new GunShootEvent(shooter, currentGunItem, LogicalSide.SERVER))) {\n            return ShootResult.FORGE_EVENT_CANCEL;\n        }\n\n        NetworkHandler.sendToTrackingEntity(new ServerMessageGunShoot(shooter.getId(), currentGunItem), shooter);\n        data.lastShootTimestamp = data.shootTimestamp;\n        data.heatTimestamp = System.currentTimeMillis();\n        data.shootTimestamp = timestamp;\n        data.chargeProgress = validateChargeProgress(chargeData, chargeProgress, hasChargeContext);\n        // 执行枪械射击逻辑\n        if (iGun instanceof AbstractGunItem logicGun) {\n            logicGun.shoot(data, currentGunItem, pitch, yaw, shooter);\n        }\n        return ShootResult.SUCCESS;\n    }\n\n    // 简单校验，服务端不追踪扳机按住状态，所以只拒绝超过“客户端一直按住蓄力”时理论可达到的最大进度。"
+            }
+          ]
+        }
+      },
+      "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerShoot.java": {
+        "baseline": {
+          "sha256": "fd47ab9f42e14c0d819bef2be3851b383d76ede29e4d5af1e1cb64d19ad0fc92",
+          "snippets": [
+            {
+              "line": 46,
+              "text": "                IGunOperator.fromLivingEntity(entity).shoot(entity::getXRot, entity::getYRot, message.timestamp, message.chargeProgress);\n            });\n        }\n        context.setPacketHandled(true);\n    }"
+            }
+          ]
+        },
+        "target": {
+          "sha256": "1d47d541d301c61578f864b18408aed4df81aa662e153e8483a5f153cefc63d7",
+          "snippets": [
+            {
+              "line": 44,
+              "text": "                IGunOperator.fromLivingEntity(entity).shoot(entity::getXRot, entity::getYRot, message.timestamp, message.chargeProgress);\n            });\n        }\n        context.setPacketHandled(true);\n    }"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

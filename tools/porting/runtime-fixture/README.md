@@ -117,3 +117,35 @@ each chamber/bolt transition, nine projectiles per shot on both clients, reserve
 retention, the final empty state and dry-fire rejection. It does not directly call
 the server bolt API or validate pellet damage, sound or pixel output. Options can
 be combined; see verification.md for results and exact evidence boundaries.
+
+`--firing-probe` exercises the M16A4's full and ammo-limited bursts, an immediate
+second-trigger cooldown rejection, native fire-mode selection to semi, Rhino
+AUTO charge cancellation/completion, and the minigun's inventory-fed heat cap,
+lock, cooling and resumed fire. It observes trigger events separately from
+per-round fire events and projectiles. The inherited short-burst server path
+broadcasts a fire event before checking ammo, so its final empty cycle has an
+observer event but no projectile; see firing-source-comparison.json.
+
+OperatorSequence supplies bounded pressed/released flags to the real client
+`chargeShoot` API once per client tick and calls `shoot` only when it returns true.
+It never sets charge, heat, ammo or server timing. The firing scene opens owned
+non-pausing screens on both clients and establishes their positions/orientations
+with native teleport commands. A sequence temporarily uses its own input screen,
+then restores the outer owned screen; the controller closes both at scene end.
+The native screen gate suppresses ShootKey and keyboard/mouse gameplay input. Every driven tick
+checks this isolation, so the result does not depend on which test window has
+focus. This tests the operator API and
+actual play packets, not keyboard/controller bindings or ShootKey's held-button
+latching. Heat is accumulated through real minigun shots using legal inventory
+stacks; the server's normal tick cools/unlocks it. Exact timing/performance, other
+charge types, controlled damage and audio/pixel parity remain separate gates.
+Player position/rotation/health are captured, with final alive/position checks.
+
+Local trigger/fire callbacks are predictions emitted before server acceptance.
+The minigun check records successful client calls and local callbacks separately
+from remote accepted events, projectile joins and server inventory.
+A difference is retained, not classified as an extra authoritative shot; its exact
+rejection reason and presentation impact require separate validation. RemoteCheck
+also records raw projectile joins and UUIDs at quit so tracking re-entry can be
+distinguished from a new projectile. The current diagnostic keeps raw
+join delta assertions; see verification.md for the observed failure and follow-up.
