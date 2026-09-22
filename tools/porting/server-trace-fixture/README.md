@@ -1,7 +1,7 @@
 # Dedicated diagnostic fixture
 
-This separate Forge 26.2 test mod observes `LivingEntityShoot` return values and
-server projectile joins/leaves. Its Mixin records the result after the original
+This separate Forge 26.2 test mod observes `LivingEntityShoot` return values,
+server projectile joins/leaves and server gun-hurt/kill events. Its Mixin records the result after the original
 method returns; it does not change a result, packet, ammo, entity or event. The
 trace is written to `server-trace.jsonl` when the server begins stopping. A
 crash before that event may leave no trace. The fixture is never packaged in
@@ -30,3 +30,8 @@ not normal operator actions.
 The trace records return values and pre-call timing/heat observations. It
 cannot recover the exact reason for a rejection in earlier runs that lacked
 this fixture, and it does not provide an observed 1.20.1 baseline comparison.
+
+`multiplayer_smoke.py --server-trace --damage-probe` uses a separate controlled
+AK-47 player hit. It checks health, client/server TACZ hurt events, damage
+source attribution and ammunition. The diagnostic server mod observes only;
+the production projectile and event code remain unchanged.

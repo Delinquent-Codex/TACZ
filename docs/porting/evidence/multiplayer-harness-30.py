@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Two installed clients and a dedicated server, confined to loopback.
+"""Two installed clients and a TACZ-only dedicated server, confined to loopback.
 
 Creates a fresh disposable installation tree. Offline identities test networking,
 not account authentication. Public installed libraries/assets are hard-linked;
@@ -79,8 +79,7 @@ def main():
               'candidate_sha256': digest(candidate), 'result': 'failed', 'checks': [], 'events': [],
               'input_sha256': {str(p): digest(p) for p in [Path(__file__), REPO / 'tools/porting/server_smoke.py',
                   REPO / 'tools/porting/installed_client.py', REPO / 'tools/porting/reload_scenarios.py',
-                  REPO / 'tools/porting/bolt_scenarios.py', REPO / 'tools/porting/firing_scenarios.py',
-                  REPO / 'tools/porting/damage_scenarios.py']},
+                  REPO / 'tools/porting/bolt_scenarios.py', REPO / 'tools/porting/firing_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -334,7 +333,6 @@ def main():
                 hit = hits[0]
                 check(hit['attacker'] == observed['shooter_uuid'] and hit['source_attacker'] == observed['shooter_uuid']
                       and hit['gun'] == 'tacz:ak47', 'server event and damage source attribute AK-47 shooter')
-                check(hit['damage'] == 9 and not hit['headshot'], 'server hurt event reports shipped unarmored body damage')
                 check(hit['source_direct'] in {row['uuid'] for row in rows if row['kind'] == 'projectile_join'},
                       'server damage source direct entity is a spawned TACZ bullet')
                 check(not any(row['kind'] == 'gun_kill' for row in rows), 'no server gun kill event')

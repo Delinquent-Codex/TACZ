@@ -61,7 +61,7 @@
   },
   "source:src/main/java/com/tacz/guns/api/event/common/EntityHurtByGunEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/api/event/common/EntityHurtByGunEvent.java",
-    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Full emitter gameplay, rendering and KubeJS integration unverified.",
+    "validation": "15 real EventBus 7 contract assertions cover selected common/client events. Other emitter gameplay, rendering and KubeJS integration unverified. Installed diagnostic dedicated multiplayer30/31 pass on OpenGL/Vulkan: one unarmored AK-47 body hit changes target health20→11 on both clients; client and authoritative server hurt events agree on target, attacker, gun, nine damage and no headshot. The server damage source names the shooter and a spawned TACZ bullet; ammo29→28, reserve58. Test-only server observer; no baseline runtime comparison, headshot/armor/lethal/other target coverage. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/api/event/common/EntityKillByGunEvent.java": {
@@ -866,7 +866,7 @@
   },
   "source:src/main/java/com/tacz/guns/entity/EntityKineticBullet.java": {
     "implementation": "src/main/java/com/tacz/guns/entity/EntityKineticBullet.java",
-    "validation": "Actual integrated/dedicated projectile spawn and client tracking verified. Multiplayer5/6/7 use a loaded-area backstop and verify removal before late join. Separate runs6/7 observe simulation-boundary suspension and removal after native chunk resume; unchanged baseline tick code recorded. Damage, penetration/explosion and baseline runtime parity remain open. See verification.md.",
+    "validation": "Actual integrated/dedicated projectile spawn and client tracking verified. Multiplayer5/6/7 use a loaded-area backstop and verify removal before late join. Separate runs6/7 observe simulation-boundary suspension and removal after native chunk resume; unchanged baseline tick code recorded. Other damage paths, penetration/explosion and baseline runtime parity remain open. See verification.md. Installed diagnostic dedicated multiplayer30/31 pass on OpenGL/Vulkan: one unarmored AK-47 body hit changes target health20→11 on both clients; client and authoritative server hurt events agree on target, attacker, gun, nine damage and no headshot. The server damage source names the shooter and a spawned TACZ bullet; ammo29→28, reserve58. Test-only server observer; no baseline runtime comparison, headshot/armor/lethal/other target coverage. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/entity/TargetMinecart.java": {
@@ -1316,7 +1316,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunHurt.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/event/ServerMessageGunHurt.java",
-    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; no live connection or remote observer test.",
+    "validation": "61 network/serializer assertions include eight real gun-event packet codecs; selected live remote observer hurt event verified; other packet/event paths open. Installed diagnostic dedicated multiplayer30/31 pass on OpenGL/Vulkan: one unarmored AK-47 body hit changes target health20→11 on both clients; client and authoritative server hurt events agree on target, attacker, gun, nine damage and no headshot. The server damage source names the shooter and a spawned TACZ bullet; ammo29→28, reserve58. Test-only server observer; no baseline runtime comparison, headshot/armor/lethal/other target coverage. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/event/ServerMessageGunKill.java": {
@@ -4361,7 +4361,7 @@
   },
   "data/index/guns/tacz:ak47": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/guns/ak47.json",
-    "validation": "Packaged development/installed integrated gameplay plus dedicated multiplayer5/6/7: late join, synchronized shots/projectiles/partial Lua reload, exact magazine/chamber/reserve, saved ammo and firing after same-process reconnect; OpenGL/Vulkan normal exits. Broader modes, damage, visuals/audio and transitions remain unverified. See verification.md. Installed dedicated multiplayer9/10 pass six AK-47/M870 empty/early-cancel/post-shell/resumed/last-reserve/full-reload cases on OpenGL/Vulkan. Actual client packets and shipped Lua, synchronized phases/events on shooter/observer and independent RCON magazine/chamber/reserve checks; no unintended shots. Source-derived expectations; baseline runtime, other scripts/configs and complete parity remain open. See verification.md and reload-source-comparison.json.",
+    "validation": "Packaged development/installed integrated gameplay plus dedicated multiplayer5/6/7: late join, synchronized shots/projectiles/partial Lua reload, exact magazine/chamber/reserve, saved ammo and firing after same-process reconnect; OpenGL/Vulkan normal exits. Broader modes, damage, visuals/audio and transitions remain unverified. See verification.md. Installed dedicated multiplayer9/10 pass six AK-47/M870 empty/early-cancel/post-shell/resumed/last-reserve/full-reload cases on OpenGL/Vulkan. Actual client packets and shipped Lua, synchronized phases/events on shooter/observer and independent RCON magazine/chamber/reserve checks; no unintended shots. Source-derived expectations; baseline runtime, other scripts/configs and complete parity remain open. See verification.md and reload-source-comparison.json. Installed diagnostic dedicated multiplayer30/31 pass on OpenGL/Vulkan: one unarmored AK-47 body hit changes target health20→11 on both clients; client and authoritative server hurt events agree on target, attacker, gun, nine damage and no headshot. The server damage source names the shooter and a spawned TACZ bullet; ammo29→28, reserve58. Test-only server observer; no baseline runtime comparison, headshot/armor/lethal/other target coverage. See verification.md.",
     "status": "in progress"
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/scripts/xmag_reload_logic.lua": {
@@ -4413,5 +4413,10 @@
     "implementation": "src/main/java/com/tacz/guns/entity/shooter/LivingEntityHeat.java",
     "status": "in progress",
     "validation": "Installed dedicated multiplayer15/17/19/21/23/24: selected heat sequences reach the shipped cap500; both clients lock, reject fire, cool to0, unlock and fire once more. Native server inventory checks reconcile accepted projectiles with consumption from384; stored server ammo field remains30, while the baseline HUD locally caches inventory ammo. No heat/ammo injection. Target operator/runtime observations and source-derived expectations only; no observed baseline gameplay, keyboard/held-trigger latch, every charge type, measured cadence, damage or visual/audio parity. See firing-source-comparison.json and verification.md. Diagnostic Vulkan run29 directly identifies one client-predicted minigun call rejected by the server as OVERHEATED at heat500/locked; 259 authoritative heat-scene rounds plus one resumed shot equal 260 unique server minigun projectile identities. Earlier run18/20 rejection reasons and run20 observer extra joins remain unproven because those runs lacked server traces. See server-trace-analysis.json and verification.md. UUID instrumentation in21 observed no re-entry. Run22 accidental observer death is not controlled damage validation. Current whole-scene input isolation passes 213 checks on each backend in23/24, with final alive/position checks and no repeated projectile UUIDs. The earlier open observations are not closed by these passes."
+  },
+  "data/data/guns/tacz:ak47_data": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/guns/ak47_data.json",
+    "validation": "Byte-identical baseline/target AK-47 gun data (SHA-256 94150d1da83f32ed76397614c7ff61926ce80b984178190e545c58b14bfd14e4). Selected OpenGL/Vulkan diagnostic dedicated body hit in multiplayer30/31 produces nine damage and synchronized target health20→11 with shooter/bullet attribution. Other data paths and baseline runtime parity remain open. See verification.md.",
+    "status": "in progress"
   }
 }

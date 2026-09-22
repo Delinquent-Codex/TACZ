@@ -138,14 +138,22 @@ focus. This tests the operator API and
 actual play packets, not keyboard/controller bindings or ShootKey's held-button
 latching. Heat is accumulated through real minigun shots using legal inventory
 stacks; the server's normal tick cools/unlocks it. Exact timing/performance, other
-charge types, controlled damage and audio/pixel parity remain separate gates.
+charge types, broader damage and audio/pixel parity remain separate gates.
 Player position/rotation/health are captured, with final alive/position checks.
 
 Local trigger/fire callbacks are predictions emitted before server acceptance.
 The minigun check records successful client calls and local callbacks separately
 from remote accepted events, projectile joins and server inventory.
-A difference is retained, not classified as an extra authoritative shot; its exact
-rejection reason and presentation impact require separate validation. RemoteCheck
+A difference is retained, not classified as an extra authoritative shot. A separate
+diagnostic server fixture identified one ordinary heat-lock rejection in run29;
+earlier rejection reasons and presentation impact remain open. RemoteCheck
 also records raw projectile joins and UUIDs at quit so tracking re-entry can be
 distinguished from a new projectile. The current diagnostic keeps raw
 join delta assertions; see verification.md for the observed failure and follow-up.
+
+`--server-trace --damage-probe` positions an unarmored second player on the
+AK-47 firing line and checks one real body hit. Client snapshots include
+gun-hurt/kill events, target health and IDs; the optional server fixture records
+authoritative event and damage-source attribution. Selected OpenGL/Vulkan
+results are in multiplayer30/31. The production mod and gun data remain
+unchanged, and this does not cover other damage paths.

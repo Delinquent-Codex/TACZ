@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Two installed clients and a dedicated server, confined to loopback.
+"""Two installed clients and a TACZ-only dedicated server, confined to loopback.
 
 Creates a fresh disposable installation tree. Offline identities test networking,
 not account authentication. Public installed libraries/assets are hard-linked;
