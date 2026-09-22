@@ -1,0 +1,75 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by net.minecraftforge.unsafe.UnsafeHacks (file:/C:/Users/voltp/Downloads/TACZ-port-reference/installations/multiplayer-25/server/libraries/net/minecraftforge/unsafe/0.9.2/unsafe-0.9.2.jar)
+WARNING: Please consider reporting this to the maintainers of class net.minecraftforge.unsafe.UnsafeHacks
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[23:03:14] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_server, --nogui]
+[23:03:14] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 25.0.4.1+1-LTS
+[23:03:14] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.6 starting: java version 25.0.4.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[23:03:14] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-25\server\config\fml.toml is not correct. Correcting
+[23:03:14] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[23:03:14] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
+[23:03:14] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[23:03:14] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
+[23:03:14] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_server
+[23:03:14] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/voltp/Downloads/TACZ-port-reference/installations/multiplayer-25/server/libraries/org/spongepowered/mixin/0.8.7/mixin-0.8.7.jar!/ Service=ModLauncher Env=SERVER
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-core
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-core-3.0.8-figura.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-jse
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-jse-3.0.8-figura.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.LlamaLad7:MixinExtras
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.maydaymemory:mae
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mae-1.1.2.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for io.github.llamalad7:mixinextras-forge
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 mixinextras-forge-0.5.4.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.bcel:bcel
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/bcel-6.6.1.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.commons:commons-math3
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/commons-math3-3.6.1.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Closeing unselected FileSystem tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[23:03:14] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Found 7 dependencies adding them to mods collection
+[23:03:14] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at net.minecraftforge.bootstrap.shim.Main.main(Main.java:101)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133)
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53)
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 2 more
+Caused by: org.spongepowered.asm.launch.MixinInitialisationError: Mixin config tacz-server-trace.mixins.json specifies compatibility level JAVA_25 which is not recognised
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinConfig.initCompatibilityLevel(MixinConfig.java:567)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinConfig.postInit(MixinConfig.java:550)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinConfig.onLoad(MixinConfig.java:478)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinConfig.create(MixinConfig.java:1391)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.Config.create(Config.java:163)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.Mixins.createConfiguration(Mixins.java:121)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:108)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformManager.addConfig(MixinPlatformManager.java:263)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformAgentDefault.prepare(MixinPlatformAgentDefault.java:46)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinContainer.prepare(MixinContainer.java:122)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformManager.createContainerFor(MixinPlatformManager.java:145)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformManager.addContainer(MixinPlatformManager.java:135)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformManager.addNestedContainers(MixinPlatformManager.java:153)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformManager.scanForContainers(MixinPlatformManager.java:214)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.platform.MixinPlatformManager.inject(MixinPlatformManager.java:187)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinBootstrap.inject(MixinBootstrap.java:202)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.initializeLaunch(MixinLaunchPluginLegacy.java:201)
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPlugin.initializeLaunch(MixinLaunchPlugin.java:34)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchPluginHandler.lambda$announceLaunch$6(LaunchPluginHandler.java:107)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchPluginHandler.announceLaunch(LaunchPluginHandler.java:106)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:62)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110)
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17)
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 7 more

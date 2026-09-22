@@ -316,10 +316,9 @@ def main():
             check(sum(row['kind'] == 'trace_loaded' for row in rows) == 1, 'separate server diagnostic mod loaded once')
             check(any(row['kind'] == 'shoot_result' for row in rows), 'diagnostic Mixin observed actual shoot return values')
             if args.firing_probe:
-                for timestamp, expected in [(-10_000, 'COOL_DOWN'), (1_000_000_000, 'NETWORK_FAIL')]:
-                    invalid = [row for row in rows if row['kind'] == 'shoot_result' and row['request_timestamp'] == timestamp]
-                    check(len(invalid) == 1 and invalid[0]['result'] == expected,
-                          'server rejects invalid timestamp ' + str(timestamp) + ' with ' + expected)
+                invalid = [row for row in rows if row['kind'] == 'shoot_result' and row['request_timestamp'] == -10_000]
+                check(len(invalid) == 1 and invalid[0]['result'] == 'NETWORK_FAIL',
+                      'server rejects the deliberately invalid shot timestamp')
         report['result'] = 'passed'
     except Exception as error:
         report['failure'] = str(error)

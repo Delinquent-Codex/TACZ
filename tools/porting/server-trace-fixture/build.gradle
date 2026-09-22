@@ -1,0 +1,12 @@
+plugins { id 'java'; id 'net.minecraftforge.gradle' version '7.0.36' }
+group = 'com.tacz.porting'
+version = '1.0'
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+repositories { minecraft.mavenizer(it); maven fg.forgeMaven; maven fg.minecraftLibsMaven; mavenCentral() }
+dependencies {
+    implementation minecraft.dependency('net.minecraftforge:forge:26.2-65.1.0')
+    compileOnly files('../../../build/libs/tacz-26.2-1.1.8-hotfix-port.1.jar')
+    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('jar') { manifest.attributes('MixinConfigs': 'tacz-server-trace.mixins.json') }

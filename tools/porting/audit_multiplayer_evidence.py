@@ -41,7 +41,7 @@ def main():
     inputs = read(args.tested_inputs)['input_sha256']
     for name, expected in inputs.items():
         verify(ROOT / name, expected)
-    archives = {digest(path): str(path.relative_to(ROOT)) for pattern in ('*-harness-*.py', '*.java')
+    archives = {digest(path): str(path.relative_to(ROOT)) for pattern in ('*-harness-*.py', '*.java', 'server-trace-config-*.json')
                 for path in EVIDENCE.glob(pattern)}
 
     def resolve(name, expected, mods=None):
@@ -65,11 +65,15 @@ def main():
             verify(game / 'server' / name, expected)
         verify(game / 'server/forge-26.2-65.1.0-shim.jar', data['server_shim_sha256'])
         verify(game / 'server/mods/tacz-26.2-1.1.8-hotfix-port.1.jar', data['candidate_sha256'])
+        for name, expected in data.get('server_mods_sha256', {}).items():
+            verify(game / 'server/mods' / name, expected)
+        if 'server_trace_sha256' in data:
+            verify(EVIDENCE / (run + '-server-trace.jsonl'), data['server_trace_sha256'])
         entry = {'result': data['result'], 'checks': len(data['checks']), 'failure': data.get('failure'),
                  'elapsed_seconds': data['elapsed_seconds'], 'server_exit': data['server_exit_code'],
                  'forced_stop': data['forced_stop'], 'server_log_hash_matches': True,
                  'server_libraries_verified': len(data['server_libraries_sha256']),
-                 'controller_inputs': {name: resolve(name, expected) for name, expected in data['input_sha256'].items()},
+                 'controller_inputs': {name: resolve(name, expected, game / 'server/mods') for name, expected in data['input_sha256'].items()},
                  'clients': {}}
         for role in data['client_commands']:
             client = read(EVIDENCE / f'{run}-{role}-result.json')

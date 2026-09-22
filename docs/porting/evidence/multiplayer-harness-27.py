@@ -296,7 +296,7 @@ def main():
             run_bolt_scenarios(check, command, client, state, wait, server_number, report)
         if args.firing_probe:
             from firing_scenarios import run_firing_scenarios
-            run_firing_scenarios(check, command, client, state, wait, server_number, report, reject_probe=args.server_trace)
+            run_firing_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():
@@ -315,11 +315,6 @@ def main():
             rows = [json.loads(line) for line in trace.read_text(encoding='utf-8').splitlines()]
             check(sum(row['kind'] == 'trace_loaded' for row in rows) == 1, 'separate server diagnostic mod loaded once')
             check(any(row['kind'] == 'shoot_result' for row in rows), 'diagnostic Mixin observed actual shoot return values')
-            if args.firing_probe:
-                for timestamp, expected in [(-10_000, 'COOL_DOWN'), (1_000_000_000, 'NETWORK_FAIL')]:
-                    invalid = [row for row in rows if row['kind'] == 'shoot_result' and row['request_timestamp'] == timestamp]
-                    check(len(invalid) == 1 and invalid[0]['result'] == expected,
-                          'server rejects invalid timestamp ' + str(timestamp) + ' with ' + expected)
         report['result'] = 'passed'
     except Exception as error:
         report['failure'] = str(error)

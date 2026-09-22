@@ -1,0 +1,63 @@
+{
+  "scope": "Cross-check selected server shoot results, projectile identities and client counts.\n\nThis analyzes captured diagnostic runs; it does not relabel a failed run as passed\nor establish a baseline-runtime comparison.\n",
+  "analysis_tool_sha256": "190f1bca65f3669efa213e30c1072b552338f20152b705d83256c4571228ea6a",
+  "runs": {
+    "27": {
+      "gameplay_result": "passed",
+      "gameplay_failure": null,
+      "checks": 216,
+      "server_result_counts": {
+        "SUCCESS": 264
+      },
+      "minigun_client_requests": 256,
+      "minigun_server_accepted": 257,
+      "minigun_server_bullets": 257,
+      "minigun_natural_rejections": {},
+      "server_projectile_joins": 267,
+      "server_unique_projectiles": 267,
+      "server_projectile_leaves": 267,
+      "server_leaves_without_removal_reason": 106,
+      "trace_sha256": "7ea5e47b5583a913724ecce1df5826cf46390f602de47d0765c07a1f32cfe216"
+    },
+    "28": {
+      "gameplay_result": "failed",
+      "gameplay_failure": "server rejects the deliberately invalid shot timestamp",
+      "checks": 223,
+      "server_result_counts": {
+        "COOL_DOWN": 1,
+        "SUCCESS": 261
+      },
+      "minigun_client_requests": 253,
+      "minigun_server_accepted": 254,
+      "minigun_server_bullets": 254,
+      "minigun_natural_rejections": {},
+      "server_projectile_joins": 264,
+      "server_unique_projectiles": 264,
+      "server_projectile_leaves": 264,
+      "server_leaves_without_removal_reason": 105,
+      "trace_sha256": "2f2c9598f9052ea3edcf3f432e34e376c239352b141191bc46c8e06316bc07f4"
+    },
+    "29": {
+      "gameplay_result": "passed",
+      "gameplay_failure": null,
+      "checks": 232,
+      "server_result_counts": {
+        "COOL_DOWN": 1,
+        "NETWORK_FAIL": 1,
+        "OVERHEATED": 1,
+        "SUCCESS": 267
+      },
+      "minigun_client_requests": 260,
+      "minigun_server_accepted": 260,
+      "minigun_server_bullets": 260,
+      "minigun_natural_rejections": {
+        "OVERHEATED": 1
+      },
+      "server_projectile_joins": 270,
+      "server_unique_projectiles": 270,
+      "server_projectile_leaves": 270,
+      "server_leaves_without_removal_reason": 99,
+      "trace_sha256": "429db5ceb7da30ce7b8649beb8e431822fb7345823f7b63e581db9098bd5b617"
+    }
+  }
+}

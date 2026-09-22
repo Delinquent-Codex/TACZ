@@ -191,20 +191,19 @@ def run_firing_scenarios(check, command, client, state, wait, server_number, rep
     server_reserve(383 - fired)
     results['minigun_cooled'] = {'observed': values}
     if reject_probe:
-        for timestamp in (-10_000, 1_000_000_000):
-            before = both()
-            client('shooter', 'invalid_shoot_timestamp', timestamp=timestamp)
-            time.sleep(0.8)
-            values = both()
-            for role in roles:
-                check(values[role]['shots'] == before[role]['shots']
-                      and values[role]['fires'] == before[role]['fires']
-                      and values[role]['projectiles'] == before[role]['projectiles'],
-                      role + ' invalid timestamp ' + str(timestamp) + ' creates no gun event or projectile')
-            check(values['shooter']['inventory_ammo']['tacz:308'] == 383 - fired,
-                  'invalid timestamp ' + str(timestamp) + ' leaves reserve unchanged')
-            server_reserve(383 - fired)
-            results['invalid_timestamp_' + str(timestamp)] = {'before': before, 'after': values}
+        before = both()
+        client('shooter', 'invalid_shoot_timestamp')
+        time.sleep(0.8)
+        values = both()
+        for role in roles:
+            check(values[role]['shots'] == before[role]['shots']
+                  and values[role]['fires'] == before[role]['fires']
+                  and values[role]['projectiles'] == before[role]['projectiles'],
+                  role + ' invalid timestamp creates no gun event or projectile')
+        check(values['shooter']['inventory_ammo']['tacz:308'] == 383 - fired,
+              'invalid timestamp leaves reserve unchanged')
+        server_reserve(383 - fired)
+        results['invalid_timestamp'] = {'before': before, 'after': values}
     for role in roles:
         own = values[role]['players']['TaczShooter' if role == 'shooter' else 'TaczObserver']
         check(own['health'] == 20 and own['position'] == [0.5 if role == 'shooter' else 3.5, -60.0, 0.5],

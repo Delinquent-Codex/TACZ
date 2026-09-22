@@ -13,3 +13,7 @@ docs/porting/evidence/*-crash.txt -text -whitespace
 docs/porting/evidence/*-harness-*.py -text
 docs/porting/evidence/RemoteCheck-*.java -text
 docs/porting/evidence/OperatorSequence-*.java -text
+docs/porting/evidence/*-server-trace.jsonl -text -whitespace
+docs/porting/evidence/ServerTrace-*.java -text
+docs/porting/evidence/ShootTraceMixin-*.java -text
+docs/porting/evidence/server-trace-config-*.json -text

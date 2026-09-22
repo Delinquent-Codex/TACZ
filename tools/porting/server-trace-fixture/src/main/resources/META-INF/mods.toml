@@ -1,0 +1,14 @@
+modLoader="javafml"
+loaderVersion="[65,)"
+license="GPL-3.0-or-later"
+[[mods]]
+modId="tacz_server_trace"
+version="1.0"
+displayName="TACZ Server Diagnostic Trace"
+description='''Test-only observations of shoot return values and projectile lifecycle. Not part of TACZ or its release artifact.'''
+[[dependencies.tacz_server_trace]]
+modId="tacz"
+mandatory=true
+versionRange="[1.1.8-hotfix-port.1]"
+ordering="AFTER"
+side="SERVER"

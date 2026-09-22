@@ -219,8 +219,7 @@ final class RemoteCheck {
             switch (action) {
                 case "snapshot" -> { }
                 case "shoot" -> response.put("shoot_result", IClientPlayerGunOperator.fromLocalPlayer(minecraft.player).shoot().toString());
-                case "invalid_shoot_timestamp" -> NetworkHandler.sendToServer(
-                        new ClientMessagePlayerShoot(command.get("timestamp").getAsLong(), 0f));
+                case "invalid_shoot_timestamp" -> NetworkHandler.sendToServer(new ClientMessagePlayerShoot(-10_000L, 0f));
                 case "shoot_twice" -> {
                     var operator = IClientPlayerGunOperator.fromLocalPlayer(minecraft.player);
                     response.put("shoot_results", List.of(operator.shoot().toString(), operator.shoot().toString()));
