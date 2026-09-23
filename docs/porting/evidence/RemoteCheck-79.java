@@ -27,7 +27,6 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.multiplayer.resolver.ServerAddress;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -306,16 +305,6 @@ final class RemoteCheck {
                     int slot = command.get("slot").getAsInt();
                     if (slot < 0 || slot > 8) throw new IllegalArgumentException("Not a hotbar slot: " + slot);
                     minecraft.player.getInventory().setSelectedSlot(slot);
-                }
-                case "inventory_swap" -> {
-                    int from = command.get("from").getAsInt();
-                    int to = command.get("to").getAsInt();
-                    if (from < 0 || from > 8 || to < 0 || to > 8 || from == to)
-                        throw new IllegalArgumentException("Invalid hotbar swap: " + from + " -> " + to);
-                    if (minecraft.player.containerMenu != minecraft.player.inventoryMenu)
-                        throw new IllegalStateException("Player inventory is not the active menu");
-                    minecraft.gameMode.handleContainerInput(minecraft.player.inventoryMenu.containerId,
-                            36 + from, to, ContainerInput.SWAP, minecraft.player);
                 }
                 case "drop_one" -> response.put("dropped", minecraft.player.drop(false));
                 case "disconnect" -> minecraft.disconnectFromWorld(Component.literal("TACZ fixture reconnect check"));

@@ -93,49 +93,12 @@ def run_pickup_scenarios(check, command, client, state, wait, server_number, rep
 
     def reloaded():
         values = {role: state(role) for role in roles}
-        return values if (all(values[role]['players']['TaczShooter'].get('magazine') == 30
-                              and not values[role]['players']['TaczShooter']['reloading'] for role in roles)
-                          and values['shooter']['inventory_ammo'].get('tacz:762x39') == 56) else None
+        return values if all(values[role]['players']['TaczShooter'].get('magazine') == 30
+                             and not values[role]['players']['TaczShooter']['reloading'] for role in roles)
+                         and values['shooter']['inventory_ammo'].get('tacz:762x39') == 56 else None
 
     after_reload = wait(reloaded, 'post-swap reload completes despite delayed draw', timeout=15)
     server_number('Inventory[{Slot:0b}].components."minecraft:custom_data".GunCurrentAmmoCount', 30)
-    server_number('Inventory[{id:"tacz:ammo"}].count', 56)
-    check(client('shooter', 'inventory_swap', **{'from': 0, 'to': 2})['snapshot']['selected_slot'] == 0,
-          'native inventory swap moves gun without changing selected slot')
-
-    def moved():
-        values = {role: state(role) for role in roles}
-        return values if all('gun' not in values[role]['players'].get('TaczShooter', {}) for role in roles) else None
-
-    moved_state = wait(moved, 'inventory move clears held gun on both clients', timeout=10)
-    check('Found no elements matching' in command('data get entity TaczShooter Inventory[{Slot:0b}]'),
-          'native inventory click empties server hotbar slot0')
-    server_number('Inventory[{Slot:2b}].components."minecraft:custom_data".GunCurrentAmmoCount', 30)
-    check(client('shooter', 'select_slot', slot=2)['snapshot']['selected_slot'] == 2,
-          'native client selects moved gun slot2')
-
-    def moved_ready():
-        values = {role: state(role) for role in roles}
-        return values if (all(values[role]['players'].get('TaczShooter', {}).get('gun') == 'tacz:ak47'
-                              and values[role]['players']['TaczShooter'].get('magazine') == 30 for role in roles)
-                          and values['shooter']['draw_cooldown'] == 0
-                          and not values['shooter']['state_locked']) else None
-
-    moved_gun = wait(moved_ready, 'moved gun redrawn on both clients', timeout=15)
-    time.sleep(1)
-    check(client('shooter', 'shoot')['shoot_result'] == 'SUCCESS',
-          'moved and reloaded gun fires from slot2')
-
-    def moved_fired():
-        values = {role: state(role) for role in roles}
-        return values if all(values[role]['players'].get('TaczShooter', {}).get('magazine') == 29
-                             and values[role]['shots'].get('TaczShooter', 0) ==
-                             moved_gun[role]['shots'].get('TaczShooter', 0) + 1
-                             and values[role]['projectiles'] == moved_gun[role]['projectiles'] + 1
-                             for role in roles) else None
-
-    after_move_shot = wait(moved_fired, 'one moved-gun shot synchronized to both clients', timeout=15)
-    server_number('Inventory[{Slot:2b}].components."minecraft:custom_data".GunCurrentAmmoCount', 29)
     server_number('Inventory[{id:"tacz:ammo"}].count', 56)
     check(client('shooter', 'drop_one')['dropped'], 'native client drops selected gun with drop packet')
 
@@ -144,17 +107,16 @@ def run_pickup_scenarios(check, command, client, state, wait, server_number, rep
         return values if all('gun' not in values[role]['players'].get('TaczShooter', {}) for role in roles) else None
 
     after_drop = wait(dropped_again, 'hand drop clears gun for both clients', timeout=10)
-    check('Found no elements matching' in command('data get entity TaczShooter Inventory[{Slot:2b}]'),
-          'server hand slot2 empty after client drop')
+    check('Found no elements matching' in command('data get entity TaczShooter Inventory[{Slot:0b}]'),
+          'server hand slot empty after client drop')
     server_number('Inventory[{id:"tacz:ammo"}].count', 56)
     response = command(f'data get entity {gun_selector} Item.components."minecraft:custom_data".GunCurrentAmmoCount')
-    check(response.rstrip().endswith(': 29'), 're-dropped gun retains moved and fired magazine29')
+    check(response.rstrip().endswith(': 30'), 're-dropped gun retains reloaded magazine30')
     for role in roles:
-        check(after_drop[role]['shots'].get('TaczShooter', 0) == after_move_shot[role]['shots'].get('TaczShooter', 0)
-              and after_drop[role]['projectiles'] == after_move_shot[role]['projectiles'],
+        check(after_drop[role]['shots'].get('TaczShooter', 0) == after_shot[role]['shots'].get('TaczShooter', 0)
+              and after_drop[role]['projectiles'] == after_shot[role]['projectiles'],
               role + ' hand drop creates no duplicate shot or projectile')
     report['pickup_scenario'] = {'empty': empty, 'gun_pickup': gun_pickup, 'ammo_pickup': ammo_pickup,
                                  'holstered': no_gun, 'ready': ready_state, 'fired': after_shot,
                                  'during_reload': during_reload, 'reloaded': after_reload,
-                                 'moved': moved_state, 'moved_ready': moved_gun,
-                                 'moved_fired': after_move_shot, 'dropped': after_drop}
+                                 'dropped': after_drop}

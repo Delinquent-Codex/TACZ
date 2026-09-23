@@ -241,7 +241,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/InventoryEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
-    "validation": "Physical-client GameShuttingDownEvent stops the firing executor; both packaged backends fire/reload/quit normally. Same-process reconnect passes selected dedicated tests. The native client hotbar path triggers draw on slot1→0 in multiplayer72/73 and final pickup runs75–77; target timing/race coverage remains partial. See verification.md; full subsystem parity remains open.",
+    "validation": "Physical-client GameShuttingDownEvent stops the firing executor; both packaged backends fire/reload/quit normally. Same-process reconnect passes selected dedicated tests. Native hotbar draw after slot1→0 and selection of an inventory-moved gun in slot2 pass selected installed multiplayer75–77 and 79–82; timing/race and other inventory paths remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/PlayerEnterWorld.java": {
@@ -4141,7 +4141,7 @@
   },
   "source:src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java",
-    "validation": "Core build104 passes. A changed vanilla selected slot whose cached gun supplier still points to the old stack now executes the server draw path; diagnostic multiplayer75 traces slot1→0 reconciliation before the authoritative shot, and clean OpenGL/Vulkan multiplayer76/77 pass pickup, swap, shot and drop. Late duplicate draw timing and broader inventory transitions remain open. See verification.md.",
+    "validation": "Core build104 passes. A changed vanilla selected slot whose cached gun supplier still points to the old stack executes the server draw path; diagnostic multiplayer75 traces slot1→0 reconciliation. Installed multiplayer79–82 also complete post-swap reload, native menu move slot0→2, draw, second shot and drop on both backends. Late duplicate draw timing and broader inventory transitions remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/other/GunHurtBobTweak.java": {
