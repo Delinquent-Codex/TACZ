@@ -4,19 +4,15 @@ import com.google.gson.Gson;
 import com.tacz.guns.api.event.common.EntityHurtByGunEvent;
 import com.tacz.guns.api.event.common.EntityKillByGunEvent;
 import com.tacz.guns.api.event.common.GunDamageSourcePart;
-import com.tacz.guns.api.entity.IGunOperator;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.entity.EntityKineticBullet;
 import com.tacz.guns.entity.shooter.ShooterDataHolder;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.tags.DamageTypeTags;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
 import net.minecraftforge.event.server.ServerStoppingEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.server.ServerLifecycleHooks;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,7 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/** Test-only trace and tagged non-player API driver. No result/state/packet replacement or cancellation. */
+/** Diagnostic observations only. No result/state/packet replacement or cancellation. */
 @Mod("tacz_server_trace")
 public final class ServerTrace {
     private static final List<Map<String, Object>> RECORDS = new ArrayList<>();
@@ -63,41 +59,7 @@ public final class ServerTrace {
                 add(row);
             }
         });
-        TickEvent.ServerTickEvent.Post.BUS.addListener((TickEvent.ServerTickEvent.Post event) -> driveTaggedMob());
         ServerStoppingEvent.BUS.addListener((ServerStoppingEvent event) -> write());
-    }
-
-    private static void driveTaggedMob() {
-        var server = ServerLifecycleHooks.getCurrentServer();
-        if (server == null) return;
-        var level = server.overworld();
-        for (var mob : level.getEntitiesOfClass(LivingEntity.class, new AABB(-3, -64, -3, 3, -50, 3),
-                entity -> entity.entityTags().contains("tacz_probe_operator"))) {
-            var operator = IGunOperator.fromLivingEntity(mob);
-            if (mob.removeTag("tacz_probe_draw")) {
-                operator.draw(mob::getMainHandItem);
-                add(operatorRow("mob_draw", mob, "DRAWN"));
-            }
-            if (mob.removeTag("tacz_probe_fire")) {
-                var result = operator.shoot(mob::getXRot, mob::getYRot);
-                add(operatorRow("mob_fire", mob, result.toString()));
-            }
-        }
-    }
-
-    private static Map<String, Object> operatorRow(String kind, LivingEntity mob, String result) {
-        var row = new LinkedHashMap<String, Object>();
-        row.put("kind", kind);
-        row.put("shooter", mob.getUUID().toString());
-        row.put("entity_type", String.valueOf(net.minecraft.core.registries.BuiltInRegistries.ENTITY_TYPE.getKey(mob.getType())));
-        row.put("result", result);
-        var stack = mob.getMainHandItem();
-        if (stack.getItem() instanceof IGun gun) {
-            row.put("gun", gun.getGunId(stack).toString());
-            row.put("magazine", gun.getCurrentAmmoCount(stack));
-            row.put("chamber", gun.hasBulletInBarrel(stack));
-        }
-        return row;
     }
 
     public static Map<String, Object> begin(LivingEntity shooter, ShooterDataHolder data, long timestamp, float charge) {

@@ -47,12 +47,9 @@ def main():
     parser.add_argument('--penetration-probe', action='store_true', help='Exercise one shipped M700 projectile through two native iron golems')
     parser.add_argument('--explosion-probe', action='store_true', help='Exercise one shipped M320 blast against native golems and a stone block')
     parser.add_argument('--rpg-block-probe', action='store_true', help='Exercise one shipped RPG-7 blast against wool and obsidian blocks')
-    parser.add_argument('--nonplayer-probe', action='store_true', help='Drive a tagged native villager through the test-only server API fixture')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
-    if args.nonplayer_probe and not args.server_trace:
-        parser.error('--nonplayer-probe requires --server-trace')
     root, prefix = args.root.resolve(), args.evidence_prefix.resolve()
     if root.exists():
         parser.error('--root must be a new disposable directory')
@@ -93,8 +90,7 @@ def main():
                   REPO / 'tools/porting/kill_scenarios.py', REPO / 'tools/porting/armor_scenarios.py',
                   REPO / 'tools/porting/penetration_scenarios.py',
                   REPO / 'tools/porting/explosion_scenarios.py',
-                  REPO / 'tools/porting/rpg_block_scenarios.py',
-                  REPO / 'tools/porting/nonplayer_scenarios.py']},
+                  REPO / 'tools/porting/rpg_block_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -336,9 +332,6 @@ def main():
         if args.rpg_block_probe:
             from rpg_block_scenarios import run_rpg_block_scenarios
             run_rpg_block_scenarios(check, command, client, state, wait, server_number, report)
-        if args.nonplayer_probe:
-            from nonplayer_scenarios import run_nonplayer_scenarios
-            run_nonplayer_scenarios(check, command, client, state, wait, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():
@@ -445,29 +438,6 @@ def main():
                       'one server RPG rocket spawns and leaves after block explosion')
                 check(not any(row['kind'] in ('gun_hurt', 'gun_kill') for row in rows),
                       'RPG block explosion records no gun hit or kill event')
-            if args.nonplayer_probe:
-                observed = report['nonplayer_scenario']
-                shooter_uuid = observed['shooter_uuid']
-                target_uuid = observed['target_uuid']
-                draws = [row for row in rows if row['kind'] == 'mob_draw' and row['shooter'] == shooter_uuid]
-                fires = [row for row in rows if row['kind'] == 'mob_fire' and row['shooter'] == shooter_uuid]
-                check(len(draws) == 1 and draws[0]['gun'] == 'tacz:ak47',
-                      'diagnostic driver draws the equipped AK-47 for one native villager')
-                check(len(fires) == 2 and [row['result'] for row in fires] == ['SUCCESS', 'NO_AMMO'],
-                      'non-player public operator accepts one shot and rejects the empty repeat')
-                check(all(row['magazine'] == 0 and not row['chamber'] for row in fires),
-                      'non-player shot consumes its sole chambered round')
-                results = [row for row in rows if row['kind'] == 'shoot_result' and row['shooter'] == shooter_uuid]
-                check(len(results) == 2 and [row['result'] for row in results] == ['SUCCESS', 'NO_AMMO'],
-                      'unmodified production shoot path returns the same non-player results')
-                hits = [row for row in rows if row['kind'] == 'gun_hurt' and row['target'] == target_uuid]
-                joins = [row for row in rows if row['kind'] == 'projectile_join' and row['gun'] == 'tacz:ak47'
-                         and draws[0]['wall_time'] <= row['wall_time'] <= fires[-1]['wall_time']]
-                check(len(joins) == 1 and len(hits) == 1,
-                      'one authoritative bullet and target hurt; dry fire creates neither')
-                check(hits[0]['attacker'] == shooter_uuid and hits[0]['source_attacker'] == shooter_uuid
-                      and hits[0]['source_direct'] == joins[0]['uuid'],
-                      'non-player shooter and spawned bullet retain damage-source ownership')
         report['result'] = 'passed'
     except Exception as error:
         report['failure'] = str(error)

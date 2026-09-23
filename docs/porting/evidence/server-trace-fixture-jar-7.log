@@ -1,0 +1,34 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:01.131
+
+> Task :compileJava
+C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\server-trace-fixture\src\main\java\com\tacz\guns\porting\servertrace\ServerTrace.java:75: error: cannot find symbol
+                entity -> entity.getTags().contains("tacz_probe_operator"))) {
+                                ^
+  symbol:   method getTags()
+  location: variable entity of type LivingEntity
+
+1 error
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/voltp/Downloads/TACZ-26.2/tools/porting/server-trace-fixture/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\server-trace-fixture\src\main\java\com\tacz\guns\porting\servertrace\ServerTrace.java:75: error: cannot find symbol
+                  entity -> entity.getTags().contains("tacz_probe_operator"))) {
+                                  ^
+    symbol:   method getTags()
+    location: variable entity of type LivingEntity
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 4s
+1 actionable task: 1 executed

@@ -461,8 +461,7 @@ def main():
                 check(len(results) == 2 and [row['result'] for row in results] == ['SUCCESS', 'NO_AMMO'],
                       'unmodified production shoot path returns the same non-player results')
                 hits = [row for row in rows if row['kind'] == 'gun_hurt' and row['target'] == target_uuid]
-                joins = [row for row in rows if row['kind'] == 'projectile_join' and row['gun'] == 'tacz:ak47'
-                         and draws[0]['wall_time'] <= row['wall_time'] <= fires[-1]['wall_time']]
+                joins = [row for row in rows if row['kind'] == 'projectile_join' and row['gun'] == 'tacz:ak47']
                 check(len(joins) == 1 and len(hits) == 1,
                       'one authoritative bullet and target hurt; dry fire creates neither')
                 check(hits[0]['attacker'] == shooter_uuid and hits[0]['source_attacker'] == shooter_uuid

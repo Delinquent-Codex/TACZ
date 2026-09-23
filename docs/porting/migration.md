@@ -24,12 +24,16 @@ Both TACZ channels require exact integer protocol **262002**. All original play 
 
 Entity-data IDataSerializer implementations now take RegistryFriendlyByteBuf for network operations and HolderLookup.Provider for NBT operations. This is required to preserve arbitrary registered item components. Mapping numbering is validated completely before publication; mismatched key sets now disconnect explicitly instead of installing a partial table. Capability NBT retains ClassKey/DataKey/Value entries and preserves unresolved entries. This does not yet convert legacy vanilla item NBT embedded in a capability.
 
+## Non-player gun-operator example
+
+The separate test-only server mod in `tools/porting/server-trace-fixture` is a compiling and executed example of TACZ's public living-entity operator. On the server thread, after equipping a native villager's main hand with a TACZ gun, it calls `IGunOperator.fromLivingEntity(mob).draw(mob::getMainHandItem)`, waits for draw cooldown, then calls `shoot(mob::getXRot, mob::getYRot)`. The target operator returns `SUCCESS` for its one chambered round and `NO_AMMO` on the second call; TACZ itself handles projectile, ammo and tracking packets. An add-on must supply its own AI or trigger and choose when to draw/fire. This example does not establish behavior for all living-entity types or non-player reload/aim paths.
+
 ## Remaining migration gates
 
 - Top-level 1.20.1 item/world conversion and recovery procedures.
 - Remaining item NBT call sites outside the data accessors, entity/block/player persistence and Forge capabilities.
 - Gun-pack Minecraft-facing recipe/tag/loot/pack format migration; TACZ public pack format must be preserved.
-- Configuration and public extension examples; all optional integrations.
+- Configuration and remaining public extension examples; all optional integrations.
 - Actual default-pack loading, Lua execution, runtime copy/split/craft/refit/save/reconnect validation.
 
 ## Recipes, resources and Lua — continuation
