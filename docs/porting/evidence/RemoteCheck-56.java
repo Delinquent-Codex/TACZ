@@ -131,7 +131,6 @@ final class RemoteCheck {
     private Map<String, Object> playerState(Player player) {
         var data = new LinkedHashMap<String, Object>();
         data.put("uuid", player.getUUID().toString());
-        data.put("entity_id", player.getId());
         data.put("position", List.of(player.getX(), player.getY(), player.getZ()));
         data.put("rotation", List.of(player.getYRot(), player.getXRot()));
         data.put("health", player.getHealth());
@@ -281,12 +280,6 @@ final class RemoteCheck {
                 }
                 case "sequence_result" -> response.put("trace", sequence == null ? List.of() : sequence.trace());
                 case "projectile_trace" -> response.put("projectile_trace", List.copyOf(projectileJoins));
-                case "respawn" -> {
-                    if (!(minecraft.gui.screen() instanceof net.minecraft.client.gui.screens.DeathScreen)
-                            || minecraft.player == null || minecraft.player.isAlive())
-                        throw new IllegalStateException("Native death screen is not ready for respawn");
-                    minecraft.player.respawn();
-                }
                 case "disconnect" -> minecraft.disconnectFromWorld(Component.literal("TACZ fixture reconnect check"));
                 case "connect" -> ConnectScreen.startConnecting(new TitleScreen(), minecraft, ServerAddress.parseString(address),
                         new ServerData("TACZ isolated fixture", address, ServerData.Type.OTHER), true, null);

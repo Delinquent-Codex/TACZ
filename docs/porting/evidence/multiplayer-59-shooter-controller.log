@@ -1,0 +1,8 @@
+Verified 125 installed libraries and vanilla client
+Verified 5057 asset entries
+{
+  "result": "passed",
+  "exit_code": 0,
+  "forced_stop": false,
+  "failure": null
+}

@@ -48,7 +48,6 @@ def main():
     parser.add_argument('--explosion-probe', action='store_true', help='Exercise one shipped M320 blast against native golems and a stone block')
     parser.add_argument('--rpg-block-probe', action='store_true', help='Exercise one shipped RPG-7 blast against wool and obsidian blocks')
     parser.add_argument('--nonplayer-probe', action='store_true', help='Drive a tagged native villager through the test-only server API fixture')
-    parser.add_argument('--respawn-probe', action='store_true', help='Exercise native death, keep-inventory respawn and first post-respawn shot')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
@@ -95,8 +94,7 @@ def main():
                   REPO / 'tools/porting/penetration_scenarios.py',
                   REPO / 'tools/porting/explosion_scenarios.py',
                   REPO / 'tools/porting/rpg_block_scenarios.py',
-                  REPO / 'tools/porting/nonplayer_scenarios.py',
-                  REPO / 'tools/porting/respawn_scenarios.py']},
+                  REPO / 'tools/porting/nonplayer_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -341,9 +339,6 @@ def main():
         if args.nonplayer_probe:
             from nonplayer_scenarios import run_nonplayer_scenarios
             run_nonplayer_scenarios(check, command, client, state, wait, report)
-        if args.respawn_probe:
-            from respawn_scenarios import run_respawn_scenarios
-            run_respawn_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():

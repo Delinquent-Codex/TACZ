@@ -2,6 +2,12 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Keep-inventory death and respawn checkpoint — 2026-09-22
+
+- Continued from `a914e92e` with the production candidate103 and its 4,325 tested inputs unchanged. The client-only fixture now sends Minecraft 26.2's native respawn packet from its death screen and records player network entity IDs; the TACZ-only dedicated server uses no test server mod. The scenario kills a loaded AK-47 shooter under the disposable world's `keep_inventory=true` rule, then checks both installed clients, native server inventory, and one real post-respawn shot.
+- **OpenGL multiplayer59 and Vulkan multiplayer60 pass 84 checks each.** The shooter reaches the native death screen at zero health, returns to 20 health with the same account UUID/network entity ID, keeps magazine29/chamber loaded and reserve58, and has no stale reload/bolt/locked draw state. The observer sees the same gun state. Death/respawn add no gun event or projectile; a subsequent client shot adds exactly one of each and changes magazine29→28 while reserve remains58. Both clients and the TACZ-only server exit normally, save dimensions and require no forced stop.
+- Failed attempts57/58 remain preserved: 57 used the obsolete `keepInventory` spelling before any death; 58 reached a successful respawn but incorrectly expected Minecraft to allocate a different client network entity ID. The evidence audit verifies **48 multiplayer attempts through60**, including these failures, their exact source/JAR/log inputs, and all 4,325 current production inputs. **Next:** ordinary death drops, item swapping/dropping/inventory movement, dimension changes, then the remaining full-port gates. Baseline 1.20.1 runtime parity and these other transitions remain open; the full port is incomplete.
+
 ## Non-player gun-operator checkpoint — 2026-09-22
 
 - Continued from `cc667ccf` with the production candidate103 and all 4,325 tested production inputs unchanged. The public `IGunOperator` is mixed into native living entities. A separate test-only server fixture now drives `draw` and `shoot` on a tagged stationary villager, while two installed clients observe the normal TACZ packets/events. No TACZ production mechanic or release JAR changed.
