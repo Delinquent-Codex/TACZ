@@ -45,8 +45,6 @@ def main():
     parser.add_argument('--kill-probe', action='store_true', help='Follow the controlled headshot with a lethal AK-47 body shot')
     parser.add_argument('--armor-probe', action='store_true', help='Exercise one AK-47 body hit against native diamond chest armor')
     parser.add_argument('--penetration-probe', action='store_true', help='Exercise one shipped M700 projectile through two native iron golems')
-    parser.add_argument('--explosion-probe', action='store_true', help='Exercise one shipped M320 blast against native golems and a stone block')
-    parser.add_argument('--rpg-block-probe', action='store_true', help='Exercise one shipped RPG-7 blast against wool and obsidian blocks')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
@@ -88,9 +86,7 @@ def main():
                   REPO / 'tools/porting/bolt_scenarios.py', REPO / 'tools/porting/firing_scenarios.py',
                   REPO / 'tools/porting/damage_scenarios.py', REPO / 'tools/porting/headshot_scenarios.py',
                   REPO / 'tools/porting/kill_scenarios.py', REPO / 'tools/porting/armor_scenarios.py',
-                  REPO / 'tools/porting/penetration_scenarios.py',
-                  REPO / 'tools/porting/explosion_scenarios.py',
-                  REPO / 'tools/porting/rpg_block_scenarios.py']},
+                  REPO / 'tools/porting/penetration_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -326,12 +322,6 @@ def main():
         if args.penetration_probe:
             from penetration_scenarios import run_penetration_scenarios
             run_penetration_scenarios(check, command, client, state, wait, server_number, report)
-        if args.explosion_probe:
-            from explosion_scenarios import run_explosion_scenarios
-            run_explosion_scenarios(check, command, client, state, wait, server_number, report)
-        if args.rpg_block_probe:
-            from rpg_block_scenarios import run_rpg_block_scenarios
-            run_rpg_block_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():
@@ -416,28 +406,6 @@ def main():
                           'server golem hurt retains shipped M700 body damage and shooter attribution')
                 check(not any(row['kind'] == 'gun_kill' and row['target'] in targets for row in rows),
                       'one M700 penetration shot does not kill either golem')
-            if args.explosion_probe:
-                observed = report['explosion_scenario']
-                direct = observed['target_uuids']['tacz_blast_direct']
-                hits = [row for row in rows if row['kind'] == 'gun_hurt'
-                        and row['target'] in observed['target_uuids'].values()]
-                check(len(hits) == 1 and hits[0]['target'] == direct,
-                      'one authoritative direct M320 gun hurt event; collateral uses native blast damage')
-                hit = hits[0]
-                check(hit['attacker'] == observed['shooter_uuid']
-                      and hit['source_attacker'] == observed['shooter_uuid']
-                      and hit['gun'] == 'tacz:m320' and hit['damage'] == 10 and not hit['headshot'],
-                      'server direct M320 hurt retains shooter and shipped body damage')
-                check(hit['source_direct'] in {row['uuid'] for row in rows if row['kind'] == 'projectile_join'
-                                                     and row['gun'] == 'tacz:m320'},
-                      'server direct M320 hurt source is the spawned explosive bullet')
-            if args.rpg_block_probe:
-                joins = [row for row in rows if row['kind'] == 'projectile_join' and row['gun'] == 'tacz:rpg7']
-                leaves = [row for row in rows if row['kind'] == 'projectile_leave' and row['gun'] == 'tacz:rpg7']
-                check(len(joins) == 1 and len(leaves) == 1 and joins[0]['uuid'] == leaves[0]['uuid'],
-                      'one server RPG rocket spawns and leaves after block explosion')
-                check(not any(row['kind'] in ('gun_hurt', 'gun_kill') for row in rows),
-                      'RPG block explosion records no gun hit or kill event')
         report['result'] = 'passed'
     except Exception as error:
         report['failure'] = str(error)

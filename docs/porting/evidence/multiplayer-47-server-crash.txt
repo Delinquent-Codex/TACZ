@@ -1,0 +1,280 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 2026-09-22 21:48:00
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.phys.shapes.CollisionContext.of(CollisionContext.java:26) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.ClipContext.<init>(ClipContext.java:29) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ProjectileExplosion.lambda$explode$0(ProjectileExplosion.java:172) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ExplosionExposure.livingStrength(ExplosionExposure.java:23) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ProjectileExplosion.explode(ProjectileExplosion.java:171) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.ExplodeUtil.createExplosion(ExplodeUtil.java:41) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.entity.EntityKineticBullet.onHitEntity(EntityKineticBullet.java:464) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.entity.EntityKineticBullet.onBulletTick(EntityKineticBullet.java:350) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.entity.EntityKineticBullet.tick(EntityKineticBullet.java:249) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:851) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.Level.guardEntityTick(Level.java:601) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.lambda$tick$0(ServerLevel.java:462) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:442) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1133) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:996) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:311) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1028) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:769) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:299) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  com.tacz.guns.entity.EntityKineticBullet
+    REASON: classloading
+  com.tacz.guns.util.ExplodeUtil
+    REASON: classloading
+  com.tacz.guns.util.block.ExplosionExposure
+    REASON: classloading
+  com.tacz.guns.util.block.ProjectileExplosion
+    REASON: classloading
+  net.minecraft.server.MinecraftServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.dedicated.DedicatedServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.level.ServerLevel
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.ClipContext
+    REASON: classloading
+  net.minecraft.world.level.Level
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+  net.minecraft.world.phys.shapes.CollisionContext
+    REASON: classloading
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mod: 
+	Timeless & Classics Guns: Zero (tacz), Version: 1.1.8-hotfix-port.1
+		at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ProjectileExplosion.lambda$explode$0(ProjectileExplosion.java:172)
+Stacktrace:
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.phys.shapes.CollisionContext.of(CollisionContext.java:26) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.ClipContext.<init>(ClipContext.java:29) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ProjectileExplosion.lambda$explode$0(ProjectileExplosion.java:172) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ExplosionExposure.livingStrength(ExplosionExposure.java:23) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.block.ProjectileExplosion.explode(ProjectileExplosion.java:171) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.util.ExplodeUtil.createExplosion(ExplodeUtil.java:41) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.entity.EntityKineticBullet.onHitEntity(EntityKineticBullet.java:464) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.entity.EntityKineticBullet.onBulletTick(EntityKineticBullet.java:350) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.entity.EntityKineticBullet.tick(EntityKineticBullet.java:249) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:851) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.Level.guardEntityTick(Level.java:601) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.lambda$tick$0(ServerLevel.java:462) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-26.2-65.1.0-server.jar!/:?]
+Transformer Audit:
+  com.tacz.guns.entity.EntityKineticBullet
+    REASON: classloading
+  com.tacz.guns.util.ExplodeUtil
+    REASON: classloading
+  com.tacz.guns.util.block.ExplosionExposure
+    REASON: classloading
+  com.tacz.guns.util.block.ProjectileExplosion
+    REASON: classloading
+  net.minecraft.server.level.ServerLevel
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.ClipContext
+    REASON: classloading
+  net.minecraft.world.level.Level
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+  net.minecraft.world.phys.shapes.CollisionContext
+    REASON: classloading
+-- Entity being ticked --
+Details:
+	Entity Type: tacz:bullet (com.tacz.guns.entity.EntityKineticBullet)
+	Entity ID: 22
+	Entity Name: entity.tacz.bullet
+	Entity's Exact location: 0.58, -58.52, 6.44
+	Entity's Block location: World: (0,-59,6), Section: (at 0,5,6 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Entity's Momentum: 0.07, -0.28, 5.64
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.Level.guardEntityTick(Level.java:601) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.lambda$tick$0(ServerLevel.java:462) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:442) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1133) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:996) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:311) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1028) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:769) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:299) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  net.minecraft.server.MinecraftServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.dedicated.DedicatedServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.level.ServerLevel
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.Level
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+
+
+-- Affected level --
+Details:
+	All players: 2 total; ServerPlayer{name=TaczObserver, id=15, pos=(12.5, -60.0, 0.5), mode=SURVIVAL, permission=none}, ServerPlayer{name=TaczShooter, id=17, pos=(0.5, -60.0, 0.5), mode=SURVIVAL, permission=none}
+	Chunk stats: 1089
+	Level dimension: minecraft:overworld
+	Level time: 1361 game time, 1361 day time
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Commands: false
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 18
+	Server weather: Rain time: 52199 (now: false), thunder time: 21275 (now: false)
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.level.ServerLevel.fillReportDetails(ServerLevel.java:1892) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1136) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:996) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:311) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1028) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:769) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:299) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Transformer Audit:
+  net.minecraft.server.MinecraftServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.dedicated.DedicatedServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.level.ServerLevel
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+
+
+-- System Details --
+Details:
+	Minecraft Version: 26.2
+	Minecraft Version ID: 26.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 25.0.4.1, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 171434160 bytes (163 MiB) / 627048448 bytes (598 MiB) up to 2147483648 bytes (2048 MiB)
+	Memory (heap): init: 246MiB, used: 433MiB, committed: 598MiB, max: 2048MiB
+	Memory (non-head): init: 007MiB, used: 193MiB, committed: 197MiB, max: 000MiB
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 240 w/ Radeon 760M Graphics        
+	Identifier: AuthenticAMD Family 25 Model 117 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 4.29
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 5050 Laptop GPU
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8151.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.16.1714
+	Graphics card #1 name: AMD Radeon 760M Graphics
+	Graphics card #1 vendor: Advanced Micro Devices, Inc.
+	Graphics card #1 VRAM (MiB): 512.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.31041.1004
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: DDR5
+	Virtual memory max (MiB): 24380.36
+	Virtual memory used (MiB): 19636.35
+	Swap memory total (MiB): 8704.00
+	Swap memory used (MiB): 225.09
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 301074.34, total: 487309.00
+	Space in storage for workdir (MiB): available: 301074.34, total: 487309.00
+	Operating System Version: Microsoft Windows 11 (Home) build 26200
+	Process Elevated: false
+	Process Loads: Uptime: 83s, user: 61s (73.73%), kernel: 7s (8.08%), total: 68s (81.81%)
+	Process Virtual Size (MiB): 4050.20
+	Process Resident Size (MiB): 910.71
+	JVM Flags: 2 total; -Xmx2G -XX:+UseCompactObjectHeaders
+	Debug Flags: 0 total; 
+	Server Running: true
+	Player Count: 2 / 20; [ServerPlayer['TaczObserver'/15, l='ServerLevel[world]', x=12.50, y=-60.00, z=0.50], ServerPlayer['TaczShooter'/17, l='ServerLevel[world]', x=0.50, y=-60.00, z=0.50]]
+	Active Data Packs: vanilla, mod:tacz, mod:forge, tacz_resources
+	Available Data Packs: minecart_improvements, mod:forge, mod:tacz, redstone_experiments, tacz_resources, trade_rebalance, vanilla
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Experimental
+	World Seed: 262
+	Suppressed Exceptions: ~~NONE~~
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server
+	ModLauncher: 10.2
+	ModLauncher launch target: forge_server
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ forge TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@65
+		minecraft@1.0
+		javafml@65.1.0
+	Mod List: 
+		forge-26.2-65.1.0-server.jar                      |Minecraft                     |minecraft                     |26.2                |DONE      |Manifest: NOSIGNATURE
+		tacz-26.2-1.1.8-hotfix-port.1.jar                 |Timeless & Classics Guns: Zero|tacz                          |1.1.8-hotfix-port.1 |DONE      |Manifest: NOSIGNATURE
+		forge-26.2-65.1.0-universal.jar                   |Forge                         |forge                         |65.1.0              |DONE      |Manifest: 84:CE:76:E8:45:35:E4:0E:63:86:DF:47:59:80:0F:67:6C:C1:5F:6E:5F:4D:B3:54:47:1A:9F:7F:ED:5E:F2:90
+		tacz-server-trace-fixture-1.0.jar                 |TACZ Server Diagnostic Trace  |tacz_server_trace             |1.0                 |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 7eb7f72c-0022-4912-8fef-2bde5bb63813
+	FML: 65.1
+	Forge: net.minecraftforge:65.1.0

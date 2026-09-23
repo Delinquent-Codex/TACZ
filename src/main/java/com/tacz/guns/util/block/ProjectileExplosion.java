@@ -23,6 +23,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -170,7 +171,7 @@ public class ProjectileExplosion extends ServerExplosion {
                 deltaZ = (boundingBox.maxZ + boundingBox.minZ) / 2;
                 strength = ExplosionExposure.livingStrength(explosionPos, boundingBox, this.radius, point ->
                         BlockRayTrace.rayTraceBlocks(this.level, new ClipContext(explosionPos, point,
-                                ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, (Entity) null)).getType() != BlockHitResult.Type.BLOCK);
+                                ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, CollisionContext.empty())).getType() != BlockHitResult.Type.BLOCK);
                 deltaX -= this.x;
                 deltaY -= this.y;
                 deltaZ -= this.z;
