@@ -51,7 +51,6 @@ def main():
     parser.add_argument('--respawn-probe', action='store_true', help='Exercise native death, keep-inventory respawn and first post-respawn shot')
     parser.add_argument('--death-drop-probe', action='store_true', help='Exercise ordinary native death drops and empty respawn')
     parser.add_argument('--pickup-probe', action='store_true', help='Pick up the death drops, swap hotbar slots, fire and drop the gun')
-    parser.add_argument('--dimension-probe', action='store_true', help='Transfer loaded shooter and observer across overworld/nether boundaries')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
@@ -101,8 +100,7 @@ def main():
                   REPO / 'tools/porting/nonplayer_scenarios.py',
                   REPO / 'tools/porting/respawn_scenarios.py',
                   REPO / 'tools/porting/death_drop_scenarios.py',
-                  REPO / 'tools/porting/pickup_scenarios.py',
-                  REPO / 'tools/porting/dimension_scenarios.py']},
+                  REPO / 'tools/porting/pickup_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -356,9 +354,6 @@ def main():
         if args.pickup_probe:
             from pickup_scenarios import run_pickup_scenarios
             run_pickup_scenarios(check, command, client, state, wait, server_number, report)
-        if args.dimension_probe:
-            from dimension_scenarios import run_dimension_scenarios
-            run_dimension_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():

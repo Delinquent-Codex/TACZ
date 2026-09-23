@@ -2,6 +2,12 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Overworld/Nether dimension transfer checkpoint — 2026-09-23
+
+- Continued from `f2619f3e` with candidate104 and all 4,325 production inputs unchanged. A TACZ-only dedicated-server scenario transfers the loaded AK-47 shooter Overworld→Nether, fires while the observer remains in the Overworld, transfers the observer to the Nether for a shared shot, then returns both to the Overworld for a third shot. Native dimension commands create a safe disposable Nether landing area; two installed clients report their actual level keys. Server inventory NBT and both clients verify the gun, chamber, magazine, reserve and packet visibility across transfers.
+- **OpenGL multiplayer83 and Vulkan multiplayer84 pass81 checks each** for the outbound/return states; expanded **OpenGL multiplayer85 and Vulkan multiplayer86 pass84 each**, including one authoritative post-return shot. Gun magazine29→28→27→26 and reserve58 stays unchanged. The Overworld observer receives no cross-dimension shot/projectile, then sees the equipped gun without historical replay on joining the Nether and sees subsequent shots in the same dimension. All clients and servers exit normally and save dimensions without forced stop. Candidate SHA-256 remains `e29a341c1de95f19e68d30fea80115b9d080b22caeb6831ca16038365b52d697`.
+- The evidence audit verifies **74 attempts through86** and 4,325 current production inputs, including the historical source for runs83/84 before the return-shot assertion was added. **Next:** tight late/repeated draw-packet timing, other dimension transfer mechanisms and death/portal paths, additional inventory and content cases, optional integrations and remaining full-port gates. This selected target transfer does not establish baseline 1.20.1 runtime parity or full-port completion.
+
 ## Native inventory click and recovered-gun reload checkpoint — 2026-09-23
 
 - Continued from `6232091b` with candidate104 and its 4,325 production inputs unchanged. The installed scenario now reloads the recovered AK-47 after the first post-swap shot, then sends Minecraft 26.2's native `ContainerInput.SWAP` from hotbar slot0 to slot2 through the client inventory menu. Server NBT and both clients verify the gun leaves the selected hand, reappears when slot2 is selected, fires once more, and retains its new magazine value through a native hand drop. This exercises a real client inventory packet; no server command moves the recovered gun.

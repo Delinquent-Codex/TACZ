@@ -169,7 +169,6 @@ final class RemoteCheck {
     private Map<String, Object> snapshot() {
         var data = new LinkedHashMap<String, Object>();
         data.put("connected", minecraft.player != null && minecraft.level != null);
-        data.put("dimension", minecraft.level == null ? null : minecraft.level.dimension().identifier().toString());
         data.put("screen", String.valueOf(minecraft.gui.screen()));
         data.put("input_barrier_owned", minecraft.gui.screen() == inputBarrier);
         data.put("native_input_suppressed", !com.tacz.guns.util.InputExtraCheck.isInGame());
