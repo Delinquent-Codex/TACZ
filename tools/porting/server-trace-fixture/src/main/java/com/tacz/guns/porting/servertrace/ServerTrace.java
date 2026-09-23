@@ -4,11 +4,13 @@ import com.google.gson.Gson;
 import com.tacz.guns.api.event.common.EntityHurtByGunEvent;
 import com.tacz.guns.api.event.common.EntityKillByGunEvent;
 import com.tacz.guns.api.event.common.GunDamageSourcePart;
+import com.tacz.guns.api.event.common.GunDrawEvent;
 import com.tacz.guns.api.entity.IGunOperator;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.entity.EntityKineticBullet;
 import com.tacz.guns.entity.shooter.ShooterDataHolder;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraftforge.event.TickEvent;
@@ -63,6 +65,19 @@ public final class ServerTrace {
                 add(row);
             }
         });
+        GunDrawEvent.BUS.addListener((GunDrawEvent event) -> {
+            if (event.getLogicalSide().isServer()) {
+                var row = new LinkedHashMap<String, Object>();
+                row.put("kind", "gun_draw");
+                row.put("shooter", event.getEntity().getUUID().toString());
+                row.put("previous_item", itemId(event.getPreviousGunItem()));
+                row.put("current_item", itemId(event.getCurrentGunItem()));
+                row.put("mainhand_item", itemId(event.getEntity().getMainHandItem()));
+                if (event.getEntity() instanceof net.minecraft.server.level.ServerPlayer player)
+                    row.put("selected_slot", player.getInventory().getSelectedSlot());
+                add(row);
+            }
+        });
         TickEvent.ServerTickEvent.Post.BUS.addListener((TickEvent.ServerTickEvent.Post event) -> driveTaggedMob());
         ServerStoppingEvent.BUS.addListener((ServerStoppingEvent event) -> write());
     }
@@ -98,6 +113,23 @@ public final class ServerTrace {
             row.put("chamber", gun.hasBulletInBarrel(stack));
         }
         return row;
+    }
+
+    private static String itemId(net.minecraft.world.item.ItemStack stack) {
+        return String.valueOf(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(stack.getItem()));
+    }
+
+    public static void drawPacket(CustomPayloadEvent.Context context) {
+        var row = new LinkedHashMap<String, Object>();
+        row.put("kind", "draw_packet");
+        row.put("server_side", context.isServerSide());
+        var player = context.getSender();
+        row.put("shooter", player == null ? null : player.getUUID().toString());
+        if (player != null) {
+            row.put("mainhand_item", itemId(player.getMainHandItem()));
+            row.put("selected_slot", player.getInventory().getSelectedSlot());
+        }
+        add(row);
     }
 
     public static Map<String, Object> begin(LivingEntity shooter, ShooterDataHolder data, long timestamp, float charge) {

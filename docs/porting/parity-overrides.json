@@ -241,7 +241,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/event/InventoryEvent.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/InventoryEvent.java",
-    "validation": "Physical-client GameShuttingDownEvent stops the firing executor; both packaged backends fire/reload/quit normally. World logout/reconnect reuse remains untested. See verification.md and tacz-client-15/16 evidence; full subsystem parity remains open.",
+    "validation": "Physical-client GameShuttingDownEvent stops the firing executor; both packaged backends fire/reload/quit normally. Same-process reconnect passes selected dedicated tests. The native client hotbar path triggers draw on slot1→0 in multiplayer72/73 and final pickup runs75–77; target timing/race coverage remains partial. See verification.md; full subsystem parity remains open.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/event/PlayerEnterWorld.java": {
@@ -1216,7 +1216,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerDrawGun.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessagePlayerDrawGun.java",
-    "validation": "Exact target source API migration; core build 101 passes; unavailable optional adapters still fail their explicit run-102 gate. See verification.md and inventory/compile-errors.json.",
+    "validation": "Core build104 passes. Diagnostic multiplayer73 found no server draw packet before a rejected post-swap shot; multiplayer75 traced a delayed draw packet after server slot reconciliation and a successful shot. The packet remains implemented; delivery timing and duplicate effects need further tests. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessagePlayerFireSelect.java": {
@@ -4141,7 +4141,7 @@
   },
   "source:src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java": {
     "implementation": "src/main/java/com/tacz/guns/mixin/common/ServerPlayerMixin.java",
-    "validation": "Native effects/GUI/named-target migration; effects 68 and earlier suites cover selected CPU helpers. Main build still fails; FML, GPU, optional integrations and GUI behavior unverified. See verification.md logs 41–46.",
+    "validation": "Core build104 passes. A changed vanilla selected slot whose cached gun supplier still points to the old stack now executes the server draw path; diagnostic multiplayer75 traces slot1→0 reconciliation before the authoritative shot, and clean OpenGL/Vulkan multiplayer76/77 pass pickup, swap, shot and drop. Late duplicate draw timing and broader inventory transitions remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/renderer/other/GunHurtBobTweak.java": {

@@ -1,0 +1,168 @@
+package com.tacz.guns.porting.servertrace;
+
+import com.google.gson.Gson;
+import com.tacz.guns.api.event.common.EntityHurtByGunEvent;
+import com.tacz.guns.api.event.common.EntityKillByGunEvent;
+import com.tacz.guns.api.event.common.GunDamageSourcePart;
+import com.tacz.guns.api.entity.IGunOperator;
+import com.tacz.guns.api.item.IGun;
+import com.tacz.guns.entity.EntityKineticBullet;
+import com.tacz.guns.entity.shooter.ShooterDataHolder;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
+import net.minecraftforge.event.server.ServerStoppingEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.server.ServerLifecycleHooks;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+/** Test-only trace and tagged non-player API driver. No result/state/packet replacement or cancellation. */
+@Mod("tacz_server_trace")
+public final class ServerTrace {
+    private static final List<Map<String, Object>> RECORDS = new ArrayList<>();
+
+    public ServerTrace() {
+        add(Map.of("kind", "trace_loaded"));
+        EntityJoinLevelEvent.BUS.addListener((EntityJoinLevelEvent event, boolean cancelled) -> {
+            if (!cancelled && !event.getLevel().isClientSide() && event.getEntity() instanceof EntityKineticBullet bullet)
+                projectile("projectile_join", bullet);
+        });
+        EntityLeaveLevelEvent.BUS.addListener((EntityLeaveLevelEvent event) -> {
+            if (!event.getLevel().isClientSide() && event.getEntity() instanceof EntityKineticBullet bullet)
+                projectile("projectile_leave", bullet);
+        });
+        EntityHurtByGunEvent.Post.BUS.addListener((EntityHurtByGunEvent.Post event) -> {
+            if (event.getLogicalSide().isServer()) {
+                var row = hit("gun_hurt", event.getHurtEntity(), event.getAttacker(),
+                        event.getGunId().toString(), event.getBaseAmount(), event.isHeadShot());
+                var source = event.getDamageSource(GunDamageSourcePart.NON_ARMOR_PIERCING);
+                row.put("source_attacker", source.getEntity() == null ? null : source.getEntity().getUUID().toString());
+                row.put("source_direct", source.getDirectEntity() == null ? null : source.getDirectEntity().getUUID().toString());
+                row.put("source_normal_bypasses_armor", source.is(DamageTypeTags.BYPASSES_ARMOR));
+                row.put("source_piercing_bypasses_armor",
+                        event.getDamageSource(GunDamageSourcePart.ARMOR_PIERCING).is(DamageTypeTags.BYPASSES_ARMOR));
+                add(row);
+            }
+        });
+        EntityKillByGunEvent.BUS.addListener((EntityKillByGunEvent event) -> {
+            if (event.getLogicalSide().isServer()) {
+                var row = hit("gun_kill", event.getKilledEntity(), event.getAttacker(),
+                        event.getGunId().toString(), event.getBaseDamage(), event.isHeadShot());
+                var source = event.getDamageSource(GunDamageSourcePart.NON_ARMOR_PIERCING);
+                row.put("source_attacker", source.getEntity() == null ? null : source.getEntity().getUUID().toString());
+                row.put("source_direct", source.getDirectEntity() == null ? null : source.getDirectEntity().getUUID().toString());
+                add(row);
+            }
+        });
+        TickEvent.ServerTickEvent.Post.BUS.addListener((TickEvent.ServerTickEvent.Post event) -> driveTaggedMob());
+        ServerStoppingEvent.BUS.addListener((ServerStoppingEvent event) -> write());
+    }
+
+    private static void driveTaggedMob() {
+        var server = ServerLifecycleHooks.getCurrentServer();
+        if (server == null) return;
+        var level = server.overworld();
+        for (var mob : level.getEntitiesOfClass(LivingEntity.class, new AABB(-3, -64, -3, 3, -50, 3),
+                entity -> entity.entityTags().contains("tacz_probe_operator"))) {
+            var operator = IGunOperator.fromLivingEntity(mob);
+            if (mob.removeTag("tacz_probe_draw")) {
+                operator.draw(mob::getMainHandItem);
+                add(operatorRow("mob_draw", mob, "DRAWN"));
+            }
+            if (mob.removeTag("tacz_probe_fire")) {
+                var result = operator.shoot(mob::getXRot, mob::getYRot);
+                add(operatorRow("mob_fire", mob, result.toString()));
+            }
+        }
+    }
+
+    private static Map<String, Object> operatorRow(String kind, LivingEntity mob, String result) {
+        var row = new LinkedHashMap<String, Object>();
+        row.put("kind", kind);
+        row.put("shooter", mob.getUUID().toString());
+        row.put("entity_type", String.valueOf(net.minecraft.core.registries.BuiltInRegistries.ENTITY_TYPE.getKey(mob.getType())));
+        row.put("result", result);
+        var stack = mob.getMainHandItem();
+        if (stack.getItem() instanceof IGun gun) {
+            row.put("gun", gun.getGunId(stack).toString());
+            row.put("magazine", gun.getCurrentAmmoCount(stack));
+            row.put("chamber", gun.hasBulletInBarrel(stack));
+        }
+        return row;
+    }
+
+    public static Map<String, Object> begin(LivingEntity shooter, ShooterDataHolder data, long timestamp, float charge) {
+        var row = new LinkedHashMap<String, Object>();
+        row.put("kind", "shoot_result");
+        row.put("shooter", shooter.getUUID().toString());
+        row.put("player_tick", shooter.tickCount);
+        row.put("wall_before", System.currentTimeMillis());
+        row.put("request_timestamp", timestamp);
+        row.put("base_timestamp", data.baseTimestamp);
+        row.put("previous_shoot_timestamp", data.shootTimestamp);
+        row.put("charge", charge);
+        var stack = shooter.getMainHandItem();
+        if (stack.getItem() instanceof IGun gun) {
+            row.put("gun", gun.getGunId(stack).toString());
+            row.put("heat_before", gun.getHeatAmount(stack));
+            row.put("locked_before", gun.isOverheatLocked(stack));
+        }
+        return row;
+    }
+
+    public static void end(Map<String, Object> row, Object result) {
+        row.put("result", result.toString());
+        add(row);
+    }
+
+    private static void projectile(String kind, EntityKineticBullet bullet) {
+        var row = new LinkedHashMap<String, Object>();
+        row.put("kind", kind);
+        row.put("uuid", bullet.getUUID().toString());
+        row.put("id", bullet.getId());
+        row.put("age", bullet.tickCount);
+        row.put("gun", String.valueOf(bullet.getGunId()));
+        row.put("position", List.of(bullet.getX(), bullet.getY(), bullet.getZ()));
+        var motion = bullet.getDeltaMovement();
+        row.put("motion", List.of(motion.x, motion.y, motion.z));
+        row.put("removal_reason", String.valueOf(bullet.getRemovalReason()));
+        add(row);
+    }
+
+    private static Map<String, Object> hit(String kind, net.minecraft.world.entity.Entity target,
+                                            LivingEntity attacker, String gun, float damage, boolean headshot) {
+        var row = new LinkedHashMap<String, Object>();
+        row.put("kind", kind);
+        row.put("target", target == null ? null : target.getUUID().toString());
+        row.put("attacker", attacker == null ? null : attacker.getUUID().toString());
+        row.put("gun", gun);
+        row.put("damage", damage);
+        row.put("headshot", headshot);
+        return row;
+    }
+
+    private static synchronized void add(Map<String, Object> row) {
+        if (RECORDS.size() >= 10000) throw new IllegalStateException("Server trace exceeded bounded scenario capacity");
+        var copy = new LinkedHashMap<String, Object>(row);
+        copy.put("wall_time", System.currentTimeMillis());
+        RECORDS.add(copy);
+    }
+
+    private static synchronized void write() {
+        try {
+            var json = new Gson();
+            Files.writeString(Path.of("server-trace.jsonl"), String.join("\n", RECORDS.stream().map(json::toJson).toList()) + "\n");
+        } catch (Exception failure) {
+            throw new IllegalStateException("Cannot preserve server diagnostic trace", failure);
+        }
+    }
+}

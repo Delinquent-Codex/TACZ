@@ -9,6 +9,7 @@ import com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator;
 import com.tacz.guns.api.entity.IGunOperator;
 import com.tacz.guns.api.event.common.GunReloadEvent;
 import com.tacz.guns.api.event.common.GunShootEvent;
+import com.tacz.guns.api.event.common.GunDrawEvent;
 import com.tacz.guns.api.event.common.GunFireEvent;
 import com.tacz.guns.api.event.common.GunFireSelectEvent;
 import com.tacz.guns.api.event.common.EntityHurtByGunEvent;
@@ -58,6 +59,7 @@ final class RemoteCheck {
     private final Map<String, Integer> fireSelects = new LinkedHashMap<>();
     private final List<Map<String, Object>> gunHurts = new ArrayList<>();
     private final List<Map<String, Object>> gunKills = new ArrayList<>();
+    private final List<Map<String, Object>> draws = new ArrayList<>();
     private OperatorSequence sequence;
     private final Screen inputBarrier = new Screen(Component.literal("TACZ remote operator fixture")) {
         @Override public boolean isPauseScreen() { return false; }
@@ -74,6 +76,16 @@ final class RemoteCheck {
     static void start() { new RemoteCheck().startListening(); }
 
     private void startListening() {
+        GunDrawEvent.BUS.addListener((GunDrawEvent event) -> {
+            if (event.getLogicalSide() == LogicalSide.CLIENT && event.getEntity() == minecraft.player) {
+                var row = new LinkedHashMap<String, Object>();
+                row.put("previous", String.valueOf(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(event.getPreviousGunItem().getItem())));
+                row.put("current", String.valueOf(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(event.getCurrentGunItem().getItem())));
+                row.put("selected_slot", minecraft.player.getInventory().getSelectedSlot());
+                row.put("player_tick", minecraft.player.tickCount);
+                draws.add(row);
+            }
+        });
         GunShootEvent.BUS.addListener((GunShootEvent event, boolean cancelled) -> {
             if (!cancelled && event.getLogicalSide() == LogicalSide.CLIENT)
                 shots.merge(event.getShooter().getName().getString(), 1, Integer::sum);
@@ -172,6 +184,7 @@ final class RemoteCheck {
         data.put("fire_selects", new LinkedHashMap<>(fireSelects));
         data.put("gun_hurts", List.copyOf(gunHurts));
         data.put("gun_kills", List.copyOf(gunKills));
+        data.put("draws", List.copyOf(draws));
         data.put("sequence", sequence == null ? Map.of("status", "idle", "ticks", 0) : sequence.summary());
         data.put("projectiles", projectiles);
         data.put("unique_projectiles", projectileIds.size());
@@ -196,6 +209,7 @@ final class RemoteCheck {
             data.put("state_locked", IClientPlayerGunOperator.fromLocalPlayer(minecraft.player).getDataHolder().clientStateLock);
             data.put("game_mode", minecraft.gameMode.getPlayerMode().name());
             data.put("reserve_slot_count", minecraft.player.getInventory().getItem(9).getCount());
+            data.put("selected_slot", minecraft.player.getInventory().getSelectedSlot());
             data.put("draw_cooldown", IGunOperator.fromLivingEntity(minecraft.player).getSynDrawCoolDown());
         }
         return data;
@@ -287,6 +301,12 @@ final class RemoteCheck {
                         throw new IllegalStateException("Native death screen is not ready for respawn");
                     minecraft.player.respawn();
                 }
+                case "select_slot" -> {
+                    int slot = command.get("slot").getAsInt();
+                    if (slot < 0 || slot > 8) throw new IllegalArgumentException("Not a hotbar slot: " + slot);
+                    minecraft.player.getInventory().setSelectedSlot(slot);
+                }
+                case "drop_one" -> response.put("dropped", minecraft.player.drop(false));
                 case "disconnect" -> minecraft.disconnectFromWorld(Component.literal("TACZ fixture reconnect check"));
                 case "connect" -> ConnectScreen.startConnecting(new TitleScreen(), minecraft, ServerAddress.parseString(address),
                         new ServerData("TACZ isolated fixture", address, ServerData.Type.OTHER), true, null);

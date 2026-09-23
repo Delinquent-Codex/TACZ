@@ -41,16 +41,16 @@ def run_death_drop_scenarios(check, command, client, state, wait, report):
           'dropped reserve retains ammo ID')
     command('scoreboard objectives add tacz_drops dummy')
 
-    def nearby_drop_count():
+    def world_drop_count():
         command('execute store result score #drops tacz_drops if entity '
-                '@e[type=minecraft:item,x=0,y=-60,z=0,distance=..6]')
+                '@e[type=minecraft:item]')
         response = command('scoreboard players get #drops tacz_drops')
         value = re.search(r'\b(\d+)\b', response)
         if value is None:
             raise AssertionError('Unexpected native scoreboard reply: ' + response)
         return int(value.group(1))
 
-    check(nearby_drop_count() == 2, 'ordinary death creates exactly one gun and one ammo drop')
+    check(world_drop_count() == 2, 'ordinary death creates exactly one gun and one ammo drop')
     client('shooter', 'respawn')
 
     def empty_respawn():
@@ -82,7 +82,7 @@ def run_death_drop_scenarios(check, command, client, state, wait, report):
           'gun drop remains after distant respawn')
     check(dropped(ammo_selector, 'Item.count', 58) == ammo_count,
           'ammo drop remains after distant respawn')
-    check(nearby_drop_count() == 2, 'no extra drop appears after distant respawn')
+    check(world_drop_count() == 2, 'no extra drop appears after distant respawn')
     report['death_drop_scenario'] = {'before': before, 'dead': dead, 'after': after,
                                      'gun_magazine': gun_magazine, 'gun_chamber': gun_chamber,
                                      'ammo_count': ammo_count}

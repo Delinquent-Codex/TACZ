@@ -1,0 +1,12 @@
+
+> Configure project :
+Minecraft Maven is up-to-date, took 0:00.901
+
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :jar
+
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 3 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.0/userguide/configuration_cache_enabling.html
