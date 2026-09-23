@@ -157,3 +157,12 @@ gun-hurt/kill events, target health and IDs; the optional server fixture records
 authoritative event and damage-source attribution. Selected OpenGL/Vulkan
 results are in multiplayer30/31. The production mod and gun data remain
 unchanged, and this does not cover other damage paths.
+
+`--headshot-probe` checks a close-range headshot's multiplied damage and
+nonlethal client hurt events; `--kill-probe` adds one lethal body shot against
+the surviving target. `--armor-probe` checks a native diamond chestplate and
+the shipped AK-47 armor-ignore split using the exact target combat rule.
+These probes also run against a TACZ-only dedicated server without
+`--server-trace`. See multiplayer34–42 and verification.md for passed and
+failed attempts; other target types, armor sets, penetration and explosions
+remain open.

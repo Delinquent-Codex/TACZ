@@ -35,3 +35,8 @@ this fixture, and it does not provide an observed 1.20.1 baseline comparison.
 AK-47 player hit. It checks health, client/server TACZ hurt events, damage
 source attribution and ammunition. The diagnostic server mod observes only;
 the production projectile and event code remain unchanged.
+
+Headshot, lethal follow-up and armor probes use the same read-only trace.
+The kill event records its attacker and direct bullet; the hurt event records
+whether the normal and piercing sources carry the target `bypasses_armor` tag.
+Clean-server repetitions omit this mod entirely and retain client/RCON checks.

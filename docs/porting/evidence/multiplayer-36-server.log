@@ -1,0 +1,447 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by net.minecraftforge.unsafe.UnsafeHacks (file:/C:/Users/voltp/Downloads/TACZ-port-reference/installations/multiplayer-36/server/libraries/net/minecraftforge/unsafe/0.9.2/unsafe-0.9.2.jar)
+WARNING: Please consider reporting this to the maintainers of class net.minecraftforge.unsafe.UnsafeHacks
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[17:04:03] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_server, --nogui]
+[17:04:03] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 25.0.4.1+1-LTS
+[17:04:03] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.6 starting: java version 25.0.4.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[17:04:03] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-36\server\config\fml.toml is not correct. Correcting
+[17:04:03] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[17:04:03] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
+[17:04:03] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[17:04:03] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
+[17:04:04] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_server
+[17:04:04] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/voltp/Downloads/TACZ-port-reference/installations/multiplayer-36/server/libraries/org/spongepowered/mixin/0.8.7/mixin-0.8.7.jar!/ Service=ModLauncher Env=SERVER
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-core
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-core-3.0.8-figura.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.FiguraMC.luaj:luaj-jse
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/luaj-jse-3.0.8-figura.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.github.LlamaLad7:MixinExtras
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for com.maydaymemory:mae
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mae-1.1.2.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for io.github.llamalad7:mixinextras-forge
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	 mixinextras-forge-0.5.4.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.bcel:bcel
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/bcel-6.6.1.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: JarJar Candidated for org.apache.commons:commons-math3
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: 	*tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/commons-math3-3.6.1.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Closeing unselected FileSystem tacz-26.2-1.1.8-hotfix-port.1.jar!/META-INF/jarjar/mixinextras-forge-0.5.4.jar!/META-INF/jars/MixinExtras-0.5.4.jar
+[17:04:04] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/JAR-JAR]: Found 7 dependencies adding them to mods collection
+[17:04:04] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[17:04:05] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_server' with arguments [--nogui]
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in module com.sun.jna (jar:file:///C:/Users/voltp/Downloads/TACZ-port-reference/installations/multiplayer-36/server/libraries/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar!/)
+WARNING: Use --enable-native-access=com.sun.jna to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[17:04:06] [main/ERROR] [os.dr.wi.re.HkeyPerformanceDataUtil/]: Unable to locate English counter names in registry Perflib 009. Counters may need to be rebuilt: 
+com.sun.jna.platform.win32.Win32Exception: The parameter is incorrect.
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:921) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.sun.jna.platform@5.17.0/com.sun.jna.platform.win32.Advapi32Util.registryGetStringArray(Advapi32Util.java:898) ~[jna-platform-5.17.0.jar!/:5.17.0 (b0)]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.mapCounterIndicesFromRegistry(HkeyPerformanceDataUtil.java:274) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.HkeyPerformanceDataUtil.<clinit>(HkeyPerformanceDataUtil.java:51) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.driver.windows.registry.ProcessPerformanceData.buildProcessMapFromRegistry(ProcessPerformanceData.java:45) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.queryProcessMapFromRegistry(WindowsOperatingSystem.java:328) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.util.Memoizer$1.get(Memoizer.java:65) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.processMapToList(WindowsOperatingSystem.java:298) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.windows.WindowsOperatingSystem.getProcess(WindowsOperatingSystem.java:292) [oshi-core-6.9.0.jar!/:6.9.0]
+	at SECURE-BOOTSTRAP/com.github.oshi@6.9.0/oshi.software.os.OperatingSystem.getCurrentProcess(OperatingSystem.java:246) [oshi-core-6.9.0.jar!/:6.9.0]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.shim.Main.main(Main.java:101) [forge-26.2-65.1.0-shim.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[17:04:06] [main/WARN] [os.ut.pl.wi.PerfCounterQuery/]: Unable to locate English counter names in registry Perflib 009. Assuming English counters. Error 0x80070057. See https://support.microsoft.com/en-us/help/300956/how-to-manually-rebuild-performance-counter-library-values
+[17:04:06] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Loads
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$0(SystemReport.java:190) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:189) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.shim.Main.main(Main.java:101) [forge-26.2-65.1.0-shim.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[17:04:06] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Virtual Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$1(SystemReport.java:202) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:202) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.shim.Main.main(Main.java:101) [forge-26.2-65.1.0-shim.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[17:04:06] [main/WARN] [minecraft/SystemReport]: Failed to get system info for Process Resident Size (MiB)
+java.lang.NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putProcessDetails$2(SystemReport.java:203) ~[forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.setDetail(SystemReport.java:96) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putProcessDetails(SystemReport.java:203) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$putSoftware$0(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.putSoftware(SystemReport.java:116) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.lambda$new$7(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.ignoreErrors(SystemReport.java:121) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.SystemReport.<init>(SystemReport.java:68) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.<init>(CrashReport.java:32) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.CrashReport.preload(CrashReport.java:227) [forge-26.2-65.1.0-server.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.Main.main(Main.java:120) [forge-26.2-65.1.0-server.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.shim.Main.main(Main.java:101) [forge-26.2-65.1.0-shim.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.CrashReport
+    REASON: classloading
+  net.minecraft.SystemReport
+    REASON: classloading
+  net.minecraft.server.Main
+    REASON: classloading
+[17:04:07] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[17:04:14] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 65.1.0, for MC 26.2 with MCP 20260616.103818
+[17:04:14] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v65.1.0 Initialized
+[17:04:14] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-36\server\config\tacz-common.toml is not correct. Correcting
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gun was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gun.DefaultGunFireSoundDistance was corrected from null to its default, 64. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gun.DefaultGunSilenceSoundDistance was corrected from null to its default, 16. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gun.DefaultGunOtherSoundDistance was corrected from null to its default, 16. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gun.CreativePlayerConsumeAmmo was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gun.AutoReloadWhenRespawn was corrected from null to its default, false. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.ExplosiveAmmoDestroysBlock was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.ExplosiveAmmoFire was corrected from null to its default, false. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.ExplosiveAmmoKnockBack was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.ExplosiveAmmoVisibleDistance was corrected from null to its default, 192. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.PassThroughBlocks was corrected from null to its default, []. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.DestroyGlass was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.IgniteBlock was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.IgniteEntity was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key ammo.GlobalBulletSpeedModifier was corrected from null to its default, 2.0. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key other was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key other.DefaultPackDebug was corrected from null to its default, false. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key other.TargetSoundDistance was corrected from null to its default, 128. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key other.ServerHitboxOffset was corrected from null to its default, 3.0. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key other.ServerHitboxLatencyFix was corrected from null to its default, true. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key other.ServerHitboxLatencyMaxSaveMs was corrected from null to its default, 1000.0. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-36\server\config\forge-common.toml is not correct. Correcting
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:14] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.logLegacyTagWarnings was corrected from null to its default, OFF. 
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
+[17:04:14] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
+[17:04:14] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[17:04:15] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 65.1.0 Target: null
+[17:04:15] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[17:04:16] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-36\server\tacz\tacz-pre.toml is not correct. Correcting
+[17:04:16] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:16] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false. 
+[17:04:16] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-36\server\tacz\tacz_default_gun
+[17:04:21] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in C:\Users\voltp\Downloads\TACZ-port-reference\installations\multiplayer-36\server\tacz
+[17:04:21] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[17:04:21] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[17:04:21] [main/WARN] [minecraft/Pack]: Missing metadata in pack mod:tacz_server_trace
+[17:04:21] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:tacz_server_trace
+[17:04:21] [main/INFO] [minecraft/MinecraftServer]: Found new data pack tacz_resources, loading it automatically
+[17:04:21] [Worker-Main-8/INFO] [minecraft/Main]: No existing world data, creating new world
+[17:04:24] [main/INFO] [minecraft/RecipeManager]: Loaded 1769 recipes
+[17:04:24] [main/INFO] [minecraft/AdvancementTree]: Loaded 1688 advancements
+[17:04:25] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 26.2
+[17:04:25] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[17:04:25] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[17:04:25] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[17:04:25] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:25570
+2026-09-23T00:04:25.305762Z Server thread ERROR An exception occurred processing Appender DebugFile
+org.apache.logging.log4j.core.appender.AppenderLoggingException: java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.kqueue.Native
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:164)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:807)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:765)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:741)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:650)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:67)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.Logger.logMessage(Logger.java:173)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.slf4j2.impl@2.26.0/org.apache.logging.slf4j.Log4jLogger.log(Log4jLogger.java:374)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.logging.LocationAwareSlf4JLogger.log(LocationAwareSlf4JLogger.java:46)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.logging.LocationAwareSlf4JLogger.debug(LocationAwareSlf4JLogger.java:129)
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.kqueue@4.2.15.Final/io.netty.channel.kqueue.KQueue.<clinit>(KQueue.java:54)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.network.EventLoopGroupHolder.remote(EventLoopGroupHolder.java:59)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.network.ServerConnectionListener.startTcpServerListener(ServerConnectionListener.java:60)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:217)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:728)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:299)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.kqueue.Native
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.util.LoaderUtil.loadClass(LoaderUtil.java:212)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.lambda$static$1(ThrowableExtendedStackTraceRenderer.java:196)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.loadClass(ThrowableExtendedStackTraceRenderer.java:180)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.createClassResourceInfoByName(ThrowableExtendedStackTraceRenderer.java:166)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.ofThrowable(ThrowableExtendedStackTraceRenderer.java:96)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.access$000(ThrowableExtendedStackTraceRenderer.java:81)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:43)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:34)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableStackTraceRenderer.renderThrowable(ThrowableStackTraceRenderer.java:55)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowablePatternConverter.format(ThrowablePatternConverter.java:130)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout$NoFormatPatternSerializer.toSerializable(PatternLayout.java:354)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.toText(PatternLayout.java:251)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:237)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:57)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:227)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:220)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:211)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.append(RollingRandomAccessFileAppender.java:395)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160)
+	... 19 more
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.IllegalStateException: Only supported on OSX/BSD [in thread "Server thread"]
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.kqueue@4.2.15.Final/io.netty.channel.kqueue.Native.loadNativeLibrary(Native.java:159)
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.kqueue@4.2.15.Final/io.netty.channel.kqueue.Native.<clinit>(Native.java:76)
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.kqueue@4.2.15.Final/io.netty.channel.kqueue.KQueue.<clinit>(KQueue.java:38)
+	... 6 more
+
+2026-09-23T00:04:25.315577300Z Server thread ERROR An exception occurred processing Appender DebugFile
+org.apache.logging.log4j.core.appender.AppenderLoggingException: java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.epoll.Native
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:164)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:807)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:765)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:741)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:650)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:67)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.Logger.logMessage(Logger.java:173)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.slf4j2.impl@2.26.0/org.apache.logging.slf4j.Log4jLogger.log(Log4jLogger.java:374)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.logging.LocationAwareSlf4JLogger.log(LocationAwareSlf4JLogger.java:46)
+	at SECURE-BOOTSTRAP/io.netty.common@4.2.15.Final/io.netty.util.internal.logging.LocationAwareSlf4JLogger.debug(LocationAwareSlf4JLogger.java:129)
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.epoll@4.2.15.Final/io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:66)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.network.EventLoopGroupHolder.remote(EventLoopGroupHolder.java:63)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.network.ServerConnectionListener.startTcpServerListener(ServerConnectionListener.java:60)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:217)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:728)
+	at TRANSFORMER/minecraft@26.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:299)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.epoll.Native
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j@2.26.0/org.apache.logging.log4j.util.LoaderUtil.loadClass(LoaderUtil.java:212)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.lambda$static$1(ThrowableExtendedStackTraceRenderer.java:196)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.loadClass(ThrowableExtendedStackTraceRenderer.java:180)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.createClassResourceInfoByName(ThrowableExtendedStackTraceRenderer.java:166)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.ofThrowable(ThrowableExtendedStackTraceRenderer.java:96)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.access$000(ThrowableExtendedStackTraceRenderer.java:81)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:43)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:34)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowableStackTraceRenderer.renderThrowable(ThrowableStackTraceRenderer.java:55)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.pattern.ThrowablePatternConverter.format(ThrowablePatternConverter.java:130)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout$NoFormatPatternSerializer.toSerializable(PatternLayout.java:354)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.toText(PatternLayout.java:251)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:237)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:57)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:227)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:220)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:211)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.append(RollingRandomAccessFileAppender.java:395)
+	at SECURE-BOOTSTRAP/org.apache.logging.log4j.core@2.26.0/org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160)
+	... 19 more
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.IllegalStateException: Only supported on Linux [in thread "Server thread"]
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.epoll@4.2.15.Final/io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:328)
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.epoll@4.2.15.Final/io.netty.channel.epoll.Native.<clinit>(Native.java:96)
+	at SECURE-BOOTSTRAP/io.netty.transport.classes.epoll@4.2.15.Final/io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:42)
+	... 6 more
+
+[17:04:25] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:04:25] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[17:04:25] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:04:25] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file .\world\serverconfig\tacz-server.toml is not correct. Correcting
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistBlocks was corrected from null to its default, []. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistEntities was corrected from null to its default, []. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistBlocks was corrected from null to its default, []. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistEntities was corrected from null to its default, []. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.DamageBaseMultiplier was corrected from null to its default, 1.0. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.ArmorIgnoreBaseMultiplier was corrected from null to its default, 1.0. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.HeadShotBaseMultiplier was corrected from null to its default, 1.0. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.WeightSpeedMultiplier was corrected from null to its default, 0.015. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.HeadShotAABB was corrected from null to its default, []. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.AmmoBoxStackSize was corrected from null to its default, 3. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ClientGunPackDownloadUrls was corrected from null to its default, []. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableCrawl was corrected from null to its default, true. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableDefaultGunSmithTableFilter was corrected from null to its default, true. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootNetworkCheck was corrected from null to its default, true. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootCooldownCheck was corrected from null to its default, true. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file .\world\serverconfig\forge-server.toml is not correct. Correcting
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[17:04:25] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[17:04:25] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+[17:04:25] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Selecting global world spawn...
+[17:04:26] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Loading 0 persistent chunks...
+[17:04:26] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 100%
+[17:04:26] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Time elapsed: 1079 ms
+[17:04:26] [Server thread/INFO] [minecraft/DedicatedServer]: Done (1.385s)! For help, type "help"
+[17:04:26] [Server thread/INFO] [minecraft/DedicatedServer]: Starting remote control listener
+[17:04:26] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
+[17:04:26] [Server thread/INFO] [minecraft/RconThread]: RCON running on 127.0.0.1:25580
+[17:04:26] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[17:04:26] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[17:04:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[17:04:27] [RCON Listener #1/INFO] [minecraft/GenericThread]: Thread RCON Client /127.0.0.1 started
+[17:04:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[17:04:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:04:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17:04:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[17:04:27] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[17:05:04] [Server thread/INFO] [minecraft/PlayerList]: TaczShooter[/127.0.0.1:51106] logged in with entity id 1 at (-0.5, -60.0, -2.5)
+[17:05:04] [Server thread/INFO] [minecraft/MinecraftServer]: TaczShooter joined the game
+[17:05:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Teleported TaczShooter to 0.500000, -60.000000, 0.500000]
+[17:05:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Successfully filled 272 block(s)]
+[17:05:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Replaced a slot on TaczShooter with [item.tacz.modern_kinetic_gun]]
+[17:05:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Replaced a slot on TaczShooter with [item.tacz.ammo]]
+[17:05:52] [Server thread/INFO] [minecraft/PlayerList]: TaczObserver[/127.0.0.1:63698] logged in with entity id 18 at (-1.5, -60.0, -5.5)
+[17:05:52] [Server thread/INFO] [minecraft/MinecraftServer]: TaczObserver joined the game
+[17:05:55] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Teleported TaczObserver to 3.500000, -60.000000, 0.500000]
+[17:05:58] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TaczShooter lost connection: Disconnected
+[17:05:58] [Server thread/INFO] [minecraft/MinecraftServer]: TaczShooter left the game
+[17:05:59] [Server thread/INFO] [minecraft/PlayerList]: TaczShooter[/127.0.0.1:54136] logged in with entity id 20 at (0.5, -60.0, 0.5)
+[17:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: TaczShooter joined the game
+[17:06:02] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Gamerule natural_health_regeneration is now set to: false]
+[17:06:02] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Teleported TaczShooter to 0.500000, -60.000000, 0.500000]
+[17:06:02] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Teleported TaczObserver to 0.500000, -60.000000, 6.500000]
+[17:06:19] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TaczShooter lost connection: Disconnected
+[17:06:19] [Server thread/INFO] [minecraft/MinecraftServer]: TaczShooter left the game
+[17:06:20] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TaczObserver lost connection: Disconnected
+[17:06:20] [Server thread/INFO] [minecraft/MinecraftServer]: TaczObserver left the game
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping the server
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17:06:21] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[17:06:21] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener stopped
+[17:06:21] [RCON Client /127.0.0.1 #2/INFO] [minecraft/RconClient]: Thread RCON Client /127.0.0.1 shutting down
+[17:06:21] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Client /127.0.0.1 stopped
