@@ -2,6 +2,12 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Ordinary death-drop checkpoint — 2026-09-22
+
+- Continued from `d9d20790` with candidate103 and all 4,325 production inputs unchanged. A TACZ-only dedicated-server scenario now kills the loaded AK-47 shooter under Minecraft 26.2's default `keep_inventory=false` rule, reads the world drops through native RCON, respawns the player away from them, and checks both installed clients and server inventory. The client fixture and release JAR are unchanged.
+- Final **OpenGL multiplayer66 and Vulkan multiplayer67 pass 82 checks each**. Exactly two nearby item entities appear and remain after respawn: the gun retains ID `tacz:ak47`, magazine29 and a chambered round; the 58-round reserve retains ammo ID `tacz:762x39`. The respawned shooter's gun and reserve slots are empty on the server, and both clients see no held gun, full health, no stale reload/bolt state, and no duplicate shot or projectile. All clients/server exit normally and save dimensions without forced stop.
+- Failed runs61/62/65 and passing runs63/64 are preserved with exact helpers and logs. Run61 expected the wrong empty-NBT reply; run62 sampled the death screen before the zero-health update. Run65 counted two nearby drops immediately after death but only one within four blocks after respawn, while both item stacks remained individually queryable; pickup or movement is not established. Final runs keep the observer farther away and count within six blocks. The evidence audit verifies **55 multiplayer attempts through67** and all 4,325 production inputs. **Next:** actual pickup, item swapping/dropping/inventory movement, dimension changes, and remaining full-port gates. Baseline runtime parity and those transitions remain open; the full port is incomplete.
+
 ## Keep-inventory death and respawn checkpoint — 2026-09-22
 
 - Continued from `a914e92e` with the production candidate103 and its 4,325 tested inputs unchanged. The client-only fixture now sends Minecraft 26.2's native respawn packet from its death screen and records player network entity IDs; the TACZ-only dedicated server uses no test server mod. The scenario kills a loaded AK-47 shooter under the disposable world's `keep_inventory=true` rule, then checks both installed clients, native server inventory, and one real post-respawn shot.
