@@ -54,7 +54,7 @@ def main():
     parser.add_argument('--dimension-probe', action='store_true', help='Transfer loaded shooter and observer across overworld/nether boundaries')
     parser.add_argument('--draw-packet-probe', action='store_true', help='Exercise duplicate draw packets during reload and repeat fire')
     parser.add_argument('--portal-probe', action='store_true', help='Travel through paired ignited Nether portals with a loaded gun')
-    parser.add_argument('--portal-repeat-probe', action='store_true', help='Verify prompt portal reentry and a second loaded-gun round trip')
+    parser.add_argument('--portal-repeat-probe', action='store_true', help='Verify portal cooldown and a second loaded-gun round trip')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')

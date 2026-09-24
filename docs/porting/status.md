@@ -2,6 +2,12 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Repeated native portal round-trip checkpoint — 2026-09-23
+
+- Continued from `0cf6d8d1` with candidate106 and all 4,325 production inputs unchanged. After the first installed portal round trip and shared shot, the server reports `PortalCooldown: 0`. **OpenGL multiplayer98 fails after74 checks** because its new helper incorrectly required a positive cooldown before repeat travel; the completed first cycle passed, and its exact source and logs are preserved. The corrected probe enters the still-ignited Overworld portal promptly, checks both clients during the native transition delay, then completes a second Overworld→Nether→Overworld round trip with one isolated Nether shot and one shared return shot. All entity placement commands stay within the player's current dimension.
+- TACZ-only **OpenGL multiplayer99 and Vulkan multiplayer100 pass107 checks each**. Both clients see no shot or projectile during the early portal charge. Gun magazine27 and reserve58 survive the repeated Nether arrival; the isolated shot changes magazine27→26 only for the shooter, then the returned gun appears at magazine26 without replay. The final shared shot reaches magazine25 on both clients and server while reserve remains58. Each client/server run exits normally, saves dimensions and needs no forced stop. Candidate SHA-256 remains `f646223852de632060d51a81241c3a8cdf756dda3ba1583cf21ca665a7e480c2`.
+- The evidence audit verifies **88 attempts through100** and 4,325 current production inputs. **Next:** the End and death during travel, physical input-driven portal entry, broader item/content transitions, optional integrations and remaining full-port gates. This selected repeat path does not establish arbitrary portal cooldown behavior, observed 1.20.1 runtime parity or full-port completion.
+
 ## Native Nether portal travel checkpoint — 2026-09-23
 
 - Continued from `bcda4dd6` with candidate106 and all 4,325 production inputs unchanged. The installed two-client scenario builds and ignites valid obsidian frames in the disposable Overworld and Nether, verifies actual portal blocks, and places the loaded AK-47 shooter inside each portal with same-dimension commands. Minecraft's native portal contact performs both dimension transfers; no command changes the player's dimension. The Overworld observer stays behind while the shooter fires in the Nether, then sees the returned gun and a post-return shot.
