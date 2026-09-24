@@ -2,6 +2,12 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Native End portal and End death checkpoint — 2026-09-23
+
+- Continued from `670b9bc2` with candidate106 and all 4,325 production inputs unchanged. A disposable native `minecraft:end_portal` block transfers the loaded AK-47 shooter from the Overworld to the End after a same-dimension placement command. The Overworld observer remains behind. One End shot is isolated to the shooter; native `/kill` in the End reaches the death screen, and a client respawn returns the loaded gun to the Overworld. The post-respawn shot is shared with the observer. No command changes dimension or gun/ammo data.
+- TACZ-only **OpenGL multiplayer101 and Vulkan multiplayer102 pass90 checks each**. Both clients and server verify magazine29→28 in the End→27 after the Overworld shot, chambered state and reserve58 without historical shot/projectile replay. UUID, health, reload/bolt reset and both-client packet visibility are checked. Each client/server exits normally, saves dimensions and needs no forced stop. Candidate SHA-256 remains `f646223852de632060d51a81241c3a8cdf756dda3ba1583cf21ca665a7e480c2`.
+- The evidence audit verifies **90 attempts through102** and 4,325 current production inputs. **Next:** death during an active portal transition, actual movement-key portal entry, broader item/content transitions, optional integrations and remaining full-port gates. This selected End crossing does not exercise the End exit/credits path or observed 1.20.1 runtime parity; the full port remains incomplete.
+
 ## Repeated native portal round-trip checkpoint — 2026-09-23
 
 - Continued from `0cf6d8d1` with candidate106 and all 4,325 production inputs unchanged. After the first installed portal round trip and shared shot, the server reports `PortalCooldown: 0`. **OpenGL multiplayer98 fails after74 checks** because its new helper incorrectly required a positive cooldown before repeat travel; the completed first cycle passed, and its exact source and logs are preserved. The corrected probe enters the still-ignited Overworld portal promptly, checks both clients during the native transition delay, then completes a second Overworld→Nether→Overworld round trip with one isolated Nether shot and one shared return shot. All entity placement commands stay within the player's current dimension.

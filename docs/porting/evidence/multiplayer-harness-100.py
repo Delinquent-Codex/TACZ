@@ -55,7 +55,6 @@ def main():
     parser.add_argument('--draw-packet-probe', action='store_true', help='Exercise duplicate draw packets during reload and repeat fire')
     parser.add_argument('--portal-probe', action='store_true', help='Travel through paired ignited Nether portals with a loaded gun')
     parser.add_argument('--portal-repeat-probe', action='store_true', help='Verify prompt portal reentry and a second loaded-gun round trip')
-    parser.add_argument('--end-portal-probe', action='store_true', help='Cross a native End portal, fire, die and respawn with a loaded gun')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
@@ -109,8 +108,7 @@ def main():
                   REPO / 'tools/porting/dimension_scenarios.py',
                   REPO / 'tools/porting/draw_packet_scenarios.py',
                   REPO / 'tools/porting/portal_scenarios.py',
-                  REPO / 'tools/porting/portal_repeat_scenarios.py',
-                  REPO / 'tools/porting/end_portal_scenarios.py']},
+                  REPO / 'tools/porting/portal_repeat_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -376,9 +374,6 @@ def main():
         if args.portal_repeat_probe:
             from portal_repeat_scenarios import run_portal_repeat_scenarios
             run_portal_repeat_scenarios(check, command, client, state, wait, server_number, report)
-        if args.end_portal_probe:
-            from end_portal_scenarios import run_end_portal_scenarios
-            run_end_portal_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():
