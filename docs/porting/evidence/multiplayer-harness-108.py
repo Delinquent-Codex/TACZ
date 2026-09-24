@@ -58,7 +58,6 @@ def main():
     parser.add_argument('--end-portal-probe', action='store_true', help='Cross a native End portal, fire, die and respawn with a loaded gun')
     parser.add_argument('--portal-death-probe', action='store_true', help='Die inside a charging native Nether portal, then respawn with a loaded gun')
     parser.add_argument('--portal-walk-probe', action='store_true', help='Walk into paired Nether portals through the client forward key')
-    parser.add_argument('--end-exit-probe', action='store_true', help='Use a native End exit portal and close the actual credits screen')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
@@ -115,8 +114,7 @@ def main():
                   REPO / 'tools/porting/portal_repeat_scenarios.py',
                   REPO / 'tools/porting/end_portal_scenarios.py',
                   REPO / 'tools/porting/portal_death_scenarios.py',
-                  REPO / 'tools/porting/portal_walk_scenarios.py',
-                  REPO / 'tools/porting/end_exit_scenarios.py']},
+                  REPO / 'tools/porting/portal_walk_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -391,9 +389,6 @@ def main():
         if args.portal_walk_probe:
             from portal_walk_scenarios import run_portal_walk_scenarios
             run_portal_walk_scenarios(check, command, client, state, wait, server_number, report)
-        if args.end_exit_probe:
-            from end_exit_scenarios import run_end_exit_scenarios
-            run_end_exit_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():

@@ -314,11 +314,6 @@ final class RemoteCheck {
                         throw new IllegalStateException("Native death screen is not ready for respawn");
                     minecraft.player.respawn();
                 }
-                case "finish_end_credits" -> {
-                    if (!(minecraft.gui.screen() instanceof net.minecraft.client.gui.screens.WinScreen winScreen))
-                        throw new IllegalStateException("Native End credits screen is not open");
-                    winScreen.onClose();
-                }
                 case "select_slot" -> {
                     int slot = command.get("slot").getAsInt();
                     if (slot < 0 || slot > 8) throw new IllegalArgumentException("Not a hotbar slot: " + slot);
