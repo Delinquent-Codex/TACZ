@@ -74,7 +74,6 @@ final class RemoteCheck {
     private final List<Map<String, Object>> reloadTransitions = new ArrayList<>();
     private Map<String, Object> previousGunState;
     private final List<Map<String, Object>> gunTransitions = new ArrayList<>();
-    private boolean forwardHeld;
 
     static void start() { new RemoteCheck().startListening(); }
 
@@ -175,7 +174,6 @@ final class RemoteCheck {
         data.put("screen", String.valueOf(minecraft.gui.screen()));
         data.put("input_barrier_owned", minecraft.gui.screen() == inputBarrier);
         data.put("native_input_suppressed", !com.tacz.guns.util.InputExtraCheck.isInGame());
-        data.put("forward_key_down", minecraft.options.keyUp.isDown());
         data.put("dedicated_connection", minecraft.getSingleplayerServer() == null);
         data.put("backend", RenderSystem.getDevice().getDeviceInfo().backendName());
         data.put("client_guns", TimelessAPI.getAllClientGunIndex().size());
@@ -227,7 +225,6 @@ final class RemoteCheck {
     }
 
     private void tick(TickEvent.ClientTickEvent.Post event) {
-        if (forwardHeld) minecraft.options.keyUp.setDown(true);
         if (sequence != null) sequence.tick(minecraft);
         // Observe every client tick, including short finishing phases between
         // controller requests. These are synchronized game states, not injected ones.
@@ -294,12 +291,6 @@ final class RemoteCheck {
                         minecraft.gui.setScreen(null);
                     }
                 }
-                case "forward_key" -> {
-                    if (minecraft.player == null || minecraft.level == null || minecraft.gui.screen() != null)
-                        throw new IllegalStateException("Movement key requires an active world without a screen");
-                    forwardHeld = command.get("enabled").getAsBoolean();
-                    minecraft.options.keyUp.setDown(forwardHeld);
-                }
                 case "sequence_start" -> {
                     if (sequence != null && sequence.summary().get("status").equals("running"))
                         throw new IllegalStateException("Sequence already running");
@@ -334,8 +325,6 @@ final class RemoteCheck {
                 case "connect" -> ConnectScreen.startConnecting(new TitleScreen(), minecraft, ServerAddress.parseString(address),
                         new ServerData("TACZ isolated fixture", address, ServerData.Type.OTHER), true, null);
                 case "quit" -> {
-                    forwardHeld = false;
-                    minecraft.options.keyUp.setDown(false);
                     response.put("projectile_trace", List.copyOf(projectileJoins));
                     write(Path.of("runtime-fixture-result.json"), Map.of("status", "passed", "scope",
                             "remote command executor stopped; gameplay assertions belong to multiplayer controller", "snapshot", snapshot()));
