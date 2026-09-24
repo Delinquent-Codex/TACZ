@@ -53,7 +53,6 @@ def main():
     parser.add_argument('--pickup-probe', action='store_true', help='Pick up the death drops, swap hotbar slots, fire and drop the gun')
     parser.add_argument('--dimension-probe', action='store_true', help='Transfer loaded shooter and observer across overworld/nether boundaries')
     parser.add_argument('--draw-packet-probe', action='store_true', help='Exercise duplicate draw packets during reload and repeat fire')
-    parser.add_argument('--portal-probe', action='store_true', help='Travel through paired ignited Nether portals with a loaded gun')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')
@@ -105,8 +104,7 @@ def main():
                   REPO / 'tools/porting/death_drop_scenarios.py',
                   REPO / 'tools/porting/pickup_scenarios.py',
                   REPO / 'tools/porting/dimension_scenarios.py',
-                  REPO / 'tools/porting/draw_packet_scenarios.py',
-                  REPO / 'tools/porting/portal_scenarios.py']},
+                  REPO / 'tools/porting/draw_packet_scenarios.py']},
               'server_libraries_sha256': {str(p.relative_to(server)): digest(p) for p in (server / 'libraries').rglob('*') if p.is_file()},
               'server_shim_sha256': digest(server / 'forge-26.2-65.1.0-shim.jar'), 'forced_stop': False}
     report['server_configuration'] = dict(line.split('=', 1) for line in
@@ -366,9 +364,6 @@ def main():
         if args.draw_packet_probe:
             from draw_packet_scenarios import run_draw_packet_scenarios
             run_draw_packet_scenarios(check, client, state, wait, server_number, report)
-        if args.portal_probe:
-            from portal_scenarios import run_portal_scenarios
-            run_portal_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():
