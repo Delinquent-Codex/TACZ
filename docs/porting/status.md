@@ -2,6 +2,12 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
+## Repeated native End exit after credits checkpoint — 2026-09-24
+
+- Continued from `6d12853b` with candidate106 and all 4,325 production inputs unchanged. The installed two-client probe first completes the already validated End entry, isolated shot, native `WinScreen` and credits return. Native server NBT then reports `seenCredits=1`. It reuses the same placed End portal blocks for a second End visit under `keep_inventory=false`: the shooter fires in the End, contacts the exit portal within that dimension and returns directly to the Overworld without a second credits-screen action. No command changes dimension or gun/ammo state.
+- TACZ-only **OpenGL multiplayer111 and Vulkan multiplayer112 pass120 checks each**. The second End arrival retains magazine27/reserve58; its isolated shot reaches magazine26 without an Overworld observer event. Direct return preserves gun, chamber, UUID, magazine26 and reserve58 without historical replay; a shared Overworld shot reaches magazine25 on both clients and server. Both runs exit0, save dimensions and need no forced stop. Candidate SHA-256 remains `f646223852de632060d51a81241c3a8cdf756dda3ba1583cf21ca665a7e480c2`.
+- The evidence audit verifies **100 attempts through112** and 4,325 current production inputs. **Next:** naturally generated End exit-fountain conditions, broader item/content and UI transitions, optional integrations and remaining full-port gates. This selected placed-block path does not establish dragon-fight generation, arbitrary End worlds, physical input or observed 1.20.1 runtime parity; the full port is incomplete.
+
 ## Native End exit and first credits checkpoint — 2026-09-23
 
 - Continued from `067048c4` with candidate106 and all 4,325 production inputs unchanged. A native End portal block takes the loaded shooter into the End; one End shot remains isolated from the Overworld observer. A second native End portal block, placed on a safe disposable End platform, triggers Minecraft 26.2's first-exit `WinScreen`. The test-only client action closes that actual screen through `onClose`, which sends the normal `PERFORM_RESPAWN` command. The server's credits branch retains all player data despite `keep_inventory=false`; no command changes the player's dimension or gun/ammo state.
