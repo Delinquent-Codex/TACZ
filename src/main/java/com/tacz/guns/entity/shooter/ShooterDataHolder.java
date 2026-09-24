@@ -71,6 +71,10 @@ public class ShooterDataHolder {
      */
     @Nullable
     public Supplier<ItemStack> currentGunItem = null;
+    /** The stack and hotbar slot bound by the last actual server draw. */
+    @Nullable
+    public ItemStack lastDrawnStack = null;
+    public int lastDrawnSlot = -1;
     /**
      * 缓存当前枪械的收枪时间，以确保下一次切枪的时候使用此时间计算收枪。
      * 此数值不会因 tacz$CurrentGunItem 提供的 ItemStack 改变而改变，因此应当在恰当的时机调用 updatePutAwayTime() 进行更新。

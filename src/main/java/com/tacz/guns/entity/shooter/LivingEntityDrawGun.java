@@ -8,6 +8,7 @@ import com.tacz.guns.network.message.event.ServerMessageGunDraw;
 import com.tacz.guns.resource.index.CommonGunIndex;
 import com.tacz.guns.resource.modifier.AttachmentPropertyManager;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.LogicalSide;
@@ -47,11 +48,14 @@ public class LivingEntityDrawGun {
             }
         }
         ItemStack lastItem = data.currentGunItem == null ? ItemStack.EMPTY : data.currentGunItem.get();
-        GunDrawEvent.BUS.post(new GunDrawEvent(shooter, lastItem, gunItemSupplier.get(), LogicalSide.SERVER));
-        NetworkHandler.sendToTrackingEntity(new ServerMessageGunDraw(shooter.getId(), lastItem, gunItemSupplier.get()), shooter);
+        ItemStack nextItem = gunItemSupplier.get();
+        GunDrawEvent.BUS.post(new GunDrawEvent(shooter, lastItem, nextItem, LogicalSide.SERVER));
+        NetworkHandler.sendToTrackingEntity(new ServerMessageGunDraw(shooter.getId(), lastItem, nextItem), shooter);
         data.currentGunItem = gunItemSupplier;
+        data.lastDrawnStack = nextItem;
+        data.lastDrawnSlot = shooter instanceof ServerPlayer player ? player.getInventory().getSelectedSlot() : -1;
         // 刷新配件数据
-        AttachmentPropertyManager.postChangeEvent(shooter, gunItemSupplier.get());
+        AttachmentPropertyManager.postChangeEvent(shooter, nextItem);
         updatePutAwayTime();
     }
 

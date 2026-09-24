@@ -20,6 +20,7 @@ import com.tacz.guns.client.resource.ClientRecipeCache;
 import com.tacz.guns.entity.EntityKineticBullet;
 import com.tacz.guns.network.NetworkHandler;
 import com.tacz.guns.network.message.ClientMessagePlayerShoot;
+import com.tacz.guns.network.message.ClientMessagePlayerDrawGun;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConnectScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
@@ -277,6 +278,7 @@ final class RemoteCheck {
                     response.put("shoot_results", List.of(operator.shoot().toString(), operator.shoot().toString()));
                 }
                 case "reload" -> IClientPlayerGunOperator.fromLocalPlayer(minecraft.player).reload();
+                case "draw_packet" -> NetworkHandler.sendToServer(new ClientMessagePlayerDrawGun());
                 case "fire_select" -> IClientPlayerGunOperator.fromLocalPlayer(minecraft.player).fireSelect();
                 case "input_guard" -> {
                     if (command.get("enabled").getAsBoolean()) {

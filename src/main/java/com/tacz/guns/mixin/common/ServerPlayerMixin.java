@@ -2,7 +2,6 @@ package com.tacz.guns.mixin.common;
 
 import com.tacz.guns.api.entity.IGunOperator;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -33,12 +32,13 @@ public class ServerPlayerMixin {
         }
         tacz$lastSelectedSlot = selectedSlot;
         IGunOperator operator = IGunOperator.fromLivingEntity(player);
-        var currentSupplier = operator.getDataHolder().currentGunItem;
-        ItemStack trackedItem = currentSupplier == null ? ItemStack.EMPTY : currentSupplier.get();
+        var data = operator.getDataHolder();
         // A client draw packet normally binds the new slot first. Reconcile only
         // when it has not, retaining the normal draw reset and cooldown path.
-        if (trackedItem != player.getMainHandItem()) {
-            operator.draw(player::getMainHandItem);
+        if (data.lastDrawnSlot != selectedSlot || data.lastDrawnStack != player.getMainHandItem()) {
+            // Bind the selected slot, not a dynamic main-hand lookup; a later
+            // slot change must still be distinguishable from this one.
+            operator.draw(() -> player.getInventory().getItem(selectedSlot));
         }
     }
 }

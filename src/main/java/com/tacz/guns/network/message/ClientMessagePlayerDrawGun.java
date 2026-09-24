@@ -27,7 +27,15 @@ public class ClientMessagePlayerDrawGun {
                 }
                 Inventory inventory = entity.getInventory();
                 int selected = inventory.getSelectedSlot();
-                IGunOperator.fromLivingEntity(entity).draw(() -> inventory.getItem(selected));
+                IGunOperator operator = IGunOperator.fromLivingEntity(entity);
+                var data = operator.getDataHolder();
+                // A selected-slot change may already have been reconciled on the
+                // server tick. Its later client packet must not reset an active
+                // reload or the firing cooldown for the same stack.
+                if (data.lastDrawnSlot == selected && data.lastDrawnStack == inventory.getItem(selected)) {
+                    return;
+                }
+                operator.draw(() -> inventory.getItem(selected));
             });
         }
         context.setPacketHandled(true);
