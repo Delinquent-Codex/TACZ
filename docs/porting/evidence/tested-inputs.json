@@ -1,7 +1,7 @@
 {
   "baseline_revision": "b43eb84c38e9768d8e73c8b14f0b845669704b38",
   "command": ".\\gradlew.bat build jarJar --console=plain",
-  "log": "target-build-106.log",
+  "log": "target-build-124.log",
   "build_result": "successful",
   "diagnostics": 0,
   "by_subsystem": {},
@@ -544,7 +544,7 @@
     "src/main/java/com/tacz/guns/init/ModParticles.java": "f876b69775613921e3a35fc7ad15d773d54a131a9f469983c97e8fbd7164be3f",
     "src/main/java/com/tacz/guns/init/ModRecipe.java": "fd69e238d7fac9f4a747fba4632a4690a80e3a23b45c5088efe58303c7178604",
     "src/main/java/com/tacz/guns/init/ModSounds.java": "d681c453acab99d2de9f12ba617d29eb46d0f09921986c0584090aa17c752cbe",
-    "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": "3a8a9862af1a94327211df7d20a185d35d50af4fe9c3ba1caa597c2d46190607",
+    "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": "88c5c00ce1bbf84ee649e77c4d7f985b63a890b8cc04045142f71d44e96778a9",
     "src/main/java/com/tacz/guns/inventory/tooltip/AmmoBoxTooltip.java": "ceef751ce32b6fda4a70001d4f617f30a1de5940743452eeccfe372b041558f4",
     "src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java": "80807889b4ce45719f114a29c4ceb7e45b3d9acc18622a5f748fbf5ec58cc557",
     "src/main/java/com/tacz/guns/inventory/tooltip/BlockItemTooltip.java": "6aae663a3219c9c6f6fbb4f9f74c99cb5508edc4126d826db04f44930788bc16",

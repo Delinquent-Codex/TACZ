@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -44,6 +45,26 @@ public class GunSmithTableMenu extends AbstractContainerMenu {
         super(TYPE, id);
         this.blockId = resourceLocation;
         this.filter = TimelessAPI.getCommonBlockIndex(getBlockId()).map(CommonBlockIndex::getFilter).orElse(null);
+        // The screen has no inventory controls, but its active menu must track the
+        // player's slots so crafting, pickups and other changes reach the client.
+        for (int slot = 0; slot < inventory.getNonEquipmentItems().size(); slot++) {
+            this.addSlot(new Slot(inventory, slot, -1000, -1000) {
+                @Override
+                public boolean isActive() {
+                    return false;
+                }
+
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+
+                @Override
+                public boolean mayPickup(Player player) {
+                    return false;
+                }
+            });
+        }
     }
 
     @Nullable
@@ -112,7 +133,7 @@ public class GunSmithTableMenu extends AbstractContainerMenu {
                     extracted.add(taken);
                     if (taken.getCount() != counts[slot] || !ItemStack.isSameItemSameComponents(available.get(slot), taken)) {
                         refund.run();
-                        player.inventoryMenu.broadcastFullState();
+                        broadcastFullState();
                         return;
                     }
                 }
@@ -124,12 +145,12 @@ public class GunSmithTableMenu extends AbstractContainerMenu {
                 if (!serverPlayer.level().addFreshEntity(output)) {
                     spawned.forEach(ItemEntity::discard);
                     refund.run();
-                    player.inventoryMenu.broadcastFullState();
+                    broadcastFullState();
                     return;
                 }
                 spawned.add(output);
             }
-            player.inventoryMenu.broadcastFullState();
+            broadcastFullState();
             NetworkHandler.sendToClientPlayer(new ServerMessageCraft(this.containerId), player);
         });
     }

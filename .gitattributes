@@ -12,6 +12,7 @@ docs/porting/evidence/*-crash.txt -text -whitespace
 # Preserve historical test-controller/source bytes for recorded input hashes.
 docs/porting/evidence/*-harness-*.py -text
 docs/porting/evidence/RemoteCheck-*.java -text
+docs/porting/evidence/runtime-remote-check-*.java -text
 docs/porting/evidence/OperatorSequence-*.java -text
 docs/porting/evidence/*-server-trace.jsonl -text -whitespace
 docs/porting/evidence/ServerTrace-*.java -text
