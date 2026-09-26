@@ -41,6 +41,10 @@ public class ClientMessageRefitGun {
                     return;
                 }
                 Inventory inventory = player.getInventory();
+                if (message.attachmentSlotIndex < 0 || message.attachmentSlotIndex >= inventory.getContainerSize()
+                        || message.gunSlotIndex < 0 || message.gunSlotIndex >= inventory.getContainerSize()) {
+                    return;
+                }
                 ItemStack attachmentItem = inventory.getItem(message.attachmentSlotIndex);
                 ItemStack gunItem = inventory.getItem(message.gunSlotIndex);
                 IGun iGun = IGun.getIGunOrNull(gunItem);

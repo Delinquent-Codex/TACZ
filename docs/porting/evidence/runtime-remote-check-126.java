@@ -35,8 +35,6 @@ import com.tacz.guns.network.message.ClientMessagePlayerShoot;
 import com.tacz.guns.network.message.ClientMessagePlayerDrawGun;
 import com.tacz.guns.network.message.ClientMessageCraft;
 import com.tacz.guns.network.message.ClientMessageRefitGun;
-import com.tacz.guns.network.message.ClientMessageUnloadAttachment;
-import com.tacz.guns.network.message.ClientMessageLaserColor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.input.MouseButtonEvent;
@@ -475,10 +473,6 @@ final class RemoteCheck {
                 case "refit_packet" -> NetworkHandler.sendToServer(new ClientMessageRefitGun(
                         command.get("attachment_slot").getAsInt(), command.get("gun_slot").getAsInt(),
                         AttachmentType.valueOf(command.get("type").getAsString())));
-                case "refit_unload_packet" -> NetworkHandler.sendToServer(new ClientMessageUnloadAttachment(
-                        command.get("gun_slot").getAsInt(), AttachmentType.valueOf(command.get("type").getAsString())));
-                case "refit_laser_packet" -> NetworkHandler.sendToServer(new ClientMessageLaserColor(
-                        minecraft.player.getMainHandItem(), command.get("gun_slot").getAsInt()));
                 case "fire_select" -> IClientPlayerGunOperator.fromLocalPlayer(minecraft.player).fireSelect();
                 case "input_guard" -> {
                     if (command.get("enabled").getAsBoolean()) {

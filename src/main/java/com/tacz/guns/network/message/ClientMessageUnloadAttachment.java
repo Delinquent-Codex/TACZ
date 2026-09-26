@@ -37,6 +37,9 @@ public class ClientMessageUnloadAttachment {
                     return;
                 }
                 Inventory inventory = player.getInventory();
+                if (message.gunSlotIndex < 0 || message.gunSlotIndex >= inventory.getContainerSize()) {
+                    return;
+                }
                 ItemStack gunItem = inventory.getItem(message.gunSlotIndex);
                 IGun iGun = IGun.getIGunOrNull(gunItem);
                 if (iGun != null) {

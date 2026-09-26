@@ -61,10 +61,13 @@ public class ClientMessageLaserColor {
         if (context.isServerSide()) {
             context.enqueueWork(() -> {
                 ServerPlayer player = context.getSender();
-                if (player == null || message.gunSlotIndex == -1) {
+                if (player == null) {
                     return;
                 }
                 Inventory inventory = player.getInventory();
+                if (message.gunSlotIndex < 0 || message.gunSlotIndex >= inventory.getContainerSize()) {
+                    return;
+                }
                 ItemStack gunItem = inventory.getItem(message.gunSlotIndex);
                 IGun iGun = IGun.getIGunOrNull(gunItem);
                 if (iGun != null) {
