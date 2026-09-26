@@ -681,12 +681,12 @@
   },
   "source:src/main/java/com/tacz/guns/client/sound/GunSoundInstance.java": {
     "implementation": "src/main/java/com/tacz/guns/client/sound/GunSoundInstance.java",
-    "validation": "Native client input/resource/API migration; FLOW-58 has no diagnostic for this file. All 21 focused suites pass (1,284 assertions); actual FML and behavior still unverified.",
+    "validation": "Core build 101 passes. Installed OpenGL/Vulkan runs158/159 record resolved positive-volume AK-47 playback channel starts for ordinary and silenced sounds. Runs160/161 measure ordinary and silenced observer volume decreasing from 3 to 30 blocks; at 46 blocks ordinary audio starts while silenced audio is outside the server range. Physical audibility, obstacles, other distances and other sound types remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/sound/SoundPlayManager.java": {
     "implementation": "src/main/java/com/tacz/guns/client/sound/SoundPlayManager.java",
-    "validation": "Core build 101 passes. Installed OpenGL/Vulkan runs156/157 record one first-person AK-47 ordinary/silenced/ordinary GunSoundInstance submission on the shooter and matching third-person submissions on the observer across native muzzle refit. Runs158/159 also record one matching non-streaming playback channel start per shot with positive resolved volume on each client. Physical audibility, varied-distance attenuation, other guns/sounds and unavailable optional adapters remain unverified. See verification.md.",
+    "validation": "Core build 101 passes. Installed OpenGL/Vulkan runs156/157 record one first-person AK-47 ordinary/silenced/ordinary GunSoundInstance submission on the shooter and matching third-person submissions on the observer across native muzzle refit. Runs158/159 record matching non-streaming playback channel starts; runs160/161 measure selected 3/30-block attenuation and show no silenced observer sound at 46 blocks while ordinary audio still starts. Physical audibility, obstacles, other distances/guns/sounds and unavailable optional adapters remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/tooltip/ClientAttachmentItemTooltip.java": {
@@ -1281,7 +1281,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageSound.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageSound.java",
-    "validation": "Core build 101 passes. Installed runs156/157 receive exactly one ordinary, one silenced and one restored ordinary AK-47 third-person sound-engine submission on the observer; runs158/159 additionally verify one playback channel starts for each with positive resolved volume. Other sound payloads, physical audibility, varied-distance attenuation and unavailable optional adapters remain unverified. See verification.md.",
+    "validation": "Core build 101 passes. Installed runs156/157 receive exactly one ordinary, one silenced and one restored ordinary AK-47 third-person submission; runs158/159 verify matching playback channel starts. Runs160/161 record positive ordinary/silenced volume at 3/30 blocks, no silenced packet audio at 46 blocks outside the 44-block range, and restored ordinary audio inside 64 blocks. Other payloads, physical audibility, obstacles and unavailable optional adapters remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageSwapItem.java": {
@@ -1501,7 +1501,7 @@
   },
   "source:src/main/java/com/tacz/guns/sound/SoundManager.java": {
     "implementation": "src/main/java/com/tacz/guns/sound/SoundManager.java",
-    "validation": "Core build 101 passes. Installed two-client runs156/157 route one ordinary, one silenced and one restored ordinary AK-47 third-person sound ID to the observer with no wrong shot ID, while the shooter receives corresponding first-person IDs. Runs158/159 verify matching non-streaming channel starts on both clients and positive resolved volume at a fixed position. Physical audibility, varied-distance behavior, other sound routes and optional integrations remain open. See verification.md.",
+    "validation": "Core build 101 passes. Installed two-client runs156/157 route ordinary/silenced/restored AK-47 third-person IDs without duplicates; runs158/159 verify channel starts. Runs160/161 show selected volume attenuation at 3/30 blocks and the 44-block silenced versus 64-block ordinary server delivery boundary at an observer 46 blocks away. Physical audibility, obstacles, other distances/sound routes and optional integrations remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/AllowAttachmentTagMatcher.java": {
