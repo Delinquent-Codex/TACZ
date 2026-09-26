@@ -27,15 +27,13 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/** Test-only trace and tagged non-player API driver; optional craft-spawn fault is separate. */
+/** Test-only trace and tagged non-player API driver. No result/state/packet replacement or cancellation. */
 @Mod("tacz_server_trace")
 public final class ServerTrace {
     private static final List<Map<String, Object>> RECORDS = new ArrayList<>();
 
     public ServerTrace() {
         add(Map.of("kind", "trace_loaded"));
-        if (Boolean.getBoolean("tacz.porting.failSecond22wmrOutput"))
-            CraftRefundFault.install();
         EntityJoinLevelEvent.BUS.addListener((EntityJoinLevelEvent event, boolean cancelled) -> {
             if (!cancelled && !event.getLevel().isClientSide() && event.getEntity() instanceof EntityKineticBullet bullet)
                 projectile("projectile_join", bullet);
@@ -189,10 +187,6 @@ public final class ServerTrace {
         var copy = new LinkedHashMap<String, Object>(row);
         copy.put("wall_time", System.currentTimeMillis());
         RECORDS.add(copy);
-    }
-
-    static void recordCraftFault(Map<String, Object> row) {
-        add(row);
     }
 
     private static synchronized void write() {

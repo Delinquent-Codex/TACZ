@@ -16,5 +16,7 @@ docs/porting/evidence/runtime-remote-check-*.java -text
 docs/porting/evidence/OperatorSequence-*.java -text
 docs/porting/evidence/*-server-trace.jsonl -text -whitespace
 docs/porting/evidence/ServerTrace-*.java -text
+docs/porting/evidence/server-trace-*.java -text
+docs/porting/evidence/craft-refund-fault-*.java -text
 docs/porting/evidence/ShootTraceMixin-*.java -text
 docs/porting/evidence/server-trace-config-*.json -text

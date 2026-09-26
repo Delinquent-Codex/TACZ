@@ -1096,7 +1096,7 @@
   },
   "source:src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": {
     "implementation": "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 verify Glock craft, active-menu sync and stale-menu rejection; runs141/142 deny absent/partial inputs and duplicate output for two-material attachment/ammo recipes; runs143/144 recover output after full-inventory spill; runs145/146 split 100-round output into legal stacks, craft without ingredients in creative and deny a gun recipe through the ammo workbench. Entity-spawn failure/refund, other recipes and creative boundaries remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 verify Glock craft, active-menu sync and stale-menu rejection; runs141/142 deny absent/partial inputs and duplicate output; runs143/144 recover full-inventory spill; runs145/146 split 100 rounds, craft in creative and enforce table filtering. Diagnostic fault-injected runs148/149 cancel the second output entity once: the first is discarded, exact ingredients are refunded and retry succeeds. Other handler races, refund fallback, recipes and creative boundaries remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java": {
@@ -1551,7 +1551,7 @@
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/22wmr.json": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/22wmr.json",
-    "validation": "Installed OpenGL/Vulkan multiplayer145/146 select this shipped recipe on the ammo workbench, consume 10 copper and 2 gunpowder for 100 rounds split into legal 64/36 stacks, and craft another 100 in creative without ingredients. Other recipes remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer145/146 select this shipped recipe, consume 10 copper and 2 gunpowder for 100 rounds split into 64/36 stacks, and craft in creative without ingredients. Diagnostic fault-injected runs148/149 cancel its second output, refund both ingredients with no partial output, then craft successfully on retry. Other recipes remain open. See verification.md.",
     "status": "in progress"
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/308.json": {

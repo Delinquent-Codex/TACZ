@@ -7,6 +7,14 @@ trace is written to `server-trace.jsonl` when the server begins stopping. A
 crash before that event may leave no trace. The fixture is never packaged in
 the production TACZ JAR.
 
+For `--server-trace --gunsmith-refund-probe` only, the server JVM sets
+`tacz.porting.failSecond22wmrOutput=true`. An additional test-only listener
+cancels the second `tacz:22wmr` item-entity join exactly once and records all
+matching joins. This deliberately forces the production gunsmith rollback path;
+these fault-injected runs are diagnostic and cannot be described as TACZ-only.
+Without that JVM property, the listener is not installed and the trace remains
+read-only as in earlier runs.
+
 Build with Java 25:
 
 ```powershell
