@@ -1,0 +1,14 @@
+Verified 125 installed libraries and vanilla client
+Verified 5057 asset entries
+{
+  "result": "failed",
+  "exit_code": 4294967295,
+  "forced_stop": false,
+  "failure": "Remote fixture did not exit normally"
+}
+Traceback (most recent call last):
+  File "C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\installed_client.py", line 268, in <module>
+    main()
+  File "C:\Users\voltp\Downloads\TACZ-26.2\tools\porting\installed_client.py", line 245, in main
+    raise AssertionError('Remote fixture did not exit normally')
+AssertionError: Remote fixture did not exit normally

@@ -122,6 +122,9 @@ final class RemoteCheck {
                     && sound.getRegistryName().toString().startsWith("tacz:ak47/ak47_")) {
                 var row = new LinkedHashMap<String, Object>();
                 row.put("id", sound.getRegistryName().toString());
+                row.put("volume", sound.getVolume());
+                row.put("pitch", sound.getPitch());
+                row.put("relative", sound.isRelative());
                 row.put("player_tick", minecraft.player == null ? -1 : minecraft.player.tickCount);
                 gunSounds.add(row);
             }

@@ -1,0 +1,476 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 2026-09-26 13:41:37
+Description: Render Frame
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.client.resources.sounds.Sound.getVolume()" because "this.sound" is null
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.resources.sounds.AbstractSoundInstance.getVolume(AbstractSoundInstance.java:80) ~[forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/tacz_runtime_fixture@1.0/com.tacz.guns.porting.runtimefixture.RemoteCheck.lambda$startListening$0(RemoteCheck.java:125) ~[tacz-full-runtime-fixture-1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.EventBusImpl.fire(EventBusImpl.java:68) ~[eventbus-7.0.5.jar!/:7.0.5]
+	at TRANSFORMER/net.minecraftforge.forge@65.1.0/net.minecraftforge.client.ForgeHooksClient.playSound(ForgeHooksClient.java:256) ~[forge-26.2-65.1.0-universal.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundEngine.play(SoundEngine.java:354) ~[forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundManager.play(SoundManager.java:245) ~[forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:68) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:53) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:78) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playDrawSound(SoundPlayManager.java:163) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer$1.lambda$triggerDraw$0(AnimateGeoItemRenderer.java:372) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at java.base/java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer$1.triggerDraw(AnimateGeoItemRenderer.java:370) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.animation.FirstPersonItemState.frame(FirstPersonItemState.java:90) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.event.FirstPersonRenderHandler.onRenderTick(FirstPersonRenderHandler.java:65) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.InvokerFactory.lambda$createInvokerFromUnwrapped$9(InvokerFactory.java:234) ~[eventbus-7.0.5.jar!/:7.0.5]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.EventBusImpl.post(EventBusImpl.java:62) ~[eventbus-7.0.5.jar!/:7.0.5]
+	at TRANSFORMER/net.minecraftforge.forge@65.1.0/net.minecraftforge.client.event.ForgeEventFactoryClient.onRenderTickStart(ForgeEventFactoryClient.java:230) ~[forge-26.2-65.1.0-universal.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1314) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.runTick(Minecraft.java:1221) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.run(Minecraft.java:919) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:286) [forge-26.2-65.1.0-client.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  com.tacz.guns.client.animation.FirstPersonItemState
+    REASON: classloading
+  com.tacz.guns.client.event.FirstPersonRenderHandler
+    REASON: classloading
+  com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer$1
+    REASON: classloading
+  com.tacz.guns.client.sound.SoundPlayManager
+    REASON: classloading
+  com.tacz.guns.porting.runtimefixture.RemoteCheck
+    REASON: classloading
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraft.client.resources.sounds.AbstractSoundInstance
+    REASON: classloading
+  net.minecraft.client.sounds.SoundEngine
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.sounds.SoundManager
+    REASON: classloading
+  net.minecraftforge.client.ForgeHooksClient
+    REASON: classloading
+  net.minecraftforge.client.event.ForgeEventFactoryClient
+    REASON: classloading
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mods: 
+	Timeless & Classics Guns: Zero (tacz), Version: 1.1.8-hotfix-port.1
+		at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:68)
+
+	TACZ Full Runtime Test Fixture (tacz_runtime_fixture), Version: 1.0
+		at TRANSFORMER/tacz_runtime_fixture@1.0/com.tacz.guns.porting.runtimefixture.RemoteCheck.lambda$startListening$0(RemoteCheck.java:125)
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.resources.sounds.AbstractSoundInstance.getVolume(AbstractSoundInstance.java:80) ~[forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/tacz_runtime_fixture@1.0/com.tacz.guns.porting.runtimefixture.RemoteCheck.lambda$startListening$0(RemoteCheck.java:125) ~[tacz-full-runtime-fixture-1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.EventBusImpl.fire(EventBusImpl.java:68) ~[eventbus-7.0.5.jar!/:7.0.5]
+	at TRANSFORMER/net.minecraftforge.forge@65.1.0/net.minecraftforge.client.ForgeHooksClient.playSound(ForgeHooksClient.java:256) ~[forge-26.2-65.1.0-universal.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundEngine.play(SoundEngine.java:354) ~[forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.sounds.SoundManager.play(SoundManager.java:245) ~[forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:68) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:53) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playClientSound(SoundPlayManager.java:78) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.sound.SoundPlayManager.playDrawSound(SoundPlayManager.java:163) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer$1.lambda$triggerDraw$0(AnimateGeoItemRenderer.java:372) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at java.base/java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer$1.triggerDraw(AnimateGeoItemRenderer.java:370) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.animation.FirstPersonItemState.frame(FirstPersonItemState.java:90) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at TRANSFORMER/tacz@1.1.8-hotfix-port.1/com.tacz.guns.client.event.FirstPersonRenderHandler.onRenderTick(FirstPersonRenderHandler.java:65) ~[tacz-26.2-1.1.8-hotfix-port.1.jar!/:1.1.8-hotfix-port.1]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.InvokerFactory.lambda$createInvokerFromUnwrapped$9(InvokerFactory.java:234) ~[eventbus-7.0.5.jar!/:7.0.5]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.EventBusImpl.post(EventBusImpl.java:62) ~[eventbus-7.0.5.jar!/:7.0.5]
+	at TRANSFORMER/net.minecraftforge.forge@65.1.0/net.minecraftforge.client.event.ForgeEventFactoryClient.onRenderTickStart(ForgeEventFactoryClient.java:230) ~[forge-26.2-65.1.0-universal.jar!/:?]
+Transformer Audit:
+  com.tacz.guns.client.animation.FirstPersonItemState
+    REASON: classloading
+  com.tacz.guns.client.event.FirstPersonRenderHandler
+    REASON: classloading
+  com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer$1
+    REASON: classloading
+  com.tacz.guns.client.sound.SoundPlayManager
+    REASON: classloading
+  com.tacz.guns.porting.runtimefixture.RemoteCheck
+    REASON: classloading
+  net.minecraft.client.resources.sounds.AbstractSoundInstance
+    REASON: classloading
+  net.minecraft.client.sounds.SoundEngine
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.sounds.SoundManager
+    REASON: classloading
+  net.minecraftforge.client.ForgeHooksClient
+    REASON: classloading
+  net.minecraftforge.client.event.ForgeEventFactoryClient
+    REASON: classloading
+-- Render Frame Details --
+Details:
+	Modules: 
+		ADVAPI32.dll:Advanced Windows 32 Base API:10.0.26100.3624 (WinBuild.160101.0800):Microsoft Corporation
+		AUDIOSES.DLL:Audio Session:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		AVRT.dll:Multimedia Realtime Runtime:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:User Experience Controls Library:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		COMDLG32.dll:Common Dialogs DLL:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPT32.dll:Crypto API32:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		CoreMessaging.dll:Microsoft CoreMessaging Dll:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		CoreUIComponents.dll:Microsoft Core UI Components Dll:10.0.26100.9278:Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		DEVOBJ.dll:Device Information Set DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DNS Client API DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		DSPARSE.dll:Active Directory Domain Services API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		DWrite.dll:Microsoft DirectX Typography Services:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.26100.8328 (WinBuild.160101.0800):Microsoft Corporation
+		GLU32.dll:OpenGL Utility Library DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:IP Helper API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Windows NT BASE API Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Windows NT BASE API Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		MMDevApi.dll:MMDevice API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		MSASN1.dll:ASN.1 Runtime APIs:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		MSCTF.dll:MSCTF Server DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		MpOav.dll:IOfficeAntiVirus Module:4.18.26080.4 (ccacee407da609d5c2c557d13db39624e32a0227):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		NTASN1.dll:Microsoft ASN.1 API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		OpenAL.dll:Main implementation library:1.25.1:
+		POWRPROF.dll:Power Profile Helper DLL:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		PSAPI.DLL:Process Status Helper:10.0.26100.8521 (WinBuild.160101.0800):Microsoft Corporation
+		Pdh.dll:Windows Performance Data Helper DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:Remote Procedure Call Runtime:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		SETUPAPI.dll:Windows Setup API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Windows Shell Common Dll:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		SspiCli.dll:Security Support Provider Interface:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		UMPDC.dll:User Mode Power Dependency Coordinator:10.0.26100.8972 (WinBuild.160101.0800):Microsoft Corporation
+		USER32.dll:Multi-User Windows USER API Client DLL:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.26100.7920 (WinBuild.160101.0800):Microsoft Corporation
+		USP10.dll:Uniscribe Unicode script processor:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINSTA.dll:Winstation Library:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		WINTRUST.dll:Microsoft Trust Verification APIs:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:Windows Socket 2.0 32-Bit DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		Wtsapi32.dll:Windows Remote Desktop Session Host Server SDK APIs:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		amdihk64.dll:Radeon Settings: Host Service:2,00,00,1788:Advanced Micro Devices, Inc.
+		amsi.dll:Anti-Malware Scan Interface:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		apphelp.dll:Application Compatibility Client Library:10.0.26100.8457 (WinBuild.160101.0800):Microsoft Corporation
+		atig6pxx.dll:atiglpxx.dll:8.14.01.6564:Advanced Micro Devices, Inc. 
+		atio6axx.dll:AMD OpenGL Driver:26.08.300126_e4d6776:Advanced Micro Devices, Inc
+		bcrypt.dll:Windows Cryptographic Primitives Library:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		cfgmgr32.dll:Configuration Manager DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:Microsoft COM for Windows:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		dhcpcsvc.DLL:DHCP Client Service:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		dhcpcsvc6.DLL:DHCPv6 Client:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		dinput8.dll:Microsoft DirectInput:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		directxdatabasehelper.dll:DirectXDatabaseHelper:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		dwmapi.dll:Microsoft Desktop Window Manager API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		dxcore.dll:DXCore:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		extnet.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		fastprox.dll:WMI Custom Marshaller:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		freetype.dll:Font Rendering Library:2.14.1:The FreeType Project
+		fwpuclnt.dll:FWP/IPsec User-Mode API:10.0.26100.3915 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		glfw.dll:GLFW 3.5.0 DLL:3.5.0:GLFW
+		icm32.dll:Microsoft Color Management Module (CMM):10.0.26100.9168 (WinBuild.160101.0800):Microsoft Corporation
+		iertutil.dll:Run time utility for Internet Explorer:11.00.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		inputhost.dll:InputHost:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		java.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		java.exe:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		jemalloc.dll
+		jimage.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		jli.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		jna15083400322735955623.dll:JNA native library:7.0.2:Java(TM) Native Access (JNA)
+		jvm.dll:OpenJDK 64-Bit server VM:25.0.4.1:Eclipse Adoptium
+		kernel.appcore.dll:AppModel API Host:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		lwjgl.dll
+		lwjgl_opengl.dll
+		lwjgl_stb.dll
+		lwjgl_tinyfd.dll
+		lwjgl_vma.dll
+		management.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		management_ext.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		mscms.dll:Microsoft Color Matching System DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		msvcp140.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		msvcp_win.dll:Microsoft® C Runtime Library:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Microsoft Windows Sockets 2.0 Service Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:E-mail Naming Shim Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		ncrypt.dll:Windows NCrypt Router:10.0.26100.1591 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		netutils.dll:Net Win32 API Helpers DLL:10.0.26100.1882 (WinBuild.160101.0800):Microsoft Corporation
+		nio.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		nlansp_c.dll:NLA Namespace Service Provider DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		ntdll.dll:NT Layer DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		ole32.dll:Microsoft OLE for Windows:10.0.26100.6725 (WinBuild.160101.0800):Microsoft Corporation
+		opengl32.dll:OpenGL Client DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:Windows System Performance Objects DLL:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		perfproc.dll:Windows System Process Performance Objects DLL:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		pfclient.dll:SysMain Client:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.26100.7920 (WinBuild.160101.0800):Microsoft Corporation
+		resourcepolicyclient.dll:Resource Policy Client:10.0.26100.8115 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		sapi.dll:Speech API:5.3.29131.00 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		shaderc.dll
+		shlwapi.dll:Shell Light-weight Utility Library:10.0.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		spirv-cross.dll
+		srvcli.dll:Server Service Client DLL:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		sunmscapi.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		textinputframework.dll:"TextInputFramework.DYNLINK":10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		ucrtbase.dll:Microsoft® C Runtime Library:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		urlmon.dll:OLE32 Extensions for Win32:11.00.26100.8117 (WinBuild.160101.0800):Microsoft Corporation
+		uxtheme.dll:Microsoft UxTheme Library:10.0.26100.7019 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		verify.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+		vulkan-1.dll:Vulkan Loader:1.4.341.0:
+		wbemcomn.dll:WMI:10.0.26100.7920 (WinBuild.160101.0800):Microsoft Corporation
+		wbemprox.dll:WMI:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		wbemsvc.dll:WMI:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		win32u.dll:Win32u:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		windows.staterepositorycore.dll:Windows StateRepository API Core:10.0.26100.9444 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:Microsoft WinRT Storage API:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.26100.9278 (WinBuild.160101.0800):Microsoft Corporation
+		wintypes.dll:Windows Base Types DLL:10.0.26100.7705 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.26100.8875 (WinBuild.160101.0800):Microsoft Corporation
+		wshunix.dll:AF_UNIX Winsock2 Helper DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		xinput1_4.dll:Microsoft Common Controller API:10.0.26100.8457 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:OpenJDK Platform binary:25.0.4.1:Eclipse Adoptium
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.runTick(Minecraft.java:1221) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.run(Minecraft.java:919) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:286) [forge-26.2-65.1.0-client.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.main.Main
+    REASON: classloading
+
+
+-- Uptime --
+Details:
+	JVM uptime: 21.618s
+	Wall uptime: 12.702s
+	High-res time: 18.623s
+	Client ticks: 127 ticks / 6.350s
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.fillReport(Minecraft.java:2420) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:966) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.Minecraft.run(Minecraft.java:939) [forge-26.2-65.1.0-client.jar!/:?]
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:286) [forge-26.2-65.1.0-client.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:96) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@26.2-65.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:79) [fmlloader-26.2-65.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:84) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:104) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.run(Launcher.java:151) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.Launcher.main(Launcher.java:110) [modlauncher-10.2.6.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.6/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.6.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.main.Main
+    REASON: classloading
+
+
+-- Affected level --
+Details:
+	All players: 1 total; LocalPlayer{name=TaczShooter, id=1, pos=(0.5, -60.0, 0.5), mode=SURVIVAL, permission=none}
+	Chunk stats: 169, 64
+	Level dimension: minecraft:overworld
+	Level time: 535 game time, 535 day time
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Server brand: forge
+	Server type: Non-integrated multiplayer server
+	Tracked entity count: 1
+	Client weather: Raining: false, thundering: false
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, tacz_resources, mod_resources
+
+-- System Details --
+Details:
+	Minecraft Version: 26.2
+	Minecraft Version ID: 26.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 25.0.4.1, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 400919096 bytes (382 MiB) / 1518338048 bytes (1448 MiB) up to 4294967296 bytes (4096 MiB)
+	Memory (heap): init: 246MiB, used: 1063MiB, committed: 1448MiB, max: 4096MiB
+	Memory (non-head): init: 007MiB, used: 210MiB, committed: 213MiB, max: 000MiB
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 240 w/ Radeon 760M Graphics        
+	Identifier: AuthenticAMD Family 25 Model 117 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 4.29
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 5050 Laptop GPU
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8151.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.16.1714
+	Graphics card #1 name: AMD Radeon 760M Graphics
+	Graphics card #1 vendor: Advanced Micro Devices, Inc.
+	Graphics card #1 VRAM (MiB): 512.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.31041.1004
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: DDR5
+	Virtual memory max (MiB): 24380.36
+	Virtual memory used (MiB): 16958.69
+	Swap memory total (MiB): 8704.00
+	Swap memory used (MiB): 45.36
+	Space in storage for jna.tmpdir (MiB): available: 239394.16, total: 487309.00
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): available: 239394.16, total: 487309.00
+	Space in storage for io.netty.native.workdir (MiB): available: 239394.16, total: 487309.00
+	Space in storage for java.io.tmpdir (MiB): available: 239394.16, total: 487309.00
+	Space in storage for workdir (MiB): available: 239394.16, total: 487309.00
+	Operating System Version: Microsoft Windows 11 (Home) build 26200
+	Process Elevated: false
+	Process Loads: ~~ERROR~~ NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getUserTime()" because "process" is null
+	Process Virtual Size (MiB): ~~ERROR~~ NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getVirtualSize()" because "process" is null
+	Process Resident Size (MiB): ~~ERROR~~ NullPointerException: Cannot invoke "oshi.software.os.OSProcess.getResidentSetSize()" because "process" is null
+	JVM Flags: 3 total; -Xmx4G -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -XX:+UseCompactObjectHeaders
+	Debug Flags: 0 total; 
+	Launched Version: 26.2-forge-65.1.0
+	Launcher name: tacz-installed-fixture
+	Backend library: LWJGL version 3.4.1+2
+	Window size: 854x480
+	Surface Info: acquired, FIFO, 854 x 480
+	GFLW Platform: win32
+	Graphics Device: AMD Radeon 760M Graphics
+	Graphics Backend: OpenGL
+	Graphics Vendor: ATI Technologies Inc.
+	Graphics Drivers: 4.6.0 Core Profile Context 26.8.1.260810
+	Graphics Device Extensions: GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic
+	Graphics Device Type: OTHER
+	Graphics Device Features: DeviceFeatures[shaderDrawParameters=true, multiDrawDirectInterleaved=false, multiDrawDirectSeparate=true, multiDrawIndirect=true, drawIndirect=true, nonZeroFirstInstance=true, persistentMapping=true]
+	GL debug messages: 
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Universe: 400921fb54442d18
+	Type: Client
+	Transparency: regular
+	Render Distance: 3/3 chunks
+	Narrator config: OFF
+	Narrator status: true
+	Resource Packs: vanilla, tacz_resources, mod_resources
+	Sound Cache: 296832 bytes in 1 buffers
+	Current Language: en_us
+	Locale: en_US
+	System encoding: Cp1252
+	File encoding: UTF-8
+	CPU: 12x AMD Ryzen 5 240 w/ Radeon 760M Graphics 
+	ModLauncher: 10.2
+	ModLauncher launch target: forge_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ forge TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@65
+		minecraft@1.0
+		javafml@65.1.0
+	Mod List: 
+		forge-26.2-65.1.0-client.jar                      |Minecraft                     |minecraft                     |26.2                |DONE      |Manifest: NOSIGNATURE
+		tacz-26.2-1.1.8-hotfix-port.1.jar                 |Timeless & Classics Guns: Zero|tacz                          |1.1.8-hotfix-port.1 |DONE      |Manifest: NOSIGNATURE
+		forge-26.2-65.1.0-universal.jar                   |Forge                         |forge                         |65.1.0              |DONE      |Manifest: 84:CE:76:E8:45:35:E4:0E:63:86:DF:47:59:80:0F:67:6C:C1:5F:6E:5F:4D:B3:54:47:1A:9F:7F:ED:5E:F2:90
+		tacz-full-runtime-fixture-1.0.jar                 |TACZ Full Runtime Test Fixture|tacz_runtime_fixture          |1.0                 |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 8c5a8ece-f582-41ff-a2ed-852fe37025f9
+	FML: 65.1
+	Forge: net.minecraftforge:65.1.0
+	ModLauncher: 10.2
+	ModLauncher launch target: forge_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ forge TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@65
+		minecraft@1.0
+		javafml@65.1.0
+	Mod List: 
+		forge-26.2-65.1.0-client.jar                      |Minecraft                     |minecraft                     |26.2                |DONE      |Manifest: NOSIGNATURE
+		tacz-26.2-1.1.8-hotfix-port.1.jar                 |Timeless & Classics Guns: Zero|tacz                          |1.1.8-hotfix-port.1 |DONE      |Manifest: NOSIGNATURE
+		forge-26.2-65.1.0-universal.jar                   |Forge                         |forge                         |65.1.0              |DONE      |Manifest: 84:CE:76:E8:45:35:E4:0E:63:86:DF:47:59:80:0F:67:6C:C1:5F:6E:5F:4D:B3:54:47:1A:9F:7F:ED:5E:F2:90
+		tacz-full-runtime-fixture-1.0.jar                 |TACZ Full Runtime Test Fixture|tacz_runtime_fixture          |1.0                 |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 5d1adc20-6558-47d4-aae4-8c5efd9f9bbc
+	FML: 65.1
+	Forge: net.minecraftforge:65.1.0
