@@ -14,7 +14,6 @@ import re
 import secrets
 import shutil
 import socket
-import struct
 import subprocess
 import sys
 import time
@@ -172,15 +171,6 @@ def main():
         if any(marker in response for marker in failures):
             raise AssertionError(response)
         return response
-
-    def silent_command(text):
-        nonlocal rcon_id
-        # The attachment_lock command has no success message. Minecraft's RCON
-        # sends no response packet for it, so send then verify via data get.
-        rcon_id += 1
-        body = struct.pack('<ii', rcon_id, 2) + text.encode('utf-8') + b'\0\0'
-        connection.sendall(struct.pack('<i', len(body)) + body)
-        report['events'].append({'rcon_without_reply': text})
 
     def launch(role):
         directory = root / role
@@ -433,7 +423,7 @@ def main():
             run_extended_mag_scenarios(check, command, client, state, wait, server_number, report)
         if args.refit_boundary_probe:
             from refit_boundary_scenarios import run_refit_boundary_scenarios
-            run_refit_boundary_scenarios(check, command, silent_command, client, state, wait, server_number, report)
+            run_refit_boundary_scenarios(check, command, client, state, wait, server_number, report)
         for role in clients:
             client(role, 'quit')
         for role, data in clients.items():

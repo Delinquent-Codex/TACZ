@@ -331,7 +331,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer128/129 open the actual refit screen, select a compatible AK-47 scope, install shipped sight_t2 from inventory and unload it through visible buttons. Other attachments, layouts and visual parity remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan runs128/129 open refit and install/unload AK-47 sight_t2; runs132/133 do the same for extended_mag_1 with capacity/ammo effects; runs137/138 replace it with extended_mag_2, deny locked access and full-inventory unload, then succeed after freeing one slot. Other attachments, layouts and visual parity remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
@@ -1251,7 +1251,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer128/129 install shipped sight_t2 on an AK-47 through the visible refit UI and reject malformed negative/oversized inventory indices without server disconnect. Other attachments/locks remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan runs128/129 install sight_t2 and reject malformed indices; runs132/133 install extended_mag_1 and runs137/138 replace it with extended_mag_2 while conserving rounds and rejecting a direct install packet under attachment lock. Other attachments and timing remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageSyncBaseTimestamp.java": {
@@ -1261,7 +1261,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer128/129 unload shipped sight_t2 back to player inventory through the visible refit control and reject negative/oversized gun indices without server disconnect. Full inventory and other attachments remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan runs128/129 unload sight_t2 and reject malformed indices; runs132/133 unload extended_mag_1; runs137/138 reject locked and full-inventory unload, then return extended_mag_2 to a freed slot and eject37 rounds as one ground item. Other attachments and inventory mixes remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java": {
@@ -1511,7 +1511,7 @@
   },
   "source:src/main/java/com/tacz/guns/util/AttachmentDataUtils.java": {
     "implementation": "src/main/java/com/tacz/guns/util/AttachmentDataUtils.java",
-    "validation": "Exact target source API migration; core build 101 passes; unavailable optional adapters still fail their explicit run-102 gate. See verification.md and inventory/compile-errors.json.",
+    "validation": "Core build passes; installed OpenGL/Vulkan runs132/133 observe AK-47 capacity 30 to34 to30 through this utility, and runs137/138 observe replacement capacity37 then removal to30. Other attachment calculations and unavailable optional adapters remain unverified. See verification.md and inventory/compile-errors.json.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/util/EntityUtil.java": {
@@ -4457,6 +4457,31 @@
   "data/data/guns/tacz:rpg7_data": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/guns/rpg7_data.json",
     "validation": "Byte-identical baseline/target shipped data (SHA-256 54d743eac31f577a9ff9472cadd81f63e22676992aaab23664093e79a742cb19). Installed diagnostic OpenGL/Vulkan and TACZ-only dedicated multiplayer51/52/53 verify one RPG-7 block-impact rocket removes wool while obsidian and distant wool remain. Other gun/explosion settings, presentation and baseline-runtime parity remain open. See verification.md.",
+    "status": "in progress"
+  },
+  "source:src/main/java/com/tacz/guns/command/sub/AttachmentLockCommand.java": {
+    "implementation": "src/main/java/com/tacz/guns/command/sub/AttachmentLockCommand.java",
+    "validation": "Installed OpenGL/Vulkan runs137/138 set and clear the actual server lock; both clients observe it, the locked refit key stays closed and direct install/unload packets cannot change the gun. Other targets and command feedback remain open.",
+    "status": "in progress"
+  },
+  "data/data/attachments/tacz:extended_mag_1_data": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/attachments/extended_mag_1_data.json",
+    "validation": "Byte-retained shipped level-one magazine data. Installed OpenGL/Vulkan runs132/133 consume and return it with AK-47 capacity34; runs137/138 replace it with level two and return it to the source slot. Visuals and other gun compatibility remain open.",
+    "status": "in progress"
+  },
+  "data/index/attachments/tacz:extended_mag_1": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/attachments/extended_mag_1.json",
+    "validation": "Byte-retained shipped level-one magazine index. Installed OpenGL/Vulkan runs132/133 synchronize its inventory/refit/gun ID and return; runs137/138 replace it with level two. Other uses remain open.",
+    "status": "in progress"
+  },
+  "data/data/attachments/tacz:extended_mag_2_data": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/data/attachments/extended_mag_2_data.json",
+    "validation": "Byte-retained shipped level-two magazine data. Installed OpenGL/Vulkan runs137/138 replace level one with it and synchronize AK-47 capacity37; other guns and visuals remain open.",
+    "status": "in progress"
+  },
+  "data/index/attachments/tacz:extended_mag_2": {
+    "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/attachments/extended_mag_2.json",
+    "validation": "Byte-retained shipped level-two magazine index. Installed OpenGL/Vulkan runs137/138 synchronize it through source-slot replacement, gun component, lock and one-slot unload. Other uses remain open.",
     "status": "in progress"
   }
 }
