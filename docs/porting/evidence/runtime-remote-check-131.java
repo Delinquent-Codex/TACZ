@@ -226,9 +226,6 @@ final class RemoteCheck {
         data.put("screen", String.valueOf(minecraft.gui.screen()));
         data.put("input_barrier_owned", minecraft.gui.screen() == inputBarrier);
         data.put("native_input_suppressed", !com.tacz.guns.util.InputExtraCheck.isInGame());
-        data.put("window_active", minecraft.isWindowActive());
-        data.put("mouse_grabbed", minecraft.mouseHandler.isMouseGrabbed());
-        data.put("overlay_active", minecraft.gui.overlay() != null);
         data.put("forward_key_down", minecraft.options.keyUp.isDown());
         data.put("dedicated_connection", minecraft.getSingleplayerServer() == null);
         data.put("backend", RenderSystem.getDevice().getDeviceInfo().backendName());
@@ -393,10 +390,7 @@ final class RemoteCheck {
             response.put("action", action);
             switch (action) {
                 case "snapshot" -> { }
-                case "focus_window" -> {
-                    GLFW.glfwFocusWindow(minecraft.getWindow().handle());
-                    minecraft.mouseHandler.grabMouse();
-                }
+                case "focus_window" -> GLFW.glfwFocusWindow(minecraft.getWindow().handle());
                 case "shoot" -> response.put("shoot_result", IClientPlayerGunOperator.fromLocalPlayer(minecraft.player).shoot().toString());
                 case "invalid_shoot_timestamp" -> NetworkHandler.sendToServer(
                         new ClientMessagePlayerShoot(command.get("timestamp").getAsLong(), 0f));
