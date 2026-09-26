@@ -66,7 +66,7 @@ def main():
     parser.add_argument('--refit-probe', action='store_true', help='Install and unload a compatible sight through the refit screen')
     parser.add_argument('--extended-mag-probe', action='store_true', help='Refit a shipped extended magazine and verify ammo conservation')
     parser.add_argument('--refit-boundary-probe', action='store_true', help='Replace and lock a magazine, then unload against full inventory')
-    parser.add_argument('--gunsmith-multi-probe', action='store_true', help='Craft multi-ingredient attachment and ammo recipes at shipped workbenches')
+    parser.add_argument('--gunsmith-multi-probe', action='store_true', help='Craft multi-ingredient attachment and ammo recipes at the default table')
     args = parser.parse_args()
     if args.kill_probe and not args.headshot_probe:
         parser.error('--kill-probe requires --headshot-probe')

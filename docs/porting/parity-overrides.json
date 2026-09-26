@@ -201,12 +201,12 @@
   },
   "source:src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java": {
     "implementation": "src/main/java/com/tacz/guns/block/AbstractGunSmithTableBlock.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 natively place and open the default two-block gunsmith table on a TACZ-only dedicated server. Other block variants, break/loot and rendering parity remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 natively place and open the default two-block gunsmith table; runs141/142 also place and open the shipped attachment and ammo workbench variants on a TACZ-only dedicated server. Other block variants, break/loot and rendering parity remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java": {
     "implementation": "src/main/java/com/tacz/guns/block/entity/GunSmithTableBlockEntity.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer141/142 natively place attachment and ammo workbenches and read their shipped BlockId from the dedicated server before opening the matching recipe screens. Break/loot, longer persistence and rendering parity remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/animation/screen/RefitTransform.java": {
@@ -336,7 +336,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 open the server-backed screen, select the shipped Glock recipe, deny a no-material click, craft once with 16 iron, deny a second click and close normally. GUI-scale/creative/other recipes remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 craft the shipped Glock; runs141/142 select attachment and ammo categories on their server-backed workbenches, deny absent/partial ingredient clicks, and craft the shipped extended magazine and 35 rifle rounds exactly once. GUI-scale/creative/other recipes remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java": {
@@ -846,7 +846,7 @@
   },
   "source:src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java": {
     "implementation": "src/main/java/com/tacz/guns/crafting/GunSmithTableRecipe.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 select and craft shipped tacz:gun/glock_17 with its exact 16-iron requirement. Other recipe inputs/outputs and external packs remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 craft tacz:gun/glock_17 with 16 iron; runs141/142 craft tacz:attachments/extended_mag_1 with 16 iron and 4 gold, then tacz:ammo/762x39 with 15 copper and 3 gunpowder for 35 rounds. Other recipes and external packs remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/crafting/GunSmithTableSerializer.java": {
@@ -856,7 +856,7 @@
   },
   "source:src/main/java/com/tacz/guns/crafting/result/GunSmithTableResult.java": {
     "implementation": "src/main/java/com/tacz/guns/crafting/result/GunSmithTableResult.java",
-    "validation": "Installed server3 loads and reloads all 1,769 recipes. Packaged clients15/16 materialize all 15 default tab icons/custom block-tab icons and the painting output after component binding; actual crafting transactions unverified. See verification.md and tacz-client-15/16 evidence; full subsystem parity remains open.",
+    "validation": "Installed server3 loads and reloads all 1,769 recipes. Packaged clients15/16 materialize all 15 default tab icons/custom block-tab icons and the painting output after component binding. Installed runs124/125 and 141/142 craft selected gun, attachment and ammo results; other result types and full subsystem parity remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/crafting/result/RawGunTableResult.java": {
@@ -1096,7 +1096,7 @@
   },
   "source:src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": {
     "implementation": "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 verify server-backed survival crafting, exact input consumption, active-menu inventory synchronization, no-material and stale-menu rejection, and no duplicate output. Other recipes/creative/refunds remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 verify Glock craft, active-menu inventory sync and stale-menu rejection; runs141/142 deny absent/partial inputs and duplicate output for shipped two-material attachment and ammo recipes, then synchronize exact input consumption and outputs. Other recipes/creative/refunds remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java": {
@@ -1191,7 +1191,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageCraft.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageCraft.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 send a valid Glock craft request from the actual screen, reject the same recipe without materials and reject a stale menu ID on the dedicated server. Other recipes and hostile payloads remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 send a valid Glock craft request, reject no-material and stale-menu requests; runs141/142 reject absent/partial-material requests for shipped extended-magazine and ammo recipes, then accept exactly one visible craft of each. Other recipes and hostile payloads remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageLaserColor.java": {
@@ -1266,7 +1266,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 exercise one server-backed Glock craft and client material-count refresh in the active gunsmith screen. Other recipes and client timing remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 exercise one server-backed Glock craft; runs141/142 synchronize counts for two-material attachment and ammo recipes through the active workbench screens. Other recipes and client timing remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageLevelUp.java": {
@@ -1641,7 +1641,7 @@
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x39.json": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/ammo/762x39.json",
-    "validation": "Recipe ID and total quantity preserved. Installed server3 loads/reloads 1,769 recipes; packaged client15/16 receives 173 gunsmith recipes. Individual crafting transactions remain unverified. See verification.md.",
+    "validation": "Recipe ID and quantity preserved. Installed OpenGL/Vulkan multiplayer141/142 select this shipped recipe on the ammo workbench, reject absent/partial inputs, consume 15 copper and 3 gunpowder, and receive exactly 35 rifle rounds; duplicate click denied. Other recipes remain open. See verification.md.",
     "status": "in progress"
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/ammo/762x54.json": {
@@ -1706,7 +1706,7 @@
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_1.json": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_1.json",
-    "validation": "Recipe ID and total quantity preserved. Installed server3 loads/reloads 1,769 recipes; packaged client15/16 receives 173 gunsmith recipes. Individual crafting transactions remain unverified. See verification.md.",
+    "validation": "Recipe ID and quantity preserved. Installed OpenGL/Vulkan multiplayer141/142 select this shipped recipe on the attachment workbench, reject absent/partial inputs, consume 16 iron and 4 gold, and receive one extended magazine; duplicate click denied. Other recipes remain open. See verification.md.",
     "status": "in progress"
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_2.json": {
@@ -2516,7 +2516,7 @@
   },
   "source:src/main/java/com/tacz/guns/block/GunSmithTableBlockA.java": {
     "implementation": "src/main/java/com/tacz/guns/block/GunSmithTableBlockA.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer141/142 natively place the shipped ammo workbench and open its server-backed menu using this block variant. Break/loot/rendering and other lifecycle paths remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/block/GunSmithTableBlockB.java": {
@@ -2526,7 +2526,7 @@
   },
   "source:src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java": {
     "implementation": "src/main/java/com/tacz/guns/block/GunSmithTableBlockC.java",
-    "validation": "Target API migration; full build still fails. Selected value I/O, recipe, component and Lua helpers have focused checks; block lifecycle, rendering, mixins and gameplay remain unverified. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer141/142 natively place the shipped vertical attachment workbench and open its server-backed menu using this block variant. Break/loot/rendering and other lifecycle paths remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/block/StatueBlock.java": {
