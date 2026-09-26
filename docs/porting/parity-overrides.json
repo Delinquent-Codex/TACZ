@@ -331,7 +331,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/GunRefitScreen.java",
-    "validation": "Installed OpenGL/Vulkan runs128/129 open refit and install/unload AK-47 sight_t2; runs132/133 do the same for extended_mag_1 with capacity/ammo effects; runs137/138 replace it with extended_mag_2, deny locked access and full-inventory unload, then succeed after freeing one slot; runs151/152 install, fire and unload muzzle_silencer_phantom_s1 through native MUZZLE widgets and observe its silence cache. Other attachments, audible output, layouts and visual parity remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan runs128/129 open refit and install/unload AK-47 sight_t2; runs132/133 do the same for extended_mag_1 with capacity/ammo effects; runs137/138 replace it with extended_mag_2, deny locked access and full-inventory unload, then succeed after freeing one slot; runs151/152 install, fire and unload muzzle_silencer_phantom_s1 through native MUZZLE widgets and observe its silence cache; runs153/154 install stock_ak12, replace it with oem_stock_light, fire and unload through native STOCK widgets while observing ADS/recoil cache changes. Other attachments, actual aim/recoil motion, audible output, layouts and visual parity remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
@@ -1251,7 +1251,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageRefitGun.java",
-    "validation": "Installed OpenGL/Vulkan runs128/129 install sight_t2 and reject malformed indices; runs132/133 install extended_mag_1 and runs137/138 replace it with extended_mag_2 while conserving rounds and rejecting a direct install packet under attachment lock; runs151/152 install the shipped AK-47 muzzle silencer, change its silence cache and retain loaded rounds. Other attachments and timing remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan runs128/129 install sight_t2 and reject malformed indices; runs132/133 install extended_mag_1 and runs137/138 replace it with extended_mag_2 while conserving rounds and rejecting a direct install packet under attachment lock; runs151/152 install the shipped AK-47 muzzle silencer and change its silence cache; runs153/154 replace stock_ak12 with oem_stock_light, return the first stock to inventory, and evaluate shipped ADS/recoil modifiers without changing loaded rounds. Other attachments and timing remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageSyncBaseTimestamp.java": {
@@ -1261,7 +1261,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ClientMessageUnloadAttachment.java",
-    "validation": "Installed OpenGL/Vulkan runs128/129 unload sight_t2 and reject malformed indices; runs132/133 unload extended_mag_1; runs137/138 reject locked and full-inventory unload, then return extended_mag_2 to a freed slot and eject37 rounds as one ground item; runs151/152 return the shipped muzzle silencer to inventory and restore its original sound cache after one shot. Other attachments and inventory mixes remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan runs128/129 unload sight_t2 and reject malformed indices; runs132/133 unload extended_mag_1; runs137/138 reject locked and full-inventory unload, then return extended_mag_2 to a freed slot and eject37 rounds as one ground item; runs151/152 return the shipped muzzle silencer to inventory and restore its sound cache; runs153/154 return the replacement light stock and restore baseline ADS/recoil cache after one shot. Other attachments and inventory mixes remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageCraft.java": {
@@ -1276,7 +1276,7 @@
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/network/message/ServerMessageRefreshRefitScreen.java",
-    "validation": "Installed multiplayer128/129 refresh the open refit screen after sight install/unload; its available attachment and unload controls follow server inventory changes. Runs151/152 also refresh MUZZLE state and native unload control after silencer install and unload. Other attachment/UI paths remain open. See verification.md.",
+    "validation": "Installed multiplayer128/129 refresh the open refit screen after sight install/unload; its available attachment and unload controls follow server inventory changes. Runs151/152 refresh MUZZLE state after silencer install/unload; runs153/154 refresh STOCK state after install, replacement and unload. Other attachment/UI paths remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/network/message/ServerMessageSound.java": {
@@ -1436,7 +1436,7 @@
   },
   "source:src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java": {
     "implementation": "src/main/java/com/tacz/guns/resource/modifier/AttachmentPropertyManager.java",
-    "validation": "Exact target source API migration; core build 101 passes; unavailable optional adapters still fail their explicit run-102 gate. See verification.md and inventory/compile-errors.json.",
+    "validation": "Core build 101 passes. Installed two-client runs151/152 observe the shipped muzzle silence cache change and restoration; runs153/154 observe shipped stock ADS and recoil cache values through install, replacement and unload. Actual audio, aim timing, camera recoil, other modifiers and unavailable optional adapters remain unverified. See verification.md and inventory/compile-errors.json.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/resource/network/CommonNetworkCache.java": {
