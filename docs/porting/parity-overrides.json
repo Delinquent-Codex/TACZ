@@ -336,7 +336,7 @@
   },
   "source:src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java": {
     "implementation": "src/main/java/com/tacz/guns/client/gui/GunSmithTableScreen.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 craft the shipped Glock; runs141/142 select attachment and ammo categories on their server-backed workbenches, deny absent/partial ingredient clicks, and craft the shipped extended magazine and 35 rifle rounds exactly once. GUI-scale/creative/other recipes remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 craft the shipped Glock; runs141/142 select attachment and ammo categories on their server-backed workbenches, deny absent/partial ingredient clicks, and craft the shipped extended magazine and 35 rifle rounds exactly once; runs143/144 craft with all inventory slots occupied and synchronize later pickup while the screen remains open. GUI-scale/creative/other recipes remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/client/gui/compat/ClothConfigScreen.java": {
@@ -1096,7 +1096,7 @@
   },
   "source:src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java": {
     "implementation": "src/main/java/com/tacz/guns/inventory/GunSmithTableMenu.java",
-    "validation": "Installed OpenGL/Vulkan multiplayer124/125 verify Glock craft, active-menu inventory sync and stale-menu rejection; runs141/142 deny absent/partial inputs and duplicate output for shipped two-material attachment and ammo recipes, then synchronize exact input consumption and outputs. Other recipes/creative/refunds remain open. See verification.md.",
+    "validation": "Installed OpenGL/Vulkan multiplayer124/125 verify Glock craft, active-menu inventory sync and stale-menu rejection; runs141/142 deny absent/partial inputs and duplicate output for shipped two-material attachment and ammo recipes; runs143/144 consume exact partial stacks with all slots full, leave one crafted attachment on the ground, then synchronize pickup after one slot is freed. Entity-spawn failure/refund, other recipes and creative cases remain open. See verification.md.",
     "status": "in progress"
   },
   "source:src/main/java/com/tacz/guns/inventory/tooltip/AttachmentItemTooltip.java": {
@@ -1706,7 +1706,7 @@
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_1.json": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipe/attachments/extended_mag_1.json",
-    "validation": "Recipe ID and quantity preserved. Installed OpenGL/Vulkan multiplayer141/142 select this shipped recipe on the attachment workbench, reject absent/partial inputs, consume 16 iron and 4 gold, and receive one extended magazine; duplicate click denied. Other recipes remain open. See verification.md.",
+    "validation": "Recipe ID and quantity preserved. Installed OpenGL/Vulkan multiplayer141/142 select this shipped recipe on the attachment workbench, reject absent/partial inputs, consume 16 iron and 4 gold, and receive one extended magazine; runs143/144 craft it with all slots full and recover its ground output after freeing one slot. Other recipes remain open. See verification.md.",
     "status": "in progress"
   },
   "resource:src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/recipes/attachments/extended_mag_2.json": {
