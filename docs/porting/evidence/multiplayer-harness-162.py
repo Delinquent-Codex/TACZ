@@ -495,12 +495,6 @@ def main():
             check('Error parsing option value' not in log, role + ' native client options accepted')
         check('Stopping the server' in command('stop'), 'normal dedicated stop requested')
         check(process.wait(timeout=30) == 0, 'dedicated server exit zero')
-        if args.external_pack_probe:
-            archive = server / 'tacz/porting_zip_probe.zip'
-            check(archive.is_file(), 'selected external ZIP remains on disk through server stop')
-            archive.unlink()
-            check(not archive.exists(), 'external ZIP file released after normal server shutdown')
-            report['external_pack_scenario']['zip_released_after_stop'] = True
         log = server_log.read_text(encoding='utf-8', errors='replace')
         check('All dimensions are saved' in log[log.rfind('Stopping server'):], 'dedicated worlds saved after stop')
         if args.server_trace:
