@@ -96,12 +96,14 @@ def main():
                  'server_libraries_verified': len(data['server_libraries_sha256']),
                  'controller_inputs': {name: resolve(name, expected, game / 'server/mods') for name, expected in data['input_sha256'].items()},
                  'clients': {}}
-        if 'visual_scenario' in data:
-            visual = data['visual_scenario']
-            if not isinstance(visual, dict):
-                raise AssertionError(run + ' visual_scenario must be a mapping')
-            if 'images' in visual:
-                entry['visual_images_verified'] = verify_visual_images(visual['images'])
+        for scenario_key, count_key in (('visual_scenario', 'visual_images_verified'),
+                                        ('third_person_scenario', 'third_person_images_verified')):
+            if scenario_key in data:
+                visual = data[scenario_key]
+                if not isinstance(visual, dict):
+                    raise AssertionError(run + ' ' + scenario_key + ' must be a mapping')
+                if 'images' in visual:
+                    entry[count_key] = verify_visual_images(visual['images'])
         for role in data['client_commands']:
             client = read(EVIDENCE / f'{run}-{role}-result.json')
             before = read(EVIDENCE / f'{run}-{role}-inputs.json')

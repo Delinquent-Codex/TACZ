@@ -1,3 +1,7 @@
+> **Forge 26.2 development checkpoint:** this branch is an incomplete port.
+> Recovery instructions and preserved artifacts are described in
+> [docs/porting/github-checkpoint.md](docs/porting/github-checkpoint.md).
+
 <p align="center">
     <img width="300" src="https://s2.loli.net/2024/04/30/NJrstR1QzpoLyIT.png" alt="title">
 </p>

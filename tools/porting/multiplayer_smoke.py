@@ -73,6 +73,7 @@ def main():
     parser.add_argument('--malformed-pack-probe', action='store_true', help='Check rejected external pack metadata and ZIPs without disrupting later valid reload')
     parser.add_argument('--malformed-content-probe', action='store_true', help='Check an accepted pack with one malformed recipe and live repair')
     parser.add_argument('--visual-probe', action='store_true', help='Capture and compare installed first-person AK-47 and empty-hand frames')
+    parser.add_argument('--third-person-probe', action='store_true', help='Capture observer-side AK-47 and empty-hand frames')
     parser.add_argument('--refit-boundary-probe', action='store_true', help='Replace and lock a magazine, then unload against full inventory')
     parser.add_argument('--gunsmith-multi-probe', action='store_true', help='Craft multi-ingredient attachment and ammo recipes at shipped workbenches')
     parser.add_argument('--gunsmith-full-probe', action='store_true', help='Craft and recover an attachment with every inventory slot occupied')
@@ -151,6 +152,7 @@ def main():
                   REPO / 'tools/porting/malformed_pack_scenarios.py',
                   REPO / 'tools/porting/malformed_content_scenarios.py',
                   REPO / 'tools/porting/visual_scenarios.py',
+                  REPO / 'tools/porting/third_person_scenarios.py',
                   REPO / 'tools/porting/refit_boundary_scenarios.py',
                   REPO / 'tools/porting/gunsmith_multi_scenarios.py',
                   REPO / 'tools/porting/gunsmith_full_scenarios.py',
@@ -485,6 +487,9 @@ def main():
         if args.visual_probe:
             from visual_scenarios import run_visual_scenarios
             run_visual_scenarios(server, check, command, client, state, wait, report, prefix)
+        if args.third_person_probe:
+            from third_person_scenarios import run_third_person_scenarios
+            run_third_person_scenarios(server, check, command, client, state, wait, report, prefix)
         if args.refit_boundary_probe:
             from refit_boundary_scenarios import run_refit_boundary_scenarios
             run_refit_boundary_scenarios(check, command, silent_command, client, state, wait, server_number, report)
