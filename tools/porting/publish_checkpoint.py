@@ -131,6 +131,16 @@ def main():
     if args.publish:
         release = api('PATCH', release['url'], {'draft': False, 'prerelease': True,
                                                'make_latest': 'false', 'body': body})
+    # Publishing replaces temporary draft download URLs with the actual tag.
+    final_assets = {asset['name']: asset for asset in api('GET', release['assets_url'] + '?per_page=100')}
+    if set(final_assets) != set(expected):
+        raise AssertionError('Published checkpoint asset inventory differs from the local inventory')
+    for name, wanted in expected.items():
+        asset = final_assets[name]
+        if (asset['state'] != 'uploaded' or asset['size'] != wanted['bytes']
+                or asset.get('digest') != 'sha256:' + wanted['sha256']):
+            raise AssertionError('Final checkpoint asset verification failed: ' + name)
+        receipt_assets[name]['download_url'] = asset['browser_download_url']
     receipt = {'repository': args.repository, 'source_commit': args.commit, 'tag': args.tag,
                'release_url': release['html_url'], 'release_id': release['id'],
                'published': not release['draft'], 'prerelease': release['prerelease'],

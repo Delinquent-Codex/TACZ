@@ -1,0 +1,86 @@
+{
+  "repository": "Delinquent-Codex/TACZ",
+  "source_commit": "6e26ee27290d59ccd2f644bc4cf0ca3e5135cc0a",
+  "tag": "forge-26.2-checkpoint-2026-09-29",
+  "release_url": "https://github.com/Delinquent-Codex/TACZ/releases/tag/forge-26.2-checkpoint-2026-09-29",
+  "release_id": 399572069,
+  "published": true,
+  "prerelease": true,
+  "assets": {
+    "checkpoint.json": {
+      "sha256": "e0855fd4f85baa0d965de3d70ed308c1147c4908e1f432e86c83a74e3560be0c",
+      "bytes": 5406,
+      "github_digest": "sha256:e0855fd4f85baa0d965de3d70ed308c1147c4908e1f432e86c83a74e3560be0c",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/checkpoint.json",
+      "asset_id": 599370510
+    },
+    "SHA256SUMS.txt": {
+      "sha256": "5e2e3400ac0986b6a75421d3912b1a36677798b93d5815a6acc47a9e27bd0326",
+      "bytes": 685,
+      "github_digest": "sha256:5e2e3400ac0986b6a75421d3912b1a36677798b93d5815a6acc47a9e27bd0326",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/SHA256SUMS.txt",
+      "asset_id": 599370533
+    },
+    "tacz-26.2-1.1.8-hotfix-port.1-slim.jar": {
+      "sha256": "f6b0b56fdb96fcf870150064fb47763e339a15bfdfa2424d32760d58f31d0d21",
+      "bytes": 53964244,
+      "github_digest": "sha256:f6b0b56fdb96fcf870150064fb47763e339a15bfdfa2424d32760d58f31d0d21",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/tacz-26.2-1.1.8-hotfix-port.1-slim.jar",
+      "asset_id": 599370546
+    },
+    "tacz-26.2-1.1.8-hotfix-port.1-sources.jar": {
+      "sha256": "46473f4eafe39a47c1afe2c1e11b7d8d191b553d8c092eede2a8c1f9902d4793",
+      "bytes": 53125229,
+      "github_digest": "sha256:46473f4eafe39a47c1afe2c1e11b7d8d191b553d8c092eede2a8c1f9902d4793",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/tacz-26.2-1.1.8-hotfix-port.1-sources.jar",
+      "asset_id": 599371322
+    },
+    "tacz-26.2-1.1.8-hotfix-port.1.jar": {
+      "sha256": "b112cabd821c68400077b0c2f85e5c11eab362a5df9b1006a69f10b202d40946",
+      "bytes": 57878797,
+      "github_digest": "sha256:b112cabd821c68400077b0c2f85e5c11eab362a5df9b1006a69f10b202d40946",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/tacz-26.2-1.1.8-hotfix-port.1.jar",
+      "asset_id": 599371889
+    },
+    "tacz-forge-26.2-checkpoint.bundle": {
+      "sha256": "b7ede158f306142867d7001eea0758950654563e8c79161c70af1ac0d3e8fdd7",
+      "bytes": 114609068,
+      "github_digest": "sha256:b7ede158f306142867d7001eea0758950654563e8c79161c70af1ac0d3e8fdd7",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/tacz-forge-26.2-checkpoint.bundle",
+      "asset_id": 599372555
+    },
+    "tacz-port-binaries.zip": {
+      "sha256": "19da9974a3a38e5106abecbde64cf789ed670defe3a51f3232caae69f5717db0",
+      "bytes": 380810965,
+      "github_digest": "sha256:19da9974a3a38e5106abecbde64cf789ed670defe3a51f3232caae69f5717db0",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/tacz-port-binaries.zip",
+      "asset_id": 599373719
+    },
+    "tacz-port-runtime-state.zip": {
+      "sha256": "ce98af78819fcf61d5aa7f13e0a8c605be1f069be468c8dc3a9219176d9804b8",
+      "bytes": 23190963,
+      "github_digest": "sha256:ce98af78819fcf61d5aa7f13e0a8c605be1f069be468c8dc3a9219176d9804b8",
+      "download_url": "https://github.com/Delinquent-Codex/TACZ/releases/download/forge-26.2-checkpoint-2026-09-29/tacz-port-runtime-state.zip",
+      "asset_id": 599378126
+    }
+  },
+  "all_remote_sizes_and_sha256_verified": true,
+  "recovery_validation": {
+    "public_downloads": {
+      "tacz-forge-26.2-checkpoint.bundle": {
+        "sha256": "b7ede158f306142867d7001eea0758950654563e8c79161c70af1ac0d3e8fdd7",
+        "bytes": 114609068,
+        "verified": true
+      },
+      "tacz-26.2-1.1.8-hotfix-port.1.jar": {
+        "sha256": "b112cabd821c68400077b0c2f85e5c11eab362a5df9b1006a69f10b202d40946",
+        "bytes": 57878797,
+        "verified": true
+      }
+    },
+    "fresh_bare_clone_and_fsck": "passed",
+    "restored_branch_commit": "6e26ee27290d59ccd2f644bc4cf0ca3e5135cc0a",
+    "published_release_asset_count": 8,
+    "date_local": "2026-09-29"
+  }
+}

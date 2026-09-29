@@ -2,9 +2,10 @@
 
 Work started 2026-09-07. **Incomplete. A core candidate JAR builds; runtime validation and optional integrations remain unfinished.**
 
-## GitHub recovery checkpoint prepared — 2026-09-29
+## GitHub recovery checkpoint uploaded — 2026-09-29
 
 - The user requested uploading the available project before deleting it and moving to another project. The pending third-person helper, controller option and PNG audit support are preserved and syntax-checked; no new gameplay/rendering result is claimed. The production candidate is unchanged at SHA-256 `b112cabd821c68400077b0c2f85e5c11eab362a5df9b1006a69f10b202d40946`. The original full-port prompt is now retained at `full-port-prompt.md`. Nine available distinct TACZ/fixture/build binaries and 1,834 mutable runtime/reference files have been archived with hashes, alongside the remaining runs 170/171 and prepared worlds. The older installation trees 1–169 had already been removed before backup, leaving 53 historical binary versions and their raw worlds unavailable; all captured reports/logs/source snapshots remain. See `github-checkpoint.md` and `checkpoint-backup-manifest.json` for recovery scope and exclusions. The entire port remains incomplete.
+- Source checkpoint `6e26ee27290d59ccd2f644bc4cf0ca3e5135cc0a` and tag `forge-26.2-checkpoint-2026-09-29` are uploaded to `Delinquent-Codex/TACZ`. The [published backup prerelease](https://github.com/Delinquent-Codex/TACZ/releases/tag/forge-26.2-checkpoint-2026-09-29) contains eight assets totaling 683,585,357 bytes; every remote size and SHA-256 matches. Public downloads of the current candidate and full Git bundle were independently hashed. A fresh bare clone of the downloaded bundle passes `git fsck --full` and restores the exact source checkpoint. The branch also records the publication receipt and a publisher fix to refresh temporary draft download URLs after publishing. Evidence: `evidence/github-checkpoint-upload-2026-09-29.json`. Available local work is backed up; reproducible dependencies can be recreated as documented.
 
 ## Reference-installation storage checkpoint — 2026-09-28
 

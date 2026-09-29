@@ -11,7 +11,13 @@ logs and first-person PNG evidence are on branch `port/forge-26.2` of
 The baseline branch `1.20.1` remains at
 `b43eb84c38e9768d8e73c8b14f0b845669704b38`.
 
-The archival prerelease tag is `forge-26.2-checkpoint-2026-09-29`. Its assets are:
+The [published archival prerelease](https://github.com/Delinquent-Codex/TACZ/releases/tag/forge-26.2-checkpoint-2026-09-29)
+uses tag `forge-26.2-checkpoint-2026-09-29`. All eight asset sizes and SHA-256
+hashes were verified against GitHub. Public downloads of the candidate and Git
+bundle match; a fresh clone of the downloaded bundle passes Git integrity checks
+and restores source commit `6e26ee27290d59ccd2f644bc4cf0ca3e5135cc0a`.
+The branch contains the final upload receipt at
+`evidence/github-checkpoint-upload-2026-09-29.json`. Its assets are:
 
 | Asset | Contents |
 | --- | --- |
