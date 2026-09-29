@@ -28,6 +28,27 @@ def verify(path, expected):
         raise AssertionError('Missing or changed evidence input: ' + str(path))
 
 
+def verify_visual_images(images, root=ROOT):
+    """Verify repository-relative PNG evidence without allowing paths outside evidence."""
+    if not isinstance(images, dict):
+        raise AssertionError('Visual evidence images must be a path-to-SHA256 mapping')
+    evidence = (root / 'docs/porting/evidence').resolve()
+    for name, expected in images.items():
+        if not isinstance(name, str):
+            raise AssertionError('Visual evidence image path must be a string')
+        relative = Path(name)
+        if (relative.is_absolute() or relative.drive or '..' in relative.parts
+                or relative.parts[:3] != ('docs', 'porting', 'evidence')
+                or relative.suffix != '.png'):
+            raise AssertionError('Visual evidence PNG must be under docs/porting/evidence: ' + name)
+        path = (root / relative).resolve()
+        if not path.is_relative_to(evidence):
+            raise AssertionError('Visual evidence PNG escapes docs/porting/evidence: ' + name)
+        if not isinstance(expected, str) or not path.is_file() or digest(path) != expected:
+            raise AssertionError('Missing or changed visual evidence PNG: ' + name)
+    return len(images)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--first', required=True, type=int)
@@ -75,6 +96,12 @@ def main():
                  'server_libraries_verified': len(data['server_libraries_sha256']),
                  'controller_inputs': {name: resolve(name, expected, game / 'server/mods') for name, expected in data['input_sha256'].items()},
                  'clients': {}}
+        if 'visual_scenario' in data:
+            visual = data['visual_scenario']
+            if not isinstance(visual, dict):
+                raise AssertionError(run + ' visual_scenario must be a mapping')
+            if 'images' in visual:
+                entry['visual_images_verified'] = verify_visual_images(visual['images'])
         for role in data['client_commands']:
             client = read(EVIDENCE / f'{run}-{role}-result.json')
             before = read(EVIDENCE / f'{run}-{role}-inputs.json')

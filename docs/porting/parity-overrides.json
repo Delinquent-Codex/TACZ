@@ -4362,7 +4362,7 @@
   "source:src/main/java/com/tacz/guns/client/event/FirstPersonRenderHandler.java": {
     "implementation": "src/main/java/com/tacz/guns/client/event/FirstPersonRenderHandler.java",
     "status": "in progress",
-    "validation": "Both full packaged client backends equip AK-47, observe active first-person animation and 119 intercepted main-hand frames; real shot/reload animation path executes. No pixel/audio/baseline visual comparison. See verification.md and tacz-client-15/16 evidence; full subsystem parity remains open."
+    "validation": "Both packaged backends equip AK-47, observe active first-person animation and 119 intercepted main-hand frames. Installed OpenGL/Vulkan multiplayer170/171 capture and preserve actual first-person PNGs with fixed-camera empty-hand controls: roughly35,500 gun-region pixels change, far above same-state drift. Representative frames were visually inspected. No matched 1.20.1 image baseline, other render states or complete visual parity. See verification.md."
   },
   "data/index/guns/tacz:ak47": {
     "implementation": "src/main/resources/assets/tacz/custom/tacz_default_gun/data/tacz/index/guns/ak47.json",
